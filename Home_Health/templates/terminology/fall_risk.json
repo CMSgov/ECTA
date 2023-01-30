@@ -1,0 +1,155 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113762.1.4.1222.712",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2022-12-22T07:42:11.000+00:00",
+        "source": "#ZwSSNO3pjQ9CUXJx"
+    },
+    "url": "https://fhir-dev.mettles.com/fhir-services/ValueSet/2.16.840.1.113762.1.4.1222.712",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113762.1.4.1222.712"
+        }
+    ],
+    "version": "Latest",
+    "name": "FallRisk",
+    "title": "Fall Risk",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://loinc.org",
+                "version": "2.73",
+                "concept": [
+                    {
+                        "code": "100256-7",
+                        "display": "Fallen in last 6 months"
+                    }
+                ]
+            },
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2022-09",
+                "concept": [
+                    {
+                        "code": "129839007",
+                        "display": "At risk for falls (finding)"
+                    },
+                    {
+                        "code": "332721351000132106",
+                        "display": "At moderate risk for fall (finding)"
+                    }
+                ]
+            },
+            {
+                "system": "http://loinc.org",
+                "version": "2.73",
+                "concept": [
+                    {
+                        "code": "42553-8",
+                        "display": "Event description fall MERSTH"
+                    }
+                ]
+            },
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2022-09",
+                "concept": [
+                    {
+                        "code": "439430008",
+                        "display": "At low risk for fall (finding)"
+                    },
+                    {
+                        "code": "445041000124102",
+                        "display": "At very low risk for fall (finding)"
+                    },
+                    {
+                        "code": "455201601000132100",
+                        "display": "At high risk for fall (finding)"
+                    }
+                ]
+            },
+            {
+                "system": "http://loinc.org",
+                "version": "2.73",
+                "concept": [
+                    {
+                        "code": "45908-1",
+                        "display": "Falls trigger [Minimum Data Set]"
+                    },
+                    {
+                        "code": "45936-2",
+                        "display": "Resident assessment protocol 11--Falls - triggered [Minimum Data Set]"
+                    },
+                    {
+                        "code": "45937-0",
+                        "display": "Resident assessment protocol 11--Falls - proceed with care [Minimum Data Set]"
+                    },
+                    {
+                        "code": "52552-7",
+                        "display": "Falls in the past year"
+                    },
+                    {
+                        "code": "54850-3",
+                        "display": "Fall one or more times in the last month prior to admission [CMS Assessment]"
+                    },
+                    {
+                        "code": "54851-1",
+                        "display": "Fall one or more times in the last 2 to 6 months prior to admission [CMS Assessment]"
+                    },
+                    {
+                        "code": "54852-9",
+                        "display": "Any fracture related to a fall in the 6 months prior to admission [CMS Assessment]"
+                    },
+                    {
+                        "code": "54853-7",
+                        "display": "Has the patient had any falls since admission or prior assessment [CMS Assessment]"
+                    },
+                    {
+                        "code": "57254-5",
+                        "display": "Standardized fall risk assessment was conducted [CMS Assessment]"
+                    },
+                    {
+                        "code": "57271-9",
+                        "display": "Plan of care includes fall prevention interventions [CMS Assessment]"
+                    },
+                    {
+                        "code": "58175-1",
+                        "display": "Falls - care area triggered [MDSv3]"
+                    },
+                    {
+                        "code": "58176-9",
+                        "display": "Falls - addressed in care plan [MDSv3]"
+                    },
+                    {
+                        "code": "68254-2",
+                        "display": "I fall down easily in the past 7 days [NeuroQol.Peds]"
+                    },
+                    {
+                        "code": "77698-9",
+                        "display": "Fall scale [UPDRS]"
+                    },
+                    {
+                        "code": "83280-8",
+                        "display": "Has the patient had any falls since admission [CMS Assessment]"
+                    },
+                    {
+                        "code": "91380-6",
+                        "display": "Number of falls in the past 3 months - Reported"
+                    },
+                    {
+                        "code": "92379-7",
+                        "display": "Current level of confidence I can get in and out of bed without falling [PROMIS]"
+                    },
+                    {
+                        "code": "97878-3",
+                        "display": "Worried about falling"
+                    }
+                ]
+            }
+        ]
+    }
+}

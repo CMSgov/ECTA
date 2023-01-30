@@ -1,0 +1,20 @@
+{
+    "resourceType": "Library",
+    "version": "1.0.0",
+    "title": "HomeHealthAdaptive",
+    "name": "HomeHealthAdaptive",
+    "status": "draft",
+    "type": {
+      "coding": [
+        {
+          "code": "logic-library"
+        }
+      ]
+    },
+    "relatedArtifact": [
+      {
+        "type": "depends-on",
+        "resource": "https://fhir-dev.mettles.com/interop/fhir/Library/FHIRHelpers"
+      }
+    ]
+  }

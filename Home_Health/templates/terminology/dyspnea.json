@@ -1,0 +1,119 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113762.1.4.1182.47",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2022-12-22T07:41:59.000+00:00",
+        "source": "#RpSe4y5lTb7y4PnV"
+    },
+    "url": "https://fhir-dev.mettles.com/fhir-services/ValueSet/2.16.840.1.113762.1.4.1182.47",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113762.1.4.1182.47"
+        }
+    ],
+    "version": "Latest",
+    "name": "Dyspnea",
+    "title": "Dyspnea",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2022-09",
+                "concept": [
+                    {
+                        "code": "25209001",
+                        "display": "Inspiratory dyspnea (finding)"
+                    },
+                    {
+                        "code": "267036007",
+                        "display": "Dyspnea (finding)"
+                    },
+                    {
+                        "code": "397702004",
+                        "display": "Borg Breathlessness Score finding (finding)"
+                    },
+                    {
+                        "code": "55442000",
+                        "display": "Paroxysmal nocturnal dyspnea (finding)"
+                    },
+                    {
+                        "code": "60845006",
+                        "display": "Dyspnea on exertion (finding)"
+                    },
+                    {
+                        "code": "719415004",
+                        "display": "Breathlessness care (regime/therapy)"
+                    },
+                    {
+                        "code": "73322006",
+                        "display": "Dyspnea, class IV (finding)"
+                    }
+                ]
+            },
+            {
+                "system": "http://hl7.org/fhir/sid/icd-9-cm/diagnosis",
+                "version": "2013",
+                "concept": [
+                    {
+                        "code": "786.00",
+                        "display": "Respiratory abnormality, unspecified"
+                    },
+                    {
+                        "code": "786.02",
+                        "display": "Orthopnea"
+                    },
+                    {
+                        "code": "786.05",
+                        "display": "Shortness of breath"
+                    },
+                    {
+                        "code": "786.09",
+                        "display": "Other respiratory abnormalities"
+                    }
+                ]
+            },
+            {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "version": "2023",
+                "concept": [
+                    {
+                        "code": "R06.00",
+                        "display": "Dyspnea, unspecified"
+                    },
+                    {
+                        "code": "R06.01",
+                        "display": "Orthopnea"
+                    },
+                    {
+                        "code": "R06.02",
+                        "display": "Shortness of breath"
+                    },
+                    {
+                        "code": "R06.03",
+                        "display": "Acute respiratory distress"
+                    },
+                    {
+                        "code": "R06.09",
+                        "display": "Other forms of dyspnea"
+                    },
+                    {
+                        "code": "R06.8",
+                        "display": "Other abnormalities of breathing"
+                    },
+                    {
+                        "code": "R06.89",
+                        "display": "Other abnormalities of breathing"
+                    },
+                    {
+                        "code": "R06.9",
+                        "display": "Unspecified abnormalities of breathing"
+                    }
+                ]
+            }
+        ]
+    }
+}

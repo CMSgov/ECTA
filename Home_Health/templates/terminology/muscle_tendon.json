@@ -1,0 +1,1217 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113762.1.4.1219.154",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2022-12-22T08:11:54.000+00:00",
+        "source": "#b9y2rpfVeOWehVCX"
+    },
+    "url": "https://fhir-dev.mettles.com/fhir-services/ValueSet/2.16.840.1.113762.1.4.1219.154",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113762.1.4.1219.154"
+        }
+    ],
+    "version": "Latest",
+    "name": "Muscle,TendonorJointContractureDisorder",
+    "title": "Muscle, Tendon or Joint Contracture Disorder",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2022-09",
+                "concept": [
+                    {
+                        "code": "103741000119108",
+                        "display": "Contracture of joint of finger co-occurrent and due to scar (disorder)"
+                    },
+                    {
+                        "code": "1075731000119104",
+                        "display": "Contracture of muscle of right foot (disorder)"
+                    },
+                    {
+                        "code": "1075741000119108",
+                        "display": "Contracture of muscle of left foot (disorder)"
+                    },
+                    {
+                        "code": "111246005",
+                        "display": "Arthrogryposis (disorder)"
+                    },
+                    {
+                        "code": "111247001",
+                        "display": "Volkmann's contracture (disorder)"
+                    },
+                    {
+                        "code": "112871000119104",
+                        "display": "Congenital contracture of toe joint (disorder)"
+                    },
+                    {
+                        "code": "1172689007",
+                        "display": "Prenatal-onset spinal muscular atrophy with congenital bone fractures (disorder)"
+                    },
+                    {
+                        "code": "1172692006",
+                        "display": "X-linked keloid scarring, reduced joint mobility, increased optic cup-to-disc ratio syndrome (disorder)"
+                    },
+                    {
+                        "code": "1179299005",
+                        "display": "NIMA related kinase 9 lethal skeletal dysplasia (disorder)"
+                    },
+                    {
+                        "code": "1208482007",
+                        "display": "Distal arthrogryposis type 10 (disorder)"
+                    },
+                    {
+                        "code": "1216940001",
+                        "display": "Joint contractures, developmental delay, Pierre Robin syndrome (disorder)"
+                    },
+                    {
+                        "code": "1228860003",
+                        "display": "Spondyloepiphyseal dysplasia Stanescu type (disorder)"
+                    },
+                    {
+                        "code": "156556008",
+                        "display": "Joint contracture of the ankle and foot (disorder)"
+                    },
+                    {
+                        "code": "15670281000119106",
+                        "display": "Congenital contracture of right gastrocnemius muscle (disorder)"
+                    },
+                    {
+                        "code": "15670321000119101",
+                        "display": "Congenital contracture of left gastrocnemius muscle (disorder)"
+                    },
+                    {
+                        "code": "15703481000119101",
+                        "display": "Contracture of right Achilles tendon (disorder)"
+                    },
+                    {
+                        "code": "15703521000119101",
+                        "display": "Contracture of left Achilles tendon (disorder)"
+                    },
+                    {
+                        "code": "15703561000119106",
+                        "display": "Contracture of bilateral Achilles tendons (disorder)"
+                    },
+                    {
+                        "code": "15703761000119104",
+                        "display": "Contracture of muscle of bilateral lower legs (disorder)"
+                    },
+                    {
+                        "code": "15703801000119107",
+                        "display": "Contracture of muscle of bilateral hands (disorder)"
+                    },
+                    {
+                        "code": "15703841000119109",
+                        "display": "Contracture of bilateral gastrocnemius muscles due to paralysis (disorder)"
+                    },
+                    {
+                        "code": "15703881000119104",
+                        "display": "Contracture of muscle of bilateral thighs (disorder)"
+                    },
+                    {
+                        "code": "15703921000119106",
+                        "display": "Contracture of muscle of bilateral upper arms (disorder)"
+                    },
+                    {
+                        "code": "15703961000119101",
+                        "display": "Contracture of left gastrocnemius muscle due to paralysis (disorder)"
+                    },
+                    {
+                        "code": "15704001000119100",
+                        "display": "Contracture of right gastrocnemius muscle due to paralysis (disorder)"
+                    },
+                    {
+                        "code": "15704041000119103",
+                        "display": "Contracture of muscle of bilateral forearms (disorder)"
+                    },
+                    {
+                        "code": "15704081000119108",
+                        "display": "Contracture of muscle of bilateral feet (disorder)"
+                    },
+                    {
+                        "code": "15704121000119105",
+                        "display": "Contracture of muscle of bilateral ankle regions (disorder)"
+                    },
+                    {
+                        "code": "15704161000119100",
+                        "display": "Contracture of muscle of bilateral shoulder regions (disorder)"
+                    },
+                    {
+                        "code": "15721561000119102",
+                        "display": "Contracture of joints of bilateral elbows (disorder)"
+                    },
+                    {
+                        "code": "15721601000119102",
+                        "display": "Contracture of joints of bilateral hips (disorder)"
+                    },
+                    {
+                        "code": "15721641000119100",
+                        "display": "Contracture of joints of bilateral knees (disorder)"
+                    },
+                    {
+                        "code": "15721681000119105",
+                        "display": "Contracture of joints of bilateral ankles (disorder)"
+                    },
+                    {
+                        "code": "15721721000119104",
+                        "display": "Contracture of joint of bilateral feet (disorder)"
+                    },
+                    {
+                        "code": "15721761000119109",
+                        "display": "Contracture of joint of finger of right hand due to scar (disorder)"
+                    },
+                    {
+                        "code": "15721801000119101",
+                        "display": "Contracture of joint of finger of left hand due to scar (disorder)"
+                    },
+                    {
+                        "code": "15721841000119104",
+                        "display": "Contracture of joint of finger of bilateral hands due to scar (disorder)"
+                    },
+                    {
+                        "code": "15721881000119109",
+                        "display": "Contracture of joints of bilateral hands (disorder)"
+                    },
+                    {
+                        "code": "15721921000119102",
+                        "display": "Contracture of bilateral shoulder joints (disorder)"
+                    },
+                    {
+                        "code": "15721961000119107",
+                        "display": "Contracture of joints of bilateral wrists (disorder)"
+                    },
+                    {
+                        "code": "16071000",
+                        "display": "Congenital generalized flexion contractures of lower limb joints (disorder)"
+                    },
+                    {
+                        "code": "202264009",
+                        "display": "Contracture of multiple joints (disorder)"
+                    },
+                    {
+                        "code": "202265005",
+                        "display": "Flexion contracture of shoulder (disorder)"
+                    },
+                    {
+                        "code": "202266006",
+                        "display": "Extension contracture of shoulder (disorder)"
+                    },
+                    {
+                        "code": "202267002",
+                        "display": "Abduction contracture of shoulder (disorder)"
+                    },
+                    {
+                        "code": "202268007",
+                        "display": "Adduction contracture of shoulder (disorder)"
+                    },
+                    {
+                        "code": "202269004",
+                        "display": "Internal rotation contracture of shoulder (disorder)"
+                    },
+                    {
+                        "code": "202270003",
+                        "display": "External rotation contracture of shoulder (disorder)"
+                    },
+                    {
+                        "code": "202271004",
+                        "display": "Flexion contracture of elbow (disorder)"
+                    },
+                    {
+                        "code": "202272006",
+                        "display": "Extension contracture - elbow (disorder)"
+                    },
+                    {
+                        "code": "202275008",
+                        "display": "Flexion contracture of wrist (disorder)"
+                    },
+                    {
+                        "code": "202276009",
+                        "display": "Extension contracture of the wrist (disorder)"
+                    },
+                    {
+                        "code": "202277000",
+                        "display": "Ulnar deviation contracture of the wrist (disorder)"
+                    },
+                    {
+                        "code": "202278005",
+                        "display": "Radial deviation contracture of the wrist (disorder)"
+                    },
+                    {
+                        "code": "202279002",
+                        "display": "Flexion contracture of metacarpophalangeal joint (disorder)"
+                    },
+                    {
+                        "code": "202280004",
+                        "display": "Extension contracture of metacarpophalangeal joint (disorder)"
+                    },
+                    {
+                        "code": "202281000",
+                        "display": "Flexion contracture of proximal interphalangeal joint of finger (disorder)"
+                    },
+                    {
+                        "code": "202282007",
+                        "display": "Flexion contracture of distal interphalangeal joint of finger (disorder)"
+                    },
+                    {
+                        "code": "202283002",
+                        "display": "Flexion contracture of hip (disorder)"
+                    },
+                    {
+                        "code": "202284008",
+                        "display": "Extension contracture of hip (disorder)"
+                    },
+                    {
+                        "code": "202285009",
+                        "display": "Abduction contracture of hip (disorder)"
+                    },
+                    {
+                        "code": "202286005",
+                        "display": "Adduction contracture of hip (disorder)"
+                    },
+                    {
+                        "code": "202287001",
+                        "display": "Internal rotation contracture of hip (disorder)"
+                    },
+                    {
+                        "code": "202288006",
+                        "display": "External rotation contracture of hip (disorder)"
+                    },
+                    {
+                        "code": "202289003",
+                        "display": "Flexion contracture of the knee (disorder)"
+                    },
+                    {
+                        "code": "202290007",
+                        "display": "Equinus contracture of the ankle (disorder)"
+                    },
+                    {
+                        "code": "202292004",
+                        "display": "Flexion contracture of metatarsophalangeal joint (disorder)"
+                    },
+                    {
+                        "code": "202293009",
+                        "display": "Extension contracture of metatarsophalangeal joint (disorder)"
+                    },
+                    {
+                        "code": "202294003",
+                        "display": "Flexion contracture of toe interphalangeal joint (disorder)"
+                    },
+                    {
+                        "code": "202295002",
+                        "display": "Extension contracture of toe interphalangeal joint (disorder)"
+                    },
+                    {
+                        "code": "202767003",
+                        "display": "Intermittent torticollis (disorder)"
+                    },
+                    {
+                        "code": "202768008",
+                        "display": "Rheumatic torticollis (disorder)"
+                    },
+                    {
+                        "code": "203059008",
+                        "display": "Contracture of pectoralis major (disorder)"
+                    },
+                    {
+                        "code": "203060003",
+                        "display": "Contracture of triceps (disorder)"
+                    },
+                    {
+                        "code": "203061004",
+                        "display": "Contracture of biceps (disorder)"
+                    },
+                    {
+                        "code": "203062006",
+                        "display": "Contracture of wrist flexor muscle (disorder)"
+                    },
+                    {
+                        "code": "203063001",
+                        "display": "Contracture of wrist extensor muscle (disorder)"
+                    },
+                    {
+                        "code": "203064007",
+                        "display": "Contracture of flexor pollicis longus (disorder)"
+                    },
+                    {
+                        "code": "203065008",
+                        "display": "Contracture of thumb extensor (disorder)"
+                    },
+                    {
+                        "code": "203066009",
+                        "display": "Contracture of flexor digitorum superficialis (disorder)"
+                    },
+                    {
+                        "code": "203067000",
+                        "display": "Contracture of flexor digitorum profundus (disorder)"
+                    },
+                    {
+                        "code": "203068005",
+                        "display": "Contracture of adductor pollicis (disorder)"
+                    },
+                    {
+                        "code": "203070001",
+                        "display": "Contracture of iliopsoas (disorder)"
+                    },
+                    {
+                        "code": "203071002",
+                        "display": "Contracture of rectus femoris (disorder)"
+                    },
+                    {
+                        "code": "203072009",
+                        "display": "Contracture of adductor muscle(s) of hip (disorder)"
+                    },
+                    {
+                        "code": "203073004",
+                        "display": "Contracture of abductor muscle(s) of hip (disorder)"
+                    },
+                    {
+                        "code": "203074005",
+                        "display": "Contracture of hamstring(s) (disorder)"
+                    },
+                    {
+                        "code": "203075006",
+                        "display": "Contracture of quadriceps (disorder)"
+                    },
+                    {
+                        "code": "203076007",
+                        "display": "Contracture of Achilles tendon (disorder)"
+                    },
+                    {
+                        "code": "203077003",
+                        "display": "Contracture of tibialis anterior (disorder)"
+                    },
+                    {
+                        "code": "203078008",
+                        "display": "Contracture of tibialis posterior (disorder)"
+                    },
+                    {
+                        "code": "203079000",
+                        "display": "Contracture of long toe flexor(s) (disorder)"
+                    },
+                    {
+                        "code": "203080002",
+                        "display": "Contracture of long toe extensor(s) (disorder)"
+                    },
+                    {
+                        "code": "203081003",
+                        "display": "Contracture of intrinsic muscle of foot (disorder)"
+                    },
+                    {
+                        "code": "203578000",
+                        "display": "Plantar flexion contracture of tarsometatarsal joint (disorder)"
+                    },
+                    {
+                        "code": "203581005",
+                        "display": "Flexion contracture of toe joint (disorder)"
+                    },
+                    {
+                        "code": "205108007",
+                        "display": "Congenital flexion contracture of hip (disorder)"
+                    },
+                    {
+                        "code": "205109004",
+                        "display": "Congenital abduction contracture of hip (disorder)"
+                    },
+                    {
+                        "code": "205110009",
+                        "display": "Congenital flexion contracture of knee (disorder)"
+                    },
+                    {
+                        "code": "205821003",
+                        "display": "Congenital contractural arachnodactyly (disorder)"
+                    },
+                    {
+                        "code": "206250007",
+                        "display": "Torticollis due to birth injury (disorder)"
+                    },
+                    {
+                        "code": "22025006",
+                        "display": "Volkmann's ischemic contracture following injury (disorder)"
+                    },
+                    {
+                        "code": "230314007",
+                        "display": "Sandifer syndrome (disorder)"
+                    },
+                    {
+                        "code": "230561007",
+                        "display": "Congenital neuropathy with arthrogryposis multiplex congenita (disorder)"
+                    },
+                    {
+                        "code": "239734000",
+                        "display": "Contracture of elbow joint (disorder)"
+                    },
+                    {
+                        "code": "239735004",
+                        "display": "Contracture of wrist joint (disorder)"
+                    },
+                    {
+                        "code": "239736003",
+                        "display": "Contracture of joint of thumb (disorder)"
+                    },
+                    {
+                        "code": "239737007",
+                        "display": "Contracture of joint of finger (disorder)"
+                    },
+                    {
+                        "code": "239738002",
+                        "display": "Contracture of hip joint (disorder)"
+                    },
+                    {
+                        "code": "239739005",
+                        "display": "Contracture of knee joint (disorder)"
+                    },
+                    {
+                        "code": "239740007",
+                        "display": "Contracture of ankle joint (disorder)"
+                    },
+                    {
+                        "code": "239741006",
+                        "display": "Contracture of subtalar joint (disorder)"
+                    },
+                    {
+                        "code": "239742004",
+                        "display": "Contracture of joint of foot (disorder)"
+                    },
+                    {
+                        "code": "239743009",
+                        "display": "Contracture of joint of toe (disorder)"
+                    },
+                    {
+                        "code": "239959002",
+                        "display": "Contracture of tendon of shoulder region (disorder)"
+                    },
+                    {
+                        "code": "239967005",
+                        "display": "Contracture of tendon of elbow region (disorder)"
+                    },
+                    {
+                        "code": "239982000",
+                        "display": "Contracture of tendon of wrist and hand (disorder)"
+                    },
+                    {
+                        "code": "240009000",
+                        "display": "Contracture of tendons of knee region (disorder)"
+                    },
+                    {
+                        "code": "240015000",
+                        "display": "Contracture of tendon of ankle region (disorder)"
+                    },
+                    {
+                        "code": "24269006",
+                        "display": "Distal arthrogryposis syndrome (disorder)"
+                    },
+                    {
+                        "code": "253976003",
+                        "display": "Contracture of sternomastoid (disorder)"
+                    },
+                    {
+                        "code": "271698002",
+                        "display": "Extension contracture of muscle (disorder)"
+                    },
+                    {
+                        "code": "271699005",
+                        "display": "Flexion contracture of muscle (disorder)"
+                    },
+                    {
+                        "code": "274141009",
+                        "display": "Tendon contracture (disorder)"
+                    },
+                    {
+                        "code": "274563008",
+                        "display": "Muscle contracture absent (disorder)"
+                    },
+                    {
+                        "code": "28204005",
+                        "display": "Inherited arthrogryposis (disorder)"
+                    },
+                    {
+                        "code": "302955009",
+                        "display": "Congenital extension contracture of the knee (disorder)"
+                    },
+                    {
+                        "code": "305281000119104",
+                        "display": "Contracture of muscle of left ankle region (disorder)"
+                    },
+                    {
+                        "code": "305291000119101",
+                        "display": "Contracture of muscle of left forearm (disorder)"
+                    },
+                    {
+                        "code": "305301000119100",
+                        "display": "Contracture of muscle of left hand (disorder)"
+                    },
+                    {
+                        "code": "305311000119102",
+                        "display": "Contracture of muscle of left lower leg (disorder)"
+                    },
+                    {
+                        "code": "305321000119109",
+                        "display": "Contracture of muscle of left shoulder region (disorder)"
+                    },
+                    {
+                        "code": "305331000119107",
+                        "display": "Contracture of muscle of left thigh (disorder)"
+                    },
+                    {
+                        "code": "305341000119103",
+                        "display": "Contracture of muscle of left upper arm (disorder)"
+                    },
+                    {
+                        "code": "305361000119104",
+                        "display": "Contracture of muscle of right ankle region (disorder)"
+                    },
+                    {
+                        "code": "305371000119105",
+                        "display": "Contracture of muscle of right forearm (disorder)"
+                    },
+                    {
+                        "code": "305381000119108",
+                        "display": "Contracture of muscle of right hand (disorder)"
+                    },
+                    {
+                        "code": "305391000119106",
+                        "display": "Contracture of muscle of right lower leg (disorder)"
+                    },
+                    {
+                        "code": "305401000119108",
+                        "display": "Contracture of muscle of right shoulder region (disorder)"
+                    },
+                    {
+                        "code": "305411000119106",
+                        "display": "Contracture of muscle of right thigh (disorder)"
+                    },
+                    {
+                        "code": "305421000119104",
+                        "display": "Contracture of muscle of right upper arm (disorder)"
+                    },
+                    {
+                        "code": "305431000119101",
+                        "display": "Contracture of joint of left ankle (disorder)"
+                    },
+                    {
+                        "code": "305441000119105",
+                        "display": "Contracture of left elbow joint (disorder)"
+                    },
+                    {
+                        "code": "305451000119107",
+                        "display": "Contracture of joint of left foot (disorder)"
+                    },
+                    {
+                        "code": "305461000119109",
+                        "display": "Contracture of joint of left hand (disorder)"
+                    },
+                    {
+                        "code": "305471000119103",
+                        "display": "Contracture of left hip joint (disorder)"
+                    },
+                    {
+                        "code": "305481000119100",
+                        "display": "Contracture of left knee joint (disorder)"
+                    },
+                    {
+                        "code": "305491000119102",
+                        "display": "Contracture of joint of left shoulder region (disorder)"
+                    },
+                    {
+                        "code": "305501000119109",
+                        "display": "Contracture of joint of left wrist (disorder)"
+                    },
+                    {
+                        "code": "305511000119107",
+                        "display": "Contracture of joint of right ankle (disorder)"
+                    },
+                    {
+                        "code": "305521000119100",
+                        "display": "Contracture of right elbow joint (disorder)"
+                    },
+                    {
+                        "code": "305531000119102",
+                        "display": "Contracture of joint of right foot (disorder)"
+                    },
+                    {
+                        "code": "305541000119106",
+                        "display": "Contracture of joint of right hand (disorder)"
+                    },
+                    {
+                        "code": "305551000119108",
+                        "display": "Contracture of right hip joint (disorder)"
+                    },
+                    {
+                        "code": "305561000119105",
+                        "display": "Contracture of right knee joint (disorder)"
+                    },
+                    {
+                        "code": "305571000119104",
+                        "display": "Contracture of joint of right shoulder region (disorder)"
+                    },
+                    {
+                        "code": "305581000119101",
+                        "display": "Contracture of joint of right wrist (disorder)"
+                    },
+                    {
+                        "code": "34241000119104",
+                        "display": "Ocular torticollis (disorder)"
+                    },
+                    {
+                        "code": "360444002",
+                        "display": "Traumatic torticollis (disorder)"
+                    },
+                    {
+                        "code": "370473000",
+                        "display": "Congenital arthrogryposis caused by teratogen (disorder)"
+                    },
+                    {
+                        "code": "385522000",
+                        "display": "Flexion contracture of joint (disorder)"
+                    },
+                    {
+                        "code": "425491009",
+                        "display": "Contracture of gastrocnemius muscle due to paralysis (disorder)"
+                    },
+                    {
+                        "code": "427103005",
+                        "display": "Congenital contracture of gastrocnemius muscle (disorder)"
+                    },
+                    {
+                        "code": "427781003",
+                        "display": "Contracture of gastrocnemius muscle due to traumatic injury (disorder)"
+                    },
+                    {
+                        "code": "428028003",
+                        "display": "Supination contracture of wrist (disorder)"
+                    },
+                    {
+                        "code": "429657008",
+                        "display": "Pronation contracture of wrist (disorder)"
+                    },
+                    {
+                        "code": "445505000",
+                        "display": "Contracture of joint of spine (disorder)"
+                    },
+                    {
+                        "code": "52616002",
+                        "display": "Freeman-Sheldon syndrome (disorder)"
+                    },
+                    {
+                        "code": "55033002",
+                        "display": "Muscle contracture (disorder)"
+                    },
+                    {
+                        "code": "62216007",
+                        "display": "Familial arthrogryposis-cholestatic hepatorenal syndrome (disorder)"
+                    },
+                    {
+                        "code": "65438001",
+                        "display": "Psychogenic torticollis (disorder)"
+                    },
+                    {
+                        "code": "699855003",
+                        "display": "Myostatic contracture of muscle of mastication (disorder)"
+                    },
+                    {
+                        "code": "699859009",
+                        "display": "Myofibrotic contracture of muscle of mastication (disorder)"
+                    },
+                    {
+                        "code": "70070008",
+                        "display": "Torticollis (disorder)"
+                    },
+                    {
+                        "code": "702447002",
+                        "display": "Arthrogryposis-like syndrome (disorder)"
+                    },
+                    {
+                        "code": "715216008",
+                        "display": "Distal arthrogryposis type 2B (disorder)"
+                    },
+                    {
+                        "code": "715217004",
+                        "display": "Distal arthrogryposis type 5 (disorder)"
+                    },
+                    {
+                        "code": "715314008",
+                        "display": "Distal arthrogryposis type 1 (disorder)"
+                    },
+                    {
+                        "code": "715316005",
+                        "display": "Neurogenic arthrogryposis multiplex congenita (disorder)"
+                    },
+                    {
+                        "code": "715418007",
+                        "display": "Lethal congenital contracture syndrome type 1 (disorder)"
+                    },
+                    {
+                        "code": "715419004",
+                        "display": "Lethal congenital contracture syndrome type 2 (disorder)"
+                    },
+                    {
+                        "code": "715420005",
+                        "display": "Lethal congenital contracture syndrome type 3 (disorder)"
+                    },
+                    {
+                        "code": "715565004",
+                        "display": "Lethal arthrogryposis co-occurrent with anterior horn cell disease (disorder)"
+                    },
+                    {
+                        "code": "715575001",
+                        "display": "Distal arthrogryposis type 4 (disorder)"
+                    },
+                    {
+                        "code": "715986009",
+                        "display": "Camptodactyly with joint contracture and facial skeletal defect syndrome (disorder)"
+                    },
+                    {
+                        "code": "716169009",
+                        "display": "Holoprosencephaly sequence with hypokinesia and congenital joint contracture syndrome (disorder)"
+                    },
+                    {
+                        "code": "718576001",
+                        "display": "Hydrocephalus with cleft palate and joint contracture syndrome (disorder)"
+                    },
+                    {
+                        "code": "719398004",
+                        "display": "Malignant hyperthermia with arthrogryposis and torticollis syndrome (disorder)"
+                    },
+                    {
+                        "code": "719521002",
+                        "display": "Benign paroxysmal torticollis of infancy (disorder)"
+                    },
+                    {
+                        "code": "719836007",
+                        "display": "X-linked distal arthrogryposis multiplex congenita (disorder)"
+                    },
+                    {
+                        "code": "719845008",
+                        "display": "Van den Ende-Gupta syndrome (disorder)"
+                    },
+                    {
+                        "code": "720463009",
+                        "display": "Adducted thumbs and arthrogryposis syndrome Christian type (disorder)"
+                    },
+                    {
+                        "code": "720513002",
+                        "display": "Arthrogryposis with renal dysfunction and cholestasis syndrome (disorder)"
+                    },
+                    {
+                        "code": "720514008",
+                        "display": "Arthrogryposis multiplex congenita and whistling face syndrome (disorder)"
+                    },
+                    {
+                        "code": "720515009",
+                        "display": "Distal arthrogryposis type 6 (disorder)"
+                    },
+                    {
+                        "code": "720746006",
+                        "display": "Contracture with ectodermal dysplasia and orofacial cleft syndrome (disorder)"
+                    },
+                    {
+                        "code": "720860004",
+                        "display": "Ehlers-Danlos syndrome musculocontractural type (disorder)"
+                    },
+                    {
+                        "code": "722456001",
+                        "display": "Intellectual disability, developmental delay, contracture syndrome (disorder)"
+                    },
+                    {
+                        "code": "724349009",
+                        "display": "Hereditary inclusion body myopathy, joint contracture, ophthalmoplegia syndrome (disorder)"
+                    },
+                    {
+                        "code": "726620005",
+                        "display": "Arthrogryposis hyperkeratosis syndrome lethal form (disorder)"
+                    },
+                    {
+                        "code": "733037000",
+                        "display": "German syndrome (disorder)"
+                    },
+                    {
+                        "code": "733045005",
+                        "display": "Camptobrachydactyly (disorder)"
+                    },
+                    {
+                        "code": "733623005",
+                        "display": "Autism spectrum disorder, epilepsy, arthrogryposis syndrome (disorder)"
+                    },
+                    {
+                        "code": "763346009",
+                        "display": "Fetal akinesia, cerebral and retinal hemorrhage syndrome (disorder)"
+                    },
+                    {
+                        "code": "763462004",
+                        "display": "X-linked lethal multiple pterygium syndrome (disorder)"
+                    },
+                    {
+                        "code": "763778003",
+                        "display": "Larsen-like syndrome beta-1,3-glucuronyltransferase 3 type (disorder)"
+                    },
+                    {
+                        "code": "764812008",
+                        "display": "Autosomal recessive myogenic arthrogryposis multiplex congenita (disorder)"
+                    },
+                    {
+                        "code": "766931003",
+                        "display": "Hypomyelination neuropathy arthrogryposis syndrome (disorder)"
+                    },
+                    {
+                        "code": "77016009",
+                        "display": "Amyoplasia congenita disruptive sequence (disorder)"
+                    },
+                    {
+                        "code": "770901001",
+                        "display": "Autosomal recessive intellectual disability, motor dysfunction, multiple joint contracture syndrome (disorder)"
+                    },
+                    {
+                        "code": "771266007",
+                        "display": "Torticollis, keloids, cryptorchidism, renal dysplasia syndrome (disorder)"
+                    },
+                    {
+                        "code": "771269000",
+                        "display": "Autosomal dominant multiple pterygium syndrome (disorder)"
+                    },
+                    {
+                        "code": "771306007",
+                        "display": "Hereditary fibrosing poikiloderma, tendon contractures, myopathy, pulmonary fibrosis syndrome (disorder)"
+                    },
+                    {
+                        "code": "773306002",
+                        "display": "Congenital lethal myopathy Compton North type (disorder)"
+                    },
+                    {
+                        "code": "773396009",
+                        "display": "Distal arthrogryposis type 5D (disorder)"
+                    },
+                    {
+                        "code": "773626008",
+                        "display": "Joint contracture, webbed neck, micrognathia, hypoplastic nipple syndrome (disorder)"
+                    },
+                    {
+                        "code": "783140003",
+                        "display": "Pelvic dysplasia, arthrogryposis of lower limbs syndrome (disorder)"
+                    },
+                    {
+                        "code": "785902000",
+                        "display": "Contracture of joint following injury (disorder)"
+                    },
+                    {
+                        "code": "785903005",
+                        "display": "Contracture of muscle following injury (disorder)"
+                    },
+                    {
+                        "code": "786039009",
+                        "display": "Arthrogryposis and ectodermal dysplasia syndrome (disorder)"
+                    },
+                    {
+                        "code": "7890003",
+                        "display": "Contracture of joint (disorder)"
+                    },
+                    {
+                        "code": "86414002",
+                        "display": "Contracture of joint of hand (disorder)"
+                    },
+                    {
+                        "code": "897570002",
+                        "display": "Distal arthrogryposis type 3 (disorder)"
+                    },
+                    {
+                        "code": "89902003",
+                        "display": "Grisel's syndrome (disorder)"
+                    },
+                    {
+                        "code": "90116003",
+                        "display": "Contracture of joint of shoulder region (disorder)"
+                    }
+                ]
+            },
+            {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "version": "2023",
+                "concept": [
+                    {
+                        "code": "M24.5",
+                        "display": "Contracture of joint"
+                    },
+                    {
+                        "code": "M24.50",
+                        "display": "Contracture, unspecified joint"
+                    },
+                    {
+                        "code": "M24.51",
+                        "display": "Contracture, shoulder"
+                    },
+                    {
+                        "code": "M24.511",
+                        "display": "Contracture, right shoulder"
+                    },
+                    {
+                        "code": "M24.512",
+                        "display": "Contracture, left shoulder"
+                    },
+                    {
+                        "code": "M24.519",
+                        "display": "Contracture, unspecified shoulder"
+                    },
+                    {
+                        "code": "M24.52",
+                        "display": "Contracture, elbow"
+                    },
+                    {
+                        "code": "M24.521",
+                        "display": "Contracture, right elbow"
+                    },
+                    {
+                        "code": "M24.522",
+                        "display": "Contracture, left elbow"
+                    },
+                    {
+                        "code": "M24.529",
+                        "display": "Contracture, unspecified elbow"
+                    },
+                    {
+                        "code": "M24.53",
+                        "display": "Contracture, wrist"
+                    },
+                    {
+                        "code": "M24.531",
+                        "display": "Contracture, right wrist"
+                    },
+                    {
+                        "code": "M24.532",
+                        "display": "Contracture, left wrist"
+                    },
+                    {
+                        "code": "M24.539",
+                        "display": "Contracture, unspecified wrist"
+                    },
+                    {
+                        "code": "M24.54",
+                        "display": "Contracture, hand"
+                    },
+                    {
+                        "code": "M24.541",
+                        "display": "Contracture, right hand"
+                    },
+                    {
+                        "code": "M24.542",
+                        "display": "Contracture, left hand"
+                    },
+                    {
+                        "code": "M24.549",
+                        "display": "Contracture, unspecified hand"
+                    },
+                    {
+                        "code": "M24.55",
+                        "display": "Contracture, hip"
+                    },
+                    {
+                        "code": "M24.551",
+                        "display": "Contracture, right hip"
+                    },
+                    {
+                        "code": "M24.552",
+                        "display": "Contracture, left hip"
+                    },
+                    {
+                        "code": "M24.559",
+                        "display": "Contracture, unspecified hip"
+                    },
+                    {
+                        "code": "M24.56",
+                        "display": "Contracture, knee"
+                    },
+                    {
+                        "code": "M24.561",
+                        "display": "Contracture, right knee"
+                    },
+                    {
+                        "code": "M24.562",
+                        "display": "Contracture, left knee"
+                    },
+                    {
+                        "code": "M24.569",
+                        "display": "Contracture, unspecified knee"
+                    },
+                    {
+                        "code": "M24.57",
+                        "display": "Contracture, ankle and foot"
+                    },
+                    {
+                        "code": "M24.571",
+                        "display": "Contracture, right ankle"
+                    },
+                    {
+                        "code": "M24.572",
+                        "display": "Contracture, left ankle"
+                    },
+                    {
+                        "code": "M24.573",
+                        "display": "Contracture, unspecified ankle"
+                    },
+                    {
+                        "code": "M24.574",
+                        "display": "Contracture, right foot"
+                    },
+                    {
+                        "code": "M24.575",
+                        "display": "Contracture, left foot"
+                    },
+                    {
+                        "code": "M24.576",
+                        "display": "Contracture, unspecified foot"
+                    },
+                    {
+                        "code": "M24.59",
+                        "display": "Contracture, other specified joint"
+                    },
+                    {
+                        "code": "M62.4",
+                        "display": "Contracture of muscle"
+                    },
+                    {
+                        "code": "M62.40",
+                        "display": "Contracture of muscle, unspecified site"
+                    },
+                    {
+                        "code": "M62.41",
+                        "display": "Contracture of muscle, shoulder"
+                    },
+                    {
+                        "code": "M62.411",
+                        "display": "Contracture of muscle, right shoulder"
+                    },
+                    {
+                        "code": "M62.412",
+                        "display": "Contracture of muscle, left shoulder"
+                    },
+                    {
+                        "code": "M62.419",
+                        "display": "Contracture of muscle, unspecified shoulder"
+                    },
+                    {
+                        "code": "M62.42",
+                        "display": "Contracture of muscle, upper arm"
+                    },
+                    {
+                        "code": "M62.421",
+                        "display": "Contracture of muscle, right upper arm"
+                    },
+                    {
+                        "code": "M62.422",
+                        "display": "Contracture of muscle, left upper arm"
+                    },
+                    {
+                        "code": "M62.429",
+                        "display": "Contracture of muscle, unspecified upper arm"
+                    },
+                    {
+                        "code": "M62.43",
+                        "display": "Contracture of muscle, forearm"
+                    },
+                    {
+                        "code": "M62.431",
+                        "display": "Contracture of muscle, right forearm"
+                    },
+                    {
+                        "code": "M62.432",
+                        "display": "Contracture of muscle, left forearm"
+                    },
+                    {
+                        "code": "M62.439",
+                        "display": "Contracture of muscle, unspecified forearm"
+                    },
+                    {
+                        "code": "M62.44",
+                        "display": "Contracture of muscle, hand"
+                    },
+                    {
+                        "code": "M62.441",
+                        "display": "Contracture of muscle, right hand"
+                    },
+                    {
+                        "code": "M62.442",
+                        "display": "Contracture of muscle, left hand"
+                    },
+                    {
+                        "code": "M62.449",
+                        "display": "Contracture of muscle, unspecified hand"
+                    },
+                    {
+                        "code": "M62.45",
+                        "display": "Contracture of muscle, thigh"
+                    },
+                    {
+                        "code": "M62.451",
+                        "display": "Contracture of muscle, right thigh"
+                    },
+                    {
+                        "code": "M62.452",
+                        "display": "Contracture of muscle, left thigh"
+                    },
+                    {
+                        "code": "M62.459",
+                        "display": "Contracture of muscle, unspecified thigh"
+                    },
+                    {
+                        "code": "M62.46",
+                        "display": "Contracture of muscle, lower leg"
+                    },
+                    {
+                        "code": "M62.461",
+                        "display": "Contracture of muscle, right lower leg"
+                    },
+                    {
+                        "code": "M62.462",
+                        "display": "Contracture of muscle, left lower leg"
+                    },
+                    {
+                        "code": "M62.469",
+                        "display": "Contracture of muscle, unspecified lower leg"
+                    },
+                    {
+                        "code": "M62.47",
+                        "display": "Contracture of muscle, ankle and foot"
+                    },
+                    {
+                        "code": "M62.471",
+                        "display": "Contracture of muscle, right ankle and foot"
+                    },
+                    {
+                        "code": "M62.472",
+                        "display": "Contracture of muscle, left ankle and foot"
+                    },
+                    {
+                        "code": "M62.479",
+                        "display": "Contracture of muscle, unspecified ankle and foot"
+                    },
+                    {
+                        "code": "M62.48",
+                        "display": "Contracture of muscle, other site"
+                    },
+                    {
+                        "code": "M62.49",
+                        "display": "Contracture of muscle, multiple sites"
+                    },
+                    {
+                        "code": "M67.0",
+                        "display": "Short Achilles tendon (acquired)"
+                    },
+                    {
+                        "code": "M67.00",
+                        "display": "Short Achilles tendon (acquired), unspecified ankle"
+                    },
+                    {
+                        "code": "M67.01",
+                        "display": "Short Achilles tendon (acquired), right ankle"
+                    },
+                    {
+                        "code": "M67.02",
+                        "display": "Short Achilles tendon (acquired), left ankle"
+                    }
+                ]
+            }
+        ]
+    }
+}

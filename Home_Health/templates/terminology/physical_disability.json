@@ -1,0 +1,71 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113762.1.4.1047.615",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2022-12-22T07:42:11.000+00:00",
+        "source": "#pceEovJBFWuLRZfa"
+    },
+    "url": "https://fhir-dev.mettles.com/fhir-services/ValueSet/2.16.840.1.113762.1.4.1047.615",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113762.1.4.1047.615"
+        }
+    ],
+    "version": "Latest",
+    "name": "PhysicalDisability",
+    "title": "Physical Disability",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2022-09",
+                "concept": [
+                    {
+                        "code": "102491009",
+                        "display": "Immobile (finding)"
+                    },
+                    {
+                        "code": "160684002",
+                        "display": "Confined to chair (finding)"
+                    },
+                    {
+                        "code": "165243005",
+                        "display": "Independent in wheelchair (finding)"
+                    },
+                    {
+                        "code": "165244004",
+                        "display": "Minimal help in wheelchair (finding)"
+                    },
+                    {
+                        "code": "282145008",
+                        "display": "Unable to walk (finding)"
+                    },
+                    {
+                        "code": "282147000",
+                        "display": "Does not walk (finding)"
+                    },
+                    {
+                        "code": "282204009",
+                        "display": "Unable to initiate walking (finding)"
+                    },
+                    {
+                        "code": "282206006",
+                        "display": "Does not initiate walking (finding)"
+                    },
+                    {
+                        "code": "413121008",
+                        "display": "Dependent on helper pushing wheelchair (finding)"
+                    },
+                    {
+                        "code": "8510008",
+                        "display": "Reduced mobility (finding)"
+                    }
+                ]
+            }
+        ]
+    }
+}

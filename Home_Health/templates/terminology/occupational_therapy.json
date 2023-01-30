@@ -1,0 +1,341 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113762.1.4.1219.101",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2022-12-23T10:21:15.000+00:00",
+        "source": "#sk5PY8L9OIRa317U"
+    },
+    "url": "https://fhir-dev.mettles.com/fhir-services/ValueSet/2.16.840.1.113762.1.4.1219.101",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113762.1.4.1219.101"
+        }
+    ],
+    "version": "Latest",
+    "name": "OccupationalTherapyProcedure",
+    "title": "Occupational Therapy Procedure",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2022-09",
+                "concept": [
+                    {
+                        "code": "11581009",
+                        "display": "Swinging transfer training (regime/therapy)"
+                    },
+                    {
+                        "code": "183345007",
+                        "display": "Daily living activity therapy (regime/therapy)"
+                    },
+                    {
+                        "code": "21910006",
+                        "display": "Bathtub transfer training (regime/therapy)"
+                    },
+                    {
+                        "code": "226027003",
+                        "display": "Conductive education (regime/therapy)"
+                    },
+                    {
+                        "code": "226035000",
+                        "display": "Key points of control (regime/therapy)"
+                    },
+                    {
+                        "code": "226048001",
+                        "display": "Positioning - therapy (regime/therapy)"
+                    },
+                    {
+                        "code": "226049009",
+                        "display": "Proprioception awareness work (regime/therapy)"
+                    },
+                    {
+                        "code": "226066006",
+                        "display": "Work analysis (regime/therapy)"
+                    },
+                    {
+                        "code": "228531005",
+                        "display": "Activity for ontogenetic motor pattern (regime/therapy)"
+                    },
+                    {
+                        "code": "228544000",
+                        "display": "Cognitive intervention strategies (regime/therapy)"
+                    },
+                    {
+                        "code": "228545004",
+                        "display": "Coma stimulation (regime/therapy)"
+                    },
+                    {
+                        "code": "228556004",
+                        "display": "Room management technique (regime/therapy)"
+                    },
+                    {
+                        "code": "228594004",
+                        "display": "Adaptive and compensatory techniques (regime/therapy)"
+                    },
+                    {
+                        "code": "228623005",
+                        "display": "Environmental adaptation (regime/therapy)"
+                    },
+                    {
+                        "code": "228624004",
+                        "display": "Alteration to kitchen design (regime/therapy)"
+                    },
+                    {
+                        "code": "228625003",
+                        "display": "Alteration to room layout (regime/therapy)"
+                    },
+                    {
+                        "code": "228626002",
+                        "display": "Furniture height modification (regime/therapy)"
+                    },
+                    {
+                        "code": "228627006",
+                        "display": "Workstation modification (regime/therapy)"
+                    },
+                    {
+                        "code": "228628001",
+                        "display": "Access modification (regime/therapy)"
+                    },
+                    {
+                        "code": "228629009",
+                        "display": "Door adaptation (regime/therapy)"
+                    },
+                    {
+                        "code": "228631000",
+                        "display": "Toilet modification (regime/therapy)"
+                    },
+                    {
+                        "code": "228633002",
+                        "display": "Joint protection training (regime/therapy)"
+                    },
+                    {
+                        "code": "228634008",
+                        "display": "Ergonomic education (regime/therapy)"
+                    },
+                    {
+                        "code": "228635009",
+                        "display": "Manual handling education (regime/therapy)"
+                    },
+                    {
+                        "code": "228636005",
+                        "display": "Back pain prevention education (regime/therapy)"
+                    },
+                    {
+                        "code": "228637001",
+                        "display": "Seating education (regime/therapy)"
+                    },
+                    {
+                        "code": "228641002",
+                        "display": "Community living skills training (regime/therapy)"
+                    },
+                    {
+                        "code": "228644005",
+                        "display": "Industrial therapy (regime/therapy)"
+                    },
+                    {
+                        "code": "228645006",
+                        "display": "Work simulation (regime/therapy)"
+                    },
+                    {
+                        "code": "228647003",
+                        "display": "Work placement (regime/therapy)"
+                    },
+                    {
+                        "code": "228648008",
+                        "display": "Work hardening (regime/therapy)"
+                    },
+                    {
+                        "code": "228649000",
+                        "display": "Activity adaptation (regime/therapy)"
+                    },
+                    {
+                        "code": "228650000",
+                        "display": "Activity analysis (regime/therapy)"
+                    },
+                    {
+                        "code": "228653003",
+                        "display": "Occupational therapy home visit (regime/therapy)"
+                    },
+                    {
+                        "code": "229203005",
+                        "display": "Daily living activities in water (regime/therapy)"
+                    },
+                    {
+                        "code": "229227007",
+                        "display": "Tactile awareness work (regime/therapy)"
+                    },
+                    {
+                        "code": "229230000",
+                        "display": "Joint control work (regime/therapy)"
+                    },
+                    {
+                        "code": "229231001",
+                        "display": "Upper limb control work (regime/therapy)"
+                    },
+                    {
+                        "code": "229232008",
+                        "display": "Lower limb control work (regime/therapy)"
+                    },
+                    {
+                        "code": "229233003",
+                        "display": "Trunk control work (regime/therapy)"
+                    },
+                    {
+                        "code": "229234009",
+                        "display": "Pelvic control work (regime/therapy)"
+                    },
+                    {
+                        "code": "229235005",
+                        "display": "Hip control work (regime/therapy)"
+                    },
+                    {
+                        "code": "229236006",
+                        "display": "Knee control work (regime/therapy)"
+                    },
+                    {
+                        "code": "229237002",
+                        "display": "Ankle control work (regime/therapy)"
+                    },
+                    {
+                        "code": "229241003",
+                        "display": "Rhythmic stabilization (regime/therapy)"
+                    },
+                    {
+                        "code": "229268003",
+                        "display": "Rhythmic intention technique (regime/therapy)"
+                    },
+                    {
+                        "code": "229269006",
+                        "display": "Speech regulation technique (regime/therapy)"
+                    },
+                    {
+                        "code": "229270007",
+                        "display": "Orthofunction technique (regime/therapy)"
+                    },
+                    {
+                        "code": "229276001",
+                        "display": "Rhythmic initiation technique (regime/therapy)"
+                    },
+                    {
+                        "code": "229282003",
+                        "display": "Timing for emphasis technique (regime/therapy)"
+                    },
+                    {
+                        "code": "290043008",
+                        "display": "Self-care practice (regime/therapy)"
+                    },
+                    {
+                        "code": "290044002",
+                        "display": "Dressing practice (regime/therapy)"
+                    },
+                    {
+                        "code": "290045001",
+                        "display": "Kitchen practice (regime/therapy)"
+                    },
+                    {
+                        "code": "290046000",
+                        "display": "Toilet practice (regime/therapy)"
+                    },
+                    {
+                        "code": "290047009",
+                        "display": "Bathing practice (regime/therapy)"
+                    },
+                    {
+                        "code": "290048004",
+                        "display": "Transfer practice (regime/therapy)"
+                    },
+                    {
+                        "code": "290049007",
+                        "display": "Feeding practice (regime/therapy)"
+                    },
+                    {
+                        "code": "290050007",
+                        "display": "Eating practice (regime/therapy)"
+                    },
+                    {
+                        "code": "290051006",
+                        "display": "Drinking practice (regime/therapy)"
+                    },
+                    {
+                        "code": "311681003",
+                        "display": "Chewing exercises (regime/therapy)"
+                    },
+                    {
+                        "code": "311765004",
+                        "display": "Modification of house (regime/therapy)"
+                    },
+                    {
+                        "code": "311766003",
+                        "display": "Barrier-free environment provision (regime/therapy)"
+                    },
+                    {
+                        "code": "57456004",
+                        "display": "Standing transfer training (regime/therapy)"
+                    },
+                    {
+                        "code": "70082004",
+                        "display": "Vocational rehabilitation (regime/therapy)"
+                    },
+                    {
+                        "code": "716037003",
+                        "display": "Task adaptation (regime/therapy)"
+                    },
+                    {
+                        "code": "719078002",
+                        "display": "Adjustment of physical environment (regime/therapy)"
+                    },
+                    {
+                        "code": "719861005",
+                        "display": "Modification of social environment (regime/therapy)"
+                    },
+                    {
+                        "code": "723337004",
+                        "display": "Ayres Sensory Integration (regime/therapy)"
+                    },
+                    {
+                        "code": "723490001",
+                        "display": "Facilitating maintenance of physical capabilities through occupational engagement (regime/therapy)"
+                    },
+                    {
+                        "code": "772822000",
+                        "display": "Individual Placement and Support (regime/therapy)"
+                    },
+                    {
+                        "code": "82807006",
+                        "display": "Car transfer training (regime/therapy)"
+                    },
+                    {
+                        "code": "84478008",
+                        "display": "Occupational therapy (regime/therapy)"
+                    },
+                    {
+                        "code": "87703009",
+                        "display": "Sliding transfer training (regime/therapy)"
+                    }
+                ]
+            },
+            {
+                "system": "https://hcpcs.codes",
+                "version": "2022",
+                "concept": [
+                    {
+                        "code": "G0152",
+                        "display": "Services performed by a qualified occupational therapist in the home health or hospice setting, each 15 minutes"
+                    },
+                    {
+                        "code": "G0158",
+                        "display": "Services performed by a qualified occupational therapist assistant in the home health or hospice setting, each 15 minutes"
+                    },
+                    {
+                        "code": "S9129",
+                        "display": "Occupational therapy, in the home, per diem"
+                    }
+                ]
+            }
+        ]
+    }
+}

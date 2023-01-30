@@ -1,0 +1,87 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.7643.3.1038",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2022-12-22T07:41:58.000+00:00",
+        "source": "#CvOMKK2pWQHKylvC"
+    },
+    "url": "https://fhir-dev.mettles.com/fhir-services/ValueSet/2.16.840.1.113883.3.7643.3.1038",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113883.3.7643.3.1038"
+        }
+    ],
+    "version": "Latest",
+    "name": "BowelEliminationPattern",
+    "title": "Bowel Elimination Pattern",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2022-09",
+                "concept": [
+                    {
+                        "code": "129691005",
+                        "display": "At risk for constipation (finding)"
+                    },
+                    {
+                        "code": "14450001000004103",
+                        "display": "Increased feces output (finding)"
+                    },
+                    {
+                        "code": "167623009",
+                        "display": "Feces quantity bulky (finding)"
+                    },
+                    {
+                        "code": "167624003",
+                        "display": "Feces quantity sparse (finding)"
+                    },
+                    {
+                        "code": "229209009",
+                        "display": "Change in stool consistency (finding)"
+                    },
+                    {
+                        "code": "247339003",
+                        "display": "Sensation as if stool remains in rectum (finding)"
+                    },
+                    {
+                        "code": "249525006",
+                        "display": "Unaware of passing feces (finding)"
+                    },
+                    {
+                        "code": "2761008",
+                        "display": "Decreased stool caliber (finding)"
+                    },
+                    {
+                        "code": "44635007",
+                        "display": "Fecal impaction (disorder)"
+                    },
+                    {
+                        "code": "46202007",
+                        "display": "Change in stool caliber (finding)"
+                    },
+                    {
+                        "code": "58230007",
+                        "display": "Alteration in bowel elimination: constipation (finding)"
+                    },
+                    {
+                        "code": "704419000",
+                        "display": "At risk of diarrhea (finding)"
+                    },
+                    {
+                        "code": "78459008",
+                        "display": "Double incontinence (finding)"
+                    },
+                    {
+                        "code": "9272000",
+                        "display": "Passes stool completely (finding)"
+                    }
+                ]
+            }
+        ]
+    }
+}

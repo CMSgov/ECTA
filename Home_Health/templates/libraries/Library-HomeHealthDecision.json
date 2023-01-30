@@ -1,0 +1,90 @@
+{
+    "resourceType": "Library",
+    "version": "1.0.0",
+    "title": "HomeHealthDecision",
+    "name": "HomeHealthDecision",
+    "status": "draft",
+    "type": {
+      "coding": [
+        {
+          "code": "logic-library"
+        }
+      ]
+    },
+    "relatedArtifact": [
+      {
+        "type": "depends-on",
+        "resource": "Library/FHIRHelpers"
+      },
+      {
+        "type": "depends-on",
+        "resource": "Library/library-homehealth-HomeHealthService"
+      }
+    ],
+    "dataRequirement": [
+      {
+        "type": "Condition",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "2.16.840.1.113883.17.4077.3.2006"
+          }
+          ]
+      },
+      {
+        "type": "Condition",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "2.16.840.1.113883.3.464.1003.199.12.1055"
+          }
+          ]
+      },
+      {
+        "type": "Procedure",
+        "codeFilter": [
+          {
+            "path": "status",
+            "code": "completed"
+          }
+          ]
+      },
+      {
+        "type": "MedicationAdministration",
+        "codeFilter": [
+          {
+            "path": "status",
+            "code": "in-progress"
+          }
+          ]
+      },
+      {
+        "type": "AllergyIntolerance",
+        "codeFilter": [
+          {
+            "path": "clinicalStatus",
+            "code": "active"
+          }
+          ]
+      },
+      {
+        "type": "CarePlan",
+        "codeFilter": [
+          {
+            "path": "status",
+            "code": "active"
+          }
+          ]
+      },
+      {
+        "type": "CarePlan",
+        "codeFilter": [
+          {
+            "path": "intent",
+            "code": "order"
+          }
+          ]
+      }
+    ]
+  }
+  
