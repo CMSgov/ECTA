@@ -1,0 +1,155 @@
+{
+    "resourceType": "ValueSet",
+    "id": "1.3.6.1.4.1.6997.4.1.2.268.15.35221.1.11.1.999.315",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2021-08-13T23:41:57.681+05:30",
+        "source": "#wbpeGmxl175hJ5ef"
+    },
+    "url": "https://fhir-dev.mettles.com/baseServer/fhir/ ValueSet/1.3.6.1.4.1.6997.4.1.2.268.15.35221.1.11.1.999.315",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "1.3.6.1.4.1.6997.4.1.2.268.15.35221.1.11.1.999.315"
+        }
+    ],
+    "version": "Latest",
+    "name": "IntranasalCorticosteroids",
+    "title": "Intranasal Corticosteroids",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "version": "2021-07",
+                "concept": [
+                    {
+                        "code": "1797838",
+                        "display": "ciclesonide 0.037 MG/ACTUAT Metered Dose Nasal Spray"
+                    },
+                    {
+                        "code": "1797840",
+                        "display": "ciclesonide 0.037 MG/ACTUAT Metered Dose Nasal Spray [Zetonna]"
+                    },
+                    {
+                        "code": "1797841",
+                        "display": "ciclesonide 0.05 MG/ACTUAT Metered Dose Nasal Spray"
+                    },
+                    {
+                        "code": "1797843",
+                        "display": "ciclesonide 0.05 MG/ACTUAT Metered Dose Nasal Spray [Omnaris]"
+                    },
+                    {
+                        "code": "1797863",
+                        "display": "flunisolide 0.025 MG/ACTUAT Metered Dose Nasal Spray"
+                    },
+                    {
+                        "code": "1797865",
+                        "display": "mometasone furoate 0.05 MG/ACTUAT Metered Dose Nasal Spray"
+                    },
+                    {
+                        "code": "1797870",
+                        "display": "mometasone furoate 0.05 MG/ACTUAT Metered Dose Nasal Spray [Nasonex]"
+                    },
+                    {
+                        "code": "1797890",
+                        "display": "fluticasone furoate 0.0275 MG/ACTUAT Metered Dose Nasal Spray"
+                    },
+                    {
+                        "code": "1797892",
+                        "display": "fluticasone furoate 0.0275 MG/ACTUAT Metered Dose Nasal Spray [Veramyst]"
+                    },
+                    {
+                        "code": "1797900",
+                        "display": "beclomethasone dipropionate 0.04 MG/ACTUAT Metered Dose Nasal Spray"
+                    },
+                    {
+                        "code": "1797902",
+                        "display": "beclomethasone dipropionate 0.04 MG/ACTUAT Metered Dose Nasal Spray [Qnasl]"
+                    },
+                    {
+                        "code": "1797904",
+                        "display": "triamcinolone acetonide 0.05 MG/ACTUAT Metered Dose Nasal Spray"
+                    },
+                    {
+                        "code": "1797907",
+                        "display": "fluticasone propionate 0.05 MG/ACTUAT Metered Dose Nasal Spray"
+                    },
+                    {
+                        "code": "1797909",
+                        "display": "fluticasone propionate 0.05 MG/ACTUAT Metered Dose Nasal Spray [Aller-Flo]"
+                    },
+                    {
+                        "code": "1797910",
+                        "display": "beclomethasone dipropionate 0.042 MG/ACTUAT Metered Dose Nasal Spray"
+                    },
+                    {
+                        "code": "1797913",
+                        "display": "triamcinolone acetonide 0.055 MG/ACTUAT Metered Dose Nasal Spray"
+                    },
+                    {
+                        "code": "1797915",
+                        "display": "triamcinolone acetonide 0.055 MG/ACTUAT Metered Dose Nasal Spray [Nasacort]"
+                    },
+                    {
+                        "code": "1797917",
+                        "display": "beclomethasone dipropionate 0.042 MG/ACTUAT Metered Dose Nasal Spray [Beconase]"
+                    },
+                    {
+                        "code": "1797919",
+                        "display": "fluticasone propionate 0.05 MG/ACTUAT Metered Dose Nasal Spray [Clarispray]"
+                    },
+                    {
+                        "code": "1797920",
+                        "display": "beclomethasone dipropionate 0.08 MG/ACTUAT Metered Dose Nasal Spray"
+                    },
+                    {
+                        "code": "1797921",
+                        "display": "beclomethasone dipropionate 0.08 MG/ACTUAT Metered Dose Nasal Spray [Qnasl]"
+                    },
+                    {
+                        "code": "1797926",
+                        "display": "beclomethasone dipropionate 0.084 MG/ACTUAT Metered Dose Nasal Spray"
+                    },
+                    {
+                        "code": "1797929",
+                        "display": "budesonide 0.032 MG/ACTUAT Metered Dose Nasal Spray"
+                    },
+                    {
+                        "code": "1797931",
+                        "display": "budesonide 0.032 MG/ACTUAT Metered Dose Nasal Spray [Rhinocort]"
+                    },
+                    {
+                        "code": "1797933",
+                        "display": "fluticasone propionate 0.05 MG/ACTUAT Metered Dose Nasal Spray [Flonase]"
+                    },
+                    {
+                        "code": "1797935",
+                        "display": "fluticasone propionate 0.05 MG/ACTUAT Metered Dose Nasal Spray [Nasoflow]"
+                    },
+                    {
+                        "code": "245785",
+                        "display": "triamcinolone 0.055 MG/ACTUAT Nasal Spray"
+                    },
+                    {
+                        "code": "247042",
+                        "display": "budesonide 0.05 MG/ACTUAT Nasal Spray"
+                    },
+                    {
+                        "code": "247551",
+                        "display": "budesonide 0.032 MG/ACTUAT Nasal Spray"
+                    },
+                    {
+                        "code": "247691",
+                        "display": "budesonide 0.1 MG/ACTUAT Nasal Spray"
+                    },
+                    {
+                        "code": "562655",
+                        "display": "beclomethasone 0.05 MG/ACTUAT Nasal Spray"
+                    }
+                ]
+            }
+        ]
+    }
+}

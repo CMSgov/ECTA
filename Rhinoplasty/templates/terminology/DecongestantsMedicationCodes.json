@@ -1,0 +1,35 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.464.1003.196.12.1329",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2021-08-18T10:50:26.274+05:30",
+        "source": "#2biXv6YTUaKT2dPr"
+    },
+    "url": "https://fhir-dev.mettles.com/baseServer/fhir/ValueSet/2.16.840.1.113883.3.464.1003.196.12.1329",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113883.3.464.1003.196.12.1329"
+        }
+    ],
+    "version": "Latest",
+    "name": "Acetaminophen/Dextromethorphan/Doxylamine/Pseudoephedrine",
+    "title": "Acetaminophen / Dextromethorphan / Doxylamine / Pseudoephedrine",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "version": "2021-07",
+                "concept": [
+                    {
+                        "code": "1089822",
+                        "display": "acetaminophen 325 MG / dextromethorphan hydrobromide 15 MG / doxylamine succinate 6.25 MG / pseudoephedrine hydrochloride 30 MG Oral Capsule"
+                    }
+                ]
+            }
+        ]
+    }
+}

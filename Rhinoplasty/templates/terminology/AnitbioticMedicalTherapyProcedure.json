@@ -1,0 +1,42 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.6037.1001.23.93.111",
+    "url": "https://fhir-dev.mettles.com/baseServer/fhir/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.111",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113883.3.6037.1001.23.93.111"
+        }
+    ],
+    "version": "Latest",
+    "name": "Antibiotic Medical Therapy",
+    "title": "Antibiotic Medical Therapy",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2021-08",
+                "concept": [
+                    {
+                        "code": "281789004",
+                        "display": "Antibiotic therapy (procedure)"
+                    },
+                    {
+                        "code": "422181004",
+                        "display": "Antibiotic prophylaxis (procedure)"
+                    },
+                    {
+                        "code": "724053002",
+                        "display": "Antibiotic therapy for prevention of recurrent infection (procedure)"
+                    },
+                    {
+                        "code": "281791007",
+                        "display": "Oral antibiotic therapy (procedure)"
+                    }
+                ]
+            }
+        ]
+    }
+}

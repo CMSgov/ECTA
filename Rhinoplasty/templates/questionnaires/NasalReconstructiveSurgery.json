@@ -1,0 +1,843 @@
+{
+  "resourceType": "Questionnaire",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
+      "valueCanonical": "https://fhir-dev.mettles.com/baseServer/fhir/Library/library-rhinoplasty-NasalReconstructiveSurgery"
+    }
+  ],
+  "url": "https://fhir-dev.mettles.com/baseServer/fhir/Questionnaire/questionnaire-rhinoplasty-nasalreconstructivesurgery",
+  "identifier": [
+    {
+      "system": "http://identifiers.mettles.com/prior_authorization",
+      "value": "medicare_fee_for_service-nasal_reconstructive_surgery"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "Prior Authorization For Nasal Reconstructive Surgery",
+  "title": "Prior Authorization For Nasal Reconstructive Surgery",
+  "status": "draft",
+  "subjectType": [
+    "Patient"
+  ],
+  "date": "2021-08-07",
+  "publisher": "Mettle Solutions",
+  "item": [
+    {
+      "linkId": "1",
+      "text": "Type of Surgery",
+      "type": "group",
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "SurgeryPurpose"
+              }
+            }
+          ],
+          "linkId": "SurgeryPurpose",
+          "text": "What is the purpose of this surgery?",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "Cosmetic",
+                "display": "Cosmetic"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Reconstructive",
+                "display": "Reconstructive"
+              }
+            }
+          ],
+          "required": true
+        }
+      ]
+    },
+    {
+      "linkId": "4",
+      "text": "Diagnosis For Septoplasty",
+      "type": "group",
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "NasalSeptumDeviationOrDeformity"
+              }
+            }
+          ],
+          "linkId": "NasalSeptumDeviationOrDeformity",
+          "text": "Does the patient have deformity or deviation of the nasal septum?",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "ClefLipOrPalateRepair"
+              }
+            }
+          ],
+          "linkId": "ClefLipOrPalateRepair",
+          "text": "Does the patient have a cleft lip or cleft palate repair?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "NasalSeptumDeviationOrDeformity",
+              "answerBoolean": true
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "RecurrentEpistaxis"
+              }
+            }
+          ],
+          "linkId": "RecurrentEpistaxis",
+          "text": "Is there any recurrent epistaxis related to the septal deformity?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "NasalSeptumDeviationOrDeformity",
+              "answerBoolean": true
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "RecurrentSinusitis"
+              }
+            }
+          ],
+          "linkId": "RecurrentSinusitis",
+          "text": "Is the deviated septum causing a recurrent sinusitis?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "NasalSeptumDeviationOrDeformity",
+              "answerBoolean": true
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "IntranasalSurgeriesInterference"
+              }
+            }
+          ],
+          "linkId": "IntranasalSurgeriesInterference",
+          "text": "Is the Septal deviation/deformity interfering with any other intranasal surgeries?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "NasalAirwayObstruction",
+              "answerBoolean": false
+            },
+            {
+              "operator": "=",
+              "question": "NasalSeptumDeviationOrDeformity",
+              "answerBoolean": true
+            }
+          ],
+          "enableBehavior": "all",
+          "required": true
+        }
+      ]
+    },
+    {
+      "linkId": "2",
+      "text": "Diagnosis For Rhinoplasty",
+      "type": "group",
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "NasalAirwayObstruction"
+              }
+            }
+          ],
+          "linkId": "NasalAirwayObstruction",
+          "text": "Does the patient have Nasal Airway Obstruction?",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "CongenitalDefect"
+              }
+            }
+          ],
+          "linkId": "CongenitalDefect",
+          "text": "Does the patient have any cleft lip/palate or other congenital craniofacial deformity?",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "FunctionalImpairment"
+              }
+            }
+          ],
+          "linkId": "FunctionalImpairment",
+          "text": "Is it causing a functional impairment?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "CongenitalDefect",
+              "answerBoolean": true
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "VestibularStenosis"
+              }
+            }
+          ],
+          "linkId": "VestibularStenosis",
+          "text": "Does the patient have vestibular stenosis (collapsed internal valves)?",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "Trauma"
+              }
+            }
+          ],
+          "linkId": "Trauma",
+          "text": "Did the patient go through trauma/accident?",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "NasalBoneFracture"
+              }
+            }
+          ],
+          "linkId": "NasalBoneFracture",
+          "text": "Does it involve fracture of a nasal bone?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "Trauma",
+              "answerBoolean": true
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "BenignDiseasesCausingNasalObstruction"
+              }
+            }
+          ],
+          "linkId": "BenignDiseasesCausingNasalObstruction",
+          "text": "Is the nasal obstruction secondary to a benign disease?",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "ObstructiveSleepDisorder"
+              }
+            }
+          ],
+          "linkId": "ObstructiveSleepDisorder",
+          "text": "Does the patient have obstructive sleep disorder?",
+          "type": "boolean",
+          "required": true
+        }
+      ]
+    },
+    {
+      "linkId": "3",
+      "text": "Past Medical History",
+      "type": "group",
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "RehabilitationProsthesis"
+              }
+            }
+          ],
+          "linkId": "RehabilitationProsthesis",
+          "text": "Has a rehabilitation prosthesis been tried for the treatment of the patient's condition?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "NasalAirwayObstruction",
+              "answerBoolean": true
+            },
+            {
+              "operator": "=",
+              "question": "BenignDiseasesCausingNasalObstruction",
+              "answerBoolean": true
+            },
+            {
+              "operator": "=",
+              "question": "Trauma",
+              "answerBoolean": true
+            },
+            {
+              "operator": "=",
+              "question": "CongenitalDefect",
+              "answerBoolean": true
+            },
+            {
+              "operator": "=",
+              "question": "VestibularStenosis",
+              "answerBoolean": true
+            }
+          ],
+          "enableBehavior": "any",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "ProsthesisForSixWeeks"
+              }
+            }
+          ],
+          "linkId": "ProsthesisForSixWeeks",
+          "text": "Has the patient been on the prosthesis for at least 6 weeks?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "RehabilitationProsthesis",
+              "answerBoolean": true
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "ImprovementPostProsthesis"
+              }
+            }
+          ],
+          "linkId": "ImprovementPostProsthesis",
+          "text": "Has there been any improvement in the patient's condition?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "ProsthesisForSixWeeks",
+              "answerBoolean": true
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "ContraindicationOfCPAP"
+              }
+            }
+          ],
+          "linkId": "ContraindicationOfCPAP",
+          "text": "Is the usage of Continuous Positive Airway Pressure (CPAP) contraindicated due to septal deviation in the treatment of Obstructive Sleep Disorder?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "ObstructiveSleepDisorder",
+              "answerBoolean": true
+            },
+            {
+              "operator": "=",
+              "question": "NasalSeptumDeviationOrDeformity",
+              "answerBoolean": true
+            }
+          ],
+          "enableBehavior": "all",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "AntiHistamineMedicalTherapy"
+              }
+            }
+          ],
+          "linkId": "AntiHistamineMedicalTherapy",
+          "text": "Has an Anti-Histamine medical therapy been tried to manage the patient's condition?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "NasalAirwayObstruction",
+              "answerBoolean": true
+            },
+            {
+              "operator": "=",
+              "question": "BenignDiseasesCausingNasalObstruction",
+              "answerBoolean": true
+            },
+            {
+              "operator": "=",
+              "question": "Trauma",
+              "answerBoolean": true
+            },
+            {
+              "operator": "=",
+              "question": "RecurrentSinusitis",
+              "answerBoolean": true
+            },
+            {
+              "operator": "=",
+              "question": "ObstructiveSleepDisorder",
+              "answerBoolean": true
+            }
+          ],
+          "enableBehavior": "any",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "AntiHistamineTherapyForSixWeeks"
+              }
+            }
+          ],
+          "linkId": "AntiHistamineTherapyForSixWeeks",
+          "text": "Has the patient been on Anti-histamines for at least 6 weeks?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "AntiHistamineMedicalTherapy",
+              "answerBoolean": true
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "ImprovementPostAntiHistamineMedicalTherapy"
+              }
+            }
+          ],
+          "linkId": "ImprovementPostAntiHistamineMedicalTherapy",
+          "text": "Was the therapy effective in treatment of the patient's condition?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "AntiHistamineMedicalTherapy",
+              "answerBoolean": true
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "AntibioticMedicalTherapy"
+              }
+            }
+          ],
+          "linkId": "AntibioticMedicalTherapy",
+          "text": "Has an appropriate antibiotic therapy been tried to manage the patient's condition?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "RecurrentSinusitis",
+              "answerBoolean": true
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "AntibioticTherapyForSixWeeks"
+              }
+            }
+          ],
+          "linkId": "AntibioticTherapyForSixWeeks",
+          "text": "Has the patient been on Antibiotics for at least 6 weeks?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "AntibioticMedicalTherapy",
+              "answerBoolean": true
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "PostAntibioticMedicalTherapy"
+              }
+            }
+          ],
+          "linkId": "PostAntibioticMedicalTherapy",
+          "text": "Was there any improvement in the patient's condition?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "AntibioticTherapyForSixWeeks",
+              "answerBoolean": true
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "ImmunosuppressantsMedicalTherapy"
+              }
+            }
+          ],
+          "linkId": "ImmunosuppressantsMedicalTherapy",
+          "text": "Has a medical therapy using Immunosuppressants been tried?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "NasalAirwayObstruction",
+              "answerBoolean": true
+            },
+            {
+              "operator": "=",
+              "question": "BenignDiseasesCausingNasalObstruction",
+              "answerBoolean": true
+            },
+            {
+              "operator": "=",
+              "question": "Trauma",
+              "answerBoolean": true
+            },
+            {
+              "operator": "=",
+              "question": "VestibularStenosis",
+              "answerBoolean": true
+            },
+            {
+              "operator": "=",
+              "question": "RecurrentSinusitis",
+              "answerBoolean": true
+            },
+            {
+              "operator": "=",
+              "question": "ObstructiveSleepDisorder",
+              "answerBoolean": true
+            }
+          ],
+          "enableBehavior": "any",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "ImmunosuppressantsTherapyForSixWeeks"
+              }
+            }
+          ],
+          "linkId": "ImmunosuppressantsTherapyForSixWeeks",
+          "text": "Has the patient been on Antibiotics for at least 6 weeks?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "ImmunosuppressantsMedicalTherapy",
+              "answerBoolean": true
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "PostImmunosuppressantsMedicalTherapy"
+              }
+            }
+          ],
+          "linkId": "PostImmunosuppressantsMedicalTherapy",
+          "text": "Has there been any improvement in the patient's condition?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "ImmunosuppressantsTherapyForSixWeeks",
+              "answerBoolean": true
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "DecongestantsMedicalTherapy"
+              }
+            }
+          ],
+          "linkId": "DecongestantsMedicalTherapy",
+          "text": "Has a medical therapy using Decongestants been tried?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "NasalAirwayObstruction",
+              "answerBoolean": true
+            },
+            {
+              "operator": "=",
+              "question": "BenignDiseasesCausingNasalObstruction",
+              "answerBoolean": true
+            },
+            {
+              "operator": "=",
+              "question": "Trauma",
+              "answerBoolean": true
+            },
+            {
+              "operator": "=",
+              "question": "VestibularStenosis",
+              "answerBoolean": true
+            },
+            {
+              "operator": "=",
+              "question": "RecurrentSinusitis",
+              "answerBoolean": true
+            },
+            {
+              "operator": "=",
+              "question": "ObstructiveSleepDisorder",
+              "answerBoolean": true
+            }
+          ],
+          "enableBehavior": "any",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "DecongestantsTherapyForSixWeeks"
+              }
+            }
+          ],
+          "linkId": "DecongestantsTherapyForSixWeeks",
+          "text": "Has the patient been on Nasal Decongestants for at least 6 weeks?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "DecongestantsMedicalTherapy",
+              "answerBoolean": true
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "PostDecongestantsMedicalTherapy"
+              }
+            }
+          ],
+          "linkId": "PostDecongestantsMedicalTherapy",
+          "text": "Has there been any improvement in the patient's condition?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "DecongestantsTherapyForSixWeeks",
+              "answerBoolean": true
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "PreviousSeptoplastyOrTurbinectomy"
+              }
+            }
+          ],
+          "linkId": "PreviousSeptoplastyOrTurbinectomy",
+          "text": "Does the patient have a previous history of septoplasty or turbinectomy?",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "SeptoplastyOrTurbinectomyOutcome"
+              }
+            }
+          ],
+          "linkId": "SeptoplastyOrTurbinectomyOutcome",
+          "text": "Was the patient's condition resolved after the surgery?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "PreviousSeptoplastyOrTurbinectomy",
+              "answerBoolean": true
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "AdditionalSurgeries"
+              }
+            }
+          ],
+          "linkId": "AdditionalSurgeries",
+          "text": "Is the patient planning to undergo any other additional surgeries (septoplasty/turbinectomy)?",
+          "type": "boolean",
+          "required": true
+        }
+      ]
+    },
+    {
+      "linkId": "7",
+      "text": "Reports",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "PhotographicEvidence",
+          "text": "Please attach the latest photographic documentation (all the following: frontal, lateral and worm’s eye view) of the individual’s condition.",
+          "type": "display"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.6037.1001.23.93.113",
+    "url": "https://fhir-dev.mettles.com/baseServer/fhir/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.113",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113883.3.6037.1001.23.93.113"
+        }
+    ],
+    "version": "Latest",
+    "name": "Septoplasty Procedure Codes",
+    "title": "Septoplasty Procedure Codes",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2021-08",
+                "concept": [
+                    {
+                        "code": "13529000",
+                        "display": "Nasal septoplasty (procedure)"
+                    },
+                    {
+                        "code": "5781000",
+                        "display": "Operation on nasal septum (procedure)"
+                    },
+                    {
+                        "code": "232474008",
+                        "display": "Operation on internal nose (procedure)"
+                    },
+                    {
+                        "code": "118782005",
+                        "display": "Procedure on nasal septum (procedure)"
+                    }
+                ]
+            },
+            {
+                "system": "http://www.ama-assn.org/go/cpt",
+                "version": "2021-10",
+                "concept": [
+                    {
+                        "code": "30420",
+                        "display": "Rhinoplasty, primary; including major septal repair"
+                    },
+                    {
+                        "code": "30520",
+                        "display": "Septoplasty or submucous resection, with or without cartilage scoring, contouring or replacement with graft"
+                    }
+                ]
+            }
+        ]
+    }
+}

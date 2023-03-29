@@ -1,0 +1,218 @@
+{
+  "resourceType": "Questionnaire",
+  "identifier": [
+    {
+      "system": "http://identifiers.mettles.com/prior_authorization",
+      "value": "medicarefeeforservice-Blepharoplasty"
+    }
+  ],
+  "name": "Blepharoplasty",
+  "version": "1.0.0",
+  "title": "Blepharoplasty",
+  "status": "draft",
+  "subjectType": [
+    "Patient"
+  ],
+  "date": "2019-12-03",
+  "publisher": "Mettle Solutions",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
+      "valueCanonical": "https://fhir-dev.mettles.com/baseServer/fhir/Library/library-lcd1-Blepharoplasty"
+    }
+  ],
+  "contained": [
+    {
+      "resourceType": "ValueSet",
+      "id": "gender",
+      "name": "Gender",
+      "status": "draft",
+      "description": "Gender",
+      "compose": {
+        "include": [
+          {
+            "concept": [
+              {
+                "code": "male",
+                "display": "Male"
+              },
+              {
+                "code": "female",
+                "display": "Female"
+              },
+              {
+                "code": "other",
+                "display": "Other"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "item": [
+    {
+      "linkId": "1",
+      "text": "Diagnosis/Procedure",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "1.1",
+          "text": "Relevant Diagnosis",
+          "type": "open-choice",
+          "required": true,
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "RelevantDiagnosis"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "1.2",
+          "text": "Is any prior Prior Treatment performed ?",
+          "type": "boolean",
+          "required": true,
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "IsTreatmentPerformed"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "1.3",
+          "text": "Details of Prior Treatment performed that was unsuccessful",
+          "type": "open-choice",
+          "required": true,
+          "enableWhen": [
+            {
+              "question": "1.2",
+		          "operator": "=",
+              "answerBoolean": true
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "TreatmentFailed"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "2",
+      "text": "Functional Information",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "2.1",
+          "text": "Is there a margin reflex distance (MRD) of 2.0 mm or less. ?",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "linkId": "2.2",
+          "text": "Does the more Ptotic eye meet MRD criteria ?",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "linkId": "2.3",
+          "text": "Does lifting the more ptotic lid with tape cause the less ptotic lid to drop downward ?",
+          "type": "boolean",
+          "required": true,
+          "initial": [
+            {
+            "valueBoolean": true
+            }
+          ]
+        },
+        {
+          "linkId": "2.4",
+          "text": "Does instillation of phenylephrine drops into the superior fornix cause the less ptotic lid to drop downward ?",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "linkId": "2.5",
+          "text": "Is there a Redundant eyelid tissue touching the eyelashes result in pseudoptosis where the 'pseudo' margin produces a central pseudo-MRD of 2.0 mm or less ?",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "linkId": "2.6",
+          "text": "Is there a Redundant eyelid tissue hanging over the eyelid margin resulting in pseudoptosis where the 'pseudo' margin produces a central pseudo-MRD of 2.0 mm or less ?",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "linkId": "2.7",
+          "text": "Is there a Redundant eyelid tissue predominantly medially or laterally clearly obscures the line of sight incorresponding gaze?",
+          "type": "boolean",
+          "required": true,
+          "initial": [
+            {
+            "valueBoolean": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "3",
+      "text": "Clinical Information",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "3.1",
+          "text": "Is there a difficulty fitting or wearing a prosthesis",
+          "type": "boolean",
+          "required": true,
+          "initial": [
+            {
+            "valueBoolean": true
+            }
+          ]
+        },
+        {
+          "linkId": "3.2",
+          "text": "Marginal Reflex Distance in mm",
+          "type": "integer",
+          "required": true,
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "MRD"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "3.3",
+          "text": "COLOR photographs are required to support upper eyelid surgery as medically necessary.The photographs must be of sufficient size and detail as to make those structures easily recognizable. The patient’s head must be parallel to the camera and not tilted",
+          "type": "display",
+          "required": true
+        },
+        {
+          "linkId": "3.4",
+          "text": "(e.g., a downward head tilt might artificially reduce the apparent measurement of a MRD). Digital or film photographs are acceptable. Photographs must be identified with the beneficiary’s name and the date",
+          "type": "display",
+          "required": true
+        }
+      ]
+    }
+  ]
+}

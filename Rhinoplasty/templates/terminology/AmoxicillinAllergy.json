@@ -1,0 +1,34 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.6037.1001.23.93.116",
+    "url": "https://fhir-dev.mettles.com/baseServer/fhir/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.116",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113883.3.6037.1001.23.93.116"
+        }
+    ],
+    "version": "Latest",
+    "name": "Allergy to Amoxicillin",
+    "title": "Allergy to Amoxicillin",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2021-08",
+                "concept": [
+                    {
+                        "code": "294505008",
+                        "display": "Allergy to amoxicillin (finding)"
+                    },
+                    {
+                        "code": "871508005",
+                        "display": "Allergy to amoxicillin and/or clavulanic acid (finding)"
+                    }
+                ]
+            }
+        ]
+    }
+}

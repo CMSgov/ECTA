@@ -1,0 +1,44 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.6037.1001.23.93.109",
+    "url": "https://fhir-dev.mettles.com/baseServer/fhir/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.109",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113883.3.6037.1001.23.93.109"
+        }
+    ],
+    "version": "Latest",
+    "name": "Rehabilitation Prosthesis",
+    "title": "Rehabilitation Prosthesis",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2021-08",
+                "concept": [
+                    {
+                        "code": "183364001",
+                        "display": "Use of aids for daily life (regime/therapy)"
+                    },
+                    {
+                        "code": "234779003",
+                        "display": "Try-in of maxillary obturator (procedure)"
+                    }
+                ]
+            },
+            {
+                "system": "http://www.ama-assn.org/go/cpt",
+                "version": "2021-10",
+                "concept": [
+                    {
+                        "code": "21076",
+                        "display": "Impression and custom preparation; surgical obturator prosthesis"
+                    }
+                ]
+            }
+        ]
+    }
+}

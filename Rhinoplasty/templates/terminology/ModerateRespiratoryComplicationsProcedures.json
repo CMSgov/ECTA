@@ -1,0 +1,39 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113762.1.4.1029.174",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2021-08-13T23:41:49.902+05:30",
+        "source": "#8K94RKMRheEibo0N"
+    },
+    "url": "https://fhir-dev.mettles.com/baseServer/fhir/ValueSet/2.16.840.1.113762.1.4.1029.174",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113762.1.4.1029.174"
+        }
+    ],
+    "version": "Latest",
+    "name": "ModerateRespiratoryComplicationsProcedures",
+    "title": "Moderate Respiratory Complications Procedures",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2021-03",
+                "concept": [
+                    {
+                        "code": "448134000",
+                        "display": "Continuous positive airway pressure to nonventilated lung (regime/therapy)"
+                    },
+                    {
+                        "code": "47545007",
+                        "display": "Continuous positive airway pressure ventilation treatment (regime/therapy)"
+                    }
+                ]
+            }
+        ]
+    }
+}

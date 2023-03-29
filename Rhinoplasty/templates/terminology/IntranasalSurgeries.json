@@ -1,0 +1,110 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.6037.1001.23.93.107",
+    "url": "https://fhir-dev.mettles.com/baseServer/fhir/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.107",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113883.3.6037.1001.23.93.107"
+        }
+    ],
+    "version": "Latest",
+    "name": "Intranasal Surgeries",
+    "title": "Intranasal Surgeries",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2021-08",
+                "concept": [
+                    {
+                        "code": "172883004",
+                        "display": "Intranasal ethmoidectomy (procedure)"
+                    },
+                    {
+                        "code": "172925009",
+                        "display": "Intranasal anterior and posterior ethmoidectomy (procedure)"
+                    },
+                    {
+                        "code": "232509004",
+                        "display": "Intranasal frontoethmoidectomy (procedure)"
+                    },
+                    {
+                        "code": "232510009",
+                        "display": "Intranasal frontoethmosphenoidectomy (procedure)"
+                    },
+                    {
+                        "code": "85827004",
+                        "display": "Total ethmoidectomy by intranasal approach (procedure)"
+                    },
+                    {
+                        "code": "51302004",
+                        "display": "Turbinectomy (procedure)"
+                    },
+                    {
+                        "code": "125803009",
+                        "display": "Complete excision of turbinate (procedure)"
+                    },
+                    {
+                        "code": "399224009",
+                        "display": "Partial excision of inferior turbinate (procedure)"
+                    },
+                    {
+                        "code": "4341004",
+                        "display": "Complete submucous resection of turbinate (procedure)"
+                    },
+                    {
+                        "code": "74663003",
+                        "display": "Partial submucous resection of turbinate (procedure)"
+                    },
+                    {
+                        "code": "172825008",
+                        "display": "Nasal polypectomy (procedure)"
+                    },
+                    {
+                        "code": "10726005",
+                        "display": "Extensive excision of nasal polyps (procedure)"
+                    },
+                    {
+                        "code": "312595006",
+                        "display": "Nasal polypectomy using auto-debrider (procedure)"
+                    },
+                    {
+                        "code": "307723009",
+                        "display": "Nasal septal polypectomy (procedure)"
+                    },
+                    {
+                        "code": "251966007",
+                        "display": "Simple excision of nasal polyps (procedure)"
+                    },
+                    {
+                        "code": "370612006",
+                        "display": "Excision of neoplasm (procedure)"
+                    },
+                    {
+                        "code": "118445002",
+                        "display": "Excision of benign neoplasm (procedure)"
+                    },
+                    {
+                        "code": "438366000",
+                        "display": "Excision of bone of cranium and excision of midline neoplasm at base of skull (procedure)"
+                    },
+                    {
+                        "code": "230960003",
+                        "display": "Excision of cranial nerve tumor (procedure)"
+                    },
+                    {
+                        "code": "239348002",
+                        "display": "Excision of cranial tumor (procedure)"
+                    },
+                    {
+                        "code": "392022002",
+                        "display": "Excision of mass (procedure)"
+                    }
+                ]
+            }
+        ]
+    }
+}

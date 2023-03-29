@@ -1,0 +1,24 @@
+{
+  "resourceType": "Library",
+  "version": "1.0.0",
+  "title": "BlepharoplastyDecision",
+  "name": "BlepharoplastyDecision",
+  "status": "draft",
+  "type": {
+    "coding": [
+      {
+        "code": "logic-library"
+      }
+    ]
+  },
+  "relatedArtifact": [
+    {
+    "type": "depends-on",
+    "resource": "https://fhir-dev.mettles.com/baseServer/fhir/Library/FHIRHelpers"
+    },
+    {
+      "type": "depends-on",
+      "resource": "https://fhir-dev.mettles.com/baseServer/fhir/Library/library-LCD1-Blepharoplasty"
+      }
+  ]
+}

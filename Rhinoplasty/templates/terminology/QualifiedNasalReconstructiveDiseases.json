@@ -1,0 +1,178 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.6037.1001.23.93.100",
+    "url": "https://fhir-dev.mettles.com/baseServer/fhir/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.100",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113883.3.6037.1001.23.93.100"
+        }
+    ],
+    "version": "Latest",
+    "name": "Qualified Nasal Reconstructive Diseases",
+    "title": "Qualified Nasal Reconstructive Diseases",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "version": "2021-08",
+                "concept": [
+                    {
+                        "code": "C30.0",
+                        "display": "Malignant neoplasm of nasal cavity"
+                    },
+                    {
+                        "code": "C41.0",
+                        "display": "Malignant neoplasm of bones of skull and face"
+                    },
+                    {
+                        "code": "C43.21",
+                        "display": "Malignant melanoma of right ear and external auricular canal"
+                    },
+                    {
+                        "code": "C43.22",
+                        "display": "Malignant melanoma of left ear and external auricular canal"
+                    },
+                    {
+                        "code": "C43.30",
+                        "display": "Malignant melanoma of unspecified part of face"
+                    },
+                    {
+                        "code": "C43.31",
+                        "display": "Malignant melanoma of nose"
+                    },
+                    {
+                        "code": "C43.39",
+                        "display": "Malignant melanoma of other parts of face"
+                    },
+                    {
+                        "code": "C44.212",
+                        "display": "Basal cell carcinoma of skin of right ear and external auricular canal"
+                    },
+                    {
+                        "code": "C44.219",
+                        "display": "Basal cell carcinoma of skin of left ear and external auricular canal"
+                    },
+                    {
+                        "code": "C44.222",
+                        "display": "Squamous cell carcinoma of skin of right ear and external auricular canal"
+                    },
+                    {
+                        "code": "C44.229",
+                        "display": "Squamous cell carcinoma of skin of left ear and external auricular canal"
+                    },
+                    {
+                        "code": "C44.300",
+                        "display": "Unspecified malignant neoplasm of skin of unspecified part of face"
+                    },
+                    {
+                        "code": "C44.301",
+                        "display": "Unspecified malignant neoplasm of skin of nose"
+                    },
+                    {
+                        "code": "C44.309",
+                        "display": "Unspecified malignant neoplasm of skin of other parts of face"
+                    },
+                    {
+                        "code": "C44.310",
+                        "display": "Basal cell carcinoma of skin of unspecified parts of face"
+                    },
+                    {
+                        "code": "C44.311",
+                        "display": "Basal cell carcinoma of skin of nose"
+                    },
+                    {
+                        "code": "C44.319",
+                        "display": "Basal cell carcinoma of skin of other parts of face"
+                    },
+                    {
+                        "code": "C44.320",
+                        "display": "Squamous cell carcinoma of skin of unspecified parts of face"
+                    },
+                    {
+                        "code": "C44.321",
+                        "display": "Squamous cell carcinoma of skin of nose"
+                    },
+                    {
+                        "code": "C44.329",
+                        "display": "Squamous cell carcinoma of skin of other parts of face"
+                    },
+                    {
+                        "code": "C44.390",
+                        "display": "Other specified malignant neoplasm of skin of unspecified parts of face"
+                    },
+                    {
+                        "code": "C44.391",
+                        "display": "Other specified malignant neoplasm of skin of nose"
+                    },
+                    {
+                        "code": "C44.399",
+                        "display": "Other specified malignant neoplasm of skin of other parts of face"
+                    },
+                    {
+                        "code": "C76.0",
+                        "display": "Malignant neoplasm of head, face and neck"
+                    },
+                    {
+                        "code": "D03.21",
+                        "display": "Melanoma in situ of right ear and external auricular canal"
+                    },
+                    {
+                        "code": "D03.22",
+                        "display": "Melanoma in situ of left ear and external auricular canal"
+                    },
+                    {
+                        "code": "D03.30",
+                        "display": "Melanoma in situ of unspecified part of face"
+                    },
+                    {
+                        "code": "D03.39",
+                        "display": "Melanoma in situ of other parts of face"
+                    },
+                    {
+                        "code": "D04.21",
+                        "display": "Carcinoma in situ of skin of right ear and external auricular canal"
+                    },
+                    {
+                        "code": "D04.22",
+                        "display": "Carcinoma in situ of skin of left ear and external auricular canal"
+                    },
+                    {
+                        "code": "D04.30",
+                        "display": "Carcinoma in situ of skin of unspecified part of face"
+                    },
+                    {
+                        "code": "D04.39",
+                        "display": "Carcinoma in situ of skin of other parts of face"
+                    },
+                    {
+                        "code": "D14.0",
+                        "display": "Benign neoplasm of middle ear, nasal cavity and accessory sinuses"
+                    },
+                    {
+                        "code": "D16.4",
+                        "display": "Benign neoplasm of bones of skull and face"
+                    },
+                    {
+                        "code": "D22.30",
+                        "display": "Melanocytic nevi of unspecified part of face"
+                    },
+                    {
+                        "code": "D22.39",
+                        "display": "Melanocytic nevi of other parts of face"
+                    },
+                    {
+                        "code": "D23.30",
+                        "display": "Other benign neoplasm of skin of unspecified part of face"
+                    },
+                    {
+                        "code": "D23.39",
+                        "display": "Other benign neoplasm of skin of other parts of face"
+                    }
+                ]
+            }
+        ]
+    }
+}

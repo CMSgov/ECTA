@@ -1,0 +1,50 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.6037.1001.23.93.99",
+    "url": "https://fhir-dev.mettles.com/baseServer/fhir/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.99",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113883.3.6037.1001.23.93.99"
+        }
+    ],
+    "version": "Latest",
+    "name": "Nasal Fracture",
+    "title": "Nasal Fracture",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "version": "2021-08",
+                "concept": [
+                    {
+                        "code": "S02.2XXA",
+                        "display": "Fracture of nasal bones, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S02.2XXB",
+                        "display": "Fracture of nasal bones, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S02.2XXD",
+                        "display": "Fracture of nasal bones, subsequent encounter for fracture with routine healing"
+                    },
+                    {
+                        "code": "S02.2XXG",
+                        "display": "Fracture of nasal bones, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S02.2XXK",
+                        "display": "Fracture of nasal bones, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S02.2XXS",
+                        "display": "Fracture of nasal bones, sequela"
+                    }
+                ]
+            }
+        ]
+    }
+}

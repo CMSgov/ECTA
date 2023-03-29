@@ -1,0 +1,102 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.6037.1001.23.93.98",
+    "url": "https://fhir-dev.mettles.com/baseServer/fhir/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.98",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113883.3.6037.1001.23.93.98"
+        }
+    ],
+    "version": "Latest",
+    "name": "Congenital Deflect Diagnosis",
+    "title": "Congenital Deflect Diagnosis",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "version": "2021-08",
+                "concept": [
+                    {
+                        "code": "Q35.1",
+                        "display": "Cleft hard palate"
+                    },
+                    {
+                        "code": "Q35.3",
+                        "display": "Cleft soft palate"
+                    },
+                    {
+                        "code": "Q35.5",
+                        "display": "Cleft hard palate with cleft soft palate"
+                    },
+                    {
+                        "code": "Q35.7",
+                        "display": "Cleft uvula"
+                    },
+                    {
+                        "code": "Q35.9",
+                        "display": "Cleft palate, unspecified"
+                    },
+                    {
+                        "code": "Q36.0",
+                        "display": "Cleft lip, bilateral"
+                    },
+                    {
+                        "code": "Q36.1",
+                        "display": "Cleft lip, median"
+                    },
+                    {
+                        "code": "Q36.9",
+                        "display": "Cleft lip, unilateral"
+                    },
+                    {
+                        "code": "Q37.0",
+                        "display": "Cleft hard palate with bilateral cleft lip"
+                    },
+                    {
+                        "code": "Q37.1",
+                        "display": "Cleft hard palate with unilateral cleft lip"
+                    },
+                    {
+                        "code": "Q37.2",
+                        "display": "Cleft soft palate with bilateral cleft lip"
+                    },
+                    {
+                        "code": "Q37.3",
+                        "display": "Cleft soft palate with unilateral cleft lip"
+                    },
+                    {
+                        "code": "Q37.4",
+                        "display": "Cleft hard and soft palate with bilateral cleft lip"
+                    },
+                    {
+                        "code": "Q37.5",
+                        "display": "Cleft hard and soft palate with unilateral cleft lip"
+                    },
+                    {
+                        "code": "Q67.0",
+                        "display": "Congenital facial asymmetry"
+                    },
+                    {
+                        "code": "Q67.1",
+                        "display": "Congenital compression facies"
+                    },
+                    {
+                        "code": "Q67.2",
+                        "display": "Dolichocephaly"
+                    },
+                    {
+                        "code": "Q67.3",
+                        "display": "Plagiocephaly"
+                    },
+                    {
+                        "code": "Q67.4",
+                        "display": "Other congenital deformities of skull, face and jaw"
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,50 @@
+{
+  "resourceType": "ValueSet",
+  "id": "2.16.840.1.113883.3.6037.1001.23.93.120",
+  "url": "https://fhir-dev.mettles.com/baseServer/fhir/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.120",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "2.16.840.1.113883.3.6037.1001.23.93.120"
+    }
+  ],
+  "version": "Latest",
+  "name": "Nasal Reconstructive Surgery Codes",
+  "title": "Nasal Reconstructive Surgery Codes",
+  "status": "active",
+  "publisher": "Mettles",
+  "compose": {
+    "include": [
+      {
+        "system": "https://www.aapc.com/resources/medical-coding/cpt.aspx",
+        "version": "2021-08",
+        "concept": [
+          {
+            "code": "30460",
+            "display": "Rhinoplasty for nasal deformity secondary to congenital cleft lip and/or palate, including columellar lengthening; tip only"
+          },
+          {
+            "code": "30400",
+            "display": "Rhinoplasty, primary; lateral and alar cartilages and/or elevation of nasal tip"
+          },
+          {
+            "code": "30410",
+            "display": "Rhinoplasty, primary; complete, external parts including bony pyramid, lateral and alar cartilages, and/or elevation of nasal tip"
+          },
+          {
+            "code": "30430",
+            "display": "Rhinoplasty, secondary; minor revision (small amount of nasal tip work)"
+          },
+          {
+            "code": "30435",
+            "display": "Rhinoplasty, secondary; intermediate revision (bony work with osteotomies)"
+          },
+          {
+            "code": "30450",
+            "display": "Rhinoplasty, secondary; major revision (nasal tip work and osteotomies)"
+          }
+        ]
+      }
+    ]
+  }
+}

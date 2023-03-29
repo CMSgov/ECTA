@@ -1,0 +1,46 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.6037.1001.23.93.114",
+    "url": "https://fhir-dev.mettles.com/baseServer/fhir/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.114",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113883.3.6037.1001.23.93.114"
+        }
+    ],
+    "version": "Latest",
+    "name": "Turbinectomy Procedure Codes",
+    "title": "Turbinectomy Procedure Codes",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2021-08",
+                "concept": [
+                    {
+                        "code": "51302004",
+                        "display": "Turbinectomy (procedure)"
+                    },
+                    {
+                        "code": "125803009",
+                        "display": "Complete excision of turbinate (procedure)"
+                    },
+                    {
+                        "code": "399224009",
+                        "display": "Partial excision of inferior turbinate (procedure)"
+                    },
+                    {
+                        "code": "4341004",
+                        "display": "Complete submucous resection of turbinate (procedure)"
+                    },
+                    {
+                        "code": "74663003",
+                        "display": "Partial submucous resection of turbinate (procedure)"
+                    }
+                ]
+            }
+        ]
+    }
+}

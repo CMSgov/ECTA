@@ -1,0 +1,34 @@
+{
+  "resourceType": "ValueSet",
+  "id": "2.16.840.1.113883.3.6037.1001.23.93.121",
+  "url": "https://fhir-dev.mettles.com/baseServer/fhir/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.121",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "2.16.840.1.113883.3.6037.1001.23.93.121"
+    }
+  ],
+  "version": "Latest",
+  "name": "Nasal Reconstructive Surgery Including Septoplasty",
+  "title": "Nasal Reconstructive Surgery Including Septoplasty",
+  "status": "active",
+  "publisher": "Mettles",
+  "compose": {
+    "include": [
+      {
+        "system": "https://www.aapc.com/resources/medical-coding/cpt.aspx",
+        "version": "2021-08",
+        "concept": [
+          {
+            "code": "30420",
+            "display": "Rhinoplasty, primary; including major septal repair"
+          },
+          {
+            "code": "30520",
+            "display": "Septoplasty or submucous resection, with or without cartilage scoring, contouring or replacement with graft"
+          }
+        ]
+      }
+    ]
+  }
+}

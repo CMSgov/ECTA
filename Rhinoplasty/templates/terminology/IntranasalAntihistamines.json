@@ -1,0 +1,231 @@
+{
+    "resourceType": "ValueSet",
+    "id": "1.3.6.1.4.1.6997.4.1.2.268.13.35211.1.11.1.999.319",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2021-08-13T23:41:49.501+05:30",
+        "source": "#JUhKvMwS7eyiAc3t"
+    },
+    "url": "https://fhir-dev.mettles.com/baseServer/fhir/ ValueSet/1.3.6.1.4.1.6997.4.1.2.268.13.35211.1.11.1.999.319",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "1.3.6.1.4.1.6997.4.1.2.268.13.35211.1.11.1.999.319"
+        }
+    ],
+    "version": "Latest",
+    "name": "IntranasalAntihistamines",
+    "title": "Intranasal Antihistamines",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "version": "2021-07",
+                "concept": [
+                    {
+                        "code": "1000978",
+                        "display": "oxymetazoline hydrochloride 0.25 MG/ML Nasal Solution"
+                    },
+                    {
+                        "code": "1000987",
+                        "display": "oxymetazoline hydrochloride 0.5 MG/ML Nasal Solution"
+                    },
+                    {
+                        "code": "1000990",
+                        "display": "oxymetazoline hydrochloride 0.5 MG/ML Nasal Spray"
+                    },
+                    {
+                        "code": "1000992",
+                        "display": "oxymetazoline hydrochloride 0.5 MG/ML Nasal Spray [Afrin]"
+                    },
+                    {
+                        "code": "1000994",
+                        "display": "oxymetazoline hydrochloride 0.5 MG/ML Nasal Spray [Allerest 12 Hour Nasal Spray]"
+                    },
+                    {
+                        "code": "1000996",
+                        "display": "oxymetazoline hydrochloride 0.5 MG/ML Nasal Spray [Dristan 12-Hour Nasal Spray]"
+                    },
+                    {
+                        "code": "1001002",
+                        "display": "oxymetazoline hydrochloride 0.5 MG/ML Nasal Spray [Duramist Plus]"
+                    },
+                    {
+                        "code": "1001054",
+                        "display": "oxymetazoline hydrochloride 0.5 MG/ML Nasal Spray [Neo-Synephrine 12 Hour]"
+                    },
+                    {
+                        "code": "1001058",
+                        "display": "oxymetazoline hydrochloride 0.5 MG/ML Nasal Spray [Nostrilla]"
+                    },
+                    {
+                        "code": "1001066",
+                        "display": "oxymetazoline hydrochloride 0.5 MG/ML Nasal Spray [Sinex Long-Acting]"
+                    },
+                    {
+                        "code": "1001081",
+                        "display": "oxymetazoline hydrochloride 0.5 MG/ML Nasal Spray [Sudafed OM]"
+                    },
+                    {
+                        "code": "1001084",
+                        "display": "oxymetazoline hydrochloride 0.5 MG/ML Nasal Spray [Zicam Sinus Relief]"
+                    },
+                    {
+                        "code": "1037203",
+                        "display": "oxymetazoline hydrochloride 2.5 MG/ML Nasal Spray"
+                    },
+                    {
+                        "code": "1044286",
+                        "display": "naphazoline hydrochloride 0.5 MG/ML / phenylephrine hydrochloride 5 MG/ML / pyrilamine maleate 2 MG/ML Nasal Spray"
+                    },
+                    {
+                        "code": "1046602",
+                        "display": "naphazoline hydrochloride 0.5 MG/ML Nasal Solution"
+                    },
+                    {
+                        "code": "1046610",
+                        "display": "naphazoline hydrochloride 0.5 MG/ML Nasal Spray"
+                    },
+                    {
+                        "code": "1046611",
+                        "display": "naphazoline hydrochloride 0.5 MG/ML Nasal Spray [Privine]"
+                    },
+                    {
+                        "code": "1087043",
+                        "display": "phenylephrine hydrochloride 10 MG/ML Nasal Spray"
+                    },
+                    {
+                        "code": "1087047",
+                        "display": "phenylephrine hydrochloride 10 MG/ML Nasal Spray [Wal-Four]"
+                    },
+                    {
+                        "code": "1232712",
+                        "display": "tetrahydrozoline hydrochloride 0.5 MG/ML Nasal Solution"
+                    },
+                    {
+                        "code": "1232714",
+                        "display": "tetrahydrozoline hydrochloride 0.5 MG/ML Nasal Solution [Tyzine]"
+                    },
+                    {
+                        "code": "1232716",
+                        "display": "tetrahydrozoline hydrochloride 1 MG/ML Nasal Solution"
+                    },
+                    {
+                        "code": "1232718",
+                        "display": "tetrahydrozoline hydrochloride 1 MG/ML Nasal Solution [Tyzine]"
+                    },
+                    {
+                        "code": "1232719",
+                        "display": "tetrahydrozoline hydrochloride 1 MG/ML Nasal Spray"
+                    },
+                    {
+                        "code": "1232720",
+                        "display": "tetrahydrozoline hydrochloride 1 MG/ML Nasal Spray [Tyzine]"
+                    },
+                    {
+                        "code": "1234563",
+                        "display": "phenylephrine hydrochloride 10 MG/ML Nasal Solution"
+                    },
+                    {
+                        "code": "1234569",
+                        "display": "phenylephrine hydrochloride 10 MG/ML Nasal Spray [Neo-Synephrine]"
+                    },
+                    {
+                        "code": "1234576",
+                        "display": "phenylephrine hydrochloride 2.5 MG/ML Nasal Spray"
+                    },
+                    {
+                        "code": "1234578",
+                        "display": "phenylephrine hydrochloride 2.5 MG/ML Nasal Spray [Neo-Synephrine]"
+                    },
+                    {
+                        "code": "1234581",
+                        "display": "phenylephrine hydrochloride 5 MG/ML Nasal Solution"
+                    },
+                    {
+                        "code": "1234584",
+                        "display": "phenylephrine hydrochloride 5 MG/ML Nasal Spray"
+                    },
+                    {
+                        "code": "1234585",
+                        "display": "phenylephrine hydrochloride 5 MG/ML Nasal Spray [Neo-Synephrine]"
+                    },
+                    {
+                        "code": "1234586",
+                        "display": "phenylephrine hydrochloride 2.5 MG/ML Nasal Solution"
+                    },
+                    {
+                        "code": "1299137",
+                        "display": "phenylephrine hydrochloride 5 MG/ML Nasal Spray [Afrin Nasal]"
+                    },
+                    {
+                        "code": "1299141",
+                        "display": "phenylephrine hydrochloride 2.5 MG/ML Nasal Spray [Rhinall]"
+                    },
+                    {
+                        "code": "1307224",
+                        "display": "phenylephrine hydrochloride 10 MG/ML Nasal Spray [4-Way]"
+                    },
+                    {
+                        "code": "1313914",
+                        "display": "oxymetazoline hydrochloride 0.5 MG/ML Nasal Spray [Sinufrin Plus]"
+                    },
+                    {
+                        "code": "1363493",
+                        "display": "xylometazoline hydrochloride 1 MG/ML Nasal Spray"
+                    },
+                    {
+                        "code": "1549367",
+                        "display": "xylometazoline hydrochloride 0.5 MG/ML Nasal Solution"
+                    },
+                    {
+                        "code": "1549372",
+                        "display": "xylometazoline hydrochloride 1 MG/ML Nasal Solution"
+                    },
+                    {
+                        "code": "1549386",
+                        "display": "phenylephrine hydrochloride 1.25 MG/ML Nasal Solution"
+                    },
+                    {
+                        "code": "1549388",
+                        "display": "phenylephrine hydrochloride 1.25 MG/ML Nasal Solution [Little Noses Decongestant]"
+                    },
+                    {
+                        "code": "1550038",
+                        "display": "oxymetazoline hydrochloride 0.5 MG/ML Nasal Spray [Qlearquil Nasal Decongestant]"
+                    },
+                    {
+                        "code": "1797895",
+                        "display": "olopatadine hydrochloride 0.665 MG/ACTUAT Metered Dose Nasal Spray"
+                    },
+                    {
+                        "code": "1797898",
+                        "display": "olopatadine hydrochloride 0.665 MG/ACTUAT Metered Dose Nasal Spray [PATANASE]"
+                    },
+                    {
+                        "code": "1809050",
+                        "display": "oxymetazoline hydrochloride 0.1 MG/ACTUAT / tetracaine hydrochloride 6 MG/ACTUAT Metered Dose Nasal Spray"
+                    },
+                    {
+                        "code": "1809056",
+                        "display": "oxymetazoline hydrochloride 0.1 MG/ACTUAT / tetracaine hydrochloride 6 MG/ACTUAT Metered Dose Nasal Spray [Kovanaze]"
+                    },
+                    {
+                        "code": "238996",
+                        "display": "phenylephrine hydrochloride 1.25 MG/ML Nasal Spray"
+                    },
+                    {
+                        "code": "387790",
+                        "display": "xylometazoline 0.5 MG/ML Nasal Spray"
+                    },
+                    {
+                        "code": "830585",
+                        "display": "cromolyn sodium 20 MG/ML / xylometazoline 0.25 MG/ML Nasal Spray"
+                    }
+                ]
+            }
+        ]
+    }
+}
