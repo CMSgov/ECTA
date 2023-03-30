@@ -1,0 +1,35 @@
+{
+  "resourceType": "ValueSet",
+  "id": "2.16.840.1.113883.3.6037.1001.23.99.24",
+  "meta": {
+    "versionId": "2",
+    "lastUpdated": "2020-09-02T14:47:08.000+00:00",
+    "source": "#8qzz3NWFJzgGGpJ4"
+  },
+  "url": "https://fhir-dev.mettles.com/baseServer/fhir/ValueSet/2.16.840.1.113883.3.6037.1001.23.99.24",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "2.16.840.1.113883.3.6037.1001.23.99.24"
+    }
+  ],
+  "version": "Latest",
+  "name": "Margin reflex distance",
+  "title": "Margin reflex distance",
+  "status": "active",
+  "publisher": "Mettles",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "2020-03",
+        "concept": [
+          {
+            "code": "422462002",
+            "display": "Margin reflex distance"
+          }
+        ]
+      }
+    ]
+  }
+}

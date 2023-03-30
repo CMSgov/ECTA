@@ -1,0 +1,42 @@
+{
+  "resourceType": "ValueSet",
+  "id": "2.16.840.1.113883.3.6037.1001.23.93.201",
+  "url": "https://fhir-dev.mettles.com/baseServer/fhir/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.201",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "2.16.840.1.113883.3.6037.1001.23.93.201"
+    }
+  ],
+  "version": "Latest",
+  "name": "Blepharoptosis",
+  "title": "Blepharoptosis",
+  "status": "active",
+  "publisher": "NLM",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "version": "2021-10",
+        "concept": [
+          {
+            "code": "H02.521",
+            "display": "Blepharophimosis right upper eyelid"
+          },
+          {
+            "code": "H02.524",
+            "display": "Blepharophimosis left upper eyelid"
+          },
+          {
+            "code": "H02.522",
+            "display": "Blepharophimosis right lower eyelid"
+          },
+          {
+            "code": "H02.525",
+            "display": "Blepharophimosis left lower eyelid"
+          }
+        ]
+      }
+    ]
+  }
+}

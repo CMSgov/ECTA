@@ -1,0 +1,42 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.6037.1001.23.93.198",
+    "url": "https://fhir-dev.mettles.com/baseServer/fhir/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.198",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113883.3.6037.1001.23.93.198"
+        }
+    ],
+    "version": "Latest",
+    "name": "Blepharochalasis",
+    "title": "Blepharochalasis",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "version": "2021-10",
+                "concept": [
+                    {
+                        "code": "H02.32",
+                        "display": "Blepharochalasis right lower eyelid"
+                    },
+                    {
+                        "code": "H02.35",
+                        "display": "Blepharochalasis left lower eyelid"
+                    },
+                    {
+                        "code": "H02.31",
+                        "display": "Blepharochalasis right upper eyelid"
+                    },
+                    {
+                        "code": "H02.34",
+                        "display": "Blepharochalasis left upper eyelid"
+                    }
+                ]
+            }
+        ]
+    }
+}

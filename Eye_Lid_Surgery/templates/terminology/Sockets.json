@@ -1,0 +1,53 @@
+{
+        "resourceType": "ValueSet",
+        "id": "2.16.840.1.113883.3.6037.1001.23.99.25",
+        "meta": {
+          "versionId": "2",
+          "lastUpdated": "2020-09-02T14:39:36.000+00:00",
+          "source": "#MtqQ8IbXK7Ltzjko"
+        },
+        "url": "https://fhir-dev.mettles.com/baseServer/fhir/ValueSet/2.16.840.1.113883.3.6037.1001.23.99.25",
+        "identifier": [
+          {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113883.3.6037.1001.23.99.25"
+          }
+        ],
+        "version": "Latest",
+        "name": "Sockets",
+        "title": "Sockets",
+        "status": "active",
+        "publisher": "Mettles",
+        "compose": {
+          "include": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "version": "2020-03",
+              "concept": [
+                {
+                  "code": "Z90.01",
+                  "display": "Acquired absence of eye"
+                },
+                {
+                  "code": "H05.429",
+                  "display": "Enophthalmos due to trauma or surgery, unspecified eye"
+                },
+                {
+                  "code": "Q11.1",
+                  "display": "Other anophthalmos"
+                }
+              ]
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "version": "2020-03",
+              "concept": [
+                {
+                  "code": "762414004",
+                  "display": "Microphthalmic socket (disorder)"
+                }
+              ]
+            }
+          ]
+        }
+      }

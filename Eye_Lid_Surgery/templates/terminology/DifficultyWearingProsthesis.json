@@ -1,0 +1,46 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.6037.1001.23.93.192",
+    "url": "https://fhir-dev.mettles.com/baseServer/fhir/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.192",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113883.3.6037.1001.23.93.192"
+        }
+    ],
+    "version": "Latest",
+    "name": "Difficulty Wearing Prosthesis",
+    "title": "Difficulty Wearing Prosthesis",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "version": "2021-10",
+                "concept": [
+                    {
+                        "code": "T85.320A",
+                        "display": "Displacement of prosthetic orbit of right eye, initial encounter"
+                    },
+                    {
+                        "code": "T85.320D",
+                        "display": "Displacement of prosthetic orbit of right eye, subsequent encounter"
+                    },
+                    {
+                        "code": "T85.320S",
+                        "display": "Displacement of prosthetic orbit of right eye, sequela"
+                    },
+                    {
+                        "code": "T85.310A",
+                        "display": "Breakdown (mechanical) of prosthetic orbit of right eye, initial encounter"
+                    },
+                    {
+                        "code": "T85.310D",
+                        "display": "Breakdown (mechanical) of prosthetic orbit of right eye, subsequent encounter"
+                    }
+                ]
+            }
+        ]
+    }
+}

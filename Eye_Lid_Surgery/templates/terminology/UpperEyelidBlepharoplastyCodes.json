@@ -1,0 +1,48 @@
+{
+  "resourceType": "ValueSet",
+  "id": "2.16.840.1.113883.3.6037.1001.23.93.194",
+  "url": "https://fhir-dev.mettles.com/baseServer/fhir/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.194",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "2.16.840.1.113883.3.6037.1001.23.93.194"
+    }
+  ],
+  "version": "Latest",
+  "name": "Upper Eyelid Blepharoplasty Codes",
+  "title": "Upper Eyelid Blepharoplasty Codes",
+  "status": "active",
+  "publisher": "Mettles",
+  "compose": {
+    "include": [
+      {
+        "system": "https://www.aapc.com/resources/medical-coding/cpt.aspx ",
+        "version": "2021-10",
+        "concept": [
+          {
+            "code": "15822",
+            "display": "Blepharoplasty, upper eyelid"
+          },
+          {
+            "code": "15823",
+            "display": "Blepharoplasty, upper eyelid; with excessive skin weighting down lid"
+          }
+        ]
+      },
+      {
+        "system": "https://www.aapc.com/resources/medical-coding/cpt.aspx",
+        "version": "2021-10",
+        "concept": [
+          {
+            "code": "15822",
+            "display": "Blepharoplasty, upper eyelid"
+          },
+          {
+            "code": "15823",
+            "display": "Blepharoplasty, upper eyelid; with excessive skin weighting down lid"
+          }
+        ]
+      }
+    ]
+  }
+}

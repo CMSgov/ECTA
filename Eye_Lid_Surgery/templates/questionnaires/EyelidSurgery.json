@@ -1,0 +1,672 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "questionnaire-eyelidsurgery-eyelidsurgery",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
+      "valueCanonical": "https://fhir-dev.mettles.com/baseServer/fhir/Library/library-eyelidsurgery-EyelidSurgery"
+    }
+  ],
+  "url": "https://fhir-dev.mettles.com/baseServer/fhir/Questionnaire/questionnaire-eyelidsurgery-eyelidsurgery",
+  "identifier": [
+    {
+      "system": "http://identifiers.mettles.com/prior_authorization",
+      "value": "medicare_fee_for_service-eyelid_surgery"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "Prior Authorization For Blepharoplasty",
+  "title": "Prior Authorization For Blepharoplasty",
+  "status": "draft",
+  "subjectType": [
+    "Patient"
+  ],
+  "date": "2021-10-30",
+  "publisher": "Mettle Solutions",
+  "item": [
+    {
+      "linkId": "1",
+      "text": "Type of Surgery",
+      "type": "group",
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "SurgeryPurpose"
+              }
+            }
+          ],
+          "linkId": "SurgeryPurpose",
+          "text": "What is the purpose of this surgery?",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "Cosmetic",
+                "display": "Cosmetic"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Reconstructive",
+                "display": "Reconstructive"
+              }
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "AnatomicalLocationOfSurgery"
+              }
+            }
+          ],
+          "linkId": "AnatomicalLocationOfSurgery",
+          "text": "Is the surgery needed for:",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "Upper Eye Lid",
+                "display": "Upper Eye Lid"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Lower Eye Lid",
+                "display": "Lower Eye Lid"
+              }
+            }
+          ],
+          "required": true
+        }
+      ]
+    },
+    {
+      "linkId": "2",
+      "text": "Functional Indications",
+      "type": "group",
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "VisionInterference"
+              }
+            }
+          ],
+          "linkId": "VisionInterference",
+          "text": "Is there an interference in the vision/visual field due to this condition?",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "ImpairmentInDailyActivities"
+              }
+            }
+          ],
+          "linkId": "ImpairmentInDailyActivities",
+          "text": "Does it cause an impairment in daily life activities (difficulty in driving, reading)?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "VisionInterference",
+              "answerBoolean": true
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "DifficultyFittingSpectacles"
+              }
+            }
+          ],
+          "linkId": "DifficultyFittingSpectacles",
+          "text": "Does the patient have difficulty fitting spectacles due to this condition?",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "EyelidIrritation"
+              }
+            }
+          ],
+          "linkId": "EyelidIrritation",
+          "text": "Does the patient have severe eyelid irritation due to this condition?",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "Socket"
+              }
+            }
+          ],
+          "linkId": "Socket",
+          "text": "Does the patient have Anophthalmic, Microphthalmic or Enophthalmic socket?",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "DifficultyFittingProsthesis"
+              }
+            }
+          ],
+          "linkId": "DifficultyFittingProsthesis",
+          "text": "Does the patient have any difficulty wearing or fitting a prosthesis due to this condition?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "Socket",
+              "answerBoolean": true
+            }
+          ],
+          "required": true
+        }
+      ]
+    },
+    {
+      "linkId": "3",
+      "text": "Diagnosis Information",
+      "type": "group",
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "CheckDermatochalasis"
+              }
+            }
+          ],
+          "linkId": "CheckDermatochalasis",
+          "text": "Does the patient have Dermatochalasis?",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "DifficultySpectaclesDermatochalasis"
+              }
+            }
+          ],
+          "linkId": "DifficultySpectaclesDermatochalasis",
+          "text": "Does it cause significant difficulty in fitting of spectacles?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "CheckDermatochalasis",
+              "answerBoolean": true
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "ThyroidEyeCondition"
+              }
+            }
+          ],
+          "linkId": "ThyroidEyeCondition",
+          "text": "Does the patient have Thyroid Eye disease/Eye infection/Eye allergy?",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "ThyroidChronicDermatitis"
+              }
+            }
+          ],
+          "linkId": "ThyroidChronicDermatitis",
+          "text": "Does it cause chronic dermatitis?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "ThyroidEyeCondition",
+              "answerBoolean": true
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "CheckBlepharochalasis"
+              }
+            }
+          ],
+          "linkId": "CheckBlepharochalasis",
+          "text": "Does the patient have blepharochalasis (eye lid edema)?",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "ChronicDermatitisOrEyeIrritation"
+              }
+            }
+          ],
+          "linkId": "ChronicDermatitisOrEyeIrritation",
+          "text": "Does it cause chronic dermatitis/eye irritation?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "CheckBlepharochalasis",
+              "answerBoolean": true
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "IdiopathicBlepharospasm"
+              }
+            }
+          ],
+          "linkId": "IdiopathicBlepharospasm",
+          "text": "Does the patient have primary idiopathic blepharospasm?",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "AnophthalmicSocket"
+              }
+            }
+          ],
+          "linkId": "AnophthalmicSocket",
+          "text": "Does the patient have an anophthalmic socket?",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "CheckPtosis"
+              }
+            }
+          ],
+          "linkId": "CheckPtosis",
+          "text": "Does the patient have ptosis?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "AnophthalmicSocket",
+              "answerBoolean": true
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "PtosisDifficultyProsthesis"
+              }
+            }
+          ],
+          "linkId": "PtosisDifficultyProsthesis",
+          "text": "Does it lead to difficulty in prosthesis fitting?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "CheckPtosis",
+              "answerBoolean": true
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "BrowPtosis"
+              }
+            }
+          ],
+          "linkId": "BrowPtosis",
+          "text": "Does the patient have brow ptosis?",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "linkId": "BrowPtosisBlepharoplasty",
+          "text": "Is the blepharoplasty suggested in addition to brow ptosis repair?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "BrowPtosis",
+              "answerBoolean": true
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "CheckBlepharoptosis"
+              }
+            }
+          ],
+          "linkId": "CheckBlepharoptosis",
+          "text": "Does the patient have blepharoptosis?",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "BlepharoptosisFunctionalDeficit"
+              }
+            }
+          ],
+          "linkId": "BlepharoptosisFunctionalDeficit",
+          "text": "Does it cause any functional deficit (visual field impairment/ brow fatigue)?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "CheckBlepharoptosis",
+              "answerBoolean": true
+            }
+          ],
+          "required": true
+        }
+      ]
+    },
+    {
+      "linkId": "4",
+      "text": "Laterality",
+      "type": "group",
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "Laterality"
+              }
+            }
+          ],
+          "linkId": "Laterality",
+          "text": "What is the laterality of the condition?",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "Unilateral",
+                "display": "Unilateral"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Bilateral",
+                "display": "Bilateral"
+              }
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "AnatomicalLocationCondition"
+              }
+            }
+          ],
+          "linkId": "AnatomicalLocationCondition",
+          "text": "Is the affected eye:",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "Right",
+                "display": "Right"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Left",
+                "display": "Left"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "Laterality",
+              "answerCoding": {
+                "code": "Unilateral",
+                "display": "Unilateral"
+              }
+            }
+          ],
+          "required": true
+        }
+      ]
+    },
+    {
+      "linkId": "5",
+      "text": "Physical Signs",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "ExcessiveSkinOverhanging",
+          "text": "Is an amount of excessive skin overhanging the eyelid margin causing Pseudoptosis?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "CheckDermatochalasis",
+              "answerBoolean": true
+            },
+            {
+              "operator": "=",
+              "question": "CheckBlepharochalasis",
+              "answerBoolean": true
+            }
+          ],
+          "enableBehavior": "any",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "PseudoMRD"
+              }
+            }
+          ],
+          "linkId": "PseudoMRD",
+          "text": "Is the central pseudo MRD less than 2mm?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "ExcessiveSkinOverhanging",
+              "answerBoolean": true
+            }
+          ],
+          "required": true
+        },
+        {
+          "linkId": "RedundantTissueObscureSight",
+          "text": "Does the redundant tissue obscure the line of sight?",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "EdemaRedundantTissue"
+              }
+            }
+          ],
+          "linkId": "EdemaRedundantTissue",
+          "text": "Is there any erythema/edema of the redundant tissue?",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "linkId": "AngleEyelidLifting",
+          "text": "Is the angle between the resting field and the field performed by manually lifting the eyelid more than 12 degrees?",
+          "type": "boolean",
+          "required": true
+        }
+      ]
+    },
+    {
+      "linkId": "6",
+      "text": "Contraindications",
+      "type": "group",
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "ThyroidOrbitopathy"
+              }
+            }
+          ],
+          "linkId": "ThyroidOrbitopathy",
+          "text": "Does the patient have thyroid orbitopathy?",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "CheckProptosis"
+              }
+            }
+          ],
+          "linkId": "CheckProptosis",
+          "text": "Does the patient have proptosis? ",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "ThyroidOrbitopathy",
+              "answerBoolean": true
+            }
+          ],
+          "required": true
+        }
+      ]
+    },
+    {
+      "linkId": "7",
+      "text": "Photographic Evidence",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "EvidenceDifficultyFittingProsthesis",
+          "text": "Photographic documentation demonstrating abnormalities as they relate to the abnormal upper and/or lower eyelid position are required.",
+          "type": "display"
+        },
+        {
+          "linkId": "EvidencePhysicalSigns",
+          "text": "Photographs of both eyelids in both frontal (straight ahead) and lateral (from the side) positions are required to demonstrate the physical signs.",
+          "type": "display"
+        }
+      ]
+    }
+  ]
+}

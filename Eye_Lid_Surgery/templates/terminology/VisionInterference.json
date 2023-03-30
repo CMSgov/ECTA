@@ -1,0 +1,68 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.6037.1001.23.93.189",
+    "url": "https://fhir-dev.mettles.com/baseServer/fhir/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.189",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113883.3.6037.1001.23.93.189"
+        }
+    ],
+    "version": "Latest",
+    "name": "Vision Interference",
+    "title": "Vision Interference",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2021-10",
+                "concept": [
+                    {
+                        "code": "246638009",
+                        "display": "Interference with vision (finding)"
+                    }
+                ]
+            },
+            {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "version": "2021-10",
+                "concept": [
+                    {
+                        "code": "H53.9",
+                        "display": "Unspecified visual disturbance"
+                    },
+                    {
+                        "code": "H53.8",
+                        "display": "Other visual disturbances"
+                    },
+                    {
+                        "code": "H53.72",
+                        "display": "Impaired contrast sensitivity"
+                    },
+                    {
+                        "code": "H53.71",
+                        "display": "Glare sensitivity"
+                    },
+                    {
+                        "code": "H53.141",
+                        "display": "Visual discomfort, right eye"
+                    },
+                    {
+                        "code": "H53.142",
+                        "display": "Visual discomfort, left eye"
+                    },
+                    {
+                        "code": "H53.143",
+                        "display": "Visual discomfort, bilateral"
+                    },
+                    {
+                        "code": "H53.149",
+                        "display": "Visual discomfort, unspecified"
+                    }
+                ]
+            }
+        ]
+    }
+}

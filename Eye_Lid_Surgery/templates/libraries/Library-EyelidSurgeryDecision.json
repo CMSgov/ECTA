@@ -1,0 +1,35 @@
+{
+  "resourceType": "Library",
+  "version": "1.0.0",
+  "title": "EyelidSurgeryDecision",
+  "name": "EyelidSurgeryDecision",
+  "status": "draft",
+  "type": {
+    "coding": [
+      {
+        "code": "logic-library"
+      }
+    ]
+  },
+  "relatedArtifact": [
+    {
+      "type": "depends-on",
+      "resource": "https://fhir-dev.mettles.com/baseServer/fhir/Library/FHIRHelpers"
+    },
+    {
+      "type": "depends-on",
+      "resource": "https://fhir-dev.mettles.com/baseServer/fhir/Library/library-eyelidsurgery-EyelidSurgery"
+    }
+  ],
+  "dataRequirement": [
+    {
+      "type": "Medication",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "https://fhir-dev.mettles.com/baseServer/fhir/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.193"
+        }
+      ]
+    }
+  ]
+}

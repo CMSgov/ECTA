@@ -1,0 +1,52 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.6037.1001.23.93.190",
+    "url": "https://fhir-dev.mettles.com/baseServer/fhir/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.190",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113883.3.6037.1001.23.93.190"
+        }
+    ],
+    "version": "Latest",
+    "name": "Impairment Daily Activities",
+    "title": "Impairment Daily Activities",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2021-10",
+                "concept": [
+                    {
+                        "code": "309253009",
+                        "display": "Difficulty reading (finding)"
+                    },
+                    {
+                        "code": "300638003",
+                        "display": "Difficulty driving a car (finding)"
+                    }
+                ]
+            },
+            {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "version": "2021-10",
+                "concept": [
+                    {
+                        "code": "Z73.6",
+                        "display": "Limitation of activities due to disability"
+                    },
+                    {
+                        "code": "Z73.89",
+                        "display": "Other problems related to life management difficulty"
+                    },
+                    {
+                        "code": "Z73.9",
+                        "display": "Problem related to life management difficulty, unspecified"
+                    }
+                ]
+            }
+        ]
+    }
+}

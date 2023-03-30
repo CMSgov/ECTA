@@ -1,0 +1,34 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.6037.1001.23.93.191",
+    "url": "https://fhir-dev.mettles.com/baseServer/fhir/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.191",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113883.3.6037.1001.23.93.191"
+        }
+    ],
+    "version": "Latest",
+    "name": "Difficulty Wearing Spectacles",
+    "title": "Difficulty Wearing Spectacles",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2021-10",
+                "concept": [
+                    {
+                        "code": "285045001",
+                        "display": "Difficulty using spectacles (finding)"
+                    },
+                    {
+                        "code": "285042003",
+                        "display": "Unable to use spectacles (finding)"
+                    }
+                ]
+            }
+        ]
+    }
+}

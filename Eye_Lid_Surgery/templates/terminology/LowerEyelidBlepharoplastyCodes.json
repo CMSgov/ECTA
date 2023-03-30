@@ -1,0 +1,34 @@
+{
+  "resourceType": "ValueSet",
+  "id": "2.16.840.1.113883.3.6037.1001.23.93.193",
+  "url": "https://fhir-dev.mettles.com/baseServer/fhir/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.193",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "2.16.840.1.113883.3.6037.1001.23.93.193"
+    }
+  ],
+  "version": "Latest",
+  "name": "Lower Eyelid Blepharoplasty Codes",
+  "title": "Lower Eyelid Blepharoplasty Codes",
+  "status": "active",
+  "publisher": "Mettles",
+  "compose": {
+    "include": [
+      {
+        "system": "https://www.aapc.com/resources/medical-coding/cpt.aspx",
+        "version": "2021-10",
+        "concept": [
+          {
+            "code": "15820",
+            "display": "Blepharoplasty, lower eyelid"
+          },
+          {
+            "code": "15821",
+            "display": "Blepharoplasty, lower eyelid; with extensive herniated fat pad"
+          }
+        ]
+      }
+    ]
+  }
+}

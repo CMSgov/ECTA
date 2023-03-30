@@ -1,0 +1,50 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.6037.1001.23.93.79",
+    "url": "https://fhir-dev.mettles.com/baseServer/fhir/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.79",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113883.3.6037.1001.23.93.79"
+        }
+    ],
+    "version": "Latest",
+    "name": "Blepharospasm Condition Codes",
+    "title": "Blepharospasm Condition Codes",
+    "status": "active",
+    "publisher": "Mettles",
+    "compose": {
+        "include": [
+            {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "version": "2020-03",
+                "concept": [
+                    {
+                        "code": "G24.4",
+                        "display": "Idiopathic orofacial dystonia"
+                    },
+                    {
+                        "code": "G24.5",
+                        "display": "Blepharospasm"
+                    },
+                    {
+                        "code": "G51.2",
+                        "display": "Melkersson's syndrome"
+                    },
+                    {
+                        "code": "G51.4",
+                        "display": "Facial myokymia"
+                    },
+                    {
+                        "code": "G51.31",
+                        "display": "Clonic hemifacial spasm, right"
+                    },
+                    {
+                        "code": "G51.32",
+                        "display": "Clonic hemifacial spasm, left"
+                    }
+                ]
+            }
+        ]
+    }
+}

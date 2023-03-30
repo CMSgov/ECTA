@@ -1,0 +1,46 @@
+{
+  "resourceType": "ValueSet",
+  "id": "2.16.840.1.113883.3.6037.1001.23.93.204",
+  "url": "https://fhir-dev.mettles.com/baseServer/fhir/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.204",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "2.16.840.1.113883.3.6037.1001.23.93.204"
+    }
+  ],
+  "version": "Latest",
+  "name": "Bilateral Eye Conditions for Eyelid Surgery",
+  "title": "Bilateral Eye Conditions for Eyelid Surgery",
+  "status": "active",
+  "publisher": "NLM",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "version": "2021-10",
+        "concept": [
+          {
+            "code": "H57.813",
+            "display": "Brow ptosis, bilateral"
+          },
+          {
+            "code": "H02.403",
+            "display": "Unspecified ptosis of bilateral eyelids"
+          },
+          {
+            "code": "H02.413",
+            "display": "Mechanical ptosis of bilateral eyelids"
+          },
+          {
+            "code": "H02.423",
+            "display": "Myogenic ptosis of bilateral eyelids"
+          },
+          {
+            "code": "H02.433",
+            "display": "Paralytic ptosis of bilateral eyelids"
+          }
+        ]
+      }
+    ]
+  }
+}
