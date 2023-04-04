@@ -18,14 +18,14 @@
       "extension": [
         {
           "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
-          "valueCanonical": "https://fhir-dev.mettles.com/baseServer/fhir/Library/library-homehealth-HomeHealthService"
+          "valueCanonical": "<FHIR-server>/Library/library-homehealth-HomeHealthService"
         },
         {
          "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-questionnaireAdaptive",
          "valueBoolean": true
         }
       ],
-      "url": "https://fhir-dev.mettles.com/baseServer/fhir/Questionnaire/questionnaire-homehealth-HomeHealthService",
+      "url": "<FHIR-server>/Questionnaire/questionnaire-homehealth-HomeHealthService",
       "contained": [
         {
           "resourceType": "ValueSet",

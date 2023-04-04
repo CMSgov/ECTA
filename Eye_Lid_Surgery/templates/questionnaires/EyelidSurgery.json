@@ -4,10 +4,10 @@
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
-      "valueCanonical": "https://fhir-dev.mettles.com/baseServer/fhir/Library/library-eyelidsurgery-EyelidSurgery"
+      "valueCanonical": "<FHIR-server>/Library/library-eyelidsurgery-EyelidSurgery"
     }
   ],
-  "url": "https://fhir-dev.mettles.com/baseServer/fhir/Questionnaire/questionnaire-eyelidsurgery-eyelidsurgery",
+  "url": "<FHIR-server>/Questionnaire/questionnaire-eyelidsurgery-eyelidsurgery",
   "identifier": [
     {
       "system": "http://identifiers.mettles.com/prior_authorization",

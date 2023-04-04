@@ -3,10 +3,10 @@
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
-      "valueCanonical": "https://fhir-dev.mettles.com/baseServer/fhir/Library/library-rhinoplasty-NasalReconstructiveSurgery"
+      "valueCanonical": "<FHIR-server>/Library/library-rhinoplasty-NasalReconstructiveSurgery"
     }
   ],
-  "url": "https://fhir-dev.mettles.com/baseServer/fhir/Questionnaire/questionnaire-rhinoplasty-nasalreconstructivesurgery",
+  "url": "<FHIR-server>/Questionnaire/questionnaire-rhinoplasty-nasalreconstructivesurgery",
   "identifier": [
     {
       "system": "http://identifiers.mettles.com/prior_authorization",

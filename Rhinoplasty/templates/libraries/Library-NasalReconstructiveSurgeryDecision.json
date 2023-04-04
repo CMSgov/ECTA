@@ -27,7 +27,7 @@
       "codeFilter": [
         {
           "path": "code",
-          "valueSet": "https://fhir-dev.mettles.com/baseServer/fhir/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.120"
+          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.120"
         }
       ]
     }
