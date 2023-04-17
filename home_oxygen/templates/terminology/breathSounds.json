@@ -1,0 +1,139 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.7643.3.1023",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-04-12T09:30:23.000+00:00",
+        "source": "#qdpslHE8Ot17jdDq"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.7643.3.1023",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113883.3.7643.3.1023"
+        }
+    ],
+    "version": "Latest",
+    "name": "BreathSounds",
+    "title": "Breath Sounds",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2022-09",
+                "concept": [
+                    {
+                        "code": "12529006",
+                        "display": "Expiratory crackles (finding)"
+                    },
+                    {
+                        "code": "198071002",
+                        "display": "Respiratory murmur (finding)"
+                    },
+                    {
+                        "code": "24612001",
+                        "display": "Wheeze - rhonchi (finding)"
+                    },
+                    {
+                        "code": "248614004",
+                        "display": "Sounds within the chest (finding)"
+                    },
+                    {
+                        "code": "248615003",
+                        "display": "Large airway sounds (finding)"
+                    },
+                    {
+                        "code": "248618001",
+                        "display": "Moist crackles (finding)"
+                    },
+                    {
+                        "code": "284520004",
+                        "display": "Basal crepitations (finding)"
+                    },
+                    {
+                        "code": "301273002",
+                        "display": "Abnormal breath sounds (finding)"
+                    },
+                    {
+                        "code": "31846006",
+                        "display": "Medium rales (finding)"
+                    },
+                    {
+                        "code": "33778004",
+                        "display": "Bronchovesicular breath sounds (finding)"
+                    },
+                    {
+                        "code": "34770001",
+                        "display": "Atelectatic rales (finding)"
+                    },
+                    {
+                        "code": "40428002",
+                        "display": "High-pitched rhonchi (finding)"
+                    },
+                    {
+                        "code": "47525004",
+                        "display": "Coarse respiratory crackles (finding)"
+                    },
+                    {
+                        "code": "47653008",
+                        "display": "Harsh breath sounds (finding)"
+                    },
+                    {
+                        "code": "48348007",
+                        "display": "Normal breath sounds (finding)"
+                    },
+                    {
+                        "code": "48409008",
+                        "display": "Respiratory crackles (finding)"
+                    },
+                    {
+                        "code": "53541006",
+                        "display": "Low-pitched rhonchi (finding)"
+                    },
+                    {
+                        "code": "58840004",
+                        "display": "Decreased breath sounds (finding)"
+                    },
+                    {
+                        "code": "62640008",
+                        "display": "Fine respiratory crackles (finding)"
+                    },
+                    {
+                        "code": "63642005",
+                        "display": "Superficial crackling rales (finding)"
+                    },
+                    {
+                        "code": "65503000",
+                        "display": "Absent breath sounds (finding)"
+                    },
+                    {
+                        "code": "65949001",
+                        "display": "Increased breath sounds (finding)"
+                    },
+                    {
+                        "code": "67395002",
+                        "display": "Amphoric breathing (finding)"
+                    },
+                    {
+                        "code": "75252003",
+                        "display": "Inspiratory crackles (finding)"
+                    },
+                    {
+                        "code": "77047003",
+                        "display": "Vesicular breathing (finding)"
+                    },
+                    {
+                        "code": "79451004",
+                        "display": "Bronchial breathing (finding)"
+                    },
+                    {
+                        "code": "85377008",
+                        "display": "Post-tussive crackles (finding)"
+                    }
+                ]
+            }
+        ]
+    }
+}

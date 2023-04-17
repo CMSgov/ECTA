@@ -1,0 +1,127 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113762.1.4.1146.2101",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-04-12T09:30:16.000+00:00",
+        "source": "#CDn118MKZsWAD62R"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1146.2101",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113762.1.4.1146.2101"
+        }
+    ],
+    "version": "Latest",
+    "name": "Pleuritis(SNOMED)",
+    "title": "Pleuritis (SNOMED)",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2022-09",
+                "concept": [
+                    {
+                        "code": "13082000",
+                        "display": "Diaphragmatic pleurisy (disorder)"
+                    },
+                    {
+                        "code": "17668000",
+                        "display": "Acute pleuropericarditis (disorder)"
+                    },
+                    {
+                        "code": "18988001",
+                        "display": "Septic pleurisy (disorder)"
+                    },
+                    {
+                        "code": "196075003",
+                        "display": "Pleurisy (disorder)"
+                    },
+                    {
+                        "code": "196076002",
+                        "display": "Pleurisy without effusion or active tuberculosis (disorder)"
+                    },
+                    {
+                        "code": "196077006",
+                        "display": "Acute dry pleurisy (disorder)"
+                    },
+                    {
+                        "code": "196079009",
+                        "display": "Basal pleurisy (disorder)"
+                    },
+                    {
+                        "code": "196081006",
+                        "display": "Sterile pleurisy (disorder)"
+                    },
+                    {
+                        "code": "233638004",
+                        "display": "Dry pleurisy (disorder)"
+                    },
+                    {
+                        "code": "271503005",
+                        "display": "Pleural empyema with fistula (disorder)"
+                    },
+                    {
+                        "code": "271504004",
+                        "display": "Pleural empyema with no fistula (disorder)"
+                    },
+                    {
+                        "code": "275500001",
+                        "display": "Exudative pleurisy (disorder)"
+                    },
+                    {
+                        "code": "275501002",
+                        "display": "Serous pleurisy (disorder)"
+                    },
+                    {
+                        "code": "27757009",
+                        "display": "Encysted pleurisy (disorder)"
+                    },
+                    {
+                        "code": "28085001",
+                        "display": "Empyema with bronchopleural fistula (disorder)"
+                    },
+                    {
+                        "code": "31810002",
+                        "display": "Pleurisy with effusion (disorder)"
+                    },
+                    {
+                        "code": "34286007",
+                        "display": "Empyema with hepatopleural fistula (disorder)"
+                    },
+                    {
+                        "code": "37632001",
+                        "display": "Obliterative pleuritis (disorder)"
+                    },
+                    {
+                        "code": "58554001",
+                        "display": "Empyema of pleura (disorder)"
+                    },
+                    {
+                        "code": "60031001",
+                        "display": "Serofibrinous pleurisy (disorder)"
+                    },
+                    {
+                        "code": "72735007",
+                        "display": "Interlobar pleurisy (disorder)"
+                    },
+                    {
+                        "code": "76630008",
+                        "display": "Fibrinopurulent pleurisy (disorder)"
+                    },
+                    {
+                        "code": "77138008",
+                        "display": "Fibrinous pleurisy (disorder)"
+                    },
+                    {
+                        "code": "78887005",
+                        "display": "Seropurulent pleurisy (disorder)"
+                    }
+                ]
+            }
+        ]
+    }
+}

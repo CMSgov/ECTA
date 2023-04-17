@@ -1,0 +1,53 @@
+{
+    "resourceType": "Library",
+    "version": "1.0.0",
+    "name": "HomeOxygenTherapy",
+    "title": "HomeOxygenTherapy",
+    "status": "draft",
+    "type": {
+        "coding": [
+            {
+                "code": "logic-library"
+            }
+        ]
+    },
+    "relatedArtifact": [
+      {
+      "type": "depends-on",
+      "resource": "<FHIR-server>/Library/FHIRHelpers"
+    }
+    ],
+    "dataRequirement": [
+        {
+            "type": "Procedure",
+            "codeFilter": [
+                {
+                  "path": "status",
+                  "searchParam": "completed"
+                }
+                ]
+        },
+        {
+            "type": "Observation",
+            "codeFilter": [
+                {
+                  "path": "status",
+                  "searchParam": "final"
+                }
+                ]
+        },
+        {
+            "type": "Condition",
+            "codeFilter": [
+                {
+                  "path": "verificationStatus",
+                  "searchParam": "confirmed"
+                },
+                {
+                    "path": "clinicalStatus",
+                    "searchParam": "active"
+                  }
+                ]
+        }
+    ]
+}

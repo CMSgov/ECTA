@@ -1,0 +1,107 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.3616.200.110.102.6314",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-04-12T09:30:52.000+00:00",
+        "source": "#1yP63QC3HYIfvTZY"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.3616.200.110.102.6314",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113883.3.3616.200.110.102.6314"
+        }
+    ],
+    "version": "Latest",
+    "name": "Vertigo",
+    "title": "Vertigo",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2022-09",
+                "concept": [
+                    {
+                        "code": "103282003",
+                        "display": "Essential vertigo (finding)"
+                    },
+                    {
+                        "code": "103284002",
+                        "display": "Positional vertigo (finding)"
+                    },
+                    {
+                        "code": "103286000",
+                        "display": "Horizontal vertigo (finding)"
+                    },
+                    {
+                        "code": "103288004",
+                        "display": "Vertical vertigo (finding)"
+                    },
+                    {
+                        "code": "103290003",
+                        "display": "Paroxysmal vertigo (finding)"
+                    },
+                    {
+                        "code": "103291004",
+                        "display": "Intermittent vertigo (finding)"
+                    },
+                    {
+                        "code": "103292006",
+                        "display": "Constant vertigo (finding)"
+                    },
+                    {
+                        "code": "103298005",
+                        "display": "Severe vertigo (finding)"
+                    },
+                    {
+                        "code": "103299002",
+                        "display": "Severe vertigo, acute onset (finding)"
+                    },
+                    {
+                        "code": "103301009",
+                        "display": "Vertigo, acute onset with vomiting and inability to stand (finding)"
+                    },
+                    {
+                        "code": "12151000119105",
+                        "display": "Chronic vertigo (finding)"
+                    },
+                    {
+                        "code": "15177007",
+                        "display": "Apoplectic vertigo (finding)"
+                    },
+                    {
+                        "code": "399090003",
+                        "display": "Subjective vertigo (finding)"
+                    },
+                    {
+                        "code": "399153001",
+                        "display": "Vertigo (finding)"
+                    },
+                    {
+                        "code": "449834008",
+                        "display": "Lateral vertigo (finding)"
+                    },
+                    {
+                        "code": "449835009",
+                        "display": "Nocturnal vertigo (finding)"
+                    },
+                    {
+                        "code": "50041000",
+                        "display": "Objective vertigo (finding)"
+                    },
+                    {
+                        "code": "674101000119103",
+                        "display": "Vertigo due to and following hemorrhagic cerebrovascular accident (finding)"
+                    },
+                    {
+                        "code": "690191000119106",
+                        "display": "Vertigo due to and following embolic cerebrovascular accident (finding)"
+                    }
+                ]
+            }
+        ]
+    }
+}

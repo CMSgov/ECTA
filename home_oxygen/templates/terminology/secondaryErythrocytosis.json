@@ -1,0 +1,85 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113762.1.4.1219.21",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-04-12T09:30:05.000+00:00",
+        "source": "#swHnvhbHYXF6a9Hu"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1219.21",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113762.1.4.1219.21"
+        }
+    ],
+    "version": "Latest",
+    "name": "SecondaryErythrocytosisDisorder",
+    "title": "Secondary Erythrocytosis Disorder",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2022-09",
+                "concept": [
+                    {
+                        "code": "127063008",
+                        "display": "Erythrocytosis due to cyanotic congenital heart disease (disorder)"
+                    },
+                    {
+                        "code": "191372008",
+                        "display": "Polycythemia due to cyanotic heart disease (disorder)"
+                    },
+                    {
+                        "code": "191373003",
+                        "display": "Polycythemia due to cyanotic respiratory disease (disorder)"
+                    },
+                    {
+                        "code": "19588001",
+                        "display": "Erythrocytosis due to tissue hypoxemia (disorder)"
+                    },
+                    {
+                        "code": "25881005",
+                        "display": "Erythrocytosis caused by low atmospheric pressure (disorder)"
+                    },
+                    {
+                        "code": "28319009",
+                        "display": "Erythrocytosis due to cardiovascular disease (disorder)"
+                    },
+                    {
+                        "code": "3947004",
+                        "display": "High oxygen affinity hemoglobin polycythemia (disorder)"
+                    },
+                    {
+                        "code": "40679002",
+                        "display": "Erythrocytosis due to alveolar hypoventilation (disorder)"
+                    },
+                    {
+                        "code": "48250002",
+                        "display": "Gaisbock's syndrome (disorder)"
+                    },
+                    {
+                        "code": "78578005",
+                        "display": "Erythrocytosis due to pulmonary disease (disorder)"
+                    },
+                    {
+                        "code": "90501009",
+                        "display": "Erythrocytosis due to defective oxygen transport (disorder)"
+                    }
+                ]
+            },
+            {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "version": "2023",
+                "concept": [
+                    {
+                        "code": "D75.1",
+                        "display": "Secondary polycythemia"
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113762.1.4.1146.863",
+    "meta": {
+        "versionId": "2",
+        "lastUpdated": "2023-04-12T09:30:53.000+00:00",
+        "source": "#aPuQPajMs9XBCgv3"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1146.863",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113762.1.4.1146.863"
+        }
+    ],
+    "version": "Latest",
+    "name": "Nausea(ICD10CM)",
+    "title": "Nausea (ICD10CM)",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "version": "2023",
+                "concept": [
+                    {
+                        "code": "R11.0",
+                        "display": "Nausea"
+                    },
+                    {
+                        "code": "R11.2",
+                        "display": "Nausea with vomiting, unspecified"
+                    }
+                ]
+            }
+        ]
+    }
+}

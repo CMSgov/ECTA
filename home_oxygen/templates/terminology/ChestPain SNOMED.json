@@ -1,0 +1,331 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113762.1.4.1222.1426",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-04-12T09:30:34.000+00:00",
+        "source": "#XoHmPvYXFxM8oiHP"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1222.1426",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113762.1.4.1222.1426"
+        }
+    ],
+    "version": "Latest",
+    "name": "ChestPain",
+    "title": "Chest Pain",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2022-09",
+                "concept": [
+                    {
+                        "code": "10000006",
+                        "display": "Radiating chest pain (finding)"
+                    },
+                    {
+                        "code": "1010235008",
+                        "display": "Pain of left breast (finding)"
+                    },
+                    {
+                        "code": "1010237000",
+                        "display": "Pain of right breast (finding)"
+                    },
+                    {
+                        "code": "102587001",
+                        "display": "Acute chest pain (finding)"
+                    },
+                    {
+                        "code": "102588006",
+                        "display": "Chest wall pain (finding)"
+                    },
+                    {
+                        "code": "102589003",
+                        "display": "Atypical chest pain (finding)"
+                    },
+                    {
+                        "code": "103015000",
+                        "display": "Thoracic nerve root pain (finding)"
+                    },
+                    {
+                        "code": "1075631000119107",
+                        "display": "Pain of right sternoclavicular joint (finding)"
+                    },
+                    {
+                        "code": "1075651000119101",
+                        "display": "Pain of left sternoclavicular joint (finding)"
+                    },
+                    {
+                        "code": "12242431000119109",
+                        "display": "Mastodynia of bilateral breasts (finding)"
+                    },
+                    {
+                        "code": "13057000",
+                        "display": "Pleuropericardial chest pain (finding)"
+                    },
+                    {
+                        "code": "135876005",
+                        "display": "Mastalgia of puberty (finding)"
+                    },
+                    {
+                        "code": "136791000119103",
+                        "display": "Chronic thoracic back pain (finding)"
+                    },
+                    {
+                        "code": "15743641000119101",
+                        "display": "Pain of bilateral sternoclavicular joints (finding)"
+                    },
+                    {
+                        "code": "15743681000119106",
+                        "display": "Pain of bilateral shoulder blades (finding)"
+                    },
+                    {
+                        "code": "161972006",
+                        "display": "Central chest pain (finding)"
+                    },
+                    {
+                        "code": "161973001",
+                        "display": "Anterior chest wall pain (finding)"
+                    },
+                    {
+                        "code": "161974007",
+                        "display": "Parasternal pain (finding)"
+                    },
+                    {
+                        "code": "161977000",
+                        "display": "Costal margin chest pain (finding)"
+                    },
+                    {
+                        "code": "200430001",
+                        "display": "Breastfeeding painful (finding)"
+                    },
+                    {
+                        "code": "202478007",
+                        "display": "Sternoclavicular joint pain (finding)"
+                    },
+                    {
+                        "code": "20793008",
+                        "display": "Scapulalgia (finding)"
+                    },
+                    {
+                        "code": "2237002",
+                        "display": "Pleuritic pain (finding)"
+                    },
+                    {
+                        "code": "225566008",
+                        "display": "Ischemic chest pain (finding)"
+                    },
+                    {
+                        "code": "233845001",
+                        "display": "Cardiac syndrome X (finding)"
+                    },
+                    {
+                        "code": "237453001",
+                        "display": "Cyclical mastalgia (finding)"
+                    },
+                    {
+                        "code": "237454007",
+                        "display": "Non-cyclical mastalgia (finding)"
+                    },
+                    {
+                        "code": "237455008",
+                        "display": "Trigger point mastalgia (finding)"
+                    },
+                    {
+                        "code": "239175003",
+                        "display": "Post-thoracotomy pain syndrome (finding)"
+                    },
+                    {
+                        "code": "247350000",
+                        "display": "Sore nipple (finding)"
+                    },
+                    {
+                        "code": "247389006",
+                        "display": "Intercostal neuralgia (finding)"
+                    },
+                    {
+                        "code": "247415009",
+                        "display": "Painful lactation (finding)"
+                    },
+                    {
+                        "code": "267981009",
+                        "display": "Pain in thoracic spine (finding)"
+                    },
+                    {
+                        "code": "274664007",
+                        "display": "Chest pain on breathing (finding)"
+                    },
+                    {
+                        "code": "274668005",
+                        "display": "Non-cardiac chest pain (finding)"
+                    },
+                    {
+                        "code": "279019008",
+                        "display": "Central crushing chest pain (finding)"
+                    },
+                    {
+                        "code": "279035001",
+                        "display": "Acute thoracic back pain (finding)"
+                    },
+                    {
+                        "code": "279037009",
+                        "display": "Thoracic segmental dysfunction (finding)"
+                    },
+                    {
+                        "code": "279038004",
+                        "display": "Thoracic back pain (finding)"
+                    },
+                    {
+                        "code": "279048002",
+                        "display": "Internal mammary artery syndrome (finding)"
+                    },
+                    {
+                        "code": "279054001",
+                        "display": "Pain when milk coming in (finding)"
+                    },
+                    {
+                        "code": "281245003",
+                        "display": "Musculoskeletal chest pain (finding)"
+                    },
+                    {
+                        "code": "285385002",
+                        "display": "Left sided chest pain (finding)"
+                    },
+                    {
+                        "code": "285386001",
+                        "display": "Right sided chest pain (finding)"
+                    },
+                    {
+                        "code": "285389008",
+                        "display": "Upper chest pain (finding)"
+                    },
+                    {
+                        "code": "297217002",
+                        "display": "Rib pain (finding)"
+                    },
+                    {
+                        "code": "298254008",
+                        "display": "Thoracic facet joint pain (finding)"
+                    },
+                    {
+                        "code": "29857009",
+                        "display": "Chest pain (finding)"
+                    },
+                    {
+                        "code": "298579007",
+                        "display": "Pain on movement of thoracic spine (finding)"
+                    },
+                    {
+                        "code": "298731003",
+                        "display": "Pain of sternum (finding)"
+                    },
+                    {
+                        "code": "315248002",
+                        "display": "Intractable breast pain (finding)"
+                    },
+                    {
+                        "code": "315250005",
+                        "display": "Persistent mastalgia (finding)"
+                    },
+                    {
+                        "code": "3368006",
+                        "display": "Dull chest pain (finding)"
+                    },
+                    {
+                        "code": "34791000119103",
+                        "display": "Chest pain due to pericarditis (finding)"
+                    },
+                    {
+                        "code": "36859004",
+                        "display": "Esophageal chest pain (finding)"
+                    },
+                    {
+                        "code": "371030007",
+                        "display": "Squeezing chest pain (finding)"
+                    },
+                    {
+                        "code": "425991004",
+                        "display": "Cervicothoracic segmental dysfunction (finding)"
+                    },
+                    {
+                        "code": "426396005",
+                        "display": "Cardiac chest pain (finding)"
+                    },
+                    {
+                        "code": "434011000124101",
+                        "display": "Chronic chest pain (finding)"
+                    },
+                    {
+                        "code": "444227004",
+                        "display": "Acute postthoracotomy pain syndrome (finding)"
+                    },
+                    {
+                        "code": "4568003",
+                        "display": "Retrosternal pain (finding)"
+                    },
+                    {
+                        "code": "53430007",
+                        "display": "Pain of breast (finding)"
+                    },
+                    {
+                        "code": "59139008",
+                        "display": "Crushing chest pain (finding)"
+                    },
+                    {
+                        "code": "71884009",
+                        "display": "Precordial pain (finding)"
+                    },
+                    {
+                        "code": "735940001",
+                        "display": "Pain of intercostal space (finding)"
+                    },
+                    {
+                        "code": "774134007",
+                        "display": "Pain of right shoulder blade (finding)"
+                    },
+                    {
+                        "code": "774135008",
+                        "display": "Pain of left shoulder blade (finding)"
+                    },
+                    {
+                        "code": "7921000119104",
+                        "display": "Anterior pleuritic pain (finding)"
+                    },
+                    {
+                        "code": "81953000",
+                        "display": "Chest pain on exertion (finding)"
+                    },
+                    {
+                        "code": "866043000",
+                        "display": "Neuralgia of twelfth thoracic nerve (finding)"
+                    },
+                    {
+                        "code": "89638008",
+                        "display": "Xiphodynia (finding)"
+                    },
+                    {
+                        "code": "9267009",
+                        "display": "Chest pain at rest (finding)"
+                    },
+                    {
+                        "code": "95421005",
+                        "display": "Intercostal myalgia (finding)"
+                    },
+                    {
+                        "code": "97001000119106",
+                        "display": "Localized chest pain (finding)"
+                    },
+                    {
+                        "code": "98611000119104",
+                        "display": "Chronic post-thoracotomy pain syndrome (finding)"
+                    }
+                ]
+            }
+        ]
+    }
+}

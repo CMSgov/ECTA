@@ -1,0 +1,197 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.666.5.777",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2020-07-28T13:58:48.000+00:00",
+        "source": "#lFkkHaYSGwFN6dHd"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.666.5.777",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113883.3.666.5.777"
+        }
+    ],
+    "version": "Latest",
+    "name": "Interstitiallungdisease",
+    "title": "Interstitial lung disease",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2020-03",
+                "concept": [
+                    {
+                        "code": "10501004",
+                        "display": "Pulmonary alveolar proteinosis (disorder)"
+                    },
+                    {
+                        "code": "10785007",
+                        "display": "Vinyard sprayers' lung (disorder)"
+                    },
+                    {
+                        "code": "206303001",
+                        "display": "Perinatal lung intra-alveolar hemorrhage (disorder)"
+                    },
+                    {
+                        "code": "233713004",
+                        "display": "Seasonal cryptogenic organizing pneumonia with biochemical cholestasis (disorder)"
+                    },
+                    {
+                        "code": "236302005",
+                        "display": "Acute interstitial pneumonia (disorder)"
+                    },
+                    {
+                        "code": "36042005",
+                        "display": "Parietoalveolar pneumopathy (disorder)"
+                    },
+                    {
+                        "code": "426437004",
+                        "display": "Familial idiopathic pulmonary fibrosis (disorder)"
+                    },
+                    {
+                        "code": "44274007",
+                        "display": "Lymphoid interstitial pneumonia (disorder)"
+                    },
+                    {
+                        "code": "50196008",
+                        "display": "Perialveolar fibrosis of lung (disorder)"
+                    }
+                ]
+            },
+            {
+                "system": "http://hl7.org/fhir/sid/icd-9-cm/diagnosis",
+                "version": "2013",
+                "concept": [
+                    {
+                        "code": "516.8",
+                        "display": "Other specified alveolar and parietoalveolar pneumonopathies"
+                    },
+                    {
+                        "code": "516.9",
+                        "display": "Unspecified alveolar and parietoalveolar pneumonopathy"
+                    }
+                ]
+            },
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2020-03",
+                "concept": [
+                    {
+                        "code": "7436001",
+                        "display": "Alveolar pneumopathy (disorder)"
+                    },
+                    {
+                        "code": "80614003",
+                        "display": "Prolonged pulmonary alveolitis (disorder)"
+                    },
+                    {
+                        "code": "87153008",
+                        "display": "Pulmonary alveolar microlithiasis (disorder)"
+                    }
+                ]
+            },
+            {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "version": "2020",
+                "concept": [
+                    {
+                        "code": "J84.01",
+                        "display": "Alveolar proteinosis"
+                    },
+                    {
+                        "code": "J84.02",
+                        "display": "Pulmonary alveolar microlithiasis"
+                    },
+                    {
+                        "code": "J84.03",
+                        "display": "Idiopathic pulmonary hemosiderosis"
+                    },
+                    {
+                        "code": "J84.09",
+                        "display": "Other alveolar and parieto-alveolar conditions"
+                    },
+                    {
+                        "code": "J84.10",
+                        "display": "Pulmonary fibrosis, unspecified"
+                    },
+                    {
+                        "code": "J84.111",
+                        "display": "Idiopathic interstitial pneumonia, not otherwise specified"
+                    },
+                    {
+                        "code": "J84.112",
+                        "display": "Idiopathic pulmonary fibrosis"
+                    },
+                    {
+                        "code": "J84.113",
+                        "display": "Idiopathic non-specific interstitial pneumonitis"
+                    },
+                    {
+                        "code": "J84.114",
+                        "display": "Acute interstitial pneumonitis"
+                    },
+                    {
+                        "code": "J84.115",
+                        "display": "Respiratory bronchiolitis interstitial lung disease"
+                    },
+                    {
+                        "code": "J84.116",
+                        "display": "Cryptogenic organizing pneumonia"
+                    },
+                    {
+                        "code": "J84.117",
+                        "display": "Desquamative interstitial pneumonia"
+                    },
+                    {
+                        "code": "J84.17",
+                        "display": "Other interstitial pulmonary diseases with fibrosis in diseases classified elsewhere"
+                    },
+                    {
+                        "code": "J84.2",
+                        "display": "Lymphoid interstitial pneumonia"
+                    },
+                    {
+                        "code": "J84.81",
+                        "display": "Lymphangioleiomyomatosis"
+                    },
+                    {
+                        "code": "J84.82",
+                        "display": "Adult pulmonary Langerhans cell histiocytosis"
+                    },
+                    {
+                        "code": "J84.83",
+                        "display": "Surfactant mutations of the lung"
+                    },
+                    {
+                        "code": "J84.841",
+                        "display": "Neuroendocrine cell hyperplasia of infancy"
+                    },
+                    {
+                        "code": "J84.842",
+                        "display": "Pulmonary interstitial glycogenosis"
+                    },
+                    {
+                        "code": "J84.843",
+                        "display": "Alveolar capillary dysplasia with vein misalignment"
+                    },
+                    {
+                        "code": "J84.848",
+                        "display": "Other interstitial lung diseases of childhood"
+                    },
+                    {
+                        "code": "J84.89",
+                        "display": "Other specified interstitial pulmonary diseases"
+                    },
+                    {
+                        "code": "J84.9",
+                        "display": "Interstitial pulmonary disease, unspecified"
+                    }
+                ]
+            }
+        ]
+    }
+}

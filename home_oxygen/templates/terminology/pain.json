@@ -1,0 +1,3727 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113762.1.4.1222.1424",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-04-12T09:30:06.000+00:00",
+        "source": "#cOnmXqfMkR0K2Lam"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1222.1424",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113762.1.4.1222.1424"
+        }
+    ],
+    "version": "Latest",
+    "name": "Pain",
+    "title": "Pain",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2022-09",
+                "concept": [
+                    {
+                        "code": "10000006",
+                        "display": "Radiating chest pain (finding)"
+                    },
+                    {
+                        "code": "1003721002",
+                        "display": "Pain of joint of knee (finding)"
+                    },
+                    {
+                        "code": "1003722009",
+                        "display": "Pain of knee region (finding)"
+                    },
+                    {
+                        "code": "10085004",
+                        "display": "Metatarsalgia (finding)"
+                    },
+                    {
+                        "code": "1010233001",
+                        "display": "Otalgia of left ear (finding)"
+                    },
+                    {
+                        "code": "1010234007",
+                        "display": "Otalgia of right ear (finding)"
+                    },
+                    {
+                        "code": "1010235008",
+                        "display": "Pain of left breast (finding)"
+                    },
+                    {
+                        "code": "1010237000",
+                        "display": "Pain of right breast (finding)"
+                    },
+                    {
+                        "code": "102480002",
+                        "display": "Generalized acute body pains (finding)"
+                    },
+                    {
+                        "code": "102481003",
+                        "display": "Generalized chronic body pains (finding)"
+                    },
+                    {
+                        "code": "102482005",
+                        "display": "Growing pains (finding)"
+                    },
+                    {
+                        "code": "102555004",
+                        "display": "Neck pain aggravated by recumbency (finding)"
+                    },
+                    {
+                        "code": "102556003",
+                        "display": "Pain in upper limb (finding)"
+                    },
+                    {
+                        "code": "102557007",
+                        "display": "Arm claudication (finding)"
+                    },
+                    {
+                        "code": "102570003",
+                        "display": "Inguinal pain (finding)"
+                    },
+                    {
+                        "code": "102587001",
+                        "display": "Acute chest pain (finding)"
+                    },
+                    {
+                        "code": "102588006",
+                        "display": "Chest wall pain (finding)"
+                    },
+                    {
+                        "code": "102589003",
+                        "display": "Atypical chest pain (finding)"
+                    },
+                    {
+                        "code": "102613000",
+                        "display": "Localized abdominal pain (finding)"
+                    },
+                    {
+                        "code": "102614006",
+                        "display": "Generalized abdominal pain (finding)"
+                    },
+                    {
+                        "code": "102615007",
+                        "display": "Ulcer-type pain (finding)"
+                    },
+                    {
+                        "code": "102616008",
+                        "display": "Painful mouth (finding)"
+                    },
+                    {
+                        "code": "102619001",
+                        "display": "Pain in esophagus (finding)"
+                    },
+                    {
+                        "code": "102626001",
+                        "display": "Liver pain (finding)"
+                    },
+                    {
+                        "code": "102628000",
+                        "display": "Gallbladder pain (finding)"
+                    },
+                    {
+                        "code": "102631004",
+                        "display": "Pancreatic pain (finding)"
+                    },
+                    {
+                        "code": "102831002",
+                        "display": "Renal angle pain (finding)"
+                    },
+                    {
+                        "code": "102997000",
+                        "display": "Psychroalgia (finding)"
+                    },
+                    {
+                        "code": "102999002",
+                        "display": "Cryalgesia (finding)"
+                    },
+                    {
+                        "code": "103000001",
+                        "display": "Crymodynia (finding)"
+                    },
+                    {
+                        "code": "103007003",
+                        "display": "Headache due to external compression of head (finding)"
+                    },
+                    {
+                        "code": "103008008",
+                        "display": "Postpartum headache (finding)"
+                    },
+                    {
+                        "code": "103009000",
+                        "display": "Headache due to cold exposure (finding)"
+                    },
+                    {
+                        "code": "103010005",
+                        "display": "Headache associated with sexual activity (finding)"
+                    },
+                    {
+                        "code": "103011009",
+                        "display": "Benign exertional headache (finding)"
+                    },
+                    {
+                        "code": "103012002",
+                        "display": "Analgesic overuse headache (finding)"
+                    },
+                    {
+                        "code": "103013007",
+                        "display": "Smarting pain (finding)"
+                    },
+                    {
+                        "code": "103014001",
+                        "display": "Cervical nerve root pain (finding)"
+                    },
+                    {
+                        "code": "103015000",
+                        "display": "Thoracic nerve root pain (finding)"
+                    },
+                    {
+                        "code": "103016004",
+                        "display": "Lumbosacral nerve root pain (finding)"
+                    },
+                    {
+                        "code": "103821000119108",
+                        "display": "Pain following radiation therapy (finding)"
+                    },
+                    {
+                        "code": "10601006",
+                        "display": "Pain in lower limb (finding)"
+                    },
+                    {
+                        "code": "107401000119105",
+                        "display": "Acute postoperative pain (finding)"
+                    },
+                    {
+                        "code": "1075631000119107",
+                        "display": "Pain of right sternoclavicular joint (finding)"
+                    },
+                    {
+                        "code": "1075651000119101",
+                        "display": "Pain of left sternoclavicular joint (finding)"
+                    },
+                    {
+                        "code": "10760581000119104",
+                        "display": "Pain in round ligament in pregnancy (finding)"
+                    },
+                    {
+                        "code": "1076721000119108",
+                        "display": "Joint pain in right hand (finding)"
+                    },
+                    {
+                        "code": "1076731000119106",
+                        "display": "Joint pain in left hand (finding)"
+                    },
+                    {
+                        "code": "1076741000119102",
+                        "display": "Pain in right thumb (finding)"
+                    },
+                    {
+                        "code": "1076751000119100",
+                        "display": "Pain in left thumb (finding)"
+                    },
+                    {
+                        "code": "1076761000119103",
+                        "display": "Pain of right calf (finding)"
+                    },
+                    {
+                        "code": "1076771000119109",
+                        "display": "Pain of left calf (finding)"
+                    },
+                    {
+                        "code": "1076781000119107",
+                        "display": "Pain of joint of right foot (finding)"
+                    },
+                    {
+                        "code": "1076791000119105",
+                        "display": "Pain in right heel (finding)"
+                    },
+                    {
+                        "code": "1076801000119106",
+                        "display": "Pain of joint of left foot (finding)"
+                    },
+                    {
+                        "code": "1076811000119109",
+                        "display": "Pain of left heel (finding)"
+                    },
+                    {
+                        "code": "1084301000119101",
+                        "display": "Otogenic otalgia of bilateral ears (finding)"
+                    },
+                    {
+                        "code": "1084561000119106",
+                        "display": "Referred otalgia of bilateral ears (finding)"
+                    },
+                    {
+                        "code": "1089371000119107",
+                        "display": "Otogenic otalgia of left ear (finding)"
+                    },
+                    {
+                        "code": "1089561000119107",
+                        "display": "Referred otalgia of left ear (finding)"
+                    },
+                    {
+                        "code": "1091981000119106",
+                        "display": "Otogenic otalgia of right ear (finding)"
+                    },
+                    {
+                        "code": "1092171000119100",
+                        "display": "Referred otalgia of right ear (finding)"
+                    },
+                    {
+                        "code": "109771000119103",
+                        "display": "Chronic postoperative pain (finding)"
+                    },
+                    {
+                        "code": "110364008",
+                        "display": "Posttreatment pain (finding)"
+                    },
+                    {
+                        "code": "11114002",
+                        "display": "Sore gums (finding)"
+                    },
+                    {
+                        "code": "1119215001",
+                        "display": "Pain in left lumbar region of back (finding)"
+                    },
+                    {
+                        "code": "1119216000",
+                        "display": "Pain in right lumbar region of back (finding)"
+                    },
+                    {
+                        "code": "1119217009",
+                        "display": "Pain in right abdominal lumbar region (finding)"
+                    },
+                    {
+                        "code": "1119218004",
+                        "display": "Pain in left abdominal lumbar region (finding)"
+                    },
+                    {
+                        "code": "1119294003",
+                        "display": "Unilateral headache on left side of head (finding)"
+                    },
+                    {
+                        "code": "1119295002",
+                        "display": "Unilateral headache on right side of head (finding)"
+                    },
+                    {
+                        "code": "111985007",
+                        "display": "Chronic abdominal pain (finding)"
+                    },
+                    {
+                        "code": "1121000119107",
+                        "display": "Chronic neck pain (finding)"
+                    },
+                    {
+                        "code": "112101004",
+                        "display": "Dental headache (finding)"
+                    },
+                    {
+                        "code": "112102006",
+                        "display": "Atypical neuralgia (finding)"
+                    },
+                    {
+                        "code": "112103001",
+                        "display": "Neuralgia of amputation stump (finding)"
+                    },
+                    {
+                        "code": "112104007",
+                        "display": "Localized pain (finding)"
+                    },
+                    {
+                        "code": "112581000119104",
+                        "display": "Acute pain of joint of knee (finding)"
+                    },
+                    {
+                        "code": "1137438000",
+                        "display": "Pain due to arthritis (finding)"
+                    },
+                    {
+                        "code": "1144586002",
+                        "display": "Increased pain (finding)"
+                    },
+                    {
+                        "code": "1149085006",
+                        "display": "Satisfied with management of pain (finding)"
+                    },
+                    {
+                        "code": "1156105001",
+                        "display": "Pain in sacrum (finding)"
+                    },
+                    {
+                        "code": "1156446004",
+                        "display": "Demonstrates adequate pain control (finding)"
+                    },
+                    {
+                        "code": "1156802000",
+                        "display": "Myofascial low back pain (finding)"
+                    },
+                    {
+                        "code": "1162314004",
+                        "display": "Myofascial neck pain (finding)"
+                    },
+                    {
+                        "code": "1162428009",
+                        "display": "Pain of shoulder girdle (finding)"
+                    },
+                    {
+                        "code": "1162829009",
+                        "display": "Chronic pain of cardiac implantable electronic device pocket following implantation of cardiac implantable electronic device (finding)"
+                    },
+                    {
+                        "code": "116290004",
+                        "display": "Acute abdominal pain (finding)"
+                    },
+                    {
+                        "code": "1162969009",
+                        "display": "Pain on movement of eye (finding)"
+                    },
+                    {
+                        "code": "11679003",
+                        "display": "Radicular pain (finding)"
+                    },
+                    {
+                        "code": "11874831000119105",
+                        "display": "Bilateral wrist pain (finding)"
+                    },
+                    {
+                        "code": "1197734000",
+                        "display": "Chronic proctalgia (finding)"
+                    },
+                    {
+                        "code": "11996521000119103",
+                        "display": "Pain of amputation stump of left upper limb (finding)"
+                    },
+                    {
+                        "code": "11996561000119108",
+                        "display": "Pain of amputation stump of left lower limb (finding)"
+                    },
+                    {
+                        "code": "11996601000119108",
+                        "display": "Pain of amputation stump of right upper limb (finding)"
+                    },
+                    {
+                        "code": "11996641000119105",
+                        "display": "Pain of amputation stump of right lower limb (finding)"
+                    },
+                    {
+                        "code": "12236951000119108",
+                        "display": "Intermittent claudication of bilateral lower limbs co-occurrent and due to atherosclerosis (finding)"
+                    },
+                    {
+                        "code": "12237071000119100",
+                        "display": "Intermittent claudication of left lower limb co-occurrent and due to atherosclerosis (finding)"
+                    },
+                    {
+                        "code": "12237191000119103",
+                        "display": "Intermittent claudication of right lower limb co-occurrent and due to atherosclerosis (finding)"
+                    },
+                    {
+                        "code": "12240271000119107",
+                        "display": "Pain of left temporomandibular joint (finding)"
+                    },
+                    {
+                        "code": "12240311000119107",
+                        "display": "Pain of right temporomandibular joint (finding)"
+                    },
+                    {
+                        "code": "12242431000119109",
+                        "display": "Mastodynia of bilateral breasts (finding)"
+                    },
+                    {
+                        "code": "12242551000119102",
+                        "display": "Pain in left sacroiliac joint (finding)"
+                    },
+                    {
+                        "code": "12242591000119107",
+                        "display": "Pain in right sacroiliac joint (finding)"
+                    },
+                    {
+                        "code": "12247531000119106",
+                        "display": "Pain in bilateral lower legs (finding)"
+                    },
+                    {
+                        "code": "12247571000119109",
+                        "display": "Bilateral foot joint pain (finding)"
+                    },
+                    {
+                        "code": "12247611000119100",
+                        "display": "Bilateral hip joint pain (finding)"
+                    },
+                    {
+                        "code": "12247731000119102",
+                        "display": "Bilateral ankle joint pain (finding)"
+                    },
+                    {
+                        "code": "12247771000119104",
+                        "display": "Bilateral shoulder joint pain (finding)"
+                    },
+                    {
+                        "code": "12247851000119103",
+                        "display": "Bilateral elbow joint pain (finding)"
+                    },
+                    {
+                        "code": "12265381000119102",
+                        "display": "Bilateral metatarsalgia (finding)"
+                    },
+                    {
+                        "code": "122751000119105",
+                        "display": "Acute posttraumatic headache (finding)"
+                    },
+                    {
+                        "code": "12336008",
+                        "display": "Referred otalgia (finding)"
+                    },
+                    {
+                        "code": "12349003",
+                        "display": "Danforth's sign (finding)"
+                    },
+                    {
+                        "code": "12400141000119103",
+                        "display": "Chronic pain following bilateral total hip arthroplasty (finding)"
+                    },
+                    {
+                        "code": "12400181000119108",
+                        "display": "Chronic pain following bilateral total knee arthroplasty (finding)"
+                    },
+                    {
+                        "code": "12400221000119100",
+                        "display": "Chronic pain following left total hip arthroplasty (finding)"
+                    },
+                    {
+                        "code": "12400261000119105",
+                        "display": "Chronic pain following left total knee arthroplasty (finding)"
+                    },
+                    {
+                        "code": "12400301000119102",
+                        "display": "Chronic pain following right total hip arthroplasty (finding)"
+                    },
+                    {
+                        "code": "12400341000119100",
+                        "display": "Chronic pain following right total knee arthroplasty (finding)"
+                    },
+                    {
+                        "code": "125661000119107",
+                        "display": "Biliary colic with obstruction (finding)"
+                    },
+                    {
+                        "code": "12584003",
+                        "display": "Bone pain (finding)"
+                    },
+                    {
+                        "code": "129501000119107",
+                        "display": "Chronic sacral pain for greater than three months (finding)"
+                    },
+                    {
+                        "code": "129511000119105",
+                        "display": "Chronic pain in coccyx for more than three months (finding)"
+                    },
+                    {
+                        "code": "129610005",
+                        "display": "Headache due to intracranial disease (finding)"
+                    },
+                    {
+                        "code": "13057000",
+                        "display": "Pleuropericardial chest pain (finding)"
+                    },
+                    {
+                        "code": "13322008",
+                        "display": "Postseizure headache (finding)"
+                    },
+                    {
+                        "code": "133731000119108",
+                        "display": "Chronic pain in male pelvis (finding)"
+                    },
+                    {
+                        "code": "134407002",
+                        "display": "Chronic back pain (finding)"
+                    },
+                    {
+                        "code": "135860001",
+                        "display": "Exacerbation of backache (finding)"
+                    },
+                    {
+                        "code": "135876005",
+                        "display": "Mastalgia of puberty (finding)"
+                    },
+                    {
+                        "code": "136051000119105",
+                        "display": "Abdominal colic in child less than or equal to 12 months (finding)"
+                    },
+                    {
+                        "code": "136571000119109",
+                        "display": "Adult colic (finding)"
+                    },
+                    {
+                        "code": "136791000119103",
+                        "display": "Chronic thoracic back pain (finding)"
+                    },
+                    {
+                        "code": "137891000119105",
+                        "display": "Abdominal colic in adult or child greater than 12 months (finding)"
+                    },
+                    {
+                        "code": "14040001000004109",
+                        "display": "Uncontrolled pain (finding)"
+                    },
+                    {
+                        "code": "14049007",
+                        "display": "Chaussier's sign (finding)"
+                    },
+                    {
+                        "code": "14090001000004102",
+                        "display": "Neuropathic pain caused by radiation (finding)"
+                    },
+                    {
+                        "code": "14150005",
+                        "display": "Alteration in comfort: chronic pain (finding)"
+                    },
+                    {
+                        "code": "14440001000004101",
+                        "display": "Postoperative abdominal pain (finding)"
+                    },
+                    {
+                        "code": "145621000146106",
+                        "display": "Headache due to exertion (finding)"
+                    },
+                    {
+                        "code": "14700001000004102",
+                        "display": "Intractable abdominal pain (finding)"
+                    },
+                    {
+                        "code": "15629941000119104",
+                        "display": "Left inguinal pain (finding)"
+                    },
+                    {
+                        "code": "15629981000119109",
+                        "display": "Right inguinal pain (finding)"
+                    },
+                    {
+                        "code": "15630021000119102",
+                        "display": "Pain of bilateral inguinal regions (finding)"
+                    },
+                    {
+                        "code": "15634391000119107",
+                        "display": "Pain of bilateral thighs (finding)"
+                    },
+                    {
+                        "code": "15634431000119102",
+                        "display": "Pain in both feet (finding)"
+                    },
+                    {
+                        "code": "15634471000119104",
+                        "display": "Bilateral calf pain (finding)"
+                    },
+                    {
+                        "code": "15634511000119108",
+                        "display": "Pain in bilateral legs (finding)"
+                    },
+                    {
+                        "code": "15634551000119109",
+                        "display": "Pain of bilateral hands (finding)"
+                    },
+                    {
+                        "code": "15634591000119104",
+                        "display": "Pain of bilateral upper limbs (finding)"
+                    },
+                    {
+                        "code": "15634631000119104",
+                        "display": "Bilateral sacroiliac joint pain (finding)"
+                    },
+                    {
+                        "code": "15636451000119103",
+                        "display": "Pain in fingers of bilateral hands (finding)"
+                    },
+                    {
+                        "code": "15636491000119108",
+                        "display": "Bilateral heel pain (finding)"
+                    },
+                    {
+                        "code": "15639521000119102",
+                        "display": "Pain of toes of bilateral feet (finding)"
+                    },
+                    {
+                        "code": "15639561000119107",
+                        "display": "Pain of bilateral acromioclavicular joints (finding)"
+                    },
+                    {
+                        "code": "15639721000119105",
+                        "display": "Pain in bilateral temporomandibular joints (finding)"
+                    },
+                    {
+                        "code": "15640121000119102",
+                        "display": "Bilateral thumb pain (finding)"
+                    },
+                    {
+                        "code": "15743161000119106",
+                        "display": "Pain of joint of bilateral lower legs (finding)"
+                    },
+                    {
+                        "code": "15743201000119101",
+                        "display": "Pain of joint of right lower leg (finding)"
+                    },
+                    {
+                        "code": "15743241000119104",
+                        "display": "Pain of joint of left lower leg (finding)"
+                    },
+                    {
+                        "code": "15743521000119108",
+                        "display": "Chronic pain of right upper limb (finding)"
+                    },
+                    {
+                        "code": "15743561000119103",
+                        "display": "Chronic pain of left upper limb (finding)"
+                    },
+                    {
+                        "code": "15743601000119103",
+                        "display": "Pain of bilateral forearms (finding)"
+                    },
+                    {
+                        "code": "15743641000119101",
+                        "display": "Pain of bilateral sternoclavicular joints (finding)"
+                    },
+                    {
+                        "code": "15743681000119106",
+                        "display": "Pain of bilateral shoulder blades (finding)"
+                    },
+                    {
+                        "code": "15749341000119107",
+                        "display": "Pain in bilateral upper arms (finding)"
+                    },
+                    {
+                        "code": "15749801000119104",
+                        "display": "Chronic pain of bilateral feet (finding)"
+                    },
+                    {
+                        "code": "15803009",
+                        "display": "Bladder pain (finding)"
+                    },
+                    {
+                        "code": "15916891000119103",
+                        "display": "Pain of left ankle joint (finding)"
+                    },
+                    {
+                        "code": "15916931000119106",
+                        "display": "Pain of right ankle joint (finding)"
+                    },
+                    {
+                        "code": "15916971000119109",
+                        "display": "Pain of left shoulder joint (finding)"
+                    },
+                    {
+                        "code": "15917011000119100",
+                        "display": "Pain of right shoulder joint (finding)"
+                    },
+                    {
+                        "code": "15917051000119104",
+                        "display": "Pain of left elbow joint (finding)"
+                    },
+                    {
+                        "code": "15917091000119109",
+                        "display": "Pain of right elbow joint (finding)"
+                    },
+                    {
+                        "code": "16002591000119108",
+                        "display": "Pain of left hand due to and following cerebrovascular accident (finding)"
+                    },
+                    {
+                        "code": "16002631000119108",
+                        "display": "Pain of right hand due to and following cerebrovascular accident (finding)"
+                    },
+                    {
+                        "code": "16002671000119106",
+                        "display": "Chronic pain of bilateral upper limbs (finding)"
+                    },
+                    {
+                        "code": "16002791000119101",
+                        "display": "Pain of right lower limb co-occurrent and due to ischemia (finding)"
+                    },
+                    {
+                        "code": "16002831000119107",
+                        "display": "Pain of left lower limb co-occurrent and due to ischemia (finding)"
+                    },
+                    {
+                        "code": "16002871000119105",
+                        "display": "Chronic pain of right foot (finding)"
+                    },
+                    {
+                        "code": "16002911000119108",
+                        "display": "Chronic pain of left foot (finding)"
+                    },
+                    {
+                        "code": "16002951000119109",
+                        "display": "Pain of bilateral lower limbs co-occurrent and due to ischemia (finding)"
+                    },
+                    {
+                        "code": "16013431000119104",
+                        "display": "Intermittent claudication of bilateral lower limbs due to atherosclerosis of nonbiological bypass graft (finding)"
+                    },
+                    {
+                        "code": "16013711000119104",
+                        "display": "Intermittent claudication of right lower limb co-occurrent and due to atherosclerosis of bypass graft (finding)"
+                    },
+                    {
+                        "code": "16014031000119109",
+                        "display": "Intermittent claudication of left lower limb co-occurrent and due to atherosclerosis of bypass graft (finding)"
+                    },
+                    {
+                        "code": "16014071000119107",
+                        "display": "Intermittent claudication of bilateral lower limbs co-occurrent and due to atherosclerosis of bypass graft (finding)"
+                    },
+                    {
+                        "code": "16057351000119103",
+                        "display": "Neuralgia of left glossopharyngeal nerve (finding)"
+                    },
+                    {
+                        "code": "16057391000119108",
+                        "display": "Neuralgia of right glossopharyngeal nerve (finding)"
+                    },
+                    {
+                        "code": "16058471000119101",
+                        "display": "Complex regional pain syndrome type 2 of bilateral lower limbs (finding)"
+                    },
+                    {
+                        "code": "16058511000119105",
+                        "display": "Complex regional pain syndrome type 2 of bilateral upper limbs (finding)"
+                    },
+                    {
+                        "code": "16066291000119107",
+                        "display": "Pain at rest of left lower limb co-occurrent and due to atherosclerosis of bypass graft (finding)"
+                    },
+                    {
+                        "code": "16066331000119101",
+                        "display": "Pain at rest of left upper limb co-occurrent and due to atherosclerosis (finding)"
+                    },
+                    {
+                        "code": "16066531000119106",
+                        "display": "Pain at rest of right upper limb co-occurrent and due to atherosclerosis (finding)"
+                    },
+                    {
+                        "code": "16066731000119102",
+                        "display": "Pain at rest of right lower limb co-occurrent and due to atherosclerosis of bypass graft (finding)"
+                    },
+                    {
+                        "code": "161891005",
+                        "display": "Backache (finding)"
+                    },
+                    {
+                        "code": "161892003",
+                        "display": "Backache with radiation (finding)"
+                    },
+                    {
+                        "code": "161893008",
+                        "display": "Back pain worse on sneezing (finding)"
+                    },
+                    {
+                        "code": "161972006",
+                        "display": "Central chest pain (finding)"
+                    },
+                    {
+                        "code": "161973001",
+                        "display": "Anterior chest wall pain (finding)"
+                    },
+                    {
+                        "code": "161974007",
+                        "display": "Parasternal pain (finding)"
+                    },
+                    {
+                        "code": "161977000",
+                        "display": "Costal margin chest pain (finding)"
+                    },
+                    {
+                        "code": "162011005",
+                        "display": "Sore mouth (finding)"
+                    },
+                    {
+                        "code": "162038003",
+                        "display": "Non-colicky abdominal pain (finding)"
+                    },
+                    {
+                        "code": "162039006",
+                        "display": "Referred pain in shoulder from abdomen (finding)"
+                    },
+                    {
+                        "code": "162040008",
+                        "display": "Abdominal migraine - symptom (finding)"
+                    },
+                    {
+                        "code": "162042000",
+                        "display": "Abdominal wall pain (finding)"
+                    },
+                    {
+                        "code": "162046002",
+                        "display": "Central abdominal pain (finding)"
+                    },
+                    {
+                        "code": "162047006",
+                        "display": "Left subcostal pain (finding)"
+                    },
+                    {
+                        "code": "162048001",
+                        "display": "Right subcostal pain (finding)"
+                    },
+                    {
+                        "code": "162049009",
+                        "display": "Left flank pain (finding)"
+                    },
+                    {
+                        "code": "162050009",
+                        "display": "Right flank pain (finding)"
+                    },
+                    {
+                        "code": "162051008",
+                        "display": "Right iliac fossa pain (finding)"
+                    },
+                    {
+                        "code": "162052001",
+                        "display": "Left iliac fossa pain (finding)"
+                    },
+                    {
+                        "code": "162053006",
+                        "display": "Suprapubic pain (finding)"
+                    },
+                    {
+                        "code": "16207081000119105",
+                        "display": "Pain of amputation stump of bilateral lower limbs (finding)"
+                    },
+                    {
+                        "code": "16207121000119107",
+                        "display": "Pain of amputation stump of bilateral upper limbs (finding)"
+                    },
+                    {
+                        "code": "162138001",
+                        "display": "Genitourinary pain (finding)"
+                    },
+                    {
+                        "code": "162143008",
+                        "display": "Pain in female genitalia (finding)"
+                    },
+                    {
+                        "code": "162145001",
+                        "display": "Vulval pain (finding)"
+                    },
+                    {
+                        "code": "162211001",
+                        "display": "Viral headache (finding)"
+                    },
+                    {
+                        "code": "162299003",
+                        "display": "Generalized headache (finding)"
+                    },
+                    {
+                        "code": "162300006",
+                        "display": "Unilateral headache (finding)"
+                    },
+                    {
+                        "code": "162301005",
+                        "display": "Bilateral headache (finding)"
+                    },
+                    {
+                        "code": "162304002",
+                        "display": "Parietal headache (finding)"
+                    },
+                    {
+                        "code": "162307009",
+                        "display": "Aching headache (finding)"
+                    },
+                    {
+                        "code": "162308004",
+                        "display": "Throbbing headache (finding)"
+                    },
+                    {
+                        "code": "162309007",
+                        "display": "Shooting headache (finding)"
+                    },
+                    {
+                        "code": "162310002",
+                        "display": "Morning headache (finding)"
+                    },
+                    {
+                        "code": "162311003",
+                        "display": "Heavy head (finding)"
+                    },
+                    {
+                        "code": "162356005",
+                        "display": "Earache symptom (finding)"
+                    },
+                    {
+                        "code": "162359003",
+                        "display": "Bilateral earache (finding)"
+                    },
+                    {
+                        "code": "162397003",
+                        "display": "Pain in throat (finding)"
+                    },
+                    {
+                        "code": "162502002",
+                        "display": "Finding of pain character (finding)"
+                    },
+                    {
+                        "code": "162503007",
+                        "display": "Cutting pain (finding)"
+                    },
+                    {
+                        "code": "162504001",
+                        "display": "Griping pain (finding)"
+                    },
+                    {
+                        "code": "162505000",
+                        "display": "Tightening pain (finding)"
+                    },
+                    {
+                        "code": "162506004",
+                        "display": "Pricking pain (finding)"
+                    },
+                    {
+                        "code": "16269008",
+                        "display": "Neuralgia (finding)"
+                    },
+                    {
+                        "code": "16331000",
+                        "display": "Heartburn (finding)"
+                    },
+                    {
+                        "code": "16442141000119109",
+                        "display": "Periorbital pain of left eye (finding)"
+                    },
+                    {
+                        "code": "16442181000119104",
+                        "display": "Periorbital pain of right eye (finding)"
+                    },
+                    {
+                        "code": "16442221000119107",
+                        "display": "Periorbital pain of bilateral eyes (finding)"
+                    },
+                    {
+                        "code": "16462851000119106",
+                        "display": "Myalgia caused by statin (finding)"
+                    },
+                    {
+                        "code": "16513000",
+                        "display": "Postcordotomy pain (finding)"
+                    },
+                    {
+                        "code": "16580691000119107",
+                        "display": "Chronic urinary bladder pain (finding)"
+                    },
+                    {
+                        "code": "16638321000119100",
+                        "display": "Neuralgia of bilateral pudendal nerves (finding)"
+                    },
+                    {
+                        "code": "16638401000119101",
+                        "display": "Neuralgia of nerve of bilateral lower limbs (finding)"
+                    },
+                    {
+                        "code": "16675201000119107",
+                        "display": "Pain of right testicle (finding)"
+                    },
+                    {
+                        "code": "16675251000119106",
+                        "display": "Pain of bilateral testicles (finding)"
+                    },
+                    {
+                        "code": "16675301000119100",
+                        "display": "Pain of left testicle (finding)"
+                    },
+                    {
+                        "code": "16690551000119106",
+                        "display": "Female deep pain on intercourse (finding)"
+                    },
+                    {
+                        "code": "16844001",
+                        "display": "Painful urging to urinate (finding)"
+                    },
+                    {
+                        "code": "16899701000119102",
+                        "display": "Pain of joint of bilateral hands (finding)"
+                    },
+                    {
+                        "code": "169464001",
+                        "display": "Headache caused by oral contraceptive pill (finding)"
+                    },
+                    {
+                        "code": "17329003",
+                        "display": "Ureteric colic (finding)"
+                    },
+                    {
+                        "code": "175004",
+                        "display": "Supraorbital neuralgia (finding)"
+                    },
+                    {
+                        "code": "18876004",
+                        "display": "Pain in finger (finding)"
+                    },
+                    {
+                        "code": "193947008",
+                        "display": "Ciliary neuralgia (finding)"
+                    },
+                    {
+                        "code": "196791007",
+                        "display": "Appendicular colic (finding)"
+                    },
+                    {
+                        "code": "197232005",
+                        "display": "Anorectal pain (finding)"
+                    },
+                    {
+                        "code": "198075006",
+                        "display": "Dyspareunia due to non-psychogenic cause in male (finding)"
+                    },
+                    {
+                        "code": "198402002",
+                        "display": "Dyspareunia due to non-psychogenic cause in the female (finding)"
+                    },
+                    {
+                        "code": "200430001",
+                        "display": "Breastfeeding painful (finding)"
+                    },
+                    {
+                        "code": "202472008",
+                        "display": "Hand joint pain (finding)"
+                    },
+                    {
+                        "code": "202478007",
+                        "display": "Sternoclavicular joint pain (finding)"
+                    },
+                    {
+                        "code": "202479004",
+                        "display": "Acromioclavicular joint pain (finding)"
+                    },
+                    {
+                        "code": "202480001",
+                        "display": "Elbow joint pain (finding)"
+                    },
+                    {
+                        "code": "202481002",
+                        "display": "Distal radioulnar joint pain (finding)"
+                    },
+                    {
+                        "code": "202482009",
+                        "display": "Wrist joint pain (finding)"
+                    },
+                    {
+                        "code": "202483004",
+                        "display": "Metacarpophalangeal joint pain (finding)"
+                    },
+                    {
+                        "code": "202484005",
+                        "display": "Proximal interphalangeal joint of finger pain (finding)"
+                    },
+                    {
+                        "code": "202485006",
+                        "display": "Distal interphalangeal joint of finger pain (finding)"
+                    },
+                    {
+                        "code": "202487003",
+                        "display": "Sacroiliac joint pain (finding)"
+                    },
+                    {
+                        "code": "202489000",
+                        "display": "Tibiofibular joint pain (finding)"
+                    },
+                    {
+                        "code": "202490009",
+                        "display": "Ankle joint pain (finding)"
+                    },
+                    {
+                        "code": "202491008",
+                        "display": "Subtalar joint pain (finding)"
+                    },
+                    {
+                        "code": "202493006",
+                        "display": "Talonavicular joint pain (finding)"
+                    },
+                    {
+                        "code": "202495004",
+                        "display": "First metatarsophalangeal joint pain (finding)"
+                    },
+                    {
+                        "code": "202496003",
+                        "display": "Lesser metatarsophalangeal joint pain (finding)"
+                    },
+                    {
+                        "code": "202497007",
+                        "display": "Interphalangeal joint of toe pain (finding)"
+                    },
+                    {
+                        "code": "203508001",
+                        "display": "Bony pelvic pain (finding)"
+                    },
+                    {
+                        "code": "203509009",
+                        "display": "Clavicle pain (finding)"
+                    },
+                    {
+                        "code": "20361002",
+                        "display": "Alteration in comfort: pain (finding)"
+                    },
+                    {
+                        "code": "20502007",
+                        "display": "Pain in scrotum (finding)"
+                    },
+                    {
+                        "code": "20793008",
+                        "display": "Scapulalgia (finding)"
+                    },
+                    {
+                        "code": "21005005",
+                        "display": "Burning epigastric pain (finding)"
+                    },
+                    {
+                        "code": "213299007",
+                        "display": "Postoperative pain (finding)"
+                    },
+                    {
+                        "code": "2134003",
+                        "display": "Diffuse pain (finding)"
+                    },
+                    {
+                        "code": "21522001",
+                        "display": "Abdominal pain (finding)"
+                    },
+                    {
+                        "code": "21545007",
+                        "display": "Tenalgia (finding)"
+                    },
+                    {
+                        "code": "21621000119107",
+                        "display": "Pain in female perineum (finding)"
+                    },
+                    {
+                        "code": "22253000",
+                        "display": "Pain (finding)"
+                    },
+                    {
+                        "code": "2237002",
+                        "display": "Pleuritic pain (finding)"
+                    },
+                    {
+                        "code": "225564006",
+                        "display": "Pain of nose (finding)"
+                    },
+                    {
+                        "code": "225565007",
+                        "display": "Perineal pain (finding)"
+                    },
+                    {
+                        "code": "225566008",
+                        "display": "Ischemic chest pain (finding)"
+                    },
+                    {
+                        "code": "225595004",
+                        "display": "Pain associated with defecation (finding)"
+                    },
+                    {
+                        "code": "230483008",
+                        "display": "Headache associated with substance abuse or withdrawal (finding)"
+                    },
+                    {
+                        "code": "231488009",
+                        "display": "Delusional pain (finding)"
+                    },
+                    {
+                        "code": "23285006",
+                        "display": "Painful sexual act of male (finding)"
+                    },
+                    {
+                        "code": "233845001",
+                        "display": "Cardiac syndrome X (finding)"
+                    },
+                    {
+                        "code": "235841007",
+                        "display": "Chronic nonspecific abdominal pain (finding)"
+                    },
+                    {
+                        "code": "237067000",
+                        "display": "Chronic pain in female pelvis (finding)"
+                    },
+                    {
+                        "code": "237453001",
+                        "display": "Cyclical mastalgia (finding)"
+                    },
+                    {
+                        "code": "237454007",
+                        "display": "Non-cyclical mastalgia (finding)"
+                    },
+                    {
+                        "code": "237455008",
+                        "display": "Trigger point mastalgia (finding)"
+                    },
+                    {
+                        "code": "238970000",
+                        "display": "Proctodynia (finding)"
+                    },
+                    {
+                        "code": "239166000",
+                        "display": "Persistent wound pain (finding)"
+                    },
+                    {
+                        "code": "239175003",
+                        "display": "Post-thoracotomy pain syndrome (finding)"
+                    },
+                    {
+                        "code": "239176002",
+                        "display": "Post-mastectomy pain (finding)"
+                    },
+                    {
+                        "code": "239177006",
+                        "display": "Post-episiotomy pain (finding)"
+                    },
+                    {
+                        "code": "239733006",
+                        "display": "Anterior knee pain (finding)"
+                    },
+                    {
+                        "code": "247349000",
+                        "display": "Painful teething (finding)"
+                    },
+                    {
+                        "code": "247350000",
+                        "display": "Sore nipple (finding)"
+                    },
+                    {
+                        "code": "247352008",
+                        "display": "Subcostal pain (finding)"
+                    },
+                    {
+                        "code": "247353003",
+                        "display": "Site of abdominal pain (finding)"
+                    },
+                    {
+                        "code": "247354009",
+                        "display": "Iliac fossa pain (finding)"
+                    },
+                    {
+                        "code": "247355005",
+                        "display": "Flank pain (finding)"
+                    },
+                    {
+                        "code": "247361008",
+                        "display": "Evening colic (finding)"
+                    },
+                    {
+                        "code": "247362001",
+                        "display": "Pain on abdominal wall movement (finding)"
+                    },
+                    {
+                        "code": "247366003",
+                        "display": "Acute back pain with sciatica (finding)"
+                    },
+                    {
+                        "code": "247368002",
+                        "display": "Posterior compartment low back pain (finding)"
+                    },
+                    {
+                        "code": "247369005",
+                        "display": "Facet joint pain (finding)"
+                    },
+                    {
+                        "code": "247373008",
+                        "display": "Ankle pain (finding)"
+                    },
+                    {
+                        "code": "247381009",
+                        "display": "Limb stump pain (finding)"
+                    },
+                    {
+                        "code": "247382002",
+                        "display": "Urinary tract pain (finding)"
+                    },
+                    {
+                        "code": "247385000",
+                        "display": "Lateral femoral cutaneous neuralgia (finding)"
+                    },
+                    {
+                        "code": "247386004",
+                        "display": "Obturator neuralgia (finding)"
+                    },
+                    {
+                        "code": "247387008",
+                        "display": "Cruralgia (finding)"
+                    },
+                    {
+                        "code": "247388003",
+                        "display": "Segmental peripheral neuralgia (finding)"
+                    },
+                    {
+                        "code": "247389006",
+                        "display": "Intercostal neuralgia (finding)"
+                    },
+                    {
+                        "code": "247391003",
+                        "display": "Perineal neuralgia (finding)"
+                    },
+                    {
+                        "code": "247392005",
+                        "display": "Iliohypogastric nerve neuralgia (finding)"
+                    },
+                    {
+                        "code": "247393000",
+                        "display": "Ilioinguinal nerve neuralgia (finding)"
+                    },
+                    {
+                        "code": "247395007",
+                        "display": "Genitofemoral nerve neuralgia (finding)"
+                    },
+                    {
+                        "code": "247396008",
+                        "display": "Testicular neuralgia (finding)"
+                    },
+                    {
+                        "code": "247398009",
+                        "display": "Neuropathic pain (finding)"
+                    },
+                    {
+                        "code": "247399001",
+                        "display": "Pseudothalamic pain (finding)"
+                    },
+                    {
+                        "code": "247401007",
+                        "display": "Decreased pain threshold (finding)"
+                    },
+                    {
+                        "code": "247403005",
+                        "display": "Low pain threshold (finding)"
+                    },
+                    {
+                        "code": "247405003",
+                        "display": "Pain in area of anesthesia (finding)"
+                    },
+                    {
+                        "code": "247406002",
+                        "display": "Increased pain threshold (finding)"
+                    },
+                    {
+                        "code": "247408001",
+                        "display": "High pain threshold (finding)"
+                    },
+                    {
+                        "code": "247410004",
+                        "display": "Painful cough (finding)"
+                    },
+                    {
+                        "code": "247411000",
+                        "display": "Talking painful (finding)"
+                    },
+                    {
+                        "code": "247412007",
+                        "display": "Labor pain (finding)"
+                    },
+                    {
+                        "code": "247413002",
+                        "display": "False labor pains (finding)"
+                    },
+                    {
+                        "code": "247414008",
+                        "display": "After pains (finding)"
+                    },
+                    {
+                        "code": "247415009",
+                        "display": "Painful lactation (finding)"
+                    },
+                    {
+                        "code": "247418006",
+                        "display": "Superficial pain on intercourse (finding)"
+                    },
+                    {
+                        "code": "247419003",
+                        "display": "Deep pain on intercourse (finding)"
+                    },
+                    {
+                        "code": "247420009",
+                        "display": "Sexual function painful (finding)"
+                    },
+                    {
+                        "code": "247422001",
+                        "display": "Painful orgasm (finding)"
+                    },
+                    {
+                        "code": "25064002",
+                        "display": "Headache (finding)"
+                    },
+                    {
+                        "code": "25416002",
+                        "display": "Peripheral neuralgia (finding)"
+                    },
+                    {
+                        "code": "267053000",
+                        "display": "Tenesmus (finding)"
+                    },
+                    {
+                        "code": "267067009",
+                        "display": "Lumbar ache - renal (finding)"
+                    },
+                    {
+                        "code": "267096005",
+                        "display": "Frontal headache (finding)"
+                    },
+                    {
+                        "code": "267102003",
+                        "display": "Sore throat symptom (finding)"
+                    },
+                    {
+                        "code": "267949000",
+                        "display": "Shoulder joint pain (finding)"
+                    },
+                    {
+                        "code": "267950000",
+                        "display": "Arthralgia of the upper arm (finding)"
+                    },
+                    {
+                        "code": "267952008",
+                        "display": "Arthralgia of the pelvic region and thigh (finding)"
+                    },
+                    {
+                        "code": "267954009",
+                        "display": "Arthralgia of the ankle and/or foot (finding)"
+                    },
+                    {
+                        "code": "267981009",
+                        "display": "Pain in thoracic spine (finding)"
+                    },
+                    {
+                        "code": "267982002",
+                        "display": "Pain in lumbar spine (finding)"
+                    },
+                    {
+                        "code": "271681002",
+                        "display": "Stomach ache (finding)"
+                    },
+                    {
+                        "code": "271832001",
+                        "display": "Flatulence, eructation and gas pain (finding)"
+                    },
+                    {
+                        "code": "271843009",
+                        "display": "Painful straining for stool (finding)"
+                    },
+                    {
+                        "code": "271853005",
+                        "display": "Hypochondrial pain (finding)"
+                    },
+                    {
+                        "code": "271857006",
+                        "display": "Loin pain (finding)"
+                    },
+                    {
+                        "code": "271858001",
+                        "display": "Recurrent acute abdominal pain (finding)"
+                    },
+                    {
+                        "code": "2733002",
+                        "display": "Heel pain (finding)"
+                    },
+                    {
+                        "code": "27355003",
+                        "display": "Toothache (finding)"
+                    },
+                    {
+                        "code": "274279008",
+                        "display": "Renal pain (finding)"
+                    },
+                    {
+                        "code": "274280006",
+                        "display": "Ureteric pain (finding)"
+                    },
+                    {
+                        "code": "274663001",
+                        "display": "Acute pain (finding)"
+                    },
+                    {
+                        "code": "274664007",
+                        "display": "Chest pain on breathing (finding)"
+                    },
+                    {
+                        "code": "274665008",
+                        "display": "Chronic intractable pain (finding)"
+                    },
+                    {
+                        "code": "274667000",
+                        "display": "Jaw pain (finding)"
+                    },
+                    {
+                        "code": "274668005",
+                        "display": "Non-cardiac chest pain (finding)"
+                    },
+                    {
+                        "code": "274671002",
+                        "display": "Pelvic and perineal pain (finding)"
+                    },
+                    {
+                        "code": "275314000",
+                        "display": "Anal stump pain (finding)"
+                    },
+                    {
+                        "code": "275318002",
+                        "display": "Aching leg syndrome (finding)"
+                    },
+                    {
+                        "code": "275321000",
+                        "display": "Vulva sore (finding)"
+                    },
+                    {
+                        "code": "275406005",
+                        "display": "Appendicular pain (finding)"
+                    },
+                    {
+                        "code": "275488008",
+                        "display": "Sore throat - chronic (finding)"
+                    },
+                    {
+                        "code": "27635008",
+                        "display": "Aching pain (finding)"
+                    },
+                    {
+                        "code": "277285005",
+                        "display": "Thalamic pain (finding)"
+                    },
+                    {
+                        "code": "277286006",
+                        "display": "Central post-stroke pain (finding)"
+                    },
+                    {
+                        "code": "277352000",
+                        "display": "Suxamethonium pains (finding)"
+                    },
+                    {
+                        "code": "278860009",
+                        "display": "Chronic low back pain (finding)"
+                    },
+                    {
+                        "code": "278862001",
+                        "display": "Acute low back pain (finding)"
+                    },
+                    {
+                        "code": "279001004",
+                        "display": "Pain finding at anatomical site (finding)"
+                    },
+                    {
+                        "code": "279016001",
+                        "display": "Cervicogenic headache (finding)"
+                    },
+                    {
+                        "code": "279019008",
+                        "display": "Central crushing chest pain (finding)"
+                    },
+                    {
+                        "code": "279020002",
+                        "display": "Pain in male genitalia (finding)"
+                    },
+                    {
+                        "code": "279021003",
+                        "display": "Epididymal pain (finding)"
+                    },
+                    {
+                        "code": "279022005",
+                        "display": "Post-vasectomy pain (finding)"
+                    },
+                    {
+                        "code": "279028009",
+                        "display": "Ovarian pain (finding)"
+                    },
+                    {
+                        "code": "279029001",
+                        "display": "Pain in cervical spine (finding)"
+                    },
+                    {
+                        "code": "279031005",
+                        "display": "Cervical segmental dysfunction (finding)"
+                    },
+                    {
+                        "code": "279032003",
+                        "display": "Chronic pelvic pain without obvious pathology (finding)"
+                    },
+                    {
+                        "code": "279033008",
+                        "display": "Post-abdominoperineal resection pain (finding)"
+                    },
+                    {
+                        "code": "279035001",
+                        "display": "Acute thoracic back pain (finding)"
+                    },
+                    {
+                        "code": "279037009",
+                        "display": "Thoracic segmental dysfunction (finding)"
+                    },
+                    {
+                        "code": "279038004",
+                        "display": "Thoracic back pain (finding)"
+                    },
+                    {
+                        "code": "279039007",
+                        "display": "Low back pain (finding)"
+                    },
+                    {
+                        "code": "279040009",
+                        "display": "Mechanical low back pain (finding)"
+                    },
+                    {
+                        "code": "279042001",
+                        "display": "Lumbar segmental dysfunction (finding)"
+                    },
+                    {
+                        "code": "279043006",
+                        "display": "Pain in buttock (finding)"
+                    },
+                    {
+                        "code": "279044000",
+                        "display": "Total body pain syndrome (finding)"
+                    },
+                    {
+                        "code": "279047007",
+                        "display": "Persistent pain following procedure (finding)"
+                    },
+                    {
+                        "code": "279048002",
+                        "display": "Internal mammary artery syndrome (finding)"
+                    },
+                    {
+                        "code": "279049005",
+                        "display": "Post-surgery back pain (finding)"
+                    },
+                    {
+                        "code": "279050005",
+                        "display": "Post-herniorraphy pain (finding)"
+                    },
+                    {
+                        "code": "279051009",
+                        "display": "Pain following administration of agent (finding)"
+                    },
+                    {
+                        "code": "279052002",
+                        "display": "Sympathetically independent pain (finding)"
+                    },
+                    {
+                        "code": "279053007",
+                        "display": "Sympathetically maintained pain (finding)"
+                    },
+                    {
+                        "code": "279054001",
+                        "display": "Pain when milk coming in (finding)"
+                    },
+                    {
+                        "code": "279055000",
+                        "display": "Obstetric pain (finding)"
+                    },
+                    {
+                        "code": "279056004",
+                        "display": "Pain on penetration (finding)"
+                    },
+                    {
+                        "code": "279058003",
+                        "display": "Neurogenic pain (finding)"
+                    },
+                    {
+                        "code": "279059006",
+                        "display": "Hypoglossal neuralgia (finding)"
+                    },
+                    {
+                        "code": "279062009",
+                        "display": "Myofascial pain (finding)"
+                    },
+                    {
+                        "code": "279063004",
+                        "display": "Lumbar facet joint pain (finding)"
+                    },
+                    {
+                        "code": "279066007",
+                        "display": "Foot joint pain (finding)"
+                    },
+                    {
+                        "code": "279067003",
+                        "display": "Metatarsophalangeal joint pain (finding)"
+                    },
+                    {
+                        "code": "279069000",
+                        "display": "Musculoskeletal pain (finding)"
+                    },
+                    {
+                        "code": "279070004",
+                        "display": "Muscle tension pain (finding)"
+                    },
+                    {
+                        "code": "279071000",
+                        "display": "Urethral meatal pain (finding)"
+                    },
+                    {
+                        "code": "279072007",
+                        "display": "Sore lip (finding)"
+                    },
+                    {
+                        "code": "279073002",
+                        "display": "Sore nostril (finding)"
+                    },
+                    {
+                        "code": "279074008",
+                        "display": "Sore skin (finding)"
+                    },
+                    {
+                        "code": "279085005",
+                        "display": "Acute sensitivity to pain (finding)"
+                    },
+                    {
+                        "code": "279086006",
+                        "display": "Excessive sensitivity to pain (finding)"
+                    },
+                    {
+                        "code": "279093005",
+                        "display": "Cramping pain (finding)"
+                    },
+                    {
+                        "code": "279095003",
+                        "display": "Heavy pain (finding)"
+                    },
+                    {
+                        "code": "279097006",
+                        "display": "Splitting pain (finding)"
+                    },
+                    {
+                        "code": "279098001",
+                        "display": "Crushing pain (finding)"
+                    },
+                    {
+                        "code": "279980002",
+                        "display": "Peripheral neurogenic pain (finding)"
+                    },
+                    {
+                        "code": "279981003",
+                        "display": "Peripheral neuropathic pain (finding)"
+                    },
+                    {
+                        "code": "281245003",
+                        "display": "Musculoskeletal chest pain (finding)"
+                    },
+                    {
+                        "code": "28221000119103",
+                        "display": "Abdominal muscle pain (finding)"
+                    },
+                    {
+                        "code": "282359006",
+                        "display": "Post-vasectomy epididymal pain (finding)"
+                    },
+                    {
+                        "code": "282360001",
+                        "display": "Persistent testicular pain (finding)"
+                    },
+                    {
+                        "code": "282743009",
+                        "display": "Malignant bone pain (finding)"
+                    },
+                    {
+                        "code": "285339000",
+                        "display": "Painful tooth socket (finding)"
+                    },
+                    {
+                        "code": "285365001",
+                        "display": "Pain in toe (finding)"
+                    },
+                    {
+                        "code": "285375003",
+                        "display": "Pain in penis (finding)"
+                    },
+                    {
+                        "code": "285385002",
+                        "display": "Left sided chest pain (finding)"
+                    },
+                    {
+                        "code": "285386001",
+                        "display": "Right sided chest pain (finding)"
+                    },
+                    {
+                        "code": "285387005",
+                        "display": "Left sided abdominal pain (finding)"
+                    },
+                    {
+                        "code": "285388000",
+                        "display": "Right sided abdominal pain (finding)"
+                    },
+                    {
+                        "code": "285389008",
+                        "display": "Upper chest pain (finding)"
+                    },
+                    {
+                        "code": "286992006",
+                        "display": "Non-psychogenic dyspareunia (finding)"
+                    },
+                    {
+                        "code": "287045000",
+                        "display": "Pain in left arm (finding)"
+                    },
+                    {
+                        "code": "287046004",
+                        "display": "Pain in right arm (finding)"
+                    },
+                    {
+                        "code": "287047008",
+                        "display": "Pain in left lower limb (finding)"
+                    },
+                    {
+                        "code": "287048003",
+                        "display": "Pain in right lower limb (finding)"
+                    },
+                    {
+                        "code": "288225004",
+                        "display": "Myalgia/myositis - multiple (finding)"
+                    },
+                    {
+                        "code": "288226003",
+                        "display": "Myalgia/myositis - shoulder (finding)"
+                    },
+                    {
+                        "code": "288227007",
+                        "display": "Myalgia/myositis - upper arm (finding)"
+                    },
+                    {
+                        "code": "288228002",
+                        "display": "Myalgia/myositis - forearm (finding)"
+                    },
+                    {
+                        "code": "288229005",
+                        "display": "Myalgia/myositis - hand (finding)"
+                    },
+                    {
+                        "code": "288230000",
+                        "display": "Myalgia/myositis -pelvis/thigh (finding)"
+                    },
+                    {
+                        "code": "288231001",
+                        "display": "Myalgia/myositis - lower leg (finding)"
+                    },
+                    {
+                        "code": "288232008",
+                        "display": "Myalgia/myositis - ankle/foot (finding)"
+                    },
+                    {
+                        "code": "288241003",
+                        "display": "Pain in limb - multiple (finding)"
+                    },
+                    {
+                        "code": "289669005",
+                        "display": "Pain of uterus (finding)"
+                    },
+                    {
+                        "code": "289670006",
+                        "display": "Pain on movement of uterus (finding)"
+                    },
+                    {
+                        "code": "289732000",
+                        "display": "Painful uterine contractions (finding)"
+                    },
+                    {
+                        "code": "289817003",
+                        "display": "Pain of cervix (finding)"
+                    },
+                    {
+                        "code": "289818008",
+                        "display": "Pain on movement of cervix (finding)"
+                    },
+                    {
+                        "code": "289845009",
+                        "display": "Pain on movement of ovary (finding)"
+                    },
+                    {
+                        "code": "289900009",
+                        "display": "Period pain present (finding)"
+                    },
+                    {
+                        "code": "292301000119104",
+                        "display": "Neuralgia of right iliohypogastric nerve (finding)"
+                    },
+                    {
+                        "code": "292311000119101",
+                        "display": "Neuralgia of left iliohypogastric nerve (finding)"
+                    },
+                    {
+                        "code": "292481000119104",
+                        "display": "Neuralgia of right pudendal nerve (finding)"
+                    },
+                    {
+                        "code": "292491000119101",
+                        "display": "Neuralgia of left pudendal nerve (finding)"
+                    },
+                    {
+                        "code": "292521000119104",
+                        "display": "Neuralgia of nerve of right lower limb (finding)"
+                    },
+                    {
+                        "code": "292531000119101",
+                        "display": "Neuralgia of nerve of left lower limb (finding)"
+                    },
+                    {
+                        "code": "29330004",
+                        "display": "Salivary colic (finding)"
+                    },
+                    {
+                        "code": "294081000119102",
+                        "display": "Intractable headache caused by drug (finding)"
+                    },
+                    {
+                        "code": "294091000119104",
+                        "display": "Headache caused by drug (finding)"
+                    },
+                    {
+                        "code": "29695002",
+                        "display": "Throbbing pain (finding)"
+                    },
+                    {
+                        "code": "297128006",
+                        "display": "Nuchal pain (finding)"
+                    },
+                    {
+                        "code": "297217002",
+                        "display": "Rib pain (finding)"
+                    },
+                    {
+                        "code": "297974009",
+                        "display": "Pain on movement of skin (finding)"
+                    },
+                    {
+                        "code": "298012000",
+                        "display": "Wound pain (finding)"
+                    },
+                    {
+                        "code": "298253002",
+                        "display": "Cervical facet joint pain (finding)"
+                    },
+                    {
+                        "code": "298254008",
+                        "display": "Thoracic facet joint pain (finding)"
+                    },
+                    {
+                        "code": "298255009",
+                        "display": "Pain on joint movement (finding)"
+                    },
+                    {
+                        "code": "298292009",
+                        "display": "Pain on movement of skeletal muscle (finding)"
+                    },
+                    {
+                        "code": "298376001",
+                        "display": "Temporomandibular joint painful on movement (finding)"
+                    },
+                    {
+                        "code": "298478001",
+                        "display": "Pain on movement of cervical spine (finding)"
+                    },
+                    {
+                        "code": "29857009",
+                        "display": "Chest pain (finding)"
+                    },
+                    {
+                        "code": "298579007",
+                        "display": "Pain on movement of thoracic spine (finding)"
+                    },
+                    {
+                        "code": "298674008",
+                        "display": "Pain on movement of lumbar spine (finding)"
+                    },
+                    {
+                        "code": "298731003",
+                        "display": "Pain of sternum (finding)"
+                    },
+                    {
+                        "code": "298857005",
+                        "display": "Shoulder joint painful on movement (finding)"
+                    },
+                    {
+                        "code": "298858000",
+                        "display": "Shoulder joint - painful arc (finding)"
+                    },
+                    {
+                        "code": "298929004",
+                        "display": "Elbow joint - painful on movement (finding)"
+                    },
+                    {
+                        "code": "299018007",
+                        "display": "Wrist joint painful on movement (finding)"
+                    },
+                    {
+                        "code": "299112005",
+                        "display": "Finger joint painful on movement (finding)"
+                    },
+                    {
+                        "code": "299199000",
+                        "display": "Thumb joint painful on movement (finding)"
+                    },
+                    {
+                        "code": "29930001000004103",
+                        "display": "Intractable low back pain (finding)"
+                    },
+                    {
+                        "code": "299308007",
+                        "display": "Hip joint painful on movement (finding)"
+                    },
+                    {
+                        "code": "299377003",
+                        "display": "Knee joint painful on movement (finding)"
+                    },
+                    {
+                        "code": "299447008",
+                        "display": "Ankle joint - painful on movement (finding)"
+                    },
+                    {
+                        "code": "299513007",
+                        "display": "Foot joint - painful on movement (finding)"
+                    },
+                    {
+                        "code": "299554004",
+                        "display": "Subtalar joint painful on movement (finding)"
+                    },
+                    {
+                        "code": "299633000",
+                        "display": "Toe joint painful on movement (finding)"
+                    },
+                    {
+                        "code": "300107003",
+                        "display": "Pain on movement of pinna (finding)"
+                    },
+                    {
+                        "code": "300953009",
+                        "display": "Pain in axilla (finding)"
+                    },
+                    {
+                        "code": "300954003",
+                        "display": "Pain in calf (finding)"
+                    },
+                    {
+                        "code": "300955002",
+                        "display": "Pain in thumb (finding)"
+                    },
+                    {
+                        "code": "300957005",
+                        "display": "Postural low back pain (finding)"
+                    },
+                    {
+                        "code": "301354004",
+                        "display": "Pain of ear (finding)"
+                    },
+                    {
+                        "code": "301355003",
+                        "display": "Pain of respiratory structure (finding)"
+                    },
+                    {
+                        "code": "301356002",
+                        "display": "Maxillary sinus pain (finding)"
+                    },
+                    {
+                        "code": "301357006",
+                        "display": "Frontal sinus pain (finding)"
+                    },
+                    {
+                        "code": "301358001",
+                        "display": "Pain of cardiovascular structure (finding)"
+                    },
+                    {
+                        "code": "301359009",
+                        "display": "Pain of lymphoreticular structure (finding)"
+                    },
+                    {
+                        "code": "301360004",
+                        "display": "Pain of lymph node (finding)"
+                    },
+                    {
+                        "code": "301361000",
+                        "display": "Pain of oral cavity structure (finding)"
+                    },
+                    {
+                        "code": "301362007",
+                        "display": "Pain of digestive structure (finding)"
+                    },
+                    {
+                        "code": "301363002",
+                        "display": "Pain of endocrine structure (finding)"
+                    },
+                    {
+                        "code": "301364008",
+                        "display": "Pain of skin (finding)"
+                    },
+                    {
+                        "code": "301365009",
+                        "display": "Pain of head and neck region (finding)"
+                    },
+                    {
+                        "code": "301366005",
+                        "display": "Pain of truncal structure (finding)"
+                    },
+                    {
+                        "code": "301367001",
+                        "display": "Right hypochondrial pain (finding)"
+                    },
+                    {
+                        "code": "301368006",
+                        "display": "Left hypochondrial pain (finding)"
+                    },
+                    {
+                        "code": "301370002",
+                        "display": "Finding of sensory dimension of pain (finding)"
+                    },
+                    {
+                        "code": "301371003",
+                        "display": "Gnawing pain (finding)"
+                    },
+                    {
+                        "code": "301372005",
+                        "display": "Finding of affective dimension of pain (finding)"
+                    },
+                    {
+                        "code": "301373000",
+                        "display": "Tiring with pain (finding)"
+                    },
+                    {
+                        "code": "301375007",
+                        "display": "Sickening with pain (finding)"
+                    },
+                    {
+                        "code": "301376008",
+                        "display": "Fearful with pain (finding)"
+                    },
+                    {
+                        "code": "301377004",
+                        "display": "Punishing with pain (finding)"
+                    },
+                    {
+                        "code": "301378009",
+                        "display": "Finding of present pain intensity (finding)"
+                    },
+                    {
+                        "code": "301379001",
+                        "display": "No present pain (finding)"
+                    },
+                    {
+                        "code": "301380003",
+                        "display": "Mild present pain (finding)"
+                    },
+                    {
+                        "code": "301382006",
+                        "display": "Distressing present pain (finding)"
+                    },
+                    {
+                        "code": "301383001",
+                        "display": "Horrible present pain (finding)"
+                    },
+                    {
+                        "code": "301384007",
+                        "display": "Excruciating present pain (finding)"
+                    },
+                    {
+                        "code": "301715003",
+                        "display": "Left upper quadrant pain (finding)"
+                    },
+                    {
+                        "code": "301716002",
+                        "display": "Left lower quadrant pain (finding)"
+                    },
+                    {
+                        "code": "301717006",
+                        "display": "Right upper quadrant pain (finding)"
+                    },
+                    {
+                        "code": "301754002",
+                        "display": "Right lower quadrant pain (finding)"
+                    },
+                    {
+                        "code": "301773003",
+                        "display": "Pain in femur (finding)"
+                    },
+                    {
+                        "code": "302017001",
+                        "display": "Sore eye (finding)"
+                    },
+                    {
+                        "code": "302072004",
+                        "display": "Pain in thyroid (finding)"
+                    },
+                    {
+                        "code": "30233002",
+                        "display": "Swallowing painful (finding)"
+                    },
+                    {
+                        "code": "302770003",
+                        "display": "Tenesmus - anal (finding)"
+                    },
+                    {
+                        "code": "303081002",
+                        "display": "Neurogenic claudication (finding)"
+                    },
+                    {
+                        "code": "304542004",
+                        "display": "Nonspecific abdominal pain (finding)"
+                    },
+                    {
+                        "code": "30473006",
+                        "display": "Pain in pelvis (finding)"
+                    },
+                    {
+                        "code": "3061000119102",
+                        "display": "Chronic nonmalignant pain (finding)"
+                    },
+                    {
+                        "code": "30623001",
+                        "display": "Catch (finding)"
+                    },
+                    {
+                        "code": "307225003",
+                        "display": "Perianal pain (finding)"
+                    },
+                    {
+                        "code": "309737007",
+                        "display": "Abdominal pain in pregnancy (finding)"
+                    },
+                    {
+                        "code": "313344000",
+                        "display": "Vulval superficial dyspareunia (finding)"
+                    },
+                    {
+                        "code": "313387002",
+                        "display": "Phonophobia (finding)"
+                    },
+                    {
+                        "code": "313561000119106",
+                        "display": "Metatarsalgia of left foot (finding)"
+                    },
+                    {
+                        "code": "313571000119100",
+                        "display": "Metatarsalgia of right foot (finding)"
+                    },
+                    {
+                        "code": "314041007",
+                        "display": "Abdominal pain in early pregnancy (finding)"
+                    },
+                    {
+                        "code": "314212008",
+                        "display": "Abdominal pain - cause unknown (finding)"
+                    },
+                    {
+                        "code": "314642004",
+                        "display": "Intermittent pain (finding)"
+                    },
+                    {
+                        "code": "314716005",
+                        "display": "Acute pelvic pain (finding)"
+                    },
+                    {
+                        "code": "31490007",
+                        "display": "Nasociliary neuralgia (finding)"
+                    },
+                    {
+                        "code": "315226008",
+                        "display": "Pain in lymph nodes after alcohol consumption (finding)"
+                    },
+                    {
+                        "code": "315241008",
+                        "display": "Pain from metastases (finding)"
+                    },
+                    {
+                        "code": "315248002",
+                        "display": "Intractable breast pain (finding)"
+                    },
+                    {
+                        "code": "315250005",
+                        "display": "Persistent mastalgia (finding)"
+                    },
+                    {
+                        "code": "316741000119105",
+                        "display": "Pain in finger of left hand (finding)"
+                    },
+                    {
+                        "code": "316751000119107",
+                        "display": "Pain in left foot (finding)"
+                    },
+                    {
+                        "code": "316761000119109",
+                        "display": "Pain of left forearm (finding)"
+                    },
+                    {
+                        "code": "316771000119103",
+                        "display": "Pain of left hand (finding)"
+                    },
+                    {
+                        "code": "316781000119100",
+                        "display": "Pain of left hip joint (finding)"
+                    },
+                    {
+                        "code": "316801000119101",
+                        "display": "Pain of left lower leg (finding)"
+                    },
+                    {
+                        "code": "316821000119105",
+                        "display": "Pain of left thigh (finding)"
+                    },
+                    {
+                        "code": "316831000119108",
+                        "display": "Pain of toe of left foot (finding)"
+                    },
+                    {
+                        "code": "316841000119104",
+                        "display": "Pain of left upper arm (finding)"
+                    },
+                    {
+                        "code": "316851000119102",
+                        "display": "Pain of left wrist (finding)"
+                    },
+                    {
+                        "code": "316881000119109",
+                        "display": "Pain in finger of right hand (finding)"
+                    },
+                    {
+                        "code": "316891000119107",
+                        "display": "Pain in right foot (finding)"
+                    },
+                    {
+                        "code": "316911000119109",
+                        "display": "Pain in right hand (finding)"
+                    },
+                    {
+                        "code": "316921000119102",
+                        "display": "Pain in right hip joint (finding)"
+                    },
+                    {
+                        "code": "316941000119108",
+                        "display": "Pain of right lower leg (finding)"
+                    },
+                    {
+                        "code": "316961000119107",
+                        "display": "Pain of right thigh (finding)"
+                    },
+                    {
+                        "code": "316971000119101",
+                        "display": "Pain of toe of right foot (finding)"
+                    },
+                    {
+                        "code": "316981000119103",
+                        "display": "Pain of right upper arm (finding)"
+                    },
+                    {
+                        "code": "316991000119100",
+                        "display": "Pain of right wrist (finding)"
+                    },
+                    {
+                        "code": "3200003",
+                        "display": "Sacrocoxalgia (finding)"
+                    },
+                    {
+                        "code": "320281000119104",
+                        "display": "Neuraligia of left sciatic nerve (finding)"
+                    },
+                    {
+                        "code": "320291000119101",
+                        "display": "Neuraligia of right sciatic nerve (finding)"
+                    },
+                    {
+                        "code": "330007",
+                        "display": "Occipital headache (finding)"
+                    },
+                    {
+                        "code": "333601000119102",
+                        "display": "Pain of right eye (finding)"
+                    },
+                    {
+                        "code": "3368006",
+                        "display": "Dull chest pain (finding)"
+                    },
+                    {
+                        "code": "339211000119104",
+                        "display": "Pain of left eye (finding)"
+                    },
+                    {
+                        "code": "344961000119109",
+                        "display": "Pain of bilateral eyes (finding)"
+                    },
+                    {
+                        "code": "34789001",
+                        "display": "Pain in coccyx (finding)"
+                    },
+                    {
+                        "code": "34791000119103",
+                        "display": "Chest pain due to pericarditis (finding)"
+                    },
+                    {
+                        "code": "35363006",
+                        "display": "Infantile colic (finding)"
+                    },
+                    {
+                        "code": "35496009",
+                        "display": "Femoral neuralgia (finding)"
+                    },
+                    {
+                        "code": "35635000",
+                        "display": "Cervicobrachial neuralgia (finding)"
+                    },
+                    {
+                        "code": "35678005",
+                        "display": "Multiple joint pain (finding)"
+                    },
+                    {
+                        "code": "36031001",
+                        "display": "Burning feet (finding)"
+                    },
+                    {
+                        "code": "36163009",
+                        "display": "Night pain (finding)"
+                    },
+                    {
+                        "code": "36349006",
+                        "display": "Burning pain (finding)"
+                    },
+                    {
+                        "code": "364760007",
+                        "display": "Finding of headache character (finding)"
+                    },
+                    {
+                        "code": "364764003",
+                        "display": "Finding of pain threshold (finding)"
+                    },
+                    {
+                        "code": "36630001",
+                        "display": "Deep pain (finding)"
+                    },
+                    {
+                        "code": "36729000",
+                        "display": "Pain of prostate (finding)"
+                    },
+                    {
+                        "code": "36859004",
+                        "display": "Esophageal chest pain (finding)"
+                    },
+                    {
+                        "code": "371030007",
+                        "display": "Squeezing chest pain (finding)"
+                    },
+                    {
+                        "code": "371094000",
+                        "display": "Colicky hypogastric pain (finding)"
+                    },
+                    {
+                        "code": "371102005",
+                        "display": "Generalized colicky abdominal pain (finding)"
+                    },
+                    {
+                        "code": "37226004",
+                        "display": "Pain co-occurrent with tenderness (finding)"
+                    },
+                    {
+                        "code": "37259001",
+                        "display": "Ocular crisis (finding)"
+                    },
+                    {
+                        "code": "37389005",
+                        "display": "Biliary colic (finding)"
+                    },
+                    {
+                        "code": "37488003",
+                        "display": "Vulvovaginal pain (finding)"
+                    },
+                    {
+                        "code": "38343000",
+                        "display": "Vaginal pain (finding)"
+                    },
+                    {
+                        "code": "38433004",
+                        "display": "No sensitivity to pain (finding)"
+                    },
+                    {
+                        "code": "38654001",
+                        "display": "Recurrent biliary colic (finding)"
+                    },
+                    {
+                        "code": "387638003",
+                        "display": "Painful swelling of joint (finding)"
+                    },
+                    {
+                        "code": "38823002",
+                        "display": "Aural headache (finding)"
+                    },
+                    {
+                        "code": "39565009",
+                        "display": "Pain crisis (finding)"
+                    },
+                    {
+                        "code": "395688005",
+                        "display": "Benign coital headache (finding)"
+                    },
+                    {
+                        "code": "397618002",
+                        "display": "Demonstrates adequate pain control throughout the perioperative period (finding)"
+                    },
+                    {
+                        "code": "397774002",
+                        "display": "Pain during labor and delivery (finding)"
+                    },
+                    {
+                        "code": "398058003",
+                        "display": "Pain during regional anesthesia for cesarean section (finding)"
+                    },
+                    {
+                        "code": "40196000",
+                        "display": "Mild pain (finding)"
+                    },
+                    {
+                        "code": "403596007",
+                        "display": "Cutaneous hyperalgesia (finding)"
+                    },
+                    {
+                        "code": "403599000",
+                        "display": "Stinging of skin (finding)"
+                    },
+                    {
+                        "code": "4063001",
+                        "display": "Achillodynia (finding)"
+                    },
+                    {
+                        "code": "408949005",
+                        "display": "Finding related to pain control behavior (finding)"
+                    },
+                    {
+                        "code": "409668002",
+                        "display": "Photophobia (finding)"
+                    },
+                    {
+                        "code": "410720000",
+                        "display": "Pain by sensation quality (finding)"
+                    },
+                    {
+                        "code": "41226008",
+                        "display": "Exquisite pain (finding)"
+                    },
+                    {
+                        "code": "41413006",
+                        "display": "Temporal headache (finding)"
+                    },
+                    {
+                        "code": "414991007",
+                        "display": "Painful rectal bleeding (finding)"
+                    },
+                    {
+                        "code": "4151000119102",
+                        "display": "Facial neuralgia (finding)"
+                    },
+                    {
+                        "code": "41624003",
+                        "display": "Segmental dysfunction (finding)"
+                    },
+                    {
+                        "code": "41652007",
+                        "display": "Pain in eye (finding)"
+                    },
+                    {
+                        "code": "416562001",
+                        "display": "Axis pressure pain (finding)"
+                    },
+                    {
+                        "code": "417021005",
+                        "display": "Sclerotomal pain (finding)"
+                    },
+                    {
+                        "code": "418237007",
+                        "display": "Pain in hallux (finding)"
+                    },
+                    {
+                        "code": "421833007",
+                        "display": "Finding of pain sense (finding)"
+                    },
+                    {
+                        "code": "423893004",
+                        "display": "Pain following sexual intercourse (finding)"
+                    },
+                    {
+                        "code": "424482002",
+                        "display": "Demonstrates adequate pain control without oral analgesics (finding)"
+                    },
+                    {
+                        "code": "424620000",
+                        "display": "Demonstrates adequate pain control with oral analgesics (finding)"
+                    },
+                    {
+                        "code": "424806009",
+                        "display": "Stated pain intensity within acceptable range (finding)"
+                    },
+                    {
+                        "code": "425423002",
+                        "display": "Pain provoked by movement (finding)"
+                    },
+                    {
+                        "code": "425473004",
+                        "display": "Pain radiating to left shoulder (finding)"
+                    },
+                    {
+                        "code": "42561004",
+                        "display": "Reminiscent neuralgia (finding)"
+                    },
+                    {
+                        "code": "425677008",
+                        "display": "Pain radiating to left arm (finding)"
+                    },
+                    {
+                        "code": "425746004",
+                        "display": "Pain provoked by light (finding)"
+                    },
+                    {
+                        "code": "425781002",
+                        "display": "Pain provoked by running (finding)"
+                    },
+                    {
+                        "code": "425831002",
+                        "display": "Pain characterized by relieving factor (finding)"
+                    },
+                    {
+                        "code": "425834005",
+                        "display": "Pain radiating to right flank (finding)"
+                    },
+                    {
+                        "code": "425839000",
+                        "display": "Pain radiating to head (finding)"
+                    },
+                    {
+                        "code": "425860006",
+                        "display": "Pain radiating to lower abdomen (finding)"
+                    },
+                    {
+                        "code": "425908001",
+                        "display": "Pain radiating to thoracic region right side (finding)"
+                    },
+                    {
+                        "code": "425991004",
+                        "display": "Cervicothoracic segmental dysfunction (finding)"
+                    },
+                    {
+                        "code": "426068005",
+                        "display": "Pain provoked by altercation (finding)"
+                    },
+                    {
+                        "code": "426120002",
+                        "display": "Pain provoked by rest (finding)"
+                    },
+                    {
+                        "code": "426142001",
+                        "display": "Pain radiating to right shoulder (finding)"
+                    },
+                    {
+                        "code": "426206001",
+                        "display": "Constant pain (finding)"
+                    },
+                    {
+                        "code": "426277009",
+                        "display": "Pain provoked by eating (finding)"
+                    },
+                    {
+                        "code": "426351003",
+                        "display": "Pain provoked by lifting (finding)"
+                    },
+                    {
+                        "code": "426396005",
+                        "display": "Cardiac chest pain (finding)"
+                    },
+                    {
+                        "code": "426466001",
+                        "display": "Pain radiating to left flank (finding)"
+                    },
+                    {
+                        "code": "426469008",
+                        "display": "Pain radiating to left leg (finding)"
+                    },
+                    {
+                        "code": "426483005",
+                        "display": "Pain radiating to thoracic region left side (finding)"
+                    },
+                    {
+                        "code": "426555006",
+                        "display": "Pain radiating to jaw (finding)"
+                    },
+                    {
+                        "code": "426628005",
+                        "display": "Chronic vaginal pain (finding)"
+                    },
+                    {
+                        "code": "426702003",
+                        "display": "Pain in female pelvis (finding)"
+                    },
+                    {
+                        "code": "426774001",
+                        "display": "Pain characterized by provoking factor (finding)"
+                    },
+                    {
+                        "code": "426803004",
+                        "display": "Pain radiating to right arm (finding)"
+                    },
+                    {
+                        "code": "426899007",
+                        "display": "Pain provoked by walking (finding)"
+                    },
+                    {
+                        "code": "426976009",
+                        "display": "Pain provoked by breathing (finding)"
+                    },
+                    {
+                        "code": "427075000",
+                        "display": "Pain radiating to upper abdomen (finding)"
+                    },
+                    {
+                        "code": "427128002",
+                        "display": "Gradual onset of pain (finding)"
+                    },
+                    {
+                        "code": "427146008",
+                        "display": "Pain provoked by coughing (finding)"
+                    },
+                    {
+                        "code": "427168003",
+                        "display": "Pain provoked by allergen (finding)"
+                    },
+                    {
+                        "code": "427252003",
+                        "display": "Pain radiating to right side of chest (finding)"
+                    },
+                    {
+                        "code": "427293006",
+                        "display": "Pain radiating to left side of chest (finding)"
+                    },
+                    {
+                        "code": "427304006",
+                        "display": "Finding of response to pain (finding)"
+                    },
+                    {
+                        "code": "427310006",
+                        "display": "Pain radiating to neck (finding)"
+                    },
+                    {
+                        "code": "427341007",
+                        "display": "Pain provoked by exertion (finding)"
+                    },
+                    {
+                        "code": "427365005",
+                        "display": "Pain radiating to center of chest (finding)"
+                    },
+                    {
+                        "code": "427475007",
+                        "display": "Pain radiating to lumbar region of back (finding)"
+                    },
+                    {
+                        "code": "427596002",
+                        "display": "Pain provoked by temperature (finding)"
+                    },
+                    {
+                        "code": "427653003",
+                        "display": "Pain radiating to right leg (finding)"
+                    },
+                    {
+                        "code": "427668002",
+                        "display": "Pain radiating to middle abdomen (finding)"
+                    },
+                    {
+                        "code": "427935006",
+                        "display": "Pain relief by rest (finding)"
+                    },
+                    {
+                        "code": "427972000",
+                        "display": "Pudendal neuralgia (finding)"
+                    },
+                    {
+                        "code": "428264009",
+                        "display": "Painful gait (finding)"
+                    },
+                    {
+                        "code": "428346000",
+                        "display": "Pain relief by medication (finding)"
+                    },
+                    {
+                        "code": "428432004",
+                        "display": "Spontaneous pain (finding)"
+                    },
+                    {
+                        "code": "428557006",
+                        "display": "Squeezing pain (finding)"
+                    },
+                    {
+                        "code": "428643002",
+                        "display": "Pain relief by supine position (finding)"
+                    },
+                    {
+                        "code": "428911004",
+                        "display": "Pain relief by walking (finding)"
+                    },
+                    {
+                        "code": "428926002",
+                        "display": "Pain onset at rest (finding)"
+                    },
+                    {
+                        "code": "429038000",
+                        "display": "Pain onset during sleep (finding)"
+                    },
+                    {
+                        "code": "429147006",
+                        "display": "Pain relief related to position (finding)"
+                    },
+                    {
+                        "code": "429492007",
+                        "display": "Pain relief by sitting up (finding)"
+                    },
+                    {
+                        "code": "429531000",
+                        "display": "Pain on passive stretch of joint (finding)"
+                    },
+                    {
+                        "code": "429629001",
+                        "display": "Pain relief by antacid (finding)"
+                    },
+                    {
+                        "code": "429742007",
+                        "display": "Pain onset during moderate exercise (finding)"
+                    },
+                    {
+                        "code": "430879002",
+                        "display": "Posterior auricular pain (finding)"
+                    },
+                    {
+                        "code": "430968008",
+                        "display": "Pain in male perineum (finding)"
+                    },
+                    {
+                        "code": "431481001",
+                        "display": "Chronic pain due to injury (finding)"
+                    },
+                    {
+                        "code": "431521000",
+                        "display": "Acute pain due to injury (finding)"
+                    },
+                    {
+                        "code": "43231004",
+                        "display": "Esophageal colic (finding)"
+                    },
+                    {
+                        "code": "43242008",
+                        "display": "Drug withdrawal headache (finding)"
+                    },
+                    {
+                        "code": "432615008",
+                        "display": "Chronic pain in face (finding)"
+                    },
+                    {
+                        "code": "433017009",
+                        "display": "Pain in symphysis pubis in pregnancy (finding)"
+                    },
+                    {
+                        "code": "433159008",
+                        "display": "Acute pain in female pelvis (finding)"
+                    },
+                    {
+                        "code": "434011000124101",
+                        "display": "Chronic chest pain (finding)"
+                    },
+                    {
+                        "code": "43548008",
+                        "display": "Mittelschmerz (finding)"
+                    },
+                    {
+                        "code": "43763009",
+                        "display": "Glossopharyngeal neuralgia (finding)"
+                    },
+                    {
+                        "code": "438506002",
+                        "display": "Visceral abdominal pain (finding)"
+                    },
+                    {
+                        "code": "43922008",
+                        "display": "Jaw claudication (finding)"
+                    },
+                    {
+                        "code": "439469002",
+                        "display": "Recurrent abdominal pain (finding)"
+                    },
+                    {
+                        "code": "443503005",
+                        "display": "Periumbilical pain (finding)"
+                    },
+                    {
+                        "code": "444227004",
+                        "display": "Acute postthoracotomy pain syndrome (finding)"
+                    },
+                    {
+                        "code": "444746004",
+                        "display": "Acute exacerbation of chronic abdominal pain (finding)"
+                    },
+                    {
+                        "code": "444851000124109",
+                        "display": "Very mild pain (finding)"
+                    },
+                    {
+                        "code": "444899003",
+                        "display": "Pain in forearm (finding)"
+                    },
+                    {
+                        "code": "44538002",
+                        "display": "Nasal headache (finding)"
+                    },
+                    {
+                        "code": "445491000124104",
+                        "display": "Postural headache (finding)"
+                    },
+                    {
+                        "code": "445511002",
+                        "display": "Orthostatic headache (finding)"
+                    },
+                    {
+                        "code": "449313005",
+                        "display": "Referred pain in face (finding)"
+                    },
+                    {
+                        "code": "449884001",
+                        "display": "Painful scar (finding)"
+                    },
+                    {
+                        "code": "450847001",
+                        "display": "Responds to pain (finding)"
+                    },
+                    {
+                        "code": "45326000",
+                        "display": "Shoulder pain (finding)"
+                    },
+                    {
+                        "code": "4568003",
+                        "display": "Retrosternal pain (finding)"
+                    },
+                    {
+                        "code": "45979003",
+                        "display": "Abdominal wind pain (finding)"
+                    },
+                    {
+                        "code": "466841000124105",
+                        "display": "Headache after cough (finding)"
+                    },
+                    {
+                        "code": "468231000124100",
+                        "display": "Pain of right knee joint (finding)"
+                    },
+                    {
+                        "code": "468241000124105",
+                        "display": "Pain of right knee region (finding)"
+                    },
+                    {
+                        "code": "468251000124107",
+                        "display": "Pain of left knee joint (finding)"
+                    },
+                    {
+                        "code": "468261000124109",
+                        "display": "Pain of left knee region (finding)"
+                    },
+                    {
+                        "code": "468271000124102",
+                        "display": "Pain of bilateral knee regions (finding)"
+                    },
+                    {
+                        "code": "468281000124104",
+                        "display": "Pain of bilateral knee joints (finding)"
+                    },
+                    {
+                        "code": "473008002",
+                        "display": "Pain in cheek (finding)"
+                    },
+                    {
+                        "code": "473009005",
+                        "display": "Pain in palate (finding)"
+                    },
+                    {
+                        "code": "473434003",
+                        "display": "Pain in chin (finding)"
+                    },
+                    {
+                        "code": "47933007",
+                        "display": "Foot pain (finding)"
+                    },
+                    {
+                        "code": "48429009",
+                        "display": "Somatic pain (finding)"
+                    },
+                    {
+                        "code": "48926009",
+                        "display": "Pain in spine (finding)"
+                    },
+                    {
+                        "code": "49218002",
+                        "display": "Hip pain (finding)"
+                    },
+                    {
+                        "code": "49575005",
+                        "display": "Shooting pain (finding)"
+                    },
+                    {
+                        "code": "49650001",
+                        "display": "Dysuria (finding)"
+                    },
+                    {
+                        "code": "4969004",
+                        "display": "Sinus headache (finding)"
+                    },
+                    {
+                        "code": "49986002",
+                        "display": "Central pain (finding)"
+                    },
+                    {
+                        "code": "50415004",
+                        "display": "Moderate pain (finding)"
+                    },
+                    {
+                        "code": "50745000",
+                        "display": "Hemianalgesia (finding)"
+                    },
+                    {
+                        "code": "50818007",
+                        "display": "Painful ejaculation (finding)"
+                    },
+                    {
+                        "code": "51741000119105",
+                        "display": "Acute ankle pain (finding)"
+                    },
+                    {
+                        "code": "51881000119109",
+                        "display": "Chronic ankle pain (finding)"
+                    },
+                    {
+                        "code": "53057004",
+                        "display": "Hand pain (finding)"
+                    },
+                    {
+                        "code": "53430007",
+                        "display": "Pain of breast (finding)"
+                    },
+                    {
+                        "code": "54012000",
+                        "display": "Posttraumatic headache (finding)"
+                    },
+                    {
+                        "code": "54586004",
+                        "display": "Lower abdominal pain (finding)"
+                    },
+                    {
+                        "code": "54981004",
+                        "display": "Charleyhorse (finding)"
+                    },
+                    {
+                        "code": "55145008",
+                        "display": "Stabbing pain (finding)"
+                    },
+                    {
+                        "code": "55406008",
+                        "display": "Hyperalgesia (finding)"
+                    },
+                    {
+                        "code": "56608008",
+                        "display": "Pain in wrist (finding)"
+                    },
+                    {
+                        "code": "57676002",
+                        "display": "Joint pain (finding)"
+                    },
+                    {
+                        "code": "58250006",
+                        "display": "Scalding pain on urination (finding)"
+                    },
+                    {
+                        "code": "59139008",
+                        "display": "Crushing chest pain (finding)"
+                    },
+                    {
+                        "code": "60043000",
+                        "display": "Midabdominal crampy pain (finding)"
+                    },
+                    {
+                        "code": "610921000124106",
+                        "display": "Pain of erector spinae muscle (finding)"
+                    },
+                    {
+                        "code": "61486003",
+                        "display": "Sacral back pain (finding)"
+                    },
+                    {
+                        "code": "62171003",
+                        "display": "Plantar heel pain (finding)"
+                    },
+                    {
+                        "code": "631000119102",
+                        "display": "Chronic back pain greater than three months duration (finding)"
+                    },
+                    {
+                        "code": "63491006",
+                        "display": "Intermittent claudication (finding)"
+                    },
+                    {
+                        "code": "63901009",
+                        "display": "Pain in testicle (finding)"
+                    },
+                    {
+                        "code": "6548007",
+                        "display": "Rectal tenesmus (finding)"
+                    },
+                    {
+                        "code": "6561007",
+                        "display": "Pain in urethra (finding)"
+                    },
+                    {
+                        "code": "65761003",
+                        "display": "Inflammatory pain (finding)"
+                    },
+                    {
+                        "code": "6617009",
+                        "display": "Referred pain (finding)"
+                    },
+                    {
+                        "code": "674051000119103",
+                        "display": "Chronic neck pain for greater than 3 months (finding)"
+                    },
+                    {
+                        "code": "6744007",
+                        "display": "Painful bladder spasm (finding)"
+                    },
+                    {
+                        "code": "67849003",
+                        "display": "Excruciating pain (finding)"
+                    },
+                    {
+                        "code": "68653001",
+                        "display": "Anal pain (finding)"
+                    },
+                    {
+                        "code": "68962001",
+                        "display": "Muscle pain (finding)"
+                    },
+                    {
+                        "code": "690691000119101",
+                        "display": "Acute pain following mastectomy (finding)"
+                    },
+                    {
+                        "code": "698006004",
+                        "display": "Pulpalgia (finding)"
+                    },
+                    {
+                        "code": "698749006",
+                        "display": "Pain on flushing of implanted venous access device (finding)"
+                    },
+                    {
+                        "code": "698803006",
+                        "display": "Medication overuse headache (finding)"
+                    },
+                    {
+                        "code": "699046000",
+                        "display": "Craniofacial pain (finding)"
+                    },
+                    {
+                        "code": "699682009",
+                        "display": "Localized masticatory muscle soreness (finding)"
+                    },
+                    {
+                        "code": "702549002",
+                        "display": "Centrally mediated myalgia (finding)"
+                    },
+                    {
+                        "code": "703182002",
+                        "display": "Headache due to reversible cerebral vasoconstriction syndrome (finding)"
+                    },
+                    {
+                        "code": "704675005",
+                        "display": "Inadequate pain control (finding)"
+                    },
+                    {
+                        "code": "704677002",
+                        "display": "Tarsalgia (finding)"
+                    },
+                    {
+                        "code": "706883004",
+                        "display": "Pain due to varicose veins of lower extremity (finding)"
+                    },
+                    {
+                        "code": "706955002",
+                        "display": "Pain relieved by analgesic (finding)"
+                    },
+                    {
+                        "code": "707597009",
+                        "display": "Continuous abdominal pain of left lower quadrant (finding)"
+                    },
+                    {
+                        "code": "707809009",
+                        "display": "Pain provoked by trauma (finding)"
+                    },
+                    {
+                        "code": "708020008",
+                        "display": "Pain in lower limb on elevation (finding)"
+                    },
+                    {
+                        "code": "709141005",
+                        "display": "Neck pain due to malignant neoplastic disease (finding)"
+                    },
+                    {
+                        "code": "7093002",
+                        "display": "Renal colic (finding)"
+                    },
+                    {
+                        "code": "712752004",
+                        "display": "Myalgia of pelvic floor (finding)"
+                    },
+                    {
+                        "code": "712826000",
+                        "display": "Intermittent headache (finding)"
+                    },
+                    {
+                        "code": "712831003",
+                        "display": "Frequent headache (finding)"
+                    },
+                    {
+                        "code": "71303008",
+                        "display": "Atypical facial pain (finding)"
+                    },
+                    {
+                        "code": "71315007",
+                        "display": "Dyspareunia (finding)"
+                    },
+                    {
+                        "code": "713410003",
+                        "display": "Pain following cerebrovascular accident (finding)"
+                    },
+                    {
+                        "code": "713413001",
+                        "display": "Joint pain of pelvic region (finding)"
+                    },
+                    {
+                        "code": "713674006",
+                        "display": "Ischemic foot pain when walking (finding)"
+                    },
+                    {
+                        "code": "713889004",
+                        "display": "Atypical odontalgia (finding)"
+                    },
+                    {
+                        "code": "71393004",
+                        "display": "Soreness (finding)"
+                    },
+                    {
+                        "code": "717253001",
+                        "display": "Drilling quality pain (finding)"
+                    },
+                    {
+                        "code": "71760005",
+                        "display": "Cervico-occipital neuralgia (finding)"
+                    },
+                    {
+                        "code": "717717002",
+                        "display": "Non-cyclic pelvic pain (finding)"
+                    },
+                    {
+                        "code": "71850005",
+                        "display": "Abdominal pain worse on motion (finding)"
+                    },
+                    {
+                        "code": "71884009",
+                        "display": "Precordial pain (finding)"
+                    },
+                    {
+                        "code": "721156008",
+                        "display": "Cyclic pelvic pain (finding)"
+                    },
+                    {
+                        "code": "722829006",
+                        "display": "Acute pain of scrotum (finding)"
+                    },
+                    {
+                        "code": "722983008",
+                        "display": "Headache due to injury of head and neck (finding)"
+                    },
+                    {
+                        "code": "723070002",
+                        "display": "Variation of pain (finding)"
+                    },
+                    {
+                        "code": "723300005",
+                        "display": "Freezing pain (finding)"
+                    },
+                    {
+                        "code": "723316007",
+                        "display": "Electric shock type pain (finding)"
+                    },
+                    {
+                        "code": "72771000119107",
+                        "display": "Postpartum episiotomy pain (finding)"
+                    },
+                    {
+                        "code": "73063007",
+                        "display": "Colicky pain (finding)"
+                    },
+                    {
+                        "code": "733826000",
+                        "display": "Pain due to fracture (finding)"
+                    },
+                    {
+                        "code": "735644008",
+                        "display": "Chronic nociceptive pain (finding)"
+                    },
+                    {
+                        "code": "735935009",
+                        "display": "Chronic pain due to malignant neoplastic disease (finding)"
+                    },
+                    {
+                        "code": "735936005",
+                        "display": "Chronic neuropathic pain (finding)"
+                    },
+                    {
+                        "code": "735937001",
+                        "display": "Acute pain in face (finding)"
+                    },
+                    {
+                        "code": "735938006",
+                        "display": "Acute headache (finding)"
+                    },
+                    {
+                        "code": "735940001",
+                        "display": "Pain of intercostal space (finding)"
+                    },
+                    {
+                        "code": "73645008",
+                        "display": "Visceral pain (finding)"
+                    },
+                    {
+                        "code": "738068003",
+                        "display": "Pain relief by lowering leg (finding)"
+                    },
+                    {
+                        "code": "74123003",
+                        "display": "Otogenic otalgia (finding)"
+                    },
+                    {
+                        "code": "74323005",
+                        "display": "Pain in elbow (finding)"
+                    },
+                    {
+                        "code": "74704000",
+                        "display": "Abdominal pain through to back (finding)"
+                    },
+                    {
+                        "code": "75483001",
+                        "display": "Breathing painful (finding)"
+                    },
+                    {
+                        "code": "76204004",
+                        "display": "Painful clitoral erection (finding)"
+                    },
+                    {
+                        "code": "762239006",
+                        "display": "Myofascial pain with referral (finding)"
+                    },
+                    {
+                        "code": "762451005",
+                        "display": "Chronic pain following trauma (finding)"
+                    },
+                    {
+                        "code": "762452003",
+                        "display": "Chronic musculoskeletal pain (finding)"
+                    },
+                    {
+                        "code": "762454002",
+                        "display": "Chronic orofacial pain (finding)"
+                    },
+                    {
+                        "code": "762590006",
+                        "display": "Chronic primary generalized pain (finding)"
+                    },
+                    {
+                        "code": "762591005",
+                        "display": "Chronic primary musculoskeletal pain (finding)"
+                    },
+                    {
+                        "code": "762593008",
+                        "display": "Chronic primary orofacial pain (finding)"
+                    },
+                    {
+                        "code": "762602002",
+                        "display": "Chronic central neuropathic pain (finding)"
+                    },
+                    {
+                        "code": "762603007",
+                        "display": "Chronic peripheral neuropathic pain (finding)"
+                    },
+                    {
+                        "code": "762604001",
+                        "display": "Chronic secondary facial pain (finding)"
+                    },
+                    {
+                        "code": "762605000",
+                        "display": "Chronic secondary oral pain (finding)"
+                    },
+                    {
+                        "code": "762607008",
+                        "display": "Orofacial neuropathic pain (finding)"
+                    },
+                    {
+                        "code": "76691009",
+                        "display": "Brachial plexus neuralgia (finding)"
+                    },
+                    {
+                        "code": "76807004",
+                        "display": "Cervicobrachialgia (finding)"
+                    },
+                    {
+                        "code": "76948002",
+                        "display": "Severe pain (finding)"
+                    },
+                    {
+                        "code": "771083005",
+                        "display": "Pain in upper arm (finding)"
+                    },
+                    {
+                        "code": "771545003",
+                        "display": "Painful and cold lower limb (finding)"
+                    },
+                    {
+                        "code": "771546002",
+                        "display": "Painful and cold upper limb (finding)"
+                    },
+                    {
+                        "code": "772826002",
+                        "display": "Anti-cyclic citrullinated peptide antibody positive arthralgia (finding)"
+                    },
+                    {
+                        "code": "774133001",
+                        "display": "Pain of right forearm (finding)"
+                    },
+                    {
+                        "code": "774134007",
+                        "display": "Pain of right shoulder blade (finding)"
+                    },
+                    {
+                        "code": "774135008",
+                        "display": "Pain of left shoulder blade (finding)"
+                    },
+                    {
+                        "code": "774136009",
+                        "display": "Pain of right acromioclavicular joint (finding)"
+                    },
+                    {
+                        "code": "774137000",
+                        "display": "Pain of left acromioclavicular joint (finding)"
+                    },
+                    {
+                        "code": "77538000",
+                        "display": "Superficial pain (finding)"
+                    },
+                    {
+                        "code": "77880009",
+                        "display": "Rectal pain (finding)"
+                    },
+                    {
+                        "code": "782661001",
+                        "display": "Chronic sacroiliac joint pain (finding)"
+                    },
+                    {
+                        "code": "784285002",
+                        "display": "Tenesmus of bladder (finding)"
+                    },
+                    {
+                        "code": "78514002",
+                        "display": "Thigh pain (finding)"
+                    },
+                    {
+                        "code": "786837007",
+                        "display": "Tingling pain (finding)"
+                    },
+                    {
+                        "code": "788891004",
+                        "display": "Chronic pain after cancer treatment (finding)"
+                    },
+                    {
+                        "code": "789494008",
+                        "display": "Central sensitization (finding)"
+                    },
+                    {
+                        "code": "7921000119104",
+                        "display": "Anterior pleuritic pain (finding)"
+                    },
+                    {
+                        "code": "792845002",
+                        "display": "Intermittent claudication due to atherosclerosis of artery of limb (finding)"
+                    },
+                    {
+                        "code": "792886009",
+                        "display": "Pain in pinna (finding)"
+                    },
+                    {
+                        "code": "79922009",
+                        "display": "Epigastric pain (finding)"
+                    },
+                    {
+                        "code": "8034008",
+                        "display": "Painful penile erection (finding)"
+                    },
+                    {
+                        "code": "816065002",
+                        "display": "Normal sensation of pain (finding)"
+                    },
+                    {
+                        "code": "816133002",
+                        "display": "Sensation of pain reduced (finding)"
+                    },
+                    {
+                        "code": "81680005",
+                        "display": "Neck pain (finding)"
+                    },
+                    {
+                        "code": "81712001",
+                        "display": "Pain in female genitalia on intercourse (finding)"
+                    },
+                    {
+                        "code": "81953000",
+                        "display": "Chest pain on exertion (finding)"
+                    },
+                    {
+                        "code": "82423001",
+                        "display": "Chronic pain (finding)"
+                    },
+                    {
+                        "code": "82991003",
+                        "display": "Generalized aches and pains (finding)"
+                    },
+                    {
+                        "code": "830137004",
+                        "display": "Pain due to enlargement of spleen (finding)"
+                    },
+                    {
+                        "code": "83132003",
+                        "display": "Upper abdominal pain (finding)"
+                    },
+                    {
+                        "code": "83644001",
+                        "display": "Dull pain (finding)"
+                    },
+                    {
+                        "code": "838410008",
+                        "display": "Pain in epigastric region on palpation (finding)"
+                    },
+                    {
+                        "code": "838411007",
+                        "display": "Pain in abdominal region on palpation (finding)"
+                    },
+                    {
+                        "code": "838412000",
+                        "display": "Pain in lumbar region on palpation (finding)"
+                    },
+                    {
+                        "code": "85011000119101",
+                        "display": "Pain in male pelvis (finding)"
+                    },
+                    {
+                        "code": "86260003",
+                        "display": "Pain around eye (finding)"
+                    },
+                    {
+                        "code": "865971002",
+                        "display": "Pain on tooth percussion (finding)"
+                    },
+                    {
+                        "code": "865986008",
+                        "display": "Pain on application of pressure to tooth (finding)"
+                    },
+                    {
+                        "code": "865987004",
+                        "display": "Pain on tooth palpation (finding)"
+                    },
+                    {
+                        "code": "866043000",
+                        "display": "Neuralgia of twelfth thoracic nerve (finding)"
+                    },
+                    {
+                        "code": "86925001",
+                        "display": "Ocular headache (finding)"
+                    },
+                    {
+                        "code": "8708008",
+                        "display": "Sharp pain (finding)"
+                    },
+                    {
+                        "code": "87381000119101",
+                        "display": "Vertebral joint pain (finding)"
+                    },
+                    {
+                        "code": "8799007",
+                        "display": "Posterior heel pain (finding)"
+                    },
+                    {
+                        "code": "879969009",
+                        "display": "Breakthrough pain (finding)"
+                    },
+                    {
+                        "code": "879973007",
+                        "display": "Breakthrough cancer pain (finding)"
+                    },
+                    {
+                        "code": "88522004",
+                        "display": "Umbilical pain (finding)"
+                    },
+                    {
+                        "code": "89638008",
+                        "display": "Xiphodynia (finding)"
+                    },
+                    {
+                        "code": "90834002",
+                        "display": "Pain in limb (finding)"
+                    },
+                    {
+                        "code": "9121000119106",
+                        "display": "Low back pain in pregnancy (finding)"
+                    },
+                    {
+                        "code": "9267009",
+                        "display": "Chest pain at rest (finding)"
+                    },
+                    {
+                        "code": "95367009",
+                        "display": "Application site pain (finding)"
+                    },
+                    {
+                        "code": "95421005",
+                        "display": "Intercostal myalgia (finding)"
+                    },
+                    {
+                        "code": "95443002",
+                        "display": "Venous intermittent claudication (finding)"
+                    },
+                    {
+                        "code": "95658004",
+                        "display": "Cough headache syndrome (finding)"
+                    },
+                    {
+                        "code": "95668009",
+                        "display": "Pain in face (finding)"
+                    },
+                    {
+                        "code": "95669001",
+                        "display": "Superior laryngeal neuralgia (finding)"
+                    },
+                    {
+                        "code": "9626006",
+                        "display": "Mechanical pain (finding)"
+                    },
+                    {
+                        "code": "97001000119106",
+                        "display": "Localized chest pain (finding)"
+                    },
+                    {
+                        "code": "98611000119104",
+                        "display": "Chronic post-thoracotomy pain syndrome (finding)"
+                    },
+                    {
+                        "code": "98921000119102",
+                        "display": "Pain due to neoplastic disease (finding)"
+                    },
+                    {
+                        "code": "9972008",
+                        "display": "Radiating pain (finding)"
+                    },
+                    {
+                        "code": "9991008",
+                        "display": "Abdominal colic (finding)"
+                    }
+                ]
+            }
+        ]
+    }
+}

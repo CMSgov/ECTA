@@ -1,0 +1,115 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.3616.200.110.102.6158",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-04-12T09:30:22.000+00:00",
+        "source": "#BFXOvfcqCHKcDkSR"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.3616.200.110.102.6158",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113883.3.3616.200.110.102.6158"
+        }
+    ],
+    "version": "Latest",
+    "name": "COVID19SNOMEDValueSetforInvasiveMechanicalVentilation",
+    "title": "COVID19 SNOMED Value Set for Invasive Mechanical Ventilation",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2022-09",
+                "concept": [
+                    {
+                        "code": "1186622005",
+                        "display": "Synchronized intermittent mandatory ventilation - pressure-control pressure-support inflation (regime/therapy)"
+                    },
+                    {
+                        "code": "1186679003",
+                        "display": "Synchronized intermittent mandatory ventilation - volume targeted pressure-control and pressure-support inflation (regime/therapy)"
+                    },
+                    {
+                        "code": "1186681001",
+                        "display": "Synchronized intermittent mandatory ventilation with pressure-control, two levels of pressure-support and an assured constant airway pressure adjunct (regime/therapy)"
+                    },
+                    {
+                        "code": "1186682008",
+                        "display": "Synchronized intermittent mandatory ventilation with pressure-control, one level of pressure-support active during both phases and an assured constant airway pressure adjunct (regime/therapy)"
+                    },
+                    {
+                        "code": "1186683003",
+                        "display": "Synchronized intermittent mandatory ventilation with pressure-control, an assured constant airway pressure adjunct and pressure-support at the higher pressure level only (regime/therapy)"
+                    },
+                    {
+                        "code": "1186684009",
+                        "display": "Synchronized intermittent mandatory ventilation with synchronized termination pressure-control, pressure-support and an assured constant airway pressure adjunct (regime/therapy)"
+                    },
+                    {
+                        "code": "1186685005",
+                        "display": "Synchronized intermittent mandatory ventilation with volume targeted pressure-control, pressure-support and an assured constant airway pressure adjunct (regime/therapy)"
+                    },
+                    {
+                        "code": "1186736008",
+                        "display": "Intermittent mandatory ventilation with pressure-control and pressure-support (regime/therapy)"
+                    },
+                    {
+                        "code": "1186737004",
+                        "display": "Intermittent mandatory ventilation with volume-targeted pressure-control and pressure-support (regime/therapy)"
+                    },
+                    {
+                        "code": "1186739001",
+                        "display": "Intermittent mandatory ventilation with synchronized-termination pressure-control and pressure-support inflation and an assured constant airway pressure adjunct (regime/therapy)"
+                    },
+                    {
+                        "code": "1186741000",
+                        "display": "Intermittent mandatory ventilation with pressure-control and an assured constant airway pressure high adjunct and pressure-support at the higher pressure level only (regime/therapy)"
+                    },
+                    {
+                        "code": "243141005",
+                        "display": "Mechanically assisted spontaneous ventilation (procedure)"
+                    },
+                    {
+                        "code": "243142003",
+                        "display": "Dual pressure spontaneous ventilation support (regime/therapy)"
+                    },
+                    {
+                        "code": "243143008",
+                        "display": "Airway pressure release ventilation (procedure)"
+                    },
+                    {
+                        "code": "243144002",
+                        "display": "Patient triggered inspiratory assistance (procedure)"
+                    },
+                    {
+                        "code": "243145001",
+                        "display": "Diaphragmatic augmentation (procedure)"
+                    },
+                    {
+                        "code": "243146000",
+                        "display": "Diaphragmatic augmentation by rocking bed (procedure)"
+                    },
+                    {
+                        "code": "243154003",
+                        "display": "High frequency jet ventilation (procedure)"
+                    },
+                    {
+                        "code": "34291000175108",
+                        "display": "Nocturnal dual pressure spontaneous ventilation support (regime/therapy)"
+                    },
+                    {
+                        "code": "4764004",
+                        "display": "Jet ventilation procedure (procedure)"
+                    },
+                    {
+                        "code": "82433009",
+                        "display": "Continuous negative pressure ventilation treatment (procedure)"
+                    }
+                ]
+            }
+        ]
+    }
+}

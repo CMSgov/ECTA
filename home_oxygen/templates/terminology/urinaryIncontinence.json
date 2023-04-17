@@ -1,0 +1,265 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113762.1.4.1222.718",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-04-12T09:30:02.000+00:00",
+        "source": "#SiZzxISLoebfLJT2"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1222.718",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113762.1.4.1222.718"
+        }
+    ],
+    "version": "Latest",
+    "name": "UrinaryIncontinence",
+    "title": "Urinary Incontinence",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2022-09",
+                "concept": [
+                    {
+                        "code": "111478000",
+                        "display": "Nocturnal AND diurnal enuresis (finding)"
+                    },
+                    {
+                        "code": "1144946004",
+                        "display": "Extraurethral urinary incontinence (finding)"
+                    },
+                    {
+                        "code": "1148879008",
+                        "display": "Primary stress incontinence (finding)"
+                    },
+                    {
+                        "code": "1148902004",
+                        "display": "Stress incontinence following surgical procedure (disorder)"
+                    },
+                    {
+                        "code": "1184603003",
+                        "display": "Postoperative urinary incontinence (disorder)"
+                    },
+                    {
+                        "code": "129847007",
+                        "display": "Functional urinary incontinence (finding)"
+                    },
+                    {
+                        "code": "129853007",
+                        "display": "Total urinary incontinence (finding)"
+                    },
+                    {
+                        "code": "165232002",
+                        "display": "Urinary incontinence (finding)"
+                    },
+                    {
+                        "code": "22220005",
+                        "display": "Genuine stress incontinence (finding)"
+                    },
+                    {
+                        "code": "236659004",
+                        "display": "Cough - urge incontinence of urine (finding)"
+                    },
+                    {
+                        "code": "236660009",
+                        "display": "Giggle incontinence of urine (finding)"
+                    },
+                    {
+                        "code": "236663006",
+                        "display": "Orgasmic incontinence of urine (finding)"
+                    },
+                    {
+                        "code": "236664000",
+                        "display": "Post-micturition incontinence (finding)"
+                    },
+                    {
+                        "code": "236665004",
+                        "display": "Postural urinary incontinence (finding)"
+                    },
+                    {
+                        "code": "281862002",
+                        "display": "Daytime enuresis (finding)"
+                    },
+                    {
+                        "code": "370555000",
+                        "display": "Urinary incontinence due to urethral sphincter incompetence (finding)"
+                    },
+                    {
+                        "code": "397878005",
+                        "display": "Overflow incontinence of urine (finding)"
+                    },
+                    {
+                        "code": "413343005",
+                        "display": "Mixed urinary incontinence (finding)"
+                    },
+                    {
+                        "code": "42112009",
+                        "display": "Urinary incontinence of non-organic origin (finding)"
+                    },
+                    {
+                        "code": "424833008",
+                        "display": "Incontinence due to detrusor instability (finding)"
+                    },
+                    {
+                        "code": "442060006",
+                        "display": "Stress incontinence after prostatectomy (disorder)"
+                    },
+                    {
+                        "code": "444620007",
+                        "display": "Male urinary stress incontinence (finding)"
+                    },
+                    {
+                        "code": "450841000",
+                        "display": "Intermittent urinary incontinence (finding)"
+                    },
+                    {
+                        "code": "450842007",
+                        "display": "Non-organic primary nocturnal enuresis (finding)"
+                    },
+                    {
+                        "code": "450843002",
+                        "display": "Non-organic secondary nocturnal enuresis (finding)"
+                    },
+                    {
+                        "code": "450844008",
+                        "display": "Non-organic nocturnal enuresis (finding)"
+                    },
+                    {
+                        "code": "450845009",
+                        "display": "Primary nocturnal enuresis (finding)"
+                    },
+                    {
+                        "code": "450846005",
+                        "display": "Secondary nocturnal enuresis (finding)"
+                    },
+                    {
+                        "code": "461191000124104",
+                        "display": "Daily urinary incontinence (finding)"
+                    },
+                    {
+                        "code": "60241006",
+                        "display": "Female urinary stress incontinence (finding)"
+                    },
+                    {
+                        "code": "724479001",
+                        "display": "Urinary incontinence co-occurrent and due to prolapse of female genital organ (disorder)"
+                    },
+                    {
+                        "code": "735483004",
+                        "display": "Stress incontinence co-occurrent and due to pelvic organ prolapse (finding)"
+                    },
+                    {
+                        "code": "762263003",
+                        "display": "Overflow incontinence of urine due to prolapse of female genital organ (disorder)"
+                    },
+                    {
+                        "code": "762264009",
+                        "display": "Urge incontinence due to prolapse of female genital organ (disorder)"
+                    },
+                    {
+                        "code": "762265005",
+                        "display": "Mixed incontinence due to prolapse of female genital organ (disorder)"
+                    },
+                    {
+                        "code": "768991009",
+                        "display": "Childhood double incontinence (finding)"
+                    },
+                    {
+                        "code": "78459008",
+                        "display": "Double incontinence (finding)"
+                    },
+                    {
+                        "code": "8009008",
+                        "display": "Nocturnal enuresis (finding)"
+                    },
+                    {
+                        "code": "8702009",
+                        "display": "Diurnal only enuresis (finding)"
+                    },
+                    {
+                        "code": "87557004",
+                        "display": "Urge incontinence of urine (finding)"
+                    },
+                    {
+                        "code": "90987003",
+                        "display": "Reflex incontinence of urine (finding)"
+                    }
+                ]
+            },
+            {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "version": "2023",
+                "concept": [
+                    {
+                        "code": "F98.0",
+                        "display": "Enuresis not due to a substance or known physiological condition"
+                    },
+                    {
+                        "code": "N39.3",
+                        "display": "Stress incontinence (female) (male)"
+                    },
+                    {
+                        "code": "N39.4",
+                        "display": "Other specified urinary incontinence"
+                    },
+                    {
+                        "code": "N39.41",
+                        "display": "Urge incontinence"
+                    },
+                    {
+                        "code": "N39.42",
+                        "display": "Incontinence without sensory awareness"
+                    },
+                    {
+                        "code": "N39.43",
+                        "display": "Post-void dribbling"
+                    },
+                    {
+                        "code": "N39.44",
+                        "display": "Nocturnal enuresis"
+                    },
+                    {
+                        "code": "N39.45",
+                        "display": "Continuous leakage"
+                    },
+                    {
+                        "code": "N39.46",
+                        "display": "Mixed incontinence"
+                    },
+                    {
+                        "code": "N39.49",
+                        "display": "Other specified urinary incontinence"
+                    },
+                    {
+                        "code": "N39.490",
+                        "display": "Overflow incontinence"
+                    },
+                    {
+                        "code": "N39.491",
+                        "display": "Coital incontinence"
+                    },
+                    {
+                        "code": "N39.492",
+                        "display": "Postural (urinary) incontinence"
+                    },
+                    {
+                        "code": "N39.498",
+                        "display": "Other specified urinary incontinence"
+                    },
+                    {
+                        "code": "R32",
+                        "display": "Unspecified urinary incontinence"
+                    },
+                    {
+                        "code": "R39.81",
+                        "display": "Functional urinary incontinence"
+                    }
+                ]
+            }
+        ]
+    }
+}

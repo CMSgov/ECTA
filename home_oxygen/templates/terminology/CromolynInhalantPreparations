@@ -1,0 +1,39 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113762.1.4.1196.465",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-04-12T09:30:15.000+00:00",
+        "source": "#vtLX5jWAEwmsvz6n"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1196.465",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113762.1.4.1196.465"
+        }
+    ],
+    "version": "Latest",
+    "name": "CromolynInhalantPreparations",
+    "title": "Cromolyn Inhalant Preparations",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "version": "2023-03",
+                "concept": [
+                    {
+                        "code": "309548",
+                        "display": "cromolyn sodium 20 MG Inhalation Powder"
+                    },
+                    {
+                        "code": "831246",
+                        "display": "cromolyn sodium 10 MG/ML Inhalation Solution"
+                    }
+                ]
+            }
+        ]
+    }
+}

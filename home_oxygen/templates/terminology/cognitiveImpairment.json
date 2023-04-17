@@ -1,0 +1,73 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113762.1.4.1108.9",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2020-07-28T13:58:51.000+00:00",
+        "source": "#7fmtsdmInxXrt73g"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1108.9",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113762.1.4.1108.9"
+        }
+    ],
+    "version": "Latest",
+    "name": "Mildcognitiveimpairment",
+    "title": "Mild cognitive impairment",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2020-03",
+                "concept": [
+                    {
+                        "code": "110352000",
+                        "display": "Minimal cognitive impairment (finding)"
+                    },
+                    {
+                        "code": "231448004",
+                        "display": "Age-associated memory impairment (disorder)"
+                    }
+                ]
+            },
+            {
+                "system": "http://hl7.org/fhir/sid/icd-9-cm/diagnosis",
+                "version": "2013",
+                "concept": [
+                    {
+                        "code": "331.83",
+                        "display": "Mild cognitive impairment, so stated"
+                    }
+                ]
+            },
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2020-03",
+                "concept": [
+                    {
+                        "code": "386805003",
+                        "display": "Mild cognitive disorder (disorder)"
+                    },
+                    {
+                        "code": "386806002",
+                        "display": "Impaired cognition (finding)"
+                    }
+                ]
+            },
+            {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "version": "2020",
+                "concept": [
+                    {
+                        "code": "G31.84",
+                        "display": "Mild cognitive impairment, so stated"
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113762.1.4.1222.1440",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-04-12T09:30:55.000+00:00",
+        "source": "#WfzLBtNdO6UexBdm"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1222.1440",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113762.1.4.1222.1440"
+        }
+    ],
+    "version": "Latest",
+    "name": "Constipation",
+    "title": "Constipation",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2022-09",
+                "concept": [
+                    {
+                        "code": "129585003",
+                        "display": "Perceived constipation (finding)"
+                    },
+                    {
+                        "code": "14760008",
+                        "display": "Constipation (finding)"
+                    },
+                    {
+                        "code": "197119006",
+                        "display": "Acute constipation (finding)"
+                    },
+                    {
+                        "code": "236070005",
+                        "display": "Simple constipation (finding)"
+                    },
+                    {
+                        "code": "249517009",
+                        "display": "Constipation alternates with diarrhea (finding)"
+                    },
+                    {
+                        "code": "58230007",
+                        "display": "Alteration in bowel elimination: constipation (finding)"
+                    },
+                    {
+                        "code": "73149003",
+                        "display": "Encopresis with constipation AND overflow incontinence (finding)"
+                    }
+                ]
+            }
+        ]
+    }
+}

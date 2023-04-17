@@ -1,0 +1,83 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.3616.200.110.102.6312",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-04-12T09:29:55.000+00:00",
+        "source": "#aj70rYyNVIdsvzSl"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.3616.200.110.102.6312",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113883.3.3616.200.110.102.6312"
+        }
+    ],
+    "version": "Latest",
+    "name": "DifficultyConcentrating",
+    "title": "Difficulty Concentrating",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2022-09",
+                "concept": [
+                    {
+                        "code": "1144748009",
+                        "display": "Impaired concentration (finding)"
+                    },
+                    {
+                        "code": "1217378004",
+                        "display": "Distracted during eating (finding)"
+                    },
+                    {
+                        "code": "130965009",
+                        "display": "Persistence (finding)"
+                    },
+                    {
+                        "code": "22058002",
+                        "display": "Inattention (finding)"
+                    },
+                    {
+                        "code": "247762003",
+                        "display": "Reduced concentration span (finding)"
+                    },
+                    {
+                        "code": "247764002",
+                        "display": "Easily distracted (finding)"
+                    },
+                    {
+                        "code": "25124003",
+                        "display": "Selective inattention (finding)"
+                    },
+                    {
+                        "code": "26329005",
+                        "display": "Poor concentration (finding)"
+                    },
+                    {
+                        "code": "28102002",
+                        "display": "Distractibility (finding)"
+                    },
+                    {
+                        "code": "425248002",
+                        "display": "Scattered attention (finding)"
+                    },
+                    {
+                        "code": "46991000",
+                        "display": "Absent minded (finding)"
+                    },
+                    {
+                        "code": "60032008",
+                        "display": "Unable to concentrate (finding)"
+                    },
+                    {
+                        "code": "86713007",
+                        "display": "Nonpersistence (finding)"
+                    }
+                ]
+            }
+        ]
+    }
+}

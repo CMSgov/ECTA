@@ -1,0 +1,473 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113762.1.4.1222.618",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-04-12T09:29:54.000+00:00",
+        "source": "#8hVL5hBuHawC1bV0"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1222.618",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113762.1.4.1222.618"
+        }
+    ],
+    "version": "Latest",
+    "name": "Stroke",
+    "title": "Stroke",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2022-09",
+                "concept": [
+                    {
+                        "code": "1208871009",
+                        "display": "Transient ischemic attack co-occurrent with subarachnoid hemorrhage (disorder)"
+                    },
+                    {
+                        "code": "12237911000119109",
+                        "display": "Amaurosis fugax of left eye (disorder)"
+                    },
+                    {
+                        "code": "12237951000119105",
+                        "display": "Amaurosis fugax of right eye (disorder)"
+                    },
+                    {
+                        "code": "195155004",
+                        "display": "Subarachnoid hemorrhage from carotid siphon and bifurcation (disorder)"
+                    },
+                    {
+                        "code": "195160000",
+                        "display": "Intracranial subarachnoid hemorrhage from vertebral artery (disorder)"
+                    },
+                    {
+                        "code": "195165005",
+                        "display": "Basal ganglia hemorrhage (disorder)"
+                    },
+                    {
+                        "code": "195167002",
+                        "display": "External capsule hemorrhage (disorder)"
+                    },
+                    {
+                        "code": "195168007",
+                        "display": "Intracerebral hemorrhage with intraventricular hemorrhage (disorder)"
+                    },
+                    {
+                        "code": "195169004",
+                        "display": "Intracerebral hemorrhage, multiple localized (disorder)"
+                    },
+                    {
+                        "code": "195186005",
+                        "display": "Cerebral infarction due to embolism of precerebral arteries (disorder)"
+                    },
+                    {
+                        "code": "195190007",
+                        "display": "Cerebral infarction due to embolism of cerebral arteries (disorder)"
+                    },
+                    {
+                        "code": "195200006",
+                        "display": "Carotid artery syndrome hemispheric (disorder)"
+                    },
+                    {
+                        "code": "20908003",
+                        "display": "Subcortical cerebral hemorrhage (disorder)"
+                    },
+                    {
+                        "code": "230706003",
+                        "display": "Hemorrhagic cerebral infarction (disorder)"
+                    },
+                    {
+                        "code": "230707007",
+                        "display": "Anterior cerebral circulation hemorrhagic infarction (disorder)"
+                    },
+                    {
+                        "code": "230708002",
+                        "display": "Posterior cerebral circulation hemorrhagic infarction (disorder)"
+                    },
+                    {
+                        "code": "230709005",
+                        "display": "Massive supratentorial cerebral hemorrhage (disorder)"
+                    },
+                    {
+                        "code": "230710000",
+                        "display": "Lobar cerebral hemorrhage (disorder)"
+                    },
+                    {
+                        "code": "230711001",
+                        "display": "Thalamic hemorrhage (disorder)"
+                    },
+                    {
+                        "code": "230712008",
+                        "display": "Lacunar hemorrhage (disorder)"
+                    },
+                    {
+                        "code": "230716006",
+                        "display": "Carotid territory transient ischemic attack (disorder)"
+                    },
+                    {
+                        "code": "230717002",
+                        "display": "Vertebrobasilar territory transient ischemic attack (disorder)"
+                    },
+                    {
+                        "code": "23276006",
+                        "display": "Ventricular hemorrhage (disorder)"
+                    },
+                    {
+                        "code": "266257000",
+                        "display": "Transient ischemic attack (disorder)"
+                    },
+                    {
+                        "code": "270907008",
+                        "display": "Spontaneous intracranial subarachnoid hemorrhage (disorder)"
+                    },
+                    {
+                        "code": "274100004",
+                        "display": "Cerebral hemorrhage (disorder)"
+                    },
+                    {
+                        "code": "276277008",
+                        "display": "Subarachnoid hemorrhage from multiple aneurysms (disorder)"
+                    },
+                    {
+                        "code": "276278003",
+                        "display": "Subarachnoid hemorrhage from anterior cerebral artery aneurysm (disorder)"
+                    },
+                    {
+                        "code": "276280009",
+                        "display": "Subarachnoid hemorrhage from middle cerebral artery aneurysm (disorder)"
+                    },
+                    {
+                        "code": "276281008",
+                        "display": "Subarachnoid hemorrhage from posterior cerebral artery aneurysm (disorder)"
+                    },
+                    {
+                        "code": "276282001",
+                        "display": "Subarachnoid hemorrhage from anterior communicating artery aneurysm (disorder)"
+                    },
+                    {
+                        "code": "276283006",
+                        "display": "Subarachnoid hemorrhage from posterior communicating artery aneurysm (disorder)"
+                    },
+                    {
+                        "code": "276284000",
+                        "display": "Subarachnoid hemorrhage from basilar artery aneurysm (disorder)"
+                    },
+                    {
+                        "code": "276285004",
+                        "display": "Subarachnoid hemorrhage from posterior inferior cerebellar artery aneurysm (disorder)"
+                    },
+                    {
+                        "code": "276286003",
+                        "display": "Subarachnoid hemorrhage from carotid artery aneurysm (disorder)"
+                    },
+                    {
+                        "code": "276722003",
+                        "display": "Intracerebellar and posterior fossa hemorrhage (disorder)"
+                    },
+                    {
+                        "code": "28318001",
+                        "display": "Basilar hemorrhage (disorder)"
+                    },
+                    {
+                        "code": "42429001",
+                        "display": "Cerebromeningeal hemorrhage (disorder)"
+                    },
+                    {
+                        "code": "425957003",
+                        "display": "Non-traumatic intracerebral ventricular hemorrhage (disorder)"
+                    },
+                    {
+                        "code": "426814001",
+                        "display": "Transient cerebral ischemia due to atrial fibrillation (disorder)"
+                    },
+                    {
+                        "code": "444172003",
+                        "display": "Recurrent transient cerebral ischemic attack (disorder)"
+                    },
+                    {
+                        "code": "449020009",
+                        "display": "Intraparenchymal hemorrhage of brain (disorder)"
+                    },
+                    {
+                        "code": "49422009",
+                        "display": "Cortical hemorrhage (disorder)"
+                    },
+                    {
+                        "code": "52201006",
+                        "display": "Internal capsule hemorrhage (disorder)"
+                    },
+                    {
+                        "code": "64009001",
+                        "display": "Basilar artery syndrome (disorder)"
+                    },
+                    {
+                        "code": "710575003",
+                        "display": "Transient ischemic attack due to embolism (disorder)"
+                    },
+                    {
+                        "code": "73020009",
+                        "display": "Cerebral hemisphere hemorrhage (disorder)"
+                    },
+                    {
+                        "code": "75038005",
+                        "display": "Cerebellar hemorrhage (disorder)"
+                    },
+                    {
+                        "code": "7713009",
+                        "display": "Intrapontine hemorrhage (disorder)"
+                    },
+                    {
+                        "code": "88032003",
+                        "display": "Amaurosis fugax (disorder)"
+                    },
+                    {
+                        "code": "95454007",
+                        "display": "Brain stem hemorrhage (disorder)"
+                    }
+                ]
+            },
+            {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "version": "2023",
+                "concept": [
+                    {
+                        "code": "G45.8",
+                        "display": "Other transient cerebral ischemic attacks and related syndromes"
+                    },
+                    {
+                        "code": "G45.9",
+                        "display": "Transient cerebral ischemic attack, unspecified"
+                    },
+                    {
+                        "code": "I60.00",
+                        "display": "Nontraumatic subarachnoid hemorrhage from unspecified carotid siphon and bifurcation"
+                    },
+                    {
+                        "code": "I60.01",
+                        "display": "Nontraumatic subarachnoid hemorrhage from right carotid siphon and bifurcation"
+                    },
+                    {
+                        "code": "I60.02",
+                        "display": "Nontraumatic subarachnoid hemorrhage from left carotid siphon and bifurcation"
+                    },
+                    {
+                        "code": "I60.10",
+                        "display": "Nontraumatic subarachnoid hemorrhage from unspecified middle cerebral artery"
+                    },
+                    {
+                        "code": "I60.11",
+                        "display": "Nontraumatic subarachnoid hemorrhage from right middle cerebral artery"
+                    },
+                    {
+                        "code": "I60.12",
+                        "display": "Nontraumatic subarachnoid hemorrhage from left middle cerebral artery"
+                    },
+                    {
+                        "code": "I60.2",
+                        "display": "Nontraumatic subarachnoid hemorrhage from anterior communicating artery"
+                    },
+                    {
+                        "code": "I60.30",
+                        "display": "Nontraumatic subarachnoid hemorrhage from unspecified posterior communicating artery"
+                    },
+                    {
+                        "code": "I60.31",
+                        "display": "Nontraumatic subarachnoid hemorrhage from right posterior communicating artery"
+                    },
+                    {
+                        "code": "I60.32",
+                        "display": "Nontraumatic subarachnoid hemorrhage from left posterior communicating artery"
+                    },
+                    {
+                        "code": "I60.4",
+                        "display": "Nontraumatic subarachnoid hemorrhage from basilar artery"
+                    },
+                    {
+                        "code": "I60.50",
+                        "display": "Nontraumatic subarachnoid hemorrhage from unspecified vertebral artery"
+                    },
+                    {
+                        "code": "I60.51",
+                        "display": "Nontraumatic subarachnoid hemorrhage from right vertebral artery"
+                    },
+                    {
+                        "code": "I60.52",
+                        "display": "Nontraumatic subarachnoid hemorrhage from left vertebral artery"
+                    },
+                    {
+                        "code": "I60.6",
+                        "display": "Nontraumatic subarachnoid hemorrhage from other intracranial arteries"
+                    },
+                    {
+                        "code": "I60.7",
+                        "display": "Nontraumatic subarachnoid hemorrhage from unspecified intracranial artery"
+                    },
+                    {
+                        "code": "I60.8",
+                        "display": "Other nontraumatic subarachnoid hemorrhage"
+                    },
+                    {
+                        "code": "I60.9",
+                        "display": "Nontraumatic subarachnoid hemorrhage, unspecified"
+                    },
+                    {
+                        "code": "I61.0",
+                        "display": "Nontraumatic intracerebral hemorrhage in hemisphere, subcortical"
+                    },
+                    {
+                        "code": "I61.1",
+                        "display": "Nontraumatic intracerebral hemorrhage in hemisphere, cortical"
+                    },
+                    {
+                        "code": "I61.2",
+                        "display": "Nontraumatic intracerebral hemorrhage in hemisphere, unspecified"
+                    },
+                    {
+                        "code": "I61.3",
+                        "display": "Nontraumatic intracerebral hemorrhage in brain stem"
+                    },
+                    {
+                        "code": "I61.4",
+                        "display": "Nontraumatic intracerebral hemorrhage in cerebellum"
+                    },
+                    {
+                        "code": "I61.5",
+                        "display": "Nontraumatic intracerebral hemorrhage, intraventricular"
+                    },
+                    {
+                        "code": "I61.6",
+                        "display": "Nontraumatic intracerebral hemorrhage, multiple localized"
+                    },
+                    {
+                        "code": "I61.8",
+                        "display": "Other nontraumatic intracerebral hemorrhage"
+                    },
+                    {
+                        "code": "I61.9",
+                        "display": "Nontraumatic intracerebral hemorrhage, unspecified"
+                    },
+                    {
+                        "code": "I63.10",
+                        "display": "Cerebral infarction due to embolism of unspecified precerebral artery"
+                    },
+                    {
+                        "code": "I63.111",
+                        "display": "Cerebral infarction due to embolism of right vertebral artery"
+                    },
+                    {
+                        "code": "I63.112",
+                        "display": "Cerebral infarction due to embolism of left vertebral artery"
+                    },
+                    {
+                        "code": "I63.113",
+                        "display": "Cerebral infarction due to embolism of bilateral vertebral arteries"
+                    },
+                    {
+                        "code": "I63.119",
+                        "display": "Cerebral infarction due to embolism of unspecified vertebral artery"
+                    },
+                    {
+                        "code": "I63.12",
+                        "display": "Cerebral infarction due to embolism of basilar artery"
+                    },
+                    {
+                        "code": "I63.131",
+                        "display": "Cerebral infarction due to embolism of right carotid artery"
+                    },
+                    {
+                        "code": "I63.132",
+                        "display": "Cerebral infarction due to embolism of left carotid artery"
+                    },
+                    {
+                        "code": "I63.133",
+                        "display": "Cerebral infarction due to embolism of bilateral carotid arteries"
+                    },
+                    {
+                        "code": "I63.139",
+                        "display": "Cerebral infarction due to embolism of unspecified carotid artery"
+                    },
+                    {
+                        "code": "I63.19",
+                        "display": "Cerebral infarction due to embolism of other precerebral artery"
+                    },
+                    {
+                        "code": "I63.40",
+                        "display": "Cerebral infarction due to embolism of unspecified cerebral artery"
+                    },
+                    {
+                        "code": "I63.411",
+                        "display": "Cerebral infarction due to embolism of right middle cerebral artery"
+                    },
+                    {
+                        "code": "I63.412",
+                        "display": "Cerebral infarction due to embolism of left middle cerebral artery"
+                    },
+                    {
+                        "code": "I63.413",
+                        "display": "Cerebral infarction due to embolism of bilateral middle cerebral arteries"
+                    },
+                    {
+                        "code": "I63.419",
+                        "display": "Cerebral infarction due to embolism of unspecified middle cerebral artery"
+                    },
+                    {
+                        "code": "I63.421",
+                        "display": "Cerebral infarction due to embolism of right anterior cerebral artery"
+                    },
+                    {
+                        "code": "I63.422",
+                        "display": "Cerebral infarction due to embolism of left anterior cerebral artery"
+                    },
+                    {
+                        "code": "I63.423",
+                        "display": "Cerebral infarction due to embolism of bilateral anterior cerebral arteries"
+                    },
+                    {
+                        "code": "I63.429",
+                        "display": "Cerebral infarction due to embolism of unspecified anterior cerebral artery"
+                    },
+                    {
+                        "code": "I63.431",
+                        "display": "Cerebral infarction due to embolism of right posterior cerebral artery"
+                    },
+                    {
+                        "code": "I63.432",
+                        "display": "Cerebral infarction due to embolism of left posterior cerebral artery"
+                    },
+                    {
+                        "code": "I63.433",
+                        "display": "Cerebral infarction due to embolism of bilateral posterior cerebral arteries"
+                    },
+                    {
+                        "code": "I63.439",
+                        "display": "Cerebral infarction due to embolism of unspecified posterior cerebral artery"
+                    },
+                    {
+                        "code": "I63.441",
+                        "display": "Cerebral infarction due to embolism of right cerebellar artery"
+                    },
+                    {
+                        "code": "I63.442",
+                        "display": "Cerebral infarction due to embolism of left cerebellar artery"
+                    },
+                    {
+                        "code": "I63.443",
+                        "display": "Cerebral infarction due to embolism of bilateral cerebellar arteries"
+                    },
+                    {
+                        "code": "I63.449",
+                        "display": "Cerebral infarction due to embolism of unspecified cerebellar artery"
+                    },
+                    {
+                        "code": "I63.49",
+                        "display": "Cerebral infarction due to embolism of other cerebral artery"
+                    }
+                ]
+            }
+        ]
+    }
+}

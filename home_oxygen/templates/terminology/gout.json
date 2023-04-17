@@ -1,0 +1,159 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113762.1.4.1222.586",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-04-12T09:30:35.000+00:00",
+        "source": "#AfFzL8AJoUvITX5t"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1222.586",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113762.1.4.1222.586"
+        }
+    ],
+    "version": "Latest",
+    "name": "Gout",
+    "title": "Gout",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2022-09",
+                "concept": [
+                    {
+                        "code": "1074001000119107",
+                        "display": "Arthritis of right foot due to gout (disorder)"
+                    },
+                    {
+                        "code": "1074021000119103",
+                        "display": "Arthritis of left foot due to gout (disorder)"
+                    },
+                    {
+                        "code": "1074031000119100",
+                        "display": "Arthritis of left great toe due to gout (disorder)"
+                    },
+                    {
+                        "code": "1153351000",
+                        "display": "Polyarticular chronic primary gouty arthritis (disorder)"
+                    },
+                    {
+                        "code": "1153373007",
+                        "display": "Monoarticular chronic primary gouty arthritis (disorder)"
+                    },
+                    {
+                        "code": "16010751000119107",
+                        "display": "Gouty arthritis of bilateral great toes (disorder)"
+                    },
+                    {
+                        "code": "16015911000119102",
+                        "display": "Gouty arthritis of bilateral ankles (disorder)"
+                    },
+                    {
+                        "code": "16015951000119101",
+                        "display": "Gouty arthritis of bilateral feet (disorder)"
+                    },
+                    {
+                        "code": "16040031000119108",
+                        "display": "Chronic tophaceous gout of bilateral elbows (disorder)"
+                    },
+                    {
+                        "code": "16040071000119106",
+                        "display": "Chronic tophaceous gout of bilateral hands (disorder)"
+                    },
+                    {
+                        "code": "16068491000119107",
+                        "display": "Arthritis of bilateral knees due to gout (disorder)"
+                    },
+                    {
+                        "code": "201663006",
+                        "display": "Gouty arthritis of the shoulder region (disorder)"
+                    },
+                    {
+                        "code": "201666003",
+                        "display": "Gouty arthritis of the hand (disorder)"
+                    },
+                    {
+                        "code": "201667007",
+                        "display": "Gouty arthritis of the pelvic region and thigh (disorder)"
+                    },
+                    {
+                        "code": "201669005",
+                        "display": "Gouty arthritis of the ankle and/or foot (disorder)"
+                    },
+                    {
+                        "code": "201670006",
+                        "display": "Gouty arthritis of multiple sites (disorder)"
+                    },
+                    {
+                        "code": "306531000119108",
+                        "display": "Chronic tophaceous gout of shoulder caused by drug (disorder)"
+                    },
+                    {
+                        "code": "310181000119104",
+                        "display": "Gouty arthritis of left ankle (disorder)"
+                    },
+                    {
+                        "code": "310191000119101",
+                        "display": "Arthritis of left elbow due to gout (disorder)"
+                    },
+                    {
+                        "code": "310201000119103",
+                        "display": "Gouty arthritis of left hand (disorder)"
+                    },
+                    {
+                        "code": "310221000119107",
+                        "display": "Gouty arthritis of left knee (disorder)"
+                    },
+                    {
+                        "code": "310241000119101",
+                        "display": "Arthritis of left wrist due to gout (disorder)"
+                    },
+                    {
+                        "code": "310261000119102",
+                        "display": "Gouty arthritis of right ankle (disorder)"
+                    },
+                    {
+                        "code": "310271000119108",
+                        "display": "Arthritis of right elbow due to gout (disorder)"
+                    },
+                    {
+                        "code": "310281000119106",
+                        "display": "Gouty arthritis of right hand (disorder)"
+                    },
+                    {
+                        "code": "310301000119105",
+                        "display": "Gouty arthritis of right knee (disorder)"
+                    },
+                    {
+                        "code": "310321000119101",
+                        "display": "Arthritis of right wrist due to gout (disorder)"
+                    },
+                    {
+                        "code": "428839004",
+                        "display": "Arthritis of toe due to gout (disorder)"
+                    },
+                    {
+                        "code": "48440001",
+                        "display": "Arthritis due to gout (disorder)"
+                    },
+                    {
+                        "code": "67148009",
+                        "display": "Arthritis of great toe due to gout (disorder)"
+                    },
+                    {
+                        "code": "68451005",
+                        "display": "Chronic arthritis due to gout (disorder)"
+                    },
+                    {
+                        "code": "699681002",
+                        "display": "Gouty arthritis of temporomandibular joint (disorder)"
+                    }
+                ]
+            }
+        ]
+    }
+}

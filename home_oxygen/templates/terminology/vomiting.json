@@ -1,0 +1,109 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.17.4077.3.1015",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-04-12T09:30:55.000+00:00",
+        "source": "#srn0vBCFHKcgzbS1"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.17.4077.3.1015",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113883.17.4077.3.1015"
+        }
+    ],
+    "version": "Latest",
+    "name": "Vomiting",
+    "title": "Vomiting",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2022-09",
+                "concept": [
+                    {
+                        "code": "146291000119108",
+                        "display": "Vomiting without nausea (disorder)"
+                    },
+                    {
+                        "code": "16932000",
+                        "display": "Nausea and vomiting (disorder)"
+                    },
+                    {
+                        "code": "196746003",
+                        "display": "Persistent vomiting (disorder)"
+                    },
+                    {
+                        "code": "225586007",
+                        "display": "Vomiting food (finding)"
+                    },
+                    {
+                        "code": "236083006",
+                        "display": "Intermittent vomiting (disorder)"
+                    },
+                    {
+                        "code": "23971007",
+                        "display": "Acute vomiting (disorder)"
+                    },
+                    {
+                        "code": "249497008",
+                        "display": "Vomiting symptom (finding)"
+                    },
+                    {
+                        "code": "300359004",
+                        "display": "Finding of vomiting (finding)"
+                    },
+                    {
+                        "code": "3094009",
+                        "display": "Vomiting in infants AND/OR children (disorder)"
+                    },
+                    {
+                        "code": "332982000",
+                        "display": "Uncontrollable vomiting (disorder)"
+                    },
+                    {
+                        "code": "422400008",
+                        "display": "Vomiting (disorder)"
+                    },
+                    {
+                        "code": "8579004",
+                        "display": "Projectile vomiting (disorder)"
+                    }
+                ]
+            },
+            {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "version": "2023",
+                "concept": [
+                    {
+                        "code": "R11",
+                        "display": "Nausea and vomiting"
+                    },
+                    {
+                        "code": "R11.1",
+                        "display": "Vomiting"
+                    },
+                    {
+                        "code": "R11.10",
+                        "display": "Vomiting, unspecified"
+                    },
+                    {
+                        "code": "R11.11",
+                        "display": "Vomiting without nausea"
+                    },
+                    {
+                        "code": "R11.12",
+                        "display": "Projectile vomiting"
+                    },
+                    {
+                        "code": "R11.2",
+                        "display": "Nausea with vomiting, unspecified"
+                    }
+                ]
+            }
+        ]
+    }
+}

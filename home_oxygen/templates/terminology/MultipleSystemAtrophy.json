@@ -1,0 +1,43 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113762.1.4.1146.1054",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-04-12T09:30:34.000+00:00",
+        "source": "#VoXZ0E3WBMwtqF4s"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1146.1054",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113762.1.4.1146.1054"
+        }
+    ],
+    "version": "Latest",
+    "name": "MultipleSystemAtrophy(SNOMED)",
+    "title": "Multiple System Atrophy (SNOMED)",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2022-09",
+                "concept": [
+                    {
+                        "code": "230297002",
+                        "display": "Multiple system atrophy (disorder)"
+                    },
+                    {
+                        "code": "444024002",
+                        "display": "Multiple system atrophy, cerebellar variant (disorder)"
+                    },
+                    {
+                        "code": "444197004",
+                        "display": "Multiple system atrophy, Parkinson variant (disorder)"
+                    }
+                ]
+            }
+        ]
+    }
+}

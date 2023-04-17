@@ -1,0 +1,119 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113762.1.4.1222.1398",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-04-12T09:30:54.000+00:00",
+        "source": "#vqEn9VLMIwf9x9y6"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1222.1398",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113762.1.4.1222.1398"
+        }
+    ],
+    "version": "Latest",
+    "name": "Fatigue",
+    "title": "Fatigue",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2022-09",
+                "concept": [
+                    {
+                        "code": "1131000175106",
+                        "display": "Asthenia due to disease (finding)"
+                    },
+                    {
+                        "code": "1149160000",
+                        "display": "Reduced level of fatigue (finding)"
+                    },
+                    {
+                        "code": "12979003",
+                        "display": "Transient heat fatigue (finding)"
+                    },
+                    {
+                        "code": "13791008",
+                        "display": "Asthenia (finding)"
+                    },
+                    {
+                        "code": "15634971000119107",
+                        "display": "Weakness of bilateral upper limbs (finding)"
+                    },
+                    {
+                        "code": "161873000",
+                        "display": "Heavy legs (finding)"
+                    },
+                    {
+                        "code": "161874006",
+                        "display": "Heavy feeling (finding)"
+                    },
+                    {
+                        "code": "18726006",
+                        "display": "Senile asthenia (finding)"
+                    },
+                    {
+                        "code": "224960004",
+                        "display": "Tired (finding)"
+                    },
+                    {
+                        "code": "248269005",
+                        "display": "Tired on least exertion (finding)"
+                    },
+                    {
+                        "code": "248278004",
+                        "display": "Attacks of weakness (finding)"
+                    },
+                    {
+                        "code": "250002000",
+                        "display": "Rapid fatigue of gait (finding)"
+                    },
+                    {
+                        "code": "267032009",
+                        "display": "Tired all the time (finding)"
+                    },
+                    {
+                        "code": "373931001",
+                        "display": "Sensation of heaviness in limbs (finding)"
+                    },
+                    {
+                        "code": "442099003",
+                        "display": "Psychogenic fatigue (finding)"
+                    },
+                    {
+                        "code": "444042007",
+                        "display": "Excessive postexertional fatigue (finding)"
+                    },
+                    {
+                        "code": "704369007",
+                        "display": "Fatigue due to treatment (finding)"
+                    },
+                    {
+                        "code": "713568000",
+                        "display": "Occasionally tired (finding)"
+                    },
+                    {
+                        "code": "716749005",
+                        "display": "Fatigue associated with malignant neoplastic disease (finding)"
+                    },
+                    {
+                        "code": "784317004",
+                        "display": "Fatigue due to chemotherapy (finding)"
+                    },
+                    {
+                        "code": "784318009",
+                        "display": "Fatigue due to radiation therapy (finding)"
+                    },
+                    {
+                        "code": "84229001",
+                        "display": "Fatigue (finding)"
+                    }
+                ]
+            }
+        ]
+    }
+}

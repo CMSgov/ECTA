@@ -1,0 +1,217 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.17.4077.3.1027",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-04-12T09:30:04.000+00:00",
+        "source": "#UxpO0CU2b63RusZV"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.17.4077.3.1027",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113883.17.4077.3.1027"
+        }
+    ],
+    "version": "Latest",
+    "name": "Headache",
+    "title": "Headache",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2022-09",
+                "concept": [
+                    {
+                        "code": "103007003",
+                        "display": "Headache due to external compression of head (finding)"
+                    },
+                    {
+                        "code": "112101004",
+                        "display": "Dental headache (finding)"
+                    },
+                    {
+                        "code": "122731000119104",
+                        "display": "Primary thunderclap headache (disorder)"
+                    },
+                    {
+                        "code": "122751000119105",
+                        "display": "Acute posttraumatic headache (finding)"
+                    },
+                    {
+                        "code": "128187005",
+                        "display": "Vascular headache (disorder)"
+                    },
+                    {
+                        "code": "13322008",
+                        "display": "Postseizure headache (finding)"
+                    },
+                    {
+                        "code": "162299003",
+                        "display": "Generalized headache (finding)"
+                    },
+                    {
+                        "code": "162301005",
+                        "display": "Bilateral headache (finding)"
+                    },
+                    {
+                        "code": "162304002",
+                        "display": "Parietal headache (finding)"
+                    },
+                    {
+                        "code": "162307009",
+                        "display": "Aching headache (finding)"
+                    },
+                    {
+                        "code": "162308004",
+                        "display": "Throbbing headache (finding)"
+                    },
+                    {
+                        "code": "162309007",
+                        "display": "Shooting headache (finding)"
+                    },
+                    {
+                        "code": "230461009",
+                        "display": "Headache disorder (disorder)"
+                    },
+                    {
+                        "code": "230478000",
+                        "display": "Low pressure headache (disorder)"
+                    },
+                    {
+                        "code": "230481005",
+                        "display": "Idiopathic stabbing headache (disorder)"
+                    },
+                    {
+                        "code": "25064002",
+                        "display": "Headache (finding)"
+                    },
+                    {
+                        "code": "267096005",
+                        "display": "Frontal headache (finding)"
+                    },
+                    {
+                        "code": "279016001",
+                        "display": "Cervicogenic headache (finding)"
+                    },
+                    {
+                        "code": "330007",
+                        "display": "Occipital headache (finding)"
+                    },
+                    {
+                        "code": "364760007",
+                        "display": "Finding of headache character (finding)"
+                    },
+                    {
+                        "code": "38823002",
+                        "display": "Aural headache (finding)"
+                    },
+                    {
+                        "code": "398057008",
+                        "display": "Tension-type headache (disorder)"
+                    },
+                    {
+                        "code": "398126006",
+                        "display": "Muscular headache (disorder)"
+                    },
+                    {
+                        "code": "41413006",
+                        "display": "Temporal headache (finding)"
+                    },
+                    {
+                        "code": "425978000",
+                        "display": "History of headache (situation)"
+                    },
+                    {
+                        "code": "44538002",
+                        "display": "Nasal headache (finding)"
+                    },
+                    {
+                        "code": "445511002",
+                        "display": "Orthostatic headache (finding)"
+                    },
+                    {
+                        "code": "4969004",
+                        "display": "Sinus headache (finding)"
+                    },
+                    {
+                        "code": "54012000",
+                        "display": "Posttraumatic headache (finding)"
+                    },
+                    {
+                        "code": "712826000",
+                        "display": "Intermittent headache (finding)"
+                    },
+                    {
+                        "code": "722983008",
+                        "display": "Headache due to injury of head and neck (finding)"
+                    },
+                    {
+                        "code": "735938006",
+                        "display": "Acute headache (finding)"
+                    },
+                    {
+                        "code": "86925001",
+                        "display": "Ocular headache (finding)"
+                    }
+                ]
+            },
+            {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "version": "2023",
+                "concept": [
+                    {
+                        "code": "G44.201",
+                        "display": "Tension-type headache, unspecified, intractable"
+                    },
+                    {
+                        "code": "G44.211",
+                        "display": "Episodic tension-type headache, intractable"
+                    },
+                    {
+                        "code": "G44.3",
+                        "display": "Post-traumatic headache"
+                    },
+                    {
+                        "code": "G44.30",
+                        "display": "Post-traumatic headache, unspecified"
+                    },
+                    {
+                        "code": "G44.301",
+                        "display": "Post-traumatic headache, unspecified, intractable"
+                    },
+                    {
+                        "code": "G44.309",
+                        "display": "Post-traumatic headache, unspecified, not intractable"
+                    },
+                    {
+                        "code": "G44.31",
+                        "display": "Acute post-traumatic headache"
+                    },
+                    {
+                        "code": "G44.311",
+                        "display": "Acute post-traumatic headache, intractable"
+                    },
+                    {
+                        "code": "G44.319",
+                        "display": "Acute post-traumatic headache, not intractable"
+                    },
+                    {
+                        "code": "G44.53",
+                        "display": "Primary thunderclap headache"
+                    },
+                    {
+                        "code": "G44.85",
+                        "display": "Primary stabbing headache"
+                    },
+                    {
+                        "code": "R51",
+                        "display": "Headache"
+                    }
+                ]
+            }
+        ]
+    }
+}

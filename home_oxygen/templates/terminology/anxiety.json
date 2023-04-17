@@ -1,0 +1,609 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113762.1.4.1021.94",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-04-12T09:30:14.000+00:00",
+        "source": "#DW1fgyyd6LM2tGUl"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1021.94",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113762.1.4.1021.94"
+        }
+    ],
+    "version": "Latest",
+    "name": "Anxiety",
+    "title": "Anxiety",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2022-09",
+                "concept": [
+                    {
+                        "code": "111490003",
+                        "display": "Panic disorder with agoraphobia, agoraphobic avoidance in partial remission AND severe panic attacks (disorder)"
+                    },
+                    {
+                        "code": "111491004",
+                        "display": "Panic disorder with agoraphobia, agoraphobic avoidance in full remission AND panic attacks in partial remission (disorder)"
+                    },
+                    {
+                        "code": "11941006",
+                        "display": "Panic disorder with agoraphobia, agoraphobic avoidance in full remission AND panic attacks in full remission (disorder)"
+                    },
+                    {
+                        "code": "126943008",
+                        "display": "Separation anxiety (disorder)"
+                    },
+                    {
+                        "code": "1376001",
+                        "display": "Obsessive compulsive personality disorder (disorder)"
+                    },
+                    {
+                        "code": "1380006",
+                        "display": "Agoraphobia without history of panic disorder with limited symptom attacks (disorder)"
+                    },
+                    {
+                        "code": "15277004",
+                        "display": "Hallucinogen-induced anxiety disorder (disorder)"
+                    },
+                    {
+                        "code": "16266831000119100",
+                        "display": "Moderate major depressive disorder co-occurrent with anxiety single episode (disorder)"
+                    },
+                    {
+                        "code": "1686006",
+                        "display": "Sedative, hypnotic AND/OR anxiolytic-induced anxiety disorder (disorder)"
+                    },
+                    {
+                        "code": "17496003",
+                        "display": "Organic anxiety disorder (disorder)"
+                    },
+                    {
+                        "code": "1816003",
+                        "display": "Panic disorder with agoraphobia, severe agoraphobic avoidance AND mild panic attacks (disorder)"
+                    },
+                    {
+                        "code": "18193002",
+                        "display": "Hypochondriasis (disorder)"
+                    },
+                    {
+                        "code": "191722009",
+                        "display": "Agoraphobia with panic attacks (disorder)"
+                    },
+                    {
+                        "code": "191736004",
+                        "display": "Obsessive-compulsive disorder (disorder)"
+                    },
+                    {
+                        "code": "192037000",
+                        "display": "Acute panic state due to acute stress reaction (disorder)"
+                    },
+                    {
+                        "code": "192039002",
+                        "display": "Acute stupor state due to acute stress reaction (disorder)"
+                    },
+                    {
+                        "code": "192042008",
+                        "display": "Acute post-trauma stress state (disorder)"
+                    },
+                    {
+                        "code": "197480006",
+                        "display": "Anxiety disorder (disorder)"
+                    },
+                    {
+                        "code": "19766004",
+                        "display": "Panic disorder with agoraphobia, mild agoraphobic avoidance AND severe panic attacks (disorder)"
+                    },
+                    {
+                        "code": "20876004",
+                        "display": "Inhalant-induced anxiety disorder (disorder)"
+                    },
+                    {
+                        "code": "21897009",
+                        "display": "Generalized anxiety disorder (disorder)"
+                    },
+                    {
+                        "code": "22230001",
+                        "display": "Panic disorder with agoraphobia, agoraphobic avoidance in partial remission AND panic attacks in full remission (disorder)"
+                    },
+                    {
+                        "code": "22621000119103",
+                        "display": "Anxiety disorder caused by drug (disorder)"
+                    },
+                    {
+                        "code": "231504006",
+                        "display": "Mixed anxiety and depressive disorder (disorder)"
+                    },
+                    {
+                        "code": "24781009",
+                        "display": "Panic disorder with agoraphobia, mild agoraphobic avoidance AND panic attacks in full remission (disorder)"
+                    },
+                    {
+                        "code": "25501002",
+                        "display": "Social phobia (disorder)"
+                    },
+                    {
+                        "code": "271952001",
+                        "display": "Stress and adjustment reaction (disorder)"
+                    },
+                    {
+                        "code": "30059008",
+                        "display": "Panic disorder with agoraphobia, severe agoraphobic avoidance AND moderate panic attacks (disorder)"
+                    },
+                    {
+                        "code": "313182004",
+                        "display": "Chronic post-traumatic stress disorder (disorder)"
+                    },
+                    {
+                        "code": "3158007",
+                        "display": "Panic disorder with agoraphobia, agoraphobic avoidance in partial remission AND panic attacks in partial remission (disorder)"
+                    },
+                    {
+                        "code": "31781004",
+                        "display": "Panic disorder with agoraphobia, agoraphobic avoidance in partial remission AND mild panic attacks (disorder)"
+                    },
+                    {
+                        "code": "318784009",
+                        "display": "Posttraumatic stress disorder, delayed onset (disorder)"
+                    },
+                    {
+                        "code": "32388005",
+                        "display": "Panic disorder with agoraphobia, agoraphobic avoidance in partial remission AND moderate panic attacks (disorder)"
+                    },
+                    {
+                        "code": "34116005",
+                        "display": "Panic disorder with agoraphobia, agoraphobic avoidance in full remission AND severe panic attacks (disorder)"
+                    },
+                    {
+                        "code": "34938008",
+                        "display": "Anxiety disorder caused by alcohol (disorder)"
+                    },
+                    {
+                        "code": "35607004",
+                        "display": "Panic disorder with agoraphobia (disorder)"
+                    },
+                    {
+                        "code": "371631005",
+                        "display": "Panic disorder (disorder)"
+                    },
+                    {
+                        "code": "38328002",
+                        "display": "Panic disorder with agoraphobia, severe agoraphobic avoidance AND panic attacks in full remission (disorder)"
+                    },
+                    {
+                        "code": "386810004",
+                        "display": "Phobic disorder (disorder)"
+                    },
+                    {
+                        "code": "39951001",
+                        "display": "Cannabis-induced anxiety disorder (disorder)"
+                    },
+                    {
+                        "code": "428687006",
+                        "display": "Nightmares associated with chronic post-traumatic stress disorder (disorder)"
+                    },
+                    {
+                        "code": "43150009",
+                        "display": "Panic disorder without agoraphobia with severe panic attacks (disorder)"
+                    },
+                    {
+                        "code": "436001000124105",
+                        "display": "Insomnia due to anxiety and fear (disorder)"
+                    },
+                    {
+                        "code": "446175003",
+                        "display": "Acute posttraumatic stress disorder following military combat (disorder)"
+                    },
+                    {
+                        "code": "446180007",
+                        "display": "Delayed posttraumatic stress disorder following military combat (disorder)"
+                    },
+                    {
+                        "code": "47372000",
+                        "display": "Adjustment disorder with anxious mood (disorder)"
+                    },
+                    {
+                        "code": "47505003",
+                        "display": "Posttraumatic stress disorder (disorder)"
+                    },
+                    {
+                        "code": "4932002",
+                        "display": "Panic disorder with agoraphobia, moderate agoraphobic avoidance AND mild panic attacks (disorder)"
+                    },
+                    {
+                        "code": "49564006",
+                        "display": "Panic disorder with agoraphobia, mild agoraphobic avoidance AND moderate panic attacks (disorder)"
+                    },
+                    {
+                        "code": "50026000",
+                        "display": "Organic anxiety disorder caused by psychoactive substance (disorder)"
+                    },
+                    {
+                        "code": "50983008",
+                        "display": "Panic disorder with agoraphobia, mild agoraphobic avoidance AND panic attacks in partial remission (disorder)"
+                    },
+                    {
+                        "code": "51493001",
+                        "display": "Anxiety disorder caused by cocaine (disorder)"
+                    },
+                    {
+                        "code": "52910006",
+                        "display": "Anxiety disorder due to a general medical condition (disorder)"
+                    },
+                    {
+                        "code": "53956006",
+                        "display": "Panic disorder without agoraphobia with panic attacks in partial remission (disorder)"
+                    },
+                    {
+                        "code": "54587008",
+                        "display": "Simple phobia (disorder)"
+                    },
+                    {
+                        "code": "5509004",
+                        "display": "Panic disorder with agoraphobia AND severe panic attacks (disorder)"
+                    },
+                    {
+                        "code": "55967005",
+                        "display": "Anxiety disorder caused by phencyclidine (disorder)"
+                    },
+                    {
+                        "code": "56576003",
+                        "display": "Panic disorder without agoraphobia (disorder)"
+                    },
+                    {
+                        "code": "59923000",
+                        "display": "Panic disorder with agoraphobia AND panic attacks in full remission (disorder)"
+                    },
+                    {
+                        "code": "61212007",
+                        "display": "Panic disorder with agoraphobia, severe agoraphobic avoidance AND severe panic attacks (disorder)"
+                    },
+                    {
+                        "code": "61569007",
+                        "display": "Agoraphobia without history of panic disorder (disorder)"
+                    },
+                    {
+                        "code": "62351001",
+                        "display": "Generalized social phobia (disorder)"
+                    },
+                    {
+                        "code": "63701002",
+                        "display": "Panic disorder with agoraphobia, mild agoraphobic avoidance AND mild panic attacks (disorder)"
+                    },
+                    {
+                        "code": "63909006",
+                        "display": "Panic disorder with agoraphobia AND panic attacks in partial remission (disorder)"
+                    },
+                    {
+                        "code": "64060000",
+                        "display": "Panic disorder with agoraphobia, moderate agoraphobic avoidance AND panic attacks in full remission (disorder)"
+                    },
+                    {
+                        "code": "65064003",
+                        "display": "Panic disorder without agoraphobia with moderate panic attacks (disorder)"
+                    },
+                    {
+                        "code": "67195008",
+                        "display": "Acute stress disorder (disorder)"
+                    },
+                    {
+                        "code": "69479009",
+                        "display": "Anxiety hyperventilation (disorder)"
+                    },
+                    {
+                        "code": "698693004",
+                        "display": "Adjustment disorder with anxious mood in remission (disorder)"
+                    },
+                    {
+                        "code": "699241002",
+                        "display": "Chronic post-traumatic stress disorder following military combat (disorder)"
+                    },
+                    {
+                        "code": "7031000119100",
+                        "display": "Psychogenic fugue co-occurrent and due to stress reaction (disorder)"
+                    },
+                    {
+                        "code": "70655008",
+                        "display": "Caffeine-induced anxiety disorder (disorder)"
+                    },
+                    {
+                        "code": "70691001",
+                        "display": "Agoraphobia (disorder)"
+                    },
+                    {
+                        "code": "724654009",
+                        "display": "Anxiety disorder caused by opioid (disorder)"
+                    },
+                    {
+                        "code": "724693000",
+                        "display": "Obsessive compulsive disorder caused by cocaine (disorder)"
+                    },
+                    {
+                        "code": "724708007",
+                        "display": "Anxiety disorder caused by methylenedioxymethamphetamine (disorder)"
+                    },
+                    {
+                        "code": "724722007",
+                        "display": "Anxiety disorder caused by dissociative drug (disorder)"
+                    },
+                    {
+                        "code": "724723002",
+                        "display": "Anxiety disorder caused by ketamine (disorder)"
+                    },
+                    {
+                        "code": "724730008",
+                        "display": "Obsessive compulsive disorder caused by psychoactive substance (disorder)"
+                    },
+                    {
+                        "code": "72861004",
+                        "display": "Panic disorder without agoraphobia with mild panic attacks (disorder)"
+                    },
+                    {
+                        "code": "74010007",
+                        "display": "Panic disorder with agoraphobia, severe agoraphobic avoidance AND panic attacks in partial remission (disorder)"
+                    },
+                    {
+                        "code": "76812003",
+                        "display": "Panic disorder with agoraphobia, moderate agoraphobic avoidance AND panic attacks in partial remission (disorder)"
+                    },
+                    {
+                        "code": "76868007",
+                        "display": "Panic disorder with agoraphobia, agoraphobic avoidance in full remission AND mild panic attacks (disorder)"
+                    },
+                    {
+                        "code": "8185002",
+                        "display": "Panic disorder with agoraphobia AND moderate panic attacks (disorder)"
+                    },
+                    {
+                        "code": "82339009",
+                        "display": "Anxiety disorder caused by amfetamine (disorder)"
+                    },
+                    {
+                        "code": "82415003",
+                        "display": "Agoraphobia without history of panic disorder without limited symptom attacks (disorder)"
+                    },
+                    {
+                        "code": "82494000",
+                        "display": "Panic disorder without agoraphobia with panic attacks in full remission (disorder)"
+                    },
+                    {
+                        "code": "82738004",
+                        "display": "Panic disorder with agoraphobia, moderate agoraphobic avoidance AND moderate panic attacks (disorder)"
+                    },
+                    {
+                        "code": "83631006",
+                        "display": "Panic disorder with agoraphobia, moderate agoraphobic avoidance AND severe panic attacks (disorder)"
+                    },
+                    {
+                        "code": "87798009",
+                        "display": "Panic disorder with agoraphobia, agoraphobic avoidance in full remission AND moderate panic attacks (disorder)"
+                    },
+                    {
+                        "code": "89948007",
+                        "display": "Panic disorder with agoraphobia AND mild panic attacks (disorder)"
+                    }
+                ]
+            },
+            {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "version": "2023",
+                "concept": [
+                    {
+                        "code": "F06.4",
+                        "display": "Anxiety disorder due to known physiological condition"
+                    },
+                    {
+                        "code": "F10.180",
+                        "display": "Alcohol abuse with alcohol-induced anxiety disorder"
+                    },
+                    {
+                        "code": "F10.280",
+                        "display": "Alcohol dependence with alcohol-induced anxiety disorder"
+                    },
+                    {
+                        "code": "F10.980",
+                        "display": "Alcohol use, unspecified with alcohol-induced anxiety disorder"
+                    },
+                    {
+                        "code": "F12.180",
+                        "display": "Cannabis abuse with cannabis-induced anxiety disorder"
+                    },
+                    {
+                        "code": "F12.280",
+                        "display": "Cannabis dependence with cannabis-induced anxiety disorder"
+                    },
+                    {
+                        "code": "F12.980",
+                        "display": "Cannabis use, unspecified with anxiety disorder"
+                    },
+                    {
+                        "code": "F13.180",
+                        "display": "Sedative, hypnotic or anxiolytic abuse with sedative, hypnotic or anxiolytic-induced anxiety disorder"
+                    },
+                    {
+                        "code": "F13.280",
+                        "display": "Sedative, hypnotic or anxiolytic dependence with sedative, hypnotic or anxiolytic-induced anxiety disorder"
+                    },
+                    {
+                        "code": "F13.980",
+                        "display": "Sedative, hypnotic or anxiolytic use, unspecified with sedative, hypnotic or anxiolytic-induced anxiety disorder"
+                    },
+                    {
+                        "code": "F14.180",
+                        "display": "Cocaine abuse with cocaine-induced anxiety disorder"
+                    },
+                    {
+                        "code": "F14.280",
+                        "display": "Cocaine dependence with cocaine-induced anxiety disorder"
+                    },
+                    {
+                        "code": "F14.980",
+                        "display": "Cocaine use, unspecified with cocaine-induced anxiety disorder"
+                    },
+                    {
+                        "code": "F15.180",
+                        "display": "Other stimulant abuse with stimulant-induced anxiety disorder"
+                    },
+                    {
+                        "code": "F15.280",
+                        "display": "Other stimulant dependence with stimulant-induced anxiety disorder"
+                    },
+                    {
+                        "code": "F15.980",
+                        "display": "Other stimulant use, unspecified with stimulant-induced anxiety disorder"
+                    },
+                    {
+                        "code": "F16.180",
+                        "display": "Hallucinogen abuse with hallucinogen-induced anxiety disorder"
+                    },
+                    {
+                        "code": "F16.280",
+                        "display": "Hallucinogen dependence with hallucinogen-induced anxiety disorder"
+                    },
+                    {
+                        "code": "F16.980",
+                        "display": "Hallucinogen use, unspecified with hallucinogen-induced anxiety disorder"
+                    },
+                    {
+                        "code": "F18.180",
+                        "display": "Inhalant abuse with inhalant-induced anxiety disorder"
+                    },
+                    {
+                        "code": "F18.280",
+                        "display": "Inhalant dependence with inhalant-induced anxiety disorder"
+                    },
+                    {
+                        "code": "F18.980",
+                        "display": "Inhalant use, unspecified with inhalant-induced anxiety disorder"
+                    },
+                    {
+                        "code": "F19.180",
+                        "display": "Other psychoactive substance abuse with psychoactive substance-induced anxiety disorder"
+                    },
+                    {
+                        "code": "F19.280",
+                        "display": "Other psychoactive substance dependence with psychoactive substance-induced anxiety disorder"
+                    },
+                    {
+                        "code": "F19.980",
+                        "display": "Other psychoactive substance use, unspecified with psychoactive substance-induced anxiety disorder"
+                    },
+                    {
+                        "code": "F40.00",
+                        "display": "Agoraphobia, unspecified"
+                    },
+                    {
+                        "code": "F40.01",
+                        "display": "Agoraphobia with panic disorder"
+                    },
+                    {
+                        "code": "F40.02",
+                        "display": "Agoraphobia without panic disorder"
+                    },
+                    {
+                        "code": "F40.10",
+                        "display": "Social phobia, unspecified"
+                    },
+                    {
+                        "code": "F40.11",
+                        "display": "Social phobia, generalized"
+                    },
+                    {
+                        "code": "F40.240",
+                        "display": "Claustrophobia"
+                    },
+                    {
+                        "code": "F40.8",
+                        "display": "Other phobic anxiety disorders"
+                    },
+                    {
+                        "code": "F40.9",
+                        "display": "Phobic anxiety disorder, unspecified"
+                    },
+                    {
+                        "code": "F41.0",
+                        "display": "Panic disorder [episodic paroxysmal anxiety]"
+                    },
+                    {
+                        "code": "F41.1",
+                        "display": "Generalized anxiety disorder"
+                    },
+                    {
+                        "code": "F41.3",
+                        "display": "Other mixed anxiety disorders"
+                    },
+                    {
+                        "code": "F41.8",
+                        "display": "Other specified anxiety disorders"
+                    },
+                    {
+                        "code": "F41.9",
+                        "display": "Anxiety disorder, unspecified"
+                    },
+                    {
+                        "code": "F42.2",
+                        "display": "Mixed obsessional thoughts and acts"
+                    },
+                    {
+                        "code": "F42.4",
+                        "display": "Excoriation (skin-picking) disorder"
+                    },
+                    {
+                        "code": "F42.8",
+                        "display": "Other obsessive-compulsive disorder"
+                    },
+                    {
+                        "code": "F42.9",
+                        "display": "Obsessive-compulsive disorder, unspecified"
+                    },
+                    {
+                        "code": "F43.0",
+                        "display": "Acute stress reaction"
+                    },
+                    {
+                        "code": "F43.10",
+                        "display": "Post-traumatic stress disorder, unspecified"
+                    },
+                    {
+                        "code": "F43.11",
+                        "display": "Post-traumatic stress disorder, acute"
+                    },
+                    {
+                        "code": "F43.12",
+                        "display": "Post-traumatic stress disorder, chronic"
+                    },
+                    {
+                        "code": "F43.22",
+                        "display": "Adjustment disorder with anxiety"
+                    },
+                    {
+                        "code": "F43.23",
+                        "display": "Adjustment disorder with mixed anxiety and depressed mood"
+                    },
+                    {
+                        "code": "F43.8",
+                        "display": "Other reactions to severe stress"
+                    },
+                    {
+                        "code": "F43.9",
+                        "display": "Reaction to severe stress, unspecified"
+                    },
+                    {
+                        "code": "F45.21",
+                        "display": "Hypochondriasis"
+                    },
+                    {
+                        "code": "R46.81",
+                        "display": "Obsessive-compulsive behavior"
+                    }
+                ]
+            }
+        ]
+    }
+}

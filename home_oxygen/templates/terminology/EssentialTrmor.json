@@ -1,0 +1,57 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113762.1.4.1078.335",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-04-12T09:30:01.000+00:00",
+        "source": "#6eLjBhx3rvmKt1JM"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1078.335",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113762.1.4.1078.335"
+        }
+    ],
+    "version": "Latest",
+    "name": "Essentialtremor",
+    "title": "Essential tremor",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2022-09",
+                "concept": [
+                    {
+                        "code": "609558009",
+                        "display": "Essential tremor (disorder)"
+                    },
+                    {
+                        "code": "609559001",
+                        "display": "Hereditary essential tremor (disorder)"
+                    },
+                    {
+                        "code": "723721007",
+                        "display": "Sensorineural hearing loss, early graying, essential tremor syndrome (disorder)"
+                    },
+                    {
+                        "code": "782935003",
+                        "display": "Tremor, nystagmus, duodenal ulcer syndrome (disorder)"
+                    }
+                ]
+            },
+            {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "version": "2023",
+                "concept": [
+                    {
+                        "code": "G25.0",
+                        "display": "Essential tremor"
+                    }
+                ]
+            }
+        ]
+    }
+}

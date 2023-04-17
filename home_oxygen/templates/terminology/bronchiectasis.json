@@ -1,0 +1,199 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.666.5.773",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2020-07-28T13:58:47.000+00:00",
+        "source": "#2BONAlpXL5Y2E3Ik"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.666.5.773",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113883.3.666.5.773"
+        }
+    ],
+    "version": "Latest",
+    "name": "Bronchiectasis",
+    "title": "Bronchiectasis",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://hl7.org/fhir/sid/icd-9-cm/diagnosis",
+                "version": "2013",
+                "concept": [
+                    {
+                        "code": "011.50",
+                        "display": "Tuberculous bronchiectasis, unspecified"
+                    },
+                    {
+                        "code": "011.51",
+                        "display": "Tuberculous bronchiectasis, bacteriological or histological examination not done"
+                    },
+                    {
+                        "code": "011.52",
+                        "display": "Tuberculous bronchiectasis, bacteriological or histological examination unknown (at present)"
+                    },
+                    {
+                        "code": "011.53",
+                        "display": "Tuberculous bronchiectasis, tubercle bacilli found (in sputum) by microscopy"
+                    },
+                    {
+                        "code": "011.54",
+                        "display": "Tuberculous bronchiectasis, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture"
+                    },
+                    {
+                        "code": "011.55",
+                        "display": "Tuberculous bronchiectasis, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically"
+                    },
+                    {
+                        "code": "011.56",
+                        "display": "Tuberculous bronchiectasis, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]"
+                    }
+                ]
+            },
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2020-03",
+                "concept": [
+                    {
+                        "code": "12295008",
+                        "display": "Bronchiectasis (disorder)"
+                    },
+                    {
+                        "code": "13217005",
+                        "display": "Fusiform bronchiectasis (disorder)"
+                    },
+                    {
+                        "code": "19325002",
+                        "display": "Traction bronchiectasis (disorder)"
+                    },
+                    {
+                        "code": "195984007",
+                        "display": "Recurrent bronchiectasis (disorder)"
+                    },
+                    {
+                        "code": "195985008",
+                        "display": "Post-infective bronchiectasis (disorder)"
+                    },
+                    {
+                        "code": "23022004",
+                        "display": "Tuberculous bronchiectasis (disorder)"
+                    },
+                    {
+                        "code": "233627004",
+                        "display": "Congenital cystic bronchiectasis (disorder)"
+                    },
+                    {
+                        "code": "233628009",
+                        "display": "Acquired bronchiectasis (disorder)"
+                    },
+                    {
+                        "code": "233629001",
+                        "display": "Idiopathic bronchiectasis (disorder)"
+                    },
+                    {
+                        "code": "233630006",
+                        "display": "Obstructive bronchiectasis (disorder)"
+                    },
+                    {
+                        "code": "233631005",
+                        "display": "Toxin-induced bronchiectasis (disorder)"
+                    },
+                    {
+                        "code": "233632003",
+                        "display": "Bronchiectasis caused by toxic aspiration (disorder)"
+                    },
+                    {
+                        "code": "233633008",
+                        "display": "Bronchiectasis caused by toxic inhalation (disorder)"
+                    },
+                    {
+                        "code": "233634002",
+                        "display": "Post-lung transplantation bronchiectasis (disorder)"
+                    },
+                    {
+                        "code": "445378003",
+                        "display": "Acute exacerbation of bronchiectasis (disorder)"
+                    }
+                ]
+            },
+            {
+                "system": "http://hl7.org/fhir/sid/icd-9-cm/diagnosis",
+                "version": "2013",
+                "concept": [
+                    {
+                        "code": "494.0",
+                        "display": "Bronchiectasis without acute exacerbation"
+                    },
+                    {
+                        "code": "494.1",
+                        "display": "Bronchiectasis with acute exacerbation"
+                    }
+                ]
+            },
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2020-03",
+                "concept": [
+                    {
+                        "code": "51068008",
+                        "display": "Adult bronchiectasis (disorder)"
+                    },
+                    {
+                        "code": "52500008",
+                        "display": "Saccular bronchiectasis (disorder)"
+                    }
+                ]
+            },
+            {
+                "system": "http://hl7.org/fhir/sid/icd-9-cm/diagnosis",
+                "version": "2013",
+                "concept": [
+                    {
+                        "code": "748.61",
+                        "display": "Congenital bronchiectasis"
+                    }
+                ]
+            },
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2020-03",
+                "concept": [
+                    {
+                        "code": "77593006",
+                        "display": "Congenital bronchiectasis (disorder)"
+                    },
+                    {
+                        "code": "83457000",
+                        "display": "Cylindrical bronchiectasis (disorder)"
+                    }
+                ]
+            },
+            {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "version": "2020",
+                "concept": [
+                    {
+                        "code": "J47.0",
+                        "display": "Bronchiectasis with acute lower respiratory infection"
+                    },
+                    {
+                        "code": "J47.1",
+                        "display": "Bronchiectasis with (acute) exacerbation"
+                    },
+                    {
+                        "code": "J47.9",
+                        "display": "Bronchiectasis, uncomplicated"
+                    },
+                    {
+                        "code": "Q33.4",
+                        "display": "Congenital bronchiectasis"
+                    }
+                ]
+            }
+        ]
+    }
+}

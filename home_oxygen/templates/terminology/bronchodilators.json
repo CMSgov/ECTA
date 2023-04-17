@@ -1,0 +1,1179 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113762.1.4.1182.60",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-04-12T09:30:17.000+00:00",
+        "source": "#LfEuQsKEVVFef6cA"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1182.60",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113762.1.4.1182.60"
+        }
+    ],
+    "version": "Latest",
+    "name": "LongActingInhaledBronchodilators",
+    "title": "Long Acting Inhaled Bronchodilators",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "version": "2023-03",
+                "concept": [
+                    {
+                        "code": "1114329",
+                        "display": "indacaterol 0.075 MG Inhalation Powder"
+                    },
+                    {
+                        "code": "1114330",
+                        "display": "Arcapta"
+                    },
+                    {
+                        "code": "1114333",
+                        "display": "indacaterol 0.075 MG Inhalation Powder [Arcapta]"
+                    },
+                    {
+                        "code": "1148645",
+                        "display": "28 ACTUAT fluticasone propionate 0.25 MG/ACTUAT Dry Powder Inhaler"
+                    },
+                    {
+                        "code": "1148646",
+                        "display": "28 ACTUAT fluticasone propionate 0.25 MG/ACTUAT Dry Powder Inhaler [Flovent]"
+                    },
+                    {
+                        "code": "1155693",
+                        "display": "beclomethasone Inhalant Product"
+                    },
+                    {
+                        "code": "1156069",
+                        "display": "budesonide / formoterol Inhalant Product"
+                    },
+                    {
+                        "code": "1156070",
+                        "display": "budesonide Inhalant Product"
+                    },
+                    {
+                        "code": "1158257",
+                        "display": "arformoterol Inhalant Product"
+                    },
+                    {
+                        "code": "1158502",
+                        "display": "salmeterol Inhalant Product"
+                    },
+                    {
+                        "code": "1160688",
+                        "display": "indacaterol Inhalant Product"
+                    },
+                    {
+                        "code": "1162108",
+                        "display": "tiotropium Inhalant Product"
+                    },
+                    {
+                        "code": "1165644",
+                        "display": "formoterol / mometasone Inhalant Product"
+                    },
+                    {
+                        "code": "1165648",
+                        "display": "formoterol Inhalant Product"
+                    },
+                    {
+                        "code": "1165654",
+                        "display": "fluticasone / salmeterol Inhalant Product"
+                    },
+                    {
+                        "code": "1165655",
+                        "display": "fluticasone Inhalant Product"
+                    },
+                    {
+                        "code": "1166984",
+                        "display": "Dulera Inhalant Product"
+                    },
+                    {
+                        "code": "1167345",
+                        "display": "Brovana Inhalant Product"
+                    },
+                    {
+                        "code": "1169793",
+                        "display": "Flovent Inhalant Product"
+                    },
+                    {
+                        "code": "1170103",
+                        "display": "Arcapta Inhalant Product"
+                    },
+                    {
+                        "code": "1171309",
+                        "display": "Advair Inhalant Product"
+                    },
+                    {
+                        "code": "1177118",
+                        "display": "Qvar Inhalant Product"
+                    },
+                    {
+                        "code": "1177261",
+                        "display": "Spiriva Inhalant Product"
+                    },
+                    {
+                        "code": "1180757",
+                        "display": "Serevent Inhalant Product"
+                    },
+                    {
+                        "code": "1183558",
+                        "display": "Pulmicort Inhalant Product"
+                    },
+                    {
+                        "code": "1185492",
+                        "display": "Symbicort Inhalant Product"
+                    },
+                    {
+                        "code": "1185816",
+                        "display": "Perforomist Inhalant Product"
+                    },
+                    {
+                        "code": "1246287",
+                        "display": "formoterol fumarate 0.0045 MG/ACTUAT"
+                    },
+                    {
+                        "code": "1246288",
+                        "display": "120 ACTUAT budesonide 0.08 MG/ACTUAT / formoterol fumarate 0.0045 MG/ACTUAT Metered Dose Inhaler"
+                    },
+                    {
+                        "code": "1246289",
+                        "display": "budesonide 0.08 MG/ACTUAT / formoterol fumarate 0.0045 MG/ACTUAT [Symbicort]"
+                    },
+                    {
+                        "code": "1246290",
+                        "display": "120 ACTUAT budesonide 0.08 MG/ACTUAT / formoterol fumarate 0.0045 MG/ACTUAT Metered Dose Inhaler [Symbicort]"
+                    },
+                    {
+                        "code": "1246304",
+                        "display": "120 ACTUAT budesonide 0.16 MG/ACTUAT / formoterol fumarate 0.0045 MG/ACTUAT Metered Dose Inhaler"
+                    },
+                    {
+                        "code": "1246305",
+                        "display": "budesonide 0.16 MG/ACTUAT / formoterol fumarate 0.0045 MG/ACTUAT [Symbicort]"
+                    },
+                    {
+                        "code": "1246306",
+                        "display": "120 ACTUAT budesonide 0.16 MG/ACTUAT / formoterol fumarate 0.0045 MG/ACTUAT Metered Dose Inhaler [Symbicort]"
+                    },
+                    {
+                        "code": "1246307",
+                        "display": "formoterol fumarate 0.005 MG/ACTUAT"
+                    },
+                    {
+                        "code": "1246308",
+                        "display": "120 ACTUAT formoterol fumarate 0.005 MG/ACTUAT / mometasone furoate 0.1 MG/ACTUAT Metered Dose Inhaler"
+                    },
+                    {
+                        "code": "1246309",
+                        "display": "formoterol fumarate 0.005 MG/ACTUAT / mometasone furoate 0.1 MG/ACTUAT [Dulera]"
+                    },
+                    {
+                        "code": "1246310",
+                        "display": "120 ACTUAT formoterol fumarate 0.005 MG/ACTUAT / mometasone furoate 0.1 MG/ACTUAT Metered Dose Inhaler [Dulera]"
+                    },
+                    {
+                        "code": "1246311",
+                        "display": "120 ACTUAT formoterol fumarate 0.005 MG/ACTUAT / mometasone furoate 0.2 MG/ACTUAT Metered Dose Inhaler"
+                    },
+                    {
+                        "code": "1246312",
+                        "display": "formoterol fumarate 0.005 MG/ACTUAT / mometasone furoate 0.2 MG/ACTUAT [Dulera]"
+                    },
+                    {
+                        "code": "1246313",
+                        "display": "120 ACTUAT formoterol fumarate 0.005 MG/ACTUAT / mometasone furoate 0.2 MG/ACTUAT Metered Dose Inhaler [Dulera]"
+                    },
+                    {
+                        "code": "1246314",
+                        "display": "60 ACTUAT budesonide 0.08 MG/ACTUAT / formoterol fumarate 0.0045 MG/ACTUAT Metered Dose Inhaler"
+                    },
+                    {
+                        "code": "1246315",
+                        "display": "60 ACTUAT budesonide 0.08 MG/ACTUAT / formoterol fumarate 0.0045 MG/ACTUAT Metered Dose Inhaler [Symbicort]"
+                    },
+                    {
+                        "code": "1246316",
+                        "display": "60 ACTUAT budesonide 0.16 MG/ACTUAT / formoterol fumarate 0.0045 MG/ACTUAT Metered Dose Inhaler"
+                    },
+                    {
+                        "code": "1246317",
+                        "display": "60 ACTUAT budesonide 0.16 MG/ACTUAT / formoterol fumarate 0.0045 MG/ACTUAT Metered Dose Inhaler [Symbicort]"
+                    },
+                    {
+                        "code": "1246318",
+                        "display": "formoterol fumarate 0.01 MG/ML"
+                    },
+                    {
+                        "code": "1246319",
+                        "display": "formoterol fumarate 0.01 MG/ML Inhalation Solution"
+                    },
+                    {
+                        "code": "1246320",
+                        "display": "formoterol fumarate 0.01 MG/ML [Perforomist]"
+                    },
+                    {
+                        "code": "1246321",
+                        "display": "formoterol fumarate 0.01 MG/ML Inhalation Solution [Perforomist]"
+                    },
+                    {
+                        "code": "1303099",
+                        "display": "aclidinium bromide 0.4 MG/ACTUAT"
+                    },
+                    {
+                        "code": "1303100",
+                        "display": "aclidinium Inhalant Product"
+                    },
+                    {
+                        "code": "1303101",
+                        "display": "aclidinium Dry Powder Inhaler"
+                    },
+                    {
+                        "code": "1303102",
+                        "display": "60 ACTUAT aclidinium bromide 0.4 MG/ACTUAT Dry Powder Inhaler"
+                    },
+                    {
+                        "code": "1303103",
+                        "display": "Tudorza"
+                    },
+                    {
+                        "code": "1303104",
+                        "display": "aclidinium bromide 0.4 MG/ACTUAT [Tudorza]"
+                    },
+                    {
+                        "code": "1303105",
+                        "display": "aclidinium Dry Powder Inhaler [Tudorza]"
+                    },
+                    {
+                        "code": "1303106",
+                        "display": "Tudorza Inhalant Product"
+                    },
+                    {
+                        "code": "1303107",
+                        "display": "60 ACTUAT aclidinium bromide 0.4 MG/ACTUAT Dry Powder Inhaler [Tudorza]"
+                    },
+                    {
+                        "code": "1372704",
+                        "display": "Dulera"
+                    },
+                    {
+                        "code": "1487515",
+                        "display": "umeclidinium 0.0625 MG/ACTUAT"
+                    },
+                    {
+                        "code": "1487516",
+                        "display": "umeclidinium / vilanterol Inhalant Product"
+                    },
+                    {
+                        "code": "1487517",
+                        "display": "umeclidinium / vilanterol Dry Powder Inhaler"
+                    },
+                    {
+                        "code": "1487519",
+                        "display": "7 ACTUAT umeclidinium 0.0625 MG/ACTUAT / vilanterol 0.025 MG/ACTUAT Dry Powder Inhaler"
+                    },
+                    {
+                        "code": "1487520",
+                        "display": "Anoro"
+                    },
+                    {
+                        "code": "1487521",
+                        "display": "umeclidinium 0.0625 MG/ACTUAT / vilanterol 0.025 MG/ACTUAT [Anoro]"
+                    },
+                    {
+                        "code": "1487522",
+                        "display": "umeclidinium / vilanterol Dry Powder Inhaler [Anoro]"
+                    },
+                    {
+                        "code": "1487523",
+                        "display": "Anoro Inhalant Product"
+                    },
+                    {
+                        "code": "1487524",
+                        "display": "7 ACTUAT umeclidinium 0.0625 MG/ACTUAT / vilanterol 0.025 MG/ACTUAT Dry Powder Inhaler [Anoro]"
+                    },
+                    {
+                        "code": "1487527",
+                        "display": "30 ACTUAT umeclidinium 0.0625 MG/ACTUAT / vilanterol 0.025 MG/ACTUAT Dry Powder Inhaler"
+                    },
+                    {
+                        "code": "1487528",
+                        "display": "30 ACTUAT umeclidinium 0.0625 MG/ACTUAT / vilanterol 0.025 MG/ACTUAT Dry Powder Inhaler [Anoro]"
+                    },
+                    {
+                        "code": "1490666",
+                        "display": "120 ACTUAT beclomethasone dipropionate 0.08 MG/ACTUAT Metered Dose Inhaler"
+                    },
+                    {
+                        "code": "1490668",
+                        "display": "120 ACTUAT beclomethasone dipropionate 0.08 MG/ACTUAT Metered Dose Inhaler [Qvar]"
+                    },
+                    {
+                        "code": "1490773",
+                        "display": "120 ACTUAT beclomethasone dipropionate 0.04 MG/ACTUAT Metered Dose Inhaler"
+                    },
+                    {
+                        "code": "1490774",
+                        "display": "120 ACTUAT beclomethasone dipropionate 0.04 MG/ACTUAT Metered Dose Inhaler [Qvar]"
+                    },
+                    {
+                        "code": "1539249",
+                        "display": "umeclidinium Inhalant Product"
+                    },
+                    {
+                        "code": "1539250",
+                        "display": "umeclidinium Dry Powder Inhaler"
+                    },
+                    {
+                        "code": "1539251",
+                        "display": "30 ACTUAT umeclidinium 0.0625 MG/ACTUAT Dry Powder Inhaler"
+                    },
+                    {
+                        "code": "1539881",
+                        "display": "Incruse"
+                    },
+                    {
+                        "code": "1539882",
+                        "display": "umeclidinium 0.0625 MG/ACTUAT [Incruse]"
+                    },
+                    {
+                        "code": "1539883",
+                        "display": "umeclidinium Dry Powder Inhaler [Incruse]"
+                    },
+                    {
+                        "code": "1539884",
+                        "display": "Incruse Inhalant Product"
+                    },
+                    {
+                        "code": "1539885",
+                        "display": "30 ACTUAT umeclidinium 0.0625 MG/ACTUAT Dry Powder Inhaler [Incruse]"
+                    },
+                    {
+                        "code": "1546061",
+                        "display": "olodaterol Inhalant Product"
+                    },
+                    {
+                        "code": "1546064",
+                        "display": "Striverdi"
+                    },
+                    {
+                        "code": "1546067",
+                        "display": "Striverdi Inhalant Product"
+                    },
+                    {
+                        "code": "1546076",
+                        "display": "olodaterol 0.0025 MG/ACTUAT"
+                    },
+                    {
+                        "code": "1546078",
+                        "display": "olodaterol 0.0025 MG/ACTUAT [Striverdi]"
+                    },
+                    {
+                        "code": "1546082",
+                        "display": "60 ACTUAT olodaterol 0.0025 MG/ACTUAT Inhalation Spray"
+                    },
+                    {
+                        "code": "1546083",
+                        "display": "60 ACTUAT olodaterol 0.0025 MG/ACTUAT Inhalation Spray [Striverdi]"
+                    },
+                    {
+                        "code": "1551894",
+                        "display": "tiotropium 0.0025 MG/ACTUAT"
+                    },
+                    {
+                        "code": "1551897",
+                        "display": "tiotropium 0.0025 MG/ACTUAT [Spiriva]"
+                    },
+                    {
+                        "code": "1552002",
+                        "display": "60 ACTUAT tiotropium 0.0025 MG/ACTUAT Inhalation Spray"
+                    },
+                    {
+                        "code": "1552004",
+                        "display": "60 ACTUAT tiotropium 0.0025 MG/ACTUAT Inhalation Spray [Spiriva]"
+                    },
+                    {
+                        "code": "1552008",
+                        "display": "28 ACTUAT tiotropium 0.0025 MG/ACTUAT Inhalation Spray"
+                    },
+                    {
+                        "code": "1552009",
+                        "display": "28 ACTUAT tiotropium 0.0025 MG/ACTUAT Inhalation Spray [Spiriva]"
+                    },
+                    {
+                        "code": "1596444",
+                        "display": "7 ACTUAT umeclidinium 0.0625 MG/ACTUAT Dry Powder Inhaler"
+                    },
+                    {
+                        "code": "1596445",
+                        "display": "7 ACTUAT umeclidinium 0.0625 MG/ACTUAT Dry Powder Inhaler [Incruse]"
+                    },
+                    {
+                        "code": "1607111",
+                        "display": "30 ACTUAT aclidinium bromide 0.4 MG/ACTUAT Dry Powder Inhaler"
+                    },
+                    {
+                        "code": "1607112",
+                        "display": "30 ACTUAT aclidinium bromide 0.4 MG/ACTUAT Dry Powder Inhaler [Tudorza]"
+                    },
+                    {
+                        "code": "1651266",
+                        "display": "28 ACTUAT olodaterol 0.0025 MG/ACTUAT / tiotropium 0.0025 MG/ACTUAT Inhalation Spray"
+                    },
+                    {
+                        "code": "1651267",
+                        "display": "Stiolto"
+                    },
+                    {
+                        "code": "1651270",
+                        "display": "Stiolto Inhalant Product"
+                    },
+                    {
+                        "code": "1651271",
+                        "display": "28 ACTUAT olodaterol 0.0025 MG/ACTUAT / tiotropium 0.0025 MG/ACTUAT Inhalation Spray [Stiolto]"
+                    },
+                    {
+                        "code": "1651274",
+                        "display": "60 ACTUAT olodaterol 0.0025 MG/ACTUAT / tiotropium 0.0025 MG/ACTUAT Inhalation Spray"
+                    },
+                    {
+                        "code": "1651275",
+                        "display": "60 ACTUAT olodaterol 0.0025 MG/ACTUAT / tiotropium 0.0025 MG/ACTUAT Inhalation Spray [Stiolto]"
+                    },
+                    {
+                        "code": "1658458",
+                        "display": "olodaterol / tiotropium Inhalant Product"
+                    },
+                    {
+                        "code": "1658462",
+                        "display": "olodaterol 0.0025 MG/ACTUAT / tiotropium 0.0025 MG/ACTUAT [Stiolto]"
+                    },
+                    {
+                        "code": "1660933",
+                        "display": "60 ACTUAT formoterol fumarate 0.005 MG/ACTUAT / mometasone furoate 0.1 MG/ACTUAT Metered Dose Inhaler"
+                    },
+                    {
+                        "code": "1660934",
+                        "display": "60 ACTUAT formoterol fumarate 0.005 MG/ACTUAT / mometasone furoate 0.1 MG/ACTUAT Metered Dose Inhaler [Dulera]"
+                    },
+                    {
+                        "code": "1660937",
+                        "display": "60 ACTUAT formoterol fumarate 0.005 MG/ACTUAT / mometasone furoate 0.2 MG/ACTUAT Metered Dose Inhaler"
+                    },
+                    {
+                        "code": "1660938",
+                        "display": "60 ACTUAT formoterol fumarate 0.005 MG/ACTUAT / mometasone furoate 0.2 MG/ACTUAT Metered Dose Inhaler [Dulera]"
+                    },
+                    {
+                        "code": "1667879",
+                        "display": "tiotropium 0.00125 MG/ACTUAT"
+                    },
+                    {
+                        "code": "1667880",
+                        "display": "60 ACTUAT tiotropium 0.00125 MG/ACTUAT Inhalation Spray"
+                    },
+                    {
+                        "code": "1667881",
+                        "display": "tiotropium 0.00125 MG/ACTUAT [Spiriva]"
+                    },
+                    {
+                        "code": "1667882",
+                        "display": "60 ACTUAT tiotropium 0.00125 MG/ACTUAT Inhalation Spray [Spiriva]"
+                    },
+                    {
+                        "code": "1667885",
+                        "display": "28 ACTUAT tiotropium 0.00125 MG/ACTUAT Inhalation Spray"
+                    },
+                    {
+                        "code": "1667886",
+                        "display": "28 ACTUAT tiotropium 0.00125 MG/ACTUAT Inhalation Spray [Spiriva]"
+                    },
+                    {
+                        "code": "1720948",
+                        "display": "glycopyrrolate 0.0156 MG / indacaterol 0.0275 MG Inhalation Powder"
+                    },
+                    {
+                        "code": "1720949",
+                        "display": "Utibron"
+                    },
+                    {
+                        "code": "1720952",
+                        "display": "Utibron Inhalant Product"
+                    },
+                    {
+                        "code": "1720953",
+                        "display": "glycopyrrolate 0.0156 MG / indacaterol 0.0275 MG Inhalation Powder [Utibron]"
+                    },
+                    {
+                        "code": "1721303",
+                        "display": "glycopyrrolate 0.0156 MG Inhalation Powder"
+                    },
+                    {
+                        "code": "1721304",
+                        "display": "Seebri"
+                    },
+                    {
+                        "code": "1721305",
+                        "display": "glycopyrrolate 0.0156 MG [Seebri]"
+                    },
+                    {
+                        "code": "1721307",
+                        "display": "Seebri Inhalant Product"
+                    },
+                    {
+                        "code": "1721308",
+                        "display": "glycopyrrolate 0.0156 MG Inhalation Powder [Seebri]"
+                    },
+                    {
+                        "code": "1721577",
+                        "display": "glycopyrrolate 0.0156 MG / indacaterol 0.0275 MG [Utibron]"
+                    },
+                    {
+                        "code": "1745530",
+                        "display": "budesonide 0.18 MG/ACTUAT [Pulmicort]"
+                    },
+                    {
+                        "code": "1745541",
+                        "display": "budesonide 0.09 MG/ACTUAT [Pulmicort]"
+                    },
+                    {
+                        "code": "1790635",
+                        "display": "glycopyrrolate 0.009 MG/ACTUAT"
+                    },
+                    {
+                        "code": "1790637",
+                        "display": "formoterol / glycopyrronium Metered Dose Inhaler"
+                    },
+                    {
+                        "code": "1790639",
+                        "display": "120 ACTUAT formoterol fumarate 0.0048 MG/ACTUAT / glycopyrrolate 0.009 MG/ACTUAT Metered Dose Inhaler"
+                    },
+                    {
+                        "code": "1790640",
+                        "display": "Bevespi"
+                    },
+                    {
+                        "code": "1790641",
+                        "display": "formoterol fumarate 0.0048 MG/ACTUAT / glycopyrrolate 0.009 MG/ACTUAT [Bevespi]"
+                    },
+                    {
+                        "code": "1790642",
+                        "display": "formoterol / glycopyrronium Metered Dose Inhaler [Bevespi]"
+                    },
+                    {
+                        "code": "1790643",
+                        "display": "Bevespi Inhalant Product"
+                    },
+                    {
+                        "code": "1790644",
+                        "display": "120 ACTUAT formoterol fumarate 0.0048 MG/ACTUAT / glycopyrrolate 0.009 MG/ACTUAT Metered Dose Inhaler [Bevespi]"
+                    },
+                    {
+                        "code": "1799455",
+                        "display": "indacaterol 0.075 MG"
+                    },
+                    {
+                        "code": "1799457",
+                        "display": "indacaterol 0.075 MG [Arcapta]"
+                    },
+                    {
+                        "code": "1799461",
+                        "display": "tiotropium 0.018 MG"
+                    },
+                    {
+                        "code": "1799463",
+                        "display": "tiotropium 0.018 MG [Spiriva]"
+                    },
+                    {
+                        "code": "1945036",
+                        "display": "fluticasone / umeclidinium / vilanterol Inhalant Product"
+                    },
+                    {
+                        "code": "1945037",
+                        "display": "fluticasone / umeclidinium / vilanterol Dry Powder Inhaler"
+                    },
+                    {
+                        "code": "1945039",
+                        "display": "14 ACTUAT fluticasone furoate 0.1 MG/ACTUAT / umeclidinium 0.0625 MG/ACTUAT / vilanterol 0.025 MG/ACTUAT Dry Powder Inhaler"
+                    },
+                    {
+                        "code": "1945040",
+                        "display": "Trelegy"
+                    },
+                    {
+                        "code": "1945041",
+                        "display": "fluticasone furoate 0.1 MG/ACTUAT / umeclidinium 0.0625 MG/ACTUAT / vilanterol 0.025 MG/ACTUAT [Trelegy]"
+                    },
+                    {
+                        "code": "1945042",
+                        "display": "fluticasone / umeclidinium / vilanterol Dry Powder Inhaler [Trelegy]"
+                    },
+                    {
+                        "code": "1945043",
+                        "display": "Trelegy Inhalant Product"
+                    },
+                    {
+                        "code": "1945044",
+                        "display": "14 ACTUAT fluticasone furoate 0.1 MG/ACTUAT / umeclidinium 0.0625 MG/ACTUAT / vilanterol 0.025 MG/ACTUAT Dry Powder Inhaler [Trelegy]"
+                    },
+                    {
+                        "code": "1945047",
+                        "display": "30 ACTUAT fluticasone furoate 0.1 MG/ACTUAT / umeclidinium 0.0625 MG/ACTUAT / vilanterol 0.025 MG/ACTUAT Dry Powder Inhaler"
+                    },
+                    {
+                        "code": "1945048",
+                        "display": "30 ACTUAT fluticasone furoate 0.1 MG/ACTUAT / umeclidinium 0.0625 MG/ACTUAT / vilanterol 0.025 MG/ACTUAT Dry Powder Inhaler [Trelegy]"
+                    },
+                    {
+                        "code": "196487",
+                        "display": "Pulmicort"
+                    },
+                    {
+                        "code": "1992566",
+                        "display": "glycopyrrolate 0.025 MG/ML Inhalation Solution"
+                    },
+                    {
+                        "code": "1992570",
+                        "display": "Lonhala Inhalant Product"
+                    },
+                    {
+                        "code": "1992571",
+                        "display": "glycopyrrolate 0.025 MG/ML Inhalation Solution [Lonhala]"
+                    },
+                    {
+                        "code": "1998771",
+                        "display": "Breath-Actuated 120 ACTUAT beclomethasone dipropionate 0.08 MG/ACTUAT Metered Dose Inhaler"
+                    },
+                    {
+                        "code": "1998772",
+                        "display": "Breath-Actuated 120 ACTUAT beclomethasone dipropionate 0.08 MG/ACTUAT Metered Dose Inhaler [Qvar]"
+                    },
+                    {
+                        "code": "1998773",
+                        "display": "Breath-Actuated 120 ACTUAT beclomethasone dipropionate 0.04 MG/ACTUAT Metered Dose Inhaler"
+                    },
+                    {
+                        "code": "1998774",
+                        "display": "Breath-Actuated 120 ACTUAT beclomethasone dipropionate 0.04 MG/ACTUAT Metered Dose Inhaler [Qvar]"
+                    },
+                    {
+                        "code": "203159",
+                        "display": "Serevent"
+                    },
+                    {
+                        "code": "217152",
+                        "display": "Flovent"
+                    },
+                    {
+                        "code": "226084",
+                        "display": "Qvar"
+                    },
+                    {
+                        "code": "252559",
+                        "display": "budesonide 0.5 MG/ML Inhalation Suspension"
+                    },
+                    {
+                        "code": "274535",
+                        "display": "Spiriva"
+                    },
+                    {
+                        "code": "301543",
+                        "display": "Advair"
+                    },
+                    {
+                        "code": "327148",
+                        "display": "Symbicort"
+                    },
+                    {
+                        "code": "328641",
+                        "display": "salmeterol 0.021 MG/ACTUAT"
+                    },
+                    {
+                        "code": "331524",
+                        "display": "salmeterol 0.05 MG/ACTUAT"
+                    },
+                    {
+                        "code": "346148",
+                        "display": "budesonide 0.25 MG/ML"
+                    },
+                    {
+                        "code": "349094",
+                        "display": "budesonide 0.125 MG/ML Inhalation Suspension"
+                    },
+                    {
+                        "code": "350723",
+                        "display": "budesonide 0.125 MG/ML"
+                    },
+                    {
+                        "code": "351109",
+                        "display": "budesonide 0.25 MG/ML Inhalation Suspension"
+                    },
+                    {
+                        "code": "358545",
+                        "display": "budesonide 0.5 MG/ML"
+                    },
+                    {
+                        "code": "393396",
+                        "display": "budesonide 0.16 MG/ACTUAT"
+                    },
+                    {
+                        "code": "393399",
+                        "display": "budesonide 0.08 MG/ACTUAT"
+                    },
+                    {
+                        "code": "485032",
+                        "display": "tiotropium 0.018 MG Inhalation Powder"
+                    },
+                    {
+                        "code": "580261",
+                        "display": "tiotropium 0.018 MG Inhalation Powder [Spiriva]"
+                    },
+                    {
+                        "code": "616816",
+                        "display": "budesonide 0.25 MG/ML [Pulmicort]"
+                    },
+                    {
+                        "code": "616817",
+                        "display": "budesonide 0.25 MG/ML Inhalation Suspension [Pulmicort]"
+                    },
+                    {
+                        "code": "616818",
+                        "display": "budesonide 0.5 MG/ML [Pulmicort]"
+                    },
+                    {
+                        "code": "616819",
+                        "display": "budesonide 0.5 MG/ML Inhalation Suspension [Pulmicort]"
+                    },
+                    {
+                        "code": "616829",
+                        "display": "budesonide 0.125 MG/ML [Pulmicort]"
+                    },
+                    {
+                        "code": "616830",
+                        "display": "budesonide 0.125 MG/ML Inhalation Suspension [Pulmicort]"
+                    },
+                    {
+                        "code": "617269",
+                        "display": "mometasone furoate 0.2 MG/ACTUAT"
+                    },
+                    {
+                        "code": "668954",
+                        "display": "arformoterol 0.0075 MG/ML"
+                    },
+                    {
+                        "code": "668956",
+                        "display": "arformoterol 0.0075 MG/ML Inhalation Solution"
+                    },
+                    {
+                        "code": "669390",
+                        "display": "Brovana"
+                    },
+                    {
+                        "code": "692474",
+                        "display": "budesonide 0.18 MG/ACTUAT"
+                    },
+                    {
+                        "code": "692476",
+                        "display": "budesonide 0.09 MG/ACTUAT"
+                    },
+                    {
+                        "code": "695933",
+                        "display": "arformoterol 0.0075 MG/ML [Brovana]"
+                    },
+                    {
+                        "code": "695935",
+                        "display": "arformoterol 0.0075 MG/ML Inhalation Solution [Brovana]"
+                    },
+                    {
+                        "code": "723732",
+                        "display": "Perforomist"
+                    },
+                    {
+                        "code": "744485",
+                        "display": "fluticasone / salmeterol Metered Dose Inhaler"
+                    },
+                    {
+                        "code": "745797",
+                        "display": "budesonide / formoterol Metered Dose Inhaler"
+                    },
+                    {
+                        "code": "745810",
+                        "display": "budesonide / formoterol Metered Dose Inhaler [Symbicort]"
+                    },
+                    {
+                        "code": "746190",
+                        "display": "beclomethasone Metered Dose Inhaler"
+                    },
+                    {
+                        "code": "746403",
+                        "display": "fluticasone Metered Dose Inhaler"
+                    },
+                    {
+                        "code": "746412",
+                        "display": "fluticasone Metered Dose Inhaler [Flovent]"
+                    },
+                    {
+                        "code": "746717",
+                        "display": "fluticasone / salmeterol Dry Powder Inhaler"
+                    },
+                    {
+                        "code": "746765",
+                        "display": "fluticasone Dry Powder Inhaler"
+                    },
+                    {
+                        "code": "746805",
+                        "display": "fluticasone Dry Powder Inhaler [Flovent]"
+                    },
+                    {
+                        "code": "746824",
+                        "display": "budesonide Dry Powder Inhaler"
+                    },
+                    {
+                        "code": "746826",
+                        "display": "budesonide Dry Powder Inhaler [Pulmicort]"
+                    },
+                    {
+                        "code": "790277",
+                        "display": "mometasone furoate 0.1 MG/ACTUAT"
+                    },
+                    {
+                        "code": "801854",
+                        "display": "beclomethasone Metered Dose Inhaler [Qvar]"
+                    },
+                    {
+                        "code": "866043",
+                        "display": "salmeterol Dry Powder Inhaler"
+                    },
+                    {
+                        "code": "866044",
+                        "display": "28 ACTUAT salmeterol 0.05 MG/ACTUAT Dry Powder Inhaler"
+                    },
+                    {
+                        "code": "866045",
+                        "display": "salmeterol 0.05 MG/ACTUAT [Serevent]"
+                    },
+                    {
+                        "code": "866046",
+                        "display": "salmeterol Dry Powder Inhaler [Serevent]"
+                    },
+                    {
+                        "code": "866047",
+                        "display": "28 ACTUAT salmeterol 0.05 MG/ACTUAT Dry Powder Inhaler [Serevent]"
+                    },
+                    {
+                        "code": "866048",
+                        "display": "60 ACTUAT salmeterol 0.05 MG/ACTUAT Dry Powder Inhaler"
+                    },
+                    {
+                        "code": "866049",
+                        "display": "60 ACTUAT salmeterol 0.05 MG/ACTUAT Dry Powder Inhaler [Serevent]"
+                    },
+                    {
+                        "code": "895993",
+                        "display": "fluticasone propionate 0.044 MG/ACTUAT"
+                    },
+                    {
+                        "code": "895994",
+                        "display": "120 ACTUAT fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler"
+                    },
+                    {
+                        "code": "895995",
+                        "display": "fluticasone propionate 0.044 MG/ACTUAT [Flovent]"
+                    },
+                    {
+                        "code": "895996",
+                        "display": "120 ACTUAT fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler [Flovent]"
+                    },
+                    {
+                        "code": "895998",
+                        "display": "fluticasone propionate 0.11 MG/ACTUAT"
+                    },
+                    {
+                        "code": "895999",
+                        "display": "120 ACTUAT fluticasone propionate 0.11 MG/ACTUAT Metered Dose Inhaler"
+                    },
+                    {
+                        "code": "896000",
+                        "display": "fluticasone propionate 0.11 MG/ACTUAT [Flovent]"
+                    },
+                    {
+                        "code": "896001",
+                        "display": "120 ACTUAT fluticasone propionate 0.11 MG/ACTUAT Metered Dose Inhaler [Flovent]"
+                    },
+                    {
+                        "code": "896003",
+                        "display": "fluticasone propionate 0.22 MG/ACTUAT"
+                    },
+                    {
+                        "code": "896004",
+                        "display": "120 ACTUAT fluticasone propionate 0.22 MG/ACTUAT Metered Dose Inhaler"
+                    },
+                    {
+                        "code": "896005",
+                        "display": "fluticasone propionate 0.22 MG/ACTUAT [Flovent]"
+                    },
+                    {
+                        "code": "896006",
+                        "display": "120 ACTUAT fluticasone propionate 0.22 MG/ACTUAT Metered Dose Inhaler [Flovent]"
+                    },
+                    {
+                        "code": "896014",
+                        "display": "fluticasone propionate 0.05 MG/ACTUAT"
+                    },
+                    {
+                        "code": "896016",
+                        "display": "fluticasone propionate 0.05 MG/ACTUAT [Flovent]"
+                    },
+                    {
+                        "code": "896018",
+                        "display": "60 ACTUAT fluticasone propionate 0.05 MG/ACTUAT Dry Powder Inhaler"
+                    },
+                    {
+                        "code": "896019",
+                        "display": "60 ACTUAT fluticasone propionate 0.05 MG/ACTUAT Dry Powder Inhaler [Flovent]"
+                    },
+                    {
+                        "code": "896020",
+                        "display": "fluticasone propionate 0.1 MG/ACTUAT"
+                    },
+                    {
+                        "code": "896021",
+                        "display": "60 ACTUAT fluticasone propionate 0.1 MG/ACTUAT Dry Powder Inhaler"
+                    },
+                    {
+                        "code": "896022",
+                        "display": "fluticasone propionate 0.1 MG/ACTUAT [Flovent]"
+                    },
+                    {
+                        "code": "896023",
+                        "display": "60 ACTUAT fluticasone propionate 0.1 MG/ACTUAT Dry Powder Inhaler [Flovent]"
+                    },
+                    {
+                        "code": "896024",
+                        "display": "fluticasone propionate 0.25 MG/ACTUAT"
+                    },
+                    {
+                        "code": "896025",
+                        "display": "60 ACTUAT fluticasone propionate 0.25 MG/ACTUAT Dry Powder Inhaler"
+                    },
+                    {
+                        "code": "896026",
+                        "display": "fluticasone propionate 0.25 MG/ACTUAT [Flovent]"
+                    },
+                    {
+                        "code": "896027",
+                        "display": "60 ACTUAT fluticasone propionate 0.25 MG/ACTUAT Dry Powder Inhaler [Flovent]"
+                    },
+                    {
+                        "code": "896030",
+                        "display": "28 ACTUAT fluticasone propionate 0.1 MG/ACTUAT Dry Powder Inhaler"
+                    },
+                    {
+                        "code": "896031",
+                        "display": "28 ACTUAT fluticasone propionate 0.1 MG/ACTUAT Dry Powder Inhaler [Flovent]"
+                    },
+                    {
+                        "code": "896161",
+                        "display": "14 ACTUAT fluticasone propionate 0.1 MG/ACTUAT / salmeterol 0.05 MG/ACTUAT Dry Powder Inhaler"
+                    },
+                    {
+                        "code": "896163",
+                        "display": "fluticasone propionate 0.1 MG/ACTUAT / salmeterol 0.05 MG/ACTUAT [Advair]"
+                    },
+                    {
+                        "code": "896165",
+                        "display": "14 ACTUAT fluticasone propionate 0.1 MG/ACTUAT / salmeterol 0.05 MG/ACTUAT Dry Powder Inhaler [Advair]"
+                    },
+                    {
+                        "code": "896184",
+                        "display": "60 ACTUAT fluticasone propionate 0.1 MG/ACTUAT / salmeterol 0.05 MG/ACTUAT Dry Powder Inhaler"
+                    },
+                    {
+                        "code": "896185",
+                        "display": "60 ACTUAT fluticasone propionate 0.1 MG/ACTUAT / salmeterol 0.05 MG/ACTUAT Dry Powder Inhaler [Advair]"
+                    },
+                    {
+                        "code": "896186",
+                        "display": "14 ACTUAT fluticasone propionate 0.25 MG/ACTUAT / salmeterol 0.05 MG/ACTUAT Dry Powder Inhaler"
+                    },
+                    {
+                        "code": "896188",
+                        "display": "fluticasone propionate 0.25 MG/ACTUAT / salmeterol 0.05 MG/ACTUAT [Advair]"
+                    },
+                    {
+                        "code": "896189",
+                        "display": "fluticasone / salmeterol Dry Powder Inhaler [Advair]"
+                    },
+                    {
+                        "code": "896190",
+                        "display": "14 ACTUAT fluticasone propionate 0.25 MG/ACTUAT / salmeterol 0.05 MG/ACTUAT Dry Powder Inhaler [Advair]"
+                    },
+                    {
+                        "code": "896209",
+                        "display": "60 ACTUAT fluticasone propionate 0.25 MG/ACTUAT / salmeterol 0.05 MG/ACTUAT Dry Powder Inhaler"
+                    },
+                    {
+                        "code": "896212",
+                        "display": "60 ACTUAT fluticasone propionate 0.25 MG/ACTUAT / salmeterol 0.05 MG/ACTUAT Dry Powder Inhaler [Advair]"
+                    },
+                    {
+                        "code": "896217",
+                        "display": "fluticasone propionate 0.5 MG/ACTUAT"
+                    },
+                    {
+                        "code": "896218",
+                        "display": "14 ACTUAT fluticasone propionate 0.5 MG/ACTUAT / salmeterol 0.05 MG/ACTUAT Dry Powder Inhaler"
+                    },
+                    {
+                        "code": "896220",
+                        "display": "fluticasone propionate 0.5 MG/ACTUAT / salmeterol 0.05 MG/ACTUAT [Advair]"
+                    },
+                    {
+                        "code": "896222",
+                        "display": "14 ACTUAT fluticasone propionate 0.5 MG/ACTUAT / salmeterol 0.05 MG/ACTUAT Dry Powder Inhaler [Advair]"
+                    },
+                    {
+                        "code": "896228",
+                        "display": "60 ACTUAT fluticasone propionate 0.5 MG/ACTUAT / salmeterol 0.05 MG/ACTUAT Dry Powder Inhaler"
+                    },
+                    {
+                        "code": "896229",
+                        "display": "60 ACTUAT fluticasone propionate 0.5 MG/ACTUAT / salmeterol 0.05 MG/ACTUAT Dry Powder Inhaler [Advair]"
+                    },
+                    {
+                        "code": "896230",
+                        "display": "fluticasone propionate 0.045 MG/ACTUAT"
+                    },
+                    {
+                        "code": "896231",
+                        "display": "60 ACTUAT fluticasone propionate 0.045 MG/ACTUAT / salmeterol 0.021 MG/ACTUAT Metered Dose Inhaler"
+                    },
+                    {
+                        "code": "896233",
+                        "display": "fluticasone propionate 0.045 MG/ACTUAT / salmeterol 0.021 MG/ACTUAT [Advair]"
+                    },
+                    {
+                        "code": "896235",
+                        "display": "60 ACTUAT fluticasone propionate 0.045 MG/ACTUAT / salmeterol 0.021 MG/ACTUAT Metered Dose Inhaler [Advair]"
+                    },
+                    {
+                        "code": "896236",
+                        "display": "120 ACTUAT fluticasone propionate 0.045 MG/ACTUAT / salmeterol 0.021 MG/ACTUAT Metered Dose Inhaler"
+                    },
+                    {
+                        "code": "896237",
+                        "display": "120 ACTUAT fluticasone propionate 0.045 MG/ACTUAT / salmeterol 0.021 MG/ACTUAT Metered Dose Inhaler [Advair]"
+                    },
+                    {
+                        "code": "896238",
+                        "display": "fluticasone propionate 0.115 MG/ACTUAT"
+                    },
+                    {
+                        "code": "896239",
+                        "display": "60 ACTUAT fluticasone propionate 0.115 MG/ACTUAT / salmeterol 0.021 MG/ACTUAT Metered Dose Inhaler"
+                    },
+                    {
+                        "code": "896241",
+                        "display": "fluticasone propionate 0.115 MG/ACTUAT / salmeterol 0.021 MG/ACTUAT [Advair]"
+                    },
+                    {
+                        "code": "896243",
+                        "display": "60 ACTUAT fluticasone propionate 0.115 MG/ACTUAT / salmeterol 0.021 MG/ACTUAT Metered Dose Inhaler [Advair]"
+                    },
+                    {
+                        "code": "896244",
+                        "display": "120 ACTUAT fluticasone propionate 0.115 MG/ACTUAT / salmeterol 0.021 MG/ACTUAT Metered Dose Inhaler"
+                    },
+                    {
+                        "code": "896245",
+                        "display": "120 ACTUAT fluticasone propionate 0.115 MG/ACTUAT / salmeterol 0.021 MG/ACTUAT Metered Dose Inhaler [Advair]"
+                    },
+                    {
+                        "code": "896266",
+                        "display": "fluticasone propionate 0.23 MG/ACTUAT"
+                    },
+                    {
+                        "code": "896267",
+                        "display": "60 ACTUAT fluticasone propionate 0.23 MG/ACTUAT / salmeterol 0.021 MG/ACTUAT Metered Dose Inhaler"
+                    },
+                    {
+                        "code": "896269",
+                        "display": "fluticasone propionate 0.23 MG/ACTUAT / salmeterol 0.021 MG/ACTUAT [Advair]"
+                    },
+                    {
+                        "code": "896270",
+                        "display": "fluticasone / salmeterol Metered Dose Inhaler [Advair]"
+                    },
+                    {
+                        "code": "896271",
+                        "display": "60 ACTUAT fluticasone propionate 0.23 MG/ACTUAT / salmeterol 0.021 MG/ACTUAT Metered Dose Inhaler [Advair]"
+                    },
+                    {
+                        "code": "896272",
+                        "display": "120 ACTUAT fluticasone propionate 0.23 MG/ACTUAT / salmeterol 0.021 MG/ACTUAT Metered Dose Inhaler"
+                    },
+                    {
+                        "code": "896273",
+                        "display": "120 ACTUAT fluticasone propionate 0.23 MG/ACTUAT / salmeterol 0.021 MG/ACTUAT Metered Dose Inhaler [Advair]"
+                    },
+                    {
+                        "code": "966522",
+                        "display": "120 ACTUAT budesonide 0.18 MG/ACTUAT Dry Powder Inhaler"
+                    },
+                    {
+                        "code": "966524",
+                        "display": "120 ACTUAT budesonide 0.18 MG/ACTUAT Dry Powder Inhaler [Pulmicort]"
+                    },
+                    {
+                        "code": "966527",
+                        "display": "60 ACTUAT budesonide 0.09 MG/ACTUAT Dry Powder Inhaler"
+                    },
+                    {
+                        "code": "966529",
+                        "display": "60 ACTUAT budesonide 0.09 MG/ACTUAT Dry Powder Inhaler [Pulmicort]"
+                    },
+                    {
+                        "code": "966535",
+                        "display": "beclomethasone dipropionate 0.04 MG/ACTUAT"
+                    },
+                    {
+                        "code": "966536",
+                        "display": "100 ACTUAT beclomethasone dipropionate 0.04 MG/ACTUAT Metered Dose Inhaler"
+                    },
+                    {
+                        "code": "966537",
+                        "display": "beclomethasone dipropionate 0.04 MG/ACTUAT [Qvar]"
+                    },
+                    {
+                        "code": "966538",
+                        "display": "100 ACTUAT beclomethasone dipropionate 0.04 MG/ACTUAT Metered Dose Inhaler [Qvar]"
+                    },
+                    {
+                        "code": "966539",
+                        "display": "beclomethasone dipropionate 0.08 MG/ACTUAT"
+                    },
+                    {
+                        "code": "966540",
+                        "display": "100 ACTUAT beclomethasone dipropionate 0.08 MG/ACTUAT Metered Dose Inhaler"
+                    },
+                    {
+                        "code": "966541",
+                        "display": "beclomethasone dipropionate 0.08 MG/ACTUAT [Qvar]"
+                    },
+                    {
+                        "code": "998040",
+                        "display": "formoterol / mometasone Metered Dose Inhaler"
+                    },
+                    {
+                        "code": "998049",
+                        "display": "formoterol / mometasone Metered Dose Inhaler [Dulera]"
+                    }
+                ]
+            }
+        ]
+    }
+}

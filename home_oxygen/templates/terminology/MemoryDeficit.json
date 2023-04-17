@@ -1,0 +1,87 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.17.4077.3.1031",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-04-12T09:30:03.000+00:00",
+        "source": "#1T2S5BymbTVicb4z"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.17.4077.3.1031",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113883.17.4077.3.1031"
+        }
+    ],
+    "version": "Latest",
+    "name": "ShortTermMemoryDeficits",
+    "title": "Short Term Memory Deficits",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2022-09",
+                "concept": [
+                    {
+                        "code": "247592009",
+                        "display": "Poor short-term memory (finding)"
+                    },
+                    {
+                        "code": "247593004",
+                        "display": "Forgets what was going to do (finding)"
+                    },
+                    {
+                        "code": "247594005",
+                        "display": "Forgets what was going to say (finding)"
+                    },
+                    {
+                        "code": "247595006",
+                        "display": "Forgets recent activities (finding)"
+                    },
+                    {
+                        "code": "247596007",
+                        "display": "Forgets what has just done (finding)"
+                    },
+                    {
+                        "code": "247597003",
+                        "display": "Forgets what has just said (finding)"
+                    },
+                    {
+                        "code": "247598008",
+                        "display": "Forgets what has just read (finding)"
+                    },
+                    {
+                        "code": "247599000",
+                        "display": "Forgets what has just seen (finding)"
+                    },
+                    {
+                        "code": "247600002",
+                        "display": "Forgets what has just heard (finding)"
+                    },
+                    {
+                        "code": "285208000",
+                        "display": "Unable to recall random address at five minutes (finding)"
+                    },
+                    {
+                        "code": "285210003",
+                        "display": "Unable to reproduce geometric figure at five minutes (finding)"
+                    },
+                    {
+                        "code": "285212006",
+                        "display": "Unable to recall five digit number at five minutes (finding)"
+                    },
+                    {
+                        "code": "33254005",
+                        "display": "Uncompensated short term memory deficit (finding)"
+                    },
+                    {
+                        "code": "423864004",
+                        "display": "Forgets to complete personal care (finding)"
+                    }
+                ]
+            }
+        ]
+    }
+}

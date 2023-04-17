@@ -1,0 +1,39 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113762.1.4.1146.649",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-04-12T09:30:12.000+00:00",
+        "source": "#JVC1yByYy9khrYKH"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1146.649",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113762.1.4.1146.649"
+        }
+    ],
+    "version": "Latest",
+    "name": "AbdominalCramps(SNOMED)",
+    "title": "Abdominal Cramps (SNOMED)",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2022-09",
+                "concept": [
+                    {
+                        "code": "51197009",
+                        "display": "Stomach cramps (finding)"
+                    },
+                    {
+                        "code": "60043000",
+                        "display": "Midabdominal crampy pain (finding)"
+                    }
+                ]
+            }
+        ]
+    }
+}

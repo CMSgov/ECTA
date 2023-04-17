@@ -1,0 +1,1227 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113762.1.4.1222.1415",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-04-12T09:30:18.000+00:00",
+        "source": "#KbwIW26dUexozbB7"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1222.1415",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113762.1.4.1222.1415"
+        }
+    ],
+    "version": "Latest",
+    "name": "Edema",
+    "title": "Edema",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2022-09",
+                "concept": [
+                    {
+                        "code": "102558002",
+                        "display": "Edema of the upper extremity (finding)"
+                    },
+                    {
+                        "code": "102560000",
+                        "display": "Edema of forearm (finding)"
+                    },
+                    {
+                        "code": "102562008",
+                        "display": "Edema of elbow (finding)"
+                    },
+                    {
+                        "code": "102563003",
+                        "display": "Edema of wrist (finding)"
+                    },
+                    {
+                        "code": "102564009",
+                        "display": "Edema of hand (finding)"
+                    },
+                    {
+                        "code": "102565005",
+                        "display": "Edema of finger (finding)"
+                    },
+                    {
+                        "code": "102566006",
+                        "display": "Edema of thumb (finding)"
+                    },
+                    {
+                        "code": "102572006",
+                        "display": "Edema of lower extremity (finding)"
+                    },
+                    {
+                        "code": "102573001",
+                        "display": "Edema of thigh (finding)"
+                    },
+                    {
+                        "code": "102575008",
+                        "display": "Edema of knee (finding)"
+                    },
+                    {
+                        "code": "102576009",
+                        "display": "Edema of foot (finding)"
+                    },
+                    {
+                        "code": "10677871000119101",
+                        "display": "Localized swelling of abdominal wall (finding)"
+                    },
+                    {
+                        "code": "10677951000119102",
+                        "display": "Localized swelling of forearm (finding)"
+                    },
+                    {
+                        "code": "10677991000119107",
+                        "display": "Localized swelling of bilateral forearms (finding)"
+                    },
+                    {
+                        "code": "10678191000119105",
+                        "display": "Localized swelling of bilateral lower legs (finding)"
+                    },
+                    {
+                        "code": "10678231000119101",
+                        "display": "Localized swelling of toe of bilateral feet (finding)"
+                    },
+                    {
+                        "code": "10678271000119103",
+                        "display": "Localized swelling of toe of left foot (finding)"
+                    },
+                    {
+                        "code": "10678351000119102",
+                        "display": "Localized swelling of toe of right foot (finding)"
+                    },
+                    {
+                        "code": "10678431000119102",
+                        "display": "Localized swelling of right foot (finding)"
+                    },
+                    {
+                        "code": "10678471000119104",
+                        "display": "Localized swelling of left foot (finding)"
+                    },
+                    {
+                        "code": "10678511000119108",
+                        "display": "Localized swelling of bilateral feet (finding)"
+                    },
+                    {
+                        "code": "10678591000119104",
+                        "display": "Localized swelling of bilateral lower limbs (finding)"
+                    },
+                    {
+                        "code": "10678631000119104",
+                        "display": "Localized swelling of right lower leg (finding)"
+                    },
+                    {
+                        "code": "10678671000119101",
+                        "display": "Localized swelling of right lower limb (finding)"
+                    },
+                    {
+                        "code": "10678711000119102",
+                        "display": "Localized swelling of left lower leg (finding)"
+                    },
+                    {
+                        "code": "10678751000119101",
+                        "display": "Localized swelling of left lower limb (finding)"
+                    },
+                    {
+                        "code": "10678791000119106",
+                        "display": "Localized swelling of finger of bilateral hands (finding)"
+                    },
+                    {
+                        "code": "10678831000119100",
+                        "display": "Localized swelling of finger of left hand (finding)"
+                    },
+                    {
+                        "code": "10678911000119104",
+                        "display": "Localized swelling of finger of right hand (finding)"
+                    },
+                    {
+                        "code": "10678951000119103",
+                        "display": "Localized swelling of bilateral hands (finding)"
+                    },
+                    {
+                        "code": "10679031000119101",
+                        "display": "Localized swelling of right hand (finding)"
+                    },
+                    {
+                        "code": "10679071000119103",
+                        "display": "Localized swelling of left hand (finding)"
+                    },
+                    {
+                        "code": "10679151000119106",
+                        "display": "Localized swelling of right upper limb (finding)"
+                    },
+                    {
+                        "code": "10679191000119101",
+                        "display": "Localized swelling of right forearm (finding)"
+                    },
+                    {
+                        "code": "10679231000119105",
+                        "display": "Localized swelling of left upper limb (finding)"
+                    },
+                    {
+                        "code": "10679271000119108",
+                        "display": "Localized swelling of left forearm (finding)"
+                    },
+                    {
+                        "code": "10679311000119108",
+                        "display": "Localized swelling of bilateral upper limbs (finding)"
+                    },
+                    {
+                        "code": "10679351000119109",
+                        "display": "Localized swelling of head (finding)"
+                    },
+                    {
+                        "code": "10679431000119109",
+                        "display": "Localized swelling of back (finding)"
+                    },
+                    {
+                        "code": "10679591000119107",
+                        "display": "Localized swelling of chest wall (finding)"
+                    },
+                    {
+                        "code": "10692081000119100",
+                        "display": "Localized swelling of left thumb (finding)"
+                    },
+                    {
+                        "code": "10692131000119100",
+                        "display": "Localized swelling of right thumb (finding)"
+                    },
+                    {
+                        "code": "1173044000",
+                        "display": "Swelling of clavicular region (finding)"
+                    },
+                    {
+                        "code": "12242351000119109",
+                        "display": "Swelling of left upper limb (finding)"
+                    },
+                    {
+                        "code": "12242391000119104",
+                        "display": "Swelling of right upper limb (finding)"
+                    },
+                    {
+                        "code": "151000161105",
+                        "display": "Edema of periwound skin (finding)"
+                    },
+                    {
+                        "code": "15633761000119102",
+                        "display": "Swelling of bilateral upper limbs (finding)"
+                    },
+                    {
+                        "code": "15742521000119103",
+                        "display": "Swelling of toe of left foot (finding)"
+                    },
+                    {
+                        "code": "15742561000119108",
+                        "display": "Swelling of toe of bilateral feet (finding)"
+                    },
+                    {
+                        "code": "15742601000119108",
+                        "display": "Swelling of toe of right foot (finding)"
+                    },
+                    {
+                        "code": "15742641000119105",
+                        "display": "Swelling of finger of bilateral hands (finding)"
+                    },
+                    {
+                        "code": "15742681000119100",
+                        "display": "Swelling of finger of right hand (finding)"
+                    },
+                    {
+                        "code": "15742721000119106",
+                        "display": "Swelling of finger of left hand (finding)"
+                    },
+                    {
+                        "code": "15742761000119101",
+                        "display": "Swelling of joint of right wrist (finding)"
+                    },
+                    {
+                        "code": "15742801000119109",
+                        "display": "Swelling of joints of bilateral wrists (finding)"
+                    },
+                    {
+                        "code": "15742841000119106",
+                        "display": "Swelling of joint of left wrist (finding)"
+                    },
+                    {
+                        "code": "15742881000119101",
+                        "display": "Swelling of structure of bilateral eyes (finding)"
+                    },
+                    {
+                        "code": "15742921000119108",
+                        "display": "Swelling of structure of left eye (finding)"
+                    },
+                    {
+                        "code": "15742961000119103",
+                        "display": "Swelling of structure of right eye (finding)"
+                    },
+                    {
+                        "code": "15952101000119109",
+                        "display": "Swelling of bilateral parotid glands (finding)"
+                    },
+                    {
+                        "code": "15952141000119106",
+                        "display": "Left parotid gland swelling (finding)"
+                    },
+                    {
+                        "code": "15952181000119101",
+                        "display": "Right parotid gland swelling (finding)"
+                    },
+                    {
+                        "code": "16059391000119101",
+                        "display": "Localized swelling of bilateral thumbs (finding)"
+                    },
+                    {
+                        "code": "162007004",
+                        "display": "Dental swelling (finding)"
+                    },
+                    {
+                        "code": "162068007",
+                        "display": "Abdominal distension symptom (finding)"
+                    },
+                    {
+                        "code": "162383006",
+                        "display": "Swollen nose (finding)"
+                    },
+                    {
+                        "code": "16653641000119108",
+                        "display": "Swelling of right ear structure (finding)"
+                    },
+                    {
+                        "code": "16696741000119103",
+                        "display": "Swelling of left ear structure (finding)"
+                    },
+                    {
+                        "code": "16696781000119108",
+                        "display": "Swelling of bilateral ears (finding)"
+                    },
+                    {
+                        "code": "18331000175103",
+                        "display": "Mild generalized edema (finding)"
+                    },
+                    {
+                        "code": "18341000175109",
+                        "display": "Moderate generalized edema (finding)"
+                    },
+                    {
+                        "code": "18351000175106",
+                        "display": "Severe generalized edema (finding)"
+                    },
+                    {
+                        "code": "193967004",
+                        "display": "Swelling of eyelid (finding)"
+                    },
+                    {
+                        "code": "19452008",
+                        "display": "Nasal mucosa edematous (finding)"
+                    },
+                    {
+                        "code": "24411000119104",
+                        "display": "Swelling of submandibular triangle (finding)"
+                    },
+                    {
+                        "code": "248482000",
+                        "display": "Generalized orbital swelling (finding)"
+                    },
+                    {
+                        "code": "248483005",
+                        "display": "Localized orbital swelling (finding)"
+                    },
+                    {
+                        "code": "248484004",
+                        "display": "Lacrimal sac swollen (finding)"
+                    },
+                    {
+                        "code": "248485003",
+                        "display": "Swollen lacrimal sac - cystic (finding)"
+                    },
+                    {
+                        "code": "248486002",
+                        "display": "Swollen lacrimal sac - solid (finding)"
+                    },
+                    {
+                        "code": "248487006",
+                        "display": "Optic disc swelling (finding)"
+                    },
+                    {
+                        "code": "248491001",
+                        "display": "Swollen knee (finding)"
+                    },
+                    {
+                        "code": "248499004",
+                        "display": "Dependent edema (finding)"
+                    },
+                    {
+                        "code": "248500008",
+                        "display": "Brawny edema (finding)"
+                    },
+                    {
+                        "code": "248508001",
+                        "display": "Edema of abdominal wall (finding)"
+                    },
+                    {
+                        "code": "26237000",
+                        "display": "Ankle edema (finding)"
+                    },
+                    {
+                        "code": "267038008",
+                        "display": "Edema (finding)"
+                    },
+                    {
+                        "code": "267039000",
+                        "display": "Swollen ankle (finding)"
+                    },
+                    {
+                        "code": "267041004",
+                        "display": "Swelling around eyes (finding)"
+                    },
+                    {
+                        "code": "271613005",
+                        "display": "Parotid swelling (finding)"
+                    },
+                    {
+                        "code": "271614004",
+                        "display": "Submandibular salivary gland swelling (finding)"
+                    },
+                    {
+                        "code": "271615003",
+                        "display": "Sublingual salivary gland swelling (finding)"
+                    },
+                    {
+                        "code": "271687003",
+                        "display": "Swelling of scrotum (finding)"
+                    },
+                    {
+                        "code": "271771009",
+                        "display": "Joint swelling (finding)"
+                    },
+                    {
+                        "code": "271808008",
+                        "display": "Generalized edema (finding)"
+                    },
+                    {
+                        "code": "271835004",
+                        "display": "Abdominal distension, gaseous (finding)"
+                    },
+                    {
+                        "code": "274724004",
+                        "display": "Localized edema (finding)"
+                    },
+                    {
+                        "code": "274739003",
+                        "display": "Chest swelling (finding)"
+                    },
+                    {
+                        "code": "274743004",
+                        "display": "Swelling of inguinal region (finding)"
+                    },
+                    {
+                        "code": "274754009",
+                        "display": "Pelvic swelling (finding)"
+                    },
+                    {
+                        "code": "274755005",
+                        "display": "Head and neck swelling (finding)"
+                    },
+                    {
+                        "code": "274759004",
+                        "display": "Umbilical swelling (finding)"
+                    },
+                    {
+                        "code": "277170006",
+                        "display": "Edema of ear canal (finding)"
+                    },
+                    {
+                        "code": "277221003",
+                        "display": "Nasal mucosa boggy (finding)"
+                    },
+                    {
+                        "code": "277223000",
+                        "display": "Swollen nasal mucosa (finding)"
+                    },
+                    {
+                        "code": "277232003",
+                        "display": "Swollen nasopharynx (finding)"
+                    },
+                    {
+                        "code": "277248002",
+                        "display": "Vocal cords swelling (finding)"
+                    },
+                    {
+                        "code": "277257008",
+                        "display": "Supraglottic swelling (finding)"
+                    },
+                    {
+                        "code": "277260001",
+                        "display": "Subglottic swelling (finding)"
+                    },
+                    {
+                        "code": "277890004",
+                        "display": "Toe swelling (finding)"
+                    },
+                    {
+                        "code": "277891000",
+                        "display": "Sausage toe (finding)"
+                    },
+                    {
+                        "code": "278528006",
+                        "display": "Facial swelling (finding)"
+                    },
+                    {
+                        "code": "281792000",
+                        "display": "Swollen calf (finding)"
+                    },
+                    {
+                        "code": "284521000",
+                        "display": "Pitting edema (finding)"
+                    },
+                    {
+                        "code": "289475007",
+                        "display": "Swelling of vulva (finding)"
+                    },
+                    {
+                        "code": "289476008",
+                        "display": "Swelling of labia (finding)"
+                    },
+                    {
+                        "code": "289508005",
+                        "display": "Swelling of clitoris (finding)"
+                    },
+                    {
+                        "code": "289509002",
+                        "display": "Edema of clitoris (finding)"
+                    },
+                    {
+                        "code": "289524006",
+                        "display": "Swelling of vagina (finding)"
+                    },
+                    {
+                        "code": "289525007",
+                        "display": "Swelling of vaginal introitus (finding)"
+                    },
+                    {
+                        "code": "289526008",
+                        "display": "Swelling of vaginal wall (finding)"
+                    },
+                    {
+                        "code": "289796004",
+                        "display": "Edema of cervix (finding)"
+                    },
+                    {
+                        "code": "290077003",
+                        "display": "Edema of breast (finding)"
+                    },
+                    {
+                        "code": "290098003",
+                        "display": "Edema of nipple (finding)"
+                    },
+                    {
+                        "code": "290101004",
+                        "display": "Swelling of nipple (finding)"
+                    },
+                    {
+                        "code": "297142003",
+                        "display": "Foot swelling (finding)"
+                    },
+                    {
+                        "code": "298280009",
+                        "display": "Swelling of skeletal muscle (finding)"
+                    },
+                    {
+                        "code": "298349001",
+                        "display": "Soft tissue swelling (finding)"
+                    },
+                    {
+                        "code": "298367008",
+                        "display": "Temporomandibular joint swelling (finding)"
+                    },
+                    {
+                        "code": "298368003",
+                        "display": "Bony swelling of the temporomandibular joint (finding)"
+                    },
+                    {
+                        "code": "298369006",
+                        "display": "Temporomandibular joint - soft tissue swelling (finding)"
+                    },
+                    {
+                        "code": "298398005",
+                        "display": "Cervical spine - swollen (finding)"
+                    },
+                    {
+                        "code": "298399002",
+                        "display": "Bony swelling of the cervical spine (finding)"
+                    },
+                    {
+                        "code": "298400009",
+                        "display": "Swelling of soft tissue of cervical spine (finding)"
+                    },
+                    {
+                        "code": "298500007",
+                        "display": "Thoracic spine - swollen (finding)"
+                    },
+                    {
+                        "code": "298501006",
+                        "display": "Bony swelling of the thoracic spine (finding)"
+                    },
+                    {
+                        "code": "298502004",
+                        "display": "Thoracic spine - soft tissue swelling (finding)"
+                    },
+                    {
+                        "code": "298594006",
+                        "display": "Lumbar spine - swollen (finding)"
+                    },
+                    {
+                        "code": "298595007",
+                        "display": "Bony swelling of lumbar spine (finding)"
+                    },
+                    {
+                        "code": "298596008",
+                        "display": "Lumbar spine - soft tissue swelling (finding)"
+                    },
+                    {
+                        "code": "298768000",
+                        "display": "Shoulder joint swelling (finding)"
+                    },
+                    {
+                        "code": "298769008",
+                        "display": "Bony swelling of the shoulder (finding)"
+                    },
+                    {
+                        "code": "298770009",
+                        "display": "Shoulder joint - soft tissue swelling (finding)"
+                    },
+                    {
+                        "code": "298771008",
+                        "display": "Shoulder joint - synovial swelling (finding)"
+                    },
+                    {
+                        "code": "298870001",
+                        "display": "Elbow joint swelling (finding)"
+                    },
+                    {
+                        "code": "298871002",
+                        "display": "Bony swelling of the elbow (finding)"
+                    },
+                    {
+                        "code": "298872009",
+                        "display": "Soft tissue swelling of elbow joint (finding)"
+                    },
+                    {
+                        "code": "298873004",
+                        "display": "Elbow joint - synovial swelling (finding)"
+                    },
+                    {
+                        "code": "298941006",
+                        "display": "Swelling of wrist joint (finding)"
+                    },
+                    {
+                        "code": "298942004",
+                        "display": "Bony swelling of the wrist (finding)"
+                    },
+                    {
+                        "code": "298943009",
+                        "display": "Wrist joint - soft tissue swelling (finding)"
+                    },
+                    {
+                        "code": "298944003",
+                        "display": "Wrist joint - synovial swelling (finding)"
+                    },
+                    {
+                        "code": "299037003",
+                        "display": "Swelling of hand (finding)"
+                    },
+                    {
+                        "code": "299060006",
+                        "display": "Swelling of finger (finding)"
+                    },
+                    {
+                        "code": "299123009",
+                        "display": "Swelling of finger joint (finding)"
+                    },
+                    {
+                        "code": "299125002",
+                        "display": "Bony swelling of finger (finding)"
+                    },
+                    {
+                        "code": "299126001",
+                        "display": "Finger joint - soft tissue swelling (finding)"
+                    },
+                    {
+                        "code": "299127005",
+                        "display": "Finger joint - synovial swelling (finding)"
+                    },
+                    {
+                        "code": "299132006",
+                        "display": "Swelling of thumb joint (finding)"
+                    },
+                    {
+                        "code": "299133001",
+                        "display": "Bony swelling of thumb (finding)"
+                    },
+                    {
+                        "code": "299134007",
+                        "display": "Thumb joint - soft tissue swelling (finding)"
+                    },
+                    {
+                        "code": "299135008",
+                        "display": "Thumb joint - synovial swelling (finding)"
+                    },
+                    {
+                        "code": "299232002",
+                        "display": "Hip joint swollen (finding)"
+                    },
+                    {
+                        "code": "299322007",
+                        "display": "Swelling of knee joint (finding)"
+                    },
+                    {
+                        "code": "299323002",
+                        "display": "Bony swelling of knee joint (finding)"
+                    },
+                    {
+                        "code": "299324008",
+                        "display": "Soft tissue swelling of knee joint (finding)"
+                    },
+                    {
+                        "code": "299326005",
+                        "display": "Knee joint - synovial swelling (finding)"
+                    },
+                    {
+                        "code": "299327001",
+                        "display": "Suprapatellar swelling of knee joint (finding)"
+                    },
+                    {
+                        "code": "299414004",
+                        "display": "Swelling of ankle joint (finding)"
+                    },
+                    {
+                        "code": "299415003",
+                        "display": "Bony swelling of ankle joint (finding)"
+                    },
+                    {
+                        "code": "299416002",
+                        "display": "Soft tissue swelling of ankle joint (finding)"
+                    },
+                    {
+                        "code": "299417006",
+                        "display": "Ankle joint synovial swelling (finding)"
+                    },
+                    {
+                        "code": "299480001",
+                        "display": "Foot joint swelling (finding)"
+                    },
+                    {
+                        "code": "299481002",
+                        "display": "Bony swelling of the foot joint (finding)"
+                    },
+                    {
+                        "code": "299482009",
+                        "display": "Foot joint - soft tissue swelling (finding)"
+                    },
+                    {
+                        "code": "299483004",
+                        "display": "Foot joints synovial swelling (finding)"
+                    },
+                    {
+                        "code": "299577004",
+                        "display": "Swelling of toe joint (finding)"
+                    },
+                    {
+                        "code": "299578009",
+                        "display": "Bony swelling of toe joint (finding)"
+                    },
+                    {
+                        "code": "299579001",
+                        "display": "Toe joint - soft tissue swelling (finding)"
+                    },
+                    {
+                        "code": "299580003",
+                        "display": "Toe joint - synovial swelling (finding)"
+                    },
+                    {
+                        "code": "300402000",
+                        "display": "Uniform abdominal distention (finding)"
+                    },
+                    {
+                        "code": "300403005",
+                        "display": "Localized abdominal distention (finding)"
+                    },
+                    {
+                        "code": "300522004",
+                        "display": "Edema of prepuce (finding)"
+                    },
+                    {
+                        "code": "300533001",
+                        "display": "Swollen prostate (finding)"
+                    },
+                    {
+                        "code": "300872008",
+                        "display": "Swelling of body structure (finding)"
+                    },
+                    {
+                        "code": "300874009",
+                        "display": "Swelling of ear (finding)"
+                    },
+                    {
+                        "code": "300875005",
+                        "display": "Swelling of respiratory structure (finding)"
+                    },
+                    {
+                        "code": "300876006",
+                        "display": "Swelling of cardiovascular structure (finding)"
+                    },
+                    {
+                        "code": "300877002",
+                        "display": "Swelling of lymphoreticular structure (finding)"
+                    },
+                    {
+                        "code": "300878007",
+                        "display": "Swelling of oral cavity structure (finding)"
+                    },
+                    {
+                        "code": "300879004",
+                        "display": "Swelling of salivary gland (finding)"
+                    },
+                    {
+                        "code": "300880001",
+                        "display": "Swelling of urogenital structure (finding)"
+                    },
+                    {
+                        "code": "300881002",
+                        "display": "Swelling of urological structure (finding)"
+                    },
+                    {
+                        "code": "300882009",
+                        "display": "Swelling of male genital structure (finding)"
+                    },
+                    {
+                        "code": "300883004",
+                        "display": "Epididymal swelling (finding)"
+                    },
+                    {
+                        "code": "300884005",
+                        "display": "Swelling of female genital structure (finding)"
+                    },
+                    {
+                        "code": "300885006",
+                        "display": "Swelling of breast (finding)"
+                    },
+                    {
+                        "code": "300886007",
+                        "display": "Swelling of skin (finding)"
+                    },
+                    {
+                        "code": "300887003",
+                        "display": "Swelling of musculoskeletal structure (finding)"
+                    },
+                    {
+                        "code": "300888008",
+                        "display": "Swelling of body region (finding)"
+                    },
+                    {
+                        "code": "300981003",
+                        "display": "Gravitational edema of leg (finding)"
+                    },
+                    {
+                        "code": "301777002",
+                        "display": "Neck swelling (finding)"
+                    },
+                    {
+                        "code": "309685001",
+                        "display": "Swollen gums (finding)"
+                    },
+                    {
+                        "code": "314916002",
+                        "display": "Swollen thumb (finding)"
+                    },
+                    {
+                        "code": "387638003",
+                        "display": "Painful swelling of joint (finding)"
+                    },
+                    {
+                        "code": "416581009",
+                        "display": "Corneal pseudoguttata (finding)"
+                    },
+                    {
+                        "code": "420435001",
+                        "display": "Non-pitting edema (finding)"
+                    },
+                    {
+                        "code": "420829009",
+                        "display": "1+ pitting edema (finding)"
+                    },
+                    {
+                        "code": "421129002",
+                        "display": "4+ pitting edema (finding)"
+                    },
+                    {
+                        "code": "421262002",
+                        "display": "Tongue swelling (finding)"
+                    },
+                    {
+                        "code": "421346005",
+                        "display": "3+ pitting edema (finding)"
+                    },
+                    {
+                        "code": "421581006",
+                        "display": "Pharyngeal swelling (finding)"
+                    },
+                    {
+                        "code": "421605005",
+                        "display": "2+ pitting edema (finding)"
+                    },
+                    {
+                        "code": "424372002",
+                        "display": "Edema of extremity (finding)"
+                    },
+                    {
+                        "code": "428786006",
+                        "display": "Localized superficial swelling of skin (finding)"
+                    },
+                    {
+                        "code": "438457000",
+                        "display": "Swelling of testicle (finding)"
+                    },
+                    {
+                        "code": "441708007",
+                        "display": "Swelling of lower jaw region (finding)"
+                    },
+                    {
+                        "code": "441804001",
+                        "display": "Superficial swelling (finding)"
+                    },
+                    {
+                        "code": "441974004",
+                        "display": "Swelling of buttock (finding)"
+                    },
+                    {
+                        "code": "441998006",
+                        "display": "Subungual swelling (finding)"
+                    },
+                    {
+                        "code": "442394001",
+                        "display": "Swelling of tonsil (finding)"
+                    },
+                    {
+                        "code": "442433009",
+                        "display": "Anasarca (finding)"
+                    },
+                    {
+                        "code": "442648006",
+                        "display": "Swelling of left tonsil (finding)"
+                    },
+                    {
+                        "code": "442664003",
+                        "display": "Swelling of right tonsil (finding)"
+                    },
+                    {
+                        "code": "442778006",
+                        "display": "Bilateral tonsillar swelling (finding)"
+                    },
+                    {
+                        "code": "443110007",
+                        "display": "Edema of upper arm (finding)"
+                    },
+                    {
+                        "code": "443111006",
+                        "display": "Edema of calf (finding)"
+                    },
+                    {
+                        "code": "443115002",
+                        "display": "Edema of fetal chest wall (finding)"
+                    },
+                    {
+                        "code": "443164005",
+                        "display": "Edema of chest wall (finding)"
+                    },
+                    {
+                        "code": "443168008",
+                        "display": "Edema of fetal scalp (finding)"
+                    },
+                    {
+                        "code": "443339000",
+                        "display": "Edema of palm of hand (finding)"
+                    },
+                    {
+                        "code": "443514008",
+                        "display": "Edema of shoulder (finding)"
+                    },
+                    {
+                        "code": "443710002",
+                        "display": "Edema of dorsum of hand (finding)"
+                    },
+                    {
+                        "code": "444848005",
+                        "display": "Edema of back (finding)"
+                    },
+                    {
+                        "code": "444956007",
+                        "display": "Edema of all toes (finding)"
+                    },
+                    {
+                        "code": "445011005",
+                        "display": "Edema of sole of foot (finding)"
+                    },
+                    {
+                        "code": "445054000",
+                        "display": "Soft nonpitting edema (finding)"
+                    },
+                    {
+                        "code": "445088006",
+                        "display": "Edema of face (finding)"
+                    },
+                    {
+                        "code": "445124008",
+                        "display": "Edema of dorsum of foot (finding)"
+                    },
+                    {
+                        "code": "445126005",
+                        "display": "Edema of entire limb (finding)"
+                    },
+                    {
+                        "code": "445174005",
+                        "display": "Edema of hypogastric region (finding)"
+                    },
+                    {
+                        "code": "445256008",
+                        "display": "Edema of buttock (finding)"
+                    },
+                    {
+                        "code": "445280007",
+                        "display": "Firm nonpitting edema (finding)"
+                    },
+                    {
+                        "code": "445281006",
+                        "display": "Soft pitting edema (finding)"
+                    },
+                    {
+                        "code": "445341001",
+                        "display": "Firm pitting edema (finding)"
+                    },
+                    {
+                        "code": "445385004",
+                        "display": "Swelling of head (finding)"
+                    },
+                    {
+                        "code": "445471005",
+                        "display": "Edema of extremity with extension to trunk (finding)"
+                    },
+                    {
+                        "code": "449329002",
+                        "display": "Swelling of trunk (finding)"
+                    },
+                    {
+                        "code": "449614009",
+                        "display": "Swelling of lower limb (finding)"
+                    },
+                    {
+                        "code": "449615005",
+                        "display": "Swelling of lower leg (finding)"
+                    },
+                    {
+                        "code": "449618007",
+                        "display": "Swelling of upper limb (finding)"
+                    },
+                    {
+                        "code": "449619004",
+                        "display": "Swelling of upper arm (finding)"
+                    },
+                    {
+                        "code": "449707004",
+                        "display": "Edema of lower leg (finding)"
+                    },
+                    {
+                        "code": "449740008",
+                        "display": "Swelling of periwound skin (finding)"
+                    },
+                    {
+                        "code": "45177002",
+                        "display": "Swelling of structure of eye (finding)"
+                    },
+                    {
+                        "code": "5248000",
+                        "display": "Supraglottic edema (finding)"
+                    },
+                    {
+                        "code": "60728008",
+                        "display": "Swollen abdomen (finding)"
+                    },
+                    {
+                        "code": "65124004",
+                        "display": "Swelling (finding)"
+                    },
+                    {
+                        "code": "698975002",
+                        "display": "Edema of extremity of sudden onset (finding)"
+                    },
+                    {
+                        "code": "699031007",
+                        "display": "Swelling on flushing of implanted venous access device (finding)"
+                    },
+                    {
+                        "code": "699105008",
+                        "display": "Fluctuating edema level (finding)"
+                    },
+                    {
+                        "code": "699107000",
+                        "display": "Static edema level (finding)"
+                    },
+                    {
+                        "code": "699376002",
+                        "display": "Lip swelling (finding)"
+                    },
+                    {
+                        "code": "70346000",
+                        "display": "Gingival edema (finding)"
+                    },
+                    {
+                        "code": "711384005",
+                        "display": "Reduction of peripheral edema (finding)"
+                    },
+                    {
+                        "code": "762896009",
+                        "display": "Swelling of left lower limb (finding)"
+                    },
+                    {
+                        "code": "762897000",
+                        "display": "Swelling of right lower limb (finding)"
+                    },
+                    {
+                        "code": "762898005",
+                        "display": "Swelling of bilateral lower limbs (finding)"
+                    },
+                    {
+                        "code": "762915008",
+                        "display": "Swelling of right foot (finding)"
+                    },
+                    {
+                        "code": "762916009",
+                        "display": "Swelling of left foot (finding)"
+                    },
+                    {
+                        "code": "762917000",
+                        "display": "Swelling of bilateral feet (finding)"
+                    },
+                    {
+                        "code": "788914007",
+                        "display": "Edema due to infection (finding)"
+                    },
+                    {
+                        "code": "789007001",
+                        "display": "Pitting edema of lip (finding)"
+                    },
+                    {
+                        "code": "80068009",
+                        "display": "Swelling of limb (finding)"
+                    },
+                    {
+                        "code": "816179007",
+                        "display": "Edema of left lower leg (finding)"
+                    },
+                    {
+                        "code": "816180005",
+                        "display": "Edema of right lower leg (finding)"
+                    },
+                    {
+                        "code": "816181009",
+                        "display": "Edema of bilateral lower limbs (finding)"
+                    },
+                    {
+                        "code": "816182002",
+                        "display": "Edema of left lower limb (finding)"
+                    },
+                    {
+                        "code": "816183007",
+                        "display": "Edema of right lower limb (finding)"
+                    },
+                    {
+                        "code": "816184001",
+                        "display": "Edema of left upper limb (finding)"
+                    },
+                    {
+                        "code": "816185000",
+                        "display": "Edema of right upper limb (finding)"
+                    },
+                    {
+                        "code": "816186004",
+                        "display": "Edema of bilateral upper limbs (finding)"
+                    },
+                    {
+                        "code": "816190002",
+                        "display": "Edema of bilateral lower legs (finding)"
+                    },
+                    {
+                        "code": "816194006",
+                        "display": "Edema of left upper arm (finding)"
+                    },
+                    {
+                        "code": "816195007",
+                        "display": "Edema of right upper arm (finding)"
+                    },
+                    {
+                        "code": "816196008",
+                        "display": "Edema of bilateral upper arms (finding)"
+                    },
+                    {
+                        "code": "823012003",
+                        "display": "Swelling of left half of scrotum (finding)"
+                    },
+                    {
+                        "code": "823013008",
+                        "display": "Swelling of right half of scrotum (finding)"
+                    },
+                    {
+                        "code": "823014002",
+                        "display": "Transmission of light blocked by swelling of scrotum (finding)"
+                    },
+                    {
+                        "code": "829986000",
+                        "display": "Edema of bilateral feet (finding)"
+                    },
+                    {
+                        "code": "830139001",
+                        "display": "Edema of abdomen (finding)"
+                    },
+                    {
+                        "code": "833288009",
+                        "display": "Swelling of bilateral lobes of thyroid gland (finding)"
+                    },
+                    {
+                        "code": "846694002",
+                        "display": "Acute edema (finding)"
+                    },
+                    {
+                        "code": "860976009",
+                        "display": "Transmission of light visible through swelling of scrotum (finding)"
+                    },
+                    {
+                        "code": "865918002",
+                        "display": "Edema of esophagus (finding)"
+                    },
+                    {
+                        "code": "870315009",
+                        "display": "Pallid swelling of optic disc (finding)"
+                    },
+                    {
+                        "code": "870733000",
+                        "display": "Edema of vocal cord (finding)"
+                    },
+                    {
+                        "code": "95352005",
+                        "display": "Mucous membrane swelling (finding)"
+                    },
+                    {
+                        "code": "95353000",
+                        "display": "Mucous membrane edema (finding)"
+                    }
+                ]
+            }
+        ]
+    }
+}
