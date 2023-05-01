@@ -271,6 +271,13 @@ define "FaceToFaceEncounter":
 		or First("EncounterPractitioner"(F2FEncounter).qualification.code.coding).code = 'CNS'
 		or First("EncounterPractitioner"(F2FEncounter).qualification.code.coding).code = 'PA')
 
+define OrderingPhysician:
+	"EncounterPractitioner"("FaceToFaceEncounter")
+
+define OrderingPhysicianNPI:
+	(First("OrderingPhysician".identifier identifier
+    		where identifier.system.value = 'http://hl7.org/fhir/sid/us-npi')).value.value
+
 define function ToCode(coding FHIR.Coding):
     if coding is null then
         null
@@ -842,6 +849,10 @@ define PatientHasHematocritThatIsGreaterThanThreshold:
 	then true else false
 
 define DeviceRequestDescription: 'HCPCS ' + First("DeviceRequest".code.coding).code.value + ' - ' + First("DeviceRequest".code.coding).display.value
+
+define DeviceRequestCode: First("DeviceRequest".code.coding).code.value
+
+define DeviceOrderId: "DeviceRequest".groupIdentifier
 
 define DeviceRequestedIsPortable: First("DeviceRequest".code.coding).code.value in { 'E0433', 'E0434', 'E0444', 'EO431', 'K0738', 'E0443', 'E1392' }
 
