@@ -6,7 +6,7 @@
         "lastUpdated": "2020-11-30T15:23:48.329+05:30",
         "source": "#X9PBXYcj4yCjdCrd"
     },
-    "url": "http://localhost:8080/interop/fhir/ValueSet/2.16.840.1.113883.3.464.1003.199.12.1055",
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.464.1003.199.12.1055",
     "identifier": [
         {
             "system": "urn:ietf:rfc:3986",

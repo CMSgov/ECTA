@@ -5,12 +5,30 @@ using FHIR version '4.0.0'
 include FHIRHelpers version '4.0.0' called FHIRHelpers
 
 parameter "questionnaireInput" Questionnaire
-parameter "questionnaireResponseInput" QuestionnaireResponse
+parameter "QuestionnaireResponse" QuestionnaireResponse
 
 context Patient
 
+define First:
+    "QuestionnaireResponse".item I
+        where I.linkId.value = '1'
+
+define FirstResponseItem:
+    ("First".item I
+		   where I.linkId.value = '1.1')QR
+		      return ToString(First(QR.answer).value as Reference)
+
+define function "GetId"(uri String):
+	Last(Split(uri, '/'))
+
+define function ToString(value FHIR.Reference): value.reference.value
+
+define EncounterResponse:
+    First([Encounter]E
+        where 'Encounter/' + E.id.value = First("FirstResponseItem"))
+
 define "LastResponseItem":
-    questionnaireResponseInput.item[Length(questionnaireResponseInput.item)-1]
+    "QuestionnaireResponse".item[Length("QuestionnaireResponse".item)-1]
 
 define "LastResponseItemLinkID":
     "LastResponseItem".linkId
