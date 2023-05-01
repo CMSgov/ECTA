@@ -144,7 +144,7 @@
           ],
           "linkId": "1.4",
           "text": "Order Id",
-          "type": "text",
+          "type": "string",
           "required": true
         },
         {
@@ -157,9 +157,9 @@
               }
             }
           ],
-          "linkId": "1.4",
+          "linkId": "1.5",
           "text": "Ordering Physician NPI",
-          "type": "text",
+          "type": "string",
           "required": true
         }
       ] 
