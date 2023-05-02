@@ -129,7 +129,7 @@
           ],
           "linkId": "1.3",
           "text": "HCPCS code of equipment ordered",
-          "type": "text",
+          "type": "string",
           "required": true
         },
         {
@@ -455,7 +455,7 @@
           ],
           "text": "Arterial oxygen saturation (Patient on room air while at rest and awake when tested) without oxygen",
           "type": "quantity",
-          "required": false
+          "required": true
         },
         {
           "extension": [
@@ -507,7 +507,7 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
-                "expression":  "ArterialPartialPressureExercise"
+                "expression":  "ArterialPartialPressureDuringSleep"
               }
             }
           ],
@@ -519,7 +519,7 @@
               "display": "SaO2 % BldA"
             }
           ],
-          "text": "Overnight oximetry results (while asleep and on room air)",
+          "text": "Overnight oximetry results (on room air)",
           "type": "quantity",
           "required": false
         },

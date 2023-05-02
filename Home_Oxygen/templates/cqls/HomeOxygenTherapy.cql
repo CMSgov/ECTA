@@ -272,7 +272,8 @@ define "FaceToFaceEncounter":
 		or First("EncounterPractitioner"(F2FEncounter).qualification.code.coding).code = 'PA')
 
 define OrderingPhysician:
-	"EncounterPractitioner"("FaceToFaceEncounter")
+	"FaceToFaceEncounter".participant PR
+	return singleton from ([Practitioner]P where 'Practitioner/' + P.id.value = PR.individual.reference.value)
 
 define OrderingPhysicianNPI:
 	(First("OrderingPhysician".identifier identifier
@@ -305,33 +306,33 @@ define BloodGasStudyDate:
 	start of "Normalize Interval"("BloodGasStudy".performed)
 
 define BloodGasStudyPH:
-	[Observation]O
-		where "ToCode"(First(O.code.coding)) = "pH of Arterial blood"
+	(First([Observation]O
+		where "ToCode"(First(O.code.coding)) = "pH of Arterial blood"))O
 	return FHIRHelpers.ToQuantity(O.value)
 
 define BloodGasStudyPaCO2:
-	[Observation]O
-		where "ToCode"(First(O.code.coding)) = "Carbon dioxide [Partial pressure] in Arterial blood"
+	(First([Observation]O
+		where "ToCode"(First(O.code.coding)) = "Carbon dioxide [Partial pressure] in Arterial blood"))O
 	return FHIRHelpers.ToQuantity(O.value) 
 
 define BloodGasStudyO2Sat:
-	[Observation]O
-		where "ToCode"(First(O.code.coding)) = "Oxygen saturation in Arterial blood"
+	(First([Observation]O
+		where "ToCode"(First(O.code.coding)) = "Oxygen saturation in Arterial blood"))O
 	return FHIRHelpers.ToQuantity(O.value)
 
 define BloodGasStudyHCO3:
-	[Observation]O
-		where "ToCode"(First(O.code.coding)) = "Bicarbonate [Moles/volume] in Arterial blood"
+	(First([Observation]O
+		where "ToCode"(First(O.code.coding)) = "Bicarbonate [Moles/volume] in Arterial blood"))O
 	return FHIRHelpers.ToQuantity(O.value)
 
 define BloodGasStudyHematocrit:
-	[Observation]O
-		where "ToCode"(First(O.code.coding)) = "Hematocrit [Volume Fraction] of Arterial blood"
+	(First([Observation]O
+		where "ToCode"(First(O.code.coding)) = "Hematocrit [Volume Fraction] of Arterial blood"))O
 	return FHIRHelpers.ToQuantity(O.value)
 
 define BloodGasStudyPaO2:
-	[Observation]O
-		where "ToCode"(First(O.code.coding)) = "Oxygen [Partial pressure] in Arterial blood"
+	(First([Observation]O
+		where "ToCode"(First(O.code.coding)) = "Oxygen [Partial pressure] in Arterial blood"))O
 	return FHIRHelpers.ToQuantity(O.value)
 
 
@@ -345,14 +346,9 @@ define function "GetId"(uri String):
    				
 define ArterialOxygenSaturation:
 	(First([Observation] P
-		where "ToCode"(First(P.code.coding)) = "Oxygen saturation in Arterial blood by Pulse oximetry"))O
+		where "ToCode"(First(P.code.coding)) = "Oxygen saturation in Arterial blood by Pulse oximetry --resting"))O
 			return FHIRHelpers.ToQuantity(O.value)
-			
-define ArterialPartialPressureExercise: 
-	(First([Observation] P 
-		where "ToCode"(First(P.code.coding)) = "Oxygen [Partial pressure] adjusted to patients actual temperature in Arterial blood"))O
-		return FHIRHelpers.ToQuantity(O.value)
-		
+					
 define ArterialPartialPressureOfOxygen: 
 	(First([Observation] P 
 		where "ToCode"(First(P.code.coding)) =  "Oxygen [Partial pressure] in Arterial blood"))O
@@ -385,7 +381,7 @@ define PatientMobile:
 define InhaledFlowRate:
 	(First([Observation] P 
 		where "ToCode"(First(P.code.coding)) = "Inhaled oxygen flow rate"))O
-		return FHIRHelpers.ToQuantity(O.value).value
+		return FHIRHelpers.ToQuantity(O.value)
 
 define PatientDiagnoses:
 		if exists([Condition] P
