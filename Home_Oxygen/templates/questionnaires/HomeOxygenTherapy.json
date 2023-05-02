@@ -175,7 +175,7 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
-                "expression":  "IsFaceToFaceEncounter"
+                "expression":  "ExistsFaceToFaceEncounter"
               }
             }
           ],
@@ -205,7 +205,7 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
-                "expression":  "IsBloodGasStudy"
+                "expression":  "ExistsBloodGasStudy"
               }
             }
           ],
@@ -441,20 +441,13 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
-                "expression":  "ArterialOxygenSaturation"
+                "expression":  "ExistsPulseOximetry"
               }
             }
           ],
           "linkId": "3.1",
-          "code": [
-            {
-              "system": "http://loinc.org",
-              "code": "59417-6",
-              "display": "SaO2 % BldA"
-            }
-          ],
-          "text": "Arterial oxygen saturation (Patient on room air while at rest and awake when tested) without oxygen",
-          "type": "quantity",
+          "text": "Was Pulse Oximetry performed",
+          "type": "boolean",
           "required": true
         },
         {
@@ -463,21 +456,14 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
-                "expression":  "ArterialPartialPressureOfOxygen"
+                "expression":  "ArterialOxygenSaturation"
               }
             }
           ],
           "linkId": "3.2",
-          "code": [
-            {
-              "system": "http://loinc.org",
-              "code": "2703-7",
-              "display": "pO2 BldA"
-            }
-          ],
-          "text": "Arterial Partial Pressure of Oxygen (PO2) (Patient on room air while at rest and awake when tested)",
+          "text": "Oxygen saturation results at rest without oxygen",
           "type": "quantity",
-          "required": false
+          "required": true
         },
         {
           "extension": [
@@ -490,14 +476,7 @@
             }
           ],
           "linkId": "3.3",
-          "code": [
-            {
-              "system": "http://loinc.org",
-              "code": "89276-0",
-              "display": "SaO2 % BldA"
-            }
-          ],
-          "text": "Arterial oxygen saturation (Patient tested during exercise) without oxygen",
+          "text": "Oxygen saturation results during exercise without oxygen",
           "type": "quantity",
           "required": false
         },
@@ -507,34 +486,12 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
-                "expression":  "ArterialPartialPressureDuringSleep"
+                "expression":  "ArterialOxygenSaturationResting"
               }
             }
           ],
           "linkId": "3.4",
-          "code": [
-            {
-              "system": "http://loinc.org",
-              "code": "59417-6",
-              "display": "SaO2 % BldA"
-            }
-          ],
-          "text": "Overnight oximetry results (on room air)",
-          "type": "quantity",
-          "required": false
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression":  "ArterialOxygenSaturationExerciseWithOxygen"
-              }
-            }
-          ],
-          "linkId": "3.5",
-          "text": "Arterial oxygen saturation (Patient tested during exercise) with oxygen",
+          "text": "Pulse oximetry at rest/awake on room air",
           "type": "quantity",
           "required": false
         },
@@ -549,7 +506,7 @@
             }
           ],
           "linkId": "3.6",
-          "text": "Pulse oximetry at rest/awake on room air O2 Sat(%)",
+          "text": "Overnight oximetry results (while asleep and on room air)",
           "type": "quantity",
           "required": false
         },
@@ -1579,49 +1536,7 @@
       "item": [
         {
           "linkId": "6.1",
-          "text": "General Appearance",
-          "type": "text",
-          "required": true
-        },
-        {
-          "linkId": "6.2",
-          "text": "Head and neck",
-          "type": "text",
-          "required": true
-        },
-        {
-          "linkId": "6.3",
-          "text": "Chest/lungs",
-          "type": "text",
-          "required": true
-        },
-        {
-          "linkId": "6.4",
-          "text": "Cardiovascular",
-          "type": "text",
-          "required": true
-        },
-        {
-          "linkId": "6.5",
-          "text": "Abdominal",
-          "type": "text",
-          "required": true
-        },
-        {
-          "linkId": "6.6",
-          "text": "Musculoskeletal / extremities",
-          "type": "text",
-          "required": true
-        },
-        {
-          "linkId": "6.7",
-          "text": "Neurological",
-          "type": "text",
-          "required": true
-        },
-        {
-          "linkId": "6.8",
-          "text": "Psychiatric",
+          "text": "Physician Comments",
           "type": "text",
           "required": true
         }

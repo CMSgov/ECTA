@@ -26,6 +26,7 @@ valueset "Hematocrit": '2.16.840.1.113762.1.4.1222.143'
 valueset "Face to Face Encounter": '2.16.840.1.113762.1.4.1047.428'
 valueset "Inpatient Stay": '2.16.840.1.113762.1.4.1182.285'
 
+
 valueset "Acute or Chronic Heart Failure Disorder ICD10CM": '2.16.840.1.113762.1.4.1219.22'
 valueset "Acute Pulmonary Edema": '2.16.840.1.113883.17.4077.2.2018'
 valueset "Breath Sounds": '2.16.840.1.113883.3.7643.3.1023'
@@ -106,6 +107,8 @@ valueset "COVID19 SNOMED Value Set for Non Invasive Respiratory Support": '2.16.
 valueset "COVID19 SNOMED Value Set for Invasive Mechanical Ventilation": '2.16.840.1.113883.3.3616.200.110.102.6158'
 valueset "Cromolyn Inhalant Preparations": '2.16.840.1.113762.1.4.1196.465'
 
+valueset "Oxygen Saturation by Pulse Oximetry": '2.16.840.1.113762.1.4.1045.151'
+
 code "inpatient encounter": 'IMP' from "ActEncounterCode" display 'inpatient encounter'
 code "Outpatient": 'O' from "ActEncounterCodev2" display 'Outpatient'
 code "Unintentional weight gain (finding)": '441361000124104' from "SNOMEDCT" display 'Unintentional weight gain (finding)'
@@ -145,6 +148,7 @@ code "Heartburn": 'R12' from "ICD10CM" display 'Heartburn'
 
 code "Inhaled oxygen flow rate": '3151-8' from "LOINC" display 'Inhaled oxygen flow rate'
 code "Oxygen [Partial pressure] adjusted to patients actual temperature in Arterial blood": '19255-9' from "LOINC" display 'Oxygen [Partial pressure] adjusted to patients actual temperature in Arterial blood'
+
 
 code "Oxygen saturation in Arterial blood by Pulse oximetry --W exercise": '89276-0' from "LOINC" display 'Oxygen saturation in Arterial blood by Pulse oximetry --W exercise'
 code "Oxygen saturation in Arterial blood by Pulse oximetry --on room air": '59410-1' from "LOINC" display 'Oxygen saturation in Arterial blood by Pulse oximetry --on room air'
@@ -263,11 +267,6 @@ define function "EncounterPractitioner"(Encounter Encounter):
 	Encounter.participant PR
 	return singleton from ([Practitioner]P where 'Practitioner/' + P.id.value = PR.individual.reference.value)
 
-define "IsFaceToFaceEncounter":
-	if("FaceToFaceEncounter" is not null)
-		then true
-		else false
-
 define "FaceToFaceEncounter":
 	"EncounterResource" F2FEncounter
 	where First(F2FEncounter.type) in "Face to Face Encounter"
@@ -276,6 +275,11 @@ define "FaceToFaceEncounter":
 		or First("EncounterPractitioner"(F2FEncounter).qualification.code.coding).code = 'CNS'
 		or First("EncounterPractitioner"(F2FEncounter).qualification.code.coding).code = 'PA')
 
+define "ExistsFaceToFaceEncounter":
+	if("FaceToFaceEncounter" is not null)
+	then true
+	else false
+
 define OrderingPhysician:
 	"FaceToFaceEncounter".participant PR
 	return singleton from ([Practitioner]P where 'Practitioner/' + P.id.value = PR.individual.reference.value)
@@ -283,6 +287,15 @@ define OrderingPhysician:
 define OrderingPhysicianNPI:
 	(First("OrderingPhysician".identifier identifier
     		where identifier.system.value = 'http://hl7.org/fhir/sid/us-npi')).value.value
+
+define InpatientStay:
+	("FaceToFaceEncounter" F
+			where F.class.code = 'IMP')
+
+define InpatientHospitalStay:
+	if ("InpatientStay" is not null)
+	then true
+	else false
 
 define function ToCode(coding FHIR.Coding):
     if coding is null then
@@ -295,11 +308,6 @@ define function ToCode(coding FHIR.Coding):
           display: coding.display.value
         }
 
-define "IsBloodGasStudy":
-	if("BloodGasStudy" is not null)
-		then true
-		else false
-
 define "BloodGasStudy":
 	First([Procedure]P
 		where P.status.value = 'completed'
@@ -311,6 +319,10 @@ define "BloodGasStudy":
 			(("Normalize Interval"(P.performed) starts during Interval[ToDateTime("CertificationDate") , ToDateTime("CertificationDate"+30 days)])
 				and "ToCode"("FaceToFaceEncounter".class) = "Outpatient"))
 	
+define ExistsBloodGasStudy:
+	if("BloodGasStudy" is not null)
+	then true
+	else false
 
 define BloodGasStudyDate:
 	start of "Normalize Interval"("BloodGasStudy".performed)
@@ -353,36 +365,40 @@ define "Immobilization_Codes": { '102491009', '129857008', '129859006', '1606850
 
 define function "GetId"(uri String):
 	Last(Split(uri, '/'))
-   				
+
+define PulseOximetry:
+	First([Procedure]P
+		where exists(P.code.coding P
+						where P in "Oxygen Saturation by Pulse Oximetry" ))
+
+define ExistsPulseOximetry:
+	if ("PulseOximetry" is not null)
+		then true
+		else false
+
 define ArterialOxygenSaturation:
 	(First([Observation] P
-		where "ToCode"(First(P.code.coding)) = "Oxygen saturation in Arterial blood by Pulse oximetry --resting"))O
+		where "ToCode"(First(P.code.coding)) = "Oxygen saturation in Arterial blood by Pulse oximetry --on room air"))O
 			return FHIRHelpers.ToQuantity(O.value)
 					
-define ArterialPartialPressureOfOxygen: 
-	(First([Observation] P 
-		where "ToCode"(First(P.code.coding)) =  "Oxygen [Partial pressure] in Arterial blood"))O
-		return FHIRHelpers.ToQuantity(O.value)
-		
 define ArterialOxygenSaturationExercise:
 	(First([Observation] P 
 		where "ToCode"(First(P.code.coding)) = "Oxygen saturation in Arterial blood by Pulse oximetry --W exercise"))O
 		return FHIRHelpers.ToQuantity(O.value)
 
-define ArterialOxygenSaturationExerciseWithOxygen:
+define ArterialOxygenSaturationResting:
 	(First([Observation] P 
-		where "ToCode"(First(P.code.coding)) = "6-minute walk test (procedure)"))O
+		where "ToCode"(First(P.code.coding)) = "Oxygen saturation in Arterial blood by Pulse oximetry --resting"))O
 		return FHIRHelpers.ToQuantity(O.value)
 		
 define PulseOximetryO2:
 	(First([Observation] P 
-		where "ToCode"(First(P.code.coding)) = "Overnight pulse oximetry (procedure)"))O
+		where "ToCode"(First(P.code.coding)) = "Oxygen saturation in Arterial blood by Pulse oximetry --resting"
+			and First(P.method.coding) = "Overnight pulse oximetry (procedure)"))O
 		return FHIRHelpers.ToQuantity(O.value)
 
 define TestingDate:
-	(First([Observation] P
-		where "ToCode"(First(P.code.coding)) = "Oxygen saturation in Arterial blood by Pulse oximetry"))O
-			return (O.effective as dateTime).value
+	"Normalize Interval"("PulseOximetry".performed)
 		
 define PatientMobile: 
 	exists([Observation] P 
@@ -858,7 +874,7 @@ define DeviceRequestDescription: 'HCPCS ' + First("DeviceRequest".code.coding).c
 
 define DeviceRequestCode: First("DeviceRequest".code.coding).code.value
 
-define DeviceOrderId: "DeviceRequest".id.value
+define DeviceOrderId: "DeviceRequest".groupIdentifier
 
 define DeviceRequestedIsPortable: First("DeviceRequest".code.coding).code.value in { 'E0433', 'E0434', 'E0444', 'EO431', 'K0738', 'E0443', 'E1392' }
 

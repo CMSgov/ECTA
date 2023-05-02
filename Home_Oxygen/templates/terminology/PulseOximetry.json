@@ -1,0 +1,63 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113762.1.4.1045.151",
+    "meta": {
+        "versionId": "2",
+        "lastUpdated": "2023-05-02T15:59:41.000+00:00",
+        "source": "#2NfcFOKXM3wdDv5y"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1045.151",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113762.1.4.1045.151"
+        }
+    ],
+    "version": "Latest",
+    "name": "OxygenSaturationbyPulseOximetry",
+    "title": "Oxygen Saturation by Pulse Oximetry",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://loinc.org",
+                "version": "2.74",
+                "concept": [
+                    {
+                        "code": "59408-5",
+                        "display": "Oxygen saturation in Arterial blood by Pulse oximetry"
+                    },
+                    {
+                        "code": "59410-1",
+                        "display": "Oxygen saturation in Arterial blood by Pulse oximetry --on room air"
+                    },
+                    {
+                        "code": "59414-3",
+                        "display": "Oxygen saturation in Arterial blood by Pulse oximetry --pre bronchodilation"
+                    },
+                    {
+                        "code": "59415-0",
+                        "display": "Oxygen saturation in Arterial blood by Pulse oximetry --pre physiotherapy"
+                    },
+                    {
+                        "code": "59416-8",
+                        "display": "Oxygen saturation in Arterial blood by Pulse oximetry --pre treatment"
+                    },
+                    {
+                        "code": "59417-6",
+                        "display": "Oxygen saturation in Arterial blood by Pulse oximetry --resting"
+                    },
+                    {
+                        "code": "89276-0",
+                        "display": "Oxygen saturation in Arterial blood by Pulse oximetry --W exercise"
+                    },
+                    {
+                        "code": "89277-8",
+                        "display": "Oxygen saturation in Arterial blood by Pulse oximetry --during anesthesia"
+                    }
+                ]
+            }
+        ]
+    }
+}
