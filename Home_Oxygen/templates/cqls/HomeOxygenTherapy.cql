@@ -874,7 +874,7 @@ define DeviceRequestDescription: 'HCPCS ' + First("DeviceRequest".code.coding).c
 
 define DeviceRequestCode: First("DeviceRequest".code.coding).code.value
 
-define DeviceOrderId: "DeviceRequest".groupIdentifier
+define DeviceOrderId: "DeviceRequest".id.value
 
 define DeviceRequestedIsPortable: First("DeviceRequest".code.coding).code.value in { 'E0433', 'E0434', 'E0444', 'EO431', 'K0738', 'E0443', 'E1392' }
 
