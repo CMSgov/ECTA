@@ -264,7 +264,9 @@ define function "EncounterPractitioner"(Encounter Encounter):
 	return singleton from ([Practitioner]P where 'Practitioner/' + P.id.value = PR.individual.reference.value)
 
 define "IsFaceToFaceEncounter":
-	exists("FaceToFaceEncounter")
+	if("FaceToFaceEncounter" is not null)
+		then true
+		else false
 
 define "FaceToFaceEncounter":
 	"EncounterResource" F2FEncounter
@@ -294,7 +296,9 @@ define function ToCode(coding FHIR.Coding):
         }
 
 define "IsBloodGasStudy":
-	exists("BloodGasStudy")
+	if("BloodGasStudy" is not null)
+		then true
+		else false
 
 define "BloodGasStudy":
 	First([Procedure]P
