@@ -175,7 +175,7 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
-                "expression":  "FaceToFaceEncounter"
+                "expression":  "IsFaceToFaceEncounter"
               }
             }
           ],
@@ -205,7 +205,7 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
-                "expression":  "BloodGasStudy"
+                "expression":  "IsBloodGasStudy"
               }
             }
           ],
