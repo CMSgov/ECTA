@@ -71,7 +71,7 @@
               }
             }
           ],
-          "linkId": "1.2",
+          "linkId": "1.1",
           "text": "Device Description",
           "type": "text",
           "required": true
@@ -86,7 +86,7 @@
               }
             }
           ],
-          "linkId": "1.3",
+          "linkId": "1.2",
           "text": "HCPCS code of equipment ordered",
           "type": "string",
           "required": true
@@ -101,7 +101,7 @@
               }
             }
           ],
-          "linkId": "1.4",
+          "linkId": "1.3",
           "text": "Order Id",
           "type": "string",
           "required": true
@@ -116,7 +116,7 @@
               }
             }
           ],
-          "linkId": "1.5",
+          "linkId": "1.4",
           "text": "Ordering Physician NPI",
           "type": "string",
           "required": true
@@ -201,7 +201,7 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
-                "expression":  "BloodGasStudypH"
+                "expression":  "BloodGasStudyPH"
               }
             }
           ],
@@ -213,7 +213,7 @@
            }
          ],
           "linkId": "2.5",
-          "text": "PH",
+          "text": "PH (ABG)",
           "type": "integer",
           "required": false
         },
@@ -235,7 +235,7 @@
            }
          ],
           "linkId": "2.6",
-          "text": "PaCO2",
+          "text": "PaCO2 (ABG)",
           "type": "quantity",
           "required": false
         },
@@ -257,7 +257,7 @@
            }
          ],
           "linkId": "2.7",
-          "text": "O2 Sat",
+          "text": "O2 Sat (ABG)",
           "type": "quantity",
           "required": false
         },
@@ -279,7 +279,7 @@
            }
          ],
           "linkId": "2.8",
-          "text": "HCO3",
+          "text": "HCO3 (ABG)",
           "type": "quantity",
           "required": false
         },
@@ -301,7 +301,7 @@
            }
          ],
           "linkId": "2.9",
-          "text": "Hematocrit",
+          "text": "Hematocrit (ABG)",
           "type": "quantity",
           "required": false
         },
@@ -323,23 +323,8 @@
            }
          ],
           "linkId": "2.10",
-          "text": "PaO2",
+          "text": "PaO2 (ABG)",
           "type": "quantity",
-          "required": false
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression":  "StableState"
-              }
-            }
-          ],
-          "linkId": "2.11",
-          "text": "Is patient in a chronic stable state?",
-          "type": "boolean",
           "required": false
         },
         {
@@ -352,10 +337,16 @@
               }
             }
           ],
-          "linkId": "2.12",
+          
+          "linkId": "2.11",
           "text": "Is there an expectation that home oxygen therapy will improve O2 Saturation?",
           "type": "boolean",
-          "required": false
+          "initial":[
+            {
+              "valueBoolean": true
+            }
+           ],
+          "required": true
         },
         {
           "extension": [
@@ -367,9 +358,15 @@
               }
             }
           ],
-          "linkId": "2.13",
+          
+          "linkId": "2.12",
           "text": "Does patient live or travel to an area at high elevation?",
           "type": "boolean",
+          "initial":[
+            {
+              "valueBoolean": false
+            }
+           ],
           "required": false
         },
         {
@@ -382,7 +379,12 @@
               }
             }
           ],
-          "linkId": "2.14",
+          "initial":[
+            {
+              "valueBoolean": false
+            }
+           ],
+          "linkId": "2.13",
           "text": "Does patient have a reduced O2 carrying capacity? ",
           "type": "boolean",
           "required": false
@@ -463,6 +465,16 @@
                 "expression":  "PulseOximetryO2"
               }
             }
+          ],
+          "enableWhen":[
+            {
+               "operator": "<",
+               "question": "3.4",
+               "answerQuantity": {
+                   "value": "56",
+                   "unit": "mmHg"
+               }
+           }
           ],
           "linkId": "3.6",
           "text": "Overnight oximetry results (while asleep and on room air)",
@@ -795,8 +807,8 @@
             },
             {
               "valueCoding": {
-                  "code": "Other",
-                  "display": "Other"
+                  "code": "None",
+                  "display": "None"
               }
             }
           ]
@@ -805,9 +817,93 @@
     },
     {
       "linkId": "5",
-      "text": "Review of Systems",
+      "text": "Review of Physiological Systems",
       "type": "group",
       "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression":  "ReviewOfSystems"
+              }
+            }
+          ],
+          "linkId": "5.1",
+          "text": "Review of Systems",
+          "type": "choice",
+          "repeats":true,
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                  "code": "Review in General",
+                  "display": "Review in General"
+               }
+            },
+            {
+              "valueCoding": {
+                  "code": "Review of Neck",
+                  "display": "Review of Neck"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "Review of Pulmonary System",
+                  "display": "Review of Pulmonary System"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "Review of Cardiac System",
+                  "display": "Review of Cardiac System"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "Review of Vascular System",
+                  "display": "Review of Vascular System"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "Review of Gastrointestinal System",
+                  "display": "Review of Gastrointestinal System"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "Review of Musculoskeletal System",
+                  "display": "Review of Musculoskeletal System"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "Review of Neurological System",
+                  "display": "Review of Neurological System"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "Psychiatric Review",
+                  "display": "Psychiatric Review"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "Review of Hematology",
+                  "display": "Review of Hematology"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "Review of Endocrine System",
+                  "display": "Review of Endocrine System"
+              }
+            }
+          ]
+        },
         {
           "extension": [
             {
@@ -818,8 +914,18 @@
               }
             }
           ],
-          "linkId": "5.1",
-          "text": "Review in General ",
+          "enableWhen":[
+            {
+               "operator": "=",
+               "question": "5.1",
+               "answerCoding": {
+                   "code": "Review in General",
+                   "display": "Review in General"
+               }
+            }
+          ],
+          "linkId": "5.2",
+          "text": "Review in General",
           "type": "choice",
           "repeats":true,
           "required": true,
@@ -865,6 +971,12 @@
                   "code": "night sweats / diaphoresi",
                   "display": "night sweats / diaphoresi"
               }
+            },
+            {
+              "valueCoding": {
+                  "code": "None",
+                  "display": "None"
+              }
             }
           ]
         },
@@ -878,7 +990,17 @@
               }
             }
           ],
-          "linkId": "5.2",
+          "enableWhen":[
+            {
+               "operator": "=",
+               "question": "5.1",
+               "answerCoding": {
+                   "code": "Review of Neck",
+                   "display": "Review of Neck"
+               }
+            }
+          ],
+          "linkId": "5.3",
           "text": "Review of Neck",
           "type": "choice",
           "repeats":true,
@@ -895,6 +1017,82 @@
                   "code": "pain on movement",
                   "display": "pain on movement"
               }
+            },
+            {
+              "valueCoding": {
+                  "code": "None",
+                  "display": "None"
+              }
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression":  "PulmonaryReview"
+              }
+            }
+          ],
+          "enableWhen":[
+            {
+               "operator": "=",
+               "question": "5.1",
+               "answerCoding": {
+                   "code": "Review of Pulmonary System",
+                   "display": "Review of Pulmonary System"
+               }
+            }
+          ],
+          "linkId": "5.4",
+          "text": "Review of Pulmonary System",
+          "type": "choice",
+          "repeats":true,
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                  "code": "cough",
+                  "display": "cough"
+               }
+            },
+            {
+              "valueCoding": {
+                  "code": "shortness of breath",
+                  "display": "shortness of breath"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "pain",
+                  "display": "pain"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "wheezing",
+                  "display": "wheezing"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "hemoptysis",
+                  "display": "hemoptysis"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "sputum production",
+                  "display": "sputum production"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "None",
+                  "display": "None"
+              }
             }
           ]
         },
@@ -908,7 +1106,17 @@
               }
             }
           ],
-          "linkId": "5.4",
+          "enableWhen":[
+            {
+               "operator": "=",
+               "question": "5.1",
+               "answerCoding": {
+                   "code": "Review of Cardiac System",
+                   "display": "Review of Cardiac System"
+               }
+            }
+          ],
+          "linkId": "5.5",
           "text": "Review of Cardiac System",
           "type": "choice",
           "repeats":true,
@@ -943,6 +1151,12 @@
                   "code": "syncope",
                   "display": "syncope"
               }
+            },
+            {
+              "valueCoding": {
+                  "code": "None",
+                  "display": "None"
+              }
             }
           ]
         },
@@ -956,7 +1170,17 @@
               }
             }
           ],
-          "linkId": "5.5",
+          "enableWhen":[
+            {
+               "operator": "=",
+               "question": "5.1",
+               "answerCoding": {
+                   "code": "Review of Vascular System",
+                   "display": "Review of Vascular System"
+               }
+            }
+          ],
+          "linkId": "5.6",
           "text": "Review of Vascular System",
           "type": "choice",
           "repeats":true,
@@ -990,6 +1214,546 @@
               "valueCoding": {
                   "code": "ulcers",
                   "display": "ulcers"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "None",
+                  "display": "None"
+              }
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression":  "GastrointestinalReview"
+              }
+            }
+          ],
+          "enableWhen":[
+            {
+               "operator": "=",
+               "question": "5.1",
+               "answerCoding": {
+                   "code": "Review of Gastrointestinal System",
+                   "display": "Review of Gastrointestinal System"
+               }
+            }
+          ],
+          "linkId": "5.7",
+          "text": "Review of Gastrointestinal System",
+          "type": "choice",
+          "repeats":true,
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                  "code": "swallowing problems",
+                  "display": "swallowing problems"
+               }
+            },
+            {
+              "valueCoding": {
+                  "code": "abdominal pain",
+                  "display": "abdominal pain"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "constipation",
+                  "display": "constipation"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "diarrhea",
+                  "display": "diarrhea"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "incontinence",
+                  "display": "incontinence"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "nausea",
+                  "display": "nausea"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "vomiting",
+                  "display": "vomiting"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "ulcers",
+                  "display": "ulcers"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "melena",
+                  "display": "melena"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "rectal bleeding",
+                  "display": "rectal bleeding"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "jaundice",
+                  "display": "jaundice"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "heartburn",
+                  "display": "heartburn"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "hematemesis",
+                  "display": "hematemesis"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "None",
+                  "display": "None"
+              }
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression":  "MusculoskeletalReview"
+              }
+            }
+          ],
+          "enableWhen":[
+            {
+               "operator": "=",
+               "question": "5.1",
+               "answerCoding": {
+                   "code": "Review of Musculoskeletal System",
+                   "display": "Review of Musculoskeletal System"
+               }
+            }
+          ],
+          "linkId": "5.8",
+          "text": "Review of Musculoskeletal System",
+          "type": "choice",
+          "repeats":true,
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                  "code": "pain",
+                  "display": "pain"
+               }
+            },
+            {
+              "valueCoding": {
+                  "code": "swelling",
+                  "display": "swelling"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "stiffness",
+                  "display": "stiffness"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "limitation of range of motion",
+                  "display": "limitation of range of motion"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "arthritis",
+                  "display": "arthritis"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "gout",
+                  "display": "gout"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "cramps",
+                  "display": "cramps"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "myalgia",
+                  "display": "myalgia"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "fasciculation",
+                  "display": "fasciculation"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "atrophy",
+                  "display": "atrophy"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "fracture",
+                  "display": "fracture"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "deformity",
+                  "display": "deformity"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "weakness",
+                  "display": "weakness"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "None",
+                  "display": "None"
+              }
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression":  "NeurologicalReview"
+              }
+            }
+          ],
+          "enableWhen":[
+            {
+               "operator": "=",
+               "question": "5.1",
+               "answerCoding": {
+                   "code": "Review of Neurological System",
+                   "display": "Review of Neurological System"
+               }
+            }
+          ],
+          "linkId": "5.9",
+          "text": "Review of Neurological System",
+          "type": "choice",
+          "repeats":true,
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                  "code": "seizures",
+                  "display": "seizures"
+               }
+            },
+            {
+              "valueCoding": {
+                  "code": "poor memory",
+                  "display": "poor memory"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "poor concentration",
+                  "display": "poor concentration"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "numbness / tingling",
+                  "display": "numbness / tingling"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "pins and needles sensation",
+                  "display": "pins and needles sensation"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "hyperpathia",
+                  "display": "hyperpathia"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "dysesthesia",
+                  "display": "dysesthesia"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "weakness",
+                  "display": "weakness"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "paralysis",
+                  "display": "paralysis"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "tremors",
+                  "display": "tremors"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "involuntary movements",
+                  "display": "involuntary movements"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "unstable gait",
+                  "display": "unstable gait"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "fall",
+                  "display": "fall"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "vertigo",
+                  "display": "vertigo"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "headache",
+                  "display": "headache"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "stroke",
+                  "display": "stroke"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "speech disorders",
+                  "display": "speech disorders"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "None",
+                  "display": "None"
+              }
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression":  "PsychiatricReview"
+              }
+            }
+          ],
+          "enableWhen":[
+            {
+               "operator": "=",
+               "question": "5.1",
+               "answerCoding": {
+                   "code": "Psychiatric Review",
+                   "display": "Psychiatric Review"
+               }
+            }
+          ],
+          "linkId": "5.10",
+          "text": "Psychiatric Review",
+          "type": "choice",
+          "repeats":true,
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                  "code": "hallucinations",
+                  "display": "hallucinations"
+               }
+            },
+            {
+              "valueCoding": {
+                  "code": "delusions",
+                  "display": "delusions"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "anxiety",
+                  "display": "anxiety"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "nervous breakdown",
+                  "display": "nervous breakdown"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "mood changes",
+                  "display": "mood changes"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "None",
+                  "display": "None"
+              }
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression":  "HematologyReview"
+              }
+            }
+          ],
+          "enableWhen":[
+            {
+               "operator": "=",
+               "question": "5.1",
+               "answerCoding": {
+                   "code": "Review of Hematology",
+                   "display": "Review of Hematology"
+               }
+            }
+          ],
+          "linkId": "5.11",
+          "text": "Review of Hematology",
+          "type": "choice",
+          "repeats":true,
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                  "code": "anemia",
+                  "display": "anemia"
+               }
+            },
+            {
+              "valueCoding": {
+                  "code": "bruising",
+                  "display": "bruising"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "bleeding disorders (conditional)",
+                  "display": "bleeding disorders (conditional)"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "None",
+                  "display": "None"
+              }
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression":  "EndocrineReview"
+              }
+            }
+          ],
+          "enableWhen":[
+            {
+               "operator": "=",
+               "question": "5.1",
+               "answerCoding": {
+                   "code": "Review of Endocrine System",
+                   "display": "Review of Endocrine System"
+               }
+            }
+          ],
+          "linkId": "5.12",
+          "text": "Review of Endocrine System",
+          "type": "choice",
+          "repeats":true,
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                  "code": "heat or cold intolerance",
+                  "display": "heat or cold intolerance"
+               }
+            },
+            {
+              "valueCoding": {
+                  "code": "diabetes",
+                  "display": "diabetes"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "lipid disorders",
+                  "display": "lipid disorders"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "goiter",
+                  "display": "goiter"
+              }
+            },
+            {
+              "valueCoding": {
+                  "code": "None",
+                  "display": "None"
               }
             }
           ]
@@ -1261,13 +2025,45 @@
           "required": true,
           "enableWhen":[
             {
-               "operator": "!=",
+               "operator": "=",
                "question": "7.1",
                "answerCoding": {
-                   "code": "None",
-                   "display": "None"
+                  "code": "Bronchodilators",
+                  "display": "Bronchodilators"       
                }
-           }
+            },
+            {
+              "operator": "=",
+              "question": "7.1",
+              "answerCoding": {
+                "code": "Steroids",
+                "display": "Steroids"
+              }
+            },
+            {
+              "operator": "=",
+              "question": "7.1",
+              "answerCoding": {
+                "code": "Ventilation",
+                "display": "Ventilation"
+              } 
+            },
+            {
+              "operator": "=",
+              "question": "7.1",
+              "answerCoding": {
+                "code": "Anti-Inflammatory",
+                "display": "Anti-Inflammatory"
+              }
+            },
+            {
+              "operator": "=",
+              "question": "7.1",
+              "answerCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
+            }
          ],
           "answerOption": [
             {
@@ -1316,19 +2112,11 @@
                    "display": "None"
                }
            }
-         ]
-        },
-        {
-          "linkId": "7.9",
-          "text": "Were the other treatment options considered ?",
-          "type": "boolean",
-          "required": true,
-          "enableWhen":[
-            {
-               "operator": "=",
-               "question": "7.7",
-               "answerBoolean": true
-           }
+         ],
+         "initial":[
+          {
+            "valueBoolean": true
+          }
          ]
         },
         {
@@ -1336,6 +2124,11 @@
           "text": "Contraindications for other treatment options?",
           "type": "boolean",
           "required": true,
+          "initial":[
+            {
+              "valueBoolean": false
+            }
+           ],
           "enableWhen":[
             {
                "operator": "=",
@@ -1406,6 +2199,11 @@
           "text": "Frequency of Use",
           "type": "choice",
           "required": true,
+          "initial": [
+            {
+              "valueString": "During Sleep"
+            } 
+          ],
           "answerOption": [
             {
               "valueCoding": {
@@ -1439,6 +2237,11 @@
           "text": "Frequency of Oxygen Monitoring",
           "type": "choice",
           "required": true,
+          "initial": [
+            {
+              "valueString": "During Sleep"
+            } 
+          ],
           "answerOption": [
             {
               "valueCoding": {
@@ -1599,11 +2402,8 @@
           ],
           "initial": [
             {
-              "valueCoding": {
-                  "code": "Initial or original order for certification",
-                  "display": "Initial or original order for certification"
-              }
-            }
+              "valueString": "Initial or original order for certification"
+            } 
           ]
         },
         {

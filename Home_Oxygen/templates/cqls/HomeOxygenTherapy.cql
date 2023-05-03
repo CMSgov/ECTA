@@ -330,7 +330,7 @@ define BloodGasStudyDate:
 define BloodGasStudyPH:
 	(First([Observation]O
 		where "ToCode"(First(O.code.coding)) = "pH of Arterial blood"))O
-	return FHIRHelpers.ToQuantity(O.value)
+	return FHIRHelpers.ToInteger(O.value)
 
 define BloodGasStudyPaCO2:
 	(First([Observation]O
@@ -394,7 +394,7 @@ define ArterialOxygenSaturationResting:
 define PulseOximetryO2:
 	(First([Observation] P 
 		where "ToCode"(First(P.code.coding)) = "Oxygen saturation in Arterial blood by Pulse oximetry --resting"
-			and First(P.method.coding) = "Overnight pulse oximetry (procedure)"))O
+			and "ToCode"(First(P.method.coding)) = "Overnight pulse oximetry (procedure)"))O
 		return FHIRHelpers.ToQuantity(O.value)
 
 define TestingDate:
@@ -511,9 +511,9 @@ define ClinicalTrials:
 		where exists(P.code.coding P
 						where P in "Cluster Headache"))
 		then 'Cluster headache'
-	else ''
+	else 'None'
 
-define GeneralSymptoms:
+define "GeneralSymptoms":
 	if exists([Condition] P
 					where "ToCode"(First(P.code.coding)) = "Unintentional weight gain (finding)")
 			then 'weight gain'
@@ -540,7 +540,7 @@ define GeneralSymptoms:
 					where exists(P.code.coding P
 						where P in "Night Sweats (SNOMED)")) 
 			then 'night sweats / diaphoresi'
-		else ''	
+		else 'None'	
 
 define NeckReview: 
 	if exists([Condition] P
@@ -550,7 +550,7 @@ define NeckReview:
 		else if exists([Condition] P
 					where "ToCode"(First(P.code.coding)) = "Acute lymphadenitis of neck (disorder)")
 			then 'lumps'
-		else ''
+		else 'None'
 
 define PulmonaryReview:
 	if exists([Condition] P
@@ -577,7 +577,7 @@ define PulmonaryReview:
 					where exists(P.code.coding P
 						where P in "Sputum (Specimen Type) (SNOMED)"))
 			then 'sputum production'
-		else ''
+		else 'None'
 
 define CardiacReview: 
 	if exists([Condition] P
@@ -598,7 +598,7 @@ define CardiacReview:
 					where exists(P.code.coding P
 						where P in "Syncope"))
 			then 'syncope'
-		else ''
+		else 'None'
 
 define VascularReview:
 	if exists([Condition] P
@@ -620,7 +620,7 @@ define VascularReview:
 					where exists(P.code.coding P
 						where P in "Acute Peptic Ulcer"))
 			then 'ulcers'
-		else ''
+		else 'None'
 
 define HematologyReview:
 	if exists([Condition] P
@@ -634,7 +634,7 @@ define HematologyReview:
 			where exists(P.code.coding P
 				where P in "Bleeding Disorder"))
 		then 'bleeding disorders (conditional)'
-	else ''
+	else 'None'
 
 define EndocrineReview:
 	if exists([Condition] P
@@ -647,7 +647,7 @@ define EndocrineReview:
 	else if exists([Condition] P
 				where "ToCode"(First(P.code.coding)) = "Lipids abnormal (finding)")
 		then 'lipid disorders'
-	else ''
+	else 'None'
 
 define TreatmentsTried:
 	if exists([Procedure] P
@@ -689,7 +689,7 @@ define PsychiatricReview:
 		else if exists([Condition] P
 					where "ToCode"(First(P.code.coding)) = "Mood disorder (disorder)")
 			then 'mood changes'
-		else ''
+		else 'None'
 
 
 
@@ -757,7 +757,7 @@ define NeurologicalReview:
 		else if exists([Condition] P
 					where "ToCode"(First(P.code.coding)) = "Speech disturbances, not elsewhere classified")
 			then 'speech disorders'
-		else ''
+		else 'None'
 		
 define MusculoskeletalReview:
 	if exists([Condition] P
@@ -809,7 +809,7 @@ define MusculoskeletalReview:
 					where exists(P.code.coding P
 						where P in "Muscle weakness (ICD10CM)"))
 			then 'weakness'
-		else ''
+		else 'None'
 
 define GastrointestinalReview:
 	if exists([Condition] P
@@ -861,7 +861,21 @@ define GastrointestinalReview:
 					where exists(P.code.coding P
 						where P in "Hematemesis [Unspecified Cause] (ICD10CM)"))
 			then 'hematemesis'
-		else ''
+		else 'None'
+
+define ReviewOfSystems:
+	{
+	(if ("GeneralSymptoms" != 'None') then 'Review in General' else ''),
+	(if ("NeckReview" != 'None') then 'Review of Neck' else ''),
+	(if ("PulmonaryReview" != 'None')then 'Review of Pulmonary System'else ''),
+	(if ("CardiacReview" != 'None') then 'Review of Cardiac System' else ''),
+	(if ("VascularReview" != 'None') then 'Review of Vascular System' else ''),
+	(if ("HematologyReview" != 'None') then 'Review of Hematology' else ''),
+	(if ("EndocrineReview" != 'None') then 'Review of Endocrine System' else ''),
+	(if ("NeurologicalReview" != 'None') then 'Review of Neurological System' else ''),
+	(if ("MusculoskeletalReview" != 'None') then 'Review of Musculoskeletal System' else ''),
+	(if ("GastrointestinalReview" != 'None') then 'Review of Gastrointestinal System' else '')
+	}
 
 define HematocritThatIsGreaterThanThreshold: 
 	FHIRHelpers.ToQuantity(singleton from([Observation] P where First(P.code.coding).code.value in "Hematocrit_lab_test_Codes").value).value 
