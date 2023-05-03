@@ -2153,126 +2153,6 @@
       ]
     },
     {
-      "linkId": "8",
-      "text": "Prescribed Use",
-      "type": "group",
-      "item": [
-        {
-          "linkId": "8.1",
-          "text": "Length of need: (months) (99 = lifetime)",
-          "type": "integer",
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-            "language": "text/cql",
-            "expression":  "InhaledFlowRate"
-              }
-            }
-          ],
-          "linkId": "8.2",
-          "text": "Peak Flow Rate",
-          "type": "quantity",
-          "required": true
-        },
-        {
-
-          "linkId": "8.3",
-          "text": "Average Flow Rate",
-          "type": "quantity",
-          "required": true,
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                  "language": "text/cql",
-                  "expression":  "InhaledAverageFlowRate"
-              }
-            }
-          ]
-        },
-        {
-          "linkId": "8.4", 
-          "text": "Frequency of Use",
-          "type": "choice",
-          "required": true,
-          "initial": [
-            {
-              "valueString": "During Sleep"
-            } 
-          ],
-          "answerOption": [
-            {
-              "valueCoding": {
-                  "code": "At rest/Awake",
-                  "display": "At rest/Awake"
-               }
-            },
-            {
-              "valueCoding": {
-                  "code": "During exertion",
-                  "display": "During exertion"
-              }
-            },
-            {
-              "valueCoding": {
-                  "code": "During Sleep",
-                  "display": "During Sleep"
-              }
-            }
-          ]
-        },
-        {
-
-          "linkId": "8.5",
-          "text": "Target Oxygen Saturation",
-          "type": "quantity",
-          "required": true
-        },
-        {
-          "linkId": "8.6", 
-          "text": "Frequency of Oxygen Monitoring",
-          "type": "choice",
-          "required": true,
-          "initial": [
-            {
-              "valueString": "During Sleep"
-            } 
-          ],
-          "answerOption": [
-            {
-              "valueCoding": {
-                  "code": "At rest/Awake",
-                  "display": "At rest/Awake"
-               }
-            },
-            {
-              "valueCoding": {
-                  "code": "During exertion",
-                  "display": "During exertion"
-              }
-            },
-            {
-              "valueCoding": {
-                  "code": "During Sleep",
-                  "display": "During Sleep"
-              }
-            }
-          ]
-        },
-        {
-
-          "linkId": "8.7",
-          "text": "Maximum length of need in hrs/min",
-          "type": "quantity",
-          "required": true
-        }
-      ]
-    },
-    {
       "linkId": "9",
       "text": "Oxygen Supply Order Details",
       "type": "group",
@@ -2306,10 +2186,15 @@
           "type": "boolean"
         },
         {
-          "linkId": "9.3", 
+          "linkId": "9.3",
           "text": "Means of Oxygen Delivery and Accessories",
           "type": "choice",
           "required": true,
+          "initial": [
+            {
+              "valueString": "Nasal cannula"
+            }
+          ],
           "answerOption": [
             {
               "valueCoding": {
@@ -2361,7 +2246,7 @@
             }
           ]
         }
-        
+
       ]
     },
     {
