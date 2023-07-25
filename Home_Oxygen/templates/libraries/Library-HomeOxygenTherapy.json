@@ -887,8 +887,12 @@
                   "system": "http://hl7.org/fhir/sid/icd-10-cm",
                   "code": "R54",
                   "display": "Age-related physical debility"
+                },
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "400047006",
+                  "display": "Peripheral vascular disease (disorder)"
                 }
-
               ]
             }
           ]
@@ -1032,6 +1036,21 @@
                   "system": "http://snomed.info/sct",
                   "code": "447346005",
                   "display": "Cardiopulmonary exercise test (procedure)"
+                },
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "703476007",
+                  "display": "Positive airway pressure nap study (procedure)"
+                },
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "34281000175105",
+                  "display": "Nocturnal continuous positive airway pressure (regime/therapy)"
+                },
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "117007006",
+                  "display": "Titration method (procedure)"
                 }
               ]
             }
@@ -1116,6 +1135,41 @@
                   "system": "http://loinc.org",
                   "code": "2744-1",
                   "display": "pH of Arterial blood"
+                },
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "271209008",
+                  "display": "High altitude residence (& accident caused by)"
+                },
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "87284002",
+                  "display": "Effects of high altitude (disorder)"
+                },
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "217615009",
+                  "display": "Accidents due to residence or prolonged visit at high altitude (event)"
+                },
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "442549008",
+                  "display": "Periodic breathing of sleep at high altitude (finding)"
+                },
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "157730009",
+                  "display": "Air pressure effects: &/or altitude problems (disorder)"
+                },
+                {
+                  "system": "http://loinc.org",
+                  "code": "718-7",
+                  "display": "Hemoglobin [Mass/volume] in Blood"
+                },
+                {
+                  "system": "http://loinc.org",
+                  "code": "88658-0",
+                  "display": "Use of supplemental oxygen"
                 }
               ]
             }

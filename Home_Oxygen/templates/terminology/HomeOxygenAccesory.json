@@ -1,0 +1,119 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113762.1.4.1219.130",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-05-09T07:02:52.000+00:00",
+        "source": "#Uvh8SkSSDunbG6im"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1219.130",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113762.1.4.1219.130"
+        }
+    ],
+    "version": "Latest",
+    "name": "HomeOxygenTherapyAccessory",
+    "title": "Home Oxygen Therapy Accessory",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "https://hcpcs.codes",
+                "version": "2023",
+                "concept": [
+                    {
+                        "code": "A4606",
+                        "display": "Oxygen probe for use with oximeter device, replacement"
+                    },
+                    {
+                        "code": "A4608",
+                        "display": "Transtracheal oxygen catheter, each"
+                    },
+                    {
+                        "code": "A4615",
+                        "display": "Cannula, nasal"
+                    },
+                    {
+                        "code": "A4616",
+                        "display": "Tubing (oxygen), per foot"
+                    },
+                    {
+                        "code": "A4617",
+                        "display": "Mouth piece"
+                    },
+                    {
+                        "code": "A4619",
+                        "display": "Face tent"
+                    },
+                    {
+                        "code": "A4620",
+                        "display": "Variable concentration mask"
+                    },
+                    {
+                        "code": "A7525",
+                        "display": "Tracheostomy mask, each"
+                    },
+                    {
+                        "code": "A9900",
+                        "display": "Miscellaneous dme supply, accessory, and/or service component of another hcpcs code"
+                    },
+                    {
+                        "code": "E0445",
+                        "display": "Oximeter device for measuring blood oxygen levels non-invasively"
+                    },
+                    {
+                        "code": "E0455",
+                        "display": "Oxygen tent, excluding croup or pediatric tents"
+                    },
+                    {
+                        "code": "E0555",
+                        "display": "Humidifier, durable, glass or autoclavable plastic bottle type, for use with regulator or flowmeter"
+                    },
+                    {
+                        "code": "E0580",
+                        "display": "Nebulizer, durable, glass or autoclavable plastic, bottle type, for use with regulator or flowmeter"
+                    },
+                    {
+                        "code": "E1352",
+                        "display": "Oxygen accessory, flow regulator capable of positive inspiratory pressure"
+                    },
+                    {
+                        "code": "E1353",
+                        "display": "Regulator"
+                    },
+                    {
+                        "code": "E1354",
+                        "display": "Oxygen accessory, wheeled cart for portable cylinder or portable concentrator, any type, replacement only, each"
+                    },
+                    {
+                        "code": "E1355",
+                        "display": "Stand/rack"
+                    },
+                    {
+                        "code": "E1356",
+                        "display": "Oxygen accessory, battery pack/cartridge for portable concentrator, any type, replacement only, each"
+                    },
+                    {
+                        "code": "E1357",
+                        "display": "Oxygen accessory, battery charger for portable concentrator, any type, replacement only, each"
+                    },
+                    {
+                        "code": "E1358",
+                        "display": "Oxygen accessory, dc power adapter for portable concentrator, any type, replacement only, each"
+                    },
+                    {
+                        "code": "E1405",
+                        "display": "Oxygen and water vapor enriching system with heated delivery"
+                    },
+                    {
+                        "code": "E1406",
+                        "display": "Oxygen and water vapor enriching system without heated delivery"
+                    }
+                ]
+            }
+        ]
+    }
+}
