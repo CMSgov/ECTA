@@ -432,8 +432,8 @@
           "enableWhen": [
             {
               "operator": "=",
-              "question": "3.7",
-              "answerBoolean": true
+              "question": "3.8",
+              "answerBoolean": false
             }
           ],
           "linkId": "3.9",

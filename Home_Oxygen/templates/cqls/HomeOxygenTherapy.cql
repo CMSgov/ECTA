@@ -424,7 +424,6 @@ define ArterialPO2ExerciseWithOxygen:
 define OvernightOximetry:
   First([Procedure]P
     where "ToCode"(First(P.code.coding)) = "Overnight pulse oximetry (procedure)"
-        or "ToCode"(First(P.code.coding)) = "Titration method (procedure)"
     and P.status.value = 'completed')
 
 define NocturnalOximetryO2SAT:
@@ -609,13 +608,15 @@ define NocturnalRestlessness:
   )
 
 define NocturnalRestlessnessStudy:
-  if exists ( [Observation] P
-      where "ToCode"(First(P.code.coding)) = "Overnight pulse oximetry (procedure)"
-  ) then 'Nocturnal oximetry' 
-    else if exists ( [Observation] P
-      where "ToCode"(First(P.code.coding)) = "Polysomnography (procedure)"
-  ) then 'Titration Polysomnography'
-    else ''
+{ 
+   (if exists([Procedure] P 
+          where "ToCode"(First(P.code.coding)) = "Overnight pulse oximetry (procedure)") 
+          then 'Titration Polysomnography' else null),
+   (if exists([Observation] P 
+          where "ToCode"(First(P.code.coding)) = "Titration method (procedure)")
+          then 'Titration Polysomnography' else null)
+}
+      
 
 define PresenceOfOSA:
   exists ( [Condition] P
@@ -624,8 +625,7 @@ define PresenceOfOSA:
 
 define PresenceOfPAP:
     exists ( [Procedure] P
-      where "ToCode"(First(P.code.coding)) = "Chronic respiratory failure with hypoxia"
-        or "ToCode"(First(P.code.coding)) = "Desaturation of blood (disorder)"
+      where "ToCode"(First(P.code.coding)) = "Nocturnal continuous positive airway pressure (regime/therapy)"      
   )      
 
 define AHIndex:
@@ -1101,10 +1101,9 @@ define TargetSaturation:
 	return FHIRHelpers.ToQuantity(E.value)
 
 define CannulaType:
-	if(("DeviceRequest".code.coding F
-		where "ToCode"(F) = "Cannula, nasal") is not null)
-	then true 
-	else false
+	exists("DeviceRequest".code.coding F
+		where "ToCode"(F) = "Cannula, nasal")
+	
 
 define VentilatorType:
 	if(("DeviceRequest".code.coding F
