@@ -19,10 +19,6 @@
     {
       "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
       "valueCanonical": "<FHIR-server>/Library/library-homeoxygen-HomeOxygenTherapy"
-    },
-    {
-      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-questionnaireAdaptive",
-      "valueBoolean": true
     }
   ],
   "url": "<FHIR-server>/Questionnaire/questionnaire-homeoxygen-HomeOxygenTherapy",
@@ -272,11 +268,34 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
-                "expression": "TravelToHigherElevation"
+                "expression": "PatientMobile"
               }
             }
           ],
           "linkId": "2.9",
+          "text": "Is the patient mobile within the home? ",
+          "type": "boolean",
+          "required": false
+        }
+      ]
+    },
+    {
+      "linkId": "3",
+      "text": "Symptoms and Diagnostic Testing",
+      "type": "group",
+      "item": [
+        
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "TravelToHigherElevation"
+              }
+            }
+          ],
+          "linkId": "3.1",
           "text": "Does patient live or travel to an area at high elevation?",
           "type": "boolean",
           "required": false
@@ -291,7 +310,7 @@
               }
             }
           ],
-          "linkId": "2.10",
+          "linkId": "3.2",
           "text": "Does patient have a reduced O2 carrying capacity? ",
           "type": "boolean",
           "required": false
@@ -306,15 +325,161 @@
               }
             }
           ],
-          "linkId": "2.10",
+          "linkId": "3.3",
           "text": "Does patient have skin pigmentation ? ",
           "type": "boolean",
           "required": false
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "HypoxemiaSymptoms"
+              }
+            }
+          ],
+          "linkId": "3.4",
+          "text": "Does patient have symptoms of Hypoxemia ? ",
+          "type": "boolean",
+          "required": false
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "ExertionalHypoxia"
+              }
+            }
+          ],
+          "linkId": "3.5",
+          "text": "Presence of Exertional hypoxia / desaturation",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "ExerciseTesting"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "3.5",
+              "answerBoolean": true
+            }
+          ],
+          "linkId": "3.6",
+          "text": "Was exercise testing performed in-person by a treating practitioner or other medical professional qualified to conduct testing ? ",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "NocturnalRestlessness"
+              }
+            }
+          ],
+          "linkId": "3.7",
+          "text": "Presence of Nocturnal restlessness, morning headache, and/or daytime somnolence",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "PresenceOfOSA"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "3.7",
+              "answerBoolean": true
+            }
+          ],
+          "linkId": "3.8",
+          "text": "Does the patient have Obstructive Sleep Apnea (OSA) ?",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "PresenceOfIDTF"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "3.7",
+              "answerBoolean": true
+            }
+          ],
+          "linkId": "3.9",
+          "text": "Was nocturnal testing performed under the direction of medicare enrolled IDTF ?",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "PresenceOfPAP"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "3.8",
+              "answerBoolean": true
+            }
+          ],
+          "linkId": "3.10",
+          "text": "Does the patient use PAP device to treat OSA(Sleep Apnea) ?",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "3.10",
+              "answerBoolean": true
+            }
+          ],
+          "linkId": "3.11",
+          "text": "Was the test performed after determining optimal settings of the PAP device ?",
+          "type": "boolean",
+          "required": true
         }
       ]
     },
     {
-      "linkId": "3",
+      "linkId": "4",
       "text": "Relevant Patient Observations/Conditions",
       "type": "group",
       "item": [
@@ -328,7 +493,7 @@
               }
             }
           ],
-          "linkId": "3.1",
+          "linkId": "4.1",
           "text": "Was Pulse Oximetry performed",
           "type": "boolean",
           "required": true
@@ -343,8 +508,23 @@
               }
             }
           ],
-          "linkId": "3.2",
+          "linkId": "4.2",
           "text": "Arterial oxygen saturation results at rest",
+          "type": "quantity",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "ArterialPO2"
+              }
+            }
+          ],
+          "linkId": "4.3",
+          "text": "Arterial PO2 results at rest",
           "type": "quantity",
           "required": true
         },
@@ -358,12 +538,40 @@
               }
             }
           ],
-          "linkId": "3.3",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "3.5",
+              "answerBoolean": true
+            }
+          ],
+          "linkId": "4,4",
           "text": "Oxygen saturation results during exercise without oxygen",
           "type": "quantity",
           "required": false
         },
-        
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "ArterialPO2Exercise"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "3.5",
+              "answerBoolean": true
+            }
+          ],
+          "linkId": "4.5",
+          "text": "Arterial PO2 results during exercise without oxygen",
+          "type": "quantity",
+          "required": false
+        },
         {
           "extension": [
             {
@@ -374,12 +582,77 @@
               }
             }
           ],
-          "linkId": "3.4",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "3.5",
+              "answerBoolean": true
+            }
+          ],
+          "linkId": "4.6",
           "text": "Oxygen saturation results during exercise with oxygen",
           "type": "quantity",
           "required": false
         },
-        
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "ArterialPO2ExerciseWithOxygen"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "3.5",
+              "answerBoolean": true
+            }
+          ],
+          "linkId": "4.7",
+          "text": "Oxygen PO2 results during exercise with oxygen",
+          "type": "quantity",
+          "required": false
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "NocturnalRestlessnessStudy"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "3.7",
+              "answerBoolean": true
+            }
+          ],
+          "linkId": "4.8",
+          "text": "Study performed in relevance to Nocturnal Restlessness",
+          "type": "choice",
+          "repeats": true,
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "Nocturnal oximetry",
+                "display": "Nocturnal oximetry"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Titration Polysomnography",
+                "display": "Titration Polysomnography"
+              }
+            }
+          ]
+        },
         {
           "extension": [
             {
@@ -393,16 +666,37 @@
           "enableWhen": [
             {
               "operator": "=",
-              "question": "4.5",
+              "question": "3.7",
               "answerBoolean": true
             }
           ],
-          "linkId": "3.5",
+          "linkId": "4.9",
           "text": "Nocturnal oxygen saturation",
           "type": "quantity",
           "required": false
         },
-        
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "NocturnalOximetryPO2"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "3.7",
+              "answerBoolean": true
+            }
+          ],
+          "linkId": "4.10",
+          "text": "Nocturnal PO2",
+          "type": "quantity",
+          "required": false
+        },
         {
           "extension": [
             {
@@ -416,12 +710,34 @@
           "enableWhen": [
             {
               "operator": "=",
-              "question": "4.5",
+              "question": "3.7",
               "answerBoolean": true
             }
           ],
-          "linkId": "3.7",
+          "linkId": "4.11",
           "text": "Nocturnal oxygen saturation with oxygen",
+          "type": "quantity",
+          "required": false
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "NocturnalOximetryPO2WithOxygen"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "3.7",
+              "answerBoolean": true
+            }
+          ],
+          "linkId": "4.12",
+          "text": "Nocturnal oxygen PO2 with oxygen",
           "type": "quantity",
           "required": false
         },
@@ -435,7 +751,7 @@
               }
             }
           ],
-          "linkId": "3.8",
+          "linkId": "4.13",
           "text": "Date Of Testing",
           "type": "date",
           "required": true
@@ -446,19 +762,26 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
-                "expression": "PatientMobile"
+                "expression": "AHIndex"
               }
             }
           ],
-          "linkId": "3.9",
-          "text": "Is the patient mobile within the home? ",
-          "type": "boolean",
-          "required": false
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "3.8",
+              "answerBoolean": true
+            }
+          ],
+          "linkId": "4.14",
+          "text": "AHI/RDI in events/hour",
+          "type": "quantity",
+          "required": true
         }
       ]
     },
     {
-      "linkId": "4",
+      "linkId": "5",
       "text": "Patient Observations/Conditions",
       "type": "group",
       "item": [
@@ -472,7 +795,7 @@
               }
             }
           ],
-          "linkId": "4.1",
+          "linkId": "5.1",
           "text": "Patient Diagnoses?",
           "type": "choice",
           "required": true,
@@ -546,6 +869,71 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
+                "expression": "OtherDiagnosisCode"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "5.1",
+              "answerCoding": {
+                "code": "Others",
+                "display": "Others"
+              }
+            }
+          ],
+          "linkId": "5.2",
+          "text": "Specify the ICD-10 code",
+          "type": "string",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "OtherDiagnosisCodeDescription"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "5.1",
+              "answerCoding": {
+                "code": "Others",
+                "display": "Others"
+              }
+            }
+          ],
+          "linkId": "5.3",
+          "text": "Specify the ICD-10 code description",
+          "type": "string",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "DependentEdema"
+              }
+            }
+          ],
+          "linkId": "5.4",
+          "text": "Does the patient have Dependent edema suggesting congestive heart failure? ",
+          "type": "boolean",
+          "required": false
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
                 "expression": "SecondaryToCORPulmonale"
               }
             }
@@ -553,41 +941,23 @@
           "enableWhen": [
             {
               "operator": "=",
-              "question": "4.1",
+              "question": "5.1",
               "answerCoding": {
                 "code": "Pulmonary hypertension",
                 "display": "Pulmonary hypertension"
               }
             }
           ],
-          "linkId": "4.2",
-          "text": "Diagnoses secondary to Cor Pulmonale",
+          "linkId": "5.5",
+          "text": "Determination of  Cor Pulmonale",
           "type": "choice",
           "repeats": true,
           "required": true,
           "answerOption": [
             {
               "valueCoding": {
-                "code": "Recurring heart failure",
-                "display": "Recurring heart failure"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Edema",
-                "display": "Edema"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Pulmonary Rales",
-                "display": "Pulmonary Rales"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Fluid on CXR",
-                "display": "Fluid on CXR"
+                "code": "Pulmonary Artery pressure",
+                "display": "Pulmonary Artery pressure"
               }
             },
             {
@@ -598,8 +968,14 @@
             },
             {
               "valueCoding": {
-                "code": "“p” Pulmonale on ECG",
-                "display": "“p” Pulmonale on ECG"
+                "code": "Echocardiogram",
+                "display": "Echocardiogram"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "“p” Pulmonale on EKG",
+                "display": "“p” Pulmonale on EKG"
               }
             }
           ]
@@ -614,17 +990,7 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "4.1",
-              "answerCoding": {
-                "code": "Erythrocytosis",
-                "display": "Erythrocytosis"
-              }
-            }
-          ],
-          "linkId": "4.3",
+          "linkId": "5.6",
           "text": "Presence of Erythrocythemia",
           "type": "boolean",
           "required": true
@@ -642,190 +1008,16 @@
           "enableWhen": [
             {
               "operator": "=",
-              "question": "4.1",
+              "question": "5.1",
               "answerCoding": {
                 "code": "Erythrocytosis",
                 "display": "Erythrocytosis"
               }
             }
           ],
-          "linkId": "4.4",
+          "linkId": "5.7",
           "text": "Hematocrit/hemoglobin result (Hct/Hgb)",
           "type": "quantity",
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "NocturnalRestlessness"
-              }
-            }
-          ],
-          "linkId": "4.5",
-          "text": "Presence of Nocturnal restlessness, morning headache, and/or daytime somnolence",
-          "type": "boolean",
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "PresenceOfOSA"
-              }
-            }
-          ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "4.5",
-              "answerBoolean": true
-            }
-          ],
-          "linkId": "4.6",
-          "text": "Does the patient have Obstructive Sleep Apnea (OSA) ?",
-          "type": "boolean",
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "PresenceOfPAP"
-              }
-            }
-          ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "4.6",
-              "answerBoolean": true
-            }
-          ],
-          "linkId": "4.7",
-          "text": "Does the patient use PAP device to treat OSA(Sleep Apnea) ?",
-          "type": "boolean",
-          "required": true
-        },
-        {
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "4.6",
-              "answerBoolean": true
-            }
-          ],
-          "linkId": "4.8",
-          "text": "Was the test performed after determining optimal settings of the PAP device ?",
-          "type": "boolean",
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "NocturnalRestlessnessStudy"
-              }
-            }
-          ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "4.5",
-              "answerBoolean": true
-            }
-          ],
-          "linkId": "4.9",
-          "text": "Study performed in relevance to Nocturnal Restlessness",
-          "type": "choice",
-          "repeats": true,
-          "required": true,
-          "answerOption": [
-            {
-              "valueCoding": {
-                "code": "Nocturnal oximetry",
-                "display": "Nocturnal oximetry"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Titration Polysomnography",
-                "display": "Titration Polysomnography"
-              }
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "ExertionalHypoxia"
-              }
-            }
-          ],
-          "linkId": "4.10",
-          "text": "Presence of Exertional hypoxia / desaturation",
-          "type": "boolean",
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "OtherDiagnosisCode"
-              }
-            }
-          ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "4.1",
-              "answerCoding": {
-                "code": "Others",
-                "display": "Others"
-              }
-            }
-          ],
-          "linkId": "4.11",
-          "text": "Specify the ICD-10 code",
-          "type": "boolean",
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "OtherDiagnosisCodeDescription"
-              }
-            }
-          ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "4.1",
-              "answerCoding": {
-                "code": "Others",
-                "display": "Others"
-              }
-            }
-          ],
-          "linkId": "4.12",
-          "text": "Specify the ICD-10 code description",
-          "type": "boolean",
           "required": true
         },
         {
@@ -838,16 +1030,58 @@
               }
             }
           ],
-          "linkId": "4.13",
+          "linkId": "5.8",
           "text": "Any medical condition with distinct physiologic, cognitive, and/or functional symptoms documented in high-quality, peer-reviewed literature to be improved by oxygen therapy, such as cluster headaches ?",
           "type": "boolean",
           "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "Group4Criteria"
+              }
+            }
+          ],
+          "linkId": "5.9",
+          "text": "Does the patient suffer from any of the following conditions ?",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "Angina pectoris",
+                "display": "Angina pectoris"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Dyspnea",
+                "display": "Dyspnea"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Peripheral Vascular Disease",
+                "display": "Peripheral Vascular Disease"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Terminal Illness",
+                "display": "Terminal Illness"
+              }
+            }
+          ]
+          
         }
       ]
     },
     {
-      "linkId": "5",
-      "text": "Review of Physiological Systems",
+      "linkId": "6",
+      "text": "Conditions of Physiological Systems",
       "type": "group",
       "item": [
         {
@@ -856,80 +1090,80 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
-                "expression": "ReviewOfSystems"
+                "expression": "ConditionsOfSystems"
               }
             }
           ],
-          "linkId": "5.1",
-          "text": "Review of Systems",
+          "linkId": "6.1",
+          "text": "Physiological System Review",
           "type": "choice",
           "repeats": true,
           "required": true,
           "answerOption": [
             {
               "valueCoding": {
-                "code": "Review in General",
-                "display": "Review in General"
+                "code": "Conditions in General",
+                "display": "Conditions in General"
               }
             },
             {
               "valueCoding": {
-                "code": "Review of Neck",
-                "display": "Review of Neck"
+                "code": "Conditions of Neck",
+                "display": "Conditions of Neck"
               }
             },
             {
               "valueCoding": {
-                "code": "Review of Pulmonary System",
-                "display": "Review of Pulmonary System"
+                "code": "Conditions of Pulmonary System",
+                "display": "Conditions of Pulmonary System"
               }
             },
             {
               "valueCoding": {
-                "code": "Review of Cardiac System",
-                "display": "Review of Cardiac System"
+                "code": "Conditions of Cardiac System",
+                "display": "Conditions of Cardiac System"
               }
             },
             {
               "valueCoding": {
-                "code": "Review of Vascular System",
-                "display": "Review of Vascular System"
+                "code": "Conditions of Vascular System",
+                "display": "Conditions of Vascular System"
               }
             },
             {
               "valueCoding": {
-                "code": "Review of Gastrointestinal System",
-                "display": "Review of Gastrointestinal System"
+                "code": "Conditions of Gastrointestinal System",
+                "display": "Conditions of Gastrointestinal System"
               }
             },
             {
               "valueCoding": {
-                "code": "Review of Musculoskeletal System",
-                "display": "Review of Musculoskeletal System"
+                "code": "Conditions of Musculoskeletal System",
+                "display": "Conditions of Musculoskeletal System"
               }
             },
             {
               "valueCoding": {
-                "code": "Review of Neurological System",
-                "display": "Review of Neurological System"
+                "code": "Conditions of Neurological System",
+                "display": "Conditions of Neurological System"
               }
             },
             {
               "valueCoding": {
-                "code": "Psychiatric Review",
-                "display": "Psychiatric Review"
+                "code": "Psychiatric Conditions",
+                "display": "Psychiatric Conditions"
               }
             },
             {
               "valueCoding": {
-                "code": "Review of Hematology",
-                "display": "Review of Hematology"
+                "code": "Conditions of Hematology",
+                "display": "Conditions of Hematology"
               }
             },
             {
               "valueCoding": {
-                "code": "Review of Endocrine System",
-                "display": "Review of Endocrine System"
+                "code": "Conditions of Endocrine System",
+                "display": "Conditions of Endocrine System"
               }
             }
           ]
@@ -947,15 +1181,15 @@
           "enableWhen": [
             {
               "operator": "=",
-              "question": "5.1",
+              "question": "6.1",
               "answerCoding": {
-                "code": "Review in General",
-                "display": "Review in General"
+                "code": "Conditions in General",
+                "display": "Conditions in General"
               }
             }
           ],
-          "linkId": "5.2",
-          "text": "Review in General",
+          "linkId": "6.2",
+          "text": "Conditions in General",
           "type": "choice",
           "repeats": true,
           "required": true,
@@ -1016,22 +1250,22 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
-                "expression": "NeckReview"
+                "expression": "NeckConditions"
               }
             }
           ],
           "enableWhen": [
             {
               "operator": "=",
-              "question": "5.1",
+              "question": "6.1",
               "answerCoding": {
-                "code": "Review of Neck",
-                "display": "Review of Neck"
+                "code": "Conditions of Neck",
+                "display": "Conditions of Neck"
               }
             }
           ],
-          "linkId": "5.3",
-          "text": "Review of Neck",
+          "linkId": "6.3",
+          "text": "Conditions of Neck",
           "type": "choice",
           "repeats": true,
           "required": true,
@@ -1062,22 +1296,22 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
-                "expression": "PulmonaryReview"
+                "expression": "PulmonaryConditions"
               }
             }
           ],
           "enableWhen": [
             {
               "operator": "=",
-              "question": "5.1",
+              "question": "6.1",
               "answerCoding": {
-                "code": "Review of Pulmonary System",
-                "display": "Review of Pulmonary System"
+                "code": "Conditions of Pulmonary System",
+                "display": "Conditions of Pulmonary System"
               }
             }
           ],
-          "linkId": "5.4",
-          "text": "Review of Pulmonary System",
+          "linkId": "6.4",
+          "text": "Conditions of Pulmonary System",
           "type": "choice",
           "repeats": true,
           "required": true,
@@ -1132,22 +1366,22 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
-                "expression": "CardiacReview"
+                "expression": "CardiacConditions"
               }
             }
           ],
           "enableWhen": [
             {
               "operator": "=",
-              "question": "5.1",
+              "question": "6.1",
               "answerCoding": {
-                "code": "Review of Cardiac System",
-                "display": "Review of Cardiac System"
+                "code": "Conditions of Cardiac System",
+                "display": "Conditions of Cardiac System"
               }
             }
           ],
-          "linkId": "5.5",
-          "text": "Review of Cardiac System",
+          "linkId": "6.5",
+          "text": "Conditions of Cardiac System",
           "type": "choice",
           "repeats": true,
           "required": true,
@@ -1196,22 +1430,22 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
-                "expression": "VascularReview"
+                "expression": "VascularConditions"
               }
             }
           ],
           "enableWhen": [
             {
               "operator": "=",
-              "question": "5.1",
+              "question": "6.1",
               "answerCoding": {
-                "code": "Review of Vascular System",
-                "display": "Review of Vascular System"
+                "code": "Conditions of Vascular System",
+                "display": "Conditions of Vascular System"
               }
             }
           ],
-          "linkId": "5.6",
-          "text": "Review of Vascular System",
+          "linkId": "6.6",
+          "text": "Conditions of Vascular System",
           "type": "choice",
           "repeats": true,
           "required": true,
@@ -1260,22 +1494,22 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
-                "expression": "GastrointestinalReview"
+                "expression": "GastrointestinalConditions"
               }
             }
           ],
           "enableWhen": [
             {
               "operator": "=",
-              "question": "5.1",
+              "question": "6.1",
               "answerCoding": {
-                "code": "Review of Gastrointestinal System",
-                "display": "Review of Gastrointestinal System"
+                "code": "Conditions of Gastrointestinal System",
+                "display": "Conditions of Gastrointestinal System"
               }
             }
           ],
-          "linkId": "5.7",
-          "text": "Review of Gastrointestinal System",
+          "linkId": "6.7",
+          "text": "Conditions of Gastrointestinal System",
           "type": "choice",
           "repeats": true,
           "required": true,
@@ -1372,22 +1606,22 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
-                "expression": "MusculoskeletalReview"
+                "expression": "MusculoskeletalConditions"
               }
             }
           ],
           "enableWhen": [
             {
               "operator": "=",
-              "question": "5.1",
+              "question": "6.1",
               "answerCoding": {
-                "code": "Review of Musculoskeletal System",
-                "display": "Review of Musculoskeletal System"
+                "code": "Conditions of Musculoskeletal System",
+                "display": "Conditions of Musculoskeletal System"
               }
             }
           ],
-          "linkId": "5.8",
-          "text": "Review of Musculoskeletal System",
+          "linkId": "6.8",
+          "text": "Conditions of Musculoskeletal System",
           "type": "choice",
           "repeats": true,
           "required": true,
@@ -1484,22 +1718,22 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
-                "expression": "NeurologicalReview"
+                "expression": "NeurologicalConditions"
               }
             }
           ],
           "enableWhen": [
             {
               "operator": "=",
-              "question": "5.1",
+              "question": "6.1",
               "answerCoding": {
-                "code": "Review of Neurological System",
-                "display": "Review of Neurological System"
+                "code": "Conditions of Neurological System",
+                "display": "Conditions of Neurological System"
               }
             }
           ],
-          "linkId": "5.9",
-          "text": "Review of Neurological System",
+          "linkId": "6.9",
+          "text": "Conditions of Neurological System",
           "type": "choice",
           "repeats": true,
           "required": true,
@@ -1620,22 +1854,22 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
-                "expression": "PsychiatricReview"
+                "expression": "PsychiatricConditions"
               }
             }
           ],
           "enableWhen": [
             {
               "operator": "=",
-              "question": "5.1",
+              "question": "6.1",
               "answerCoding": {
-                "code": "Psychiatric Review",
-                "display": "Psychiatric Review"
+                "code": "Psychiatric Conditions",
+                "display": "Psychiatric Conditions"
               }
             }
           ],
-          "linkId": "5.10",
-          "text": "Psychiatric Review",
+          "linkId": "6.10",
+          "text": "Psychiatric Conditions",
           "type": "choice",
           "repeats": true,
           "required": true,
@@ -1684,22 +1918,22 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
-                "expression": "HematologyReview"
+                "expression": "HematologyConditions"
               }
             }
           ],
           "enableWhen": [
             {
               "operator": "=",
-              "question": "5.1",
+              "question": "6.1",
               "answerCoding": {
-                "code": "Review of Hematology",
-                "display": "Review of Hematology"
+                "code": "Conditions of Hematology",
+                "display": "Conditions of Hematology"
               }
             }
           ],
-          "linkId": "5.11",
-          "text": "Review of Hematology",
+          "linkId": "6.11",
+          "text": "Conditions of Hematology",
           "type": "choice",
           "repeats": true,
           "required": true,
@@ -1736,7 +1970,7 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
-                "expression": "EndocrineReview"
+                "expression": "EndocrineConditions"
               }
             }
           ],
@@ -1745,13 +1979,13 @@
               "operator": "=",
               "question": "5.1",
               "answerCoding": {
-                "code": "Review of Endocrine System",
-                "display": "Review of Endocrine System"
+                "code": "Conditions of Endocrine System",
+                "display": "Conditions of Endocrine System"
               }
             }
           ],
-          "linkId": "5.12",
-          "text": "Review of Endocrine System",
+          "linkId": "6.12",
+          "text": "Conditions of Endocrine System",
           "type": "choice",
           "repeats": true,
           "required": true,
@@ -1791,12 +2025,12 @@
       ]
     },
     {
-      "linkId": "6",
+      "linkId": "7",
       "text": "Physical Examination",
       "type": "group",
       "item": [
         {
-          "linkId": "6.1",
+          "linkId": "7.1",
           "text": "Physician Comments",
           "type": "text",
           "required": true
@@ -1804,7 +2038,7 @@
       ]
     },
     {
-      "linkId": "7",
+      "linkId": "8",
       "text": "Past Treatments",
       "type": "group",
       "item": [
@@ -1818,7 +2052,7 @@
               }
             }
           ],
-          "linkId": "7.1",
+          "linkId": "8.1",
           "text": "Treatments tried",
           "type": "choice",
           "repeats": true,
@@ -1863,7 +2097,7 @@
           ]
         },
         {
-          "linkId": "7.2",
+          "linkId": "8.2",
           "text": "Type of Bronchodilators",
           "type": "choice",
           "repeats": true,
@@ -1871,7 +2105,7 @@
           "enableWhen": [
             {
               "operator": "=",
-              "question": "7.1",
+              "question": "8.1",
               "answerCoding": {
                 "code": "Bronchodilators",
                 "display": "Bronchodilators"
@@ -1894,7 +2128,7 @@
           ]
         },
         {
-          "linkId": "7.3",
+          "linkId": "8.3",
           "text": "Type of Steroids",
           "type": "choice",
           "repeats": true,
@@ -1902,7 +2136,7 @@
           "enableWhen": [
             {
               "operator": "=",
-              "question": "7.1",
+              "question": "8.1",
               "answerCoding": {
                 "code": "Steroids",
                 "display": "Steroids"
@@ -1931,7 +2165,7 @@
           ]
         },
         {
-          "linkId": "7.4",
+          "linkId": "8.4",
           "text": "Type of Ventilation",
           "type": "choice",
           "repeats": true,
@@ -1939,7 +2173,7 @@
           "enableWhen": [
             {
               "operator": "=",
-              "question": "7.1",
+              "question": "8.1",
               "answerCoding": {
                 "code": "Ventilation",
                 "display": "Ventilation"
@@ -1962,7 +2196,7 @@
           ]
         },
         {
-          "linkId": "7.5",
+          "linkId": "8.5",
           "text": "Type of Anti-Inflammatory Treatment",
           "type": "choice",
           "repeats": true,
@@ -1970,7 +2204,7 @@
           "enableWhen": [
             {
               "operator": "=",
-              "question": "7.1",
+              "question": "8.1",
               "answerCoding": {
                 "code": "Anti-Inflammatory",
                 "display": "Anti-Inflammatory"
@@ -2005,7 +2239,7 @@
           ]
         },
         {
-          "linkId": "7.6",
+          "linkId": "8.6",
           "text": "Other Treatments",
           "type": "choice",
           "repeats": true,
@@ -2013,7 +2247,7 @@
           "enableWhen": [
             {
               "operator": "=",
-              "question": "7.1",
+              "question": "8.1",
               "answerCoding": {
                 "code": "Other",
                 "display": "Other"
@@ -2048,7 +2282,7 @@
           ]
         },
         {
-          "linkId": "7.7",
+          "linkId": "8.7",
           "text": "Effectiveness of Treatment",
           "type": "choice",
           "repeats": true,
@@ -2056,7 +2290,7 @@
           "enableWhen": [
             {
               "operator": "=",
-              "question": "7.1",
+              "question": "8.1",
               "answerCoding": {
                 "code": "Bronchodilators",
                 "display": "Bronchodilators"
@@ -2064,7 +2298,7 @@
             },
             {
               "operator": "=",
-              "question": "7.1",
+              "question": "8.1",
               "answerCoding": {
                 "code": "Steroids",
                 "display": "Steroids"
@@ -2072,7 +2306,7 @@
             },
             {
               "operator": "=",
-              "question": "7.1",
+              "question": "8.1",
               "answerCoding": {
                 "code": "Ventilation",
                 "display": "Ventilation"
@@ -2080,7 +2314,7 @@
             },
             {
               "operator": "=",
-              "question": "7.1",
+              "question": "8.1",
               "answerCoding": {
                 "code": "Anti-Inflammatory",
                 "display": "Anti-Inflammatory"
@@ -2088,7 +2322,7 @@
             },
             {
               "operator": "=",
-              "question": "7.1",
+              "question": "8.1",
               "answerCoding": {
                 "code": "Other",
                 "display": "Other"
@@ -2129,14 +2363,14 @@
           ]
         },
         {
-          "linkId": "7.8",
+          "linkId": "8.8",
           "text": "Were the other treatment options considered ?",
           "type": "boolean",
           "required": true,
           "enableWhen": [
             {
               "operator": "=",
-              "question": "7.1",
+              "question": "8.1",
               "answerCoding": {
                 "code": "None",
                 "display": "None"
@@ -2150,7 +2384,7 @@
           ]
         },
         {
-          "linkId": "7.10",
+          "linkId": "8.10",
           "text": "Contraindications for other treatment options?",
           "type": "boolean",
           "required": true,
@@ -2162,20 +2396,20 @@
           "enableWhen": [
             {
               "operator": "=",
-              "question": "7.8",
+              "question": "8.8",
               "answerBoolean": true
             }
           ]
         },
         {
-          "linkId": "7.11",
+          "linkId": "8.11",
           "text": "Reasons for not considering other treatment options?",
           "type": "text",
           "required": true,
           "enableWhen": [
             {
               "operator": "=",
-              "question": "7.8",
+              "question": "8.8",
               "answerBoolean": false
             }
           ]
@@ -2183,7 +2417,7 @@
       ]
     },
     {
-      "linkId": "8",
+      "linkId": "9",
       "text": "Prescribed Use",
       "type": "group",
       "item": [
@@ -2197,7 +2431,7 @@
               }
             }
           ],
-          "linkId": "8.1",
+          "linkId": "9.1",
           "text": "Length of need: (months) (99 = lifetime)",
           "type": "integer",
           "required": true
@@ -2212,7 +2446,7 @@
               }
             }
           ],
-          "linkId": "8.2",
+          "linkId": "9.2",
           "text": "Peak Flow Rate",
           "type": "quantity",
           "required": true
@@ -2227,7 +2461,7 @@
               }
             }
           ],
-          "linkId": "8.3",
+          "linkId": "9.3",
           "text": "Average Flow Rate",
           "type": "quantity",
           "required": true 
@@ -2242,7 +2476,7 @@
               }
             }
           ],
-          "linkId": "8.4",
+          "linkId": "9.4",
           "text": "Frequency of Use",
           "repeats": true,
           "type": "choice",
@@ -2278,7 +2512,7 @@
               }
             }
           ],
-          "linkId": "8.5",
+          "linkId": "9.5",
           "text": "Target Oxygen Saturation",
           "type": "quantity",
           "required": true
@@ -2293,7 +2527,7 @@
               }
             }
           ],
-          "linkId": "8.7",
+          "linkId": "9.6",
           "text": "Is the device portable?",
           "type": "boolean",
           "required": true
@@ -2308,7 +2542,7 @@
               }
             }
           ],
-          "linkId": "8.8",
+          "linkId": "9.7",
           "text": "Means of Oxygen Delivery and Accessories",
           "type": "choice",
           "required": true,
@@ -2366,12 +2600,12 @@
       ]
     },
     {
-      "linkId": "9",
+      "linkId": "10",
       "text": "Certification",
       "type": "group",
       "item": [
         {
-          "linkId": "9.1",
+          "linkId": "10.1",
           "text": "Type Of Order",
           "type": "choice",
           "required": true,
@@ -2408,14 +2642,14 @@
           ]
         },
         {
-          "linkId": "9.2",
+          "linkId": "10.2",
           "text": "Reason for Change in Status",
           "type": "choice",
           "repeats": true,
           "enableWhen": [
             {
               "operator": "=",
-              "question": "9.1",
+              "question": "10.1",
               "answerCoding": {
                 "code": "Change in status",
                 "display": "Change in status"
@@ -2445,7 +2679,7 @@
           ]
         },
         {
-          "linkId": "9.3",
+          "linkId": "10.3",
           "text": "Reason for Revision or change in equipment",
           "type": "choice",
           "repeats": true,
@@ -2453,7 +2687,7 @@
           "enableWhen": [
             {
               "operator": "=",
-              "question": "9.1",
+              "question": "10.1",
               "answerCoding": {
                 "code": "Revision or change in equipment",
                 "display": "Revision or change in equipment"
@@ -2482,7 +2716,7 @@
           ]
         },
         {
-          "linkId": "9.4",
+          "linkId": "10.4",
           "text": "Reason for Replacement",
           "type": "choice",
           "repeats": true,
@@ -2490,7 +2724,7 @@
           "enableWhen": [
             {
               "operator": "=",
-              "question": "9.1",
+              "question": "10.1",
               "answerCoding": {
                 "code": "Replacement",
                 "display": "Replacement"

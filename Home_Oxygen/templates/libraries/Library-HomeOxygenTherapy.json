@@ -892,6 +892,11 @@
                   "system": "http://snomed.info/sct",
                   "code": "400047006",
                   "display": "Peripheral vascular disease (disorder)"
+                },
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "373923006",
+                  "display": "Pigmentation of skin or mucosa (finding)"
                 }
               ]
             }
@@ -1051,6 +1056,11 @@
                   "system": "http://snomed.info/sct",
                   "code": "117007006",
                   "display": "Titration method (procedure)"
+                },
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "252465000",
+                  "display": "Pulse oximetry (procedure)"
                 }
               ]
             }
@@ -1170,6 +1180,31 @@
                   "system": "http://loinc.org",
                   "code": "88658-0",
                   "display": "Use of supplemental oxygen"
+                },
+                {
+                  "system": "http://loinc.org",
+                  "code": "69990-0",
+                  "display": "Apnea hypopnea index 24 hour"
+                },
+                {
+                  "system": "http://loinc.org",
+                  "code": "90566-1",
+                  "display": "Respiratory disturbance index"
+                },
+                {
+                  "system": "http://loinc.org",
+                  "code": "19254-2",
+                  "display": "Oxygen [Partial pressure] adjusted to patients actual temperature in Blood"
+                },
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "161940008",
+                  "display": "Breathless - mild exertion (finding)"
+                },
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "161939006",
+                  "display": "Breathless - moderate exertion (finding)"
                 }
               ]
             }
