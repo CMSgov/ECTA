@@ -416,8 +416,22 @@
           ],
           "linkId": "3.8",
           "text": "Does the patient have Obstructive Sleep Apnea (OSA) ?",
-          "type": "boolean",
-          "required": true
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "Yes",
+                "display": "Yes"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "No",
+                "display": "No"
+              }
+            }
+          ]
         },
         {
           "extension": [
@@ -433,7 +447,10 @@
             {
               "operator": "=",
               "question": "3.8",
-              "answerBoolean": false
+              "answerCoding": {
+                "code": "No",
+                "display": "No"
+              }
             }
           ],
           "linkId": "3.9",
@@ -455,7 +472,10 @@
             {
               "operator": "=",
               "question": "3.8",
-              "answerBoolean": true
+              "answerCoding": {
+                "code": "Yes",
+                "display": "Yes"
+              }
             }
           ],
           "linkId": "3.10",
@@ -467,12 +487,12 @@
           "enableWhen": [
             {
               "operator": "=",
-              "question": "3.10",
+              "question": "3.8",
               "answerBoolean": true
             }
           ],
           "linkId": "3.11",
-          "text": "Was the test performed after determining optimal settings of the PAP device ?",
+          "text": "Was the titration study performed after determining optimal settings of the PAP device ?",
           "type": "boolean",
           "required": true
         }
@@ -480,7 +500,7 @@
     },
     {
       "linkId": "4",
-      "text": "Relevant Patient Observations/Conditions",
+      "text": "Relevant Patient Observations",
       "type": "group",
       "item": [
         {
@@ -508,6 +528,13 @@
               }
             }
           ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "4.1",
+              "answerBoolean": true
+            }
+          ],
           "linkId": "4.2",
           "text": "Arterial oxygen saturation results at rest",
           "type": "quantity",
@@ -521,6 +548,13 @@
                 "language": "text/cql",
                 "expression": "ArterialPO2"
               }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "4.1",
+              "answerBoolean": true
             }
           ],
           "linkId": "4.3",
@@ -747,21 +781,6 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
-                "expression": "TestingDate"
-              }
-            }
-          ],
-          "linkId": "4.13",
-          "text": "Date Of Testing",
-          "type": "date",
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
                 "expression": "AHIndex"
               }
             }
@@ -770,10 +789,13 @@
             {
               "operator": "=",
               "question": "3.8",
-              "answerBoolean": true
+              "answerCoding": {
+                "code": "Yes",
+                "display": "Yes"
+              }
             }
           ],
-          "linkId": "4.14",
+          "linkId": "4.13",
           "text": "AHI/RDI in events/hour",
           "type": "quantity",
           "required": true
@@ -782,7 +804,7 @@
     },
     {
       "linkId": "5",
-      "text": "Patient Observations/Conditions",
+      "text": "Patient Conditions",
       "type": "group",
       "item": [
         {
@@ -839,8 +861,8 @@
             },
             {
               "valueCoding": {
-                "code": "Erythrocytosis",
-                "display": "Erythrocytosis"
+                "code": "Erythrocythemia",
+                "display": "Erythrocythemia"
               }
             },
             {
@@ -1977,7 +1999,7 @@
           "enableWhen": [
             {
               "operator": "=",
-              "question": "5.1",
+              "question": "6.1",
               "answerCoding": {
                 "code": "Conditions of Endocrine System",
                 "display": "Conditions of Endocrine System"
@@ -1985,7 +2007,7 @@
             }
           ],
           "linkId": "6.12",
-          "text": "Conditions of Endocrine System",
+          "text": "Disorders of Endocrine System ",
           "type": "choice",
           "repeats": true,
           "required": true,
@@ -2086,12 +2108,6 @@
               "valueCoding": {
                 "code": "Other",
                 "display": "Other"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "None",
-                "display": "None"
               }
             }
           ]
@@ -2361,58 +2377,6 @@
               }
             }
           ]
-        },
-        {
-          "linkId": "8.8",
-          "text": "Were the other treatment options considered ?",
-          "type": "boolean",
-          "required": true,
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "8.1",
-              "answerCoding": {
-                "code": "None",
-                "display": "None"
-              }
-            }
-          ],
-          "initial": [
-            {
-              "valueBoolean": true
-            }
-          ]
-        },
-        {
-          "linkId": "8.10",
-          "text": "Contraindications for other treatment options?",
-          "type": "boolean",
-          "required": true,
-          "initial": [
-            {
-              "valueBoolean": false
-            }
-          ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "8.8",
-              "answerBoolean": true
-            }
-          ]
-        },
-        {
-          "linkId": "8.11",
-          "text": "Reasons for not considering other treatment options?",
-          "type": "text",
-          "required": true,
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "8.8",
-              "answerBoolean": false
-            }
-          ]
         }
       ]
     },
@@ -2477,7 +2441,7 @@
             }
           ],
           "linkId": "9.4",
-          "text": "Frequency of Use",
+          "text": "Usage Directions",
           "repeats": true,
           "type": "choice",
           "required": true,

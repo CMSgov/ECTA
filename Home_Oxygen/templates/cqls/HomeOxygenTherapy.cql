@@ -253,6 +253,7 @@ define function "EncounterDiagnosis"(Encounter Encounter):
 define EncounterCondition:
   "EncounterDiagnosis"("EncounterResource")
 
+
 define OrderingPhysician:
   "DeviceRequest".requester PR
     return singleton from ( [Practitioner] P
@@ -316,6 +317,22 @@ define SkinPigmentation:
       where O.status.value = 'final'
         and ("ToCode"(First(O.code.coding)) = "Pigmentation of skin or mucosa (finding)"))
 
+define PrimaryDiagnosis:
+  First(([Condition]C
+		where First(C.code.coding) in "Interstitial lung disease"
+			or First(C.code.coding) in "Chronic Obstructive Lung Disease (COPD) ICD10CM"
+			or First(C.code.coding) in "Hypoxemia"
+			or First(C.code.coding) in "Cystic Fibrosis"
+			or First(C.code.coding) in "Bronchiectasis"
+			or First(C.code.coding) in "Malignant Neoplasm of Respiratory and Intrathoracic Organs"
+			or "ToCode"(First(C.code.coding)) = "Familial erythrocytosis"
+			or "ToCode"(First(C.code.coding)) = "Cor pulmonale (chronic)"
+			or "ToCode"(First(C.code.coding)) = "Congestive heart failure (disorder)"
+			or "ToCode"(First(C.code.coding)) = "Pulmonary hypertension, unspecified"
+			or First(C.code.coding) in "Home Oxygen Therapy Qualifying Conditions")Covered
+			 where First(Covered.clinicalStatus.coding).code.value = 'active'
+			 	and First(Covered.verificationStatus.coding).code.value = 'confirmed')
+        
 define "BloodGasStudy":
   First([Procedure] P
       where P.status.value = 'completed'
@@ -323,7 +340,7 @@ define "BloodGasStudy":
             or "ToCode"(First(P.code.coding)) = "Blood gas measurement (procedure)")
         and((("Normalize Interval"(P.performed) starts before (end of "EncounterResource".period + 2days))
             and "ToCode"("EncounterResource".class) = "inpatient encounter")
-        or("ToCode"("EncounterResource".class) = "Outpatient"))
+        or("Normalize Interval"(P.performed) starts after "Normalize Interval"("PrimaryDiagnosis".onset)))
   )
 
 define ExistsBloodGasStudy:
@@ -563,7 +580,7 @@ define PatientDiagnoses:
   ) then 'Pulmonary neoplasm' 
     else if exists ( [Condition] P
       where "ToCode"(First(P.code.coding)) = "Familial erythrocytosis"
-  ) then 'Erythrocytosis' 
+  ) then 'Erythrocythemia' 
     else if exists ( [Condition] P
       where "ToCode"(First(P.code.coding)) = "Cor pulmonale (chronic)"
   ) then 'Pulmonary hypertension' 
@@ -611,17 +628,25 @@ define NocturnalRestlessnessStudy:
 { 
    (if exists([Procedure] P 
           where "ToCode"(First(P.code.coding)) = "Overnight pulse oximetry (procedure)") 
-          then 'Titration Polysomnography' else null),
+          then 'Nocturnal oximetry' else null),
    (if exists([Observation] P 
           where "ToCode"(First(P.code.coding)) = "Titration method (procedure)")
           then 'Titration Polysomnography' else null)
 }
       
 
-define PresenceOfOSA:
+define OSA:
   exists ( [Condition] P
       where exists ( P.code.coding C
                       where C in "Obstructive Sleep Apnea (ICD10CM)"))
+
+
+define PresenceOfOSA:
+  if ("OSA" = true)
+  then 'Yes'
+  else if ("OSA" is null)
+  then ''
+  else 'No'
 
 define PresenceOfPAP:
     exists ( [Procedure] P
@@ -1106,19 +1131,17 @@ define CannulaType:
 	
 
 define VentilatorType:
-	if(("DeviceRequest".code.coding F
+	exists("DeviceRequest".code.coding F
 		where "ToCode"(F) = "Home ventilator, any type, used with non-invasive interface, (e.g., mask, chest shell)" 
 				or "ToCode"(F) = "Home ventilator, any type, used with invasive interface, (e.g., tracheostomy tube)"
-				or "ToCode"(F) = "Home ventilator, multi-function respiratory device, also performs any or all of the additional functions of oxygen concentration, drug nebulization, aspiration, and cough stimulation, includes all accessories, components and supplies for all functions") is not null)
-	then true 
-	else false
+				or "ToCode"(F) = "Home ventilator, multi-function respiratory device, also performs any or all of the additional functions of oxygen concentration, drug nebulization, aspiration, and cough stimulation, includes all accessories, components and supplies for all functions")
+	
 
 define RespiratoryAssistType:
-	if(("DeviceRequest".code.coding F
+	exists("DeviceRequest".code.coding F
 		where "ToCode"(F) = "Respiratory assist device, bi-level pressure capability, without backup rate feature, used with noninvasive interface, e.g., nasal or facial mask (intermittent assist device with continuous positive airway pressure device)"
-				or "ToCode"(F) = "Respiratory assist device, bi-level pressure capability, with back-up rate feature, used with noninvasive interface, e.g., nasal or facial mask (intermittent assist device with continuous positive airway pressure device)") is not null)
-	then true 
-	else false
+				or "ToCode"(F) = "Respiratory assist device, bi-level pressure capability, with back-up rate feature, used with noninvasive interface, e.g., nasal or facial mask (intermittent assist device with continuous positive airway pressure device)")
+	
 
 define OxygenDelivery:
 	if  ("CannulaType" = true)
