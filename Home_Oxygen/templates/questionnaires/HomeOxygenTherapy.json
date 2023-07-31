@@ -255,11 +255,6 @@
           "linkId": "2.8",
           "text": "Is there an expectation that home oxygen therapy will improve O2 Saturation?",
           "type": "boolean",
-          "initial": [
-            {
-              "valueBoolean": true
-            }
-          ],
           "required": true
         },
         {
@@ -286,15 +281,6 @@
       "item": [
         
         {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "TravelToHigherElevation"
-              }
-            }
-          ],
           "linkId": "3.1",
           "text": "Does patient live or travel to an area at high elevation?",
           "type": "boolean",
@@ -799,12 +785,56 @@
           "text": "AHI/RDI in events/hour",
           "type": "quantity",
           "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "InhaledFlowRate"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "3.7",
+              "answerBoolean": true
+            }
+          ],
+          "linkId": "4.14",
+          "text": "Peak Flow Rate",
+          "type": "quantity",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "InhaledAverageFlowRate"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "3.7",
+              "answerBoolean": true
+            }
+          ],
+          "linkId": "4.15",
+          "text": "Average Flow Rate",
+          "type": "quantity",
+          "required": true 
         }
       ]
     },
     {
       "linkId": "5",
-      "text": "Patient Conditions",
+      "text": "Diagnosis",
       "type": "group",
       "item": [
         {
@@ -818,7 +848,7 @@
             }
           ],
           "linkId": "5.1",
-          "text": "Patient Diagnoses?",
+          "text": "Primary Diagnosis",
           "type": "choice",
           "required": true,
           "repeats": true,
@@ -1103,7 +1133,7 @@
     },
     {
       "linkId": "6",
-      "text": "Conditions of Physiological Systems",
+      "text": "Medical History",
       "type": "group",
       "item": [
         {
@@ -2401,32 +2431,8 @@
           "required": true
         },
         {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "InhaledFlowRate"
-              }
-            }
-          ],
           "linkId": "9.2",
-          "text": "Peak Flow Rate",
-          "type": "quantity",
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "InhaledAverageFlowRate"
-              }
-            }
-          ],
-          "linkId": "9.3",
-          "text": "Average Flow Rate",
+          "text": "Prescribed Flow Rate",
           "type": "quantity",
           "required": true 
         },
@@ -2440,7 +2446,7 @@
               }
             }
           ],
-          "linkId": "9.4",
+          "linkId": "9.3",
           "text": "Usage Directions",
           "repeats": true,
           "type": "choice",
@@ -2476,7 +2482,7 @@
               }
             }
           ],
-          "linkId": "9.5",
+          "linkId": "9.4",
           "text": "Target Oxygen Saturation",
           "type": "quantity",
           "required": true
@@ -2491,7 +2497,7 @@
               }
             }
           ],
-          "linkId": "9.6",
+          "linkId": "9.5",
           "text": "Is the device portable?",
           "type": "boolean",
           "required": true
@@ -2506,7 +2512,7 @@
               }
             }
           ],
-          "linkId": "9.7",
+          "linkId": "9.6",
           "text": "Means of Oxygen Delivery and Accessories",
           "type": "choice",
           "required": true,
