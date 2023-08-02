@@ -94,8 +94,13 @@ valueset "Home Oxygen Therapy Accessory": '2.16.840.1.113762.1.4.1219.130'
 
 valueset "Obstructive Sleep Apnea (ICD10CM)":'2.16.840.1.113762.1.4.1034.477'
 valueset "Dyspnea": '2.16.840.1.113762.1.4.1182.47'
-valueset "Serious or Life Threatening Illness": '2.16.840.1.113883.3.464.1003.199.11.1103'
-
+valueset "Limited Life Expectancy":'2.16.840.1.113883.3.526.2.1353'
+valueset "Acne": '2.16.840.1.113883.3.464.1003.116.11.1029'
+valueset "Atopic Dermatitis": '2.16.840.1.113762.1.4.1078.158'
+valueset "Cellulitis": '2.16.840.1.113762.1.4.1222.533'
+valueset "Rheumatoid Arthritis": '2.16.840.1.113883.3.464.1003.113.12.1005'
+valueset "Multiple Sclerosis": '2.16.840.1.113762.1.4.1034.187'
+valueset "Celiac disease (ICD10)":'2.16.840.1.113762.1.4.1034.575'
 
 code "inpatient encounter": 'IMP' from "ActEncounterCode" display 'inpatient encounter'
 code "Outpatient": 'O' from "ActEncounterCodev2" display 'Outpatient'
@@ -205,7 +210,7 @@ code "Respiratory assist device, bi-level pressure capability, with back-up rate
 code "Respiratory assist device, bi-level pressure capability, with backup rate feature, used with invasive interface, e.g., tracheostomy tube (intermittent assist device with continuous positive airway pressure device)": 'E0472' from "HCPCS" display 'Respiratory assist device, bi-level pressure capability, with backup rate feature, used with invasive interface, e.g., tracheostomy tube (intermittent assist device with continuous positive airway pressure device)'
 code "Cannula, nasal": 'A4615' from "HCPCS" display 'Cannula, nasal'
 code "Positive airway pressure nap study (procedure)": '703476007' from "SNOMEDCT" display 'Positive airway pressure nap study (procedure)'
-
+code "Continuous positive airway pressure titration (procedure)": '446573003' from "SNOMEDCT" display 'Continuous positive airway pressure titration (procedure)'
 code "Use of supplemental oxygen": '88658-0' from "LOINC" display 'Use of supplemental oxygen'
 
 code "Nocturnal continuous positive airway pressure (regime/therapy)": '34281000175105' from "SNOMEDCT" display 'Nocturnal continuous positive airway pressure (regime/therapy)'
@@ -218,6 +223,9 @@ code "Ambulatory Health Care Facilities; Clinic/Center, Sleep Disorder Diagnosti
 code "Apnea hypopnea index 24 hour": '69990-0' from "LOINC" display 'Apnea hypopnea index 24 hour'
 code "Respiratory disturbance index": '90566-1' from "LOINC" display 'Respiratory disturbance index'
 
+code "Vitiligo (disorder)": '56727007' from "SNOMEDCT" display 'Vitiligo (disorder)'
+code "Inflammatory bowel disease (disorder)": '24526004' from "SNOMEDCT" display 'Inflammatory bowel disease (disorder)'
+code "Dyspnea on exertion (finding)": '60845006' from "SNOMEDCT" display 'Dyspnea on exertion (finding)'
 
 //Immobilization_Codes
 
@@ -621,68 +629,70 @@ define ClusterHeadaches:
   else null
 
 define PatientDiagnoses:
+{
   if exists ( [Condition] P
       where exists ( P.code.coding P
           where P in "Chronic Obstructive Lung Disease (COPD) ICD10CM")
           and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   )
-   then 'COPD' 
-    else if exists ( [Condition] P
+   then 'COPD' else null,
+  if exists ( [Condition] P
       where exists ( P.code.coding P
           where P in "Bronchiectasis")
           and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   )
-  then 'Bronchiectasis' 
-    else if exists ( [Condition] P
+  then 'Bronchiectasis' else null,
+  if exists ( [Condition] P
       where exists ( P.code.coding P
           where P in "Hypoxemia"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'Hypoxemia' 
-    else if exists ( [Condition] P
+  then 'Hypoxemia' else null,
+  if exists ( [Condition] P
       where exists ( P.code.coding P
           where P in "Interstitial lung disease")
           and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'Diffuse interstitial lung disease' 
-    else if exists ( [Condition] P
+  then 'Diffuse interstitial lung disease' else null,
+  if exists ( [Condition] P
       where exists ( P.code.coding P
           where P in "Cystic Fibrosis")
           and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'Cystic Fibrosis' 
-    else if exists ( [Condition] P
+  then 'Cystic Fibrosis' else null,
+  if exists ( [Condition] P
       where exists ( P.code.coding P
           where P in "Malignant Neoplasm of Respiratory and Intrathoracic Organs")
           and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'Pulmonary neoplasm' 
-    else if exists ( [Condition] P
+  then 'Pulmonary neoplasm' else null,
+  if exists ( [Condition] P
       where "ToCode"(First(P.code.coding)) = "Familial erythrocytosis"
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'Erythrocythemia' 
-    else if exists ( [Condition] P
+  then 'Erythrocythemia' else null,
+  if exists ( [Condition] P
       where "ToCode"(First(P.code.coding)) = "Cor pulmonale (chronic)"
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'Pulmonary hypertension' 
-    else if exists ( [Condition] P
+  then 'Pulmonary hypertension' else null,
+  if exists ( [Condition] P
       where "ToCode"(First(P.code.coding)) = "Congestive heart failure (disorder)"
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
   then 'Recurring CHF d/t Cor Pulmonale' 
-  else ''
+  else null
+}
 
 define DependentEdema:
   if exists ( [Condition] P
@@ -789,15 +799,17 @@ define AHIndex:
 
 define ExertionalHypoxia:
   if exists ( [Condition] P
-      where ("ToCode"(First(P.code.coding)) = "Breathless - mild exertion (finding)"
-      or "ToCode"(First(P.code.coding)) = "Breathless - moderate exertion (finding)")
+      where ("ToCode"(First(P.code.coding)) = "Dyspnea on exertion (finding)"
+      or "ToCode"(First(P.code.coding)) = "Breathless - moderate exertion (finding)"
+      or "ToCode"(First(P.code.coding)) = "Breathless - mild exertion (finding)")
        and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   )
   then true
   else if exists([Condition] P
       where ("ToCode"(First(P.code.coding)) = "Breathless - mild exertion (finding)"
-      or "ToCode"(First(P.code.coding)) = "Breathless - moderate exertion (finding)")
+      or "ToCode"(First(P.code.coding)) = "Breathless - moderate exertion (finding)"
+      or "ToCode"(First(P.code.coding)) = "Dyspnea on exertion (finding)")
        and (First(P.clinicalStatus.coding).code.value != 'active'
           or First(P.verificationStatus.coding).code.value != 'confirmed'))
   then false
@@ -824,7 +836,7 @@ define Group4Criteria:
     then 'Peripheral Vascular Disease' 
     else if exists ( [Condition] P
       where exists ( P.code.coding P
-          where P in "Serious or Life Threatening Illness")
+          where P in "Limited Life Expectancy")
           and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
     )
@@ -844,12 +856,11 @@ define "GeneralSymptoms":
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
   then 'weight loss' 
-    else if exists ( [Condition] P
+    else if exists ( [Observation] P
       where exists ( P.code.coding P
           where P in "Poor Sleep Hygeine or Sleep Challenges"
       )
-      and First(P.clinicalStatus.coding).code.value = 'active'
-          and First(P.verificationStatus.coding).code.value = 'confirmed'
+      and P.status.value = 'final'
   ) 
   then 'sleeping problems' 
     else if exists ( [Condition] P
@@ -891,7 +902,7 @@ define NeckConditions:
       where exists ( P.code.coding P
           where P in "Spine or Neck Disorder"
       )
-  ) then 'pain on movement' 
+  ) then 'pain on neck movement' 
     else if exists ( [Condition] P
       where "ToCode"(First(P.code.coding)) = "Acute lymphadenitis of neck (disorder)"
   ) then 'lumps' 
@@ -985,10 +996,7 @@ define CardiacConditions:
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
   then 'syncope' 
-    else 'None'
-
-define VascularConditions:
-  if exists ( [Condition] P
+  else if exists ( [Condition] P
       where exists ( P.code.coding P
           where P in "Edema"
       )
@@ -1025,7 +1033,7 @@ define VascularConditions:
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'ulcers' 
+  then 'ulcers'
     else 'None'
 
 define HematologyConditions:
@@ -1082,7 +1090,8 @@ define TreatmentsTried:
           where P in "Long Acting Inhaled Bronchodilators"
       )
       and P.status.value = 'completed'
-  ) then 'Bronchodilators' 
+  ) 
+  then 'Bronchodilators' 
     else if exists ( [Procedure] P
       where exists ( P.code.coding P
           where P in "Inhaled Steroid Combinations"
@@ -1090,13 +1099,6 @@ define TreatmentsTried:
       and P.status.value = 'completed'
   ) 
   then 'Steroids' 
-    else if exists ( [Procedure] P
-      where exists ( P.code.coding P
-          where P in "COVID19 SNOMED Value Set for Non Invasive Respiratory Support"
-      )
-      and P.status.value = 'completed'
-  ) 
-  then 'diabetes' 
     else if exists ( [Procedure] P
       where exists ( P.code.coding P
           where P in "COVID19 SNOMED Value Set for Invasive Mechanical Ventilation"
@@ -1110,8 +1112,23 @@ define TreatmentsTried:
       )
       and P.status.value = 'completed'
   ) 
-  then 'Anti-Inflammatory' 
-    else 'None'
+  then 'Anti-Inflammatory'
+  else if exists ( [Procedure] P
+      where "ToCode"(First(P.code.coding)) = "Nocturnal continuous positive airway pressure (regime/therapy)"
+      and (P.status.value = 'completed'
+        or P.status.value ='in-progress')
+  )
+  then 'Others'
+  else 'None'
+
+define OtherTreatments:
+  if exists ( [Procedure] P
+      where "ToCode"(First(P.code.coding)) = "Nocturnal continuous positive airway pressure (regime/therapy)"
+      and (P.status.value = 'completed'
+        or P.status.value ='in-progress')
+  ) 
+  then 'PAP/CPAP' 
+  else ''
 
 define PsychiatricConditions:
   if exists ( [Condition] P
@@ -1476,26 +1493,94 @@ define GastrointestinalConditions:
   then 'hematemesis' 
     else 'None'
 
+define IntegumentalConditions:
+  if exists ( [Condition] P
+      where exists ( P.code.coding P
+          where P in "Acne"
+      )
+      and First(P.clinicalStatus.coding).code.value = 'active'
+          and First(P.verificationStatus.coding).code.value = 'confirmed'
+  ) 
+  then 'Acne' 
+    else if exists ( [Condition] P
+      where exists ( P.code.coding P
+          where P in "Atopic Dermatitis"
+      )
+      and First(P.clinicalStatus.coding).code.value = 'active'
+          and First(P.verificationStatus.coding).code.value = 'confirmed'
+  ) 
+  then 'Atopic Dermatitis' 
+    else if exists ( [Condition] P
+      where exists ( P.code.coding P
+          where P in "Cellulitis"
+      )
+      and First(P.clinicalStatus.coding).code.value = 'active'
+          and First(P.verificationStatus.coding).code.value = 'confirmed'
+  ) 
+  then 'Cellulitis' 
+    else if exists ( [Condition] P
+      where "ToCode"(First(P.code.coding)) = "Vitiligo (disorder)"
+      and First(P.clinicalStatus.coding).code.value = 'active'
+          and First(P.verificationStatus.coding).code.value = 'confirmed'
+  ) 
+  then 'Vitiligo' 
+    else 'None'
+
+define ImmunologicalConditions:
+  if exists ( [Condition] P
+      where exists ( P.code.coding P
+          where P in "Rheumatoid Arthritis"
+      )
+      and First(P.clinicalStatus.coding).code.value = 'active'
+          and First(P.verificationStatus.coding).code.value = 'confirmed'
+  ) 
+  then 'Rheumatoid Arthritis' 
+    else if exists ( [Condition] P
+      where exists ( P.code.coding P
+          where P in "Multiple Sclerosis"
+      )
+      and First(P.clinicalStatus.coding).code.value = 'active'
+          and First(P.verificationStatus.coding).code.value = 'confirmed'
+  ) 
+  then 'Multiple Sclerosis' 
+    else if exists ( [Condition] P
+      where exists ( P.code.coding P
+          where P in "Celiac disease (ICD10)"
+      )
+      and First(P.clinicalStatus.coding).code.value = 'active'
+          and First(P.verificationStatus.coding).code.value = 'confirmed'
+  ) 
+  then 'Celiac disease' 
+    else if exists ( [Condition] P
+      where "ToCode"(First(P.code.coding)) = "Inflammatory bowel disease (disorder)"
+      and First(P.clinicalStatus.coding).code.value = 'active'
+          and First(P.verificationStatus.coding).code.value = 'confirmed'
+  ) 
+  then 'Inflammatory bowel disease' 
+    else 'None'
+
 define ConditionsOfSystems:
-  { ( if ( "GeneralSymptoms" != 'None' ) then 'Conditions in General' 
+  { ( if ( "GeneralSymptoms" != 'None' ) then 'General' 
       else ''
-  ), ( if ( "NeckConditions" != 'None' ) then 'Conditions of Neck' 
+  ), ( if ( "NeckConditions" != 'None' ) then 'HEENT' 
       else ''
-  ), ( if ( "PulmonaryConditions" != 'None' ) then 'Conditions of Pulmonary System' 
+  ), ( if ( "PulmonaryConditions" != 'None' ) then 'Pulmonary System' 
       else ''
-  ), ( if ( "CardiacConditions" != 'None' ) then 'Conditions of Cardiac System' 
+  ), ( if ( "CardiacConditions" != 'None' ) then 'Cardio Vascular System' 
       else ''
-  ), ( if ( "VascularConditions" != 'None' ) then 'Conditions of Vascular System' 
+  ), ( if ( "HematologyConditions" != 'None' ) then 'Hematology' 
       else ''
-  ), ( if ( "HematologyConditions" != 'None' ) then 'Conditions of Hematology' 
+  ), ( if ( "IntegumentalConditions" != 'None' ) then 'Integumental System' 
       else ''
-  ), ( if ( "EndocrineConditions" != 'None' ) then 'Conditions of Endocrine System' 
+  ), ( if ( "ImmunologicalConditions" != 'None' ) then 'Immunology' 
       else ''
-  ), ( if ( "NeurologicalConditions" != 'None' ) then 'Conditions of Neurological System' 
+  ), ( if ( "EndocrineConditions" != 'None' ) then 'Endocrine System' 
       else ''
-  ), ( if ( "MusculoskeletalConditions" != 'None' ) then 'Conditions of Musculoskeletal System' 
+  ), ( if ( "NeurologicalConditions" != 'None' ) then 'Neurological System' 
       else ''
-  ), ( if ( "GastrointestinalConditions" != 'None' ) then 'Conditions of Gastrointestinal System' 
+  ), ( if ( "MusculoskeletalConditions" != 'None' ) then 'Musculoskeletal System' 
+      else ''
+  ), ( if ( "GastrointestinalConditions" != 'None' ) then 'Gastrointestinal System' 
       else ''
   ) }
 

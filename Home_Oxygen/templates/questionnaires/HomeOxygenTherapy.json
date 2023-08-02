@@ -1147,57 +1147,57 @@
             }
           ],
           "linkId": "6.1",
-          "text": "Physiological System Review",
+          "text": "Review of Systems",
           "type": "choice",
           "repeats": true,
           "required": true,
           "answerOption": [
             {
               "valueCoding": {
-                "code": "Conditions in General",
-                "display": "Conditions in General"
+                "code": "General",
+                "display": "General"
               }
             },
             {
               "valueCoding": {
-                "code": "Conditions of Neck",
-                "display": "Conditions of Neck"
+                "code": "HEENT",
+                "display": "HEENT"
               }
             },
             {
               "valueCoding": {
-                "code": "Conditions of Pulmonary System",
-                "display": "Conditions of Pulmonary System"
+                "code": "Pulmonary System",
+                "display": "Pulmonary System"
               }
             },
             {
               "valueCoding": {
-                "code": "Conditions of Cardiac System",
-                "display": "Conditions of Cardiac System"
+                "code": "Cardio Vascular System",
+                "display": "Cardio Vascular System"
               }
             },
             {
               "valueCoding": {
-                "code": "Conditions of Vascular System",
-                "display": "Conditions of Vascular System"
+                "code": "Integumental System",
+                "display": "Integumental System"
               }
             },
             {
               "valueCoding": {
-                "code": "Conditions of Gastrointestinal System",
-                "display": "Conditions of Gastrointestinal System"
+                "code": "Gastrointestinal System",
+                "display": "Gastrointestinal System"
               }
             },
             {
               "valueCoding": {
-                "code": "Conditions of Musculoskeletal System",
-                "display": "Conditions of Musculoskeletal System"
+                "code": "Musculoskeletal System",
+                "display": "Musculoskeletal System"
               }
             },
             {
               "valueCoding": {
-                "code": "Conditions of Neurological System",
-                "display": "Conditions of Neurological System"
+                "code": "Neurological System",
+                "display": "Neurological System"
               }
             },
             {
@@ -1208,14 +1208,20 @@
             },
             {
               "valueCoding": {
-                "code": "Conditions of Hematology",
-                "display": "Conditions of Hematology"
+                "code": "Hematology",
+                "display": "Hematology"
               }
             },
             {
               "valueCoding": {
-                "code": "Conditions of Endocrine System",
-                "display": "Conditions of Endocrine System"
+                "code": "Immunology",
+                "display": "Immunology"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Endocrine System",
+                "display": "Endocrine System"
               }
             }
           ]
@@ -1235,13 +1241,13 @@
               "operator": "=",
               "question": "6.1",
               "answerCoding": {
-                "code": "Conditions in General",
-                "display": "Conditions in General"
+                "code": "General",
+                "display": "General"
               }
             }
           ],
           "linkId": "6.2",
-          "text": "Conditions in General",
+          "text": "General",
           "type": "choice",
           "repeats": true,
           "required": true,
@@ -1311,13 +1317,13 @@
               "operator": "=",
               "question": "6.1",
               "answerCoding": {
-                "code": "Conditions of Neck",
-                "display": "Conditions of Neck"
+                "code": "HEENT",
+                "display": "HEENT"
               }
             }
           ],
           "linkId": "6.3",
-          "text": "Conditions of Neck",
+          "text": "HEENT",
           "type": "choice",
           "repeats": true,
           "required": true,
@@ -1330,8 +1336,8 @@
             },
             {
               "valueCoding": {
-                "code": "pain on movement",
-                "display": "pain on movement"
+                "code": "pain on neck movement",
+                "display": "pain on neck movement"
               }
             },
             {
@@ -1357,13 +1363,13 @@
               "operator": "=",
               "question": "6.1",
               "answerCoding": {
-                "code": "Conditions of Pulmonary System",
-                "display": "Conditions of Pulmonary System"
+                "code": "Pulmonary System",
+                "display": "Pulmonary System"
               }
             }
           ],
           "linkId": "6.4",
-          "text": "Conditions of Pulmonary System",
+          "text": "Pulmonary System",
           "type": "choice",
           "repeats": true,
           "required": true,
@@ -1427,13 +1433,13 @@
               "operator": "=",
               "question": "6.1",
               "answerCoding": {
-                "code": "Conditions of Cardiac System",
-                "display": "Conditions of Cardiac System"
+                "code": "Cardio Vascular System",
+                "display": "Cardio Vascular System"
               }
             }
           ],
           "linkId": "6.5",
-          "text": "Conditions of Cardiac System",
+          "text": "Cardio Vascular System",
           "type": "choice",
           "repeats": true,
           "required": true,
@@ -1468,40 +1474,6 @@
                 "display": "syncope"
               }
             },
-            {
-              "valueCoding": {
-                "code": "None",
-                "display": "None"
-              }
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "VascularConditions"
-              }
-            }
-          ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "6.1",
-              "answerCoding": {
-                "code": "Conditions of Vascular System",
-                "display": "Conditions of Vascular System"
-              }
-            }
-          ],
-          "linkId": "6.6",
-          "text": "Conditions of Vascular System",
-          "type": "choice",
-          "repeats": true,
-          "required": true,
-          "answerOption": [
             {
               "valueCoding": {
                 "code": "edema",
@@ -1555,13 +1527,13 @@
               "operator": "=",
               "question": "6.1",
               "answerCoding": {
-                "code": "Conditions of Gastrointestinal System",
-                "display": "Conditions of Gastrointestinal System"
+                "code": "Gastrointestinal System",
+                "display": "Gastrointestinal System"
               }
             }
           ],
           "linkId": "6.7",
-          "text": "Conditions of Gastrointestinal System",
+          "text": "Gastrointestinal System",
           "type": "choice",
           "repeats": true,
           "required": true,
@@ -1667,13 +1639,13 @@
               "operator": "=",
               "question": "6.1",
               "answerCoding": {
-                "code": "Conditions of Musculoskeletal System",
-                "display": "Conditions of Musculoskeletal System"
+                "code": "Musculoskeletal System",
+                "display": "Musculoskeletal System"
               }
             }
           ],
           "linkId": "6.8",
-          "text": "Conditions of Musculoskeletal System",
+          "text": "Musculoskeletal System",
           "type": "choice",
           "repeats": true,
           "required": true,
@@ -1779,13 +1751,13 @@
               "operator": "=",
               "question": "6.1",
               "answerCoding": {
-                "code": "Conditions of Neurological System",
-                "display": "Conditions of Neurological System"
+                "code": "Neurological System",
+                "display": "Neurological System"
               }
             }
           ],
           "linkId": "6.9",
-          "text": "Conditions of Neurological System",
+          "text": "Neurological System",
           "type": "choice",
           "repeats": true,
           "required": true,
@@ -1979,13 +1951,13 @@
               "operator": "=",
               "question": "6.1",
               "answerCoding": {
-                "code": "Conditions of Hematology",
-                "display": "Conditions of Hematology"
+                "code": "Hematology",
+                "display": "Hematology"
               }
             }
           ],
           "linkId": "6.11",
-          "text": "Conditions of Hematology",
+          "text": "Hematology",
           "type": "choice",
           "repeats": true,
           "required": true,
@@ -2031,13 +2003,13 @@
               "operator": "=",
               "question": "6.1",
               "answerCoding": {
-                "code": "Conditions of Endocrine System",
-                "display": "Conditions of Endocrine System"
+                "code": "Endocrine System",
+                "display": "Endocrine System"
               }
             }
           ],
           "linkId": "6.12",
-          "text": "Disorders of Endocrine System ",
+          "text": "Endocrine System ",
           "type": "choice",
           "repeats": true,
           "required": true,
@@ -2064,6 +2036,122 @@
               "valueCoding": {
                 "code": "goiter",
                 "display": "goiter"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "None",
+                "display": "None"
+              }
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "IntegumentalConditions"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "6.1",
+              "answerCoding": {
+                "code": "Integumental System",
+                "display": "Integumental System"
+              }
+            }
+          ],
+          "linkId": "6.13",
+          "text": "Integumental System",
+          "type": "choice",
+          "repeats": true,
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "Acne",
+                "display": "Acne"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Atopic Dermatitis",
+                "display": "Atopic Dermatitis"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Cellulitis",
+                "display": "Cellulitis"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Vitiligo",
+                "display": "Vitiligo"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "None",
+                "display": "None"
+              }
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "ImmunologicalConditions"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "6.1",
+              "answerCoding": {
+                "code": "Immunology",
+                "display": "Immunology"
+              }
+            }
+          ],
+          "linkId": "6.14",
+          "text": "Immunology",
+          "type": "choice",
+          "repeats": true,
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "Rheumatoid Arthritis",
+                "display": "Rheumatoid Arthritis"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Multiple Sclerosis",
+                "display": "Multiple Sclerosis"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Celiac disease",
+                "display": "Celiac disease"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Inflammatory bowel disease",
+                "display": "Inflammatory bowel disease"
               }
             },
             {
@@ -2136,8 +2224,8 @@
             },
             {
               "valueCoding": {
-                "code": "Other",
-                "display": "Other"
+                "code": "Others",
+                "display": "Others"
               }
             }
           ]
@@ -2285,6 +2373,15 @@
           ]
         },
         {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "OtherTreatments"
+              }
+            }
+          ],
           "linkId": "8.6",
           "text": "Other Treatments",
           "type": "choice",
@@ -2295,8 +2392,8 @@
               "operator": "=",
               "question": "8.1",
               "answerCoding": {
-                "code": "Other",
-                "display": "Other"
+                "code": "Others",
+                "display": "Others"
               }
             }
           ],

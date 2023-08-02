@@ -1,0 +1,337 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113762.1.4.1078.158",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-08-02T10:53:49.831+00:00",
+        "source": "#F7gv3tOuSGyjzDqt"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1078.158",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113762.1.4.1078.158"
+        }
+    ],
+    "version": "Latest",
+    "name": "AtopicDermatitis",
+    "title": "Atopic Dermatitis",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2023-03",
+                "concept": [
+                    {
+                        "code": "1251380002",
+                        "display": "Exacerbation of constitutional dermatitis due to occupational exposure to contact allergen (disorder)"
+                    },
+                    {
+                        "code": "1251381003",
+                        "display": "Exacerbation of constitutional dermatitis due to occupational exposure to skin irritant (disorder)"
+                    },
+                    {
+                        "code": "1251383000",
+                        "display": "Exacerbation of constitutional dermatitis due to exposure to contact allergen (disorder)"
+                    },
+                    {
+                        "code": "1251392002",
+                        "display": "Childhood chronic lichenified atopic dermatitis (disorder)"
+                    },
+                    {
+                        "code": "1251406005",
+                        "display": "Childhood pruriginous atopic dermatitis (disorder)"
+                    },
+                    {
+                        "code": "1251408006",
+                        "display": "Childhood impetiginized atopic dermatitis (disorder)"
+                    },
+                    {
+                        "code": "1251409003",
+                        "display": "Childhood nummular atopic eczematous dermatitis (disorder)"
+                    },
+                    {
+                        "code": "1251410008",
+                        "display": "Childhood flexural atopic dermatitis (disorder)"
+                    },
+                    {
+                        "code": "1251411007",
+                        "display": "Childhood generalized erythematous atopic dermatitis (disorder)"
+                    },
+                    {
+                        "code": "1251414004",
+                        "display": "Adult atopic flexural dermatitis (disorder)"
+                    },
+                    {
+                        "code": "1251429002",
+                        "display": "Adult pruriginous atopic dermatitis (disorder)"
+                    },
+                    {
+                        "code": "1251431006",
+                        "display": "Adult impetiginized atopic dermatitis (disorder)"
+                    },
+                    {
+                        "code": "1251432004",
+                        "display": "Adult nummular atopic dermatitis (disorder)"
+                    },
+                    {
+                        "code": "1251433009",
+                        "display": "Adult chronic lichenified atopic dermatitis (disorder)"
+                    },
+                    {
+                        "code": "1251434003",
+                        "display": "Adult generalized atopic dermatitis (disorder)"
+                    },
+                    {
+                        "code": "1254907009",
+                        "display": "Infantile impetiginized atopic dermatitis (disorder)"
+                    },
+                    {
+                        "code": "200773006",
+                        "display": "Besnier's prurigo (disorder)"
+                    },
+                    {
+                        "code": "200775004",
+                        "display": "Atopic neurodermatitis (disorder)"
+                    },
+                    {
+                        "code": "201201000",
+                        "display": "Podopompholyx (disorder)"
+                    },
+                    {
+                        "code": "238541000",
+                        "display": "Atopic dermatitis of bilateral hands (disorder)"
+                    },
+                    {
+                        "code": "238542007",
+                        "display": "Inverse pattern atopic dermatitis (disorder)"
+                    },
+                    {
+                        "code": "238543002",
+                        "display": "Discoid atopic dermatitis (disorder)"
+                    },
+                    {
+                        "code": "238544008",
+                        "display": "Erythrodermic atopic dermatitis (disorder)"
+                    },
+                    {
+                        "code": "238545009",
+                        "display": "Follicular atopic dermatitis (disorder)"
+                    },
+                    {
+                        "code": "238546005",
+                        "display": "Pruriginous atopic dermatitis (disorder)"
+                    },
+                    {
+                        "code": "238547001",
+                        "display": "Photosensitive atopic dermatitis (disorder)"
+                    },
+                    {
+                        "code": "238548006",
+                        "display": "Photoaggravated atopic dermatitis (disorder)"
+                    },
+                    {
+                        "code": "238549003",
+                        "display": "Constitutional eczema of hands and feet (disorder)"
+                    },
+                    {
+                        "code": "238553001",
+                        "display": "Constitutional eczema of hand (disorder)"
+                    },
+                    {
+                        "code": "238554007",
+                        "display": "Apron pattern of vesicular eczema of hands (disorder)"
+                    },
+                    {
+                        "code": "238557000",
+                        "display": "Constitutional discoid hand eczema (disorder)"
+                    },
+                    {
+                        "code": "238558005",
+                        "display": "Constitutional fingertip eczema (disorder)"
+                    },
+                    {
+                        "code": "238559002",
+                        "display": "Constitutional eczema of foot (disorder)"
+                    },
+                    {
+                        "code": "238561006",
+                        "display": "Chronic podopompholyx (disorder)"
+                    },
+                    {
+                        "code": "24079001",
+                        "display": "Atopic dermatitis (disorder)"
+                    },
+                    {
+                        "code": "309461001",
+                        "display": "Chronic lichenified atopic dermatitis (disorder)"
+                    },
+                    {
+                        "code": "402183009",
+                        "display": "Flexural atopic dermatitis (disorder)"
+                    },
+                    {
+                        "code": "402185002",
+                        "display": "Discoid pattern atopic hand dermatitis (disorder)"
+                    },
+                    {
+                        "code": "402186001",
+                        "display": "Generalized atopic dermatitis (disorder)"
+                    },
+                    {
+                        "code": "402187005",
+                        "display": "Prurigo pattern atopic dermatitis (disorder)"
+                    },
+                    {
+                        "code": "402188000",
+                        "display": "Atopic dermatitis aggravated by type 1 immune reaction (disorder)"
+                    },
+                    {
+                        "code": "402191000",
+                        "display": "Atopic dermatitis of scalp (disorder)"
+                    },
+                    {
+                        "code": "402192007",
+                        "display": "Atopic dermatitis of face (disorder)"
+                    },
+                    {
+                        "code": "402193002",
+                        "display": "Atopic dermatitis of eyelid (disorder)"
+                    },
+                    {
+                        "code": "402195009",
+                        "display": "Infantile atopic dermatitis (disorder)"
+                    },
+                    {
+                        "code": "402196005",
+                        "display": "Childhood atopic dermatitis (disorder)"
+                    },
+                    {
+                        "code": "402197001",
+                        "display": "Adult atopic dermatitis (disorder)"
+                    },
+                    {
+                        "code": "402198006",
+                        "display": "Adult atopic dermatitis persistent from childhood (disorder)"
+                    },
+                    {
+                        "code": "402199003",
+                        "display": "Adult atopic dermatitis recurrent in adult life (disorder)"
+                    },
+                    {
+                        "code": "402200000",
+                        "display": "Adult atopic dermatitis commencing in adult life (disorder)"
+                    },
+                    {
+                        "code": "402201001",
+                        "display": "Impetiginized atopic dermatitis (disorder)"
+                    },
+                    {
+                        "code": "402216003",
+                        "display": "Acute vesicular eczema of hand (disorder)"
+                    },
+                    {
+                        "code": "402218002",
+                        "display": "Chronic vesicular eczema of hands (disorder)"
+                    },
+                    {
+                        "code": "402220004",
+                        "display": "Acute-on-chronic vesicular eczema of hands and feet (disorder)"
+                    },
+                    {
+                        "code": "402221000",
+                        "display": "Acute-on-chronic vesicular eczema of hands (disorder)"
+                    },
+                    {
+                        "code": "402222007",
+                        "display": "Vesicular hand eczema (disorder)"
+                    },
+                    {
+                        "code": "402226005",
+                        "display": "Chronic relapsing vesiculosquamous hand eczema (disorder)"
+                    },
+                    {
+                        "code": "402229003",
+                        "display": "Acute atopic dermatitis of hand (disorder)"
+                    },
+                    {
+                        "code": "402230008",
+                        "display": "Chronic atopic dermatitis of hand (disorder)"
+                    },
+                    {
+                        "code": "402301004",
+                        "display": "Acute constitutional eczema (disorder)"
+                    },
+                    {
+                        "code": "402302006",
+                        "display": "Chronic constitutional eczema (disorder)"
+                    },
+                    {
+                        "code": "402569001",
+                        "display": "Chronic vesicular eczema of hands and feet (disorder)"
+                    },
+                    {
+                        "code": "402588008",
+                        "display": "Constitutional predisposition as co-factor in eczema (disorder)"
+                    },
+                    {
+                        "code": "442145005",
+                        "display": "Atopic dermatitis caused by animal dander (disorder)"
+                    },
+                    {
+                        "code": "724871008",
+                        "display": "Exacerbation of constitutional dermatitis due to occupation (disorder)"
+                    },
+                    {
+                        "code": "784292007",
+                        "display": "Acute vesicular eczema of foot (disorder)"
+                    },
+                    {
+                        "code": "840284009",
+                        "display": "Eczema coxsackium (disorder)"
+                    },
+                    {
+                        "code": "84479000",
+                        "display": "Allergic inhalant dermatitis (disorder)"
+                    }
+                ]
+            },
+            {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "version": "2024",
+                "concept": [
+                    {
+                        "code": "L20.0",
+                        "display": "Besnier's prurigo"
+                    },
+                    {
+                        "code": "L20.81",
+                        "display": "Atopic neurodermatitis"
+                    },
+                    {
+                        "code": "L20.82",
+                        "display": "Flexural eczema"
+                    },
+                    {
+                        "code": "L20.83",
+                        "display": "Infantile (acute) (chronic) eczema"
+                    },
+                    {
+                        "code": "L20.84",
+                        "display": "Intrinsic (allergic) eczema"
+                    },
+                    {
+                        "code": "L20.89",
+                        "display": "Other atopic dermatitis"
+                    },
+                    {
+                        "code": "L20.9",
+                        "display": "Atopic dermatitis, unspecified"
+                    }
+                ]
+            }
+        ]
+    }
+}

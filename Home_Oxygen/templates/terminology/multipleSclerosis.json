@@ -1,0 +1,105 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113762.1.4.1034.187",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-08-02T10:53:55.873+00:00",
+        "source": "#RWKscNgVnXIX3lqO"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1034.187",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113762.1.4.1034.187"
+        }
+    ],
+    "version": "Latest",
+    "name": "MultipleSclerosis",
+    "title": "Multiple Sclerosis",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2023-03",
+                "concept": [
+                    {
+                        "code": "1186728004",
+                        "display": "Pediatric multiple sclerosis (disorder)"
+                    },
+                    {
+                        "code": "1259083006",
+                        "display": "Disorder of autonomic nervous system due to multiple sclerosis (disorder)"
+                    },
+                    {
+                        "code": "192926004",
+                        "display": "Multiple sclerosis of the brainstem (disorder)"
+                    },
+                    {
+                        "code": "192927008",
+                        "display": "Multiple sclerosis of the spinal cord (disorder)"
+                    },
+                    {
+                        "code": "192929006",
+                        "display": "Exacerbation of multiple sclerosis (disorder)"
+                    },
+                    {
+                        "code": "230372003",
+                        "display": "Acute relapsing multiple sclerosis (disorder)"
+                    },
+                    {
+                        "code": "24700007",
+                        "display": "Multiple sclerosis (disorder)"
+                    },
+                    {
+                        "code": "425500002",
+                        "display": "Secondary progressive multiple sclerosis (disorder)"
+                    },
+                    {
+                        "code": "426373005",
+                        "display": "Relapsing remitting multiple sclerosis (disorder)"
+                    },
+                    {
+                        "code": "428700003",
+                        "display": "Primary progressive multiple sclerosis (disorder)"
+                    },
+                    {
+                        "code": "438511000",
+                        "display": "Benign multiple sclerosis (disorder)"
+                    },
+                    {
+                        "code": "439567002",
+                        "display": "Malignant multiple sclerosis (disorder)"
+                    },
+                    {
+                        "code": "724778008",
+                        "display": "Progressive relapsing multiple sclerosis (disorder)"
+                    },
+                    {
+                        "code": "733028000",
+                        "display": "Multiple sclerosis, ichthyosis, factor VIII deficiency syndrome (disorder)"
+                    },
+                    {
+                        "code": "766246000",
+                        "display": "Marburg acute multiple sclerosis (disorder)"
+                    },
+                    {
+                        "code": "816984002",
+                        "display": "Progressive multiple sclerosis (disorder)"
+                    }
+                ]
+            },
+            {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "version": "2024",
+                "concept": [
+                    {
+                        "code": "G35",
+                        "display": "Multiple sclerosis"
+                    }
+                ]
+            }
+        ]
+    }
+}

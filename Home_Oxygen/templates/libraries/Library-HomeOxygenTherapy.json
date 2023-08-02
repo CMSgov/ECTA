@@ -165,15 +165,6 @@
           "codeFilter": [
             {
               "path": "code",
-              "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1222.1072"
-            }
-          ]
-        },
-        {
-          "type": "Condition",
-          "codeFilter": [
-            {
-              "path": "code",
               "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1222.1398"
             }
           ]
@@ -642,6 +633,69 @@
           "codeFilter": [
             {
               "path": "code",
+              "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.464.1003.116.11.1029"
+            }
+          ]
+        },
+        {
+          "type": "Condition",
+          "codeFilter": [
+            {
+              "path": "code",
+              "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.526.2.1353"
+            }
+          ]
+        },
+        {
+          "type": "Condition",
+          "codeFilter": [
+            {
+              "path": "code",
+              "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1078.158"
+            }
+          ]
+        },
+        {
+          "type": "Condition",
+          "codeFilter": [
+            {
+              "path": "code",
+              "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1222.533"
+            }
+          ]
+        },
+        {
+          "type": "Condition",
+          "codeFilter": [
+            {
+              "path": "code",
+              "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.464.1003.113.12.1005"
+            }
+          ]
+        },
+        {
+          "type": "Condition",
+          "codeFilter": [
+            {
+              "path": "code",
+              "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1034.187"
+            }
+          ]
+        },
+        {
+          "type": "Condition",
+          "codeFilter": [
+            {
+              "path": "code",
+              "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1034.575"
+            }
+          ]
+        },
+        {
+          "type": "Condition",
+          "codeFilter": [
+            {
+              "path": "code",
               "code":[
                 {
                     "system": "http://snomed.info/sct",
@@ -897,6 +951,26 @@
                   "system": "http://snomed.info/sct",
                   "code": "373923006",
                   "display": "Pigmentation of skin or mucosa (finding)"
+                },
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "56727007",
+                  "display": "Vitiligo (disorder)"
+                },
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "24526004",
+                  "display": "Inflammatory bowel disease (disorder)"
+                },
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "24526004",
+                  "display": "Inflammatory bowel disease (disorder)"
+                },
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "60845006",
+                  "display": "Dyspnea on exertion (finding)"
                 }
               ]
             }
@@ -1054,8 +1128,8 @@
                 },
                 {
                   "system": "http://snomed.info/sct",
-                  "code": "117007006",
-                  "display": "Titration method (procedure)"
+                  "code": "446573003",
+                  "display": "Continuous positive airway pressure titration (procedure)"
                 },
                 {
                   "system": "http://snomed.info/sct",
@@ -1072,6 +1146,15 @@
             {
               "path": "code",
               "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1222.143"
+            }
+          ]
+        },
+        {
+          "type": "Observation",
+          "codeFilter": [
+            {
+              "path": "code",
+              "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1222.1072"
             }
           ]
         },
