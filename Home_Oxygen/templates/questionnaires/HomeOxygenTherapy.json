@@ -761,31 +761,7 @@
           "type": "quantity",
           "required": false
         },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "AHIndex"
-              }
-            }
-          ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "3.8",
-              "answerCoding": {
-                "code": "Yes",
-                "display": "Yes"
-              }
-            }
-          ],
-          "linkId": "4.13",
-          "text": "AHI/RDI in events/hour",
-          "type": "quantity",
-          "required": true
-        },
+      
         {
           "extension": [
             {
@@ -1029,6 +1005,12 @@
                 "code": "“p” Pulmonale on EKG",
                 "display": "“p” Pulmonale on EKG"
               }
+            },
+            {
+              "valueCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
             }
           ]
         },
@@ -1125,6 +1107,12 @@
                 "code": "Terminal Illness",
                 "display": "Terminal Illness"
               }
+            },
+            {
+              "valueCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
             }
           ]
           
@@ -1172,8 +1160,8 @@
             },
             {
               "valueCoding": {
-                "code": "Cardio Vascular System",
-                "display": "Cardio Vascular System"
+                "code": "Cardiovascular System",
+                "display": "Cardiovascular System"
               }
             },
             {
@@ -1222,6 +1210,12 @@
               "valueCoding": {
                 "code": "Endocrine System",
                 "display": "Endocrine System"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Other",
+                "display": "Other"
               }
             }
           ]
@@ -1296,6 +1290,12 @@
             },
             {
               "valueCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
+            },
+            {
+              "valueCoding": {
                 "code": "None",
                 "display": "None"
               }
@@ -1338,6 +1338,18 @@
               "valueCoding": {
                 "code": "pain on neck movement",
                 "display": "pain on neck movement"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Nasal polyps",
+                "display": "Nasal polyps"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Other",
+                "display": "Other"
               }
             },
             {
@@ -1412,6 +1424,12 @@
             },
             {
               "valueCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
+            },
+            {
+              "valueCoding": {
                 "code": "None",
                 "display": "None"
               }
@@ -1433,13 +1451,13 @@
               "operator": "=",
               "question": "6.1",
               "answerCoding": {
-                "code": "Cardio Vascular System",
-                "display": "Cardio Vascular System"
+                "code": "Cardiovascular System",
+                "display": "Cardiovascular System"
               }
             }
           ],
           "linkId": "6.5",
-          "text": "Cardio Vascular System",
+          "text": "Cardiovascular System",
           "type": "choice",
           "repeats": true,
           "required": true,
@@ -1502,6 +1520,12 @@
               "valueCoding": {
                 "code": "ulcers",
                 "display": "ulcers"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Other",
+                "display": "Other"
               }
             },
             {
@@ -1582,8 +1606,14 @@
             },
             {
               "valueCoding": {
-                "code": "ulcers",
-                "display": "ulcers"
+                "code": "arterial ulcers ",
+                "display": "arterial ulcers "
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "stasis ulcers ",
+                "display": "stasis ulcers "
               }
             },
             {
@@ -1614,6 +1644,12 @@
               "valueCoding": {
                 "code": "hematemesis",
                 "display": "hematemesis"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Other",
+                "display": "Other"
               }
             },
             {
@@ -1726,6 +1762,12 @@
               "valueCoding": {
                 "code": "weakness",
                 "display": "weakness"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Other",
+                "display": "Other"
               }
             },
             {
@@ -1866,6 +1908,12 @@
             },
             {
               "valueCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
+            },
+            {
+              "valueCoding": {
                 "code": "None",
                 "display": "None"
               }
@@ -1930,6 +1978,18 @@
             },
             {
               "valueCoding": {
+                "code": "depression",
+                "display": "depression"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
+            },
+            {
+              "valueCoding": {
                 "code": "None",
                 "display": "None"
               }
@@ -1978,6 +2038,12 @@
               "valueCoding": {
                 "code": "bleeding disorders (conditional)",
                 "display": "bleeding disorders (conditional)"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Other",
+                "display": "Other"
               }
             },
             {
@@ -2040,6 +2106,12 @@
             },
             {
               "valueCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
+            },
+            {
+              "valueCoding": {
                 "code": "None",
                 "display": "None"
               }
@@ -2094,6 +2166,12 @@
               "valueCoding": {
                 "code": "Vitiligo",
                 "display": "Vitiligo"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Other",
+                "display": "Other"
               }
             },
             {
@@ -2156,6 +2234,12 @@
             },
             {
               "valueCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
+            },
+            {
+              "valueCoding": {
                 "code": "None",
                 "display": "None"
               }
@@ -2174,336 +2258,6 @@
           "text": "Physician Comments",
           "type": "text",
           "required": true
-        }
-      ]
-    },
-    {
-      "linkId": "8",
-      "text": "Past Treatments",
-      "type": "group",
-      "item": [
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "TreatmentsTried"
-              }
-            }
-          ],
-          "linkId": "8.1",
-          "text": "Treatments tried",
-          "type": "choice",
-          "repeats": true,
-          "required": true,
-          "answerOption": [
-            {
-              "valueCoding": {
-                "code": "Bronchodilators",
-                "display": "Bronchodilators"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Steroids",
-                "display": "Steroids"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Ventilation",
-                "display": "Ventilation"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Anti-Inflammatory",
-                "display": "Anti-Inflammatory"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Others",
-                "display": "Others"
-              }
-            }
-          ]
-        },
-        {
-          "linkId": "8.2",
-          "text": "Type of Bronchodilators",
-          "type": "choice",
-          "repeats": true,
-          "required": true,
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "8.1",
-              "answerCoding": {
-                "code": "Bronchodilators",
-                "display": "Bronchodilators"
-              }
-            }
-          ],
-          "answerOption": [
-            {
-              "valueCoding": {
-                "code": "Short-Acting",
-                "display": "Short-Acting"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Long-Acting",
-                "display": "Long-Acting"
-              }
-            }
-          ]
-        },
-        {
-          "linkId": "8.3",
-          "text": "Type of Steroids",
-          "type": "choice",
-          "repeats": true,
-          "required": true,
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "8.1",
-              "answerCoding": {
-                "code": "Steroids",
-                "display": "Steroids"
-              }
-            }
-          ],
-          "answerOption": [
-            {
-              "valueCoding": {
-                "code": "IV",
-                "display": "IV"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "PO",
-                "display": "PO"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Inhaled",
-                "display": "Inhaled"
-              }
-            }
-          ]
-        },
-        {
-          "linkId": "8.4",
-          "text": "Type of Ventilation",
-          "type": "choice",
-          "repeats": true,
-          "required": true,
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "8.1",
-              "answerCoding": {
-                "code": "Ventilation",
-                "display": "Ventilation"
-              }
-            }
-          ],
-          "answerOption": [
-            {
-              "valueCoding": {
-                "code": "Non-Invasive",
-                "display": "Non-Invasive"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Invasive",
-                "display": "Invasive"
-              }
-            }
-          ]
-        },
-        {
-          "linkId": "8.5",
-          "text": "Type of Anti-Inflammatory Treatment",
-          "type": "choice",
-          "repeats": true,
-          "required": true,
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "8.1",
-              "answerCoding": {
-                "code": "Anti-Inflammatory",
-                "display": "Anti-Inflammatory"
-              }
-            }
-          ],
-          "answerOption": [
-            {
-              "valueCoding": {
-                "code": "Cromolyn Sodium",
-                "display": "Cromolyn Sodium"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Interleukin(IL)-10 ",
-                "display": "Interleukin(IL)-10 "
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Interferon-gamma",
-                "display": "Interferon-gamma"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Specific PDE4-inhibitors (ciolomilast and roflumilast)",
-                "display": "Specific PDE4-inhibitors (ciolomilast and roflumilast)"
-              }
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "OtherTreatments"
-              }
-            }
-          ],
-          "linkId": "8.6",
-          "text": "Other Treatments",
-          "type": "choice",
-          "repeats": true,
-          "required": true,
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "8.1",
-              "answerCoding": {
-                "code": "Others",
-                "display": "Others"
-              }
-            }
-          ],
-          "answerOption": [
-            {
-              "valueCoding": {
-                "code": "Antibiotics",
-                "display": "Antibiotics"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Surfactin",
-                "display": "Surfactin"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "PAP/CPAP",
-                "display": "PAP/CPAP"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Pulmonary Rehabilitation",
-                "display": "Pulmonary Rehabilitation"
-              }
-            }
-          ]
-        },
-        {
-          "linkId": "8.7",
-          "text": "Effectiveness of Treatment",
-          "type": "choice",
-          "repeats": true,
-          "required": true,
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "8.1",
-              "answerCoding": {
-                "code": "Bronchodilators",
-                "display": "Bronchodilators"
-              }
-            },
-            {
-              "operator": "=",
-              "question": "8.1",
-              "answerCoding": {
-                "code": "Steroids",
-                "display": "Steroids"
-              }
-            },
-            {
-              "operator": "=",
-              "question": "8.1",
-              "answerCoding": {
-                "code": "Ventilation",
-                "display": "Ventilation"
-              }
-            },
-            {
-              "operator": "=",
-              "question": "8.1",
-              "answerCoding": {
-                "code": "Anti-Inflammatory",
-                "display": "Anti-Inflammatory"
-              }
-            },
-            {
-              "operator": "=",
-              "question": "8.1",
-              "answerCoding": {
-                "code": "Other",
-                "display": "Other"
-              }
-            }
-          ],
-          "answerOption": [
-            {
-              "valueCoding": {
-                "code": "No improvement",
-                "display": "No improvement"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Limited improvement",
-                "display": "Limited improvement"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Some improvement",
-                "display": "Some improvement"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Able to avoid O2 except with exercise",
-                "display": "Able to avoid O2 except with exercise"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Requires nocturnal O2 only",
-                "display": "Requires nocturnal O2 only"
-              }
-            }
-          ]
         }
       ]
     },
