@@ -281,12 +281,6 @@
       "item": [
         
         {
-          "linkId": "3.1",
-          "text": "Does patient live or travel to an area at high elevation?",
-          "type": "boolean",
-          "required": false
-        },
-        {
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
@@ -298,21 +292,6 @@
           ],
           "linkId": "3.2",
           "text": "Does patient have a reduced O2 carrying capacity? ",
-          "type": "boolean",
-          "required": false
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "SkinPigmentation"
-              }
-            }
-          ],
-          "linkId": "3.3",
-          "text": "Does patient have skin pigmentation ? ",
           "type": "boolean",
           "required": false
         },
@@ -482,6 +461,91 @@
           "type": "boolean",
           "required": true
         }
+      ]
+    },
+    {
+      "linkId": "30",
+      "text": "Does the patient have any of the following conditions that cause low ABG results",
+      "type": "group",
+      "item": [
+        
+        {
+          "linkId": "30.1",
+          "text": "lives in or travels to high altitude?",
+          "type": "boolean",
+          "required": false
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "age"
+              }
+            }
+          ],
+          "linkId": "30.2",
+          "text": "Age ? ",
+          "type": "boolean",
+          "required": false
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "SkinPigmentation"
+              }
+            }
+          ],
+          "linkId": "30.3",
+          "text": "Skin pigmentation ? ",
+          "type": "boolean",
+          "required": false
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "otherABG"
+              }
+            }
+          ],
+          "linkId": "30.4",
+          "text": "Other ? ",
+          "type": "boolean",
+          "required": false
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "OtherABGreason"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "30.4",
+              "answerCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
+            }
+          ],
+          "linkId": "30.5",
+          "text": "Specify other",
+          "type": "string",
+          "required": true
+        }
+       
       ]
     },
     {
@@ -879,8 +943,8 @@
             },
             {
               "valueCoding": {
-                "code": "Recurring CHF d/t Cor Pulmonale",
-                "display": "Recurring CHF d/t Cor Pulmonale"
+                "code": "Cor Pulmonale",
+                "display": "Cor Pulmonale"
               }
             },
             {
@@ -1308,6 +1372,31 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
+                "expression": "Othergeneral"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "6.2",
+              "answerCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
+            }
+          ],
+          "linkId": "6.21",
+          "text": "Specify other",
+          "type": "string",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
                 "expression": "NeckConditions"
               }
             }
@@ -1359,6 +1448,31 @@
               }
             }
           ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "Otherheent"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "6.3",
+              "answerCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
+            }
+          ],
+          "linkId": "6.31",
+          "text": "Specify other",
+          "type": "string",
+          "required": true
         },
         {
           "extension": [
@@ -1442,6 +1556,31 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
+                "expression": "Otherpulmonary"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "6.4",
+              "answerCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
+            }
+          ],
+          "linkId": "6.41",
+          "text": "Specify other",
+          "type": "string",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
                 "expression": "CardiacConditions"
               }
             }
@@ -1518,8 +1657,14 @@
             },
             {
               "valueCoding": {
-                "code": "ulcers",
-                "display": "ulcers"
+                "code": "arterial ulcers ",
+                "display": "arterial ulcers "
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "stasis ulcers ",
+                "display": "stasis ulcers "
               }
             },
             {
@@ -1535,6 +1680,31 @@
               }
             }
           ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "Othercardio"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "6.5",
+              "answerCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
+            }
+          ],
+          "linkId": "6.51",
+          "text": "Specify other",
+          "type": "string",
+          "required": true
         },
         {
           "extension": [
@@ -1666,6 +1836,31 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
+                "expression": "Othergastro"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "6.7",
+              "answerCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
+            }
+          ],
+          "linkId": "6.71",
+          "text": "Specify other",
+          "type": "string",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
                 "expression": "MusculoskeletalConditions"
               }
             }
@@ -1777,6 +1972,31 @@
               }
             }
           ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "Otherskeletal"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "6.8",
+              "answerCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
+            }
+          ],
+          "linkId": "6.81",
+          "text": "Specify other",
+          "type": "string",
+          "required": true
         },
         {
           "extension": [
@@ -1926,6 +2146,31 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
+                "expression": "Otherneuro"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "6.9",
+              "answerCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
+            }
+          ],
+          "linkId": "6.91",
+          "text": "Specify other",
+          "type": "string",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
                 "expression": "PsychiatricConditions"
               }
             }
@@ -2002,6 +2247,31 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
+                "expression": "Otherpsychiatric"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "6.10",
+              "answerCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
+            }
+          ],
+          "linkId": "6.101",
+          "text": "Specify other",
+          "type": "string",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
                 "expression": "HematologyConditions"
               }
             }
@@ -2053,6 +2323,31 @@
               }
             }
           ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "Otherhema"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "6.11",
+              "answerCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
+            }
+          ],
+          "linkId": "6.111",
+          "text": "Specify other",
+          "type": "string",
+          "required": true
         },
         {
           "extension": [
@@ -2124,6 +2419,31 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
+                "expression": "Otherendocrine"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "6.12",
+              "answerCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
+            }
+          ],
+          "linkId": "6.121",
+          "text": "Specify other",
+          "type": "string",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
                 "expression": "IntegumentalConditions"
               }
             }
@@ -2188,6 +2508,31 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
+                "expression": "Otherinteg"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "6.13",
+              "answerCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
+            }
+          ],
+          "linkId": "6.131",
+          "text": "Specify other",
+          "type": "string",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
                 "expression": "ImmunologicalConditions"
               }
             }
@@ -2245,6 +2590,31 @@
               }
             }
           ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "Otherimmuno"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "6.14",
+              "answerCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
+            }
+          ],
+          "linkId": "6.141",
+          "text": "Specify other",
+          "type": "string",
+          "required": true
         }
       ]
     },
