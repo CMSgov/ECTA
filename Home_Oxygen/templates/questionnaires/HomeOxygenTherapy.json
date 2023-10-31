@@ -279,22 +279,72 @@
       "text": "Symptoms and Diagnostic Testing",
       "type": "group",
       "item": [
-        
+        {
+          "linkId": "3.1",
+          "text": "Does the patient have any of the following conditions that cause low ABG results",
+          "type": "choice",
+              "required": true,
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "highaltitude",
+                    "display": "Lives in or travels to high altitude"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "Age",
+                    "display": "Age"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "Skin pigmentation",
+                    "display": "Skin pigmentation"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "o2capacity",
+                    "display": "Reduced O2 carrying capacity"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "Other",
+                    "display": "Other"
+                  }
+                }
+              ]
+         
+        },
         {
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
-                "expression": "O2CarryingCapacity"
+                "expression": "OtherABG"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "3.1",
+              "answerCoding": {
+                "code": "Other",
+                "display": "Other"
               }
             }
           ],
           "linkId": "3.2",
-          "text": "Does patient have a reduced O2 carrying capacity? ",
-          "type": "boolean",
-          "required": false
+          "text": "Specify",
+          "type": "string",
+          "required": true
         },
+        
         {
           "extension": [
             {
@@ -358,7 +408,7 @@
             }
           ],
           "linkId": "3.7",
-          "text": "Presence of Nocturnal restlessness, morning headache, and/or daytime somnolence",
+          "text": "Presence of impairment of cognitive processes and nocturnal restlessness or insomnia",
           "type": "boolean",
           "required": true
         },
@@ -444,7 +494,7 @@
             }
           ],
           "linkId": "3.10",
-          "text": "Does the patient use PAP device to treat OSA(Sleep Apnea) ?",
+          "text": "Is the patient’s OSA being sufficiently treated?",
           "type": "boolean",
           "required": true
         },
@@ -463,91 +513,7 @@
         }
       ]
     },
-    {
-      "linkId": "30",
-      "text": "Does the patient have any of the following conditions that cause low ABG results",
-      "type": "group",
-      "item": [
-        
-        {
-          "linkId": "30.1",
-          "text": "lives in or travels to high altitude?",
-          "type": "boolean",
-          "required": false
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "age"
-              }
-            }
-          ],
-          "linkId": "30.2",
-          "text": "Age ? ",
-          "type": "boolean",
-          "required": false
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "SkinPigmentation"
-              }
-            }
-          ],
-          "linkId": "30.3",
-          "text": "Skin pigmentation ? ",
-          "type": "boolean",
-          "required": false
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "otherABG"
-              }
-            }
-          ],
-          "linkId": "30.4",
-          "text": "Other ? ",
-          "type": "boolean",
-          "required": false
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "OtherABGreason"
-              }
-            }
-          ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "30.4",
-              "answerCoding": {
-                "code": "Other",
-                "display": "Other"
-              }
-            }
-          ],
-          "linkId": "30.5",
-          "text": "Specify other",
-          "type": "string",
-          "required": true
-        }
-       
-      ]
-    },
+   
     {
       "linkId": "4",
       "text": "Relevant Patient Observations",
@@ -901,8 +867,14 @@
             },
             {
               "valueCoding": {
-                "code": "Bronchiectasis",
-                "display": "Bronchiectasis"
+                "code": "Heart failure",
+                "display": "Heart failure"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "COVID-19",
+                "display": "COVID-19"
               }
             },
             {
@@ -913,20 +885,38 @@
             },
             {
               "valueCoding": {
-                "code": "Diffuse interstitial lung disease",
-                "display": "Diffuse interstitial lung disease"
+                "code": "Obstructive sleep apnea",
+                "display": "Obstructive sleep apnea"
               }
             },
             {
               "valueCoding": {
-                "code": "Cystic fibrosis",
-                "display": "Cystic fibrosis"
+                "code": "Chronic respiratory failure with hypoxia",
+                "display": "Chronic respiratory failure with hypoxia"
               }
             },
             {
               "valueCoding": {
-                "code": "Pulmonary neoplasm",
-                "display": "Pulmonary neoplasm"
+                "code": "Acute respiratory failure with hypoxia",
+                "display": "Acute respiratory failure with hypoxia"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Interstitial pulmonary disease",
+                "display": "Interstitial pulmonary disease"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Asthma",
+                "display": "Asthma"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Pneumonia",
+                "display": "Pneumonia"
               }
             },
             {
@@ -1283,6 +1273,31 @@
               }
             }
           ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "Otherother"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "6.1",
+              "answerCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
+            }
+          ],
+          "linkId": "6.111",
+          "text": "Specify other",
+          "type": "string",
+          "required": true
         },
         {
           "extension": [
@@ -1663,8 +1678,8 @@
             },
             {
               "valueCoding": {
-                "code": "stasis ulcers ",
-                "display": "stasis ulcers "
+                "code": "venous stasis ulcers ",
+                "display": "venous stasis ulcers "
               }
             },
             {
@@ -1776,14 +1791,8 @@
             },
             {
               "valueCoding": {
-                "code": "arterial ulcers ",
-                "display": "arterial ulcers "
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "stasis ulcers ",
-                "display": "stasis ulcers "
+                "code": "ulcers ",
+                "display": "ulcers "
               }
             },
             {
