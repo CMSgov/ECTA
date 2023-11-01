@@ -281,7 +281,7 @@
       "item": [
         {
           "linkId": "3.1",
-          "text": "Does the patient have any of the following conditions that cause low ABG results",
+          "text": "Does the patient have any of the following conditions that cause low ABG results?",
           "type": "choice",
               "required": true,
               "repeats": true,
@@ -461,6 +461,11 @@
           "enableWhen": [
             {
               "operator": "=",
+              "question": "3.7",
+              "answerBoolean": true
+            },
+            {
+              "operator": "=",
               "question": "3.8",
               "answerCoding": {
                 "code": "No",
@@ -468,10 +473,9 @@
               }
             }
           ],
+          "enableBehavior": "all",
           "linkId": "3.9",
           "text": "Was nocturnal testing performed under the direction of medicare enrolled IDTF ?",
-          "type": "boolean",
-          "required": true
         },
         {
           "extension": [
@@ -494,7 +498,7 @@
             }
           ],
           "linkId": "3.10",
-          "text": "Is the patient’s OSA being sufficiently treated?",
+          "text": "Is the patient's OSA being sufficiently treated?",
           "type": "boolean",
           "required": true
         },
