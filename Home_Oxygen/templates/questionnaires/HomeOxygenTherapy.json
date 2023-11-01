@@ -408,9 +408,36 @@
             }
           ],
           "linkId": "3.7",
-          "text": "Presence of impairment of cognitive processes and nocturnal restlessness or insomnia",
-          "type": "boolean",
-          "required": true
+          "text": "Presence of any nocturnal symptoms ?",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "Impairment of cognitive processes",
+                "display": "Impairment of cognitive processes"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Nocturnal restlessness",
+                "display": "Nocturnal restlessness"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Insomnia",
+                "display": "Insomnia"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Morning headache",
+                "display": "Morning headache"
+              }
+            }
+          ],
+          "required": true,
+          "repeats":true
         },
         {
           "extension": [
@@ -426,9 +453,37 @@
             {
               "operator": "=",
               "question": "3.7",
-              "answerBoolean": true
+              "answerCoding": {
+                "code": "Impairment of cognitive processes",
+                "display": "Impairment of cognitive processes"
+              }
+            },
+            {
+              "operator": "=",
+              "question": "3.7",
+              "answerCoding": {
+                "code": "Nocturnal restlessness",
+                "display": "Nocturnal restlessness"
+              }
+            },
+            {
+              "operator": "=",
+              "question": "3.7",
+              "answerCoding": {
+                "code": "Insomnia",
+                "display": "Insomnia"
+              }
+            },
+            {
+              "operator": "=",
+              "question": "3.7",
+              "answerCoding": {
+                "code": "Morning headache",
+                "display": "Morning headache"
+              } 
             }
           ],
+          "enableBehavior": "any",
           "linkId": "3.8",
           "text": "Does the patient have Obstructive Sleep Apnea (OSA) ?",
           "type": "choice",
@@ -446,7 +501,7 @@
                 "display": "No"
               }
             }
-          ]
+          ]       
         },
         {
           "extension": [
@@ -462,7 +517,10 @@
             {
               "operator": "=",
               "question": "3.7",
-              "answerBoolean": true
+              "answerCoding": {
+                "code": "Impairment of cognitive processes",
+                "display": "Impairment of cognitive processes"
+              }
             },
             {
               "operator": "=",
@@ -475,8 +533,10 @@
           ],
           "enableBehavior": "all",
           "linkId": "3.9",
-          "text": "Was nocturnal testing performed under the direction of medicare enrolled IDTF ?",
+          "type":"boolean",
+          "text": "Was nocturnal testing performed under the direction of medicare enrolled IDTF ?"
         },
+        
         {
           "extension": [
             {
@@ -507,7 +567,10 @@
             {
               "operator": "=",
               "question": "3.8",
-              "answerBoolean": true
+              "answerCoding": {
+                "code": "Yes",
+                "display": "Yes"
+              }
             }
           ],
           "linkId": "3.11",
@@ -684,9 +747,37 @@
             {
               "operator": "=",
               "question": "3.7",
-              "answerBoolean": true
+              "answerCoding": {
+                "code": "Impairment of cognitive processes",
+                "display": "Impairment of cognitive processes"
+              }
+            },
+            {
+              "operator": "=",
+              "question": "3.7",
+              "answerCoding": {
+                "code": "Nocturnal restlessness",
+                "display": "Nocturnal restlessness"
+              }
+            },
+            {
+              "operator": "=",
+              "question": "3.7",
+              "answerCoding": {
+                "code": "Insomnia",
+                "display": "Insomnia"
+              }
+            },
+            {
+              "operator": "=",
+              "question": "3.7",
+              "answerCoding": {
+                "code": "Morning headache",
+                "display": "Morning headache"
+              } 
             }
           ],
+          "enableBehavior": "any",
           "linkId": "4.8",
           "text": "Study performed in relevance to Nocturnal Restlessness",
           "type": "choice",
@@ -721,9 +812,37 @@
             {
               "operator": "=",
               "question": "3.7",
-              "answerBoolean": true
+              "answerCoding": {
+                "code": "Impairment of cognitive processes",
+                "display": "Impairment of cognitive processes"
+              }
+            },
+            {
+              "operator": "=",
+              "question": "3.7",
+              "answerCoding": {
+                "code": "Nocturnal restlessness",
+                "display": "Nocturnal restlessness"
+              }
+            },
+            {
+              "operator": "=",
+              "question": "3.7",
+              "answerCoding": {
+                "code": "Insomnia",
+                "display": "Insomnia"
+              }
+            },
+            {
+              "operator": "=",
+              "question": "3.7",
+              "answerCoding": {
+                "code": "Morning headache",
+                "display": "Morning headache"
+              } 
             }
           ],
+          "enableBehavior": "any",
           "linkId": "4.9",
           "text": "Nocturnal oxygen saturation",
           "type": "quantity",
@@ -743,9 +862,37 @@
             {
               "operator": "=",
               "question": "3.7",
-              "answerBoolean": true
+              "answerCoding": {
+                "code": "Impairment of cognitive processes",
+                "display": "Impairment of cognitive processes"
+              }
+            },
+            {
+              "operator": "=",
+              "question": "3.7",
+              "answerCoding": {
+                "code": "Nocturnal restlessness",
+                "display": "Nocturnal restlessness"
+              }
+            },
+            {
+              "operator": "=",
+              "question": "3.7",
+              "answerCoding": {
+                "code": "Insomnia",
+                "display": "Insomnia"
+              }
+            },
+            {
+              "operator": "=",
+              "question": "3.7",
+              "answerCoding": {
+                "code": "Morning headache",
+                "display": "Morning headache"
+              } 
             }
           ],
+          "enableBehavior": "any",
           "linkId": "4.10",
           "text": "Nocturnal PO2",
           "type": "quantity",
@@ -765,9 +912,37 @@
             {
               "operator": "=",
               "question": "3.7",
-              "answerBoolean": true
+              "answerCoding": {
+                "code": "Impairment of cognitive processes",
+                "display": "Impairment of cognitive processes"
+              }
+            },
+            {
+              "operator": "=",
+              "question": "3.7",
+              "answerCoding": {
+                "code": "Nocturnal restlessness",
+                "display": "Nocturnal restlessness"
+              }
+            },
+            {
+              "operator": "=",
+              "question": "3.7",
+              "answerCoding": {
+                "code": "Insomnia",
+                "display": "Insomnia"
+              }
+            },
+            {
+              "operator": "=",
+              "question": "3.7",
+              "answerCoding": {
+                "code": "Morning headache",
+                "display": "Morning headache"
+              } 
             }
           ],
+          "enableBehavior": "any",
           "linkId": "4.11",
           "text": "Nocturnal oxygen saturation with oxygen",
           "type": "quantity",
@@ -787,9 +962,37 @@
             {
               "operator": "=",
               "question": "3.7",
-              "answerBoolean": true
+              "answerCoding": {
+                "code": "Impairment of cognitive processes",
+                "display": "Impairment of cognitive processes"
+              }
+            },
+            {
+              "operator": "=",
+              "question": "3.7",
+              "answerCoding": {
+                "code": "Nocturnal restlessness",
+                "display": "Nocturnal restlessness"
+              }
+            },
+            {
+              "operator": "=",
+              "question": "3.7",
+              "answerCoding": {
+                "code": "Insomnia",
+                "display": "Insomnia"
+              }
+            },
+            {
+              "operator": "=",
+              "question": "3.7",
+              "answerCoding": {
+                "code": "Morning headache",
+                "display": "Morning headache"
+              } 
             }
           ],
+          "enableBehavior": "any",
           "linkId": "4.12",
           "text": "Nocturnal oxygen PO2 with oxygen",
           "type": "quantity",
@@ -810,9 +1013,37 @@
             {
               "operator": "=",
               "question": "3.7",
-              "answerBoolean": true
+              "answerCoding": {
+                "code": "Impairment of cognitive processes",
+                "display": "Impairment of cognitive processes"
+              }
+            },
+            {
+              "operator": "=",
+              "question": "3.7",
+              "answerCoding": {
+                "code": "Nocturnal restlessness",
+                "display": "Nocturnal restlessness"
+              }
+            },
+            {
+              "operator": "=",
+              "question": "3.7",
+              "answerCoding": {
+                "code": "Insomnia",
+                "display": "Insomnia"
+              }
+            },
+            {
+              "operator": "=",
+              "question": "3.7",
+              "answerCoding": {
+                "code": "Morning headache",
+                "display": "Morning headache"
+              } 
             }
           ],
+          "enableBehavior": "any",
           "linkId": "4.14",
           "text": "Peak Flow Rate",
           "type": "quantity",
@@ -832,9 +1063,37 @@
             {
               "operator": "=",
               "question": "3.7",
-              "answerBoolean": true
+              "answerCoding": {
+                "code": "Impairment of cognitive processes",
+                "display": "Impairment of cognitive processes"
+              }
+            },
+            {
+              "operator": "=",
+              "question": "3.7",
+              "answerCoding": {
+                "code": "Nocturnal restlessness",
+                "display": "Nocturnal restlessness"
+              }
+            },
+            {
+              "operator": "=",
+              "question": "3.7",
+              "answerCoding": {
+                "code": "Insomnia",
+                "display": "Insomnia"
+              }
+            },
+            {
+              "operator": "=",
+              "question": "3.7",
+              "answerCoding": {
+                "code": "Morning headache",
+                "display": "Morning headache"
+              } 
             }
           ],
+          "enableBehavior": "any",
           "linkId": "4.15",
           "text": "Average Flow Rate",
           "type": "quantity",
