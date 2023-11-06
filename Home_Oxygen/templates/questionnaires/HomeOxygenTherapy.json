@@ -194,7 +194,7 @@
             }
           ],
           "linkId": "2.5",
-          "text": "O2 Sat (ABG)",
+          "text": "O2 Sat ",
           "type": "quantity",
           "required": false
         },
@@ -238,7 +238,7 @@
             }
           ],
           "linkId": "2.7",
-          "text": "Hematocrit (ABG)",
+          "text": "Hematocrit ",
           "type": "quantity",
           "required": false
         },
@@ -281,7 +281,7 @@
       "item": [
         {
           "linkId": "3.1",
-          "text": "Does the patient have any of the following conditions that cause low ABG results?",
+          "text": "Does the patient have any of the following conditions that could cause inaccuracies in the ABG/pulse oximetry results?",
           "type": "choice",
               "required": true,
               "repeats": true,
@@ -1190,6 +1190,12 @@
             },
             {
               "valueCoding": {
+                "code": "Cluster headaches",
+                "display": "Cluster headaches"
+              }
+            },
+            {
+              "valueCoding": {
                 "code": "Pulmonary hypertension",
                 "display": "Pulmonary hypertension"
               }
@@ -1342,7 +1348,7 @@
             }
           ],
           "linkId": "5.6",
-          "text": "Presence of Erythrocythemia",
+          "text": "Presence of Erythrocythemia with hematocrit greater than or equal to 56",
           "type": "boolean",
           "required": true
         },
@@ -1382,7 +1388,7 @@
             }
           ],
           "linkId": "5.8",
-          "text": "Any medical condition with distinct physiologic, cognitive, and/or functional symptoms documented in high-quality, peer-reviewed literature to be improved by oxygen therapy, such as cluster headaches ?",
+          "text": "For normoxemic patients, are there any medical condition with distinct physiologic, cognitive, and/or functional symptoms documented in high-quality, peer-reviewed literature to be improved by oxygen therapy, such as cluster headaches ?",
           "type": "boolean",
           "required": true
         },
