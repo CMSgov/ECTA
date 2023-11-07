@@ -1410,25 +1410,25 @@
             {
               "valueCoding": {
                 "code": "Angina pectoris",
-                "display": "Angina pectoris"
+                "display": "Angina pectoris in the absence of hypoxemia. This condition is generally not the result of a low oxygen level in the blood and there are other preferred treatments"
               }
             },
             {
               "valueCoding": {
                 "code": "Dyspnea",
-                "display": "Dyspnea"
+                "display": "Dyspnea without cor pulmonale or evidence of hypoxemia"
               }
             },
             {
               "valueCoding": {
                 "code": "Peripheral Vascular Disease",
-                "display": "Peripheral Vascular Disease"
+                "display": "Severe peripheral vascular disease resulting in clinically evident desaturation in one or more extremities but in the absence of systemic hypoxemia. There is no evidence that increased PO2 will improve the oxygenation of tissues with impaired circulation"
               }
             },
             {
               "valueCoding": {
                 "code": "Terminal Illness",
-                "display": "Terminal Illness"
+                "display": "Terminal illnesses that do not affect the ability to breathe"
               }
             },
             {
