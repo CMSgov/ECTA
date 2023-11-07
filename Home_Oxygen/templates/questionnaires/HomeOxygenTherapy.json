@@ -1348,7 +1348,7 @@
             }
           ],
           "linkId": "5.6",
-          "text": "Presence of Erythrocythemia with hematocrit greater than or equal to 56",
+          "text": "Presence of Erythrocythemia with hematocrit greater than 56 percent ?",
           "type": "boolean",
           "required": true
         },
@@ -1439,6 +1439,31 @@
             }
           ]
           
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "sufferother"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "5.9",
+              "answerCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
+            }
+          ],
+          "linkId": "5.911",
+          "text": "Specify other",
+          "type": "string",
+          "required": true
         }
       ]
     },
