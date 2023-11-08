@@ -1422,7 +1422,7 @@
             {
               "valueCoding": {
                 "code": "Peripheral Vascular Disease",
-                "display": "Severe peripheral vascular disease resulting in clinically evident desaturation in one or more extremities but in the absence of systemic hypoxemia. There is no evidence that increased PO2 will improve the oxygenation of tissues with impaired circulation"
+                "display": "Severe peripheral vascular disease resulting in clinically evident desaturation in one or more extremities but in the absence of systemic hypoxemia."
               }
             },
             {
