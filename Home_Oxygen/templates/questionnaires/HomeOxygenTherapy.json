@@ -280,8 +280,38 @@
       "type": "group",
       "item": [
         {
-          "linkId": "3.1",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "inaccurracy"
+              }
+            }
+          ],
+          "linkId": "3.01",
           "text": "Does the patient have any of the following conditions that could cause inaccuracies in the ABG/pulse oximetry results?",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "inaccurracyanswer"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "3.01",
+              "answerBoolean": true
+            }
+          ],
+          "linkId": "3.1",
           "type": "choice",
               "required": true,
               "repeats": true,
@@ -407,8 +437,29 @@
               }
             }
           ],
-          "linkId": "3.7",
+          "linkId": "3.07",
           "text": "Presence of any nocturnal symptoms ?",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "Nocturnalanswer"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "3.07",
+              "answerBoolean": true
+            }
+          ],
+          "linkId": "3.7",
           "type": "choice",
           "answerOption": [
             {
@@ -1410,7 +1461,7 @@
             {
               "valueCoding": {
                 "code": "Angina pectoris",
-                "display": "Angina pectoris in the absence of hypoxemia. This condition is generally not the result of a low oxygen level in the blood and there are other preferred treatments"
+                "display": "Angina pectoris in the absence of hypoxemia. "
               }
             },
             {
@@ -1429,12 +1480,6 @@
               "valueCoding": {
                 "code": "Terminal Illness",
                 "display": "Terminal illnesses that do not affect the ability to breathe"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Other",
-                "display": "Other"
               }
             }
           ]
