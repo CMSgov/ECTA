@@ -313,6 +313,7 @@
           ],
           "linkId": "3.1",
           "type": "choice",
+          "text": "Specify reason",
               "required": true,
               "repeats": true,
               "answerOption": [
@@ -461,6 +462,7 @@
           ],
           "linkId": "3.7",
           "type": "choice",
+          "text": "Specify symptoms",
           "answerOption": [
             {
               "valueCoding": {
@@ -489,7 +491,7 @@
             {
               "valueCoding": {
                 "code": "Other",
-                "display": "other"
+                "display": "Other"
               }
             }
           ],
