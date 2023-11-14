@@ -532,9 +532,7 @@
                 "expression": "PresenceOfOSA"
               }
             }
-          ]
-        },
-        {
+          ],
           "linkId": "3.8",
           "text": "Does the patient have Obstructive Sleep Apnea (OSA) ?",
           "type": "choice",
@@ -574,7 +572,6 @@
               }
             }
           ],
-          "enableBehavior": "all",
           "linkId": "3.9",
           "type":"boolean",
           "text": "Was nocturnal testing performed under the direction of medicare enrolled IDTF ?"
@@ -1245,6 +1242,12 @@
             },
             {
               "valueCoding": {
+                "code": "Dependent edema suggesting congestive heart failure?",
+                "display": "Dependent edema suggesting congestive heart failure?"
+              }
+            },
+            {
+              "valueCoding": {
                 "code": "Cor Pulmonale",
                 "display": "Cor Pulmonale"
               }
@@ -1313,21 +1316,6 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
-                "expression": "DependentEdema"
-              }
-            }
-          ],
-          "linkId": "5.4",
-          "text": "Does the patient have Dependent edema suggesting congestive heart failure? ",
-          "type": "boolean",
-          "required": false
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
                 "expression": "SecondaryToCORPulmonale"
               }
             }
@@ -1379,21 +1367,6 @@
               }
             }
           ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "Erythrocythemia"
-              }
-            }
-          ],
-          "linkId": "5.6",
-          "text": "Presence of Erythrocythemia with hematocrit greater than 56 percent ?",
-          "type": "boolean",
-          "required": true
         },
         {
           "extension": [
