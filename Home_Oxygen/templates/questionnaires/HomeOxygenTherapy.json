@@ -518,7 +518,7 @@
               }
             }
           ],
-          "linkId": "5.911",
+          "linkId": "3.711",
           "text": "Specify other",
           "type": "string",
           "required": true
@@ -531,40 +531,6 @@
                 "language": "text/cql",
                 "expression": "PresenceOfOSA"
               }
-            }
-          ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "3.7",
-              "answerCoding": {
-                "code": "Impairment of cognitive processes",
-                "display": "Impairment of cognitive processes"
-              }
-            },
-            {
-              "operator": "=",
-              "question": "3.7",
-              "answerCoding": {
-                "code": "Nocturnal restlessness",
-                "display": "Nocturnal restlessness"
-              }
-            },
-            {
-              "operator": "=",
-              "question": "3.7",
-              "answerCoding": {
-                "code": "Insomnia",
-                "display": "Insomnia"
-              }
-            },
-            {
-              "operator": "=",
-              "question": "3.7",
-              "answerCoding": {
-                "code": "Morning headache",
-                "display": "Morning headache"
-              } 
             }
           ]
         },
@@ -599,14 +565,6 @@
             }
           ],
           "enableWhen": [
-            {
-              "operator": "=",
-              "question": "3.7",
-              "answerCoding": {
-                "code": "Impairment of cognitive processes",
-                "display": "Impairment of cognitive processes"
-              }
-            },
             {
               "operator": "=",
               "question": "3.8",
