@@ -290,7 +290,7 @@
             }
           ],
           "linkId": "3.01",
-          "text": "Does the patient have any of the following conditions that could cause inaccuracies in the ABG/pulse oximetry results?",
+          "text": "Does the patient have any conditions that could cause inaccuracies in the ABG/pulse oximetry results?",
           "type": "boolean",
           "required": true
         },
@@ -313,7 +313,7 @@
           ],
           "linkId": "3.1",
           "type": "choice",
-          "text": "Specify reason",
+          "text": "Specify condition",
               "required": true,
               "repeats": true,
               "answerOption": [
@@ -534,7 +534,7 @@
             }
           ],
           "linkId": "3.8",
-          "text": "Does the patient have Obstructive Sleep Apnea (OSA) ?",
+          "text": "Does the patient have Obstructive Sleep Apnea (OSA) and was it tested during sleep?",
           "type": "choice",
           "required": true,
           "answerOption": [
@@ -567,8 +567,8 @@
               "operator": "=",
               "question": "3.8",
               "answerCoding": {
-                "code": "No",
-                "display": "No"
+                "code": "Yes",
+                "display": "Yes"
               }
             }
           ],
@@ -1414,6 +1414,28 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
+                "expression": "normoxemicconditions"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "5.8",
+              "answerBoolean": true
+            }
+          ],
+          "linkId": "5.811",
+          "text": "Specify other",
+          "type": "string",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
                 "expression": "Group4Criteria"
               }
             }
@@ -1445,6 +1467,12 @@
               "valueCoding": {
                 "code": "Terminal Illness",
                 "display": "Terminal illnesses that do not affect the ability to breathe"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "None",
+                "display": "None"
               }
             }
           ]
