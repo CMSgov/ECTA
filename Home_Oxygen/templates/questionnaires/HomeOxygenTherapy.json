@@ -535,22 +535,7 @@
           ],
           "linkId": "3.8",
           "text": "Does the patient have Obstructive Sleep Apnea (OSA) ?",
-          "type": "choice",
-          "required": true,
-          "answerOption": [
-            {
-              "valueCoding": {
-                "code": "Yes",
-                "display": "Yes"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "No",
-                "display": "No"
-              }
-            }
-          ]       
+          "type": "boolean"
         },
         {
           "extension": [
@@ -566,10 +551,7 @@
             {
               "operator": "=",
               "question": "3.8",
-              "answerCoding": {
-                "code": "Yes",
-                "display": "Yes"
-              }
+              "answerBoolean":true
             }
           ],
           "linkId": "3.9",
@@ -591,10 +573,7 @@
             {
               "operator": "=",
               "question": "3.8",
-              "answerCoding": {
-                "code": "Yes",
-                "display": "Yes"
-              }
+              "answerBoolean":true
             }
           ],
           "linkId": "3.10",
@@ -607,10 +586,7 @@
             {
               "operator": "=",
               "question": "3.8",
-              "answerCoding": {
-                "code": "Yes",
-                "display": "Yes"
-              }
+              "answerBoolean":true
             }
           ],
           "linkId": "3.11",
