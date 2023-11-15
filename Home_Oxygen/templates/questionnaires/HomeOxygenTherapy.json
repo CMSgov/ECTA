@@ -534,7 +534,7 @@
             }
           ],
           "linkId": "3.8",
-          "text": "Does the patient have Obstructive Sleep Apnea (OSA) and was it tested during sleep?",
+          "text": "Does the patient have Obstructive Sleep Apnea (OSA) ?",
           "type": "choice",
           "required": true,
           "answerOption": [
@@ -786,38 +786,10 @@
           "enableWhen": [
             {
               "operator": "=",
-              "question": "3.7",
-              "answerCoding": {
-                "code": "Impairment of cognitive processes",
-                "display": "Impairment of cognitive processes"
-              }
-            },
-            {
-              "operator": "=",
-              "question": "3.7",
-              "answerCoding": {
-                "code": "Nocturnal restlessness",
-                "display": "Nocturnal restlessness"
-              }
-            },
-            {
-              "operator": "=",
-              "question": "3.7",
-              "answerCoding": {
-                "code": "Insomnia",
-                "display": "Insomnia"
-              }
-            },
-            {
-              "operator": "=",
-              "question": "3.7",
-              "answerCoding": {
-                "code": "Morning headache",
-                "display": "Morning headache"
-              } 
+              "question": "3.8",
+              "answerBoolean":true
             }
           ],
-          "enableBehavior": "any",
           "linkId": "4.8",
           "text": "Study performed in relevance to Nocturnal Restlessness",
           "type": "choice",
@@ -851,38 +823,10 @@
           "enableWhen": [
             {
               "operator": "=",
-              "question": "3.7",
-              "answerCoding": {
-                "code": "Impairment of cognitive processes",
-                "display": "Impairment of cognitive processes"
-              }
-            },
-            {
-              "operator": "=",
-              "question": "3.7",
-              "answerCoding": {
-                "code": "Nocturnal restlessness",
-                "display": "Nocturnal restlessness"
-              }
-            },
-            {
-              "operator": "=",
-              "question": "3.7",
-              "answerCoding": {
-                "code": "Insomnia",
-                "display": "Insomnia"
-              }
-            },
-            {
-              "operator": "=",
-              "question": "3.7",
-              "answerCoding": {
-                "code": "Morning headache",
-                "display": "Morning headache"
-              } 
+              "question": "3.8",
+              "answerBoolean":true
             }
           ],
-          "enableBehavior": "any",
           "linkId": "4.9",
           "text": "Nocturnal oxygen saturation",
           "type": "quantity",
@@ -901,38 +845,10 @@
           "enableWhen": [
             {
               "operator": "=",
-              "question": "3.7",
-              "answerCoding": {
-                "code": "Impairment of cognitive processes",
-                "display": "Impairment of cognitive processes"
-              }
-            },
-            {
-              "operator": "=",
-              "question": "3.7",
-              "answerCoding": {
-                "code": "Nocturnal restlessness",
-                "display": "Nocturnal restlessness"
-              }
-            },
-            {
-              "operator": "=",
-              "question": "3.7",
-              "answerCoding": {
-                "code": "Insomnia",
-                "display": "Insomnia"
-              }
-            },
-            {
-              "operator": "=",
-              "question": "3.7",
-              "answerCoding": {
-                "code": "Morning headache",
-                "display": "Morning headache"
-              } 
+              "question": "3.8",
+              "answerBoolean":true
             }
           ],
-          "enableBehavior": "any",
           "linkId": "4.10",
           "text": "Nocturnal PO2",
           "type": "quantity",
@@ -951,39 +867,10 @@
           "enableWhen": [
             {
               "operator": "=",
-              "question": "3.7",
-              "answerCoding": {
-                "code": "Impairment of cognitive processes",
-                "display": "Impairment of cognitive processes"
-              }
-            },
-            {
-              "operator": "=",
-              "question": "3.7",
-              "answerCoding": {
-                "code": "Nocturnal restlessness",
-                "display": "Nocturnal restlessness"
-              }
-            },
-            {
-              "operator": "=",
-              "question": "3.7",
-              "answerCoding": {
-                "code": "Insomnia",
-                "display": "Insomnia"
-              }
-            },
-            {
-              "operator": "=",
-              "question": "3.7",
-              "answerCoding": {
-                "code": "Morning headache",
-                "display": "Morning headache"
-              } 
+              "question": "3.8",
+              "answerBoolean":true
             }
-          ],
-          "enableBehavior": "any",
-          "linkId": "4.11",
+          ],"linkId": "4.11",
           "text": "Nocturnal oxygen saturation with oxygen",
           "type": "quantity",
           "required": false
@@ -1001,39 +888,10 @@
           "enableWhen": [
             {
               "operator": "=",
-              "question": "3.7",
-              "answerCoding": {
-                "code": "Impairment of cognitive processes",
-                "display": "Impairment of cognitive processes"
-              }
-            },
-            {
-              "operator": "=",
-              "question": "3.7",
-              "answerCoding": {
-                "code": "Nocturnal restlessness",
-                "display": "Nocturnal restlessness"
-              }
-            },
-            {
-              "operator": "=",
-              "question": "3.7",
-              "answerCoding": {
-                "code": "Insomnia",
-                "display": "Insomnia"
-              }
-            },
-            {
-              "operator": "=",
-              "question": "3.7",
-              "answerCoding": {
-                "code": "Morning headache",
-                "display": "Morning headache"
-              } 
+              "question": "3.8",
+              "answerBoolean":true
             }
-          ],
-          "enableBehavior": "any",
-          "linkId": "4.12",
+          ],"linkId": "4.12",
           "text": "Nocturnal oxygen PO2 with oxygen",
           "type": "quantity",
           "required": false
@@ -1052,38 +910,10 @@
           "enableWhen": [
             {
               "operator": "=",
-              "question": "3.7",
-              "answerCoding": {
-                "code": "Impairment of cognitive processes",
-                "display": "Impairment of cognitive processes"
-              }
-            },
-            {
-              "operator": "=",
-              "question": "3.7",
-              "answerCoding": {
-                "code": "Nocturnal restlessness",
-                "display": "Nocturnal restlessness"
-              }
-            },
-            {
-              "operator": "=",
-              "question": "3.7",
-              "answerCoding": {
-                "code": "Insomnia",
-                "display": "Insomnia"
-              }
-            },
-            {
-              "operator": "=",
-              "question": "3.7",
-              "answerCoding": {
-                "code": "Morning headache",
-                "display": "Morning headache"
-              } 
+              "question": "3.8",
+              "answerBoolean":true
             }
           ],
-          "enableBehavior": "any",
           "linkId": "4.14",
           "text": "Peak Flow Rate",
           "type": "quantity",
@@ -1102,38 +932,10 @@
           "enableWhen": [
             {
               "operator": "=",
-              "question": "3.7",
-              "answerCoding": {
-                "code": "Impairment of cognitive processes",
-                "display": "Impairment of cognitive processes"
-              }
-            },
-            {
-              "operator": "=",
-              "question": "3.7",
-              "answerCoding": {
-                "code": "Nocturnal restlessness",
-                "display": "Nocturnal restlessness"
-              }
-            },
-            {
-              "operator": "=",
-              "question": "3.7",
-              "answerCoding": {
-                "code": "Insomnia",
-                "display": "Insomnia"
-              }
-            },
-            {
-              "operator": "=",
-              "question": "3.7",
-              "answerCoding": {
-                "code": "Morning headache",
-                "display": "Morning headache"
-              } 
+              "question": "3.8",
+              "answerBoolean":true
             }
           ],
-          "enableBehavior": "any",
           "linkId": "4.15",
           "text": "Average Flow Rate",
           "type": "quantity",
@@ -1242,8 +1044,8 @@
             },
             {
               "valueCoding": {
-                "code": "Dependent edema suggesting congestive heart failure?",
-                "display": "Dependent edema suggesting congestive heart failure?"
+                "code": "Dependent edema suggesting congestive heart failure",
+                "display": "Dependent edema suggesting congestive heart failure"
               }
             },
             {
@@ -1331,7 +1133,7 @@
             }
           ],
           "linkId": "5.5",
-          "text": "Determination of  Cor Pulmonale",
+          "text": "Determination of  Pulmonary hypertension/Cor Pulmonale",
           "type": "choice",
           "repeats": true,
           "required": true,
@@ -1356,8 +1158,8 @@
             },
             {
               "valueCoding": {
-                "code": "“p” Pulmonale on EKG",
-                "display": "“p” Pulmonale on EKG"
+                "code": "'p' Pulmonale on EKG",
+                "display": "'p' Pulmonale on EKG"
               }
             },
             {
