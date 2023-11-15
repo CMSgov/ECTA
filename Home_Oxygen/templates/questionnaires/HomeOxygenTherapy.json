@@ -1426,7 +1426,7 @@
             }
           ],
           "linkId": "5.811",
-          "text": "Specify other",
+          "text": "Specify condition",
           "type": "string",
           "required": true
         },
