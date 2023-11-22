@@ -164,6 +164,13 @@
               }
             }
           ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "2.3",
+              "answerBoolean": true
+            }
+          ],
           "linkId": "2.4",
           "text": "Date of Blood Gas Study test?",
           "type": "date",
@@ -177,6 +184,13 @@
                 "language": "text/cql",
                 "expression": "BloodGasStudyO2Sat"
               }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "2.3",
+              "answerBoolean": true
             }
           ],
           "linkId": "2.5",
@@ -194,6 +208,13 @@
               }
             }
           ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "2.3",
+              "answerBoolean": true
+            }
+          ],
           "linkId": "2.6",
           "text": "PaO2 (ABG)",
           "type": "quantity",
@@ -207,6 +228,13 @@
                 "language": "text/cql",
                 "expression": "BloodGasStudyHematocrit"
               }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "2.3",
+              "answerBoolean": true
             }
           ],
           "linkId": "2.7",
@@ -276,6 +304,13 @@
               }
             }
           ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "3.01",
+              "answerBoolean": true
+            }
+          ],
           "linkId": "3.1",
           "type": "choice",
           "text": "Specify condition",
@@ -325,6 +360,16 @@
               }
             }
           ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "3.1",
+              "answerCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
+            }
+          ],
           "linkId": "3.2",
           "text": "Specify",
           "type": "string",
@@ -371,6 +416,13 @@
               }
             }
           ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "3.5",
+              "answerBoolean": true
+            }
+          ],
           "linkId": "3.6",
           "text": "Was exercise testing performed in-person by a treating practitioner or other medical professional qualified to conduct testing ? ",
           "type": "boolean",
@@ -399,6 +451,13 @@
                 "language": "text/cql",
                 "expression": "Nocturnalanswer"
               }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "3.07",
+              "answerBoolean": true
             }
           ],
           "linkId": "3.7",
@@ -449,6 +508,16 @@
               }
             }
           ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "3.7",
+              "answerCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
+            }
+          ],
           "linkId": "3.711",
           "text": "Specify other",
           "type": "string",
@@ -478,6 +547,13 @@
               }
             }
           ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "3.8",
+              "answerBoolean":true
+            }
+          ],
           "linkId": "3.9",
           "type":"boolean",
           "text": "Was nocturnal testing performed under the direction of medicare enrolled IDTF ?"
@@ -493,12 +569,26 @@
               }
             }
           ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "3.8",
+              "answerBoolean":true
+            }
+          ],
           "linkId": "3.10",
           "text": "Is the patient's OSA being sufficiently treated?",
           "type": "boolean",
           "required": true
         },
         {
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "3.8",
+              "answerBoolean":true
+            }
+          ],
           "linkId": "3.11",
           "text": "Was the titration study performed after determining optimal settings of the PAP device ?",
           "type": "boolean",
@@ -537,6 +627,13 @@
               }
             }
           ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "4.1",
+              "answerBoolean": true
+            }
+          ],
           "linkId": "4.2",
           "text": "Arterial oxygen saturation results at rest",
           "type": "quantity",
@@ -550,6 +647,13 @@
                 "language": "text/cql",
                 "expression": "ArterialPO2"
               }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "4.1",
+              "answerBoolean": true
             }
           ],
           "linkId": "4.3",
@@ -567,6 +671,13 @@
               }
             }
           ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "3.5",
+              "answerBoolean": true
+            }
+          ],
           "linkId": "4,4",
           "text": "Oxygen saturation results during exercise without oxygen",
           "type": "quantity",
@@ -580,6 +691,13 @@
                 "language": "text/cql",
                 "expression": "ArterialPO2Exercise"
               }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "3.5",
+              "answerBoolean": true
             }
           ],
           "linkId": "4.5",
@@ -597,6 +715,13 @@
               }
             }
           ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "3.5",
+              "answerBoolean": true
+            }
+          ],
           "linkId": "4.6",
           "text": "Oxygen saturation results during exercise with oxygen",
           "type": "quantity",
@@ -612,6 +737,13 @@
               }
             }
           ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "3.5",
+              "answerBoolean": true
+            }
+          ],
           "linkId": "4.7",
           "text": "Oxygen PO2 results during exercise with oxygen",
           "type": "quantity",
@@ -625,6 +757,13 @@
                 "language": "text/cql",
                 "expression": "NocturnalRestlessnessStudy"
               }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "3.8",
+              "answerBoolean":true
             }
           ],
           "linkId": "4.8",
@@ -657,6 +796,13 @@
               }
             }
           ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "3.8",
+              "answerBoolean":true
+            }
+          ],
           "linkId": "4.9",
           "text": "Nocturnal oxygen saturation",
           "type": "quantity",
@@ -670,6 +816,13 @@
                 "language": "text/cql",
                 "expression": "NocturnalOximetryPO2"
               }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "3.8",
+              "answerBoolean":true
             }
           ],
           "linkId": "4.10",
@@ -687,7 +840,13 @@
               }
             }
           ],
-          "linkId": "4.11",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "3.8",
+              "answerBoolean":true
+            }
+          ],"linkId": "4.11",
           "text": "Nocturnal oxygen saturation with oxygen",
           "type": "quantity",
           "required": false
@@ -702,7 +861,13 @@
               }
             }
           ],
-          "linkId": "4.12",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "3.8",
+              "answerBoolean":true
+            }
+          ],"linkId": "4.12",
           "text": "Nocturnal oxygen PO2 with oxygen",
           "type": "quantity",
           "required": false
@@ -718,6 +883,13 @@
               }
             }
           ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "3.8",
+              "answerBoolean":true
+            }
+          ],
           "linkId": "4.14",
           "text": "Peak Flow Rate",
           "type": "quantity",
@@ -731,6 +903,13 @@
                 "language": "text/cql",
                 "expression": "InhaledAverageFlowRate"
               }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "3.8",
+              "answerBoolean":true
             }
           ],
           "linkId": "4.15",
@@ -869,6 +1048,16 @@
               }
             }
           ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "5.1",
+              "answerCoding": {
+                "code": "Others",
+                "display": "Others"
+              }
+            }
+          ],
           "linkId": "5.2",
           "text": "Specify the ICD-10 code",
           "type": "string",
@@ -884,6 +1073,16 @@
               }
             }
           ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "5.1",
+              "answerCoding": {
+                "code": "Others",
+                "display": "Others"
+              }
+            }
+          ],
           "linkId": "5.3",
           "text": "Specify the ICD-10 code description",
           "type": "string",
@@ -896,6 +1095,16 @@
               "valueExpression": {
                 "language": "text/cql",
                 "expression": "SecondaryToCORPulmonale"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "5.1",
+              "answerCoding": {
+                "code": "Pulmonary hypertension",
+                "display": "Pulmonary hypertension"
               }
             }
           ],
@@ -947,6 +1156,16 @@
               }
             }
           ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "5.1",
+              "answerCoding": {
+                "code": "Erythrocytosis",
+                "display": "Erythrocytosis"
+              }
+            }
+          ],
           "linkId": "5.7",
           "text": "Hematocrit/hemoglobin result (Hct/Hgb)",
           "type": "quantity",
@@ -975,6 +1194,13 @@
                 "language": "text/cql",
                 "expression": "normoxemicconditions"
               }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "5.8",
+              "answerBoolean": true
             }
           ],
           "linkId": "5.811",
@@ -1037,6 +1263,16 @@
               "valueExpression": {
                 "language": "text/cql",
                 "expression": "sufferother"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "5.9",
+              "answerCoding": {
+                "code": "Other",
+                "display": "Other"
               }
             }
           ],
@@ -1158,6 +1394,16 @@
               }
             }
           ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "6.1",
+              "answerCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
+            }
+          ],
           "linkId": "6.111",
           "text": "Specify other",
           "type": "string",
@@ -1170,6 +1416,16 @@
               "valueExpression": {
                 "language": "text/cql",
                 "expression": "GeneralSymptoms"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "6.1",
+              "answerCoding": {
+                "code": "General",
+                "display": "General"
               }
             }
           ],
@@ -1245,6 +1501,16 @@
               }
             }
           ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "6.2",
+              "answerCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
+            }
+          ],
           "linkId": "6.21",
           "text": "Specify other",
           "type": "string",
@@ -1257,6 +1523,16 @@
               "valueExpression": {
                 "language": "text/cql",
                 "expression": "NeckConditions"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "6.1",
+              "answerCoding": {
+                "code": "HEENT",
+                "display": "HEENT"
               }
             }
           ],
@@ -1308,6 +1584,16 @@
               }
             }
           ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "6.3",
+              "answerCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
+            }
+          ],
           "linkId": "6.31",
           "text": "Specify other",
           "type": "string",
@@ -1320,6 +1606,16 @@
               "valueExpression": {
                 "language": "text/cql",
                 "expression": "PulmonaryConditions"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "6.1",
+              "answerCoding": {
+                "code": "Pulmonary System",
+                "display": "Pulmonary System"
               }
             }
           ],
@@ -1389,6 +1685,16 @@
               }
             }
           ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "6.4",
+              "answerCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
+            }
+          ],
           "linkId": "6.41",
           "text": "Specify other",
           "type": "string",
@@ -1401,6 +1707,16 @@
               "valueExpression": {
                 "language": "text/cql",
                 "expression": "CardiacConditions"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "6.1",
+              "answerCoding": {
+                "code": "Cardiovascular System",
+                "display": "Cardiovascular System"
               }
             }
           ],
@@ -1500,6 +1816,16 @@
               }
             }
           ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "6.5",
+              "answerCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
+            }
+          ],
           "linkId": "6.51",
           "text": "Specify other",
           "type": "string",
@@ -1512,6 +1838,16 @@
               "valueExpression": {
                 "language": "text/cql",
                 "expression": "GastrointestinalConditions"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "6.1",
+              "answerCoding": {
+                "code": "Gastrointestinal System",
+                "display": "Gastrointestinal System"
               }
             }
           ],
@@ -1623,6 +1959,16 @@
               }
             }
           ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "6.7",
+              "answerCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
+            }
+          ],
           "linkId": "6.71",
           "text": "Specify other",
           "type": "string",
@@ -1635,6 +1981,16 @@
               "valueExpression": {
                 "language": "text/cql",
                 "expression": "MusculoskeletalConditions"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "6.1",
+              "answerCoding": {
+                "code": "Musculoskeletal System",
+                "display": "Musculoskeletal System"
               }
             }
           ],
@@ -1746,6 +2102,16 @@
               }
             }
           ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "6.8",
+              "answerCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
+            }
+          ],
           "linkId": "6.81",
           "text": "Specify other",
           "type": "string",
@@ -1758,6 +2124,16 @@
               "valueExpression": {
                 "language": "text/cql",
                 "expression": "NeurologicalConditions"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "6.1",
+              "answerCoding": {
+                "code": "Neurological System",
+                "display": "Neurological System"
               }
             }
           ],
@@ -1893,6 +2269,16 @@
               }
             }
           ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "6.9",
+              "answerCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
+            }
+          ],
           "linkId": "6.91",
           "text": "Specify other",
           "type": "string",
@@ -1905,6 +2291,16 @@
               "valueExpression": {
                 "language": "text/cql",
                 "expression": "PsychiatricConditions"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "6.1",
+              "answerCoding": {
+                "code": "Psychiatric Conditions",
+                "display": "Psychiatric Conditions"
               }
             }
           ],
@@ -1974,6 +2370,16 @@
               }
             }
           ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "6.10",
+              "answerCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
+            }
+          ],
           "linkId": "6.101",
           "text": "Specify other",
           "type": "string",
@@ -1986,6 +2392,16 @@
               "valueExpression": {
                 "language": "text/cql",
                 "expression": "HematologyConditions"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "6.1",
+              "answerCoding": {
+                "code": "Hematology",
+                "display": "Hematology"
               }
             }
           ],
@@ -2037,6 +2453,16 @@
               }
             }
           ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "6.11",
+              "answerCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
+            }
+          ],
           "linkId": "6.111",
           "text": "Specify other",
           "type": "string",
@@ -2049,6 +2475,16 @@
               "valueExpression": {
                 "language": "text/cql",
                 "expression": "EndocrineConditions"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "6.1",
+              "answerCoding": {
+                "code": "Endocrine System",
+                "display": "Endocrine System"
               }
             }
           ],
@@ -2106,6 +2542,16 @@
               }
             }
           ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "6.12",
+              "answerCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
+            }
+          ],
           "linkId": "6.121",
           "text": "Specify other",
           "type": "string",
@@ -2118,6 +2564,16 @@
               "valueExpression": {
                 "language": "text/cql",
                 "expression": "IntegumentalConditions"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "6.1",
+              "answerCoding": {
+                "code": "Integumental System",
+                "display": "Integumental System"
               }
             }
           ],
@@ -2175,6 +2631,16 @@
               }
             }
           ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "6.13",
+              "answerCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
+            }
+          ],
           "linkId": "6.131",
           "text": "Specify other",
           "type": "string",
@@ -2187,6 +2653,16 @@
               "valueExpression": {
                 "language": "text/cql",
                 "expression": "ImmunologicalConditions"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "6.1",
+              "answerCoding": {
+                "code": "Immunology",
+                "display": "Immunology"
               }
             }
           ],
@@ -2241,6 +2717,16 @@
               "valueExpression": {
                 "language": "text/cql",
                 "expression": "Otherimmuno"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "6.14",
+              "answerCoding": {
+                "code": "Other",
+                "display": "Other"
               }
             }
           ],
@@ -2470,6 +2956,16 @@
           "text": "Reason for Change in Status",
           "type": "choice",
           "repeats": true,
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "10.1",
+              "answerCoding": {
+                "code": "Change in status",
+                "display": "Change in status"
+              }
+            }
+          ],
           "required": true,
           "answerOption": [
             {
@@ -2498,6 +2994,16 @@
           "type": "choice",
           "repeats": true,
           "required": true,
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "10.1",
+              "answerCoding": {
+                "code": "Revision or change in equipment",
+                "display": "Revision or change in equipment"
+              }
+            }
+          ],
           "answerOption": [
             {
               "valueCoding": {
@@ -2525,6 +3031,16 @@
           "type": "choice",
           "repeats": true,
           "required": true,
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "10.1",
+              "answerCoding": {
+                "code": "Replacement",
+                "display": "Replacement"
+              }
+            }
+          ],
           "answerOption": [
             {
               "valueCoding": {
