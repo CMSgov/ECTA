@@ -1106,6 +1106,16 @@
                 "code": "Pulmonary hypertension",
                 "display": "Pulmonary hypertension"
               }
+              
+            },
+            {
+              "operator": "=",
+              "question": "5.1",
+              "answerCoding": {
+                "code": "Cor Pulmonale",
+                "display": "Cor Pulmonale"
+              }
+              
             }
           ],
           "linkId": "5.5",
@@ -1255,31 +1265,6 @@
             }
           ]
           
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "sufferother"
-              }
-            }
-          ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "5.9",
-              "answerCoding": {
-                "code": "Other",
-                "display": "Other"
-              }
-            }
-          ],
-          "linkId": "5.911",
-          "text": "Specify other",
-          "type": "string",
-          "required": true
         }
       ]
     },
