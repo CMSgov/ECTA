@@ -778,10 +778,8 @@ define OSA:
   
 define PresenceOfOSA:
   if ("OSA" = true)
-  then 'Yes'
-  else if ("OSA" is null)
-  then ''
-  else 'No'
+  then true
+  else false
 
 define PresenceOfPAP:
     exists ( [Procedure] P
