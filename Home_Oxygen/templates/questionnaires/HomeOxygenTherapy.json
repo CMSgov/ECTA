@@ -613,7 +613,7 @@
             }
           ],
           "linkId": "4.1",
-          "text": "Was Pulse Oximetry performed",
+          "text": "Was blood gas study performed",
           "type": "boolean",
           "required": true
         },
@@ -635,9 +635,9 @@
             }
           ],
           "linkId": "4.2",
-          "text": "Arterial oxygen saturation results at rest",
+          "text": "Oxygen saturation results at rest",
           "type": "quantity",
-          "required": true
+          "required": false
         },
         {
           "extension": [
@@ -659,7 +659,7 @@
           "linkId": "4.3",
           "text": "Arterial PO2 results at rest",
           "type": "quantity",
-          "required": true
+          "required": false
         },
         {
           "extension": [
@@ -678,7 +678,7 @@
               "answerBoolean": true
             }
           ],
-          "linkId": "4,4",
+          "linkId": "4.4",
           "text": "Oxygen saturation results during exercise without oxygen",
           "type": "quantity",
           "required": false
@@ -804,7 +804,7 @@
             }
           ],
           "linkId": "4.9",
-          "text": "Nocturnal oxygen saturation",
+          "text": "Oxygen saturation during sleep",
           "type": "quantity",
           "required": false
         },
@@ -826,7 +826,7 @@
             }
           ],
           "linkId": "4.10",
-          "text": "Nocturnal PO2",
+          "text": "PO2 during sleep",
           "type": "quantity",
           "required": false
         },
@@ -847,7 +847,7 @@
               "answerBoolean":true
             }
           ],"linkId": "4.11",
-          "text": "Nocturnal oxygen saturation with oxygen",
+          "text": "Oxygen saturation during sleep with oxygen",
           "type": "quantity",
           "required": false
         },
@@ -868,54 +868,9 @@
               "answerBoolean":true
             }
           ],"linkId": "4.12",
-          "text": "Nocturnal oxygen PO2 with oxygen",
+          "text": "Oxygen PO2 with oxygen during sleep",
           "type": "quantity",
           "required": false
-        },
-      
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "InhaledFlowRate"
-              }
-            }
-          ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "3.8",
-              "answerBoolean":true
-            }
-          ],
-          "linkId": "4.14",
-          "text": "Peak Flow Rate",
-          "type": "quantity",
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "InhaledAverageFlowRate"
-              }
-            }
-          ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "3.8",
-              "answerBoolean":true
-            }
-          ],
-          "linkId": "4.15",
-          "text": "Average Flow Rate",
-          "type": "quantity",
-          "required": true 
         }
       ]
     },
@@ -2756,10 +2711,138 @@
           "required": true
         },
         {
-          "linkId": "9.2",
-          "text": "Prescribed Flow Rate",
+          "linkId": "maximum-flow-rate",
+          "text": "Maximum Flow Rate",
           "type": "quantity",
           "required": true 
+        },
+        {
+          "linkId": "minimum-flow-rate",
+          "text": "Minimum Flow Rate",
+          "type": "quantity",
+          "required": true 
+        },
+        {
+          "linkId": "9.2",
+          "text": "Are flow rates different between any of the following?",
+          "type": "group",
+          "enableWhen": [
+            {
+              "operator": ">",
+              "question": "maximum-flow-rate",
+              "answerQuantity": {
+                "value": "4",
+                "unit": "lph"
+              }
+            },
+            {
+              "operator": "<",
+              "question": "minimum-flow-rate",
+              "answerQuantity": {
+                "value":"1",
+                "unit":"lph"
+              }
+            }
+          ],
+          "enableBehavior":"any",
+          "item": [
+            {
+              "linkId": "9.2.1",
+              "text": "Stationary vs. Portable",
+              "type": "boolean",
+              "required": true
+            },
+            {
+              "linkId": "9.2.1.1",
+              "text": "Stationary Flow Rate",
+              "type": "quantity",
+              "required": true,
+              "enableWhen": [
+                {
+                  "operator": "=",
+                  "question": "9.2.1",
+                  "answerBoolean": true
+                }
+              ]
+            },
+            {
+              "linkId": "9.2.1.2",
+              "text": "Portable Flow Rate",
+              "type": "quantity",
+              "required": true,
+              "enableWhen": [
+                {
+                  "operator": "=",
+                  "question": "9.2.1",
+                  "answerBoolean": true
+                }
+              ]
+            },
+            {
+              "linkId": "9.2.2",
+              "text": "Rest vs. Exercise",
+              "type": "boolean",
+              "required": true
+            },
+            {
+              "linkId": "9.2.2.1",
+              "text": "Rest Flow Rate",
+              "type": "quantity",
+              "required": true,
+              "enableWhen": [
+                {
+                  "operator": "=",
+                  "question": "9.2.2",
+                  "answerBoolean": true
+                }
+              ]
+            },
+            {
+              "linkId": "9.2.2.2",
+              "text": "Exercise Flow Rate",
+              "type": "quantity",
+              "required": true,
+              "enableWhen": [
+                {
+                  "operator": "=",
+                  "question": "9.2.2",
+                  "answerBoolean": true
+                }
+              ]
+            },
+            {
+              "linkId": "9.2.3",
+              "text": "Daytime vs. Nighttime",
+              "type": "boolean",
+              "required": true
+            },
+            {
+              "linkId": "9.2.3.1",
+              "text": "Daytime Flow Rate",
+              "type": "quantity",
+              "required": true,
+              "enableWhen": [
+                {
+                  "operator": "=",
+                  "question": "9.2.3",
+                  "answerBoolean": true
+                }
+              ]
+            },
+            {
+              "linkId": "9.2.3.2",
+              "text": "Nighttime Flow Rate",
+              "type": "quantity",
+              "required": true,
+              "enableWhen": [
+                {
+                  "operator": "=",
+                  "question": "9.2.3",
+                  "answerBoolean": true
+                }
+              ]
+            }
+          ]
         },
         {
           "extension": [
@@ -2796,21 +2879,6 @@
               }
             }
           ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "TargetSaturation"
-              }
-            }
-          ],
-          "linkId": "9.4",
-          "text": "Target Oxygen Saturation",
-          "type": "quantity",
-          "required": true
         },
         {
           "extension": [
@@ -3035,14 +3103,14 @@
             },
             {
               "valueCoding": {
-                "code": "end of lifetime",
-                "display": "end of lifetime"
+                "code": "end of reasonable useful lifetime (5 years)",
+                "display": "end of reasonable useful lifetime (5 years)"
               }
             },
             {
               "valueCoding": {
-                "code": "repair exceeds 60% of cost",
-                "display": "repair exceeds 60% of cost"
+                "code": "irreparable damage",
+                "display": "irreparable damage"
               }
             }
           ]
