@@ -2712,14 +2712,14 @@
         },
         {
           "linkId": "maximum-flow-rate",
-          "text": "Maximum Flow Rate",
-          "type": "quantity",
+          "text": "Maximum Flow Rate (LPH)",
+          "type": "decimal",
           "required": true 
         },
         {
           "linkId": "minimum-flow-rate",
-          "text": "Minimum Flow Rate",
-          "type": "quantity",
+          "text": "Minimum Flow Rate (LPH)",
+          "type": "decimal",
           "required": true 
         },
         {
@@ -2730,18 +2730,12 @@
             {
               "operator": ">",
               "question": "maximum-flow-rate",
-              "answerQuantity": {
-                "value": "4",
-                "unit": "lph"
-              }
+              "answerDecimal": 4.0
             },
             {
               "operator": "<",
               "question": "minimum-flow-rate",
-              "answerQuantity": {
-                "value":"1",
-                "unit":"lph"
-              }
+              "answerDecimal": 1.0
             }
           ],
           "enableBehavior":"any",
