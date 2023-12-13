@@ -618,6 +618,12 @@
           "required": true
         },
         {
+          "linkId": "4.0.1",
+          "text": "Was the qualifying blood gas study performed on 4LPM or higher",
+          "type": "boolean",
+          "required": true
+        },
+        {
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
@@ -745,7 +751,7 @@
             }
           ],
           "linkId": "4.7",
-          "text": "Oxygen PO2 results during exercise with oxygen",
+          "text": "Arterial PO2 results during exercise with oxygen",
           "type": "quantity",
           "required": false
         },
@@ -826,7 +832,7 @@
             }
           ],
           "linkId": "4.10",
-          "text": "PO2 during sleep",
+          "text": "Arterial PO2 during sleep",
           "type": "quantity",
           "required": false
         },
@@ -868,7 +874,7 @@
               "answerBoolean":true
             }
           ],"linkId": "4.12",
-          "text": "Oxygen PO2 with oxygen during sleep",
+          "text": "Arterial PO2 with oxygen during sleep",
           "type": "quantity",
           "required": false
         }
@@ -2712,13 +2718,13 @@
         },
         {
           "linkId": "maximum-flow-rate",
-          "text": "Maximum Flow Rate (LPH)",
+          "text": "Maximum Flow Rate (LPM)",
           "type": "decimal",
           "required": true 
         },
         {
           "linkId": "minimum-flow-rate",
-          "text": "Minimum Flow Rate (LPH)",
+          "text": "Minimum Flow Rate (LPM)",
           "type": "decimal",
           "required": true 
         },
