@@ -621,7 +621,14 @@
           "linkId": "4.0.1",
           "text": "Was the qualifying blood gas study performed on 4LPM or higher",
           "type": "boolean",
-          "required": true
+          "required": true,
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "4.1",
+              "answerBoolean": true
+            }
+          ]
         },
         {
           "extension": [
