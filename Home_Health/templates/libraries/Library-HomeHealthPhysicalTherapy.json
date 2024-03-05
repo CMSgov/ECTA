@@ -1,0 +1,86 @@
+{
+    "resourceType": "Library",
+    "version": "1.0.0",
+    "title": "HomeHealthService",
+    "name": "HomeHealthService",
+    "status": "draft",
+    "type": {
+      "coding": [
+        {
+          "code": "logic-library"
+        }
+      ]
+    },
+    "relatedArtifact": [
+      {
+        "type": "depends-on",
+        "resource": "Library/FHIRHelpers"
+      }
+    ],
+    "dataRequirement": [
+        {
+          "type": "Condition",
+          "codeFilter": [
+            {
+              "path": "code",
+              "valueSet": "2.16.840.1.113883.17.4077.3.2006"
+            }
+            ]
+        },
+        {
+          "type": "Condition",
+          "codeFilter": [
+            {
+              "path": "code",
+              "valueSet": "2.16.840.1.113883.3.464.1003.199.12.1055"
+            }
+            ]
+        },
+        {
+          "type": "Procedure",
+          "codeFilter": [
+            {
+              "path": "status",
+              "searchParam": "completed"
+            }
+            ]
+        },
+        {
+          "type": "MedicationAdministration",
+          "codeFilter": [
+            {
+              "path": "status",
+              "searchParam": "in-progress"
+            }
+            ]
+        },
+        {
+          "type": "AllergyIntolerance",
+          "codeFilter": [
+            {
+              "path": "clinical-status",
+              "searchParam": "active"
+            }
+            ]
+        },
+        {
+          "type": "CarePlan",
+          "codeFilter": [
+            {
+              "path": "status",
+              "searchParam": "active"
+            }
+            ]
+        },
+        {
+          "type": "CarePlan",
+          "codeFilter": [
+            {
+              "path": "intent",
+              "searchParam": "order"
+            }
+            ]
+        }
+    ]
+  }
+  

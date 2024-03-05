@@ -19,10 +19,6 @@
 		{
 			"url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
 			"valueCanonical": "<FHIR-server>/Library/library-homehealth-HomeHealthPhysicalTherapy"
-		},
-		{
-			"url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-questionnaireAdaptive",
-			"valueBoolean": true
 		}
 	],
 	"url": "<FHIR-server>/Questionnaire/questionnaire-homehealth-HomeHealthPhysicalTherapy",
