@@ -90,6 +90,52 @@
 					]
 				},
 				{
+					"linkId": "1.2.1",
+					"text": "Why is a Physical Therapist Required?",
+					"type": "choice",
+					"required": true,
+					"enableWhen": [
+						{
+							"operator": "=",
+							"question": "1.2",
+							"answerCoding": {
+								"code": "Maintenance",
+								"display": "Maintenance"
+							}
+						}
+					],
+					"answerOption": [
+						{
+							"valueCoding": {
+								"code": "Physical therapist's skills are needed to establish or design a maintenance program",
+								"display": "Physical therapist's skills are needed to establish or design a maintenance program"
+							}
+						},
+						{
+							"valueCoding": {
+								"code": "Other",
+								"display": "Other"
+							}
+						}
+					]
+				},
+				{
+					"linkId": "1.2.1.1",
+					"text": "Specify Other",
+					"type": "string",
+					"required": true,
+					"enableWhen": [
+						{
+							"operator": "=",
+							"question": "1.2.1",
+							"answerCoding": {
+								"code": "Other",
+								"display": "Other"
+							}
+						}
+					]
+				},
+				{
 					"linkId": "1.3",
 					"text": "PT/HHA Order date",
 					"type": "date",
@@ -115,7 +161,7 @@
 				},
 				{
 					"linkId": "1.5.2",
-					"text": "2. Functional limitations are present and documented that are interfering with the patients ability  and capacity to perform daily tasks.",
+					"text": "2. Functional limitations are present and documented that are interfering with the patients ability and capacity to perform daily tasks.",
 					"type": "boolean",
 					"required": true
 				},
@@ -127,6 +173,78 @@
 				},
 				{
 					"linkId": "1.6",
+					"type": "boolean",
+					"text": "Prior Physical Therapy Treatments?",
+					"required": true
+				},
+				{
+					"linkId": "1.6.1",
+					"text": "Inpatient Physical Therapy Encounter/Reason for Encounter",
+					"type": "group",
+					"required": false,
+					"enableWhen": [
+						{
+							"operator": "=",
+							"question": "1.6",
+							"answerBoolean": true
+						}
+					],
+					"item": [
+						{
+							"linkId": "1.6.1.1",
+							"text": "Date of encounters",
+							"type": "date",
+							"required": false
+						},
+						{
+							"linkId": "1.6.1.2",
+							"text": "PT Goals",
+							"type": "text",
+							"required": false
+						},
+						{
+							"linkId": "1.6.1.3",
+							"text": "Status of PT Goals",
+							"type": "text",
+							"required": false
+						}
+					]
+				},
+				{
+					"linkId": "1.6.2",
+					"text": "Outpatient Physical Therapy Encounter/Reason for Encounter",
+					"type": "group",
+					"required": false,
+					"enableWhen": [
+						{
+							"operator": "=",
+							"question": "1.6",
+							"answerBoolean": true
+						}
+					],
+					"item": [
+						{
+							"linkId": "1.6.2.1",
+							"text": "Date of encounters",
+							"type": "date",
+							"required": false
+						},
+						{
+							"linkId": "1.6.2.2",
+							"text": "PT Goals",
+							"type": "text",
+							"required": false
+						},
+						{
+							"linkId": "1.6.2.3",
+							"text": "Status of PT Goals",
+							"type": "text",
+							"required": false
+						}
+					]
+				},
+				{
+					"linkId": "1.7",
 					"text": "Order Provider NPI",
 					"type": "string",
 					"required": true
@@ -4821,48 +4939,6 @@
 					]
 				},
 				{
-					"linkId": "2.23",
-					"text": "Metatarsophalangeal joint of the foot: Enter the range of motion degrees in +/- number.",
-					"type": "group",
-					"required": false,
-					"enableWhen": [
-						{
-							"operator": "=",
-							"question": "2.13",
-							"answerCoding": {
-								"code": "Metatarsophalangeal joint of the foot",
-								"display": "Metatarsophalangeal joint of the foot"
-							}
-						}
-					],
-					"item": [
-						{
-							"linkId": "2.23.1",
-							"text": "Metatarsophalangeal - left flexion",
-							"type": "decimal",
-							"required": false
-						},
-						{
-							"linkId": "2.23.2",
-							"text": "Metatarsophalangeal - left extension",
-							"type": "decimal",
-							"required": false
-						},
-						{
-							"linkId": "2.23.3",
-							"text": "Metatarsophalangeal - right flexion",
-							"type": "decimal",
-							"required": false
-						},
-						{
-							"linkId": "2.23.4",
-							"text": "Metatarsophalangeal - right extension",
-							"type": "decimal",
-							"required": false
-						}
-					]
-				},
-				{
 					"linkId": "2.24",
 					"text": "Thumb/Finger Joints Left Metacarpophalangeal: Enter the range of motion degrees in +/- number.",
 					"type": "group",
@@ -5514,6 +5590,12 @@
 							"answerBoolean": true
 						}
 					]
+				},
+				{
+					"linkId": "2.43",
+					"text": "Clinical Findings Summary:",
+					"type": "text",
+					"required": false
 				}
 			]
 		},
@@ -10322,7 +10404,7 @@
 				},
 				{
 					"linkId": "5.32",
-					"text": "Does this patietn have a Stasis Ulcer?",
+					"text": "Does this patient have a Stasis Ulcer?",
 					"type": "choice",
 					"required": false,
 					"answerOption": [
