@@ -244,6 +244,9 @@ context Patient
 define "DeviceRequestResource":
   "DeviceRequest"
 
+define "SubmissionDate": 
+  ToDate(Today())
+
 define "CertificationDate":
   ToDate(start of "EncounterResource".period)
 
@@ -1660,5 +1663,5 @@ define DeviceRequestedIsStationary:
 define function "Normalize Interval"(onset Choice<FHIR.dateTime, FHIR.Age, FHIR.Period, FHIR.Range, FHIR.string>):
   if onset is FHIR.dateTime then Interval[FHIRHelpers.ToDateTime ( onset as FHIR.dateTime ), FHIRHelpers.ToDateTime ( onset as FHIR.dateTime )]
     else if onset is FHIR.Period then FHIRHelpers.ToInterval ( onset as FHIR.Period ) 
-    else if onset is FHIR.Age then Interval[FHIRHelpers.ToDate ( Patient.birthDate ) + FHIRHelpers.ToQuantity ( onset as FHIR.Age ), FHIRHelpers.ToDate ( Patient.birthDate ) + FHIRHelpers.ToQuantity ( onset as FHIR.Age ) + 1 year ) 
+    else if onset is FHIR.Age then Interval[FHIRHelpers.ToDate ( Patient.birthDate ) + FHIRHelpers.ToQuantity ( onset as FHIR.Age ), FHIRHelpers.ToDate ( Patient.birthDate ) + FHIRHelpers.ToQuantity ( onset as FHIR.Age ) + 1 year ] 
     else null

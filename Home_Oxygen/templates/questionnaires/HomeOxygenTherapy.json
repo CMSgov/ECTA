@@ -177,6 +177,19 @@
           "required": false
         },
         {
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "2.3",
+              "answerBoolean": true
+            }
+          ],
+          "linkId": "2.4.1",
+          "text": "Testing location of Blood Gas Study test?",
+          "type": "text",
+          "required": false
+        },
+        {
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
@@ -374,8 +387,7 @@
           "text": "Specify",
           "type": "string",
           "required": true
-        },
-        
+        },        
         {
           "extension": [
             {
@@ -596,7 +608,6 @@
         }
       ]
     },
-   
     {
       "linkId": "4",
       "text": "Relevant Patient Observations",
@@ -3121,6 +3132,21 @@
               }
             }
           ]
+        }
+      ]
+    },
+    {
+      "linkId": "11",
+      "text": "Questionnaire Signed date",
+      "type": "date",
+      "required": false,
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+          "valueExpression": {
+            "language": "text/cql",
+            "expression": "SubmissionDate"
+          }
         }
       ]
     }
