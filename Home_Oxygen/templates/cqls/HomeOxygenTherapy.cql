@@ -364,14 +364,7 @@ define BloodGasStudy:
     )
 
 define "ExistsBloodGasStudy":
-  if exists([Procedure] P
-      where P.status.value = 'completed'
-        and("ToCode"(First(P.code.coding)) = "Blood gas analysis (procedure)"
-            or "ToCode"(First(P.code.coding)) = "Blood gas measurement (procedure)")
-        and((("Normalize Interval"(P.performed) starts before (end of "EncounterResource".period + 2days))
-            and "ToCode"("EncounterResource".class) = "inpatient encounter")
-        or("Normalize Interval"(P.performed) starts after "Normalize Interval"("PrimaryDiagnosis".onset)))
-  )
+  if "BloodGasStudy" is not null
   then true
   else if exists([Procedure] P
       where P.status.value = 'completed'
@@ -387,36 +380,45 @@ define "ExistsBloodGasStudy":
 define BloodGasStudyDate:
   start of "Normalize Interval"("BloodGasStudy".performed)
 
-define BloodGasStudyO2Sat:
-  ( First([Observation] O
+define BloodGasStudyO2SatResource:
+  First([Observation] O
       where "ToCode"(First(O.code.coding)) = "Oxygen saturation in Arterial blood"
       and start of "Normalize Interval"(O.effective) same day as "BloodGasStudyDate"
-  ) ) O
-    return FHIRHelpers.ToQuantity ( O.value )
+  )
 
-define BloodGasStudyHematocrit:
-  ( First([Observation] O
+define BloodGasStudyO2Sat:
+  FHIRHelpers.ToQuantity ( "BloodGasStudyO2SatResource".value )
+
+define BloodGasStudyHematocritResource:
+  First([Observation] O
       where "ToCode"(First(O.code.coding)) = "Hematocrit [Volume Fraction] of Arterial blood"
       and start of "Normalize Interval"(O.effective) same day as "BloodGasStudyDate"
-  ) ) O
-    return FHIRHelpers.ToQuantity ( O.value )
+  )
 
-define BloodGasStudyPaO2:
-  ( First([Observation] O
+define BloodGasStudyHematocrit:
+  FHIRHelpers.ToQuantity ( "BloodGasStudyHematocritResource".value )
+
+define BloodGasStudyPaO2Resource:
+  First([Observation] O
       where "ToCode"(First(O.code.coding)) = "Oxygen [Partial pressure] in Arterial blood"
       and start of "Normalize Interval"(O.effective) same day as "BloodGasStudyDate"
-  ) ) O
-    return FHIRHelpers.ToQuantity ( O.value )
+  )
+
+define BloodGasStudyPaO2:
+  FHIRHelpers.ToQuantity ( "BloodGasStudyPaO2Resource".value )
 
 define "Hematocrit_lab_test_Codes":
   { '20570-8', '31100-1', '32354-3', '41654-5', '41655-2', '4544-3', '4545-0', '71829-6', '71830-4', '71832-0', '71833-8' }
 
-define HypoxemiaSymptoms:
-  if exists ( [Condition] P
+define HypoxemiaSymptomsResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Hypoxemia")
           and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed')
+
+define HypoxemiaSymptoms:
+  if "HypoxemiaSymptomsResource" is not null
   then true
   else if exists([Condition] P
       where exists ( P.code.coding P
@@ -440,14 +442,8 @@ define PulseOximetry:
         or("ToCode"("EncounterResource".class) = "Outpatient"))
       )
   
-
 define ExistsPulseOximetry:
-  if exists([Procedure] P
-      where "ToCode"(First(P.code.coding)) = "Pulse oximetry (procedure)"
-      and P.status.value = 'completed'
-      and ((("Normalize Interval"(P.performed) starts before (end of "EncounterResource".period + 2days))
-            and "ToCode"("EncounterResource".class) = "inpatient encounter")
-        or("ToCode"("EncounterResource".class) = "Outpatient")))
+  if "PulseOximetry" is not null
     then true
   else if exists([Procedure] P
       where "ToCode"(First(P.code.coding)) = "Pulse oximetry (procedure)"
@@ -457,98 +453,121 @@ define ExistsPulseOximetry:
     then false
     else null
 
-define ArterialOxygenSaturation:
-  ( First([Observation] P
+define ArterialOxygenSaturationResource:
+  First([Observation] P
       where ("ToCode"(First(P.code.coding)) = "Oxygen saturation in Arterial blood by Pulse oximetry --on room air"
           or "ToCode"(First(P.code.coding)) = "Oxygen saturation in Arterial blood")
       and (start of "Normalize Interval"(P.effective) same day as "TestingDate")
-  )) O
-    return FHIRHelpers.ToQuantity ( O.value )
+  )
 
-define ArterialPO2:
-  ( First([Observation] P
+define ArterialOxygenSaturation:
+  FHIRHelpers.ToQuantity ( "ArterialOxygenSaturationResource".value )
+
+define ArterialPO2Resource:
+  First([Observation] P
       where "ToCode"(First(P.code.coding)) = "Oxygen [Partial pressure] in Arterial blood"
           and (start of "Normalize Interval"(P.effective) same day as "TestingDate")
-  ) ) O
-    return FHIRHelpers.ToQuantity ( O.value )
+  )
+
+define ArterialPO2:
+  FHIRHelpers.ToQuantity ( "ArterialPO2Resource".value )
+
+define ArterialOxygenSaturationExerciseResource:
+  First([Observation] P
+      where "ToCode"(First(P.code.coding)) = "Oxygen saturation in Arterial blood by Pulse oximetry --W exercise"
+      and (start of "Normalize Interval"(P.effective) same day as "TestingDate")
+  )
 
 define ArterialOxygenSaturationExercise:
-  ( First([Observation] P
-      where "ToCode"(First(P.code.coding)) = "Oxygen saturation in Arterial blood by Pulse oximetry --W exercise"
+  FHIRHelpers.ToQuantity ( "ArterialOxygenSaturationExerciseResource".value )
+
+define ArterialPO2ExerciseResource:
+  First([Observation] P
+      where "ToCode"(First(P.code.coding)) = "Oxygen [Partial pressure] adjusted to patients actual temperature in Arterial blood"
       and (start of "Normalize Interval"(P.effective) same day as "TestingDate")
-  ) ) O
-    return FHIRHelpers.ToQuantity ( O.value )
+  )
 
 define ArterialPO2Exercise:
-  ( First([Observation] P
-      where "ToCode"(First(P.code.coding)) = "Oxygen [Partial pressure] adjusted to patients actual temperature in Arterial blood"
-      and (start of "Normalize Interval"(P.effective) same day as "TestingDate")
-  ) ) O
-    return FHIRHelpers.ToQuantity ( O.value )
+  FHIRHelpers.ToQuantity ( "ArterialPO2ExerciseResource".value )
 
-define ArterialOxygenSaturationExerciseWithOxygen:
-  ( First([Observation] P
+define ArterialOxygenSaturationExerciseWithOxygenResource:
+  First([Observation] P
       where "ToCode"(First(P.code.coding)) = "Oxygen saturation in Arterial blood by Pulse oximetry --W exercise"
         and "ToCode"(First(First(P.component).code.coding)) = "Use of supplemental oxygen"
         and First(P.component).value = true
         and (start of "Normalize Interval"(P.effective) same day as "TestingDate")
-  ) ) O
-    return FHIRHelpers.ToQuantity ( O.value )
+  )
 
-define ArterialPO2ExerciseWithOxygen:
-  ( First([Observation] P
+define ArterialOxygenSaturationExerciseWithOxygen:
+  FHIRHelpers.ToQuantity ( "ArterialOxygenSaturationExerciseWithOxygenResource".value )
+
+define ArterialPO2ExerciseWithOxygenResource:
+  First([Observation] P
       where "ToCode"(First(P.code.coding)) = "Oxygen [Partial pressure] adjusted to patients actual temperature in Arterial blood"
         and "ToCode"(First(First(P.component).code.coding)) = "Use of supplemental oxygen"
         and First(P.component).value = true
         and (start of "Normalize Interval"(P.effective) same day as "TestingDate")
-  ) ) O
-    return FHIRHelpers.ToQuantity ( O.value )
+  )
+
+define ArterialPO2ExerciseWithOxygen:
+    FHIRHelpers.ToQuantity ( "ArterialPO2ExerciseWithOxygenResource".value )
 
 define OvernightOximetry:
   First([Procedure]P
     where "ToCode"(First(P.code.coding)) = "Overnight pulse oximetry (procedure)"
     and P.status.value = 'completed')
 
-define NocturnalOximetryO2SAT:
-  ( First([Observation] P
+define NocturnalOximetryO2SATResource:
+  First([Observation] P
       where "ToCode"(First(P.code.coding)) = "Oxygen saturation in Arterial blood by Pulse oximetry --resting"
       and First(P.partOf).reference.value = 'Procedure/' + "OvernightOximetry".id.value
-  ) ) O
-    return FHIRHelpers.ToQuantity ( O.value )
+  )
+
+define NocturnalOximetryO2SAT:
+  FHIRHelpers.ToQuantity ( "NocturnalOximetryO2SATResource".value )
+
+define NocturnalOximetryPO2Resource:
+  First([Observation] P
+      where "ToCode"(First(P.code.coding)) = "Oxygen [Partial pressure] in Arterial blood"
+      and First(P.partOf).reference.value = 'Procedure/' + "OvernightOximetry".id.value
+  )
 
 define NocturnalOximetryPO2:
-  ( First([Observation] P
-      where "ToCode"(First(P.code.coding)) = "Oxygen [Partial pressure] in Arterial blood"
-      and First(P.partOf).reference.value = 'Procedure/' + "OvernightOximetry".id.value
-  ) ) O
-    return FHIRHelpers.ToQuantity ( O.value )
+  FHIRHelpers.ToQuantity ( "NocturnalOximetryPO2Resource".value )
 
-define NocturnalOximetryO2SATWithOxygen:
-  ( First([Observation] P
+define NocturnalOximetryO2SATWithOxygenResource:
+  First([Observation] P
       where "ToCode"(First(P.code.coding)) = "Oxygen saturation in Arterial blood by Pulse oximetry --resting"
       and First(P.partOf).reference.value = 'Procedure/' + "OvernightOximetry".id.value
       and "ToCode"(First(First(P.component).code.coding)) = "Use of supplemental oxygen"
         and First(P.component).value = true
-  ) ) O
-    return FHIRHelpers.ToQuantity ( O.value )
+  )
 
-define NocturnalOximetryPO2WithOxygen:
-  ( First([Observation] P
+define NocturnalOximetryO2SATWithOxygen:
+  FHIRHelpers.ToQuantity ( "NocturnalOximetryO2SATWithOxygenResource".value )
+
+define NocturnalOximetryPO2WithOxygenResource:
+  First([Observation] P
       where "ToCode"(First(P.code.coding)) = "Oxygen [Partial pressure] in Arterial blood"
       and First(P.partOf).reference.value = 'Procedure/' + "OvernightOximetry".id.value
       and "ToCode"(First(First(P.component).code.coding)) = "Use of supplemental oxygen"
         and First(P.component).value = true
-  ) ) O
-    return FHIRHelpers.ToQuantity ( O.value )
+  )
+
+define NocturnalOximetryPO2WithOxygen:
+  FHIRHelpers.ToQuantity ( "NocturnalOximetryPO2WithOxygenResource".value )
 
 define TestingDate:
   start of "Normalize Interval"("PulseOximetry".performed)
 
-define PatientMobile:
-  if exists ( [Observation] P
+define PatientMobileResource:
+  First( [Observation] P
       where "ToCode"(First(P.code.coding)) = "Walks indoors - usual functional ability during assessment period [CMS Assessment]"
       and P.value = true
   )
+
+define PatientMobile:
+  if "PatientMobileResource" is not null
   then true
   else if exists ( [Observation] P
       where "ToCode"(First(P.code.coding)) = "Walks indoors - usual functional ability during assessment period [CMS Assessment]"
@@ -557,18 +576,22 @@ define PatientMobile:
   then false
   else null
 
-define InhaledFlowRate:
-  ( First([Observation] P
+define InhaledFlowRateResource:
+  First([Observation] P
       where "ToCode"(First(P.code.coding)) = "Inhaled oxygen flow rate"
-  ) ) O
-    return FHIRHelpers.ToQuantity ( O.value )
+  )
 
-define NocturnalOxygenFlowRate:
-	( First([Observation] P
+define InhaledFlowRate:
+  FHIRHelpers.ToQuantity ( "InhaledFlowRateResource".value )
+
+define NocturnalOxygenFlowRateResource:
+	First([Observation] P
       where "ToCode"(First(P.code.coding)) = "Inhaled oxygen flow rate"
 	  	and "ToCode"(First(P.method.coding)) = "Overnight pulse oximetry (procedure)"
-  ) ) O
-    return FHIRHelpers.ToQuantity ( O.value )
+  )
+
+define NocturnalOxygenFlowRate:
+	FHIRHelpers.ToQuantity ( "NocturnalOxygenFlowRateResource".value )
 
 define InhaledAverageFlowRate:
 	if ("NocturnalOxygenFlowRate" is not null)
@@ -614,13 +637,16 @@ define TypeOfSteroidTreatment:
 		then 'Inhaled'
 	else ''
 
-define ClusterHeadaches:
-  if exists ( [Condition] P
+define ClusterHeadachesResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Cluster Headache")
           and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
-    )
+  )
+
+define ClusterHeadaches:
+  if "ClusterHeadachesResource" is not null
   then true
   else if exists( [Condition] P
       where exists ( P.code.coding P
@@ -631,80 +657,110 @@ define ClusterHeadaches:
   then false
   else null
 
-define PatientDiagnoses:
-{
-  if exists ( [Condition] P
+define COPDResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Chronic Obstructive Lung Disease (COPD) ICD10CM")
           and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   )
-   then 'COPD' else null,
-  if exists ( [Condition] P
+
+define BronchiectasisResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Bronchiectasis")
           and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   )
-  then 'Bronchiectasis' else null,
-  if exists ( [Condition] P
+
+define HypoxemiaResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Hypoxemia"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
-  ) 
-  then 'Hypoxemia' else null,
-  if exists ( [Condition] P
+  )
+
+define DiffuseInterstitialLungDiseaseResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Interstitial lung disease")
           and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
-  ) 
-  then 'Diffuse interstitial lung disease' else null,
-  if exists ( [Condition] P
+  )
+
+define "CysticFibrosisResource":
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Cystic Fibrosis")
           and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
-  ) 
-  then 'Cystic Fibrosis' else null,
-  if exists ( [Condition] P
+  )
+
+define PulmonaryNeoplasmResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Malignant Neoplasm of Respiratory and Intrathoracic Organs")
           and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
-  ) 
-  then 'Pulmonary neoplasm' else null,
-  if exists ( [Condition] P
+  )
+
+define FamilialErythrocythemiaResource:
+  First( [Condition] P
       where "ToCode"(First(P.code.coding)) = "Familial erythrocytosis"
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
-  ) 
-  then 'Erythrocythemia' else null,
-  if exists ( [Condition] P
+  )
+
+define PulmonaryHypertension:
+  First( [Condition] P
       where "ToCode"(First(P.code.coding)) = "Cor pulmonale (chronic)"
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
-  ) 
-  then 'Pulmonary hypertension' else null,
-  if exists ( [Condition] P
+  )
+
+define RecurringCHFCorPulmonaleResource:
+  First( [Condition] P
       where "ToCode"(First(P.code.coding)) = "Congestive heart failure (disorder)"
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
-  ) 
+  )
+
+define PatientDiagnoses:
+{
+  if "COPDResource" is not null
+   then 'COPD' else null,
+  if "BronchiectasisResource" is not null
+  then 'Bronchiectasis' else null,
+  if "HypoxemiaResource" is not null
+  then 'Hypoxemia' else null,
+  if "DiffuseInterstitialLungDiseaseResource" is not null
+  then 'Diffuse interstitial lung disease' else null,
+  if "CysticFibrosisResource" is not null
+  then 'Cystic Fibrosis' else null,
+  if "PulmonaryNeoplasmResource" is not null
+  then 'Pulmonary neoplasm' else null,
+  if "FamilialErythrocythemiaResource" is not null
+  then 'Erythrocythemia' else null,
+  if "PulmonaryHypertension" is not null
+  then 'Pulmonary hypertension' else null,
+  if "RecurringCHFCorPulmonaleResource" is not null
   then 'Recurring CHF d/t Cor Pulmonale' 
   else null
 }
 
-define DependentEdema:
-  if exists ( [Condition] P
+define DependentEdemaResource:
+  First ( [Condition] P
       where exists ( P.code.coding P
           where (P in "Acute or Chronic Heart Failure Disorder ICD10CM"
           and P in "Acute Pulmonary Edema"))
           and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
-      )
+  )
+
+define DependentEdema:
+  if "DependentEdemaResource" is not null
     then true
     else if exists([Condition] P
       where exists ( P.code.coding P
@@ -726,12 +782,15 @@ define SecondaryToCORPulmonale:
   ) then '“p” Pulmonale on EKG' 
     else ''
 
-define Erythrocythemia:
-  if exists ( [Condition] P
+define ErythrocythemiaResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Secondary Erythrocytosis Disorder")
           and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed')
+
+define Erythrocythemia:
+  if "ErythrocythemiaResource" is not null 
   then true
   else if exists([Condition] P
       where exists ( P.code.coding P
@@ -741,17 +800,23 @@ define Erythrocythemia:
   then false
   else null
 
-define HematocritResult:
+define HematocritResultResource:
   First([Observation] P
       where "ToCode"(First(P.code.coding)) = "Hematocrit/Hemoglobin [Ratio] of Blood by Automated count"
-  ).value
+  )
 
-define NocturnalRestlessness:
-  if exists ( [Observation] P
+define HematocritResult:
+  "HematocritResultResource".value
+
+define NocturnalRestlessnessResource:
+  First ( [Observation] P
       where ("ToCode"(First(P.code.coding)) = "I tossed and turned at night in past 7 days [PROMIS]"
         or "ToCode"(First(P.code.coding)) = "Restlessness and agitation"
         or "ToCode"(First(P.code.coding)) = "Morning headache (finding)")
         and P.value = true)
+
+define NocturnalRestlessness:
+  if "NocturnalRestlessnessResource" is not null
   then true
   else if exists([Observation] P
       where ("ToCode"(First(P.code.coding)) = "I tossed and turned at night in past 7 days [PROMIS]"
@@ -761,51 +826,65 @@ define NocturnalRestlessness:
   then false
   else null
 
+
+define NocturnalOximetryResource:
+  First([Procedure] P 
+          where "ToCode"(First(P.code.coding)) = "Overnight pulse oximetry (procedure)")
+
+define TitrationPolysomnographyResource:
+  First([Procedure] P 
+          where "ToCode"(First(P.code.coding)) = "Nocturnal continuous positive airway pressure (regime/therapy)")
+
+
 define NocturnalRestlessnessStudy:
 { 
-   (if exists([Procedure] P 
-          where "ToCode"(First(P.code.coding)) = "Overnight pulse oximetry (procedure)") 
+   (if "NocturnalOximetryResource" is not null 
           then 'Nocturnal oximetry'else ''),
-   (if exists([Procedure] P 
-          where "ToCode"(First(P.code.coding)) = "Nocturnal continuous positive airway pressure (regime/therapy)")
+   (if "TitrationPolysomnographyResource" is not null
           then 'Titration Polysomnography' else '')
 }
       
-
 define OSA:
-  exists ( [Condition] P
+  First ( [Condition] P
       where exists ( P.code.coding C
                       where C in "Obstructive Sleep Apnea (ICD10CM)")
           and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed')
   
 define PresenceOfOSA:
-  if ("OSA" = true)
+  if "OSA" is not null
   then true
   else false
 
-define PresenceOfPAP:
-    exists ( [Procedure] P
+define PAPResource:
+    First( [Procedure] P
       where "ToCode"(First(P.code.coding)) = "Nocturnal continuous positive airway pressure (regime/therapy)"   
       and P.status.value = 'in-progress'   
   )      
 
-define AHIndex:
-  ( First([Observation] P
+define PresenceOfPAP:
+    "PAPResource" is not null
+
+define AHIndexResource:
+  First([Observation] P
       where ("ToCode"(First(P.code.coding)) = "Apnea hypopnea index 24 hour"
         or "ToCode"(First(P.code.coding)) = "Respiratory disturbance index")
         and P.status.value = 'final'
-  ) ) O
-    return FHIRHelpers.ToQuantity ( O.value )
+  )
 
-define ExertionalHypoxia:
-  if exists ( [Condition] P
+define AHIndex:
+  FHIRHelpers.ToQuantity ( "AHIndexResource".value )
+
+define ExertionalHypoxiaResource:
+  First( [Condition] P
       where ("ToCode"(First(P.code.coding)) = "Dyspnea on exertion (finding)"
       or "ToCode"(First(P.code.coding)) = "Breathless - moderate exertion (finding)"
       or "ToCode"(First(P.code.coding)) = "Breathless - mild exertion (finding)")
        and First(P.clinicalStatus.coding).code.value = 'active'
-          and First(P.verificationStatus.coding).code.value = 'confirmed'
-  )
+          and First(P.verificationStatus.coding).code.value = 'confirmed')
+
+define ExertionalHypoxia:
+  if "ExertionalHypoxiaResource" is not null
   then true
   else if exists([Condition] P
       where ("ToCode"(First(P.code.coding)) = "Breathless - mild exertion (finding)"
@@ -816,303 +895,422 @@ define ExertionalHypoxia:
   then false
   else null
 
-define Group4Criteria:
-  if exists ( [Condition] P
+define AnginaPectorisResource:
+  First( [Condition] P
       where "ToCode"(First(P.code.coding)) = "Angina pectoris, unspecified"
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
       )
-    then 'Angina pectoris' 
-    else if exists ( [Condition] P
+
+define DyspneaResource:
+  First([Condition] P
                       where exists ( P.code.coding P
                                     where P in "Dyspnea")
                   and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed')
-    then 'Dyspnea' 
-    else if exists ( [Condition] P
+
+define PeripheralVascularDiseaseResource:
+  First( [Condition] P
       where "ToCode"(First(P.code.coding)) = "Peripheral vascular disease (disorder)"
         and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
       )
-    then 'Peripheral Vascular Disease' 
-    else if exists ( [Condition] P
+
+define TerminalIllnessResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Limited Life Expectancy")
           and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
     )
+
+define Group4Criteria:
+  if "AnginaPectorisResource" is not null
+    then 'Angina pectoris' 
+    else if "DyspneaResource" is not null
+    then 'Dyspnea' 
+    else if "PeripheralVascularDiseaseResource" is not null
+    then 'Peripheral Vascular Disease' 
+    else if "TerminalIllnessResource" is not null
     then 'Terminal Illness'
     else ''
 
-define "GeneralSymptoms":
-  if exists ( [Condition] P
+define WeightGainResource:
+  First( [Condition] P
       where "ToCode"(First(P.code.coding)) = "Unintentional weight gain (finding)"
         and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
-  ) 
-  then 'weight gain' 
-    else if exists ( [Condition] P
+  )
+
+define WeightLossResource:
+  First( [Condition] P
       where "ToCode"(First(P.code.coding)) = "Unintentional weight loss (finding)"
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
-  ) 
-  then 'weight loss' 
-    else if exists ( [Observation] P
+  )
+
+define SleepingProblemsResource:
+  First( [Observation] P
       where exists ( P.code.coding P
           where P in "Poor Sleep Hygeine or Sleep Challenges"
       )
       and P.status.value = 'final'
-  ) 
-  then 'sleeping problems' 
-    else if exists ( [Condition] P
+  )
+
+define FatigueResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Fatigue"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
-  ) 
-  then 'fatigue' 
-    else if exists ( [Condition] P
+  )
+
+define FeverResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Fever (ICD10CM)"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
-  ) 
-  then 'fever' 
-    else if exists ( [Condition] P
+  )
+
+define ChillsResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Chills (ICD10CM)"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
-  ) 
-  then 'chills' 
-    else if exists ( [Condition] P
+  )
+
+define NightSweatsResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Night Sweats (SNOMED)"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
-  ) 
+  )
+
+define "GeneralSymptoms":
+  if "WeightGainResource" is not null 
+  then 'weight gain' 
+    else if "WeightLossResource" is not null
+  then 'weight loss' 
+    else if "SleepingProblemsResource" is not null
+  then 'sleeping problems' 
+    else if "FatigueResource" is not null
+  then 'fatigue' 
+    else if "FeverResource" is not null
+  then 'fever' 
+    else if "ChillsResource" is not null
+  then 'chills' 
+    else if "NightSweatsResource" is not null 
   then 'night sweats / diaphoresi' 
     else 'None'
 
-define NeckConditions:
-  if exists ( [Condition] P
+define PainOnNeckMovementResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Spine or Neck Disorder"
       )
-  ) then 'pain on neck movement' 
-    else if exists ( [Condition] P
-      where "ToCode"(First(P.code.coding)) = "Acute lymphadenitis of neck (disorder)"
-  ) then 'lumps' 
-    else 'None'
+  )
 
-define PulmonaryConditions:
-  if exists ( [Condition] P
+define LumpsResource:
+  First( [Condition] P
+      where "ToCode"(First(P.code.coding)) = "Acute lymphadenitis of neck (disorder)"
+  )
+
+define NeckConditions:
+  if "PainOnNeckMovementResource" is not null 
+  then 'pain on neck movement' 
+  else if "LumpsResource" is not null 
+  then 'lumps' 
+  else 'None'
+
+define CoughResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Cough (ICD10CM)"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
-  ) 
-  then 'cough' 
-    else if exists ( [Condition] P
+  )
+
+define ShortnessOfBreathResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Difficulty Breathing (ICD10CM)"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
-  ) 
-  then 'shortness of breath' 
-    else if exists ( [Condition] P
+  )
+
+define ChestPainICDResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Chest Pain (ICD10CM)"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'pain' 
-    else if exists ( [Condition] P
+
+define WheezingResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Wheezing"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
-  ) 
-  then 'wheezing' 
-    else if exists ( [Condition] P
+  )
+
+define HemoptysisResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Hemoptysis (ICD10CM)"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
-  ) 
-  then 'hemoptysis' 
-    else if exists ( [Condition] P
+  )
+
+define SputumProductionResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Sputum (Specimen Type) (SNOMED)"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
-  ) 
-  then 'sputum production' 
-    else 'None'
+  )   
 
-define CardiacConditions:
-  if exists ( [Condition] P
+define PulmonaryConditions:
+  if "CoughResource" is not null
+  then 'cough' 
+  else if "ShortnessOfBreathResource" is not null 
+  then 'shortness of breath' 
+  else if "ChestPainICDResource" is not null 
+  then 'pain' 
+  else if "WheezingResource" is not null
+  then 'wheezing' 
+  else if "HemoptysisResource" is not null
+  then 'hemoptysis' 
+  else if "SputumProductionResource" is not null
+  then 'sputum production' 
+  else 'None'
+
+define ChestPainResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Chest Pain"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
-  ) 
-  then 'chest pain' 
-    else if exists ( [Condition] P
+  )
+
+define PalpitationsResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Heart Palpitations"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
-  ) 
-  then 'palpitations' 
-    else if exists ( [Condition] P
+  )
+
+define OrthopneaResource:
+  First( [Condition] P
       where "ToCode"(First(P.code.coding)) = "Orthopnea"
         and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'orthopnea' 
-    else if exists ( [Condition] P
+
+define MurmurResource:
+  First( [Condition] P
       where "ToCode"(First(P.code.coding)) = "Cardiac murmur, unspecified"
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'murmur' 
-    else if exists ( [Condition] P
+
+define SyncopeResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Syncope"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
-  ) 
-  then 'syncope' 
-  else if exists ( [Condition] P
+  )
+
+define EdemaResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Edema"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
-  ) 
-  then 'edema' 
-    else if exists ( [Condition] P
+  )
+
+define ClaudicationResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Claudication"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'claudication' 
-    else if exists ( [Condition] P
+
+define VaricodeVeinsResource:
+  First( [Condition] P
       where "ToCode"(First(P.code.coding)) = "Varicose vein finding (finding)"
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'varicose veins' 
-    else if exists ( [Condition] P
+
+define ThrombophlebitisResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Phlebitis and Thrombophlebitis of the Veins of lower extremity"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'thrombophlebitis' 
-    else if exists ( [Condition] P
+
+define UlcersResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Acute Peptic Ulcer"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
+
+define CardiacConditions:
+  if "ChestPainResource" is not null 
+  then 'chest pain' 
+  else if "PalpitationsResource" is not null
+  then 'palpitations' 
+  else if "OrthopneaResource" is not null
+  then 'orthopnea' 
+  else if "MurmurResource" is not null
+  then 'murmur' 
+  else if "SyncopeResource" is not null 
+  then 'syncope' 
+  else if "EdemaResource" is not null
+  then 'edema' 
+  else if "ClaudicationResource" is not null
+  then 'claudication' 
+  else if "VaricodeVeinsResource" is not null
+  then 'varicose veins' 
+  else if "ThrombophlebitisResource" is not null
+  then 'thrombophlebitis' 
+  else if "UlcersResource" is not null
   then 'ulcers'
     else 'None'
 
-define HematologyConditions:
-  if exists ( [Condition] P
+define AnemiaResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Anemia Conditions"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'anemia' 
-    else if exists ( [Condition] P
+
+define BruisingResource:
+  First( [Condition] P
       where "ToCode"(First(P.code.coding)) = "Bruising symptom (finding)"
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'bruising' 
-    else if exists ( [Condition] P
+
+define BleedingDisorderResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Bleeding Disorder"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
+
+define HematologyConditions:
+  if "AnemiaResource" is not null 
+  then 'anemia' 
+  else if "BruisingResource" is not null
+  then 'bruising' 
+  else if "BleedingDisorderResource" is not null
   then 'bleeding disorders (conditional)' 
     else 'None'
 
-define EndocrineConditions:
-  if exists ( [Condition] P
+define DiabetesResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Diabetes"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'diabetes' 
-    else if exists ( [Condition] P
+
+define GoiterResource:
+  First( [Condition] P
       where "ToCode"(First(P.code.coding)) = "Goiter (disorder)"
         and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'goiter' 
-    else if exists ( [Condition] P
+
+define LipidDisordersResource:
+  First( [Condition] P
       where "ToCode"(First(P.code.coding)) = "Lipids abnormal (finding)"
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
+
+define EndocrineConditions:
+  if "DiabetesResource" is not null 
+  then 'diabetes' 
+  else if "GoiterResource" is not null
+  then 'goiter' 
+  else if "LipidDisordersResource" is not null
   then 'lipid disorders' 
     else 'None'
 
-define TreatmentsTried:
-  if exists ( [Procedure] P
+define BronchodilatorsResource:
+  First( [Procedure] P
       where exists ( P.code.coding P
           where P in "Long Acting Inhaled Bronchodilators"
       )
       and P.status.value = 'completed'
   ) 
-  then 'Bronchodilators' 
-    else if exists ( [Procedure] P
+
+define SteroidsResource:
+    First( [Procedure] P
       where exists ( P.code.coding P
           where P in "Inhaled Steroid Combinations"
       )
       and P.status.value = 'completed'
   ) 
-  then 'Steroids' 
-    else if exists ( [Procedure] P
+
+define VentilationResource:
+    ( [Procedure] P
       where exists ( P.code.coding P
           where P in "COVID19 SNOMED Value Set for Invasive Mechanical Ventilation"
       )
       and P.status.value = 'completed'
   ) 
-  then 'Ventilation' 
-    else if exists ( [Procedure] P
+
+define AntiInflammatoryResource:
+  First( [Procedure] P
       where exists ( P.code.coding P
           where P in "Cromolyn Inhalant Preparations"
       )
       and P.status.value = 'completed'
-  ) 
+  )
+
+define TreatmentsTried:
+  if "BronchodilatorsResource" is not null 
+  then 'Bronchodilators' 
+  else if "SteroidsResource" is not null
+  then 'Steroids' 
+  else if "VentilationResource" is not null 
+  then 'Ventilation' 
+  else if "AntiInflammatoryResource" is not null  
   then 'Anti-Inflammatory'
   else if exists ( [Procedure] P
       where "ToCode"(First(P.code.coding)) = "Nocturnal continuous positive airway pressure (regime/therapy)"
@@ -1131,434 +1329,602 @@ define OtherTreatments:
   then 'PAP/CPAP' 
   else ''
 
-define PsychiatricConditions:
-  if exists ( [Condition] P
+define HallucinationsResource:
+  First( [Condition] P
       where "ToCode"(First(P.code.coding)) = "Hallucinations, unspecified"
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'hallucinations' 
-    else if exists ( [Condition] P
+
+define DelusionsResource:
+  First( [Condition] P
       where "ToCode"(First(P.code.coding)) = "Delusional disorders"
         and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'delusions' 
-    else if exists ( [Condition] P
+
+define AnxietyResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Anxiety"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'anxiety' 
-    else if exists ( [Condition] P
+
+define NervousBreakdownResource:
+  First( [Condition] P
       where "ToCode"(First(P.code.coding)) = "Other specified nonpsychotic mental disorders"
         and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'nervous breakdown' 
-    else if exists ( [Condition] P
+
+define MoodChangesResource:
+  First( [Condition] P
       where "ToCode"(First(P.code.coding)) = "Mood disorder (disorder)"
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
+
+define PsychiatricConditions:
+  if "HallucinationsResource" is not null
+  then 'hallucinations' 
+  else if "DelusionsResource" is not null 
+  then 'delusions' 
+  else if "AnxietyResource" is not null
+  then 'anxiety' 
+  else if "NervousBreakdownResource" is not null 
+  then 'nervous breakdown' 
+    else if "MoodChangesResource" is not null 
   then 'mood changes' 
     else 'None'
 
-define NeurologicalConditions:
-  if exists ( [Condition] P
+define SeizuresResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Seizure"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
-  ) 
-  then 'seizures' 
-    else if exists ( [Condition] P
+  )
+
+define PoorMemoryResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Short Term Memory Deficits"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'poor memory' 
-    else if exists ( [Condition] P
+
+define PoorConcentrationResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Difficulty Concentrating"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'poor concentration' 
-    else if exists ( [Condition] P
+
+define NumbnessAndTinglingResource:
+  First( [Condition] P
       where ("ToCode"(First(P.code.coding)) = "Numbness (finding)"
         or "ToCode"(First(P.code.coding)) = "Numbness and tingling sensation of skin (finding)")
         and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
-  ) 
-  then 'numbness / tingling' 
-    else if exists ( [Condition] P
+  )
+
+define PinsAndNeedlesSensationResource:
+  First( [Condition] P
       where "ToCode"(First(P.code.coding)) = "Pins and needles (finding)"
         and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
-  ) 
-  then 'pins and needles sensation' 
-    else if exists ( [Condition] P
+  )
+
+define HyperpathiaResource:
+  First( [Condition] P
       where "ToCode"(First(P.code.coding)) = "Other disturbances of skin sensation"
         and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'hyperpathia' 
-    else if exists ( [Condition] P
+
+define DysesthesiaResource:
+  First( [Condition] P
       where "ToCode"(First(P.code.coding)) = "Dysesthesia (finding)"
         and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'dysesthesia' 
-    else if exists ( [Condition] P
+
+define WeaknessResource:
+  First( [Condition] P
       where "ToCode"(First(P.code.coding)) = "Weakness"
         and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'weakness' 
-    else if exists ( [Condition] P
+
+define ParalysisResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Spinal Cord Injury or Paralysis Disorder"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'paralysis' 
-    else if exists ( [Condition] P
+
+define TremorsResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Essential tremor"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'tremors' 
-    else if exists ( [Condition] P
+
+define InvoluntaryMovementsResource:
+  First( [Condition] P
       where "ToCode"(First(P.code.coding)) = "Involuntary movement symptom (finding)"
         and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'involuntary movements' 
-    else if exists ( [Condition] P
+
+define UnstableGaitResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Abnormality of Gait and Mobility"
       )
         and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'unstable gait' 
-    else if exists ( [Condition] P
+
+define FallResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Fall Risk"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'fall' 
-    else if exists ( [Condition] P
+
+define VertigoResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Vertigo"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'vertigo' 
-    else if exists ( [Condition] P
+
+define HeadacheResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Headache"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'headache' 
-    else if exists ( [Condition] P
+
+define StrokeResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Stroke"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'stroke' 
-    else if exists ( [Condition] P
+
+define SpeechDisorders:
+  First( [Condition] P
       where "ToCode"(First(P.code.coding)) = "Speech disturbances, not elsewhere classified"
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'speech disorders' 
-    else 'None'
 
-define MusculoskeletalConditions:
-  if exists ( [Condition] P
+define NeurologicalConditions:
+  if "SeizuresResource" is not null  
+  then 'seizures' 
+  else if "PoorMemoryResource" is not null 
+  then 'poor memory' 
+  else if "PoorConcentrationResource" is not null
+  then 'poor concentration' 
+  else if "NumbnessAndTinglingResource" is not null 
+  then 'numbness / tingling' 
+  else if "PinsAndNeedlesSensationResource" is not null 
+  then 'pins and needles sensation' 
+  else if "HyperpathiaResource" is not null 
+  then 'hyperpathia' 
+  else if "DysesthesiaResource" is not null
+  then 'dysesthesia' 
+  else if "WeaknessResource" is not null
+  then 'weakness' 
+  else if "ParalysisResource" is not null
+  then 'paralysis' 
+  else if "TremorsResource" is not null 
+  then 'tremors' 
+  else if "InvoluntaryMovementsResource" is not null
+  then 'involuntary movements' 
+  else if "UnstableGaitResource" is not null
+  then 'unstable gait' 
+  else if "FallResource" is not null
+  then 'fall' 
+  else if "VertigoResource" is not null
+  then 'vertigo' 
+  else if "HeadacheResource" is not null
+  then 'headache' 
+  else if "StrokeResource" is not null
+  then 'stroke' 
+  else if "SpeechDisorders" is not null
+  then 'speech disorders' 
+  else 'None'
+
+define PainResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Pain"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'pain' 
-    else if exists ( [Condition] P
+
+define SwellingResource:
+  First( [Condition] P
       where "ToCode"(First(P.code.coding)) = "Swelling (finding)"
         and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
-  ) 
-  then 'swelling' 
-    else if exists ( [Condition] P
+  )
+
+define StiffnessResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Stiff neck (SNOMED)"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'stiffness' 
-    else if exists ( [Condition] P
+
+define LimitationOfROMResource:
+  First( [Condition] P
       where "ToCode"(First(P.code.coding)) = "Functional limitation in range of motion [CMS Assessment]"
         and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'limitation of range of motion' 
-    else if exists ( [Condition] P
+
+define ArthritisResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Arthritis Disorders"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'arthritis' 
-    else if exists ( [Condition] P
+
+define GoutResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Gout"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'gout' 
-    else if exists ( [Condition] P
+
+define CrampsResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Abdominal Cramps (SNOMED)"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'cramps' 
-    else if exists ( [Condition] P
+
+define MyalgiaResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Myalgia (ICD10CM)"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'myalgia' 
-    else if exists ( [Condition] P
+
+define FasciculationResource:
+  First( [Condition] P
       where "ToCode"(First(P.code.coding)) = "Fasciculation"
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'fasciculation' 
-    else if exists ( [Condition] P
+
+define AtrophyResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Multiple System Atrophy (SNOMED)"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'atrophy' 
-    else if exists ( [Condition] P
+
+define FractureResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "HEDIS Fractures Value Set ICD10CM"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'fracture' 
-    else if exists ( [Condition] P
+
+define DeformityResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Osteopathies chondropathies and acquired musculoskeletal deformities"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'deformity' 
-    else if exists ( [Condition] P
+
+define MuscleWeaknessResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Muscle weakness (ICD10CM)"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
+
+define MusculoskeletalConditions:
+  if "PainResource" is not null 
+  then 'pain' 
+  else if "SwellingResource" is not null
+  then 'swelling' 
+  else if "StiffnessResource" is not null
+  then 'stiffness' 
+  else if "LimitationOfROMResource" is not null
+  then 'limitation of range of motion' 
+  else if "ArthritisResource" is not null
+  then 'arthritis' 
+  else if "GoutResource" is not null
+  then 'gout' 
+  else if "CrampsResource" is not null
+  then 'cramps' 
+  else if "MyalgiaResource" is not null
+  then 'myalgia' 
+  else if "FasciculationResource" is not null
+  then 'fasciculation' 
+  else if "AtrophyResource" is not null
+  then 'atrophy' 
+  else if "FractureResource" is not null
+  then 'fracture' 
+  else if "DeformityResource" is not null
+  then 'deformity' 
+  else if "MuscleWeaknessResource" is not null
   then 'weakness' 
     else 'None'
 
-define GastrointestinalConditions:
-  if exists ( [Condition] P
+define SwallowingProblemsResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Dysphagia (SNOMED)"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
-  ) 
-  then 'swallowing problems' 
-    else if exists ( [Condition] P
+  )
+
+define AbdominalPainResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Abdominal Pain (ICD10CM)"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'abdominal pain' 
-    else if exists ( [Condition] P
+
+define ConstipationResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Constipation"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'constipation' 
-    else if exists ( [Condition] P
+
+define DiarrheaResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Diarrhea"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
-  ) 
-  then 'diarrhea' 
-    else if exists ( [Condition] P
+  )
+
+define IncontinenceResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Urinary Incontinence"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'incontinence' 
-    else if exists ( [Condition] P
+
+define NauseaResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Nausea (ICD10CM)"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'nausea' 
-    else if exists ( [Condition] P
+
+define VomitingResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Vomiting"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'vomiting' 
-    else if exists ( [Condition] P
+
+define UlcerResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Acute Peptic Ulcer"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'ulcers' 
-    else if exists ( [Condition] P
+
+define MelenaResource:
+  First( [Condition] P
       where "ToCode"(First(P.code.coding)) = "Melena"
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'melena' 
-    else if exists ( [Condition] P
+
+define RectalBleedingResource:
+  First( [Condition] P
       where "ToCode"(First(P.code.coding)) = "Hemorrhage of anus and rectum"
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'rectal bleeding' 
-    else if exists ( [Condition] P
+
+define HeartburnResource:
+  First( [Condition] P
       where "ToCode"(First(P.code.coding)) = "Heartburn"
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
-  ) 
-  then 'heartburn' 
-    else if exists ( [Condition] P
+  )   
+
+define JaundiceResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Jaundice"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'jaundice' 
-    else if exists ( [Condition] P
+
+define HematemesisResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Hematemesis [Unspecified Cause] (ICD10CM)"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'hematemesis' 
-    else 'None'
 
-define IntegumentalConditions:
-  if exists ( [Condition] P
+define GastrointestinalConditions:
+  if "SwallowingProblemsResource" is not null
+  then 'swallowing problems' 
+  else if "AbdominalPainResource" is not null
+  then 'abdominal pain' 
+  else if "ConstipationResource" is not null
+  then 'constipation' 
+  else if "DiarrheaResource" is not null
+  then 'diarrhea' 
+  else if "IncontinenceResource" is not null
+  then 'incontinence' 
+  else if "NauseaResource" is not null
+  then 'nausea' 
+  else if "VomitingResource" is not null
+  then 'vomiting' 
+  else if "UlcerResource" is not null
+  then 'ulcers' 
+  else if "MelenaResource" is not null
+  then 'melena' 
+  else if "RectalBleedingResource" is not null
+  then 'rectal bleeding' 
+  else if "HeartburnResource" is not null
+  then 'heartburn' 
+  else if "JaundiceResource" is not null
+  then 'jaundice' 
+  else if "HematemesisResource" is not null
+  then 'hematemesis' 
+  else 'None'
+
+define AcneResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Acne"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'Acne' 
-    else if exists ( [Condition] P
+
+define AtopicDermatitisResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Atopic Dermatitis"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'Atopic Dermatitis' 
-    else if exists ( [Condition] P
+
+define CellulitisResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Cellulitis"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'Cellulitis' 
-    else if exists ( [Condition] P
+
+define VitiligoResource:
+  First( [Condition] P
       where "ToCode"(First(P.code.coding)) = "Vitiligo (disorder)"
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'Vitiligo' 
-    else 'None'
 
-define ImmunologicalConditions:
-  if exists ( [Condition] P
+define IntegumentalConditions:
+  if "AcneResource" is not null 
+  then 'Acne' 
+  else if "AtopicDermatitisResource" is not null
+  then 'Atopic Dermatitis' 
+  else if "CellulitisResource" is not null
+  then 'Cellulitis' 
+  else if "VitiligoResource" is not null
+  then 'Vitiligo' 
+  else 'None'
+
+define RheumatoidArthritisResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Rheumatoid Arthritis"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'Rheumatoid Arthritis' 
-    else if exists ( [Condition] P
+
+define MultipleSclerosisResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Multiple Sclerosis"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
-  then 'Multiple Sclerosis' 
-    else if exists ( [Condition] P
+
+define CeliacDiseaseResource:
+  First( [Condition] P
       where exists ( P.code.coding P
           where P in "Celiac disease (ICD10)"
       )
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
-  ) 
-  then 'Celiac disease' 
-    else if exists ( [Condition] P
+  )
+
+define InflammatoryBowelDiseaseResource:
+  First( [Condition] P
       where "ToCode"(First(P.code.coding)) = "Inflammatory bowel disease (disorder)"
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
-  ) 
+  )
+
+define ImmunologicalConditions:
+  if "RheumatoidArthritisResource" is not null
+  then 'Rheumatoid Arthritis' 
+  else if "MultipleSclerosisResource" is not null
+  then 'Multiple Sclerosis' 
+  else if "CeliacDiseaseResource" is not null
+  then 'Celiac disease' 
+  else if "InflammatoryBowelDiseaseResource" is not null
   then 'Inflammatory bowel disease' 
-    else 'None'
+  else 'None'
 
 define ConditionsOfSystems:
   { ( if ( "GeneralSymptoms" != 'None' ) then 'General' 
