@@ -1,0 +1,24 @@
+{
+    "resourceType": "Library",
+    "version": "1.0.0",
+    "title": "FacetJointIntervention",
+    "name": "FacetJointIntervention",
+    "status": "draft",
+    "type": {
+      "coding": [
+        {
+          "code": "logic-library"
+        }
+      ]
+    },
+    "relatedArtifact": [
+      {
+        "type": "depends-on",
+        "resource": "Library/FHIRHelpers"
+      }
+    ],
+    "dataRequirement": [
+      
+    ]
+  }
+  

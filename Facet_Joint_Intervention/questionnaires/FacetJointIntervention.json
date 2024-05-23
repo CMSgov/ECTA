@@ -1,0 +1,4333 @@
+{
+    "resourceType": "Questionnaire",
+    "identifier": [
+        {
+            "system": "http://identifiers.mettles.com/prior_authorization",
+            "value": "medicare-FacetJointIntervention"
+        }
+    ],
+    "version": "1.0.0",
+    "name": "FacetJointIntervention",
+    "title": "FacetJointIntervention",
+    "status": "draft",
+    "subjectType": [
+      "Patient"
+    ],
+    "date": "2024-05-05",
+    "publisher": "Mettle Solutions",
+    "extension": [
+        {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
+            "valueCanonical": "<FHIR-server>/Library/library-facetjointintervention-FacetJointIntervention"
+        }
+    ],
+    "url": "<FHIR-server>/Questionnaire/questionnaire-facetjointintervention-FacetJointIntervention",
+    "item": [
+        {
+            "linkId": "1",
+            "text": "Order Details",
+            "type": "group",
+            "item": [
+                {
+                  "linkId": "1.1",
+                  "text": "Order Date",
+                  "type": "date",
+                  "required": true
+                },
+                {
+                  "linkId": "1.2",
+                  "text": "Procedure ordered",
+                  "type": "choice",
+                  "required": true,
+                  "answerOption": [
+                        {
+                            "valueCoding": {
+                                "system": "https://hcpcs.codes/",
+                                "code": "64490",
+                                "display": "64490 - Inj paravert f jnt c/t 1 lev"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "https://hcpcs.codes/",
+                                "code": "64493",
+                                "display": "64493 - Inj paravert f jnt l/s 1 lev"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "https://hcpcs.codes/",
+                                "code": "64633",
+                                "display": "64633 - Destroy cerv/thor facet jnt"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "https://hcpcs.codes/",
+                                "code": "64635",
+                                "display": "64635 - Destroy lumb/sac facet jnt"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "https://hcpcs.codes/",
+                                "code": "64999",
+                                "display": "64999 - Unlisted px nervous system"
+                            }
+                        }
+                    ]
+                },
+                {
+                  "linkId": "1.3",
+                  "text": "Order Id",
+                  "type": "string",
+                  "required": true
+                },
+                {
+                  "linkId": "1.4",
+                  "text": "Ordering Physician Name",
+                  "type": "string",
+                  "required": true
+                },
+                {
+                  "linkId": "1.5",
+                  "text": "Ordering Physician NPI",
+                  "type": "string",
+                  "required": true
+                }
+            ]
+        },
+        {
+            "linkId": "2",
+            "text": "Requested Intervention Details",
+            "type": "group",
+            "item": [
+                {
+                    "linkId": "2.1",
+                    "text": "What is the primary HCPC code for the requested procedure?",
+                    "type": "choice",
+                    "required": false,
+                    "repeats": false,
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "system": "https://hcpcs.codes/",
+                                "code": "64490",
+                                "display": "64490 - Inj paravert f jnt c/t 1 lev"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "https://hcpcs.codes/",
+                                "code": "64493",
+                                "display": "64493 - Inj paravert f jnt l/s 1 lev"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "https://hcpcs.codes/",
+                                "code": "64633",
+                                "display": "64633 - Destroy cerv/thor facet jnt"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "https://hcpcs.codes/",
+                                "code": "64635",
+                                "display": "64635 - Destroy lumb/sac facet jnt"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "https://hcpcs.codes/",
+                                "code": "64999",
+                                "display": "64999 - Unlisted px nervous system"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "2.2",
+                    "text": "Does the procedure require additional levels?",
+                    "type": "boolean",
+                    "required": false,
+                    "enableBehavior": "any",
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "2.1",
+                            "answerCoding": {
+                                "system": "https://hcpcs.codes/",
+                                "code": "64490",
+                                "display": "64490 - Inj paravert f jnt c/t 1 lev"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "2.1",
+                            "answerCoding": {
+                                "system": "https://hcpcs.codes/",
+                                "code": "64493",
+                                "display": "64493 - Inj paravert f jnt l/s 1 lev"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "2.1",
+                            "answerCoding": {
+                                "system": "https://hcpcs.codes/",
+                                "code": "64633",
+                                "display": "64633 - Destroy cerv/thor facet jnt"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "2.1",
+                            "answerCoding": {
+                                "system": "https://hcpcs.codes/",
+                                "code": "64635",
+                                "display": "64635 - Destroy lumb/sac facet jnt"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "2.2.1",
+                    "text": "What is/are the additional level HCPC code(s) for the requested procedure?",
+                    "type": "choice",
+                    "required": false,
+                    "repeats": true,
+                    "enableBehavior": "all",
+                    "enableWhen": [
+                        {
+                          "operator": "=",
+                          "question": "2.2",
+                          "answerBoolean": true
+                        },
+                        {
+                            "operator": "=",
+                            "question": "2.1",
+                            "answerCoding":{
+                                "system": "https://hcpcs.codes/",
+                                "code": "64490",
+                                "display": "64490 - Inj paravert f jnt c/t 1 lev"
+                            }
+                        }
+                    ],
+                    "answerOption":[
+                        {
+                            "valueCoding": {
+                                "system": "https://hcpcs.codes/",
+                                "code": "64491",
+                                "display": "64491 - Inj paravert f jnt c/t 2 lev"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "https://hcpcs.codes/",
+                                "code": "64492",
+                                "display": "64492 - Inj paravert f jnt c/t 3 lev"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "2.2.2",
+                    "text": "What is/are the additional level HCPC code(s) for the requested procedure?",
+                    "type": "choice",
+                    "required": false,
+                    "repeats": true,
+                    "enableBehavior": "all",
+                    "enableWhen": [
+                        {
+                          "operator": "=",
+                          "question": "2.2",
+                          "answerBoolean": true
+                        },
+                        {
+                            "operator": "=",
+                            "question": "2.1",
+                            "answerCoding":{
+                                "system": "https://hcpcs.codes/",
+                                "code": "64493",
+                                "display": "64493 - Inj paravert f jnt l/s 1 lev"
+                            }
+                        }
+                    ],
+                    "answerOption":[
+                        {
+                            "valueCoding": {
+                                "system": "https://hcpcs.codes/",
+                                "code": "64494",
+                                "display": "64493 - Inj paravert f jnt l/s 2 lev"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "https://hcpcs.codes/",
+                                "code": "64495",
+                                "display": "64495 - Inj paravert f jnt l/s 3 lev"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "2.2.3",
+                    "text": "What is/are the additional level HCPC code(s) for the requested procedure?",
+                    "type": "choice",
+                    "required": false,
+                    "repeats": true,
+                    "enableBehavior": "all",
+                    "enableWhen": [
+                        {
+                          "operator": "=",
+                          "question": "2.2",
+                          "answerBoolean": true
+                        },
+                        {
+                            "operator": "=",
+                            "question": "2.1",
+                            "answerCoding":{
+                                "system": "https://hcpcs.codes/",
+                                "code": "64633",
+                                "display": "64633 - Destroy cerv/thor facet jnt"
+                            }
+                        }
+                    ],
+                    "answerOption":[
+                        {
+                            "valueCoding": {
+                                "system": "https://hcpcs.codes/",
+                                "code": "64634",
+                                "display": "64634 - Destroy c/th facet jnt addl"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "2.2.4",
+                    "text": "What is/are the additional level HCPC code(s) for the requested procedure?",
+                    "type": "choice",
+                    "required": false,
+                    "repeats": true,
+                    "enableBehavior": "all",
+                    "enableWhen": [
+                        {
+                          "operator": "=",
+                          "question": "2.2",
+                          "answerBoolean": true
+                        },
+                        {
+                            "operator": "=",
+                            "question": "2.1",
+                            "answerCoding": {
+                                "system": "https://hcpcs.codes/",
+                                "code": "64635",
+                                "display": "64635 - Destroy lumb/sac facet jnt"
+                            }
+                        }
+                    ],
+                    "answerOption":[
+                        {
+                            "valueCoding": {
+                                "system": "https://hcpcs.codes/",
+                                "code": "64636",
+                                "display": "64636 - Destroy l/s facet jnt addl"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "2.3",
+                    "text": "Any additional levels being requested beyond what is covered in the general guidance for this procedure?",
+                    "type": "boolean",
+                    "required": false,
+                    "enableBehavior": "any",
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "2.2.1",
+                            "answerCoding": {
+                                "system": "https://hcpcs.codes/",
+                                "code": "64491",
+                                "display": "64491 - Inj paravert f jnt c/t 2 lev"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "2.2.1",
+                            "answerCoding": {
+                                "system": "https://hcpcs.codes/",
+                                "code": "64492",
+                                "display": "64492 - Inj paravert f jnt c/t 3 lev"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "2.2.2",
+                            "answerCoding": {
+                                "system": "https://hcpcs.codes/",
+                                "code": "64494",
+                                "display": "64494 - Inj paravert f jnt l/s 2 lev"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "2.2.2",
+                            "answerCoding": {
+                                "system": "https://hcpcs.codes/",
+                                "code": "64495",
+                                "display": "64495 - Inj paravert f jnt l/s 3 lev"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "2.2.3",
+                            "answerCoding": {
+                                "system": "https://hcpcs.codes/",
+                                "code": "64634",
+                                "display": "64634 - Destroy c/th facet jnt addl"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "2.2.4",
+                            "answerCoding": {
+                                "system": "https://hcpcs.codes/",
+                                "code": "64636",
+                                "display": "64636 - Destroy l/s facet jnt addl"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "2.4",
+                    "text": "Specify the additional HCPC codes being requested:",
+                    "type": "text",
+                    "required": false,
+                    "enableWhen": [
+                        {
+                          "operator": "=",
+                          "question": "2.3",
+                          "answerBoolean": true
+                        }
+                    ]
+                },
+                {
+                    "linkId": "2.5",
+                    "text": "Diagnostic imaging study confirms compression or displacement of the corresponding nerve root by a facet joint synovial cyst AND pt has documented clinical and physical symptoms related to synovial facet cyst:",
+                    "type": "text",
+                    "required": false,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "2.1",
+                            "answerCoding": {
+                                "system": "https://hcpcs.codes/",
+                                "code": "64999",
+                                "display": "64999 - Unlisted px nervous system"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "2.6",
+                    "text": "Is the intervention for diagnostic, therapeutic, facet cyst ruptures, or RFA?",
+                    "type": "choice",
+                    "required": false,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "2.1",
+                            "answerCoding": {
+                                "system": "https://hcpcs.codes/",
+                                "code": "64999",
+                                "display": "64999 - Unlisted px nervous system"
+                            }
+                        }
+                    ],
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "Diagnostic",
+                                "display": "Diagnostic"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Therapeutic",
+                                "display": "Therapeutic"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Facet Cyst Ruptures",
+                                "display": "Facet Cyst Ruptures"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "RFA ablations",
+                                "display": "RFA ablations"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "2.7",
+                    "text": "If diagnostic is this the first or second injection?",
+                    "type": "choice",
+                    "required": false,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "2.6",
+                            "answerCoding": {
+                                "code": "Diagnostic",
+                                "display": "Diagnostic"
+                            }
+                        }
+                    ],
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "Intraarticular (IA): first injection.",
+                                "display": "Intraarticular (IA): first injection."
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Intraarticular (IA): second injection.",
+                                "display": "Intraarticular (IA): second injection."
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Medial branch block (MBB) first injection.",
+                                "display": "Medial branch block (MBB) first injection."
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Medial branch block (MBB) second injection.",
+                                "display": "Medial branch block (MBB) second injection."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "2.8",
+                    "text": "Procedure reports validate that if prior auth approved, the patient will/has received no more than four (4) therapeutic facet joint (IA) in the current rolling 12 months, including the one being requested?",
+                    "type": "boolean",
+                    "required": false,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "2.6",
+                            "answerCoding": {
+                                "code": "Therapeutic",
+                                "display": "Therapeutic"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "2.9",
+                    "text": "If a therepeutic what is the medical condition that makes an RFA contradicted and cannot be performed?",
+                    "type": "text",
+                    "required": false,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "2.6",
+                            "answerCoding": {
+                                "code": "Therapeutic",
+                                "display": "Therapeutic"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "2.10",
+                    "text": "What were the qualifying intraarticular (IA) first injection and intraarticular (IA) second injection dates?",
+                    "type": "group",
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "2.6",
+                            "answerCoding": {
+                                "code": "Therapeutic",
+                                "display": "Therapeutic"
+                            }
+                        }
+                    ], 
+                    "item":[
+                        {
+                            "linkId": "2.10.1",
+                            "text": "Intraarticular (IA) first injection date:",
+                            "type": "date",
+                            "required": false
+                        },
+                        {
+                            "linkId": "2.10.2",
+                            "text": "Intraarticular (IA) second injection date:",
+                            "type": "date",
+                            "required": false
+                        }
+                    ]
+                },
+                {
+                    "linkId": "2.1",
+                    "text": "If an RFA is being performed what were the qualifying MBB first injection and MBB second injection dates?",
+                    "type": "group",
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "2.6",
+                            "answerCoding": {
+                                "code": "RFA ablations",
+                                "display": "RFA ablations"
+                            }
+                        }
+                    ],
+                    "item":[
+                        {
+                            "linkId": "2.11.1",
+                            "text": "Medial branch block (MBB) first injection date:",
+                            "type": "date",
+                            "required": false
+                        },
+                        {
+                            "linkId": "2.11.2",
+                            "text": "Medial branch block (MBB) second injection date:",
+                            "type": "date",
+                            "required": false
+                        }
+                    ]
+                },
+                {
+                    "linkId": "2.12",
+                    "text": "Is the prior authorization request for one region/area of the spine?",
+                    "type": "boolean",
+                    "required": false
+                },
+                {
+                    "linkId": "2.13",
+                    "text": "If answered no, and two different areas of the spine in one session is requested, specify the medical necessity as the request may receive a non affirmed decision.",
+                    "type": "text",
+                    "required": false,
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "2.12",
+                            "answerBoolean": false 
+                        }
+                    ]
+                },
+                {
+                    "linkId": "2.14",
+                    "text": "What is the additional documentation to support the medical necessity of two different areas?",
+                    "type": "text",
+                    "required": false,
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "2.12",
+                            "answerBoolean": false 
+                        }
+                    ]
+                },
+                {
+                    "linkId": "2.15",
+                    "text": "Is general anesthesia, conscious sedation, or monitored anesthesia care going to be used?",
+                    "type": "choice",
+                    "required": false,
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code":"Patient has a medical condition that would interfere with the procedure.",
+                                "display":"Patient has a medical condition that would interfere with the procedure."
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code":"Patient does not have the cognitive capacity to cooperate.",
+                                "display":"Patient does not have the cognitive capacity to cooperate."
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code":"Patient does not have the functional capacity to cooperate.",
+                                "display":"Patient does not have the functional capacity to cooperate."
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code":"Patient does not have the capacity to remain motionless during the procedure.",
+                                "display":"Patient does not have the capacity to remain motionless during the procedure."
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code":"Patient is not able to tolerate remaining in a painful position for a prolonged period of time.",
+                                "display":"Patient is not able to tolerate remaining in a painful position for a prolonged period of time."
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code":"Other",
+                                "display":"Other"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "2.16",
+                    "text": "Specify other",
+                    "type": "text",
+                    "required": false,
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "2.15",
+                            "answerOption": {
+                                "code": "Other",
+                                "display": "Other"
+                            } 
+                        }
+                    ]
+                },
+                {
+                    "linkId": "2.17",
+                    "text": "Expedited request documentation?",
+                    "type": "boolean",
+                    "required": false
+                },
+                {
+                    "linkId": "2.18",
+                    "text": "What is the specific condition that demonstrates any delays can jeopardize the patient?  Specify:",
+                    "type": "text",
+                    "required": false,
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "2.17",
+                            "answerBoolean": true
+                        }
+                    ]
+                },
+                {
+                    "linkId": "2.19",
+                    "text": "What is the date for the requested procedure to be performed?",
+                    "type": "date",
+                    "required": false,
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "2.17",
+                            "answerBoolean": false
+                        }
+                    ]
+                },
+                {
+                    "linkId": "2.20",
+                    "text": "Will fluoroscopy or CT Guidance be used during this intervention?",
+                    "type": "boolean",
+                    "required": false
+                },
+                {
+                    "linkId": "2.21",
+                    "text": "What FDA approved agents will be injected?  Select all that apply.",
+                    "type": "choice",
+                    "required": false,
+                    "repeats": true,
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "Contrast agent",
+                                "display": "Contrast agent"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Anesthetic",
+                                "display": "Anesthetic"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Corticosteroids",
+                                "display": "Corticosteroids"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Anti-inflammatory",
+                                "display": "Anti-inflammatory"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Neurolytic",
+                                "display": "Neurolytic"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "2.22",
+                    "text": "Does the patient have an implanted electrical device that requires consideration?",
+                    "type": "boolean",
+                    "required": false
+                },
+                {
+                    "linkId": "2.23",
+                    "text": "Provider has/will follow manufacturer instructions to ensure patient's safety relevant to the planned procedure?",
+                    "type": "boolean",
+                    "required": false,
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "2.22",
+                            "answerBoolean": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "linkId": "3",
+            "text": "Diagnosis(es) &  Hx of Relevant Procedures",
+            "type": "group",
+            "item":[
+                {
+                    "linkId": "3.1",
+                    "text": "The patient's primary diagnosis that supports approval for a facet joint intervention procedure.",
+                    "type": "choice",
+                    "required": false,
+                    "answerOption": [
+                        {
+                            "valueCoding":{
+                                "code": "M47.812",
+                                "display": "Spondylosis without myelopathy or radiculopathy, cervical region"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "M47.813",
+                                "display": "Spondylosis without myelopathy or radiculopathy, cervicothoracic region"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "M47.814",
+                                "display": "Spondylosis without myelopathy or radiculopathy, thoracic region"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "M47.815",
+                                "display": "Spondylosis without myelopathy or radiculopathy, thoracolumbar region"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "M47.816",
+                                "display": "Spondylosis without myelopathy or radiculopathy, lumbar region"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "M47.817",
+                                "display": "Spondylosis without myelopathy or radiculopathy, lumbosacral region"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "M47.892",
+                                "display": "Other spondylosis, cervical region"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "M47.893",
+                                "display": "Other spondylosis, cervicothoracic region"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "M47.894",
+                                "display": "Other spondylosis, thoracic region"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "M47.895",
+                                "display": "Other spondylosis, thoracolumbar region"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "M47.896",
+                                "display": "Other spondylosis, lumbar region"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "M47.897",
+                                "display": "Other spondylosis, lumbosacral region"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "M48.12",
+                                "display": "Ankylosing hyperostosis [Forestier], cervical region"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "M48.13",
+                                "display": "Ankylosing hyperostosis [Forestier], cervicothoracic region"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "M48.14",
+                                "display": "Ankylosing hyperostosis [Forestier], thoracic region"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "M48.15",
+                                "display": "Ankylosing hyperostosis [Forestier], thoracolumbar region"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "M48.16",
+                                "display": "Ankylosing hyperostosis [Forestier], lumbar region"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "M48.17",
+                                "display": "Ankylosing hyperostosis [Forestier], lumbosacral region"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "M71.30",
+                                "display": "Other bursal cyst, unspecified site"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "M71.38",
+                                "display": "Other bursal cyst, other site"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "3.2",
+                    "text": "Other relevant diagnosis or supported findings:",
+                    "type": "choice",
+                    "repeats": true,
+                    "required": false,
+                    "answerOption": [
+                        {
+                            "valueCoding":{
+                                "code": "M47.812",
+                                "display": "Spondylosis without myelopathy or radiculopathy, cervical region"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "M47.813",
+                                "display": "Spondylosis without myelopathy or radiculopathy, cervicothoracic region"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "M47.814",
+                                "display": "Spondylosis without myelopathy or radiculopathy, thoracic region"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "M47.815",
+                                "display": "Spondylosis without myelopathy or radiculopathy, thoracolumbar region"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "M47.816",
+                                "display": "Spondylosis without myelopathy or radiculopathy, lumbar region"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "M47.817",
+                                "display": "Spondylosis without myelopathy or radiculopathy, lumbosacral region"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "M47.892",
+                                "display": "Other spondylosis, cervical region"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "M47.893",
+                                "display": "Other spondylosis, cervicothoracic region"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "M47.894",
+                                "display": "Other spondylosis, thoracic region"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "M47.895",
+                                "display": "Other spondylosis, thoracolumbar region"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "M47.896",
+                                "display": "Other spondylosis, lumbar region"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "M47.897",
+                                "display": "Other spondylosis, lumbosacral region"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "M48.12",
+                                "display": "Ankylosing hyperostosis [Forestier], cervical region"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "M48.13",
+                                "display": "Ankylosing hyperostosis [Forestier], cervicothoracic region"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "M48.14",
+                                "display": "Ankylosing hyperostosis [Forestier], thoracic region"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "M48.15",
+                                "display": "Ankylosing hyperostosis [Forestier], thoracolumbar region"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "M48.16",
+                                "display": "Ankylosing hyperostosis [Forestier], lumbar region"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "M48.17",
+                                "display": "Ankylosing hyperostosis [Forestier], lumbosacral region"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "M71.30",
+                                "display": "Other bursal cyst, unspecified site"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "M71.38",
+                                "display": "Other bursal cyst, other site"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code":"Other",
+                                "display":"Other"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "3.2.1",
+                    "text": "Specify other",
+                    "type": "text",
+                    "required": false,
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "3.2",
+                            "answerOption": {
+                                "code": "Other",
+                                "display": "Other"
+                            } 
+                        }
+                    ]
+                },
+                {
+                    "linkId": "3.3",
+                    "text": "Diagnosis(es) that explain anatomic restrictions and why an MBB cannot be performed.",
+                    "type": "choice",
+                    "repeats": true,
+                    "required": true,
+                    "answerOption": [
+                        {
+                            "valueCoding":{
+                                "code": "LA32187-9",
+                                "display": "Posterior Fusion"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "LP266363-3",
+                                "display": "Scoliosis"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "430962009",
+                                "display": "Pseudoarthrosis"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "40854002",
+                                "display": "Presence of a sixth lumbar vertebra"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "281373004",
+                                "display": "Sacralization of the fifth lumbar vertebra"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "LA15324-9",
+                                "display": "Severe Osteophytes (bone spurs)"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "414916001",
+                                "display": "Obesity or excessive adipose tissue"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "MTHU031129",
+                                "display": "Severe Kyphosis"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Prior surgical scarring",
+                                "display": "Prior surgical scarring"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code":"Other",
+                                "display":"Other"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "3.3.1",
+                    "text": "Specify other",
+                    "type": "text",
+                    "required": false,
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "3.3",
+                            "answerOption": {
+                                "code": "Other",
+                                "display": "Other"
+                            } 
+                        }
+                    ]
+                },
+                {
+                    "linkId": "3.4",
+                    "text": "Does the patient record reflect accurate/active ICD10 codes, eg., old diagnosis(es) have been coded to 'history of' if no longer active/being treated?",
+                    "type": "boolean",
+                    "required": false
+                },
+                {
+                    "linkId": "3.5",
+                    "text": "Non-facet pathology per clinical assessment or diagnostic studies has ruled out other sources of the patient's pain, including but not limited to fractures, tumors, infections or significant deformity.",
+                    "type": "choice",
+                    "required": false,
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "Negative for non-facet pathology sources.  Medical record indicates all of the following are ABSENT: active spine fractures, spine tumors, active infections, sciatica, hip osteoarthritis, sacroiliac impingement, untreated radiculopathy, neurogenic claudication, myofascial pain, compression fractures, disc herniation, osteophytes, rheumatoid arthritis.",
+                                "display": "Negative for non-facet pathology sources.  Medical record indicates all of the following are ABSENT: active spine fractures, spine tumors, active infections, sciatica, hip osteoarthritis, sacroiliac impingement, untreated radiculopathy, neurogenic claudication, myofascial pain, compression fractures, disc herniation, osteophytes, rheumatoid arthritis."
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": " Positive for non-facet pathology sources:  Medical record indicates one or more of the following are PRESENT: active spine fractures, spine tumors, active infections, sciatica, hip osteoarthritis, sacroiliac impingement, untreated radiculopathy, neurogenic claudication, myofascial pain, compression fractures, disc herniation, osteophytes, rheumatoid arthritis.",
+                                "display": " Positive for non-facet pathology sources:  Medical record indicates one or more of the following are PRESENT: active spine fractures, spine tumors, active infections, sciatica, hip osteoarthritis, sacroiliac impingement, untreated radiculopathy, neurogenic claudication, myofascial pain, compression fractures, disc herniation, osteophytes, rheumatoid arthritis."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "3.6",
+                    "text": "Hx of relevant spine surgery or procedures:",
+                    "type": "text",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "linkId": "4",
+            "text": "Supporting Clinical Findings",
+            "type": "group",
+            "item":[
+                {
+                    "linkId": "4.1",
+                    "text": "The supportive findings for the requested procedure, select one.",
+                    "type": "choice",
+                    "required": false,
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "Neck pain and its progression.",
+                                "display": "Neck pain and its progression."
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Axial low back pain and its progression.",
+                                "display": "Axial low back pain and its progression."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.2",
+                    "text": "Pain initial date of onset. Encounter date when the identified pain was first evaluated and documented.",
+                    "type": "date",
+                    "required": false
+                },
+                {
+                    "linkId": "4.3",
+                    "text": "Which pain scale used at the initial encounter?",
+                    "type": "choice",
+                    "required": false,
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "Numerical Pain Rating Scale (NRS) (0-10)",
+                                "display": "Numerical Pain Rating Scale (NRS) (0-10)"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Visual Analog Scale (VAS) Score",
+                                "display": "Visual Analog Scale (VAS) Score"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Wong-Baker FACES",
+                                "display": "Wong-Baker FACES"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Verbal Rating Scale for pain intensity",
+                                "display": "Verbal Rating Scale for pain intensity"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Pain Assessment in Advanced Dementia Scale (PAINAD)",
+                                "display": "Pain Assessment in Advanced Dementia Scale (PAINAD)"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Other",
+                                "display": "Other"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "No tool used",
+                                "display": "No tool used"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.4",
+                    "text": "Pain duration",
+                    "type": "quantity",
+                    "required": false,
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "4.3",
+                            "answerOption": {
+                                "code": "Numerical Pain Rating Scale (NRS) (0-10)",
+                                "display": "Numerical Pain Rating Scale (NRS) (0-10)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.3",
+                            "answerOption": {
+                                "code": "Visual Analog Scale (VAS) Score",
+                                "display": "Visual Analog Scale (VAS) Score"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.3",
+                            "answerOption": {
+                                "code": "Wong-Baker FACES",
+                                "display": "Wong-Baker FACES"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.3",
+                            "answerOption": {
+                                "code": "Verbal Rating Scale for pain intensity",
+                                "display": "Verbal Rating Scale for pain intensity"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.3",
+                            "answerOption": {
+                                "code": "Pain Assessment in Advanced Dementia Scale (PAINAD)",
+                                "display": "Pain Assessment in Advanced Dementia Scale (PAINAD)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.3",
+                            "answerOption": {
+                                "code": "Other",
+                                "display": "Other"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.5",
+                    "text": "Pain Intensity or Severity  (Pain Score)",
+                    "type": "integer",
+                    "required": false,
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "4.3",
+                            "answerOption": {
+                                "code": "Numerical Pain Rating Scale (NRS) (0-10)",
+                                "display": "Numerical Pain Rating Scale (NRS) (0-10)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.3",
+                            "answerOption": {
+                                "code": "Visual Analog Scale (VAS) Score",
+                                "display": "Visual Analog Scale (VAS) Score"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.3",
+                            "answerOption": {
+                                "code": "Wong-Baker FACES",
+                                "display": "Wong-Baker FACES"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.3",
+                            "answerOption": {
+                                "code": "Verbal Rating Scale for pain intensity",
+                                "display": "Verbal Rating Scale for pain intensity"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.3",
+                            "answerOption": {
+                                "code": "Pain Assessment in Advanced Dementia Scale (PAINAD)",
+                                "display": "Pain Assessment in Advanced Dementia Scale (PAINAD)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.3",
+                            "answerOption": {
+                                "code": "Other",
+                                "display": "Other"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.6.1",
+                    "text": "Which functional assessment (disability) scale was used at the initial encounter if applicable?",
+                    "type": "choice",
+                    "required": false,
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "Pain Disability Index",
+                                "display": "Pain Disability Index"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Oswestry Disability Index (ODI)",
+                                "display": "Oswestry Disability Index (ODI)"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Oswestry Low Back Pain Disability Questionnaire (OSW)",
+                                "display": "Oswestry Low Back Pain Disability Questionnaire (OSW)"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Quebec Low Back Pain Disability Scare (QUE)",
+                                "display": "Quebec Low Back Pain Disability Scare (QUE)"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Roland Morris Pain Scale",
+                                "display": "Roland Morris Pain Scale"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Back Pain Functional Scale (BPFS)",
+                                "display": "Back Pain Functional Scale (BPFS)"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
+                                "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "No functional assessment tool used",
+                                "display": "No functional assessment tool used"
+                            }
+                        }
+                    ],
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "4.1",
+                            "answerOption": {
+                                "code": "Axial low back pain and its progression.",
+                                "display": "Axial low back pain and its progression."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.6.2",
+                    "text": "Which functional assessment (disability) scale was used at the initial encounter if applicable?",
+                    "type": "choice",
+                    "required": false,
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "Pain Disability Index",
+                                "display": "Pain Disability Index"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Oswestry Disability Index (ODI)",
+                                "display": "Oswestry Disability Index (ODI)"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Roland Morris Pain Scale",
+                                "display": "Roland Morris Pain Scale"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Back Pain Functional Scale (BPFS)",
+                                "display": "Back Pain Functional Scale (BPFS)"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
+                                "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "No functional assessment tool used",
+                                "display": "No functional assessment tool used"
+                            }
+                        }
+                    ],
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "4.1",
+                            "answerOption": {
+                                "code": "Neck pain and its progression.",
+                                "display": "Neck pain and its progression."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.6.3",
+                    "text": "Score/Results: ",
+                    "type": "integer",
+                    "required": false,
+                    "enableBehavior": "any",
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "4.6.1",
+                            "answerOption": {
+                                "code": "Pain Disability Index",
+                                "display": "Pain Disability Index"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.6.2",
+                            "answerOption": {
+                                "code": "Pain Disability Index",
+                                "display": "Pain Disability Index"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.6.1",
+                            "answerOption": {
+                                "code": "Quebec Low Back Pain Disability Scare (QUE)",
+                                "display": "Quebec Low Back Pain Disability Scare (QUE)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.6.1",
+                            "answerOption": {
+                                "code": "Roland Morris Pain Scale",
+                                "display": "Roland Morris Pain Scale"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.6.2",
+                            "answerOption": {
+                                "code": "Roland Morris Pain Scale",
+                                "display": "Roland Morris Pain Scale"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.6.1",
+                            "answerOption": {
+                                "code": "Back Pain Functional Scale (BPFS)",
+                                "display": "Back Pain Functional Scale (BPFS)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.6.2",
+                            "answerOption": {
+                                "code": "Back Pain Functional Scale (BPFS)",
+                                "display": "Back Pain Functional Scale (BPFS)"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.6.4",
+                    "text": "Pain Intensity Score: ",
+                    "type": "integer",
+                    "required": false,
+                    "enableBehavior": "any",
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "4.6.1",
+                            "answerOption": {
+                                "code": "Oswestry Disability Index (ODI)",
+                                "display": "Oswestry Disability Index (ODI)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.6.2",
+                            "answerOption": {
+                                "code": "Oswestry Disability Index (ODI)",
+                                "display": "Oswestry Disability Index (ODI)"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.6.5",
+                    "text": "Pain Intensity Score: ",
+                    "type": "choice",
+                    "required": false,
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "4.6.1",
+                            "answerOption": {
+                                "code": "Oswestry Low Back Pain Disability Questionnaire (OSW)",
+                                "display": "Oswestry Low Back Pain Disability Questionnaire (OSW)"
+                            }
+                        }
+                    ],
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "0",
+                                "display": "No pain or can tolerate pain without pain killers"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "1",
+                                "display": "Able to manage pain without pain killers"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "2",
+                                "display": "Complete relief of pain with pain killers"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "3",
+                                "display": "Moderate relief of pain with pain killers"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "4",
+                                "display": "Very little relief of pain with pain killers"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "5",
+                                "display": "No relief/no effect, and does not use due to not helpful"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.6.6",
+                    "text": "Pain Intensity Score: ",
+                    "type": "choice",
+                    "required": false,
+                    "enableBehavior": "any",
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "4.6.1",
+                            "answerOption": {
+                                "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
+                                "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.6.2",
+                            "answerOption": {
+                                "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
+                                "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
+                            }
+                        }
+                    ],
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "1",
+                                "display": "No pain"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "2",
+                                "display": "Mild"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "3",
+                                "display": "Moderate"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "4",
+                                "display": "Severe"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "5",
+                                "display": "Very Severe"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.6.7",
+                    "text": "Disability Index Score/Results: ",
+                    "type": "choice",
+                    "required": false,
+                    "enableBehavior": "any",
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "4.6.1",
+                            "answerOption": {
+                                "code": "Oswestry Disability Index (ODI)",
+                                "display": "Oswestry Disability Index (ODI)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.6.2",
+                            "answerOption": {
+                                "code": "Oswestry Disability Index (ODI)",
+                                "display": "Oswestry Disability Index (ODI)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.6.1",
+                            "answerOption": {
+                                "code": "Oswestry Low Back Pain Disability Questionnaire (OSW)",
+                                "display": "Oswestry Low Back Pain Disability Questionnaire (OSW)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.6.2",
+                            "answerOption": {
+                                "code": "Oswestry Low Back Pain Disability Questionnaire (OSW)",
+                                "display": "Oswestry Low Back Pain Disability Questionnaire (OSW)"
+                            }
+                        }
+                    ],
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "0 - 4 No disability",
+                                "display": "0 - 4 No disability"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "5 - 14 Mild disability",
+                                "display": "5 - 14 Mild disability"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "15 - 24 Moderate disability",
+                                "display": "15 - 24 Moderate disability"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "25 - 34 Severe disability",
+                                "display": "25 - 34 Severe disability"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "35 - 50 Completely disabled",
+                                "display": "35 - 50 Completely disabled"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.6.8",
+                    "text": "Pain interference with ADLs Score/Results: ",
+                    "type": "integer",
+                    "required": false,
+                    "enableBehavior": "any",
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "4.6.1",
+                            "answerOption": {
+                                "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
+                                "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.6.2",
+                            "answerOption": {
+                                "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
+                                "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.7",
+                    "text": "The baseline encounter date.  The date the provider performed the required baseline evaluation for pain that has now been present for three months or greater and not responding to conservative pain management measures.",
+                    "type": "date",
+                    "required": false
+                },
+                {
+                    "linkId": "4.8",
+                    "text": "Baseline encounter supportive findings, select one.",
+                    "type": "choice",
+                    "required": false,
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "Chronic neck pain greater than three months duration.",
+                                "display": "Chronic neck pain greater than three months duration."
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Chronic low axial back pain greater than three months duration.",
+                                "display": "Chronic low axial back pain greater than three months duration."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.9",
+                    "text": "Chronic neck pain region",
+                    "type": "choice",
+                    "required": false,
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "Pain in cervical spine.",
+                                "display": "Pain in cervical spine."
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Pain in thoracic spine.",
+                                "display": "Pain in thoracic spine."
+                            }
+                        }
+                    ],
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "4.8",
+                            "answerCoding":{
+                                "code": "Chronic neck pain greater than three months duration.",
+                                "display": "Chronic neck pain greater than three months duration."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.10",
+                    "text": "Chronic low back pain region",
+                    "type": "choice",
+                    "required": false,
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "Pain in lumber spine.",
+                                "display": "Pain in lumber spine."
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Pain in sacral spine.",
+                                "display": "Pain in sacral spine."
+                            }
+                        }
+                    ],
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "4.8",
+                            "answerCoding":{
+                                "code": "Chronic low axial back pain greater than three months duration.",
+                                "display": "Chronic low axial back pain greater than three months duration."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.11",
+                    "text": "Which pain scale used at the initial encounter?",
+                    "type": "choice",
+                    "required": false,
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "Numerical Pain Rating Scale (NRS) (0-10)",
+                                "display": "Numerical Pain Rating Scale (NRS) (0-10)"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Visual Analog Scale (VAS) Score",
+                                "display": "Visual Analog Scale (VAS) Score"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Wong-Baker FACES",
+                                "display": "Wong-Baker FACES"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Verbal Rating Scale for pain intensity",
+                                "display": "Verbal Rating Scale for pain intensity"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Pain Assessment in Advanced Dementia Scale (PAINAD)",
+                                "display": "Pain Assessment in Advanced Dementia Scale (PAINAD)"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "Other",
+                                "display": "Other"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "No tool used",
+                                "display": "No tool used"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.12",
+                    "text": "Pain duration",
+                    "type": "quantity",
+                    "required": false,
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "4.11",
+                            "answerOption": {
+                                "code": "Numerical Pain Rating Scale (NRS) (0-10)",
+                                "display": "Numerical Pain Rating Scale (NRS) (0-10)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.11",
+                            "answerOption": {
+                                "code": "Visual Analog Scale (VAS) Score",
+                                "display": "Visual Analog Scale (VAS) Score"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.11",
+                            "answerOption": {
+                                "code": "Wong-Baker FACES",
+                                "display": "Wong-Baker FACES"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.11",
+                            "answerOption": {
+                                "code": "Verbal Rating Scale for pain intensity",
+                                "display": "Verbal Rating Scale for pain intensity"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.11",
+                            "answerOption": {
+                                "code": "Pain Assessment in Advanced Dementia Scale (PAINAD)",
+                                "display": "Pain Assessment in Advanced Dementia Scale (PAINAD)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.11",
+                            "answerOption": {
+                                "code": "Other",
+                                "display": "Other"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.13",
+                    "text": "Pain Intensity or Severity  (Pain Score)",
+                    "type": "integer",
+                    "required": false,
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "4.11",
+                            "answerOption": {
+                                "code": "Numerical Pain Rating Scale (NRS) (0-10)",
+                                "display": "Numerical Pain Rating Scale (NRS) (0-10)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.11",
+                            "answerOption": {
+                                "code": "Visual Analog Scale (VAS) Score",
+                                "display": "Visual Analog Scale (VAS) Score"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.11",
+                            "answerOption": {
+                                "code": "Wong-Baker FACES",
+                                "display": "Wong-Baker FACES"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.11",
+                            "answerOption": {
+                                "code": "Verbal Rating Scale for pain intensity",
+                                "display": "Verbal Rating Scale for pain intensity"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.11",
+                            "answerOption": {
+                                "code": "Pain Assessment in Advanced Dementia Scale (PAINAD)",
+                                "display": "Pain Assessment in Advanced Dementia Scale (PAINAD)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.11",
+                            "answerOption": {
+                                "code": "Other",
+                                "display": "Other"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.14.1",
+                    "text": "Which functional assessment (disability) scale was used at the initial encounter if applicable?",
+                    "type": "choice",
+                    "required": false,
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "Pain Disability Index",
+                                "display": "Pain Disability Index"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Oswestry Disability Index (ODI)",
+                                "display": "Oswestry Disability Index (ODI)"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Oswestry Low Back Pain Disability Questionnaire (OSW)",
+                                "display": "Oswestry Low Back Pain Disability Questionnaire (OSW)"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Quebec Low Back Pain Disability Scare (QUE)",
+                                "display": "Quebec Low Back Pain Disability Scare (QUE)"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Roland Morris Pain Scale",
+                                "display": "Roland Morris Pain Scale"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Back Pain Functional Scale (BPFS)",
+                                "display": "Back Pain Functional Scale (BPFS)"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
+                                "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "No functional assessment tool used",
+                                "display": "No functional assessment tool used"
+                            }
+                        }
+                    ],
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "4.8",
+                            "answerOption": {
+                                "code": "Chronic low axial back pain greater than three months duration.",
+                                "display": "Chronic low axial back pain greater than three months duration."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.14.2",
+                    "text": "Which functional assessment (disability) scale was used at the initial encounter if applicable?",
+                    "type": "choice",
+                    "required": false,
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "Pain Disability Index",
+                                "display": "Pain Disability Index"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Oswestry Disability Index (ODI)",
+                                "display": "Oswestry Disability Index (ODI)"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Roland Morris Pain Scale",
+                                "display": "Roland Morris Pain Scale"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Back Pain Functional Scale (BPFS)",
+                                "display": "Back Pain Functional Scale (BPFS)"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
+                                "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "No functional assessment tool used",
+                                "display": "No functional assessment tool used"
+                            }
+                        }
+                    ],
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "4.8",
+                            "answerOption": {
+                                "code": "Chronic neck pain greater than three months duration.",
+                                "display": "Chronic neck pain greater than three months duration."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.14.3",
+                    "text": "Score/Results: ",
+                    "type": "integer",
+                    "required": false,
+                    "enableBehavior": "any",
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "4.14.1",
+                            "answerOption": {
+                                "code": "Pain Disability Index",
+                                "display": "Pain Disability Index"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.14.2",
+                            "answerOption": {
+                                "code": "Pain Disability Index",
+                                "display": "Pain Disability Index"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.14.1",
+                            "answerOption": {
+                                "code": "Quebec Low Back Pain Disability Scare (QUE)",
+                                "display": "Quebec Low Back Pain Disability Scare (QUE)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.14.1",
+                            "answerOption": {
+                                "code": "Roland Morris Pain Scale",
+                                "display": "Roland Morris Pain Scale"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.14.2",
+                            "answerOption": {
+                                "code": "Roland Morris Pain Scale",
+                                "display": "Roland Morris Pain Scale"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.14.1",
+                            "answerOption": {
+                                "code": "Back Pain Functional Scale (BPFS)",
+                                "display": "Back Pain Functional Scale (BPFS)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.14.2",
+                            "answerOption": {
+                                "code": "Back Pain Functional Scale (BPFS)",
+                                "display": "Back Pain Functional Scale (BPFS)"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.14.4",
+                    "text": "Pain Intensity Score: ",
+                    "type": "integer",
+                    "required": false,
+                    "enableBehavior": "any",
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "4.14.1",
+                            "answerOption": {
+                                "code": "Oswestry Disability Index (ODI)",
+                                "display": "Oswestry Disability Index (ODI)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.14.2",
+                            "answerOption": {
+                                "code": "Oswestry Disability Index (ODI)",
+                                "display": "Oswestry Disability Index (ODI)"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.14.5",
+                    "text": "Pain Intensity Score: ",
+                    "type": "choice",
+                    "required": false,
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "4.14.1",
+                            "answerOption": {
+                                "code": "Oswestry Low Back Pain Disability Questionnaire (OSW)",
+                                "display": "Oswestry Low Back Pain Disability Questionnaire (OSW)"
+                            }
+                        }
+                    ],
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "0",
+                                "display": "No pain or can tolerate pain without pain killers"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "1",
+                                "display": "Able to manage pain without pain killers"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "2",
+                                "display": "Complete relief of pain with pain killers"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "3",
+                                "display": "Moderate relief of pain with pain killers"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "4",
+                                "display": "Very little relief of pain with pain killers"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "5",
+                                "display": "No relief/no effect, and does not use due to not helpful"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.14.6",
+                    "text": "Pain Intensity Score: ",
+                    "type": "choice",
+                    "required": false,
+                    "enableBehavior": "any",
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "4.14.1",
+                            "answerOption": {
+                                "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
+                                "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.14.2",
+                            "answerOption": {
+                                "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
+                                "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
+                            }
+                        }
+                    ],
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "1",
+                                "display": "No pain"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "2",
+                                "display": "Mild"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "3",
+                                "display": "Moderate"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "4",
+                                "display": "Severe"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "5",
+                                "display": "Very Severe"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.14.7",
+                    "text": "Disability Index Score/Results: ",
+                    "type": "choice",
+                    "required": false,
+                    "enableBehavior": "any",
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "4.14.1",
+                            "answerOption": {
+                                "code": "Oswestry Disability Index (ODI)",
+                                "display": "Oswestry Disability Index (ODI)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.14.2",
+                            "answerOption": {
+                                "code": "Oswestry Disability Index (ODI)",
+                                "display": "Oswestry Disability Index (ODI)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.14.1",
+                            "answerOption": {
+                                "code": "Oswestry Low Back Pain Disability Questionnaire (OSW)",
+                                "display": "Oswestry Low Back Pain Disability Questionnaire (OSW)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.14.2",
+                            "answerOption": {
+                                "code": "Oswestry Low Back Pain Disability Questionnaire (OSW)",
+                                "display": "Oswestry Low Back Pain Disability Questionnaire (OSW)"
+                            }
+                        }
+                    ],
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "0 - 4 No disability",
+                                "display": "0 - 4 No disability"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "5 - 14 Mild disability",
+                                "display": "5 - 14 Mild disability"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "15 - 24 Moderate disability",
+                                "display": "15 - 24 Moderate disability"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "25 - 34 Severe disability",
+                                "display": "25 - 34 Severe disability"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "35 - 50 Completely disabled",
+                                "display": "35 - 50 Completely disabled"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.14.8",
+                    "text": "Pain interference with ADLs Score/Results: ",
+                    "type": "integer",
+                    "required": false,
+                    "enableBehavior": "any",
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "4.14.1",
+                            "answerOption": {
+                                "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
+                                "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.14.2",
+                            "answerOption": {
+                                "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
+                                "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.15",
+                    "text": "Past pain medications attempted: ",
+                    "type": "choice",
+                    "required": false,
+                    "repeats": true,
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "code": "D018712",
+                                "display": "Non-opioid analgesic(s)"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "D000701",
+                                "display": "Opioid analgesic(s)"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "D000894",
+                                "display": "Nonsteroidal anti-inflammatory drugs (NSAIDs)"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "41041",
+                                "display": "Muscle relaxants"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "D000927",
+                                "display": "Anti-seizure medications"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "D000928",
+                                "display": "Antidepressants"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.16",
+                    "text": "Patient's therapeutic response: ",
+                    "type": "choice",
+                    "required": false,
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "code": "84190002",
+                                "display": "Poor/minimal"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "21768001",
+                                "display": "Fair response"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "78469002",
+                                "display": "Good response"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "63432002",
+                                "display": "Excellent"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "399056007",
+                                "display": "Complete"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.17",
+                    "text": "Past non-parmacologic treatments attempted and failed to manage pain. Select all that apply.",
+                    "type": "choice",
+                    "required": false,
+                    "repeats": true,
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "code": "183051005",
+                                "display": "Recommendation to rest"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "182660006",
+                                "display": "Cold Therapy"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "266694003",
+                                "display": "Heat Therapy"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "C26387",
+                                "display": "Exercise(s) for pain management"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "Diet",
+                                "display": "Diet"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "Other",
+                                "display": "Other"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.18",
+                    "text": "Specify other:",
+                    "type": "text",
+                    "required": false,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "4.17",
+                            "answerCoding": {
+                                "code": "183051005",
+                                "display": "Recommendation to rest"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.19",
+                    "text": "Response to Physical Therapy",
+                    "type": "choice",
+                    "required": false,
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "code": "84190002",
+                                "display": "Poor/minimal"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "21768001",
+                                "display": "Fair response"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "78469002",
+                                "display": "Good response"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "63432002",
+                                "display": "Excellent"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "399056007",
+                                "display": "Complete"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.20",
+                    "text": "Response to Acupuncture",
+                    "type": "choice",
+                    "required": false,
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "code": "84190002",
+                                "display": "Poor/minimal"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "21768001",
+                                "display": "Fair response"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "78469002",
+                                "display": "Good response"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "63432002",
+                                "display": "Excellent"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "399056007",
+                                "display": "Complete"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "linkId": "5",
+            "text": "Post Procedure Pain",
+            "type": "group",
+            "item":[
+                {
+                    "linkId": "5.1",
+                    "text": "Post procedure pain relief results:",
+                    "type": "text",
+                    "required": false
+                },
+                {
+                    "linkId": "5.2",
+                    "text": "Which of the following procedures have been performed and their documented follow up results?",
+                    "type": "choice",
+                    "required": false,
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "1st diagnostic injection follow up",
+                                "display": "1st diagnostic injection follow up"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "2nd diagnostic injection follow up",
+                                "display": "2nd diagnostic injection follow up"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Initial RFA intervention follow up",
+                                "display": "Initial RFA intervention follow up"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Repeat/second RFA intervention follow up",
+                                "display": "Repeat/second RFA intervention follow up"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Therapeutic intervention follow up",
+                                "display": "Therapeutic intervention follow up"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Facet cyst Aspiration/Rupture pain follow up",
+                                "display": "Facet cyst Aspiration/Rupture pain follow up"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.3.1",
+                    "text": "What is the date of the 1st diagnostic injection pain follow up?",
+                    "type": "date",
+                    "required": false,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "5.2",
+                            "answerCoding": {
+                                "code": "1st diagnostic injection follow up",
+                                "display": "1st diagnostic injection follow up"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.3.2",
+                    "text": "What is the date of the 2nd diagnostic injection pain follow up?",
+                    "type": "date",
+                    "required": false,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "5.2",
+                            "answerCoding": {
+                                "code": "2nd diagnostic injection follow up",
+                                "display": "2nd diagnostic injection follow up"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.3.3",
+                    "text": "What is the date of the initial RFA intervention pain follow up?",
+                    "type": "date",
+                    "required": false,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "5.2",
+                            "answerCoding": {
+                                "code": "Initial RFA intervention follow up",
+                                "display": "Initial RFA intervention follow up"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.3.4",
+                    "text": "What is the date of the  repeat/second RFA intervention pain follow up?",
+                    "type": "date",
+                    "required": false,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "5.2",
+                            "answerCoding": {
+                                "code": "Repeat/second RFA intervention follow up",
+                                "display": "Repeat/second RFA intervention follow up"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.3.5",
+                    "text": "What is the date of the therapeutic intervention pain follow up?",
+                    "type": "date",
+                    "required": false,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "5.2",
+                            "answerCoding": {
+                                "code": "Therapeutic intervention follow up",
+                                "display": "Therapeutic intervention follow up"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.3.6",
+                    "text": "What is the date of the IA injection performed with synovial cyst aspiration pain follow up?",
+                    "type": "date",
+                    "required": false,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "5.2",
+                            "answerCoding": {
+                                "code": "Facet cyst Aspiration/Rupture pain follow up",
+                                "display": "Facet cyst Aspiration/Rupture pain follow up"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.4.1",
+                    "text": "Did the patient experienced pain relief results after the first diagnostic procedure that indicates there has been a consistent positive pain relief response of at least 80% ?",
+                    "type": "boolean",
+                    "required": false,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "5.2",
+                            "answerCoding": {
+                                "code": "1st diagnostic injection follow up",
+                                "display": "1st diagnostic injection follow up"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.4.2",
+                    "text": "Did the patient experienced pain relief results after the 2nd diagnostic procedure that indicates there has been a consistent positive pain relief response of at least 80% ?",
+                    "type": "boolean",
+                    "required": false,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "5.2",
+                            "answerCoding": {
+                                "code": "2nd diagnostic injection follow up",
+                                "display": "2nd diagnostic injection follow up"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.4.3",
+                    "text": "Did the patient experience pain relief results after the RFA procedure that indicates there has been a consistent positive pain relief response of at least 80% ?",
+                    "type": "boolean",
+                    "required": false,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "5.2",
+                            "answerCoding": {
+                                "code": "Initial RFA intervention follow up",
+                                "display": "Initial RFA intervention follow up"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.4.4",
+                    "text": "Did the patient experience pain relief results after the second RFA procedure that indicates there has been a consistent positive pain relief response of at least 50% improvement for at least six months or at least 50% improvement in ADL performance?",
+                    "type": "boolean",
+                    "required": false,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "5.2",
+                            "answerCoding": {
+                                "code": "Repeat/second RFA intervention follow up",
+                                "display": "Repeat/second RFA intervention follow up"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.4.5",
+                    "text": "Did the patient experience pain relief results after the therapeutic procedure that indicates there has been at least consistent 50% pain relief for at least three (3) months from the prior therapeutic procedure or at least 50% consistent improvement in the ability to perform previously painful movements and ADLs as compared to baseline measurement using the same scale?",
+                    "type": "boolean",
+                    "required": false,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "5.2",
+                            "answerCoding": {
+                                "code": "Therapeutic intervention follow up",
+                                "display": "Therapeutic intervention follow up"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.5",
+                    "text": "Pain Scale used.",
+                    "type": "choice",
+                    "required": false,
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "Numerical Pain Rating Scale (NRS) (0-10)",
+                                "display": "Numerical Pain Rating Scale (NRS) (0-10)"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Visual Analog Scale (VAS) Score",
+                                "display": "Visual Analog Scale (VAS) Score"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Wong-Baker FACES",
+                                "display": "Wong-Baker FACES"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Verbal Rating Scale for pain intensity",
+                                "display": "Verbal Rating Scale for pain intensity"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Pain Assessment in Advanced Dementia Scale (PAINAD)",
+                                "display": "Pain Assessment in Advanced Dementia Scale (PAINAD)"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Other",
+                                "display": "Other"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "No tool used",
+                                "display": "No tool used"
+                            }
+                        }
+                    ],
+                    "enableBehavior": "any",
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "5.2",
+                            "answerOption": {
+                                "code": "Facet cyst Aspiration/Rupture pain follow up",
+                                "display": "Facet cyst Aspiration/Rupture pain follow up"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "5.4.1",
+                            "answerBoolean": true
+                        },
+                        {
+                            "operator": "=",
+                            "question": "5.4.2",
+                            "answerBoolean": true
+                        },
+                        {
+                            "operator": "=",
+                            "question": "5.4.3",
+                            "answerBoolean": true
+                        },
+                        {
+                            "operator": "=",
+                            "question": "5.4.4",
+                            "answerBoolean": true
+                        },
+                        {
+                            "operator": "=",
+                            "question": "5.4.5",
+                            "answerBoolean": true
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.5.1",
+                    "text": "Pain duration",
+                    "type": "quantity",
+                    "required": false,
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "5.5",
+                            "answerOption": {
+                                "code": "Numerical Pain Rating Scale (NRS) (0-10)",
+                                "display": "Numerical Pain Rating Scale (NRS) (0-10)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "5.5",
+                            "answerOption": {
+                                "code": "Visual Analog Scale (VAS) Score",
+                                "display": "Visual Analog Scale (VAS) Score"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "5.5",
+                            "answerOption": {
+                                "code": "Wong-Baker FACES",
+                                "display": "Wong-Baker FACES"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "5.5",
+                            "answerOption": {
+                                "code": "Verbal Rating Scale for pain intensity",
+                                "display": "Verbal Rating Scale for pain intensity"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "5.5",
+                            "answerOption": {
+                                "code": "Pain Assessment in Advanced Dementia Scale (PAINAD)",
+                                "display": "Pain Assessment in Advanced Dementia Scale (PAINAD)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "5.5",
+                            "answerOption": {
+                                "code": "Other",
+                                "display": "Other"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.5.2",
+                    "text": "Pain Intensity or Severity (Pain Score)",
+                    "type": "integer",
+                    "required": false,
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "5.5",
+                            "answerOption": {
+                                "code": "Numerical Pain Rating Scale (NRS) (0-10)",
+                                "display": "Numerical Pain Rating Scale (NRS) (0-10)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "5.5",
+                            "answerOption": {
+                                "code": "Visual Analog Scale (VAS) Score",
+                                "display": "Visual Analog Scale (VAS) Score"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "5.5",
+                            "answerOption": {
+                                "code": "Wong-Baker FACES",
+                                "display": "Wong-Baker FACES"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "5.5",
+                            "answerOption": {
+                                "code": "Verbal Rating Scale for pain intensity",
+                                "display": "Verbal Rating Scale for pain intensity"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "5.5",
+                            "answerOption": {
+                                "code": "Pain Assessment in Advanced Dementia Scale (PAINAD)",
+                                "display": "Pain Assessment in Advanced Dementia Scale (PAINAD)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "5.5",
+                            "answerOption": {
+                                "code": "Other",
+                                "display": "Other"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.6.1",
+                    "text": "Which functional assessment (disability) scale was used?",
+                    "type": "choice",
+                    "required": false,
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "Pain Disability Index",
+                                "display": "Pain Disability Index"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Oswestry Disability Index (ODI)",
+                                "display": "Oswestry Disability Index (ODI)"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Oswestry Low Back Pain Disability Questionnaire (OSW)",
+                                "display": "Oswestry Low Back Pain Disability Questionnaire (OSW)"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Quebec Low Back Pain Disability Scare (QUE)",
+                                "display": "Quebec Low Back Pain Disability Scare (QUE)"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Roland Morris Pain Scale",
+                                "display": "Roland Morris Pain Scale"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Back Pain Functional Scale (BPFS)",
+                                "display": "Back Pain Functional Scale (BPFS)"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
+                                "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "No functional assessment tool used",
+                                "display": "No functional assessment tool used"
+                            }
+                        }
+                    ],
+                    "enableBehavior": "any",
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "5.2",
+                            "answerOption": {
+                                "code": "Facet cyst Aspiration/Rupture pain follow up",
+                                "display": "Facet cyst Aspiration/Rupture pain follow up"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "5.4.1",
+                            "answerBoolean": true
+                        },
+                        {
+                            "operator": "=",
+                            "question": "5.4.2",
+                            "answerBoolean": true
+                        },
+                        {
+                            "operator": "=",
+                            "question": "5.4.3",
+                            "answerBoolean": true
+                        },
+                        {
+                            "operator": "=",
+                            "question": "5.4.4",
+                            "answerBoolean": true
+                        },
+                        {
+                            "operator": "=",
+                            "question": "5.4.5",
+                            "answerBoolean": true
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.6.2",
+                    "text": "Score/Results: ",
+                    "type": "integer",
+                    "required": false,
+                    "enableBehavior": "any",
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "5.6.1",
+                            "answerOption": {
+                                "code": "Pain Disability Index",
+                                "display": "Pain Disability Index"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "5.6.1",
+                            "answerOption": {
+                                "code": "Quebec Low Back Pain Disability Scare (QUE)",
+                                "display": "Quebec Low Back Pain Disability Scare (QUE)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "5.6.1",
+                            "answerOption": {
+                                "code": "Roland Morris Pain Scale",
+                                "display": "Roland Morris Pain Scale"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "5.6.1",
+                            "answerOption": {
+                                "code": "Back Pain Functional Scale (BPFS)",
+                                "display": "Back Pain Functional Scale (BPFS)"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.6.3",
+                    "text": "Pain Intensity Score: ",
+                    "type": "integer",
+                    "required": false,
+                    "enableBehavior": "any",
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "5.6.1",
+                            "answerOption": {
+                                "code": "Oswestry Disability Index (ODI)",
+                                "display": "Oswestry Disability Index (ODI)"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.6.4",
+                    "text": "Pain Intensity Score: ",
+                    "type": "choice",
+                    "required": false,
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "5.6.1",
+                            "answerOption": {
+                                "code": "Oswestry Low Back Pain Disability Questionnaire (OSW)",
+                                "display": "Oswestry Low Back Pain Disability Questionnaire (OSW)"
+                            }
+                        }
+                    ],
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "0",
+                                "display": "No pain or can tolerate pain without pain killers"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "1",
+                                "display": "Able to manage pain without pain killers"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "2",
+                                "display": "Complete relief of pain with pain killers"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "3",
+                                "display": "Moderate relief of pain with pain killers"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "4",
+                                "display": "Very little relief of pain with pain killers"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "5",
+                                "display": "No relief/no effect, and does not use due to not helpful"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.6.5",
+                    "text": "Pain Intensity Score: ",
+                    "type": "choice",
+                    "required": false,
+                    "enableBehavior": "any",
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "5.6.1",
+                            "answerOption": {
+                                "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
+                                "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
+                            }
+                        }
+                    ],
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "1",
+                                "display": "No pain"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "2",
+                                "display": "Mild"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "3",
+                                "display": "Moderate"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "4",
+                                "display": "Severe"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "5",
+                                "display": "Very Severe"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.6.6",
+                    "text": "Disability Index Score/Results: ",
+                    "type": "choice",
+                    "required": false,
+                    "enableBehavior": "any",
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "5.6.1",
+                            "answerOption": {
+                                "code": "Oswestry Disability Index (ODI)",
+                                "display": "Oswestry Disability Index (ODI)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "5.6.1",
+                            "answerOption": {
+                                "code": "Oswestry Low Back Pain Disability Questionnaire (OSW)",
+                                "display": "Oswestry Low Back Pain Disability Questionnaire (OSW)"
+                            }
+                        }
+                    ],
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "0 - 4 No disability",
+                                "display": "0 - 4 No disability"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "5 - 14 Mild disability",
+                                "display": "5 - 14 Mild disability"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "15 - 24 Moderate disability",
+                                "display": "15 - 24 Moderate disability"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "25 - 34 Severe disability",
+                                "display": "25 - 34 Severe disability"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "35 - 50 Completely disabled",
+                                "display": "35 - 50 Completely disabled"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.6.7",
+                    "text": "Pain interference with ADLs Score/Results: ",
+                    "type": "integer",
+                    "required": false,
+                    "enableBehavior": "any",
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "5.6.1",
+                            "answerOption": {
+                                "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
+                                "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "linkId": "6",
+            "text": "History and Physical",
+            "type": "group",
+            "item": [
+                {
+                    "linkId": "6.1",
+                    "text": "The History & Physical note that supports the procedure:",
+                    "type": "display",
+                    "required": true
+                },
+                {
+                    "linkId": "6.2",
+                    "text": "Date of the H&P:",
+                    "type": "date",
+                    "required": false
+                },
+                {
+                    "linkId": "6.3",
+                    "text": "Chief Complaint:",
+                    "type": "text",
+                    "required": false
+                },
+                {
+                    "linkId": "6.4",
+                    "text": "History of Present Illness:",
+                    "type": "text",
+                    "required": false
+                },
+                {
+                    "linkId": "6.5",
+                    "text": "Reason for visit:",
+                    "type": "text",
+                    "required": false
+                },
+                {
+                    "linkId": "6.6",
+                    "text": "Procedure/Surgical History:",
+                    "type": "text",
+                    "required": false
+                },
+                {
+                    "linkId": "6.7",
+                    "text": "Medical History:",
+                    "type": "text",
+                    "required": false
+                },
+                {
+                    "linkId": "6.8",
+                    "text": "Social History:",
+                    "type": "text",
+                    "required": false
+                },
+                {
+                    "linkId": "6.9",
+                    "text": "Family History:",
+                    "type": "text",
+                    "required": false
+                },
+                {
+                    "linkId": "6.10",
+                    "text": "Allergies:",
+                    "type": "text",
+                    "required": false
+                },
+                {
+                    "linkId": "6.11",
+                    "text": "Medications:",
+                    "type": "text",
+                    "required": false
+                },
+                {
+                    "linkId": "6.12",
+                    "text": "Review of Systems:",
+                    "type": "text",
+                    "required": false
+                },
+                {
+                    "linkId": "6.13",
+                    "text": "Physical Examination:",
+                    "type": "text",
+                    "required": false
+                },
+                {
+                    "linkId": "6.14",
+                    "text": "Results (Diagnostic findings):",
+                    "type": "text",
+                    "required": false
+                },
+                {
+                    "linkId": "6.15",
+                    "text": "Vitals T/P/RR/BP:",
+                    "type": "text",
+                    "required": false
+                },
+                {
+                    "linkId": "6.16",
+                    "text": "NPI of provider that signed::",
+                    "type": "string",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "linkId": "7",
+            "text": "Diagnostic Test Results",
+            "type": "group",
+            "item": [
+                {
+                    "linkId": "7.1",
+                    "text": "Diagnostic Imaging Report(s) Results available:",
+                    "type": "choice",
+                    "required": false,
+                    "repeats": true,
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "code": "72541-6",
+                                "system": "https://loinc.org",
+                                "display": "RF Guidance for denervation of Spine Cervical Facet Joint"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "30812-2",
+                                "system": "https://loinc.org",
+                                "display": "RF Guidance for injection of Spine Cervical Facet Joint"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "72542-4",
+                                "system": "https://loinc.org",
+                                "display": "RF Guidance for denervation of Lumbar Spine Facet Joint"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "30814-8",
+                                "system": "https://loinc.org",
+                                "display": "RF Guidance for injection of Spine Thoracic Facet Joint"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "90335-1",
+                                "system": "https://loinc.org",
+                                "display": "CT Guidance for injection of Lumbar Spine Facet Joint"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "30817-1",
+                                "system": "https://loinc.org",
+                                "display": "RF Guidance for injection of Lumbar Spine Facet Joint"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "90334-4",
+                                "system": "https://loinc.org",
+                                "display": "CT Guidance for injection of Spine Thoracic Facet Joint"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "26323-6",
+                                "system": "https://loinc.org",
+                                "display": "RF Guidance for injection of Spine facet joint - left"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "26324-4",
+                                "system": "https://loinc.org",
+                                "display": "RF Guidance for injection of Spine facet joint - right"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "26322-8",
+                                "system": "https://loinc.org",
+                                "display": "RF Guidance for injection of Spine facet joint - bilateral"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "72540-8",
+                                "system": "https://loinc.org",
+                                "display": "RF Guidance for denervation of Spine facet joint"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "87160-8",
+                                "system": "https://loinc.org",
+                                "display": "Guidance for injection of Spine facet joint"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "24931-8",
+                                "system": "https://loinc.org",
+                                "display": "RF Guidance for injection of Spine facet joint"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "30579-7",
+                                "system": "https://loinc.org",
+                                "display": "CT Guidance for injection of Spine facet joint"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "89710-8",
+                                "system": "https://loinc.org",
+                                "display": "CT Guidance for 2 levels injection of Spine facet joint"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "89709-0",
+                                "system": "https://loinc.org",
+                                "display": "CT Guidance for greater than 2 levels for injection of Spine facet joint"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "89711-6",
+                                "system": "https://loinc.org",
+                                "display": "CT Guidance for 1 level injection of Spine facet joint"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "Other",
+                                "display": "Other"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "7.2.1",
+                    "text": "RF Guidance for denervation of Spine Cervical Facet Joint",
+                    "type": "group",
+                    "link": [
+                        {
+                            "linkId": "7.2.1.1",
+                            "text": "Date:",
+                            "type": "date",
+                            "required": true
+                        },
+                        {
+                            "linkId": "7.2.1.2",
+                            "text": "Conclusion/Results:",
+                            "type": "text",
+                            "required": false
+                        },
+                        {
+                            "linkId": "7.2.1.3",
+                            "text": "NPI of provider that signed:",
+                            "type": "string",
+                            "required": true
+                        }
+                    ],
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "7.1",
+                            "answerOption": {
+                                "code": "72541-6",
+                                "system": "https://loinc.org",
+                                "display": "RF Guidance for denervation of Spine Cervical Facet Joint"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "7.2.2",
+                    "text": "RF Guidance for injection of Spine Cervical Facet Joint",
+                    "type": "group",
+                    "link": [
+                        {
+                            "linkId": "7.2.2.1",
+                            "text": "Date:",
+                            "type": "date",
+                            "required": true
+                        },
+                        {
+                            "linkId": "7.2.2.2",
+                            "text": "Conclusion/Results:",
+                            "type": "text",
+                            "required": false
+                        },
+                        {
+                            "linkId": "7.2.2.3",
+                            "text": "NPI of provider that signed:",
+                            "type": "string",
+                            "required": true
+                        }
+                    ],
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "7.1",
+                            "answerOption": {
+                                "code": "30812-2",
+                                "system": "https://loinc.org",
+                                "display": "RF Guidance for injection of Spine Cervical Facet Joint"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "7.2.3",
+                    "text": "RF Guidance for denervation of Lumbar Spine Facet Joint",
+                    "type": "group",
+                    "link": [
+                        {
+                            "linkId": "7.2.3.1",
+                            "text": "Date:",
+                            "type": "date",
+                            "required": true
+                        },
+                        {
+                            "linkId": "7.2.3.2",
+                            "text": "Conclusion/Results:",
+                            "type": "text",
+                            "required": false
+                        },
+                        {
+                            "linkId": "7.2.3.3",
+                            "text": "NPI of provider that signed:",
+                            "type": "string",
+                            "required": true
+                        }
+                    ],
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "7.1",
+                            "answerOption": {
+                                "code": "72542-4",
+                                "system": "https://loinc.org",
+                                "display": "RF Guidance for denervation of Lumbar Spine Facet Joint"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "7.2.4",
+                    "text": "RF Guidance for injection of Spine Thoracic Facet Joint",
+                    "type": "group",
+                    "link": [
+                        {
+                            "linkId": "7.2.4.1",
+                            "text": "Date:",
+                            "type": "date",
+                            "required": true
+                        },
+                        {
+                            "linkId": "7.2.4.2",
+                            "text": "Conclusion/Results:",
+                            "type": "text",
+                            "required": false
+                        },
+                        {
+                            "linkId": "7.2.4.3",
+                            "text": "NPI of provider that signed:",
+                            "type": "string",
+                            "required": true
+                        }
+                    ],
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "7.1",
+                            "answerOption": {
+                                "code": "30814-8",
+                                "system": "https://loinc.org",
+                                "display": "RF Guidance for injection of Spine Thoracic Facet Joint"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "7.2.5",
+                    "text": "CT Guidance for injection of Lumbar Spine Facet Joint",
+                    "type": "group",
+                    "link": [
+                        {
+                            "linkId": "7.2.5.1",
+                            "text": "Date:",
+                            "type": "date",
+                            "required": true
+                        },
+                        {
+                            "linkId": "7.2.5.2",
+                            "text": "Conclusion/Results:",
+                            "type": "text",
+                            "required": false
+                        },
+                        {
+                            "linkId": "7.2.5.3",
+                            "text": "NPI of provider that signed:",
+                            "type": "string",
+                            "required": true
+                        }
+                    ],
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "7.1",
+                            "answerOption": {
+                                "code": "90335-1",
+                                "system": "https://loinc.org",
+                                "display": "CT Guidance for injection of Lumbar Spine Facet Joint"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "7.2.6",
+                    "text": "RF Guidance for injection of Lumbar Spine Facet Joint",
+                    "type": "group",
+                    "link": [
+                        {
+                            "linkId": "7.2.6.1",
+                            "text": "Date:",
+                            "type": "date",
+                            "required": true
+                        },
+                        {
+                            "linkId": "7.2.6.2",
+                            "text": "Conclusion/Results:",
+                            "type": "text",
+                            "required": false
+                        },
+                        {
+                            "linkId": "7.2.6.3",
+                            "text": "NPI of provider that signed:",
+                            "type": "string",
+                            "required": true
+                        }
+                    ],
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "7.1",
+                            "answerOption": {
+                                "code": "30817-1",
+                                "system": "https://loinc.org",
+                                "display": "RF Guidance for injection of Lumbar Spine Facet Joint"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "7.2.7",
+                    "text": "CT Guidance for injection of Spine Thoracic Facet Joint",
+                    "type": "group",
+                    "link": [
+                        {
+                            "linkId": "7.2.7.1",
+                            "text": "Date:",
+                            "type": "date",
+                            "required": true
+                        },
+                        {
+                            "linkId": "7.2.7.2",
+                            "text": "Conclusion/Results:",
+                            "type": "text",
+                            "required": false
+                        },
+                        {
+                            "linkId": "7.2.7.3",
+                            "text": "NPI of provider that signed:",
+                            "type": "string",
+                            "required": true
+                        }
+                    ],
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "7.1",
+                            "answerOption": {
+                                "code": "90334-4",
+                                "system": "https://loinc.org",
+                                "display": "CT Guidance for injection of Spine Thoracic Facet Joint"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "7.2.8",
+                    "text": "RF Guidance for injection of Spine facet joint - left",
+                    "type": "group",
+                    "link": [
+                        {
+                            "linkId": "7.2.8.1",
+                            "text": "Date:",
+                            "type": "date",
+                            "required": true
+                        },
+                        {
+                            "linkId": "7.2.8.2",
+                            "text": "Conclusion/Results:",
+                            "type": "text",
+                            "required": false
+                        },
+                        {
+                            "linkId": "7.2.8.3",
+                            "text": "NPI of provider that signed:",
+                            "type": "string",
+                            "required": true
+                        }
+                    ],
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "7.1",
+                            "answerOption": {
+                                "code": "26323-6",
+                                "system": "https://loinc.org",
+                                "display": "RF Guidance for injection of Spine facet joint - left"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "7.2.9",
+                    "text": "RF Guidance for injection of Spine facet joint - right",
+                    "type": "group",
+                    "link": [
+                        {
+                            "linkId": "7.2.9.1",
+                            "text": "Date:",
+                            "type": "date",
+                            "required": true
+                        },
+                        {
+                            "linkId": "7.2.9.2",
+                            "text": "Conclusion/Results:",
+                            "type": "text",
+                            "required": false
+                        },
+                        {
+                            "linkId": "7.2.9.3",
+                            "text": "NPI of provider that signed:",
+                            "type": "string",
+                            "required": true
+                        }
+                    ],
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "7.1",
+                            "answerOption": {
+                                "code": "26324-4",
+                                "system": "https://loinc.org",
+                                "display": "RF Guidance for injection of Spine facet joint - right"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "7.2.10",
+                    "text": "RF Guidance for injection of Spine facet joint - bilateral",
+                    "type": "group",
+                    "link": [
+                        {
+                            "linkId": "7.2.10.1",
+                            "text": "Date:",
+                            "type": "date",
+                            "required": true
+                        },
+                        {
+                            "linkId": "7.2.10.2",
+                            "text": "Conclusion/Results:",
+                            "type": "text",
+                            "required": false
+                        },
+                        {
+                            "linkId": "7.2.10.3",
+                            "text": "NPI of provider that signed:",
+                            "type": "string",
+                            "required": true
+                        }
+                    ],
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "7.1",
+                            "answerOption": {
+                                "code": "26322-8",
+                                "system": "https://loinc.org",
+                                "display": "RF Guidance for injection of Spine facet joint - bilateral"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "7.2.11",
+                    "text": "RF Guidance for denervation of Spine facet joint",
+                    "type": "group",
+                    "link": [
+                        {
+                            "linkId": "7.2.11.1",
+                            "text": "Date:",
+                            "type": "date",
+                            "required": true
+                        },
+                        {
+                            "linkId": "7.2.11.2",
+                            "text": "Conclusion/Results:",
+                            "type": "text",
+                            "required": false
+                        },
+                        {
+                            "linkId": "7.2.11.3",
+                            "text": "NPI of provider that signed:",
+                            "type": "string",
+                            "required": true
+                        }
+                    ],
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "7.1",
+                            "answerOption": {
+                                "code": "72540-8",
+                                "system": "https://loinc.org",
+                                "display": "RF Guidance for denervation of Spine facet joint"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "7.2.12",
+                    "text": "Guidance for injection of Spine facet joint",
+                    "type": "group",
+                    "link": [
+                        {
+                            "linkId": "7.2.12.1",
+                            "text": "Date:",
+                            "type": "date",
+                            "required": true
+                        },
+                        {
+                            "linkId": "7.2.12.2",
+                            "text": "Conclusion/Results:",
+                            "type": "text",
+                            "required": false
+                        },
+                        {
+                            "linkId": "7.2.12.3",
+                            "text": "NPI of provider that signed:",
+                            "type": "string",
+                            "required": true
+                        }
+                    ],
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "7.1",
+                            "answerOption": {
+                                "code": "87160-8",
+                                "system": "https://loinc.org",
+                                "display": "Guidance for injection of Spine facet joint"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "7.2.13",
+                    "text": "RF Guidance for injection of Spine facet joint",
+                    "type": "group",
+                    "link": [
+                        {
+                            "linkId": "7.2.13.1",
+                            "text": "Date:",
+                            "type": "date",
+                            "required": true
+                        },
+                        {
+                            "linkId": "7.2.13.2",
+                            "text": "Conclusion/Results:",
+                            "type": "text",
+                            "required": false
+                        },
+                        {
+                            "linkId": "7.2.13.3",
+                            "text": "NPI of provider that signed:",
+                            "type": "string",
+                            "required": true
+                        }
+                    ],
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "7.1",
+                            "answerOption": {
+                                "code": "24931-8",
+                                "system": "https://loinc.org",
+                                "display": "RF Guidance for injection of Spine facet joint"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "7.2.14",
+                    "text": "CT Guidance for injection of Spine facet joint",
+                    "type": "group",
+                    "link": [
+                        {
+                            "linkId": "7.2.14.1",
+                            "text": "Date:",
+                            "type": "date",
+                            "required": true
+                        },
+                        {
+                            "linkId": "7.2.14.2",
+                            "text": "Conclusion/Results:",
+                            "type": "text",
+                            "required": false
+                        },
+                        {
+                            "linkId": "7.2.14.3",
+                            "text": "NPI of provider that signed:",
+                            "type": "string",
+                            "required": true
+                        }
+                    ],
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "7.1",
+                            "answerOption": {
+                                "code": "30579-7",
+                                "system": "https://loinc.org",
+                                "display": "CT Guidance for injection of Spine facet joint"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "7.2.15",
+                    "text": "CT Guidance for 2 levels injection of Spine facet joint",
+                    "type": "group",
+                    "link": [
+                        {
+                            "linkId": "7.2.15.1",
+                            "text": "Date:",
+                            "type": "date",
+                            "required": true
+                        },
+                        {
+                            "linkId": "7.2.15.2",
+                            "text": "Conclusion/Results:",
+                            "type": "text",
+                            "required": false
+                        },
+                        {
+                            "linkId": "7.2.15.3",
+                            "text": "NPI of provider that signed:",
+                            "type": "string",
+                            "required": true
+                        }
+                    ],
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "7.1",
+                            "answerOption": {
+                                "code": "89710-8",
+                                "system": "https://loinc.org",
+                                "display": "CT Guidance for 2 levels injection of Spine facet joint"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "7.2.16",
+                    "text": "CT Guidance for greater than 2 levels for injection of Spine facet joint",
+                    "type": "group",
+                    "link": [
+                        {
+                            "linkId": "7.2.16.1",
+                            "text": "Date:",
+                            "type": "date",
+                            "required": true
+                        },
+                        {
+                            "linkId": "7.2.16.2",
+                            "text": "Conclusion/Results:",
+                            "type": "text",
+                            "required": false
+                        },
+                        {
+                            "linkId": "7.2.16.3",
+                            "text": "NPI of provider that signed:",
+                            "type": "string",
+                            "required": true
+                        }
+                    ],
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "7.1",
+                            "answerOption": {
+                                "code": "89709-0",
+                                "system": "https://loinc.org",
+                                "display": "CT Guidance for greater than 2 levels for injection of Spine facet joint"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "7.2.17",
+                    "text": "CT Guidance for 1 level injection of Spine facet joint",
+                    "type": "group",
+                    "link": [
+                        {
+                            "linkId": "7.2.17.1",
+                            "text": "Date:",
+                            "type": "date",
+                            "required": true
+                        },
+                        {
+                            "linkId": "7.2.17.2",
+                            "text": "Conclusion/Results:",
+                            "type": "text",
+                            "required": false
+                        },
+                        {
+                            "linkId": "7.2.17.3",
+                            "text": "NPI of provider that signed:",
+                            "type": "string",
+                            "required": true
+                        }
+                    ],
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "7.1",
+                            "answerOption": {
+                                "code": "89711-6",
+                                "system": "https://loinc.org",
+                                "display": "CT Guidance for 1 level injection of Spine facet joint"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "7.2.18",
+                    "text": "Specify other:",
+                    "type": "text",
+                    "required": false,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "7.1",
+                            "answerOption": {
+                                "code": "Other",
+                                "display": "Other"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
