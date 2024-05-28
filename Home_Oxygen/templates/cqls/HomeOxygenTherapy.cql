@@ -267,9 +267,10 @@ define EncounterCondition:
 
 define OrderingPhysician:
   "DeviceRequest".requester PR
-    return singleton from ( [Practitioner] P
-        where 'Practitioner/' + P.id.value = PR.reference.value
-    )
+    return singleton from ( "DeviceRequest".contained C
+        where C is Practitioner
+        and 'Practitioner/' + C.id.value = PR.reference.value
+    ) as Practitioner
 
 define OrderingPhysicianNPI:
   ( First("OrderingPhysician".identifier identifier
