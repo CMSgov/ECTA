@@ -266,8 +266,8 @@ define EncounterCondition:
 
 
 define OrderingPhysician:
-  let physician: "DeviceRequest".requester PR
-  singleton from ( [Practitioner] P
+  "DeviceRequest".requester PR
+  let physician: singleton from ( [Practitioner] P
         where 'Practitioner/' + P.id.value = PR.reference.value
     )
 
