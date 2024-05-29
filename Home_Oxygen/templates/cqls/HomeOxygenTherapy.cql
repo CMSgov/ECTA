@@ -271,7 +271,7 @@ define OrderingPhysician:
         where 'Practitioner/' + P.id.value = PR.reference.value
     )
 
-    if (Physician is not null) then
+    if (physician is not null) then
       return physician 
     else 
       return singleton from ( "DeviceRequest".contained C
