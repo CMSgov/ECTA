@@ -266,18 +266,17 @@ define EncounterCondition:
 
 
 define OrderingPhysician:
-  "DeviceRequest".requester PR
-  let physician: singleton from ( [Practitioner] P
-        where 'Practitioner/' + P.id.value = PR.reference.value
-    )
-
-    if (physician is not null) then
-      return physician 
-    else 
-      return singleton from ( "DeviceRequest".contained C
-          where C is Practitioner
-          and 'Practitioner/' + C.id.value = PR.reference.value
+  if (singleton from ( [Practitioner] P
+        where 'Practitioner/' + P.id.value = "DeviceRequest".requester.reference.value
+      )) is not null then
+    singleton from ( [Practitioner] P
+        where 'Practitioner/' + P.id.value = "DeviceRequest".requester.reference.value
       )
+  else 
+    singleton from ( "DeviceRequest".contained.Practitioner P 
+    where P is not null 
+    and 'Practitioner/' + ReplaceMatches(P.id.value, '#', '') = "DeviceRequest".requester.reference.value
+    )
 
 define OrderingPhysicianNPI:
   ( First("OrderingPhysician".identifier identifier
