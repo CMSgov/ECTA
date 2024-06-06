@@ -690,7 +690,7 @@
                         {
                             "operator": "=",
                             "question": "2.15",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Other",
                                 "display": "Other"
                             } 
@@ -1072,7 +1072,7 @@
                         {
                             "operator": "=",
                             "question": "3.2",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Other",
                                 "display": "Other"
                             } 
@@ -1157,7 +1157,7 @@
                         {
                             "operator": "=",
                             "question": "3.3",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Other",
                                 "display": "Other"
                             } 
@@ -1288,7 +1288,7 @@
                         {
                             "operator": "=",
                             "question": "4.3",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Numerical Pain Rating Scale (NRS) (0-10)",
                                 "display": "Numerical Pain Rating Scale (NRS) (0-10)"
                             }
@@ -1296,7 +1296,7 @@
                         {
                             "operator": "=",
                             "question": "4.3",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Visual Analog Scale (VAS) Score",
                                 "display": "Visual Analog Scale (VAS) Score"
                             }
@@ -1304,7 +1304,7 @@
                         {
                             "operator": "=",
                             "question": "4.3",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Wong-Baker FACES",
                                 "display": "Wong-Baker FACES"
                             }
@@ -1312,7 +1312,7 @@
                         {
                             "operator": "=",
                             "question": "4.3",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Verbal Rating Scale for pain intensity",
                                 "display": "Verbal Rating Scale for pain intensity"
                             }
@@ -1320,7 +1320,7 @@
                         {
                             "operator": "=",
                             "question": "4.3",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Pain Assessment in Advanced Dementia Scale (PAINAD)",
                                 "display": "Pain Assessment in Advanced Dementia Scale (PAINAD)"
                             }
@@ -1328,7 +1328,7 @@
                         {
                             "operator": "=",
                             "question": "4.3",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Other",
                                 "display": "Other"
                             }
@@ -1344,7 +1344,7 @@
                         {
                             "operator": "=",
                             "question": "4.3",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Numerical Pain Rating Scale (NRS) (0-10)",
                                 "display": "Numerical Pain Rating Scale (NRS) (0-10)"
                             }
@@ -1352,7 +1352,7 @@
                         {
                             "operator": "=",
                             "question": "4.3",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Visual Analog Scale (VAS) Score",
                                 "display": "Visual Analog Scale (VAS) Score"
                             }
@@ -1360,7 +1360,7 @@
                         {
                             "operator": "=",
                             "question": "4.3",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Wong-Baker FACES",
                                 "display": "Wong-Baker FACES"
                             }
@@ -1368,7 +1368,7 @@
                         {
                             "operator": "=",
                             "question": "4.3",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Verbal Rating Scale for pain intensity",
                                 "display": "Verbal Rating Scale for pain intensity"
                             }
@@ -1376,7 +1376,7 @@
                         {
                             "operator": "=",
                             "question": "4.3",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Pain Assessment in Advanced Dementia Scale (PAINAD)",
                                 "display": "Pain Assessment in Advanced Dementia Scale (PAINAD)"
                             }
@@ -1384,7 +1384,7 @@
                         {
                             "operator": "=",
                             "question": "4.3",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Other",
                                 "display": "Other"
                             }
@@ -1450,7 +1450,7 @@
                         {
                             "operator": "=",
                             "question": "4.1",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Axial low back pain and its progression.",
                                 "display": "Axial low back pain and its progression."
                             }
@@ -1504,7 +1504,7 @@
                         {
                             "operator": "=",
                             "question": "4.1",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Neck pain and its progression.",
                                 "display": "Neck pain and its progression."
                             }
@@ -1521,7 +1521,7 @@
                         {
                             "operator": "=",
                             "question": "4.6.1",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Pain Disability Index",
                                 "display": "Pain Disability Index"
                             }
@@ -1529,7 +1529,7 @@
                         {
                             "operator": "=",
                             "question": "4.6.2",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Pain Disability Index",
                                 "display": "Pain Disability Index"
                             }
@@ -1537,7 +1537,7 @@
                         {
                             "operator": "=",
                             "question": "4.6.1",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Quebec Low Back Pain Disability Scare (QUE)",
                                 "display": "Quebec Low Back Pain Disability Scare (QUE)"
                             }
@@ -1545,7 +1545,7 @@
                         {
                             "operator": "=",
                             "question": "4.6.1",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Roland Morris Pain Scale",
                                 "display": "Roland Morris Pain Scale"
                             }
@@ -1553,7 +1553,7 @@
                         {
                             "operator": "=",
                             "question": "4.6.2",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Roland Morris Pain Scale",
                                 "display": "Roland Morris Pain Scale"
                             }
@@ -1561,7 +1561,7 @@
                         {
                             "operator": "=",
                             "question": "4.6.1",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Back Pain Functional Scale (BPFS)",
                                 "display": "Back Pain Functional Scale (BPFS)"
                             }
@@ -1569,7 +1569,7 @@
                         {
                             "operator": "=",
                             "question": "4.6.2",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Back Pain Functional Scale (BPFS)",
                                 "display": "Back Pain Functional Scale (BPFS)"
                             }
@@ -1586,7 +1586,7 @@
                         {
                             "operator": "=",
                             "question": "4.6.1",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Oswestry Disability Index (ODI)",
                                 "display": "Oswestry Disability Index (ODI)"
                             }
@@ -1594,7 +1594,7 @@
                         {
                             "operator": "=",
                             "question": "4.6.2",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Oswestry Disability Index (ODI)",
                                 "display": "Oswestry Disability Index (ODI)"
                             }
@@ -1610,7 +1610,7 @@
                         {
                             "operator": "=",
                             "question": "4.6.1",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Oswestry Low Back Pain Disability Questionnaire (OSW)",
                                 "display": "Oswestry Low Back Pain Disability Questionnaire (OSW)"
                             }
@@ -1665,7 +1665,7 @@
                         {
                             "operator": "=",
                             "question": "4.6.1",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
                                 "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
                             }
@@ -1673,7 +1673,7 @@
                         {
                             "operator": "=",
                             "question": "4.6.2",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
                                 "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
                             }
@@ -1722,7 +1722,7 @@
                         {
                             "operator": "=",
                             "question": "4.6.1",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Oswestry Disability Index (ODI)",
                                 "display": "Oswestry Disability Index (ODI)"
                             }
@@ -1730,7 +1730,7 @@
                         {
                             "operator": "=",
                             "question": "4.6.2",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Oswestry Disability Index (ODI)",
                                 "display": "Oswestry Disability Index (ODI)"
                             }
@@ -1738,7 +1738,7 @@
                         {
                             "operator": "=",
                             "question": "4.6.1",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Oswestry Low Back Pain Disability Questionnaire (OSW)",
                                 "display": "Oswestry Low Back Pain Disability Questionnaire (OSW)"
                             }
@@ -1746,7 +1746,7 @@
                         {
                             "operator": "=",
                             "question": "4.6.2",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Oswestry Low Back Pain Disability Questionnaire (OSW)",
                                 "display": "Oswestry Low Back Pain Disability Questionnaire (OSW)"
                             }
@@ -1795,7 +1795,7 @@
                         {
                             "operator": "=",
                             "question": "4.6.1",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
                                 "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
                             }
@@ -1803,7 +1803,7 @@
                         {
                             "operator": "=",
                             "question": "4.6.2",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
                                 "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
                             }
@@ -1955,7 +1955,7 @@
                         {
                             "operator": "=",
                             "question": "4.11",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Numerical Pain Rating Scale (NRS) (0-10)",
                                 "display": "Numerical Pain Rating Scale (NRS) (0-10)"
                             }
@@ -1963,7 +1963,7 @@
                         {
                             "operator": "=",
                             "question": "4.11",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Visual Analog Scale (VAS) Score",
                                 "display": "Visual Analog Scale (VAS) Score"
                             }
@@ -1971,7 +1971,7 @@
                         {
                             "operator": "=",
                             "question": "4.11",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Wong-Baker FACES",
                                 "display": "Wong-Baker FACES"
                             }
@@ -1979,7 +1979,7 @@
                         {
                             "operator": "=",
                             "question": "4.11",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Verbal Rating Scale for pain intensity",
                                 "display": "Verbal Rating Scale for pain intensity"
                             }
@@ -1987,7 +1987,7 @@
                         {
                             "operator": "=",
                             "question": "4.11",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Pain Assessment in Advanced Dementia Scale (PAINAD)",
                                 "display": "Pain Assessment in Advanced Dementia Scale (PAINAD)"
                             }
@@ -1995,7 +1995,7 @@
                         {
                             "operator": "=",
                             "question": "4.11",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Other",
                                 "display": "Other"
                             }
@@ -2011,7 +2011,7 @@
                         {
                             "operator": "=",
                             "question": "4.11",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Numerical Pain Rating Scale (NRS) (0-10)",
                                 "display": "Numerical Pain Rating Scale (NRS) (0-10)"
                             }
@@ -2019,7 +2019,7 @@
                         {
                             "operator": "=",
                             "question": "4.11",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Visual Analog Scale (VAS) Score",
                                 "display": "Visual Analog Scale (VAS) Score"
                             }
@@ -2027,7 +2027,7 @@
                         {
                             "operator": "=",
                             "question": "4.11",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Wong-Baker FACES",
                                 "display": "Wong-Baker FACES"
                             }
@@ -2035,7 +2035,7 @@
                         {
                             "operator": "=",
                             "question": "4.11",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Verbal Rating Scale for pain intensity",
                                 "display": "Verbal Rating Scale for pain intensity"
                             }
@@ -2043,7 +2043,7 @@
                         {
                             "operator": "=",
                             "question": "4.11",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Pain Assessment in Advanced Dementia Scale (PAINAD)",
                                 "display": "Pain Assessment in Advanced Dementia Scale (PAINAD)"
                             }
@@ -2051,7 +2051,7 @@
                         {
                             "operator": "=",
                             "question": "4.11",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Other",
                                 "display": "Other"
                             }
@@ -2117,7 +2117,7 @@
                         {
                             "operator": "=",
                             "question": "4.8",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Chronic low axial back pain greater than three months duration.",
                                 "display": "Chronic low axial back pain greater than three months duration."
                             }
@@ -2171,7 +2171,7 @@
                         {
                             "operator": "=",
                             "question": "4.8",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Chronic neck pain greater than three months duration.",
                                 "display": "Chronic neck pain greater than three months duration."
                             }
@@ -2188,7 +2188,7 @@
                         {
                             "operator": "=",
                             "question": "4.14.1",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Pain Disability Index",
                                 "display": "Pain Disability Index"
                             }
@@ -2196,7 +2196,7 @@
                         {
                             "operator": "=",
                             "question": "4.14.2",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Pain Disability Index",
                                 "display": "Pain Disability Index"
                             }
@@ -2204,7 +2204,7 @@
                         {
                             "operator": "=",
                             "question": "4.14.1",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Quebec Low Back Pain Disability Scare (QUE)",
                                 "display": "Quebec Low Back Pain Disability Scare (QUE)"
                             }
@@ -2212,7 +2212,7 @@
                         {
                             "operator": "=",
                             "question": "4.14.1",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Roland Morris Pain Scale",
                                 "display": "Roland Morris Pain Scale"
                             }
@@ -2220,7 +2220,7 @@
                         {
                             "operator": "=",
                             "question": "4.14.2",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Roland Morris Pain Scale",
                                 "display": "Roland Morris Pain Scale"
                             }
@@ -2228,7 +2228,7 @@
                         {
                             "operator": "=",
                             "question": "4.14.1",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Back Pain Functional Scale (BPFS)",
                                 "display": "Back Pain Functional Scale (BPFS)"
                             }
@@ -2236,7 +2236,7 @@
                         {
                             "operator": "=",
                             "question": "4.14.2",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Back Pain Functional Scale (BPFS)",
                                 "display": "Back Pain Functional Scale (BPFS)"
                             }
@@ -2253,7 +2253,7 @@
                         {
                             "operator": "=",
                             "question": "4.14.1",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Oswestry Disability Index (ODI)",
                                 "display": "Oswestry Disability Index (ODI)"
                             }
@@ -2261,7 +2261,7 @@
                         {
                             "operator": "=",
                             "question": "4.14.2",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Oswestry Disability Index (ODI)",
                                 "display": "Oswestry Disability Index (ODI)"
                             }
@@ -2277,7 +2277,7 @@
                         {
                             "operator": "=",
                             "question": "4.14.1",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Oswestry Low Back Pain Disability Questionnaire (OSW)",
                                 "display": "Oswestry Low Back Pain Disability Questionnaire (OSW)"
                             }
@@ -2332,7 +2332,7 @@
                         {
                             "operator": "=",
                             "question": "4.14.1",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
                                 "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
                             }
@@ -2340,7 +2340,7 @@
                         {
                             "operator": "=",
                             "question": "4.14.2",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
                                 "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
                             }
@@ -2389,7 +2389,7 @@
                         {
                             "operator": "=",
                             "question": "4.14.1",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Oswestry Disability Index (ODI)",
                                 "display": "Oswestry Disability Index (ODI)"
                             }
@@ -2397,7 +2397,7 @@
                         {
                             "operator": "=",
                             "question": "4.14.2",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Oswestry Disability Index (ODI)",
                                 "display": "Oswestry Disability Index (ODI)"
                             }
@@ -2405,7 +2405,7 @@
                         {
                             "operator": "=",
                             "question": "4.14.1",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Oswestry Low Back Pain Disability Questionnaire (OSW)",
                                 "display": "Oswestry Low Back Pain Disability Questionnaire (OSW)"
                             }
@@ -2413,7 +2413,7 @@
                         {
                             "operator": "=",
                             "question": "4.14.2",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Oswestry Low Back Pain Disability Questionnaire (OSW)",
                                 "display": "Oswestry Low Back Pain Disability Questionnaire (OSW)"
                             }
@@ -2462,7 +2462,7 @@
                         {
                             "operator": "=",
                             "question": "4.14.1",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
                                 "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
                             }
@@ -2470,7 +2470,7 @@
                         {
                             "operator": "=",
                             "question": "4.14.2",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
                                 "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
                             }
@@ -2984,7 +2984,7 @@
                         {
                             "operator": "=",
                             "question": "5.2",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Facet cyst Aspiration/Rupture pain follow up",
                                 "display": "Facet cyst Aspiration/Rupture pain follow up"
                             }
@@ -3025,7 +3025,7 @@
                         {
                             "operator": "=",
                             "question": "5.5",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Numerical Pain Rating Scale (NRS) (0-10)",
                                 "display": "Numerical Pain Rating Scale (NRS) (0-10)"
                             }
@@ -3033,7 +3033,7 @@
                         {
                             "operator": "=",
                             "question": "5.5",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Visual Analog Scale (VAS) Score",
                                 "display": "Visual Analog Scale (VAS) Score"
                             }
@@ -3041,7 +3041,7 @@
                         {
                             "operator": "=",
                             "question": "5.5",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Wong-Baker FACES",
                                 "display": "Wong-Baker FACES"
                             }
@@ -3049,7 +3049,7 @@
                         {
                             "operator": "=",
                             "question": "5.5",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Verbal Rating Scale for pain intensity",
                                 "display": "Verbal Rating Scale for pain intensity"
                             }
@@ -3057,7 +3057,7 @@
                         {
                             "operator": "=",
                             "question": "5.5",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Pain Assessment in Advanced Dementia Scale (PAINAD)",
                                 "display": "Pain Assessment in Advanced Dementia Scale (PAINAD)"
                             }
@@ -3065,7 +3065,7 @@
                         {
                             "operator": "=",
                             "question": "5.5",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Other",
                                 "display": "Other"
                             }
@@ -3081,7 +3081,7 @@
                         {
                             "operator": "=",
                             "question": "5.5",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Numerical Pain Rating Scale (NRS) (0-10)",
                                 "display": "Numerical Pain Rating Scale (NRS) (0-10)"
                             }
@@ -3089,7 +3089,7 @@
                         {
                             "operator": "=",
                             "question": "5.5",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Visual Analog Scale (VAS) Score",
                                 "display": "Visual Analog Scale (VAS) Score"
                             }
@@ -3097,7 +3097,7 @@
                         {
                             "operator": "=",
                             "question": "5.5",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Wong-Baker FACES",
                                 "display": "Wong-Baker FACES"
                             }
@@ -3105,7 +3105,7 @@
                         {
                             "operator": "=",
                             "question": "5.5",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Verbal Rating Scale for pain intensity",
                                 "display": "Verbal Rating Scale for pain intensity"
                             }
@@ -3113,7 +3113,7 @@
                         {
                             "operator": "=",
                             "question": "5.5",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Pain Assessment in Advanced Dementia Scale (PAINAD)",
                                 "display": "Pain Assessment in Advanced Dementia Scale (PAINAD)"
                             }
@@ -3121,7 +3121,7 @@
                         {
                             "operator": "=",
                             "question": "5.5",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Other",
                                 "display": "Other"
                             }
@@ -3188,7 +3188,7 @@
                         {
                             "operator": "=",
                             "question": "5.2",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Facet cyst Aspiration/Rupture pain follow up",
                                 "display": "Facet cyst Aspiration/Rupture pain follow up"
                             }
@@ -3230,7 +3230,7 @@
                         {
                             "operator": "=",
                             "question": "5.6.1",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Pain Disability Index",
                                 "display": "Pain Disability Index"
                             }
@@ -3238,7 +3238,7 @@
                         {
                             "operator": "=",
                             "question": "5.6.1",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Quebec Low Back Pain Disability Scare (QUE)",
                                 "display": "Quebec Low Back Pain Disability Scare (QUE)"
                             }
@@ -3246,7 +3246,7 @@
                         {
                             "operator": "=",
                             "question": "5.6.1",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Roland Morris Pain Scale",
                                 "display": "Roland Morris Pain Scale"
                             }
@@ -3254,7 +3254,7 @@
                         {
                             "operator": "=",
                             "question": "5.6.1",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Back Pain Functional Scale (BPFS)",
                                 "display": "Back Pain Functional Scale (BPFS)"
                             }
@@ -3271,7 +3271,7 @@
                         {
                             "operator": "=",
                             "question": "5.6.1",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Oswestry Disability Index (ODI)",
                                 "display": "Oswestry Disability Index (ODI)"
                             }
@@ -3287,7 +3287,7 @@
                         {
                             "operator": "=",
                             "question": "5.6.1",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Oswestry Low Back Pain Disability Questionnaire (OSW)",
                                 "display": "Oswestry Low Back Pain Disability Questionnaire (OSW)"
                             }
@@ -3342,7 +3342,7 @@
                         {
                             "operator": "=",
                             "question": "5.6.1",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
                                 "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
                             }
@@ -3391,7 +3391,7 @@
                         {
                             "operator": "=",
                             "question": "5.6.1",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Oswestry Disability Index (ODI)",
                                 "display": "Oswestry Disability Index (ODI)"
                             }
@@ -3399,7 +3399,7 @@
                         {
                             "operator": "=",
                             "question": "5.6.1",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Oswestry Low Back Pain Disability Questionnaire (OSW)",
                                 "display": "Oswestry Low Back Pain Disability Questionnaire (OSW)"
                             }
@@ -3448,7 +3448,7 @@
                         {
                             "operator": "=",
                             "question": "5.6.1",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
                                 "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
                             }
@@ -3703,7 +3703,7 @@
                     "linkId": "7.2.1",
                     "text": "RF Guidance for denervation of Spine Cervical Facet Joint",
                     "type": "group",
-                    "link": [
+                    "item": [
                         {
                             "linkId": "7.2.1.1",
                             "text": "Date:",
@@ -3727,7 +3727,7 @@
                         {
                             "operator": "=",
                             "question": "7.1",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "72541-6",
                                 "system": "https://loinc.org",
                                 "display": "RF Guidance for denervation of Spine Cervical Facet Joint"
@@ -3739,7 +3739,7 @@
                     "linkId": "7.2.2",
                     "text": "RF Guidance for injection of Spine Cervical Facet Joint",
                     "type": "group",
-                    "link": [
+                    "item": [
                         {
                             "linkId": "7.2.2.1",
                             "text": "Date:",
@@ -3763,7 +3763,7 @@
                         {
                             "operator": "=",
                             "question": "7.1",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "30812-2",
                                 "system": "https://loinc.org",
                                 "display": "RF Guidance for injection of Spine Cervical Facet Joint"
@@ -3775,7 +3775,7 @@
                     "linkId": "7.2.3",
                     "text": "RF Guidance for denervation of Lumbar Spine Facet Joint",
                     "type": "group",
-                    "link": [
+                    "item": [
                         {
                             "linkId": "7.2.3.1",
                             "text": "Date:",
@@ -3799,7 +3799,7 @@
                         {
                             "operator": "=",
                             "question": "7.1",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "72542-4",
                                 "system": "https://loinc.org",
                                 "display": "RF Guidance for denervation of Lumbar Spine Facet Joint"
@@ -3811,7 +3811,7 @@
                     "linkId": "7.2.4",
                     "text": "RF Guidance for injection of Spine Thoracic Facet Joint",
                     "type": "group",
-                    "link": [
+                    "item": [
                         {
                             "linkId": "7.2.4.1",
                             "text": "Date:",
@@ -3835,7 +3835,7 @@
                         {
                             "operator": "=",
                             "question": "7.1",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "30814-8",
                                 "system": "https://loinc.org",
                                 "display": "RF Guidance for injection of Spine Thoracic Facet Joint"
@@ -3847,7 +3847,7 @@
                     "linkId": "7.2.5",
                     "text": "CT Guidance for injection of Lumbar Spine Facet Joint",
                     "type": "group",
-                    "link": [
+                    "item": [
                         {
                             "linkId": "7.2.5.1",
                             "text": "Date:",
@@ -3871,7 +3871,7 @@
                         {
                             "operator": "=",
                             "question": "7.1",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "90335-1",
                                 "system": "https://loinc.org",
                                 "display": "CT Guidance for injection of Lumbar Spine Facet Joint"
@@ -3883,7 +3883,7 @@
                     "linkId": "7.2.6",
                     "text": "RF Guidance for injection of Lumbar Spine Facet Joint",
                     "type": "group",
-                    "link": [
+                    "item": [
                         {
                             "linkId": "7.2.6.1",
                             "text": "Date:",
@@ -3907,7 +3907,7 @@
                         {
                             "operator": "=",
                             "question": "7.1",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "30817-1",
                                 "system": "https://loinc.org",
                                 "display": "RF Guidance for injection of Lumbar Spine Facet Joint"
@@ -3919,7 +3919,7 @@
                     "linkId": "7.2.7",
                     "text": "CT Guidance for injection of Spine Thoracic Facet Joint",
                     "type": "group",
-                    "link": [
+                    "item": [
                         {
                             "linkId": "7.2.7.1",
                             "text": "Date:",
@@ -3943,7 +3943,7 @@
                         {
                             "operator": "=",
                             "question": "7.1",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "90334-4",
                                 "system": "https://loinc.org",
                                 "display": "CT Guidance for injection of Spine Thoracic Facet Joint"
@@ -3955,7 +3955,7 @@
                     "linkId": "7.2.8",
                     "text": "RF Guidance for injection of Spine facet joint - left",
                     "type": "group",
-                    "link": [
+                    "item": [
                         {
                             "linkId": "7.2.8.1",
                             "text": "Date:",
@@ -3979,7 +3979,7 @@
                         {
                             "operator": "=",
                             "question": "7.1",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "26323-6",
                                 "system": "https://loinc.org",
                                 "display": "RF Guidance for injection of Spine facet joint - left"
@@ -3991,7 +3991,7 @@
                     "linkId": "7.2.9",
                     "text": "RF Guidance for injection of Spine facet joint - right",
                     "type": "group",
-                    "link": [
+                    "item": [
                         {
                             "linkId": "7.2.9.1",
                             "text": "Date:",
@@ -4015,7 +4015,7 @@
                         {
                             "operator": "=",
                             "question": "7.1",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "26324-4",
                                 "system": "https://loinc.org",
                                 "display": "RF Guidance for injection of Spine facet joint - right"
@@ -4027,7 +4027,7 @@
                     "linkId": "7.2.10",
                     "text": "RF Guidance for injection of Spine facet joint - bilateral",
                     "type": "group",
-                    "link": [
+                    "item": [
                         {
                             "linkId": "7.2.10.1",
                             "text": "Date:",
@@ -4051,7 +4051,7 @@
                         {
                             "operator": "=",
                             "question": "7.1",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "26322-8",
                                 "system": "https://loinc.org",
                                 "display": "RF Guidance for injection of Spine facet joint - bilateral"
@@ -4063,7 +4063,7 @@
                     "linkId": "7.2.11",
                     "text": "RF Guidance for denervation of Spine facet joint",
                     "type": "group",
-                    "link": [
+                    "item": [
                         {
                             "linkId": "7.2.11.1",
                             "text": "Date:",
@@ -4087,7 +4087,7 @@
                         {
                             "operator": "=",
                             "question": "7.1",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "72540-8",
                                 "system": "https://loinc.org",
                                 "display": "RF Guidance for denervation of Spine facet joint"
@@ -4099,7 +4099,7 @@
                     "linkId": "7.2.12",
                     "text": "Guidance for injection of Spine facet joint",
                     "type": "group",
-                    "link": [
+                    "item": [
                         {
                             "linkId": "7.2.12.1",
                             "text": "Date:",
@@ -4123,7 +4123,7 @@
                         {
                             "operator": "=",
                             "question": "7.1",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "87160-8",
                                 "system": "https://loinc.org",
                                 "display": "Guidance for injection of Spine facet joint"
@@ -4135,7 +4135,7 @@
                     "linkId": "7.2.13",
                     "text": "RF Guidance for injection of Spine facet joint",
                     "type": "group",
-                    "link": [
+                    "item": [
                         {
                             "linkId": "7.2.13.1",
                             "text": "Date:",
@@ -4159,7 +4159,7 @@
                         {
                             "operator": "=",
                             "question": "7.1",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "24931-8",
                                 "system": "https://loinc.org",
                                 "display": "RF Guidance for injection of Spine facet joint"
@@ -4171,7 +4171,7 @@
                     "linkId": "7.2.14",
                     "text": "CT Guidance for injection of Spine facet joint",
                     "type": "group",
-                    "link": [
+                    "item": [
                         {
                             "linkId": "7.2.14.1",
                             "text": "Date:",
@@ -4195,7 +4195,7 @@
                         {
                             "operator": "=",
                             "question": "7.1",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "30579-7",
                                 "system": "https://loinc.org",
                                 "display": "CT Guidance for injection of Spine facet joint"
@@ -4207,7 +4207,7 @@
                     "linkId": "7.2.15",
                     "text": "CT Guidance for 2 levels injection of Spine facet joint",
                     "type": "group",
-                    "link": [
+                    "item": [
                         {
                             "linkId": "7.2.15.1",
                             "text": "Date:",
@@ -4231,7 +4231,7 @@
                         {
                             "operator": "=",
                             "question": "7.1",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "89710-8",
                                 "system": "https://loinc.org",
                                 "display": "CT Guidance for 2 levels injection of Spine facet joint"
@@ -4243,7 +4243,7 @@
                     "linkId": "7.2.16",
                     "text": "CT Guidance for greater than 2 levels for injection of Spine facet joint",
                     "type": "group",
-                    "link": [
+                    "item": [
                         {
                             "linkId": "7.2.16.1",
                             "text": "Date:",
@@ -4267,7 +4267,7 @@
                         {
                             "operator": "=",
                             "question": "7.1",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "89709-0",
                                 "system": "https://loinc.org",
                                 "display": "CT Guidance for greater than 2 levels for injection of Spine facet joint"
@@ -4279,7 +4279,7 @@
                     "linkId": "7.2.17",
                     "text": "CT Guidance for 1 level injection of Spine facet joint",
                     "type": "group",
-                    "link": [
+                    "item": [
                         {
                             "linkId": "7.2.17.1",
                             "text": "Date:",
@@ -4303,7 +4303,7 @@
                         {
                             "operator": "=",
                             "question": "7.1",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "89711-6",
                                 "system": "https://loinc.org",
                                 "display": "CT Guidance for 1 level injection of Spine facet joint"
@@ -4320,7 +4320,7 @@
                         {
                             "operator": "=",
                             "question": "7.1",
-                            "answerOption": {
+                            "answerCoding": {
                                 "code": "Other",
                                 "display": "Other"
                             }
