@@ -1,0 +1,30 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.6037.1001.23.93.75",
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.75",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113883.3.6037.1001.23.93.75"
+        }
+    ],
+    "version": "Latest",
+    "name": "Chemodenervation Of Trunk Muscle(S); 1-5 Muscle(S)",
+    "title": "Chemodenervation Of Trunk Muscle(S); 1-5 Muscle(S)",
+    "status": "active",
+    "publisher": "Mettles",
+    "compose": {
+        "include": [
+            {
+                "system": "https://www.aapc.com/resources/medical-coding/cpt.aspx",
+                "version": "2021-06",
+                "concept": [
+                    {
+                        "code": "64646",
+                        "display": "Chemodenervation Of Trunk Muscle(S); 1-5 Muscle(S)"
+                    }
+                ]
+            }
+        ]
+    }
+}

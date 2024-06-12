@@ -1,0 +1,122 @@
+{
+    "resourceType": "Questionnaire",
+    "identifier": [
+      {
+        "system": "http://identifiers.mettles.com/prior_authorization",
+        "value": "medicarefeeforservice-VeinAblation"
+      }
+    ],
+    "name": "VeinAblation",
+    "url": "<FHIR-server>/Questionnaire/questionnaire-lcd1-veinablation",
+    "version": "1.0.0",
+    "title": "VeinAblation",
+    "status": "draft",
+    "subjectType": [
+      "Patient"
+    ],
+    "date": "2019-12-03",
+    "publisher": "Mettle Solutions",
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
+        "valueCanonical": "<FHIR-server>/Library/library-lcd1-VeinAblation"
+      }
+    ],
+    "contained": [
+      {
+        "resourceType": "ValueSet",
+        "id": "gender",
+        "name": "Gender",
+        "status": "draft",
+        "description": "Gender",
+        "compose": {
+          "include": [
+            {
+              "concept": [
+                {
+                  "code": "male",
+                  "display": "Male"
+                },
+                {
+                  "code": "female",
+                  "display": "Female"
+                },
+                {
+                  "code": "other",
+                  "display": "Other"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "item": [
+      {
+        "linkId": "1",
+        "text": "Diagnosis/Procedure",
+        "type": "group",
+        "item": [
+          {
+            "linkId": "1.1",
+            "text": "Relevant Diagnosis",
+            "type": "string",
+            "required": true,
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                "valueExpression": {
+                  "language": "text/cql",
+                  "expression": "RelevantDiagnosis"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "linkId": "2",
+        "text": "Functional Information",
+        "type": "group",
+        "item": [
+          {
+            "linkId": "2.1",
+            "text": "Does the size of symptomatic varices measure about 3-6 mm ?",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "linkId": "2.2",
+            "text": "Does the patient display symptoms and functional problems, attributable only to the secondary, smaller vessels ?",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "linkId": "2.3",
+            "text": "Is the treatment for varicose veins, being performed for cosmetic reasons ?",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "linkId": "2.4",
+            "text": "Is a Reinjection being performed, following recanalization or failure of a vein closure without recurrent signs or symptoms ?",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "linkId": "2.5",
+            "text": "Does the interventional treatment use equipment not approved for such purposes by the FDA ?",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "linkId": "2.6",
+            "text": "Does the patient have any Advanced generalized systemic disease that limits quality-of life improvements expected following venous intervention ?",
+            "type": "boolean",
+            "required": true
+          }
+        ]
+      }
+    ]
+  }
+  

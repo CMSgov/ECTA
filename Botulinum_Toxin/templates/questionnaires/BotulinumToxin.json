@@ -1,0 +1,2280 @@
+{
+  "resourceType": "Questionnaire",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
+      "valueCanonical": "<FHIR-server>/Library/library-botulinumtoxin-BotulinumToxin"
+    }
+  ],
+  "url": "<FHIR-server>/Questionnaire/questionnaire-botulinumtoxin-BotulinumToxin",
+  "identifier": [
+    {
+      "system": "http://identifiers.mettles.com/prior_authorization",
+      "value": "medicare_fee_for_service-botulinum_toxin"
+    }
+  ],
+  "name": "BotulinumToxin",
+  "version": "1.0.0",
+  "title": "Prior Authorization for Botulinum Toxin",
+  "status": "draft",
+  "subjectType": [
+    "Patient"
+  ],
+  "date": "2021-05-27",
+  "publisher": "Mettle Solutions",
+  "contained": [
+    {
+      "resourceType": "ValueSet",
+      "id": "gender",
+      "name": "Gender",
+      "status": "draft",
+      "description": "Gender",
+      "compose": {
+        "include": [
+          {
+            "concept": [
+              {
+                "code": "male",
+                "display": "Male"
+              },
+              {
+                "code": "female",
+                "display": "Female"
+              },
+              {
+                "code": "other",
+                "display": "Other"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "item": [
+    {
+      "linkId": "1",
+      "text": "Diagnosis Details",
+      "type": "group",
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "BotoxDiagnosisConditions"
+              }
+            }
+          ],
+          "linkId": "BotulinumConditions",
+          "text": "Botulinum Toxin is considered for the following patient's condition:",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "Achalasia",
+                "display": "Achalasia"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Anal Fissure",
+                "display": "Anal Fissure"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Primary Axillary Hyperhidrosis",
+                "display": "Primary Axillary Hyperhidrosis"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Sialorrhea",
+                "display": "Sialorrhea"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Urinary Incontinence",
+                "display": "Urinary Incontinence"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Spasticity",
+                "display": "Spasticity"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Blepharospasm",
+                "display": "Blepharospasm"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Migraine",
+                "display": "Migraine"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Strabismus",
+                "display": "Strabismus"
+              }
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "SpasticityMuscleGroups"
+              }
+            }
+          ],
+          "linkId": "Spasticity-MuscleGroups",
+          "text": "Botox is indicated for which muscle group?",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "Face",
+                "display": "Face"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Neck",
+                "display": "Neck"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Muscles of larynx",
+                "display": "Muscles of larynx"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Trunk muscles",
+                "display": "Trunk muscles"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Extremity muscles",
+                "display": "Extremity muscles"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Extraocular Mucles",
+                "display": "Extraocular Mucles"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "BotulinumConditions",
+              "answerCoding": {
+                "code": "Spasticity",
+                "display": "Spasticity"
+              }
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "SpasticityFaceInjectionSide"
+              }
+            }
+          ],
+          "linkId": "Spasticity-SideInjection",
+          "text": "Side of injection",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "Unilateral",
+                "display": "Unilateral"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Bilateral",
+                "display": "Bilateral"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "Spasticity-MuscleGroups",
+              "answerCoding": {
+                "code": "Face",
+                "display": "Face"
+              }
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "InjectionSideExtremity"
+              }
+            }
+          ],
+          "linkId": "Spasticity-Extremity",
+          "text": "Is the injection requested for",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1-4 muscle groups",
+                "display": "1-4 muscle groups"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "5 or more muscles",
+                "display": "5 or more muscles"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "Spasticity-MuscleGroups",
+              "answerCoding": {
+                "code": "Extremity muscles",
+                "display": "Extremity muscles"
+              }
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "InjectionSideTrunk"
+              }
+            }
+          ],
+          "linkId": "Spasticity-TrunkInjectionSide",
+          "text": "Is the injection requested for",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1-5 muscles",
+                "display": "1-5 muscles"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "6 or more muscles",
+                "display": "6 or more muscles"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "Spasticity-MuscleGroups",
+              "answerCoding": {
+                "code": "Trunk muscles",
+                "display": "Trunk muscles"
+              }
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "Etiology"
+              }
+            }
+          ],
+          "linkId": "Spasticity-Etiology",
+          "text": "The patient has spasticity secondary to which of the following conditions?",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "Ischemic Stroke",
+                "display": "Stroke"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Multiple Sclerosis",
+                "display": "Multiple Sclerosis"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Traumatic Brain Injury",
+                "display": "Traumatic Brain Injury"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Cerebral Palsy",
+                "display": "Cerebral Palsy"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "BotulinumConditions",
+              "answerCoding": {
+                "code": "Spasticity",
+                "display": "Spasticity"
+              }
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "AdjunctivePhysiotherapy"
+              }
+            }
+          ],
+          "linkId": "Spasticity-AdjunctivePhysiotherapy",
+          "text": "Is the patient receiving adjunctive physiotherapy?",
+          "type": "boolean",
+          "required": true,
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "BotulinumConditions",
+              "answerCoding": {
+                "code": "Spasticity",
+                "display": "Spasticity"
+              }
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "BlepharospasmMuscleGroups"
+              }
+            }
+          ],
+          "linkId": "Blepharospasm-MuscleGroups",
+          "text": "Botox is indicated for which muscle group?",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "Face",
+                "display": "Face"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Neck",
+                "display": "Neck"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "BotulinumConditions",
+              "answerCoding": {
+                "code": "Blepharospasm",
+                "display": "Blepharospasm"
+              }
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "BlepharospasmFaceInjectionSide"
+              }
+            }
+          ],
+          "linkId": "Blepharospasm-SideInjection",
+          "text": "Side of injection",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "Unilateral",
+                "display": "Unilateral"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Bilateral",
+                "display": "Bilateral"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "Blepharospasm-MuscleGroups",
+              "answerCoding": {
+                "code": "Face",
+                "display": "Face"
+              }
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "CheckAbnormalInvoluntaryMovements"
+              }
+            }
+          ],
+          "linkId": "Blepharospasm-InvoluntaryMovements",
+          "text": "Does the patient have a history of other abnormal involuntary movements?",
+          "type": "boolean",
+          "required": true,
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "BotulinumConditions",
+              "answerCoding": {
+                "code": "Blepharospasm",
+                "display": "Blepharospasm"
+              }
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "CheckKeratopathy"
+              }
+            }
+          ],
+          "linkId": "Blepharospasm-Keratopathy",
+          "text": "Does the patient have Keratopathy",
+          "type": "boolean",
+          "required": true,
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "BotulinumConditions",
+              "answerCoding": {
+                "code": "Blepharospasm",
+                "display": "Blepharospasm"
+              }
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "CheckOcularIrritation"
+              }
+            }
+          ],
+          "linkId": "Blepharospasm-OcularIrritation",
+          "text": " Does the patient have Ocular Irritation?",
+          "type": "boolean",
+          "required": true,
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "BotulinumConditions",
+              "answerCoding": {
+                "code": "Blepharospasm",
+                "display": "Blepharospasm"
+              }
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "NeuromuscularSensoryDysfunction"
+              }
+            }
+          ],
+          "linkId": "Sialorrhea-NeuromuscularDysfunction",
+          "text": "Does the patient have any Neuromuscular or Sensory Dysfunction causing Sialorrhea?",
+          "type": "boolean",
+          "required": true,
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "BotulinumConditions",
+              "answerCoding": {
+                "code": "Sialorrhea",
+                "display": "Sialorrhea"
+              }
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "LocalFactors"
+              }
+            }
+          ],
+          "linkId": "Sialorrhea-LocalFactors",
+          "text": "Does the patient have any dental condition causing Sialorrhea?",
+          "type": "boolean",
+          "required": true,
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "BotulinumConditions",
+              "answerCoding": {
+                "code": "Sialorrhea",
+                "display": "Sialorrhea"
+              }
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "AdverseEffect"
+              }
+            }
+          ],
+          "linkId": "Sialorrhea-AdverseEffect",
+          "text": "Is the Sialorrhea an adverse effect of sedatives or antiepileptic drugs?",
+          "type": "boolean",
+          "required": true,
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "BotulinumConditions",
+              "answerCoding": {
+                "code": "Sialorrhea",
+                "display": "Sialorrhea"
+              }
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "HypertensiveLOS"
+              }
+            }
+          ],
+          "linkId": "Achalasia-HypertensiveLOS",
+          "text": "Does the patient have hypertensive lower esophageal sphincter?",
+          "type": "boolean",
+          "required": true,
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "BotulinumConditions",
+              "answerCoding": {
+                "code": "Achalasia",
+                "display": "Achalasia"
+              }
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "RiskFactorsEsophagealPerforation"
+              }
+            }
+          ],
+          "linkId": "Achalasia-RiskFactorsEsophagealPerforation",
+          "text": "Does the patient have any risk factors for esophageal perforation",
+          "type": "boolean",
+          "required": true,
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "BotulinumConditions",
+              "answerCoding": {
+                "code": "Achalasia",
+                "display": "Achalasia"
+              }
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "CheckDurationOfAnalFissure"
+              }
+            }
+          ],
+          "linkId": "AnalFissure-Duration",
+          "text": "Has the patient had the anal fissures for more than 8-12 weeks?",
+          "type": "boolean",
+          "required": true,
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "BotulinumConditions",
+              "answerCoding": {
+                "code": "Anal Fissure",
+                "display": "Anal Fissure"
+              }
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "CheckSevereSweating"
+              }
+            }
+          ],
+          "linkId": "Hyperhydrosis-SevereSweating",
+          "text": "Does the patient have severe sweating, beyond physiological needs?",
+          "type": "boolean",
+          "required": true,
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "BotulinumConditions",
+              "answerCoding": {
+                "code": "Primary Axillary Hyperhidrosis",
+                "display": "Primary Axillary Hyperhidrosis"
+              }
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "CheckDurationOfSweating"
+              }
+            }
+          ],
+          "linkId": "Hyperhydrosis-DurationSweating",
+          "text": "Does the patient have visible sweating that has lasted for more than 6 months?",
+          "type": "boolean",
+          "required": true,
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "BotulinumConditions",
+              "answerCoding": {
+                "code": "Primary Axillary Hyperhidrosis",
+                "display": "Primary Axillary Hyperhidrosis"
+              }
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "MigraineMuscleGroups"
+              }
+            }
+          ],
+          "linkId": "Migraine-MuscleGroups",
+          "text": "Botox is indicated for which muscle group?",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "Face",
+                "display": "Face"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Neck",
+                "display": "Neck"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "BotulinumConditions",
+              "answerCoding": {
+                "code": "Migraine",
+                "display": "Migraine"
+              }
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "MigraineFaceInjectionSide"
+              }
+            }
+          ],
+          "linkId": "Migraine-SideInjection",
+          "text": "Side of injection",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "Unilateral",
+                "display": "Unilateral"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Bilateral",
+                "display": "Bilateral"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "Migraine-MuscleGroups",
+              "answerCoding": {
+                "code": "Face",
+                "display": "Face"
+              }
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "HeadachesForFifteenDays"
+              }
+            }
+          ],
+          "linkId": "Migraine-DurationFor15Days",
+          "text": "Do headache disorders occur for greater than 15 days a month?",
+          "type": "boolean",
+          "required": true,
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "BotulinumConditions",
+              "answerCoding": {
+                "code": "Migraine",
+                "display": "Migraine"
+              }
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "HeadachesForLastThreeMonths"
+              }
+            }
+          ],
+          "linkId": "Migraine-Duration",
+          "text": "Have the headaches existed for a period of at least 3 months?",
+          "type": "boolean",
+          "required": true,
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "BotulinumConditions",
+              "answerCoding": {
+                "code": "Migraine",
+                "display": "Migraine"
+              }
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "BinocularVision"
+              }
+            }
+          ],
+          "linkId": "Strabisumus-BinocularVision",
+          "text": "Does the patient have binocular vision?",
+          "type": "boolean",
+          "required": true,
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "BotulinumConditions",
+              "answerCoding": {
+                "code": "Strabismus",
+                "display": "Strabismus"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "2",
+      "text": "Previous Treatment Details",
+      "type": "group",
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "SpasticityEarlierBotulinumAdministration"
+              }
+            }
+          ],
+          "linkId": "Spasticity-PriorBotoxAdministration",
+          "text": "Has the patient been administered botulinum toxin before?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "BotulinumConditions",
+              "answerCoding": {
+                "code": "Spasticity",
+                "display": "Spasticity"
+              }
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "SpasticitySpecifyBotoxAdministration"
+              }
+            }
+          ],
+          "linkId": "Spasticity-PriorBotoxStrain",
+          "text": "Which strain of botox was used?",
+          "type": "text",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "Spasticity-PriorBotoxAdministration",
+              "answerBoolean": true
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "SpasticityPostBotoxImprovement"
+              }
+            }
+          ],
+          "linkId": "Spasticity-ImprovementPostBotox",
+          "text": "Has there been improvement in the spasticity condition after Botox Treatment?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "Spasticity-PriorBotoxAdministration",
+              "answerBoolean": true
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "BlepharospasmEarlierBotulinumAdministration"
+              }
+            }
+          ],
+          "linkId": "Blepharospasm-PriorBotoxAdministration",
+          "text": "Has the patient been administered botulinum toxin before?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "BotulinumConditions",
+              "answerCoding": {
+                "code": "Blepharospasm",
+                "display": "Blepharospasm"
+              }
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "BlepharospasmSpecifyBotoxAdministration"
+              }
+            }
+          ],
+          "linkId": "Blepharospasm-PriorBotoxStrain",
+          "text": "Which strain of botox was used?",
+          "type": "text",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "Blepharospasm-PriorBotoxAdministration",
+              "answerBoolean": true
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "BlepharospasmPostBotoxImprovement"
+              }
+            }
+          ],
+          "linkId": "Blepharospasm-Improvement",
+          "text": "Has there been improvement in the Blepharospasm after Botox Injection?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "Blepharospasm-PriorBotoxAdministration",
+              "answerBoolean": true
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "BiofeedbackTherapy"
+              }
+            }
+          ],
+          "linkId": "Sialorrhea-BiofeedbacktTherapy",
+          "text": "Has biofeedback therapy been tried to manage Sialorrhea?",
+          "type": "boolean",
+          "required": true,
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "BotulinumConditions",
+              "answerCoding": {
+                "code": "Sialorrhea",
+                "display": "Sialorrhea"
+              }
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "PostBiofeedbackImprovement"
+              }
+            }
+          ],
+          "linkId": "Sialorrhea-ImprovementPostBiofeedback",
+          "text": "Has there been improvement in Sialorrhea severity?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "Sialorrhea-BiofeedbacktTherapy",
+              "answerBoolean": true
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "GlycopyrrolateMedication"
+              }
+            }
+          ],
+          "linkId": "Sialorrhea-GlycopyrrolateMedication",
+          "text": "Has the patient been on Glycopyrrolate  as treatment for Sialorrhea? ",
+          "type": "boolean",
+          "required": true,
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "BotulinumConditions",
+              "answerCoding": {
+                "code": "Sialorrhea",
+                "display": "Sialorrhea"
+              }
+            }
+          ]
+        },
+        {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                "valueExpression": {
+                  "language": "text/cql",
+                  "expression": "SpecifyGlycopyrrolateMedication"
+                }
+              }
+            ],
+            "linkId": "Sialorrhea-GlycopyrrolateMedicationDetails",
+            "text": "Details of the administered medication:",
+            "type": "open-choice",
+            "answerValueSet": "2.16.840.1.113883.3.3616.200.110.102.2067",
+            "enableWhen": [
+              {
+                "question": "Sialorrhea-GlycopyrrolateMedication",
+                "operator": "=",
+                "answerBoolean": true
+              }
+            ],
+            "required": true
+          },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "PostGlycopyrrolateImprovement"
+              }
+            }
+          ],
+          "linkId": "Sialorrhea-ImprovementPostGlycopyrrolate",
+          "text": "Has there been an improvement in Sialorrhea severity?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "Sialorrhea-GlycopyrrolateMedication",
+              "answerBoolean": true
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "ScopolamineMedication"
+              }
+            }
+          ],
+          "linkId": "Sialorrhea-ScopolamineMedication",
+          "text": "Has the patient been on Scopolamine as treatment for Sialorrhea?",
+          "type": "boolean",
+          "required": true,
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "BotulinumConditions",
+              "answerCoding": {
+                "code": "Sialorrhea",
+                "display": "Sialorrhea"
+              }
+            }
+          ]
+        },
+        {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                "valueExpression": {
+                  "language": "text/cql",
+                  "expression": "SpecifyScopolamineMedication"
+                }
+              }
+            ],
+            "linkId": "Sialorrhea-ScopolamineMedicationDetails",
+            "text": "Details of the administered medication:",
+            "type": "open-choice",
+            "answerValueSet": "2.16.840.1.113883.3.6037.1001.23.93.82",
+            "enableWhen": [
+              {
+                "question": "Sialorrhea-ScopolamineMedication",
+                "operator": "=",
+                "answerBoolean": true
+              }
+            ],
+            "required": true
+          },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "PostScopolamineImprovement"
+              }
+            }
+          ],
+          "linkId": "Sialorrhea-ImprovementPostScopolamine",
+          "text": "Has there been an improvement in Sialorrhea severity?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "Sialorrhea-ScopolamineMedication",
+              "answerBoolean": true
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "SialorrheaEarlierBotulinumAdministration"
+              }
+            }
+          ],
+          "linkId": "Sialorrhea-BotoxAdministration",
+          "text": "Has the patient been administered Botulinum Toxin before?",
+          "type": "boolean",
+          "required": true,
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "BotulinumConditions",
+              "answerCoding": {
+                "code": "Sialorrhea",
+                "display": "Sialorrhea"
+              }
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "SialorrheaSpecifyBotoxAdministration"
+              }
+            }
+          ],
+          "linkId": "Sialorrhea-PriorBotoxStrain",
+          "text": "Which strain of Botulinum Toxin injection was used?",
+          "type": "open-choice",
+          "answerValueSet": "2.16.840.1.113883.3.6037.1001.23.93.60",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "Sialorrhea-BotoxAdministration",
+              "answerBoolean": true
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "SialorrheaPostBotoxImprovement"
+              }
+            }
+          ],
+          "linkId": "Sialorrhea-ImprovementPostBotox",
+          "text": "Has there been improvement in Sialorrhea severity after Botulinum Toxin injection?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "Sialorrhea-BotoxAdministration",
+              "answerBoolean": true
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "AchalasiaProcedures"
+              }
+            }
+          ],
+          "linkId": "Achalasia-Procedures",
+          "text": "Has the patient undergone any of the following for lower esophageal sphincter relaxation?",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "Pneumatic Dilation",
+                "display": "Pneumatic Dilation"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Surgical Myotomy",
+                "display": "Surgical Myotomy"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "BotulinumConditions",
+              "answerCoding": {
+                "code": "Achalasia",
+                "display": "Achalasia"
+              }
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "AchalasiaPostProceduresImprovement"
+              }
+            }
+          ],
+          "linkId": "Achalasia-PostProceduresImprovement",
+          "text": "Has there been reduction in Lower Esophageal Sphincter Pressure?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "Achalasia-Procedures",
+              "answerBoolean": true
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "AchalasiaEarlierBotulinumAdministration"
+              }
+            }
+          ],
+          "linkId": "Achalasia-BotoxAdministration",
+          "text": "Has the patient been administered botulinum toxin for Achalasia before?",
+          "type": "boolean",
+          "required": true,
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "BotulinumConditions",
+              "answerCoding": {
+                "code": "Achalasia",
+                "display": "Achalasia"
+              }
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "AchalasiaSpecifyBotoxAdministration"
+              }
+            }
+          ],
+          "linkId": "Achalasia-PriorBotoxStrain",
+          "text": "Which strain of botox was used?",
+          "type": "text",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "Achalasia-BotoxAdministration",
+              "answerBoolean": true
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "AchalasiaPostBotoxImprovement"
+              }
+            }
+          ],
+          "linkId": "Achalasia-ImprovementPostBotox",
+          "text": "Was there a significant reduction in Lower Esophageal Sphincter Pressure after botox?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "Achalasia-BotoxAdministration",
+              "answerBoolean": true
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "ConservativeTreatmentOptions"
+              }
+            }
+          ],
+          "linkId": "AnalFissure-ConservativeTreatmentOptions",
+          "text": "Has the patient undergone any of the following conservative treatment options?",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "Fiber Supplements",
+                "display": "Fiber Supplements"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Stool Softeners",
+                "display": "Stool Softeners"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Sitz Bath",
+                "display": "Sitz Bath"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Topical Anaesthetic Application",
+                "display": "Topical Anaesthetic Application"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "BotulinumConditions",
+              "answerCoding": {
+                "code": "Anal Fissure",
+                "display": "Anal Fissure"
+              }
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "PostConservativeTreatmentImprovement"
+              }
+            }
+          ],
+          "linkId": "AnalFissure-PostCoversativeTreatmentImprovement",
+          "text": "Has the patient not responded to conservative treatment?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "AnalFissure-ConservativeTreatmentOptions",
+              "answerCoding": {
+                "code": "Fiber Supplements",
+                "display": "Fiber Supplements"
+              }
+            },
+            {
+              "operator": "=",
+              "question": "AnalFissure-ConservativeTreatmentOptions",
+              "answerCoding": {
+                "code": "Stool Softeners",
+                "display": "Stool Softeners"
+              }
+            },
+            {
+              "operator": "=",
+              "question": "AnalFissure-ConservativeTreatmentOptions",
+              "answerCoding": {
+                "code": "Sitz Bath",
+                "display": "Sitz Bath"
+              }
+            },
+            {
+              "operator": "=",
+              "question": "AnalFissure-ConservativeTreatmentOptions",
+              "answerCoding": {
+                "code": "Topical Anaesthetic Application",
+                "display": "Topical Anaesthetic Application"
+              }
+            }
+          ],
+          "enableBehavior": "any",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "AnalFissurePriorBotulinumToxin"
+              }
+            }
+          ],
+          "linkId": "AnalFissure-PriorBotulinumToxin",
+          "text": "Has the patient been administered botulinum toxin before?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "BotulinumConditions",
+              "answerCoding": {
+                "code": "Anal Fissure",
+                "display": "Anal Fissure"
+              }
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "AnalFissureSpecifyBotoxAdministration"
+              }
+            }
+          ],
+          "linkId": "AnalFissure-PriorBotoxStrain",
+          "text": "Which strain of botox was used?",
+          "type": "text",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "AnalFissure-PriorBotulinumToxin",
+              "answerBoolean": true
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "AnalFissurePostBotoxImprovement"
+              }
+            }
+          ],
+          "linkId": "AnalFissure-PostBotoxImprovement",
+          "text": "Has there been improvement in Anal Fissure after Botox Injection?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "AnalFissure-PriorBotulinumToxin",
+              "answerBoolean": true
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "AnticholinergicMedicationsHyperhydrosis"
+              }
+            }
+          ],
+          "linkId": "Hyperhydrosis-AnticholinergicMedications",
+          "text": "Has the patient taken any Anticholinergic Medications previously?",
+          "type": "boolean",
+          "required": true,
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "BotulinumConditions",
+              "answerCoding": {
+                "code": "Primary Axillary Hyperhidrosis",
+                "display": "Primary Axillary Hyperhidrosis"
+              }
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "PostAnticholinergicImprovement"
+              }
+            }
+          ],
+          "linkId": "Hyperhydrosis-PostAnticholinergicImprovement",
+          "text": "Has there been improvement in Sweating severity?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "Hyperhydrosis-AnticholinergicMedications",
+              "answerBoolean": true
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "HyperhydrosisPriorBotulinumToxin"
+              }
+            }
+          ],
+          "linkId": "Hyperhydrosis-PriorBotulinumToxin",
+          "text": "Has the patient been administered botulinum toxin before?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "BotulinumConditions",
+              "answerCoding": {
+                "code": "Primary Axillary Hyperhidrosis",
+                "display": "Primary Axillary Hyperhidrosis"
+              }
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "HyperhydrosisSpecifyBotoxAdministration"
+              }
+            }
+          ],
+          "linkId": "Hyperhydrosis-PriorBotoxStrain",
+          "text": "Which strain of botox was used?",
+          "type": "text",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "Hyperhydrosis-PriorBotulinumToxin",
+              "answerBoolean": true
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "HyperhydrosisPostBotoxImprovement"
+              }
+            }
+          ],
+          "linkId": "Hyperhydrosis-PostBotoxImprovement",
+          "text": "Has there been improvement in Sweating severity after Botox Injection?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "Hyperhydrosis-PriorBotulinumToxin",
+              "answerBoolean": true
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "CheckUrinaryIncontinenceAntiCholinergicTreatment"
+              }
+            }
+          ],
+          "linkId": "UrinaryIncontinence-AntichloniergicTreatment",
+          "text": "Has Anticholinergic Treatment been tried to manage Urinary Incontinence?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "BotulinumConditions",
+              "answerCoding": {
+                "code": "Urinary Incontinence",
+                "display": "Urinary Incontinence"
+              }
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "PostUrinaryIncontinenceAnticholinergicImprovement"
+              }
+            }
+          ],
+          "linkId": "UrinaryIncontinence-PostAntichloniergicTreatment",
+          "text": "Has there been improvement in Urine Continence?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "UrinaryIncontinence-AntichloniergicTreatment",
+              "answerBoolean": true
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "UrinaryIncontinencePriorBotulinumToxin"
+              }
+            }
+          ],
+          "linkId": "UrinaryIncontinence-PriorBotulinumToxin",
+          "text": "Has the patient been administered botulinum toxin before ?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "BotulinumConditions",
+              "answerCoding": {
+                "code": "Urinary Incontinence",
+                "display": "Urinary Incontinence"
+              }
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "UrinaryIncontinenceSpecifyBotoxAdministration"
+              }
+            }
+          ],
+          "linkId": "UrinaryIncontinence-PriorBotulinumStrain",
+          "text": "Which strain of botox was used?",
+          "type": "text",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "UrinaryIncontinence-PriorBotulinumToxin",
+              "answerBoolean": true
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "UrinaryIncontinencePostBotoxImprovement"
+              }
+            }
+          ],
+          "linkId": "UrinaryIncontinence-PostBotoxImprovement",
+          "text": "Has there been improvement in Urinary Continence after Botox Injection?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "UrinaryIncontinence-PriorBotulinumToxin",
+              "answerBoolean": true
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "ConventionalTreatment"
+              }
+            }
+          ],
+          "linkId": "Migraine-ConventionalTreatment",
+          "text": "Has the patient been given any conventional treatment previously?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "BotulinumConditions",
+              "answerCoding": {
+                "code": "Migraine",
+                "display": "Migraine"
+              }
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "ConventionalTreatmentImprovement"
+              }
+            }
+          ],
+          "linkId": "Migraine-ConventionalTreatmentImprovement",
+          "text": "Was there a significant decrease in the number and frequency of headaches upon receiving conventional therapy?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "Migraine-ConventionalTreatment",
+              "answerBoolean": true
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "MigraineCheckPriorBotoxTreatment"
+              }
+            }
+          ],
+          "linkId": "Migraine-PriorBotoxTreatment",
+          "text": "Has the patient had botox therapy previously?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "BotulinumConditions",
+              "answerCoding": {
+                "code": "Migraine",
+                "display": "Migraine"
+              }
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "MigrainePostBotoxImprovement"
+              }
+            }
+          ],
+          "linkId": "Migraine-PostBotoxImprovement",
+          "text": "Has the patient shown a significant decrease in the number and frequency of headaches upon receiving Botulinum toxin?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "Migraine-PriorBotoxTreatment",
+              "answerBoolean": true
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "MigraineTreatmentFailures"
+              }
+            }
+          ],
+          "linkId": "Migraine-TreatmentFailures",
+          "text": "Was there a failure of two definitive, consecutive, treatment sessions when treated with botulinum toxin?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "Migraine-PriorBotoxTreatment",
+              "answerBoolean": true
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "StrabismusSurgery"
+              }
+            }
+          ],
+          "linkId": "Strabisumus-CorrectionSurgery",
+          "text": "Has the patient undergone surgery for correction of strabismus?",
+          "type": "boolean",
+          "required": true,
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "BotulinumConditions",
+              "answerCoding": {
+                "code": "Strabismus",
+                "display": "Strabismus"
+              }
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "PostStrabismusSurgeryImprovement"
+              }
+            }
+          ],
+          "linkId": "Strabisumus-ImprovementPostCorrectionSurgery",
+          "text": "Was there an improvement in the patient's condition after the correction surgery?",
+          "type": "boolean",
+          "required": true,
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "Strabisumus-CorrectionSurgery",
+              "answerBoolean": true
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "StrabismusPriorBotulinumToxin"
+              }
+            }
+          ],
+          "linkId": "Strabisumus-PriorBotoxTreatment",
+          "text": "Has the patient had a prior botox treatment?",
+          "type": "boolean",
+          "required": true,
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "BotulinumConditions",
+              "answerCoding": {
+                "code": "Strabismus",
+                "display": "Strabismus"
+              }
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "StrabismusSpecifyBotoxAdministration"
+              }
+            }
+          ],
+          "linkId": "Strabisumus-BotoxStrain",
+          "text": "Which Botox Strain was used?",
+          "type": "text",
+          "required": true,
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "Strabisumus-PriorBotoxTreatment",
+              "answerBoolean": true
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "StrabismusPostBotoxImprovement"
+              }
+            }
+          ],
+          "linkId": "Strabisumus-PostBotoxImprovement",
+          "text": "Was there an improvement in patient's condition after botox treatment?",
+          "type": "boolean",
+          "required": true,
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "Strabisumus-PriorBotoxTreatment",
+              "answerBoolean": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "3",
+      "text": "Co-morbidities",
+      "type": "group",
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "SialorrheaAnticholinergicContraindications"
+              }
+            }
+          ],
+          "linkId": "Sialorrhea-AnticholinergicContraindications",
+          "text": "Does the patient have any of the following contraindications to Anticholinergic treatment?",
+          "type": "choice",
+          "required": true,
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "BotulinumConditions",
+              "answerCoding": {
+                "code": "Sialorrhea",
+                "display": "Sialorrhea"
+              }
+            }
+          ],
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "Myasthenia Gravis",
+                "display": "Myasthenia Gravis"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Hyperthyroidism",
+                "display": "Hyperthyroidism"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Glaucoma",
+                "display": "Glaucoma"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Enlarged Prostate",
+                "display": "Enlarged Prostate"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Urinary Tract Blockage",
+                "display": "Urinary Tract Blockage"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Tachycardia",
+                "display": "Tachycardia"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Heart Failure",
+                "display": "Heart Failure"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Dry Mouth",
+                "display": "Dry Mouth"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Hiatal Hernia",
+                "display": "Hiatal Hernia"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Constipation",
+                "display": "Constipation"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Down Syndrome",
+                "display": "Down Syndrome"
+              }
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "UrinaryIncontinenceAnticholinergicContraindications"
+              }
+            }
+          ],
+          "linkId": "UrinaryIncontinence-AnticholinergicContraindications",
+          "text": "Does the patient have any of the following contraindications to Anticholinergic treatment?",
+          "type": "choice",
+          "required": true,
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "BotulinumConditions",
+              "answerCoding": {
+                "code": "Urinary Incontinence",
+                "display": "Urinary Incontinence"
+              }
+            }
+          ],
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "Myasthenia Gravis",
+                "display": "Myasthenia Gravis"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Hyperthyroidism",
+                "display": "Hyperthyroidism"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Glaucoma",
+                "display": "Glaucoma"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Enlarged Prostate",
+                "display": "Enlarged Prostate"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Urinary Tract Blockage",
+                "display": "Urinary Tract Blockage"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Tachycardia",
+                "display": "Tachycardia"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Heart Failure",
+                "display": "Heart Failure"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Dry Mouth",
+                "display": "Dry Mouth"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Hiatal Hernia",
+                "display": "Hiatal Hernia"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Constipation",
+                "display": "Constipation"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Down Syndrome",
+                "display": "Down Syndrome"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "5",
+      "text": "Allergies and Adverse Reactions",
+      "type": "group",
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "BotoxAllergy"
+              }
+            }
+          ],
+          "linkId": "BotoxAllergy",
+          "text": "Is the patient allergic to Botulinum Toxin injection?",
+          "type": "boolean",
+          "required": true
+        }
+      ]
+    }
+  ]
+}
+
+
+

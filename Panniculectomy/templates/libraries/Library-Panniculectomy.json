@@ -1,0 +1,74 @@
+{
+    "resourceType": "Library",
+    "version": "1.0.0",
+    "title": "Panniculectomy",
+    "name": "Panniculectomy",
+    "status": "draft",
+    "type": {
+      "coding": [
+        {
+          "code": "logic-library"
+        }
+      ]
+    },
+    "relatedArtifact": [
+      {
+      "type": "depends-on",
+      "resource": "Library/FHIRHelpers"
+      }
+    ],
+    "dataRequirement": [
+      {
+        "type": "Condition",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "2.16.840.1.113883.3.6037.1001.23.99.81"
+          },
+          {
+            "path": "clinical-status",
+            "searchParam": "active"
+          }
+        ]
+      },
+      {
+        "type": "Condition",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "2.16.840.1.113883.3.6037.1001.23.99.82"
+          },
+          {
+            "path": "clinical-status",
+            "searchParam": "active"
+          }
+        ]
+      },
+      {
+        "type": "Condition",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "2.16.840.1.113883.3.6037.1001.23.99.84"
+          },
+          {
+            "path": "clinical-status",
+            "searchParam": "active"
+          }
+        ]
+      },
+      {
+        "type": "Procedure",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "2.16.840.1.113883.3.6037.1001.23.99.83"
+          }
+        ]
+      },
+      {
+        "type": "Encounter"
+      }
+    ]
+  }
+  

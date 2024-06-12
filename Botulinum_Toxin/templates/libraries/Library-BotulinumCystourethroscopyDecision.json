@@ -1,0 +1,35 @@
+{
+  "resourceType": "Library",
+  "version": "1.0.0",
+  "title": "BotulinumCystourethroscopyDecision",
+  "name": "BotulinumCystourethroscopyDecision",
+  "status": "draft",
+  "type": {
+    "coding": [
+      {
+        "code": "logic-library"
+      }
+    ]
+  },
+  "relatedArtifact": [
+    {
+      "type": "depends-on",
+      "resource": "Library/FHIRHelpers"
+    },
+    {
+      "type": "depends-on",
+      "resource": "Library/library-botulinumtoxin-BotulinumToxin"
+    }
+  ],
+  "dataRequirement": [
+    {
+      "type": "Medication",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "2.16.840.1.113883.3.6037.1001.23.99.40"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.6037.1001.23.93.74",
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.74",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113883.3.6037.1001.23.93.74"
+        }
+    ],
+    "version": "Latest",
+    "name": "Chemodenervation of Larynx Muscle(s)",
+    "title": "Chemodenervation of Larynx Muscle(s)",
+    "status": "active",
+    "publisher": "Mettles",
+    "compose": {
+        "include": [
+            {
+                "system": "https://www.aapc.com/resources/medical-coding/cpt.aspx",
+                "version": "2021-06",
+                "concept": [
+                    {
+                        "code": "64617",
+                        "display": "Chemodenervation Of Muscle(S); Larynx, Unilateral, Percutaneous (Eg, For Spasmodic Dysphonia), Includes Guidance By Needle Electromyography, When Performed"
+                    }
+                ]
+            }
+        ]
+    }
+}

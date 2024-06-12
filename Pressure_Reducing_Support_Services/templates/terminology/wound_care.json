@@ -1,0 +1,55 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.6037.1001.23.98.122",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2020-12-17T11:37:04.000+00:00",
+        "source": "#KJvf3diF10TLNbhE"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.98.122",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113883.3.6037.1001.23.98.122"
+        }
+    ],
+    "version": "Latest",
+    "name": "Wound Care",
+    "title": "Wound Care",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2020-09",
+                "concept": [
+                    {
+                        "code": "225358003",
+                        "display": "Wound care (regime/therapy)"
+                    },
+                    {
+                        "code": "226007004",
+                        "display": "Post-surgical wound care (regime/therapy)"
+                    },
+                    {
+                        "code": "385942004",
+                        "display": "Wound care management (procedure)"
+                    },
+                    {
+                        "code": "410330006",
+                        "display": "Dressing change/wound care case management (procedure)"
+                    },
+                    {
+                        "code": "428431000124105",
+                        "display": "Chronic wound care (regime/therapy)"
+                    },
+                    {
+                        "code": "385914001",
+                        "display": "Pressure ulcer care management (procedure)"
+                    }
+                ]
+            }
+        ]
+    }
+}

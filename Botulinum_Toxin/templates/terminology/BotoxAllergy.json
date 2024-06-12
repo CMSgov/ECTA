@@ -1,0 +1,32 @@
+{
+  "resourceType": "ValueSet",
+  "id": "2.16.840.1.113883.3.6037.1001.23.93.55",
+
+  "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.55",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "2.16.840.1.113883.3.6037.1001.23.93.55"
+    }
+  ],
+
+  "version": "Latest",
+    "name": "Allergy to Clostridium Botulinum",
+    "title": "Allergy to Clostridium Botulinum",
+    "status": "active",
+    "publisher": "Mettles",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2021-05",
+                "concept": [
+                    {
+                        "code": "294667007",
+                        "display": "Allergy to Clostridium botulinum toxin (finding)"
+                    }
+                ]
+            }
+        ]
+    }
+}

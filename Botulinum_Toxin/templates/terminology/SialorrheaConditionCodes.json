@@ -1,0 +1,39 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.6037.1001.23.99.27",
+    "meta": {
+        "versionId": "2",
+        "lastUpdated": "2020-09-08T12:57:53.000+00:00",
+        "source": "#WAAcqdWL4zIErigH"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.99.27",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113883.3.6037.1001.23.99.27"
+        }
+    ],
+    "version": "Latest",
+    "name": "Sialorrhea Diagnosis Codes",
+    "title": "Sialorrhea Diagnosis Codes",
+    "status": "active",
+    "publisher": "Mettles",
+    "compose": {
+        "include": [
+            {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "version": "2020-03",
+                "concept": [
+                    {
+                        "code": "K11.7",
+                        "display": "Disturbances of salivary secretion"
+                    },
+                    {
+                        "code": "R68.2",
+                        "display": "Dry mouth, unspecified"
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,79 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.6037.1001.23.98.127",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2020-09-03T06:57:43.000+00:00",
+        "source": "#oHy6ltsnXpCgK6yP"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.98.127",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113883.3.6037.1001.23.98.127"
+        }
+    ],
+    "version": "Latest",
+    "name": "Trunk or hips body structures",
+    "title": "Trunk or hips body structures",
+    "status": "active",
+    "publisher": "Mettles",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2020-03",
+                "concept": [
+                    {
+                        "code": "420473002",
+                        "display": "Structure of subregion of trunk (body structure)"
+                    },
+                  {
+                        "code": "229757002",
+                        "display": "Lower trunk (surface region) (body structure)"
+                    },
+                  {
+                        "code": "58403004",
+                        "display": "Skin structure of lower trunk (body structure)"
+                    },
+                  {
+                        "code": "30770005",
+                        "display": "Subcutaneous tissue structure of lower trunk (body structure)"
+                    },
+                  {
+                        "code": "609617007",
+                        "display": "Structure of pelvic segment of trunk including false pelvis (body structure)"
+                    },
+                  {
+                        "code": "29836001",
+                        "display": "Hip region structure (body structure)"
+                    },
+                  {
+                        "code": "417368006",
+                        "display": "Skin and/or subcutaneous tissue structure of hip (body structure)"
+                    },
+                  {
+                        "code": "787204008",
+                        "display": "Structure of skin of right hip (body structure)"
+                    },
+                  {
+                        "code": "764561001",
+                        "display": "Skin of part of right lower limb"
+                    },
+                  {
+                        "code": "49812005",
+                        "display": "Skin structure of hip"
+                    },
+                  {
+                        "code": "39132006",
+                        "display": "Structure of right side of trunk"
+                    },
+                  {
+                        "code": "287579007",
+                        "display": "Right hip region structure"
+                    }
+                ]
+            }
+        ]
+    }
+}

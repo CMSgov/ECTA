@@ -1,0 +1,168 @@
+{
+    "resourceType": "Questionnaire",
+    "identifier": [
+      {
+        "system": "http://identifiers.mettles.com/prior_authorization",
+        "value": "medicarefeeforservice-Panniculectomy"
+      }
+    ],
+    "url": "<FHIR-server>/Questionnaire/questionnaire-lcd1-panniculectomy",
+    "name": "Panniculectomy",
+    "version": "1.0.0",
+    "title": "Panniculectomy",
+    "status": "draft",
+    "subjectType": [
+      "Patient"
+    ],
+    "date": "2019-12-03",
+    "publisher": "Mettle Solutions",
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
+        "valueCanonical": "<FHIR-server>/Library/library-lcd1-panniculectomy"
+      }
+    ],
+    "contained": [
+      {
+        "resourceType": "ValueSet",
+        "id": "gender",
+        "name": "Gender",
+        "status": "draft",
+        "description": "Gender",
+        "compose": {
+          "include": [
+            {
+              "concept": [
+                {
+                  "code": "male",
+                  "display": "Male"
+                },
+                {
+                  "code": "female",
+                  "display": "Female"
+                },
+                {
+                  "code": "other",
+                  "display": "Other"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "item": [
+      {
+        "linkId": "1",
+        "text": "Diagnosis/Procedure",
+        "type": "group",
+        "item": [
+          {
+            "linkId": "1.1",
+            "text": "Relevant Diagnosis",
+            "type": "string",
+            "required": true,
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                "valueExpression": {
+                  "language": "text/cql",
+                  "expression": "RelevantDiagnosis"
+                }
+              }
+            ]
+          },
+          
+          {
+            "linkId": "1.2",
+            "text": "Was Bariatric Surgery performed ?",
+            "type": "boolean",
+            "required": true,
+            "repeats": true,
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                "valueExpression": {
+                  "language": "text/cql",
+                  "expression": "IsSurgeryPerformed"
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "1.3",
+            "text": "Date of Surgery performed",
+            "type": "dateTime",
+            "required": true,
+            "repeats": true,
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                "valueExpression": {
+                  "language": "text/cql",
+                  "expression": "SurgeryDate"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "linkId": "2",
+        "text": "Functional Information",
+        "type": "group",
+        "item": [
+          {
+            "linkId": "2.1",
+            "text": "Has the patient undergone significant weight loss ?",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "linkId": "2.2",
+            "text": "Is there evidence that the individual has maintained a stable weight for at least six months ?",
+            "type": "boolean",
+            "required": true,
+            "enableWhen": [
+              {
+                "question": "2.1",
+                "answerBoolean": true
+              }
+            ]
+          },
+          {
+            "linkId": "2.3",
+            "text": "Is the patient refractory to appropriate medical therapy over a period of three months ?",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "linkId": "2.4",
+            "text": "Is the procedure being administered for body contouring, weight reduction or the harvest of fat tissue for transfer to another body region ?",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "linkId": "2.5",
+            "text": "Is the procedure being administered for alteration of appearance or self-image or physical appearance ?",
+            "type": "boolean",
+            "required": true
+          }
+        ]
+      },
+      {
+        "linkId": "3",
+        "text": "Imaging Information",
+        "type": "group",
+        "item": [
+          {
+            "linkId": "3.1",
+            "text": "Preoperative photographs may be required to support justification. Please attach relevant photographs.",
+            "type": "display",
+            "required": true
+          }
+        ]
+      }
+    ]
+  }
+  

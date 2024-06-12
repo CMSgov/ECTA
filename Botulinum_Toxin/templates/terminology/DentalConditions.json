@@ -1,0 +1,48 @@
+{
+  "resourceType": "ValueSet",
+  "id": "2.16.840.1.113883.3.6037.1001.23.93.45",
+
+  "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.45",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "2.16.840.1.113883.3.6037.1001.23.93.45"
+    }
+  ],
+
+  "version": "Latest",
+    "name": "Dental Conditions",
+    "title": "Dental Conditions",
+    "status": "active",
+    "publisher": "Mettles",
+    "compose": {
+        "include": [
+            {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "version": "2021-05",
+                "concept": [
+                    {
+                        "code": "K00.7",
+                        "display": "Teething syndrome"
+                    },
+                    {
+                        "code": "K00.6",
+                        "display": "Disturbances in tooth eruption"
+                    },
+                    {
+                        "code": "K05.30",
+                        "display": "Chronic periodontitis, unspecified"
+                    },
+                    {
+                        "code": "K05.10",
+                        "display": "Chronic gingivitis, plaque induced"
+                    },
+                    {
+                        "code": "K05.11",
+                        "display": "Chronic gingivitis, non-plaque induced"
+                    }
+                ]
+            }
+        ]
+    }
+}

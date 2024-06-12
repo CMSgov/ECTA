@@ -1,0 +1,30 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.6037.1001.23.93.188",
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.188",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113883.3.6037.1001.23.93.188"
+        }
+    ],
+    "version": "Latest",
+    "name": "Migraine Prophylaxis",
+    "title": "Migraine Prophylaxis",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2021-08",
+                "concept": [
+                    {
+                      "code": "408381007",
+                      "display": "Migraine prophylaxis (procedure)"
+                    }
+                ]
+            }
+        ]
+    }
+}

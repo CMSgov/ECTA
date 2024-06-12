@@ -1,0 +1,362 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.6037.1001.23.93.60",
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.60",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113883.3.6037.1001.23.93.60"
+        }
+    ],
+    "version": "Latest",
+    "name": "Botulinum Toxin RXNORM Codes",
+    "title": "Botulinum Toxin RXNORM Codes",
+    "status": "active",
+    "publisher": "Mettles",
+    "compose": {
+        "include": [
+            {
+                "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "version": "2021-05",
+                "concept": [
+                    {
+                        "code": "1722683",
+                        "display": "botulinum neurotoxin B immune FAB2, equine"
+                    },
+                    {
+                        "code": "1000107",
+                        "display": "incobotulinumtoxinA 200 UNT Injection"
+                    },
+                    {
+                        "code": "1009456",
+                        "display": "incobotulinumtoxinA 100 UNT Injection"
+                    },
+                    {
+                        "code": "1009459",
+                        "display": "incobotulinumtoxinA 50 UNT Injection"
+                    },
+                    {
+                        "code": "1712",
+                        "display": "botulinum toxin type A"
+                    },
+                    {
+                        "code": "1726293",
+                        "display": "onabotulinumtoxinA 50 UNT Injection"
+                    },
+                    {
+                        "code": "1732157",
+                        "display": "incobotulinumtoxinA 50 UNT Injection [Xeomin]"
+                    },
+                    {
+                        "code": "1732161",
+                        "display": "incobotulinumtoxinA 100 UNT Injection [Xeomin]"
+                    },
+                    {
+                        "code": "1732165",
+                        "display": "incobotulinumtoxinA 200 UNT Injection [Xeomin]"
+                    },
+                    {
+                        "code": "1789950",
+                        "display": "abobotulinumtoxinA 500 UNT Injection"
+                    },
+                    {
+                        "code": "1789953",
+                        "display": "abobotulinumtoxinA 500 UNT Injection [Dysport]"
+                    },
+                    {
+                        "code": "1789956",
+                        "display": "abobotulinumtoxinA 300 UNT Injection"
+                    },
+                    {
+                        "code": "1789958",
+                        "display": "abobotulinumtoxinA 300 UNT Injection [Dysport]"
+                    },
+                    {
+                        "code": "2117871",
+                        "display": "prabotulinumtoxinA-xvfs 100 UNT Injection"
+                    },
+                    {
+                        "code": "2117876",
+                        "display": "prabotulinumtoxinA-xvfs 100 UNT Injection [Jeuveau]"
+                    },
+                    {
+                        "code": "860192",
+                        "display": "onabotulinumtoxinA 100 UNT Injection"
+                    },
+                    {
+                        "code": "860195",
+                        "display": "onabotulinumtoxinA 100 UNT Injection [Botox]"
+                    },
+                    {
+                        "code": "897366",
+                        "display": "onabotulinumtoxinA 200 UNT Injection"
+                    },
+                    {
+                        "code": "897368",
+                        "display": "onabotulinumtoxinA 200 UNT Injection [Botox]"
+                    },
+                    {
+                        "code": "1722684",
+                        "display": "botulinum neurotoxin B immune FAB2"
+                    },
+                    {
+                        "code": "1722696",
+                        "display": "botulinum neurotoxin A immune FAB2, equine"
+                    },
+                    {
+                        "code": "1722697",
+                        "display": "botulinum neurotoxin A immune FAB2"
+                    },
+                    {
+                        "code": "1722698",
+                        "display": "botulinum neurotoxin C immune FAB2, equine"
+                    },
+                    {
+                        "code": "1722699",
+                        "display": "botulinum neurotoxin C immune FAB2"
+                    },
+                    {
+                        "code": "1722700",
+                        "display": "botulinum neurotoxin D immune FAB2, equine"
+                    },
+                    {
+                        "code": "1722701",
+                        "display": "botulinum neurotoxin D immune FAB2"
+                    },
+                    {
+                        "code": "1722702",
+                        "display": "botulinum neurotoxin E immune FAB2, equine"
+                    },
+                    {
+                        "code": "1722703",
+                        "display": "botulinum neurotoxin E immune FAB2"
+                    },
+                    {
+                        "code": "1722704",
+                        "display": "botulinum neurotoxin F immune FAB2, equine"
+                    },
+                    {
+                        "code": "1722705",
+                        "display": "botulinum neurotoxin F immune FAB2"
+                    },
+                    {
+                        "code": "1722706",
+                        "display": "botulinum neurotoxin G immune FAB2, equine"
+                    },
+                    {
+                        "code": "1722707",
+                        "display": "botulinum neurotoxin G immune FAB2"
+                    },
+                    {
+                        "code": "1722718",
+                        "display": "botulinum neurotoxin A immune FAB2 / botulinum neurotoxin B immune FAB2 / botulinum neurotoxin C immune FAB2 / botulinum neurotoxin D immune FAB2 / botulinum neurotoxin E immune FAB2 / botulinum neurotoxin F immune FAB2 / botulinum neurotoxin G immune FAB2"
+                    },
+                    {
+                        "code": "2167673",
+                        "display": "botulinum toxin type B"
+                    },
+                    {
+                        "code": "2167673",
+                        "display": "botulinum neurotoxin A immune FAB2, equine 4500 UNT"
+                    },
+                    {
+                        "code": "1722709",
+                        "display": "botulinum neurotoxin A immune FAB2, equine 4500 UNT"
+                    },
+                    {
+                        "code": "1722710",
+                        "display": "botulinum neurotoxin B immune FAB2, equine 3300 UNT"
+                    },
+                    {
+                        "code": "1722711",
+                        "display": "botulinum neurotoxin C immune FAB2, equine 3000 UNT"
+                    },
+                    {
+                        "code": "1722712",
+                        "display": "botulinum neurotoxin D immune FAB2, equine 600 UNT"
+                    },
+                    {
+                        "code": "1722713",
+                        "display": "botulinum neurotoxin E immune FAB2, equine 5100 UNT"
+                    },
+                    {
+                        "code": "1722714",
+                        "display": "botulinum neurotoxin F immune FAB2, equine 3000 UNT"
+                    },
+                    {
+                        "code": "1722715",
+                        "display": "botulinum neurotoxin G immune FAB2, equine 600 UNT"
+                    },
+                    {
+                        "code": "1722716",
+                        "display": "botulinum neurotoxin A immune FAB2 / botulinum neurotoxin B immune FAB2 / botulinum neurotoxin C immune FAB2 / botulinum neurotoxin D immune FAB2 / botulinum neurotoxin E immune FAB2 / botulinum neurotoxin F immune FAB2 / botulinum neurotoxin G immune FAB2 Injectable Product"
+                    },
+                    {
+                        "code": "1722717",
+                        "display": "botulinum neurotoxin A immune FAB2 / botulinum neurotoxin B immune FAB2 / botulinum neurotoxin C immune FAB2 / botulinum neurotoxin D immune FAB2 / botulinum neurotoxin E immune FAB2 / botulinum neurotoxin F immune FAB2 / botulinum neurotoxin G immune FAB2 Injection"
+                    },
+                    {
+                        "code": "1722719",
+                        "display": "botulinum neurotoxin A immune FAB2, equine 4500 UNT / botulinum neurotoxin B immune FAB2, equine 3300 UNT / botulinum neurotoxin C immune FAB2, equine 3000 UNT / botulinum neurotoxin D immune FAB2, equine 600 UNT / botulinum neurotoxin E immune FAB2, equine 5100 UNT / botulinum neurotoxin F immune FAB2, equine 3000 UNT / botulinum neurotoxin G immune FAB2, equine 600 UNT Injection"
+                    },
+                    {
+                        "code": "1726280",
+                        "display": "onabotulinumtoxinA 200 UNT"
+                    },
+                    {
+                        "code": "1726283",
+                        "display": "onabotulinumtoxinA 200 UNT [Botox]"
+                    },
+                    {
+                        "code": "1726284",
+                        "display": "botulinum toxin type A Injection [Botox]"
+                    },
+                    {
+                        "code": "1726286",
+                        "display": "onabotulinumtoxinA 100 UNT"
+                    },
+                    {
+                        "code": "1726288",
+                        "display": "onabotulinumtoxinA 100 UNT [Botox]"
+                    },
+                    {
+                        "code": "1726292",
+                        "display": "onabotulinumtoxinA 50 UNT"
+                    },
+                    {
+                        "code": "1726294",
+                        "display": "onabotulinumtoxinA 50 UNT [Botox Cosmetic]"
+                    },
+                    {
+                        "code": "1726295",
+                        "display": "botulinum toxin type A Injection [Botox Cosmetic]"
+                    },
+                    {
+                        "code": "1726296",
+                        "display": "onabotulinumtoxinA 50 UNT Injection [Botox Cosmetic]"
+                    },
+                    {
+                        "code": "1726312",
+                        "display": "onabotulinumtoxinA 100 UNT [Botox Cosmetic]"
+                    },
+                    {
+                        "code": "1726313",
+                        "display": "onabotulinumtoxinA 100 UNT Injection [Botox Cosmetic]"
+                    },
+                    {
+                        "code": "1732153",
+                        "display": "botulinum toxin type A Injection"
+                    },
+                    {
+                        "code": "1732156",
+                        "display": "botulinum toxin type A Injection [Xeomin]"
+                    },
+                    {
+                        "code": "1736639",
+                        "display": "botulinum toxin type B Injection"
+                    },
+                    {
+                        "code": "1736640",
+                        "display": "0.5 ML rimabotulinumtoxinB 5000 UNT/ML Injection"
+                    },
+                    {
+                        "code": "1736641",
+                        "display": "botulinum toxin type B Injection [Myobloc]"
+                    },
+                    {
+                        "code": "1736642",
+                        "display": "0.5 ML rimabotulinumtoxinB 5000 UNT/ML Injection [Myobloc]"
+                    },
+                    {
+                        "code": "1736645",
+                        "display": "2 ML rimabotulinumtoxinB 5000 UNT/ML Injection"
+                    },
+                    {
+                        "code": "1736646",
+                        "display": "2 ML rimabotulinumtoxinB 5000 UNT/ML Injection [Myobloc]"
+                    },
+                    {
+                        "code": "1736647",
+                        "display": "1 ML rimabotulinumtoxinB 5000 UNT/ML Injection"
+                    },
+                    {
+                        "code": "1736648",
+                        "display": "1 ML rimabotulinumtoxinB 5000 UNT/ML Injection [Myobloc]"
+                    },
+                    {
+                        "code": "1743429",
+                        "display": "botulinum toxin type A Injectable Product"
+                    },
+                    {
+                        "code": "1789949",
+                        "display": "abobotulinumtoxinA 500 UNT"
+                    },
+                    {
+                        "code": "1789951",
+                        "display": "abobotulinumtoxinA 500 UNT [Dysport]"
+                    },
+                    {
+                        "code": "1789952",
+                        "display": "botulinum toxin type A Injection [Dysport]"
+                    },
+                    {
+                        "code": "1789955",
+                        "display": "abobotulinumtoxinA 300 UNT"
+                    },
+                    {
+                        "code": "1789957",
+                        "display": "abobotulinumtoxinA 300 UNT [Dysport]"
+                    },
+                    {
+                        "code": "1797431",
+                        "display": "incobotulinumtoxinA 100 UNT"
+                    },
+                    {
+                        "code": "1797433",
+                        "display": "incobotulinumtoxinA 100 UNT [Xeomin]"
+                    },
+                    {
+                        "code": "1797435",
+                        "display": "incobotulinumtoxinA 200 UNT"
+                    },
+                    {
+                        "code": "1797437",
+                        "display": "incobotulinumtoxinA 200 UNT [Xeomin]"
+                    },
+                    {
+                        "code": "1797439",
+                        "display": "incobotulinumtoxinA 50 UNT"
+                    },
+                    {
+                        "code": "1797441",
+                        "display": "incobotulinumtoxinA 50 UNT [Xeomin]"
+                    },
+                    {
+                        "code": "2117870",
+                        "display": "prabotulinumtoxinA-xvfs 100 UNT"
+                    },
+                    {
+                        "code": "2117873",
+                        "display": "prabotulinumtoxinA-xvfs 100 UNT [Jeuveau]"
+                    },
+                    {
+                        "code": "2117874",
+                        "display": "botulinum toxin type A Injection [Jeuveau]"
+                    },
+                    {
+                        "code": "2168598",
+                        "display": "botulinum toxin type B Injectable Product"
+                    },
+                    {
+                        "code": "860179",
+                        "display": "rimabotulinumtoxinB 5000 UNT/ML"
+                    },
+                    {
+                        "code": "860182",
+                        "display": "rimabotulinumtoxinB 5000 UNT/ML [Myobloc]"
+                    }
+                ]
+            }
+        ]
+    }
+}

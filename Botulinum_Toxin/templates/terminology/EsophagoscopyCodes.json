@@ -1,0 +1,39 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.6037.1001.23.99.38",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2020-09-08T13:39:19.000+00:00",
+        "source": "#xLwbIf1yYA80Dsrl"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.99.38",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113883.3.6037.1001.23.99.38"
+        }
+    ],
+    "version": "Latest",
+    "name": "Esophagogastroduodenoscopy",
+    "title": "Esophagogastroduodenoscopy",
+    "status": "active",
+    "publisher": "Mettles",
+    "compose": {
+        "include": [
+            {
+                "system": "https://www.aapc.com/resources/medical-coding/cpt.aspx",
+                "version": "2020-03",
+                "concept": [
+                    {
+                        "code": "43201",
+                        "display": "Esophagoscopy, Flexible, Transoral; With Directed Submucosal Injection(S), Any Substance"
+                    },
+                    {
+                        "code": "43236",
+                        "display": "Esophagogastroduodenoscopy, Flexible, Transoral; With Directed Submucosal Injection(S), Any Substance"
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,45 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.6037.1001.23.98.84",
+    "meta": {
+      "versionId": "2",
+      "lastUpdated": "2020-08-28T07:47:19.553+00:00",
+      "source": "#XfzZDo4Vcf8jh2LU"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.98.84",
+    "identifier": [
+      {
+        "system": "urn:ietf:rfc:3986",
+        "value": "2.16.840.1.113883.3.6037.1001.23.98.84"
+      }
+    ],
+    "version": "Latest",
+    "name": "Unable to ambulate",
+    "title": "Unable to ambulate",
+    "status": "active",
+    "publisher": "Mettles",
+    "compose": {
+      "include": [
+        {
+          "system": "http://hl7.org/fhir/sid/icd-10-cm",
+          "version": "2020-03",
+          "concept": [
+            {
+              "code": "R26.2",
+              "display": "Difficulty in walking, not elsewhere classified"
+            }
+          ]
+        },
+        {
+          "system": "http://snomed.info/sct",
+          "version": "2020-03",
+          "concept": [
+            {
+              "code": "282145008",
+              "display": "Unable to walk (finding)"
+            }
+          ]
+        }
+      ]
+    }
+  }

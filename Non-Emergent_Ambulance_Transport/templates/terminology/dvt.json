@@ -1,0 +1,53 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.6037.1001.23.98.101",
+    "meta": {
+      "versionId": "2",
+      "lastUpdated": "2020-08-28T07:47:19.553+00:00",
+      "source": "#XfzZDo4Vcf8jh2LU"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.98.101",
+    "identifier": [
+      {
+        "system": "urn:ietf:rfc:3986",
+        "value": "2.16.840.1.113883.3.6037.1001.23.98.101"
+      }
+    ],
+    "version": "Latest",
+    "name": "DVT requires elevation of lower extremity",
+    "title": "DVT requires elevation of lower extremity",
+    "status": "active",
+    "publisher": "Mettles",
+    "compose": {
+      "include": [
+        {
+          "system": "http://hl7.org/fhir/sid/icd-10-cm",
+          "version": "2020-03",
+          "concept": [
+            {
+              "code": "I82.409",
+              "display": "Acute embolism and thrombosis of unspecified deep veins of unspecified lower extremity"
+            },
+            {
+              "code": "I82. 401",
+              "display": "Acute embolism and thrombosis of unspecified deep veins of right lower extremity"
+            },
+            {
+              "code": "I82.40",
+              "display": "Acute embolism and thrombosis of unspecified deep veins of lower extremity"
+            }
+          ]
+        },
+        {
+          "system": "http://snomed.info/sct",
+          "version": "2020-03",
+          "concept": [
+            {
+              "code": "404223003",
+              "display": "Deep venous thrombosis of lower extremity (disorder)"
+            }
+          ]
+        }
+      ]
+    }
+  }

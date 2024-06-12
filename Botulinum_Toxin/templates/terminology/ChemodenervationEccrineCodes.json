@@ -1,0 +1,39 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.6037.1001.23.99.44",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2020-09-08T14:34:49.000+00:00",
+        "source": "#4kDH97twzANYA6lz"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.99.44",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113883.3.6037.1001.23.99.44"
+        }
+    ],
+    "version": "Latest",
+    "name": "Chemodenervation of Eccrine Glands",
+    "title": "Chemodenervation of Eccrine Glands",
+    "status": "active",
+    "publisher": "Mettles",
+    "compose": {
+        "include": [
+            {
+                "system": "https://www.aapc.com/resources/medical-coding/cpt.aspx",
+                "version": "2020-03",
+                "concept": [
+                    {
+                        "code": "64650",
+                        "display": "Chemodenervation Of Eccrine Glands; Both Axillae"
+                    },
+                    {
+                        "code": "64653",
+                        "display": "Chemodenervation Of Eccrine Glands; Other Area(S) (Eg, Scalp, Face, Neck), Per Day"
+                    }
+                ]
+            }
+        ]
+    }
+}

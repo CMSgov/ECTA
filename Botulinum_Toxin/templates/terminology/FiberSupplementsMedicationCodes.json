@@ -1,0 +1,90 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.6037.1001.23.93.68",
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.68",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113883.3.6037.1001.23.93.68"
+        }
+    ],
+    "version": "Latest",
+    "name": "Fiber Supplements RXNORM Codes",
+    "title": "Fiber Supplements RXNORM Codes",
+    "status": "active",
+    "publisher": "Mettles",
+    "compose": {
+        "include": [
+            {
+                "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "version": "2021-06",
+                "concept": [
+                    {
+                        "code": "1250686",
+                        "display": "Fiber Choice"
+                    },
+                    {
+                        "code": "1250713",
+                        "display": "Fiber Choice Weight Management"
+                    },
+                    {
+                        "code": "217119",
+                        "display": "Fiber Tab"
+                    },
+                    {
+                        "code": "217120",
+                        "display": "FiberCon"
+                    },
+                    {
+                        "code": "70727",
+                        "display": "fiber"
+                    },
+                    {
+                        "code": "1159648",
+                        "display": "fiber Oral Product"
+                    },
+                    {
+                        "code": "1168305",
+                        "display": "Fiber Tab Pill"
+                    },
+                    {
+                        "code": "1168306",
+                        "display": "FiberCon Oral Product"
+                    },
+                    {
+                        "code": "1168307",
+                        "display": "FiberCon Pill"
+                    },
+                    {
+                        "code": "1250689",
+                        "display": "Fiber Choice Oral Product"
+                    },
+                    {
+                        "code": "1250690",
+                        "display": "Fiber Choice Pill"
+                    },
+                    {
+                        "code": "1250927",
+                        "display": "Fiber Choice Weight Management Oral Product"
+                    },
+                    {
+                        "code": "1250928",
+                        "display": "Fiber Choice Weight Management Pill"
+                    },
+                    {
+                        "code": "1295920",
+                        "display": "Fiber Choice Weight Management Chewable Product"
+                    },
+                    {
+                        "code": "1296989",
+                        "display": "Fiber Choice Chewable Product"
+                    },
+                    {
+                        "code": "237976",
+                        "display": "fiber Oral Tablet"
+                    }
+                ]
+            }
+        ]
+    }
+}

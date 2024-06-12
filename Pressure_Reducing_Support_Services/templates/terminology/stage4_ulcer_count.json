@@ -1,0 +1,39 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.6037.1001.23.98.125",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2020-09-03T06:57:43.000+00:00",
+        "source": "#oHy6ltsnXpCgK6yP"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.98.125",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113883.3.6037.1001.23.98.125"
+        }
+    ],
+    "version": "Latest",
+    "name": "Stage 4 ulcer count",
+    "title": "Stage 4 ulcer count",
+    "status": "active",
+    "publisher": "Mettles",
+    "compose": {
+        "include": [
+            {
+                "system": "http://loinc.org",
+                "version": "2020-03",
+                "concept": [
+                    {
+                        "code": "45779-6",
+                        "display": "Ulcers.stage 4 # [Minimum Data Set]"
+                    },
+                    {
+                        "code": "54890-9",
+                        "display": "Number of pressure injuries present upon admission/reentry - stage 4 [CMS Assessment]"
+                    }
+                ]
+            }
+        ]
+    }
+}

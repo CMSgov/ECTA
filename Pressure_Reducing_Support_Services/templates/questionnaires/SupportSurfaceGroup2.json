@@ -1,0 +1,404 @@
+{
+  "resourceType": "Questionnaire",
+  "identifier": [
+    {
+      "system": "http://identifiers.mettles.com/prior_authorization",
+      "value": "medicare_fee_for_service-support_surfaces_group2"
+    }
+  ],
+  "name": "SupportSurfaceGroup2",
+  "version": "1.0.0",
+  "title": "Pressure Reducing Support Surfaces - Group 2",
+  "status": "draft",
+  "subjectType": [
+    "Patient"
+  ],
+  "date": "2020-12-03",
+  "publisher": "Mettle Solutions",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
+      "valueCanonical": "<FHIR-server>/Library/library-lcd1-SupportSurfaceGroup2"
+    }
+  ],
+  "item": [
+    {
+      "linkId": "1",
+      "text": "Clinical Assessment",
+      "type": "group",
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "RelevantDiagnoses"
+              }
+            }
+          ],
+          "linkId": "1.1",
+          "text": "Relevant Diagnoses",
+          "type": "text",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "ProgramsUndertaken"
+              }
+            }
+          ],
+          "linkId": "1.2",
+          "text": "Comprehensive ulcer treatment programs undertaken over the past month",
+          "type": "text",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "Group1DeviceUsage"
+              }
+            }
+          ],
+          "linkId": "1.3",
+          "text": "Group 1 surfaces used over the past month",
+          "type": "text",
+          "required": true
+        },
+        {
+          "linkId": "1.4",
+          "text": "Has there been improvement in the patient's condition over the past month?",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "UlcerTreatment"
+              }
+            }
+          ],
+          "linkId": "1.5",
+          "text": "Treatment undertaken for pressure ulcers within the past 60 days",
+          "type": "text"
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                  "language": "text/cql",
+                  "expression": "Group2or3SurfaceUsed"
+              }
+            }
+          ],
+          "linkId": "1.6",
+          "text": "Group 2 or 3 support surface the patient has been on, within the past 30 days after the treatment",
+          "type": "text",
+          "enableWhen": [
+            {
+              "question": "1.5",
+              "operator": "!=",
+              "answerString": ""
+            }
+          ]
+        },
+        {
+          "linkId": "1.7",
+          "text": "Has the patient been on the support surface immediately prior to discharge from a hospital or nursing facility?",
+          "type": "boolean",
+          "required": true,
+          "enableWhen": [
+            {
+              "question": "1.5",
+              "operator": "exists"
+            },
+            {
+              "question": "1.6",
+              "operator": "exists"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "2",
+      "text": "Observations",
+      "type": "group",
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "Stage2UlcerCount"
+              }
+            }
+          ],
+          "linkId": "2.1",
+          "text": "Stage 2 Pressure ulcers count",
+          "type": "integer"
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "Stage3UlcerCount"
+              }
+            }
+          ],
+          "linkId": "2.2",
+          "text": "Stage 3 Pressure ulcers count",
+          "type": "integer"
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "Stage4UlcerCount"
+              }
+            }
+          ],
+          "linkId": "2.3",
+          "text": "Stage 4 Pressure ulcers count",
+          "type": "integer"
+        }
+      ]
+    },
+    {
+      "linkId": "3",
+      "text": "Supplier/Provider Information",
+      "type": "group",
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "SupplierName"
+              }
+            }
+          ],
+          "linkId": "3.1",
+          "text": "Name",
+          "type": "string",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "SupplierNPI"
+              }
+            }
+          ],
+          "linkId": "3.2",
+          "text": "NPI",
+          "type": "string",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "SupplierAddressLine"
+              }
+            }
+          ],
+          "linkId": "3.3",
+          "text": "Address Line",
+          "type": "string",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "SupplierAddressCity"
+              }
+            }
+          ],
+          "linkId": "3.4",
+          "text": "Address City",
+          "type": "string",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "SupplierAddressState"
+              }
+            }
+          ],
+          "linkId": "3.5",
+          "text": "Address State",
+          "type": "string",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                  "language": "text/cql",
+                  "expression": "SupplierAddressPostalCode"
+              }
+            }
+          ],
+          "linkId": "3.6",
+          "text": "Address Postal Code",
+          "type": "string",
+          "required": true
+        }
+      ]
+    },
+    {
+      "linkId": "4",
+      "text": "Other Required Information",
+      "type": "group",
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "SubmissionDate"
+              }
+            }
+          ],
+          "linkId": "4.1",
+          "text": "Submission date",
+          "type": "date",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "DeliveryAddress"
+              }
+            }
+          ],
+          "linkId": "4.2",
+          "text": "Deliver to",
+          "type": "text",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "Typeofrequest"
+              }
+            }
+          ],
+          "linkId": "4.3",
+          "text": "Type of request",
+          "type": "choice",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "Initial"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Resubmission review"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Expedite this request"
+              }
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "ReasonExpeditedRequest"
+              }
+            }
+          ],
+          "linkId": "4.4",
+          "text": "Reason for the request to be expedited",
+          "type": "text",
+          "enableWhen": [
+            {
+              "question": "4.7",
+              "operator": "=",
+              "answerCoding": {
+                "code": "Expedite this request"
+              }
+            }
+          ],
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "Description"
+              }
+            }
+          ],
+          "linkId": "4.5",
+          "text": "Description of the item requested",
+          "type": "text",
+          "required": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "QuantityRequired"
+              }
+            }
+          ],
+          "linkId": "4.6",
+          "text": "Quantity to be dispensed",
+          "type": "integer",
+          "required": true
+        }
+      ]
+    }
+  ]
+}

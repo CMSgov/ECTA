@@ -1,0 +1,283 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.6037.1001.23.93.85",
+    "meta": {
+        "versionId": "3",
+        "lastUpdated": "2020-09-08T13:16:39.000+00:00",
+        "source": "#E0CPIrvhoxqRgpEA"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.85",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113883.3.6037.1001.23.93.85"
+        }
+    ],
+    "version": "Latest",
+    "name": "Strabismus Codes",
+    "title": "Strabismus Codes",
+    "status": "active",
+    "publisher": "Mettles",
+    "compose": {
+        "include": [
+            {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "version": "2021-06",
+                "concept": [
+                    {
+                        "code": "H49.881",
+                        "display": "Other paralytic strabismus, right eye"
+                    },
+                    {
+                        "code": "H49.882",
+                        "display": "Other paralytic strabismus, left eye"
+                    },
+                    {
+                        "code": "H49.883",
+                        "display": "Other paralytic strabismus, bilateral"
+                    },
+                    {
+                        "code": "H49.9",
+                        "display": "Unspecified paralytic strabismus"
+                    },
+                    {
+                        "code": "H50.00",
+                        "display": "Unspecified esotropia"
+                    },
+                    {
+                        "code": "H50.011",
+                        "display": "Monocular esotropia, right eye"
+                    },
+                    {
+                        "code": "H50.012",
+                        "display": "Monocular esotropia, left eye"
+                    },
+                    {
+                        "code": "H50.021",
+                        "display": "Monocular esotropia with A pattern, right eye"
+                    },
+                    {
+                        "code": "H50.022",
+                        "display": "Monocular esotropia with A pattern, left eye"
+                    },
+                    {
+                        "code": "H50.031",
+                        "display": "Monocular esotropia with V pattern, right eye"
+                    },
+                    {
+                        "code": "H50.032",
+                        "display": "Monocular esotropia with V pattern, left eye"
+                    },
+                    {
+                        "code": "H50.041",
+                        "display": "Monocular esotropia with other noncomitancies, right eye"
+                    },
+                    {
+                        "code": "H50.042",
+                        "display": "Monocular esotropia with other noncomitancies, left eye"
+                    },
+                    {
+                        "code": "H50.05",
+                        "display": "Alternating esotropia - Alternating esotropia with other noncomitancies"
+                    },
+                    {
+                        "code": "H50.06",
+                        "display": "Alternating esotropia - Alternating esotropia with other noncomitancies"
+                    },
+                    {
+                        "code": "H50.07",
+                        "display": "Alternating esotropia - Alternating esotropia with other noncomitancies"
+                    },
+                    {
+                        "code": "H50.08",
+                        "display": "Alternating esotropia - Alternating esotropia with other noncomitancies"
+                    },
+                    {
+                        "code": "H50.10",
+                        "display": "Unspecified exotropia"
+                    },
+                    {
+                        "code": "H50.111",
+                        "display": "Monocular exotropia, right eye"
+                    },
+                    {
+                        "code": "H50.112",
+                        "display": "Monocular exotropia, left eye"
+                    },
+                    {
+                        "code": "H50.121",
+                        "display": "Monocular exotropia with A pattern, right eye"
+                    },
+                    {
+                        "code": "H50.122",
+                        "display": "Monocular exotropia with A pattern, left eye"
+                    },
+                    {
+                        "code": "H50.131",
+                        "display": "Monocular exotropia with V pattern, right eye"
+                    },
+                    {
+                        "code": "H50.132",
+                        "display": "Monocular exotropia with V pattern, left eye"
+                    },
+                    {
+                        "code": "H50.141",
+                        "display": "Monocular exotropia with other noncomitancies, right eye"
+                    },
+                    {
+                        "code": "H50.142",
+                        "display": "Monocular exotropia with other noncomitancies, left eye"
+                    },
+                    {
+                        "code": "H50.15",
+                        "display": "Alternating exotropia - Alternating exotropia with other noncomitancies"
+                    },
+                    {
+                        "code": "H50.16",
+                        "display": "Alternating exotropia - Alternating exotropia with other noncomitancies"
+                    },
+                    {
+                        "code": "H50.17",
+                        "display": "Alternating exotropia - Alternating exotropia with other noncomitancies"
+                    },
+                    {
+                        "code": "H50.18",
+                        "display": "Alternating exotropia - Alternating exotropia with other noncomitancies"
+                    },
+                    {
+                        "code": "H50.21",
+                        "display": "Vertical strabismus, right eye"
+                    },
+                    {
+                        "code": "H50.22",
+                        "display": "Vertical strabismus, left eye"
+                    },
+                    {
+                        "code": "H50.30",
+                        "display": "Unspecified intermittent heterotropia"
+                    },
+                    {
+                        "code": "H50.311",
+                        "display": "Intermittent monocular esotropia, right eye"
+                    },
+                    {
+                        "code": "H50.312",
+                        "display": "Intermittent monocular esotropia, left eye"
+                    },
+                    {
+                        "code": "H50.32",
+                        "display": "Intermittent alternating esotropia"
+                    },
+                    {
+                        "code": "H50.331",
+                        "display": "Intermittent monocular exotropia, right eye"
+                    },
+                    {
+                        "code": "H50.332",
+                        "display": "Intermittent monocular exotropia, left eye"
+                    },
+                    {
+                        "code": "H50.34",
+                        "display": "Intermittent alternating exotropia"
+                    },
+                    {
+                        "code": "H50.40",
+                        "display": "Unspecified heterotropia"
+                    },
+                    {
+                        "code": "H50.411",
+                        "display": "Cyclotropia, right eye"
+                    },
+                    {
+                        "code": "H50.412",
+                        "display": "Cyclotropia, left eye"
+                    },
+                    {
+                        "code": "H50.42",
+                        "display": "Monofixation syndrome"
+                    },
+                    {
+                        "code": "H50.43",
+                        "display": "Accommodative component in esotropia"
+                    },
+                    {
+                        "code": "H50.50",
+                        "display": "Unspecified heterophoria - Alternating heterophoria"
+                    },
+                    {
+                        "code": "H50.51",
+                        "display": "Unspecified heterophoria - Alternating heterophoria"
+                    },
+                    {
+                        "code": "H50.52",
+                        "display": "Unspecified heterophoria - Alternating heterophoria"
+                    },
+                    {
+                        "code": "H50.53",
+                        "display": "Unspecified heterophoria - Alternating heterophoria"
+                    },
+                    {
+                        "code": "H50.54",
+                        "display": "Unspecified heterophoria - Alternating heterophoria"
+                    },
+                    {
+                        "code": "H50.55",
+                        "display": "Unspecified heterophoria - Alternating heterophoria"
+                    },
+                    {
+                        "code": "H50.60",
+                        "display": "Mechanical strabismus, unspecified"
+                    },
+                    {
+                        "code": "H50.611",
+                        "display": "Brown's sheath syndrome, right eye"
+                    },
+                    {
+                        "code": "H50.612",
+                        "display": "Brown's sheath syndrome, left eye"
+                    },
+                    {
+                        "code": "H50.69",
+                        "display": "Other mechanical strabismus"
+                    },
+                    {
+                        "code": "H50.811",
+                        "display": "Duane's syndrome, right eye"
+                    },
+                    {
+                        "code": "H50.812",
+                        "display": "Duane's syndrome, left eye"
+                    },
+                    {
+                        "code": "H50.89",
+                        "display": "Other specified strabismus"
+                    },
+                    {
+                        "code": "H50.9",
+                        "display": "Unspecified strabismus"
+                    },
+                    {
+                        "code": "H51.0",
+                        "display": "Palsy (spasm) of conjugate gaze"
+                    },
+                    {
+                        "code": "H51.11",
+                        "display": "Convergence insufficiency"
+                    },
+                    {
+                        "code": "H51.12",
+                        "display": "Convergence excess"
+                    },
+                    {
+                        "code": "H51.8",
+                        "display": "Other specified disorders of binocular movement"
+                    },
+                    {
+                        "code": "H51.9",
+                        "display": "Unspecified disorder of binocular movement"
+                    }
+                ]
+            }
+        ]
+    }
+}

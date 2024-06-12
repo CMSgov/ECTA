@@ -1,0 +1,894 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.6037.1001.23.93.72",
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.72",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113883.3.6037.1001.23.93.72"
+        }
+    ],
+    "version": "Latest",
+    "name": "Spasticity Condition Codes",
+    "title": "Spasticity Condition Codes",
+    "status": "active",
+    "publisher": "Mettles",
+    "compose": {
+        "include": [
+            {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "version": "2020-03",
+                "concept": [
+                    {
+                        "code": "G04.1",
+                        "display": "Tropical spastic paraplegia"
+                    },
+                    {
+                        "code": "G11.4",
+                        "display": "Hereditary spastic paraplegia"
+                    },
+                    {
+                        "code": "G24.02",
+                        "display": "Drug induced acute dystonia"
+                    },
+                    {
+                        "code": "G24.09",
+                        "display": "Other drug induced dystonia"
+                    },
+                    {
+                        "code": "G24.1",
+                        "display": "Genetic torsion dystonia"
+                    },
+                    {
+                        "code": "G24.2",
+                        "display": "Idiopathic nonfamilial dystonia"
+                    },
+                    {
+                        "code": "G24.8",
+                        "display": "Other dystonia"
+                    },
+                    {
+                        "code": "G24.9",
+                        "display": "Dystonia, unspecified"
+                    },
+                    {
+                        "code": "G25.89",
+                        "display": "Other specified extrapyramidal and movement disorders"
+                    },
+                    {
+                        "code": "G35",
+                        "display": "Multiple sclerosis"
+                    },
+                    {
+                        "code": "G36.0",
+                        "display": "Neuromyelitis optica [Devic]"
+                    },
+                    {
+                        "code": "G36.1",
+                        "display": "Acute and subacute hemorrhagic leukoencephalitis [Hurst]"
+                    },
+                    {
+                        "code": "G36.8",
+                        "display": "Other specified acute disseminated demyelination"
+                    },
+                    {
+                        "code": "G37.3",
+                        "display": "Acute transverse myelitis in demyelinating disease of central nervous system"
+                    },
+                    {
+                        "code": "G37.9",
+                        "display": "Demyelinating disease of central nervous system, unspecified"
+                    },
+                    {
+                        "code": "G80.0",
+                        "display": "Spastic quadriplegic cerebral palsy - Ataxic cerebral palsy"
+                    },
+                    {
+                        "code": "G80.1",
+                        "display": "Spastic quadriplegic cerebral palsy - Ataxic cerebral palsy"
+                    },
+                    {
+                        "code": "G80.2",
+                        "display": "Spastic quadriplegic cerebral palsy - Ataxic cerebral palsy"
+                    },
+                    {
+                        "code": "G80.3",
+                        "display": "Spastic quadriplegic cerebral palsy - Ataxic cerebral palsy"
+                    },
+                    {
+                        "code": "G80.4",
+                        "display": "Spastic quadriplegic cerebral palsy - Ataxic cerebral palsy"
+                    },
+                    {
+                        "code": "G80.8",
+                        "display": "Other cerebral palsy"
+                    },
+                    {
+                        "code": "G80.9",
+                        "display": "Cerebral palsy, unspecified"
+                    },
+                    {
+                        "code": "G81.10",
+                        "display": "Spastic hemiplegia affecting unspecified side - Spastic hemiplegia affecting left nondominant side"
+                    },
+                    {
+                        "code": "G81.11",
+                        "display": "Spastic hemiplegia affecting unspecified side - Spastic hemiplegia affecting left nondominant side"
+                    },
+                    {
+                        "code": "G81.12",
+                        "display": "Spastic hemiplegia affecting unspecified side - Spastic hemiplegia affecting left nondominant side"
+                    },
+                    {
+                        "code": "G81.13",
+                        "display": "Spastic hemiplegia affecting unspecified side - Spastic hemiplegia affecting left nondominant side"
+                    },
+                    {
+                        "code": "G81.14",
+                        "display": "Spastic hemiplegia affecting unspecified side - Spastic hemiplegia affecting left nondominant side"
+                    },
+                    {
+                        "code": "G82.20",
+                        "display": "Paraplegia, unspecified"
+                    },
+                    {
+                        "code": "G82.21",
+                        "display": "Paraplegia, complete"
+                    },
+                    {
+                        "code": "G82.22",
+                        "display": "Paraplegia, incomplete"
+                    },
+                    {
+                        "code": "G82.50",
+                        "display": "Quadriplegia, unspecified - Quadriplegia, C5-C7 incomplete"
+                    },
+                    {
+                        "code": "G82.51",
+                        "display": "Quadriplegia, unspecified - Quadriplegia, C5-C7 incomplete"
+                    },
+                    {
+                        "code": "G82.52",
+                        "display": "Quadriplegia, unspecified - Quadriplegia, C5-C7 incomplete"
+                    },
+                    {
+                        "code": "G82.53",
+                        "display": "Quadriplegia, unspecified - Quadriplegia, C5-C7 incomplete"
+                    },
+                    {
+                        "code": "G82.54",
+                        "display": "Quadriplegia, unspecified - Quadriplegia, C5-C7 incomplete"
+                    },
+                    {
+                        "code": "G83.0",
+                        "display": "Diplegia of upper limbs"
+                    },
+                    {
+                        "code": "G83.11",
+                        "display": "Monoplegia of lower limb affecting right dominant side - Monoplegia of lower limb affecting left nondominant side"
+                    },
+                    {
+                        "code": "G83.12",
+                        "display": "Monoplegia of lower limb affecting right dominant side - Monoplegia of lower limb affecting left nondominant side"
+                    },
+                    {
+                        "code": "G83.13",
+                        "display": "Monoplegia of lower limb affecting right dominant side - Monoplegia of lower limb affecting left nondominant side"
+                    },
+                    {
+                        "code": "G83.14",
+                        "display": "Monoplegia of lower limb affecting right dominant side - Monoplegia of lower limb affecting left nondominant side"
+                    },
+                    {
+                        "code": "G83.20",
+                        "display": "Monoplegia of upper limb affecting unspecified side"
+                    },
+                    {
+                        "code": "G83.21",
+                        "display": "Monoplegia of upper limb affecting right dominant side - Monoplegia of upper limb affecting left nondominant side"
+                    },
+                    {
+                        "code": "G83.22",
+                        "display": "Monoplegia of upper limb affecting right dominant side - Monoplegia of upper limb affecting left nondominant side"
+                    },
+                    {
+                        "code": "G83.23",
+                        "display": "Monoplegia of upper limb affecting right dominant side - Monoplegia of upper limb affecting left nondominant side"
+                    },
+                    {
+                        "code": "G83.24",
+                        "display": "Monoplegia of upper limb affecting right dominant side - Monoplegia of upper limb affecting left nondominant side"
+                    },
+                    {
+                        "code": "G83.31",
+                        "display": "Monoplegia, unspecified affecting right dominant side - Monoplegia, unspecified affecting left nondominant side"
+                    },
+                    {
+                        "code": "G83.32",
+                        "display": "Monoplegia, unspecified affecting right dominant side - Monoplegia, unspecified affecting left nondominant side"
+                    },
+                    {
+                        "code": "G83.33",
+                        "display": "Monoplegia, unspecified affecting right dominant side - Monoplegia, unspecified affecting left nondominant side"
+                    },
+                    {
+                        "code": "G83.34",
+                        "display": "Monoplegia, unspecified affecting right dominant side - Monoplegia, unspecified affecting left nondominant side"
+                    },
+                    {
+                        "code": "G83.81",
+                        "display": "Brown-Sequard syndrome"
+                    },
+                    {
+                        "code": "G83.82",
+                        "display": "Anterior cord syndrome"
+                    },
+                    {
+                        "code": "G83.89",
+                        "display": "Other specified paralytic syndromes"
+                    },
+                    {
+                        "code": "I69.031",
+                        "display": "Monoplegia of upper limb following nontraumatic subarachnoid hemorrhage affecting right dominant side - Monoplegia of upper limb following nontraumatic subarachnoid hemorrhage affecting left non-dominant side"
+                    },
+                    {
+                        "code": "I69.032",
+                        "display": "Monoplegia of upper limb following nontraumatic subarachnoid hemorrhage affecting right dominant side - Monoplegia of upper limb following nontraumatic subarachnoid hemorrhage affecting left non-dominant side"
+                    },
+                    {
+                        "code": "I69.033",
+                        "display": "Monoplegia of upper limb following nontraumatic subarachnoid hemorrhage affecting right dominant side - Monoplegia of upper limb following nontraumatic subarachnoid hemorrhage affecting left non-dominant side"
+                    },
+                    {
+                        "code": "I69.034",
+                        "display": "Monoplegia of upper limb following nontraumatic subarachnoid hemorrhage affecting right dominant side - Monoplegia of upper limb following nontraumatic subarachnoid hemorrhage affecting left non-dominant side"
+                    },
+                    {
+                        "code": "I69.039",
+                        "display": "Monoplegia of upper limb following nontraumatic subarachnoid hemorrhage affecting unspecified side"
+                    },
+                    {
+                        "code": "I69.041",
+                        "display": "Monoplegia of lower limb following nontraumatic subarachnoid hemorrhage affecting right dominant side"
+                    },
+                    {
+                        "code": "I69.042",
+                        "display": "Monoplegia of lower limb following nontraumatic subarachnoid hemorrhage affecting left dominant side"
+                    },
+                    {
+                        "code": "I69.043",
+                        "display": "Monoplegia of lower limb following nontraumatic subarachnoid hemorrhage affecting right nondominant side"
+                    },
+                    {
+                        "code": "I69.044",
+                        "display": "Monoplegia of lower limb following nontraumatic subarachnoid hemorrhage affecting left nondominant side"
+                    },
+                    {
+                        "code": "I69.049",
+                        "display": "Monoplegia of lower limb following nontraumatic subarachnoid hemorrhage affecting unspecified side"
+                    },
+                    {
+                        "code": "I69.051",
+                        "display": "Hemiplegia and hemiparesis following nontraumatic subarachnoid hemorrhage affecting right dominant side - Hemiplegia and hemiparesis following nontraumatic subarachnoid hemorrhage affecting left non-dominant side"
+                    },
+                    {
+                        "code": "I69.052",
+                        "display": "Hemiplegia and hemiparesis following nontraumatic subarachnoid hemorrhage affecting right dominant side - Hemiplegia and hemiparesis following nontraumatic subarachnoid hemorrhage affecting left non-dominant side"
+                    },
+                    {
+                        "code": "I69.053",
+                        "display": "Hemiplegia and hemiparesis following nontraumatic subarachnoid hemorrhage affecting right dominant side - Hemiplegia and hemiparesis following nontraumatic subarachnoid hemorrhage affecting left non-dominant side"
+                    },
+                    {
+                        "code": "I69.054",
+                        "display": "Hemiplegia and hemiparesis following nontraumatic subarachnoid hemorrhage affecting right dominant side - Hemiplegia and hemiparesis following nontraumatic subarachnoid hemorrhage affecting left non-dominant side"
+                    },
+                    {
+                        "code": "I69.059",
+                        "display": "Hemiplegia and hemiparesis following nontraumatic subarachnoid hemorrhage affecting unspecified side"
+                    },
+                    {
+                        "code": "I69.061",
+                        "display": "Other paralytic syndrome following nontraumatic subarachnoid hemorrhage affecting right dominant side - Other paralytic syndrome following nontraumatic subarachnoid hemorrhage, bilateral"
+                    },
+                    {
+                        "code": "I69.062",
+                        "display": "Other paralytic syndrome following nontraumatic subarachnoid hemorrhage affecting right dominant side - Other paralytic syndrome following nontraumatic subarachnoid hemorrhage, bilateral"
+                    },
+                    {
+                        "code": "I69.063",
+                        "display": "Other paralytic syndrome following nontraumatic subarachnoid hemorrhage affecting right dominant side - Other paralytic syndrome following nontraumatic subarachnoid hemorrhage, bilateral"
+                    },
+                    {
+                        "code": "I69.064",
+                        "display": "Other paralytic syndrome following nontraumatic subarachnoid hemorrhage affecting right dominant side - Other paralytic syndrome following nontraumatic subarachnoid hemorrhage, bilateral"
+                    },
+                    {
+                        "code": "I69.065",
+                        "display": "Other paralytic syndrome following nontraumatic subarachnoid hemorrhage affecting right dominant side - Other paralytic syndrome following nontraumatic subarachnoid hemorrhage, bilateral"
+                    },
+                    {
+                        "code": "I69.069",
+                        "display": "Other paralytic syndrome following nontraumatic subarachnoid hemorrhage affecting unspecified side"
+                    },
+                    {
+                        "code": "I69.131",
+                        "display": "Monoplegia of upper limb following nontraumatic intracerebral hemorrhage affecting right dominant side - Monoplegia of upper limb following nontraumatic intracerebral hemorrhage affecting left nondominant side"
+                    },
+                    {
+                        "code": "I69.132",
+                        "display": "Monoplegia of upper limb following nontraumatic intracerebral hemorrhage affecting right dominant side - Monoplegia of upper limb following nontraumatic intracerebral hemorrhage affecting left nondominant side"
+                    },
+                    {
+                        "code": "I69.133",
+                        "display": "Monoplegia of upper limb following nontraumatic intracerebral hemorrhage affecting right dominant side - Monoplegia of upper limb following nontraumatic intracerebral hemorrhage affecting left nondominant side"
+                    },
+                    {
+                        "code": "I69.134",
+                        "display": "Monoplegia of upper limb following nontraumatic intracerebral hemorrhage affecting right dominant side - Monoplegia of upper limb following nontraumatic intracerebral hemorrhage affecting left nondominant side"
+                    },
+                    {
+                        "code": "I69.139",
+                        "display": "Monoplegia of upper limb following nontraumatic intracerebral hemorrhage affecting unspecified side"
+                    },
+                    {
+                        "code": "I69.151",
+                        "display": "Hemiplegia and hemiparesis following nontraumatic intracerebral hemorrhage affecting right dominant side - Hemiplegia and hemiparesis following nontraumatic intracerebral hemorrhage affecting left non-dominant side"
+                    },
+                    {
+                        "code": "I69.152",
+                        "display": "Hemiplegia and hemiparesis following nontraumatic intracerebral hemorrhage affecting right dominant side - Hemiplegia and hemiparesis following nontraumatic intracerebral hemorrhage affecting left non-dominant side"
+                    },
+                    {
+                        "code": "I69.153",
+                        "display": "Hemiplegia and hemiparesis following nontraumatic intracerebral hemorrhage affecting right dominant side - Hemiplegia and hemiparesis following nontraumatic intracerebral hemorrhage affecting left non-dominant side"
+                    },
+                    {
+                        "code": "I69.154",
+                        "display": "Hemiplegia and hemiparesis following nontraumatic intracerebral hemorrhage affecting right dominant side - Hemiplegia and hemiparesis following nontraumatic intracerebral hemorrhage affecting left non-dominant side"
+                    },
+                    {
+                        "code": "I69.159",
+                        "display": "Hemiplegia and hemiparesis following nontraumatic intracerebral hemorrhage affecting unspecified side"
+                    },
+                    {
+                        "code": "I69.161",
+                        "display": "Other paralytic syndrome following nontraumatic intracerebral hemorrhage affecting right dominant side - Other paralytic syndrome following nontraumatic intracerebral hemorrhage, bilateral"
+                    },
+                    {
+                        "code": "I69.162",
+                        "display": "Other paralytic syndrome following nontraumatic intracerebral hemorrhage affecting right dominant side - Other paralytic syndrome following nontraumatic intracerebral hemorrhage, bilateral"
+                    },
+                    {
+                        "code": "I69.163",
+                        "display": "Other paralytic syndrome following nontraumatic intracerebral hemorrhage affecting right dominant side - Other paralytic syndrome following nontraumatic intracerebral hemorrhage, bilateral"
+                    },
+                    {
+                        "code": "I69.164",
+                        "display": "Other paralytic syndrome following nontraumatic intracerebral hemorrhage affecting right dominant side - Other paralytic syndrome following nontraumatic intracerebral hemorrhage, bilateral"
+                    },
+                    {
+                        "code": "I69.165",
+                        "display": "Other paralytic syndrome following nontraumatic intracerebral hemorrhage affecting right dominant side - Other paralytic syndrome following nontraumatic intracerebral hemorrhage, bilateral"
+                    },
+                    {
+                        "code": "I69.169",
+                        "display": "Other paralytic syndrome following nontraumatic intracerebral hemorrhage affecting unspecified side"
+                    },
+                    {
+                        "code": "I69.231",
+                        "display": "Monoplegia of upper limb following other nontraumatic intracranial hemorrhage affecting right dominant side - Monoplegia of upper limb following other nontraumatic intracranial hemorrhage affecting left non-dominant side"
+                    },
+                    {
+                        "code": "I69.232",
+                        "display": "Monoplegia of upper limb following other nontraumatic intracranial hemorrhage affecting right dominant side - Monoplegia of upper limb following other nontraumatic intracranial hemorrhage affecting left non-dominant side"
+                    },
+                    {
+                        "code": "I69.233",
+                        "display": "Monoplegia of upper limb following other nontraumatic intracranial hemorrhage affecting right dominant side - Monoplegia of upper limb following other nontraumatic intracranial hemorrhage affecting left non-dominant side"
+                    },
+                    {
+                        "code": "I69.234",
+                        "display": "Monoplegia of upper limb following other nontraumatic intracranial hemorrhage affecting right dominant side - Monoplegia of upper limb following other nontraumatic intracranial hemorrhage affecting left non-dominant side"
+                    },
+                    {
+                        "code": "I69.239",
+                        "display": "Monoplegia of upper limb following other nontraumatic intracranial hemorrhage affecting unspecified side"
+                    },
+                    {
+                        "code": "I69.251",
+                        "display": "Hemiplegia and hemiparesis following other nontraumatic intracranial hemorrhage affecting right dominant side - Hemiplegia and hemiparesis following other nontraumatic intracranial hemorrhage affecting left non-dominant side"
+                    },
+                    {
+                        "code": "I69.252",
+                        "display": "Hemiplegia and hemiparesis following other nontraumatic intracranial hemorrhage affecting right dominant side - Hemiplegia and hemiparesis following other nontraumatic intracranial hemorrhage affecting left non-dominant side"
+                    },
+                    {
+                        "code": "I69.253",
+                        "display": "Hemiplegia and hemiparesis following other nontraumatic intracranial hemorrhage affecting right dominant side - Hemiplegia and hemiparesis following other nontraumatic intracranial hemorrhage affecting left non-dominant side"
+                    },
+                    {
+                        "code": "I69.254",
+                        "display": "Hemiplegia and hemiparesis following other nontraumatic intracranial hemorrhage affecting right dominant side - Hemiplegia and hemiparesis following other nontraumatic intracranial hemorrhage affecting left non-dominant side"
+                    },
+                    {
+                        "code": "I69.259",
+                        "display": "Hemiplegia and hemiparesis following other nontraumatic intracranial hemorrhage affecting unspecified side"
+                    },
+                    {
+                        "code": "I69.261",
+                        "display": "Other paralytic syndrome following other nontraumatic intracranial hemorrhage affecting right dominant side - Other paralytic syndrome following other nontraumatic intracranial hemorrhage, bilateral"
+                    },
+                    {
+                        "code": "I69.262",
+                        "display": "Other paralytic syndrome following other nontraumatic intracranial hemorrhage affecting right dominant side - Other paralytic syndrome following other nontraumatic intracranial hemorrhage, bilateral"
+                    },
+                    {
+                        "code": "I69.263",
+                        "display": "Other paralytic syndrome following other nontraumatic intracranial hemorrhage affecting right dominant side - Other paralytic syndrome following other nontraumatic intracranial hemorrhage, bilateral"
+                    },
+                    {
+                        "code": "I69.264",
+                        "display": "Other paralytic syndrome following other nontraumatic intracranial hemorrhage affecting right dominant side - Other paralytic syndrome following other nontraumatic intracranial hemorrhage, bilateral"
+                    },
+                    {
+                        "code": "I69.269",
+                        "display": "Other paralytic syndrome following other nontraumatic intracranial hemorrhage affecting unspecified side"
+                    },
+                    {
+                        "code": "I69.331",
+                        "display": "Monoplegia of upper limb following cerebral infarction affecting right dominant side - Monoplegia of upper limb following cerebral infarction affecting left non-dominant side"
+                    },
+                    {
+                        "code": "I69.332",
+                        "display": "Monoplegia of upper limb following cerebral infarction affecting right dominant side - Monoplegia of upper limb following cerebral infarction affecting left non-dominant side"
+                    },
+                    {
+                        "code": "I69.333",
+                        "display": "Monoplegia of upper limb following cerebral infarction affecting right dominant side - Monoplegia of upper limb following cerebral infarction affecting left non-dominant side"
+                    },
+                    {
+                        "code": "I69.334",
+                        "display": "Monoplegia of upper limb following cerebral infarction affecting right dominant side - Monoplegia of upper limb following cerebral infarction affecting left non-dominant side"
+                    },
+                    {
+                        "code": "I69.339",
+                        "display": "Monoplegia of upper limb following cerebral infarction affecting unspecified side"
+                    },
+                    {
+                        "code": "I69.351",
+                        "display": "Hemiplegia and hemiparesis following cerebral infarction affecting right dominant side - Hemiplegia and hemiparesis following cerebral infarction affecting left non-dominant side"
+                    },
+                    {
+                        "code": "I69.352",
+                        "display": "Hemiplegia and hemiparesis following cerebral infarction affecting right dominant side - Hemiplegia and hemiparesis following cerebral infarction affecting left non-dominant side"
+                    },
+                    {
+                        "code": "I69.353",
+                        "display": "Hemiplegia and hemiparesis following cerebral infarction affecting right dominant side - Hemiplegia and hemiparesis following cerebral infarction affecting left non-dominant side"
+                    },
+                    {
+                        "code": "I69.354",
+                        "display": "Hemiplegia and hemiparesis following cerebral infarction affecting right dominant side - Hemiplegia and hemiparesis following cerebral infarction affecting left non-dominant side"
+                    },
+                    {
+                        "code": "I69.359",
+                        "display": "Hemiplegia and hemiparesis following cerebral infarction affecting unspecified side"
+                    },
+                    {
+                        "code": "I69.361",
+                        "display": "Other paralytic syndrome following cerebral infarction affecting right dominant side - Other paralytic syndrome following cerebral infarction, bilateral"
+                    },
+                    {
+                        "code": "I69.362",
+                        "display": "Other paralytic syndrome following cerebral infarction affecting right dominant side - Other paralytic syndrome following cerebral infarction, bilateral"
+                    },
+                    {
+                        "code": "I69.363",
+                        "display": "Other paralytic syndrome following cerebral infarction affecting right dominant side - Other paralytic syndrome following cerebral infarction, bilateral"
+                    },
+                    {
+                        "code": "I69.364",
+                        "display": "Other paralytic syndrome following cerebral infarction affecting right dominant side - Other paralytic syndrome following cerebral infarction, bilateral"
+                    },
+                    {
+                        "code": "I69.365",
+                        "display": "Other paralytic syndrome following cerebral infarction affecting right dominant side - Other paralytic syndrome following cerebral infarction, bilateral"
+                    },
+                    {
+                        "code": "I69.369",
+                        "display": "Other paralytic syndrome following cerebral infarction affecting unspecified side"
+                    },
+                    {
+                        "code": "I69.831",
+                        "display": "Monoplegia of upper limb following other cerebrovascular disease affecting right dominant side -Monoplegia of upper limb following other cerebrovascular disease affecting left non-dominant side"
+                    },
+                    {
+                        "code": "I69.832",
+                        "display": "Monoplegia of upper limb following other cerebrovascular disease affecting right dominant side -Monoplegia of upper limb following other cerebrovascular disease affecting left non-dominant side"
+                    },
+                    {
+                        "code": "I69.833",
+                        "display": "Monoplegia of upper limb following other cerebrovascular disease affecting right dominant side -Monoplegia of upper limb following other cerebrovascular disease affecting left non-dominant side"
+                    },
+                    {
+                        "code": "I69.834",
+                        "display": "Monoplegia of upper limb following other cerebrovascular disease affecting right dominant side -Monoplegia of upper limb following other cerebrovascular disease affecting left non-dominant side"
+                    },
+                    {
+                        "code": "I69.832",
+                        "display": "Monoplegia of upper limb following other cerebrovascular disease affecting right dominant side -Monoplegia of upper limb following other cerebrovascular disease affecting left non-dominant side"
+                    },
+                    {
+                        "code": "I69.839",
+                        "display": "Monoplegia of upper limb following other cerebrovascular disease affecting unspecified side"
+                    },
+                    {
+                        "code": "I69.851",
+                        "display": "Hemiplegia and hemiparesis following other cerebrovascular disease affecting right dominant side -Hemiplegia and hemiparesis following other cerebrovascular disease affecting left non-dominant side"
+                    },
+                    {
+                        "code": "I69.852",
+                        "display": "Hemiplegia and hemiparesis following other cerebrovascular disease affecting right dominant side -Hemiplegia and hemiparesis following other cerebrovascular disease affecting left non-dominant side"
+                    },
+                    {
+                        "code": "I69.853",
+                        "display": "Hemiplegia and hemiparesis following other cerebrovascular disease affecting right dominant side -Hemiplegia and hemiparesis following other cerebrovascular disease affecting left non-dominant side"
+                    },
+                    {
+                        "code": "I69.854",
+                        "display": "Hemiplegia and hemiparesis following other cerebrovascular disease affecting right dominant side -Hemiplegia and hemiparesis following other cerebrovascular disease affecting left non-dominant side"
+                    },
+                    {
+                        "code": "I69.859",
+                        "display": "Hemiplegia and hemiparesis following other cerebrovascular disease affecting unspecified side"
+                    },
+                    {
+                        "code": "I69.861",
+                        "display": "Other paralytic syndrome following other cerebrovascular disease affecting right dominant side -Other paralytic syndrome following other cerebrovascular disease, bilateral"
+                    },
+                    {
+                        "code": "I69.862",
+                        "display": "Other paralytic syndrome following other cerebrovascular disease affecting right dominant side -Other paralytic syndrome following other cerebrovascular disease, bilateral"
+                    },
+                    {
+                        "code": "I69.863",
+                        "display": "Other paralytic syndrome following other cerebrovascular disease affecting right dominant side -Other paralytic syndrome following other cerebrovascular disease, bilateral"
+                    },
+                    {
+                        "code": "I69.864",
+                        "display": "Other paralytic syndrome following other cerebrovascular disease affecting right dominant side -Other paralytic syndrome following other cerebrovascular disease, bilateral"
+                    },
+                    {
+                        "code": "I69.865",
+                        "display": "Other paralytic syndrome following other cerebrovascular disease affecting right dominant side -Other paralytic syndrome following other cerebrovascular disease, bilateral"
+                    },
+                    {
+                        "code": "I69.869",
+                        "display": "Other paralytic syndrome following other cerebrovascular disease affecting unspecified side"
+                    },
+                    {
+                        "code": "I69.931",
+                        "display": "Monoplegia of upper limb following unspecified cerebrovascular disease affecting right dominant side - Monoplegia of upper limb following unspecified cerebrovascular disease affecting left nondominant side"
+                    },
+                    {
+                        "code": "I69.932",
+                        "display": "Monoplegia of upper limb following unspecified cerebrovascular disease affecting right dominant side - Monoplegia of upper limb following unspecified cerebrovascular disease affecting left nondominant side"
+                    },
+                    {
+                        "code": "I69.933",
+                        "display": "Monoplegia of upper limb following unspecified cerebrovascular disease affecting right dominant side - Monoplegia of upper limb following unspecified cerebrovascular disease affecting left nondominant side"
+                    },
+                    {
+                        "code": "I69.934",
+                        "display": "Monoplegia of upper limb following unspecified cerebrovascular disease affecting right dominant side - Monoplegia of upper limb following unspecified cerebrovascular disease affecting left nondominant side"
+                    },
+                    {
+                        "code": "I69.939",
+                        "display": "Monoplegia of upper limb following unspecified cerebrovascular disease affecting unspecified side"
+                    },
+                    {
+                        "code": "I69.951",
+                        "display": "Hemiplegia and hemiparesis following unspecified cerebrovascular disease affecting right dominant side - Hemiplegia and hemiparesis following unspecified cerebrovascular disease affecting left nondominant side"
+                    },
+                    {
+                        "code": "I69.952",
+                        "display": "Hemiplegia and hemiparesis following unspecified cerebrovascular disease affecting right dominant side - Hemiplegia and hemiparesis following unspecified cerebrovascular disease affecting left nondominant side"
+                    },
+                    {
+                        "code": "I69.953",
+                        "display": "Hemiplegia and hemiparesis following unspecified cerebrovascular disease affecting right dominant side - Hemiplegia and hemiparesis following unspecified cerebrovascular disease affecting left nondominant side"
+                    },
+                    {
+                        "code": "I69.954",
+                        "display": "Hemiplegia and hemiparesis following unspecified cerebrovascular disease affecting right dominant side - Hemiplegia and hemiparesis following unspecified cerebrovascular disease affecting left nondominant side"
+                    },
+                    {
+                        "code": "I69.959",
+                        "display": "Hemiplegia and hemiparesis following unspecified cerebrovascular disease affecting unspecified side"
+                    },
+                    {
+                        "code": "I69.961",
+                        "display": "Other paralytic syndrome following unspecified cerebrovascular disease affecting right dominant side - Other paralytic syndrome following unspecified cerebrovascular disease, bilateral"
+                    },
+                    {
+                        "code": "I69.962",
+                        "display": "Other paralytic syndrome following unspecified cerebrovascular disease affecting right dominant side - Other paralytic syndrome following unspecified cerebrovascular disease, bilateral"
+                    },
+                    {
+                        "code": "I69.963",
+                        "display": "Other paralytic syndrome following unspecified cerebrovascular disease affecting right dominant side - Other paralytic syndrome following unspecified cerebrovascular disease, bilateral"
+                    },
+                    {
+                        "code": "I69.964",
+                        "display": "Other paralytic syndrome following unspecified cerebrovascular disease affecting right dominant side - Other paralytic syndrome following unspecified cerebrovascular disease, bilateral"
+                    },
+                    {
+                        "code": "I69.965",
+                        "display": "Other paralytic syndrome following unspecified cerebrovascular disease affecting right dominant side - Other paralytic syndrome following unspecified cerebrovascular disease, bilateral"
+                    },
+                    {
+                        "code": "I69.969",
+                        "display": "Other paralytic syndrome following unspecified cerebrovascular disease affecting unspecified side"
+                    },
+                    {
+                        "code": "M62.40",
+                        "display": "Contracture of muscle, unspecified site"
+                    },
+                    {
+                        "code": "M62.411",
+                        "display": "Contracture of muscle, right shoulder"
+                    },
+                    {
+                        "code": "M62.412",
+                        "display": "Contracture of muscle, left shoulder"
+                    },
+                    {
+                        "code": "M62.421",
+                        "display": "Contracture of muscle, right upper arm"
+                    },
+                    {
+                        "code": "M62.422",
+                        "display": "Contracture of muscle, left upper arm"
+                    },
+                    {
+                        "code": "M62.431",
+                        "display": "Contracture of muscle, right forearm"
+                    },
+                    {
+                        "code": "M62.432",
+                        "display": "Contracture of muscle, left forearm"
+                    },
+                    {
+                        "code": "M62.441",
+                        "display": "Contracture of muscle, right hand"
+                    },
+                    {
+                        "code": "M62.442",
+                        "display": "Contracture of muscle, left hand"
+                    },
+                    {
+                        "code": "M62.451",
+                        "display": "Contracture of muscle, right thigh"
+                    },
+                    {
+                        "code": "M62.452",
+                        "display": "Contracture of muscle, left thigh"
+                    },
+                    {
+                        "code": "M62.461",
+                        "display": "Contracture of muscle, right lower leg"
+                    },
+                    {
+                        "code": "M62.462",
+                        "display": "Contracture of muscle, left lower leg"
+                    },
+                    {
+                        "code": "M62.471",
+                        "display": "Contracture of muscle, right ankle and foot"
+                    },
+                    {
+                        "code": "M62.472",
+                        "display": "Contracture of muscle, left ankle and foot"
+                    },
+                    {
+                        "code": "M62.48",
+                        "display": "Contracture of muscle, other site"
+                    },
+                    {
+                        "code": "M62.49",
+                        "display": "Contracture of muscle, multiple sites"
+                    },
+                    {
+                        "code": "M62.831",
+                        "display": "Muscle spasm of calf"
+                    },
+                    {
+                        "code": "M62.838",
+                        "display": "Other muscle spasm"
+                    },
+                    {
+                        "code": "J38.5",
+                        "display": "Laryngeal spasm"
+                    },
+                    {
+                        "code": "G24.3",
+                        "display": "Spasmodic torticollis"
+                    },
+                    {
+                        "code": "M43.6",
+                        "display": "Torticollis"
+                    },
+                    {
+                        "code": "J38.01",
+                        "display": "Paralysis of vocal cords and larynx, unilateral"
+                    },
+                    {
+                        "code": "J38.02",
+                        "display": "Paralysis of vocal cords and larynx, bilateral"
+                    },
+                    {
+                        "code": "R49.0",
+                        "display": "Dysphonia"
+                    },
+                    {
+                        "code": "G50.9",
+                        "display": "Disorder of trigeminal nerve, unspecified"
+                    },
+                    {
+                        "code": "G51.31",
+                        "display": "Clonic hemifacial spasm, right"
+                    },
+                    {
+                        "code": "G51.32",
+                        "display": "Clonic hemifacial spasm, left"
+                    },
+                    {
+                        "code": "G51.33",
+                        "display": "Clonic hemifacial spasm, bilateral"
+                    },
+                    {
+                        "code": "G51.8",
+                        "display": "Other disorders of facial nerve"
+                    },
+                    {
+                        "code": "H02.041",
+                        "display": "Spastic entropion of right upper eyelid"
+                    },
+                    {
+                        "code": "H02.042",
+                        "display": "Spastic entropion of right lower eyelid"
+                    },
+                    {
+                        "code": "H02.044",
+                        "display": "Spastic entropion of left upper eyelid"
+                    },
+                    {
+                        "code": "H02.045",
+                        "display": "Spastic entropion of left lower eyelid"
+                    },
+                    {
+                        "code": "H02.141",
+                        "display": "Spastic ectropion of right upper eyelid"
+                    },
+                    {
+                        "code": "H02.142",
+                        "display": "Spastic ectropion of right lower eyelid"
+                    },
+                    {
+                        "code": "H02.144",
+                        "display": "Spastic ectropion of left upper eyelid"
+                    },
+                    {
+                        "code": "H02.145",
+                        "display": "Spastic ectropion of left lower eyelid"
+                    },
+                    {
+                        "code": "H02.149",
+                        "display": "Spastic ectropion of unspecified eye, unspecified eyelid"
+                    },
+                    {
+                        "code": "H02.151",
+                        "display": "Paralytic ectropion of right upper eyelid"
+                    },
+                    {
+                        "code": "H02.152",
+                        "display": "Paralytic ectropion of right lower eyelid"
+                    },
+                    {
+                        "code": "H02.153",
+                        "display": "Paralytic ectropion of right eye, unspecified eyelid"
+                    },
+                    {
+                        "code": "H02.154",
+                        "display": "Paralytic ectropion of left upper eyelid"
+                    },
+                    {
+                        "code": "H02.155",
+                        "display": "Paralytic ectropion of left lower eyelid"
+                    },
+                    {
+                        "code": "H02.156",
+                        "display": "Paralytic ectropion of left eye, unspecified eyelid"
+                    },
+                    {
+                        "code": "H02.156",
+                        "display": "Paralytic ectropion of left eye, unspecified eyelid"
+                    },
+                    {
+                        "code": "H49.01",
+                        "display": "Third [oculomotor] nerve palsy, right eye"
+                    },
+                    {
+                        "code": "H49.02",
+                        "display": "Third [oculomotor] nerve palsy, left eye"
+                    },
+                    {
+                        "code": "H49.03",
+                        "display": "Third [oculomotor] nerve palsy, bilateral"
+                    },
+                    {
+                        "code": "H49.11",
+                        "display": "Fourth [trochlear] nerve palsy, right eye"
+                    },
+                    {
+                        "code": "H49.12",
+                        "display": "Fourth [trochlear] nerve palsy, left eye"
+                    },
+                    {
+                        "code": "H49.13",
+                        "display": "Fourth [trochlear] nerve palsy, bilateral"
+                    },
+                    {
+                        "code": "H49.21",
+                        "display": "Sixth [abducent] nerve palsy, right eye"
+                    },
+                    {
+                        "code": "H49.22",
+                        "display": "Sixth [abducent] nerve palsy, left eye"
+                    },
+                    {
+                        "code": "H49.23",
+                        "display": "Sixth [abducent] nerve palsy, bilateral"
+                    },
+                    {
+                        "code": "H49.31",
+                        "display": "Total (external) ophthalmoplegia, right eye"
+                    },
+                    {
+                        "code": "H49.32",
+                        "display": "Total (external) ophthalmoplegia, left eye"
+                    },
+                    {
+                        "code": "H49.33",
+                        "display": "Total (external) ophthalmoplegia, bilateral"
+                    },
+                    {
+                        "code": "H49.41",
+                        "display": "Progressive external ophthalmoplegia, right eye"
+                    },
+                    {
+                        "code": "H49.42",
+                        "display": "Progressive external ophthalmoplegia, left eye"
+                    },
+                    {
+                        "code": "H49.43",
+                        "display": "Progressive external ophthalmoplegia, bilateral"
+                    },
+                    {
+                        "code": "H51.21",
+                        "display": "Internuclear ophthalmoplegia, right eye"
+                    },
+                    {
+                        "code": "H51.22",
+                        "display": "Internuclear ophthalmoplegia, left eye"
+                    },
+                    {
+                        "code": "H51.23",
+                        "display": "Internuclear ophthalmoplegia, bilateral"
+                    }
+                ]
+            }
+        ]
+    }
+}

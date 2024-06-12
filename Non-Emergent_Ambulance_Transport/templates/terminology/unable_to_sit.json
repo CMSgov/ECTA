@@ -1,0 +1,39 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.6037.1001.23.98.88",
+    "meta": {
+      "versionId": "2",
+      "lastUpdated": "2020-08-28T07:47:19.553+00:00",
+      "source": "#XfzZDo4Vcf8jh2LU"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.98.88",
+    "identifier": [
+      {
+        "system": "urn:ietf:rfc:3986",
+        "value": "2.16.840.1.113883.3.6037.1001.23.98.88"
+      }
+    ],
+    "version": "Latest",
+    "name": "Unable to sit",
+    "title": "Unable to sit",
+    "status": "active",
+    "publisher": "Mettles",
+    "compose": {
+      "include": [
+        {
+          "system": "http://snomed.info/sct",
+          "version": "2020-03",
+          "concept": [
+            {
+              "code": "225602000",
+              "display": "Unable to sit unsupported (finding)"
+            },
+            {
+              "code": "301651000",
+              "display": "Unable to sit down on a chair (finding)"
+            }
+          ]
+        }
+      ]
+    }
+  }

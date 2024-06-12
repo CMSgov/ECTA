@@ -1,0 +1,47 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.6037.1001.23.98.118",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2020-09-03T06:57:43.000+00:00",
+        "source": "#oHy6ltsnXpCgK6yP"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.98.118",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113883.3.6037.1001.23.98.118"
+        }
+    ],
+    "version": "Latest",
+    "name": "Wound Assessment",
+    "title": "Wound Assessment",
+    "status": "active",
+    "publisher": "Mettles",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2020-03",
+                "concept": [
+                    {
+                        "code": "225395003",
+                        "display": "Wound assessment (procedure)"
+                    },
+                  {
+                        "code": "225396002",
+                        "display": "Skin lesion assessment (procedure)"
+                    },
+                  {
+                        "code": "439949001",
+                        "display": "Evaluation of ulcer healing (procedure)"
+                    },
+                  {
+                        "code": "372032001",
+                        "display": "Evaluation of wound healing progress (procedure)"
+                    }
+                ]
+            }
+        ]
+    }
+}

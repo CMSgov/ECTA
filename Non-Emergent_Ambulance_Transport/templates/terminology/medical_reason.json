@@ -1,0 +1,35 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.6037.1001.23.98.114",
+    "meta": {
+      "versionId": "2",
+      "lastUpdated": "2020-08-28T07:47:19.553+00:00",
+      "source": "#XfzZDo4Vcf8jh2LU"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.98.114",
+    "identifier": [
+      {
+        "system": "urn:ietf:rfc:3986",
+        "value": "2.16.840.1.113883.3.6037.1001.23.98.114"
+      }
+    ],
+    "version": "Latest",
+    "name": "Medical Reason for Transport",
+    "title": "Medical Reason for Transport",
+    "status": "active",
+    "publisher": "Mettles",
+    "compose": {
+      "include": [
+        {
+          "system": "http://loinc.org",
+          "version": "2020-03",
+          "concept": [
+            {
+              "code": "15515-0",
+              "display": "Ambulance transport, Medical reason for transport"
+            }
+          ]
+        }
+      ]
+    }
+  }

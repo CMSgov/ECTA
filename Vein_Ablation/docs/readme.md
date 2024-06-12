@@ -1,0 +1,1 @@
+https://www.bluecrossnc.com/sites/default/files/document/attachment/services/public/pdfs/bluemedicare/medicalpolicy/varicose_vein_treatment.pdf

@@ -1,0 +1,1081 @@
+{
+    "resourceType": "Questionnaire",
+    "identifier": [
+      {
+        "system": "http://identifiers.mettles.com/prior_authorization",
+        "value": "medicare-PowerWheelchair"
+      }
+    ],
+    "name": "PowerWheelchair",
+    "title": "PowerWheelchair",
+    "status": "draft",
+    "subjectType": [
+      "Patient"
+    ],
+    "date": "2019-12-03",
+    "publisher": "Mettle Solutions",
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
+        "valueCanonical": "Library/library-powerwheelchairs-PowerWheelchair"
+      }
+    ],
+    "contained": [
+      {
+        "resourceType": "ValueSet",
+        "id": "gender",
+        "name": "Gender",
+        "status": "draft",
+        "description": "Gender",
+        "compose": {
+          "include": [
+            {
+              "concept": [
+                {
+                  "code": "male",
+                  "display": "Male"
+                },
+                {
+                  "code": "female",
+                  "display": "Female"
+                },
+                {
+                  "code": "other",
+                  "display": "Other"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "item": [
+      {
+        "linkId": "1",
+        "text": "Certification",
+        "type": "group",
+        "item": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                "valueExpression": {
+                  "language": "text/cql",
+                  "expression": "RequestType"
+                }
+              }
+            ],
+            "linkId": "1.1",
+            "text": "Type of Request",
+            "type": "choice",
+            "required": true,
+            "answerOption": [
+              {
+                "valueString": "Initial"
+              },
+              {
+                "valueString": "Revision or change in shoes or inserts"
+              },
+              {
+                "valueString": "Replacement"
+              }
+            ],
+            "initial": [
+              {
+                "valueString": "Initial"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                "valueExpression": {
+                  "language": "text/cql",
+                  "expression": "DescriptionOfItem"
+                }
+              }
+            ],
+            "linkId": "1.2",
+            "text": "Description of the item or device being ordered",
+            "type": "text",
+            "required": true
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                "valueExpression": {
+                  "language": "text/cql",
+                  "expression": "LengthOfNeed"
+                }
+              }
+            ],
+            "linkId": "1.3",
+            "text": "Length of need",
+            "type": "quantity",
+            "required": true
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                "valueExpression": {
+                  "language": "text/cql",
+                  "expression": "Diagnosis"
+                }
+              }
+            ],
+            "linkId": "1.4",
+            "text": "Diagnosis/conditon relating to need for item",
+            "type": "quantity",
+            "required": true
+          }
+        ]
+      },
+      {
+        "linkId": "2",
+        "text": "Clinical Assessment of the Patient",
+        "type": "group",
+        "item": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                "valueExpression": {
+                  "language": "text/cql",
+                  "expression": "PhysicalExamination"
+                }
+              }
+            ],
+            "linkId": "2.1",
+            "text": "Is Physical Examination of the patient performed",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                "valueExpression": {
+                  "language": "text/cql",
+                  "expression": "PhysicalExaminationType"
+                }
+              }
+            ],
+            "linkId": "2.2",
+            "text": "Details of Physical Examination performed",
+            "type": "open-choice",
+            "answerValueSet": "2.16.840.1.113883.11.20.9.65",
+            "enableWhen": [
+              {
+                "question": "2.1",
+                "operator": "=",
+                "answerBoolean": true
+              }
+            ],
+            "required": true
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                "valueExpression": {
+                  "language": "text/cql",
+                  "expression": "Comorbidities"
+                }
+              }
+            ],
+            "linkId": "2.3",
+            "text": "Is the patient diagnosed with any co-morbidities?",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                "valueExpression": {
+                  "language": "text/cql",
+                  "expression": "ComorbiditiesDetails"
+                }
+              }
+            ],
+            "linkId": "2.4",
+            "text": "Diagnosis of the Cormorbidity",
+            "type": "open-choice",
+            "answerValueSet": "2.16.840.1.113883.3.464.1003.199.12.1055",
+            "enableWhen": [
+              {
+                "question": "2.3",
+                "operator": "=",
+                "answerBoolean": true
+              }
+            ],
+            "required": true
+          }
+        ]
+      },
+      {
+        "linkId": "3",
+        "text": "Order Details",
+        "type": "group",
+        "item": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                "valueExpression": {
+                  "language": "text/cql",
+                  "expression": "DateOfOrder"
+                }
+              }
+            ],
+            "linkId": "3.1",
+            "text": "Date of Order",
+            "type": "date",
+            "required": true
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                "valueExpression": {
+                  "language": "text/cql",
+                  "expression": "StartDate"
+                }
+              }
+            ],
+            "linkId": "3.2",
+            "text": "Start Date",
+            "type": "date",
+            "required": true
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                "valueExpression": {
+                  "language": "text/cql",
+                  "expression": "FFEncounter"
+                }
+              }
+            ],
+            "linkId": "3.3",
+            "text": "Does the patient have Face-Face Encounter with Ordering Practitioner?",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                "valueExpression": {
+                  "language": "text/cql",
+                  "expression": "FFEncounterDate"
+                }
+              }
+            ],
+            "linkId": "3.4",
+            "text": "Date of Face to Face Encounter",
+            "type": "date",
+            "enableWhen": [
+              {
+                "question": "3.3",
+                "operator": "=",
+                "answerBoolean": true
+              }
+            ],
+            "required": true
+          },
+          {
+            "linkId": "3.5",
+            "text": "Face-Face Encounter requirement is relaxed for encounters post 1st, March 2020",
+            "type": "display",
+            "enableWhen": [
+              {
+                "question": "3.3",
+                "operator": "=",
+                "answerBoolean": false
+              }
+            ],
+            "required": true
+          }
+        ]
+      },
+      {
+        "linkId": "5",
+        "text": "Functional Analysis of the patient",
+        "type": "group",
+        "item": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                "valueExpression": {
+                  "language": "text/cql",
+                  "expression": "Mobility"
+                }
+              }
+            ],
+            "linkId": "5.1",
+            "text": "Does the patient have mobility dysfunction ?",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                "valueExpression": {
+                  "language": "text/cql",
+                  "expression": "MobilityEstimation"
+                }
+              }
+            ],
+            "linkId": "5.2",
+            "text": "Details of the mobility dysfunction",
+            "answerValueSet": "2.16.840.1.113883.17.4077.2.2006",
+            "type": "open-choice",
+            "enableWhen": [
+              {
+                "question": "5.1",
+                "operator": "=",
+                "answerBoolean": true
+              }
+            ],
+            "required": true
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                "valueExpression": {
+                  "language": "text/cql",
+                  "expression": "MusculoskeletalAnalysis"
+                }
+              }
+            ],
+            "linkId": "5.3",
+            "text": "Did the patient go through Musculoskeletal Assessment?",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                "valueExpression": {
+                  "language": "text/cql",
+                  "expression": "MusculoskeletalEstimation"
+                }
+              }
+            ],
+            "linkId": "5.4",
+            "text": "Details of the Musculoskeletal Assessment",
+            "type": "open-choice",
+            "answerValueSet": "2.16.840.1.113883.3.7643.3.1031",
+            "enableWhen": [
+              {
+                "question": "5.3",
+                "operator": "=",
+                "answerBoolean": true
+              }
+            ],
+            "required": true
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                "valueExpression": {
+                  "language": "text/cql",
+                  "expression": "NeurologicalAnalysis"
+                }
+              }
+            ],
+            "linkId": "5.5",
+            "text": "Did the patient go through Neurological Assessment?",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                "valueExpression": {
+                  "language": "text/cql",
+                  "expression": "NeurologicalEstimation"
+                }
+              }
+            ],
+            "linkId": "5.6",
+            "text": "Details of the Neurological Assessment",
+            "type": "open-choice",
+            "answerValueSet": "2.16.840.1.113883.3.7643.3.1032",
+            "enableWhen": [
+              {
+                "question": "5.5",
+                "operator": "=",
+                "answerBoolean": true
+              }
+            ],
+            "required": true
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                "valueExpression": {
+                  "language": "text/cql",
+                  "expression": "CardioPulmonaryAnalysis"
+                }
+              }
+            ],
+            "linkId": "5.7",
+            "text": "Did the patient go through CardioPulmonary examination?",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                "valueExpression": {
+                  "language": "text/cql",
+                  "expression": "CardioPulmonaryEstimation"
+                }
+              }
+            ],
+            "linkId": "5.8",
+            "text": "Details of the CardioPulmonary examination",
+            "type": "open-choice",
+            "answerValueSet": "2.16.840.1.113883.3.6037.1001.23.95.21",
+            "enableWhen": [
+              {
+                "question": "5.7",
+                "operator": "=",
+                "answerBoolean": true
+              }
+            ],
+            "required": true
+          }
+        ]
+      },
+      {
+        "linkId": "6",
+        "text": "Functional Assessment",
+        "type": "group",
+        "item": [
+          {
+            "linkId": "6.1",
+            "text": "Does the beneficiary have a mobility limitation that significantly impairs his/her ability to participate in one or more mobility-related activities of daily living (MRADLs) such as toileting, feeding, dressing, grooming, and bathing in customary locations in the home ?",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "linkId": "6.2",
+            "text": "Details of mobility limitation",
+            "type": "choice",
+            "required": true,
+            "enableWhen": [
+              {
+                "question": "6.1",
+                "operator": "=",
+                "answerBoolean": true
+              }
+            ],
+            "answerOption": [
+              {
+                "valueString": "Prevents the beneficiary from accomplishing an MRADL entirely"
+              },
+              {
+                "valueString": "Places the beneficiary at reasonably determined heightened risk of morbidity or mortality secondary to the attempts to perform an MRADL"
+              },
+              {
+                "valueString": "Prevents the beneficiary from completing an MRADL within a reasonable time frame"
+              }
+            ]
+          },
+          {
+            "linkId": "6.3",
+            "text": "Does the beneficiary’s mobility limitation cannot be sufficiently and safely resolved by the use of an appropriately fitted cane or walker ? ",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "linkId": "6.4",
+            "text": "Does the beneficiary not have sufficient upper extremity function to self-propel an optimally-configured manual wheelchair in the home to perform MRADLs during a typical day ? ",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "linkId": "6.5",
+            "text": "Is the beneficiary able to safely transfer to and from a Power Operated Vehicle ?",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "linkId": "6.6",
+            "text": "Is the beneficiary able to operate the tiller steering system ?",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "linkId": "6.7",
+            "text": "Is the beneficiary able to maintain postural stability and position while operating the POV in the home ?",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "linkId": "6.8",
+            "text": "Are the beneficiary’s mental capabilities (e.g., cognition, judgment) and physical capabilities (e.g., vision) are sufficient for safe mobility using a POV in the home ?",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "linkId": "6.9",
+            "text": "Does the beneficiary’s home provide adequate access between rooms, maneuvering space, and surfaces for the operation of the POV that is provided ?",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "linkId": "6.10",
+            "text": "Does the beneficiary has the mental and physical capabilities to safely operate the power wheelchair ?",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "linkId": "6.11",
+            "text": "Does the beneficiary has a caregiver who is unable to adequately propel an optimally configured manual wheelchair, but is available, willing, and able to safely operate the power wheelchair ?",
+            "type": "boolean",
+            "enableWhen": [
+              {
+                "question": "6.10",
+                "operator": "=",
+                "answerBoolean": false
+              }
+            ],
+            "required": true
+          },
+          {
+            "linkId": "6.12",
+            "text": "The beneficiary’s weight is less than or equal to the weight capacity of the power wheelchair that is provided and greater than or equal to 95% of the weight capacity of the next lower weight class PWC ?",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "linkId": "6.13",
+            "text": "Does the use of a power wheelchair significantly improve the beneficiary’s ability to participate in MRADLs?",
+            "type": "boolean",
+            "required": true
+          }
+        ]
+      },
+      {
+        "linkId": "7",
+        "text": "Benefeciary Rule Compliance",
+        "type": "group",
+        "item": [
+          {
+            "linkId": "7.1",
+            "text": "Does the beneficiary express an unwillingness to use a power wheelchair in the home ?",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "linkId": "7.2",
+            "text": "Does the beneficiary’s mobility limitation cannot be sufficiently and safely resolved by the use of an appropriately fitted cane or walker ? ",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "linkId": "7.3",
+            "text": "Does the beneficiary not have sufficient upper extremity function to self-propel an optimally-configured manual wheelchair in the home to perform MRADLs during a typical day ? ",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "linkId": "7.4",
+            "text": "Is the beneficiary able to safely transfer to and from a Power Operated Vehicle ?",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "linkId": "7.5",
+            "text": "Is the beneficiary able to operate the tiller steering system ?",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "linkId": "7.6",
+            "text": "Is the beneficiary able to maintain postural stability and position while operating the POV in the home ?",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "linkId": "7.7",
+            "text": "Are the beneficiary’s mental capabilities (e.g., cognition, judgment) and physical capabilities (e.g., vision) are sufficient for safe mobility using a POV in the home ?",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "linkId": "7.8",
+            "text": "Does the beneficiary’s home provide adequate access between rooms, maneuvering space, and surfaces for the operation of the POV that is provided ?",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "linkId": "7.9",
+            "text": "Does the beneficiary has the mental and physical capabilities to safely operate the power wheelchair ?",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "linkId": "7.10",
+            "text": "Does the beneficiary has a caregiver who is unable to adequately propel an optimally configured manual wheelchair, but is available, willing, and able to safely operate the power wheelchair ?",
+            "type": "boolean",
+            "enableWhen": [
+              {
+                "question": "7.9",
+                "operator": "=",
+                "answerBoolean": false
+              }
+            ],
+            "required": true
+          },
+          {
+            "linkId": "7.11",
+            "text": "The beneficiary’s weight is less than or equal to the weight capacity of the power wheelchair that is provided and greater than or equal to 95% of the weight capacity of the next lower weight class PWC ?",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "linkId": "7.12",
+            "text": "Does the use of a power wheelchair significantly improve the beneficiary’s ability to participate in MRADLs?",
+            "type": "boolean",
+            "required": true
+          }
+        ]
+      },
+      {
+        "linkId": "8",
+        "text": "Device Specifications",
+        "type": "group",
+        "item": [
+          {
+            "linkId": "8.1",
+            "text": "Length of the item in inches ?",
+            "type": "quantity",
+            "required": true
+          },
+          {
+            "linkId": "8.2",
+            "text": "Width of the item in inches ?",
+            "type": "quantity",
+            "required": true
+          },
+          {
+            "linkId": "8.3",
+            "text": "Minimum top end speed of the item in MPH ?",
+            "type": "quantity",
+            "required": true
+          },
+          {
+            "linkId": "8.4",
+            "text": "Minimum Range in miles?",
+            "type": "quantity",
+            "required": true
+          },
+          {
+            "linkId": "8.5",
+            "text": "Minimum Obstacle Climb in mm ?",
+            "type": "quantity",
+            "required": true
+          },
+          {
+            "linkId": "8.6",
+            "text": "Dynamic Stability Incline in degrees ?",
+            "type": "quantity",
+            "required": true
+          },
+          {
+            "linkId": "8.7",
+            "text": "Type of Powerchair",
+            "type": "choice",
+            "required": true,
+            "answerOption": [
+              {
+                "valueString": "Group1"
+              },
+              {
+                "valueString": "Group2"
+              },
+              {
+                "valueString": "Group3"
+              },
+              {
+                "valueString": "Group4"
+              },
+              {
+                "valueString": "Group5"
+              }
+            ]
+          },
+          {
+            "linkId": "8.8",
+            "text": "Power Option specification",
+            "type": "choice",
+            "required": true,
+            "enableWhen": [
+              {
+                "question": "8.7",
+                "operator": "=",
+                "answerString": "Group2"
+              }
+            ],
+            "answerOption": [
+              {
+                "valueString": "No power option"
+              },
+              {
+                "valueString": "Seat elevator"
+              },
+              {
+                "valueString": "Single power option"
+              },
+              {
+                "valueString": "Multi power option"
+              }
+            ]
+          },
+          {
+            "linkId": "8.9",
+            "text": "Power Option specification",
+            "type": "choice",
+            "required": true,
+            "enableWhen": [
+              {
+                "question": "8.7",
+                "operator": "=",
+                "answerString": "Group3"
+              }
+            ],
+            "answerOption": [
+              {
+                "valueString": "No power option"
+              },
+              {
+                "valueString": "Single power option"
+              },
+              {
+                "valueString": "Multi power option"
+              }
+            ]
+          },
+          {
+            "linkId": "8.10",
+            "text": "Power Option specification",
+            "type": "choice",
+            "required": true,
+            "enableWhen": [
+              {
+                "question": "8.7",
+                "operator": "=",
+                "answerString": "Group4"
+              }
+            ],
+            "answerOption": [
+              {
+                "valueString": "No power option"
+              },
+              {
+                "valueString": "Single power option"
+              },
+              {
+                "valueString": "Multi power option"
+              }
+            ]
+          },
+          {
+            "linkId": "8.11",
+            "text": "Power Option specification",
+            "type": "choice",
+            "required": true,
+            "enableWhen": [
+              {
+                "question": "8.7",
+                "operator": "=",
+                "answerString": "Group5"
+              }
+            ],
+            "answerOption": [
+              {
+                "valueString": "No power option"
+              },
+              {
+                "valueString": "Single power option"
+              },
+              {
+                "valueString": "Multi power option"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "linkId": "9",
+        "text": "Device Specific Requirements",
+        "type": "group",
+        "item": [
+          {
+            "linkId": "9.1",
+            "text": "Does the device include standard integrated or remote proportional joystick?",
+            "type": "boolean",
+            "enableWhen": [
+              {
+                "question": "8.7",
+                "operator": "=",
+                "answerString": "Group1"
+              }
+            ],
+            "required": true
+          },
+          {
+            "linkId": "9.2",
+            "text": "Does the device have a Non-expandable controller or a controller incapable of upgrade to expandable controller?",
+            "type": "boolean",
+            "enableWhen": [
+              {
+                "question": "8.7",
+                "operator": "=",
+                "answerString": "Group1"
+              }
+            ],
+            "required": true
+          },
+          {
+            "linkId": "9.3",
+            "text": "Is the capable of upgrading to alternative control devices?",
+            "type": "boolean",
+            "enableWhen": [
+              {
+                "question": "9.7",
+                "operator": "=",
+                "answerString": "Group1"
+              }
+            ],
+            "required": true
+          },
+          {
+            "linkId": "9.4",
+            "text": "Does the device accommodate non-powered options and seating systems?",
+            "type": "boolean",
+            "enableWhen": [
+              {
+                "question": "8.7",
+                "operator": "=",
+                "answerString": "Group1"
+              }
+            ],
+            "required": true
+          },
+          {
+            "linkId": "9.5",
+            "text": "Does the largest single component of the device exceed 55 pounds?",
+            "type": "boolean",
+            "enableWhen": [
+              {
+                "question": "8.7",
+                "operator": "=",
+                "answerString": "Group1"
+              }
+            ],
+            "required": true
+          },
+          {
+            "linkId": "9.6",
+            "text": "Does the largest single component of the device exceed 55 pounds?",
+            "type": "boolean",
+            "enableWhen": [
+              {
+                "question": "8.7",
+                "operator": "=",
+                "answerString": "Group2"
+              }
+            ],
+            "required": true
+          },
+          {
+            "linkId": "9.7",
+            "text": "Does the device include standard integrated or remote proportional joystick?",
+            "type": "boolean",
+            "enableWhen": [
+              {
+                "question": "8.7",
+                "operator": "=",
+                "answerString": "Group2"
+              }
+            ],
+            "required": true
+          },
+          {
+            "linkId": "9.8",
+            "text": "Does the device have a Non-expandable controller and a controller incapable of upgrade to expandable controller?",
+            "type": "boolean",
+            "enableWhen": [
+              {
+                "question": "8.10",
+                "operator": "=",
+                "answerString": "No power option"
+              }
+            ],
+            "required": true
+          },
+          {
+            "linkId": "9.9",
+            "text": "Is the device capable of upgrading to alternative control devices?",
+            "type": "boolean",
+            "enableWhen": [
+              {
+                "question": "8.10",
+                "operator": "=",
+                "answerString": "No power option"
+              }
+            ],
+            "required": true
+          },
+          {
+            "linkId": "9.10",
+            "text": "Does the device accommodate non-powered options and seating systems?",
+            "type": "boolean",
+            "enableWhen": [
+              {
+                "question": "8.10",
+                "operator": "=",
+                "answerString": "No power option"
+              }
+            ],
+            "required": true
+          },
+          {
+            "linkId": "9.11",
+            "text": "Is the device incapable of accommodating a power tilt, recline, seat elevation, standing system?",
+            "type": "boolean",
+            "enableWhen": [
+              {
+                "question": "8.10",
+                "operator": "=",
+                "answerString": "No power option"
+              }
+            ],
+            "required": true
+          },
+          {
+            "linkId": "9.12",
+            "text": "Does the device have a Non-expandable controller and a controller incapable of upgrade to expandable controller?",
+            "type": "boolean",
+            "enableWhen": [
+              {
+                "question": "8.10",
+                "operator": "=",
+                "answerString": "Seat elevator"
+              }
+            ],
+            "required": true
+          },
+          {
+            "linkId": "9.13",
+            "text": "Is the device capable of upgrading to alternative control devices?",
+            "type": "boolean",
+            "enableWhen": [
+              {
+                "question": "8.10",
+                "operator": "=",
+                "answerString": "Seat elevator"
+              }
+            ],
+            "required": true
+          },
+          {
+            "linkId": "9.14",
+            "text": "Does the device accommodate only a power seat elevating system?",
+            "type": "boolean",
+            "enableWhen": [
+              {
+                "question": "8.10",
+                "operator": "=",
+                "answerString": "Seat elevator"
+              }
+            ],
+            "required": true
+          },
+          {
+            "linkId": "9.15",
+            "text": "Does the device have a Non-expandable controller and a controller capable of upgrade to expandable controller?",
+            "type": "boolean",
+            "enableWhen": [
+              {
+                "question": "8.10",
+                "operator": "=",
+                "answerString": "Single power option"
+              }
+            ],
+            "required": true
+          },
+          {
+            "linkId": "9.16",
+            "text": "Is the device capable of upgrading to alternative control devices?",
+            "type": "boolean",
+            "enableWhen": [
+              {
+                "question": "8.10",
+                "operator": "=",
+                "answerString": "Single power option"
+              }
+            ],
+            "required": true
+          },
+          {
+            "linkId": "9.17",
+            "text": "Does the device accommodate only a power seat elevating system?",
+            "type": "boolean",
+            "enableWhen": [
+              {
+                "question": "8.10",
+                "operator": "=",
+                "answerString": "Single power option"
+              }
+            ],
+            "required": true
+          },
+          {
+            "linkId": "9.18",
+            "text": "Does the device have a Non-expandable controller and a controller capable of upgrade to expandable controller?",
+            "type": "boolean",
+            "enableWhen": [
+              {
+                "question": "8.10",
+                "operator": "=",
+                "answerString": "Multi power option"
+              }
+            ],
+            "required": true
+          },
+          {
+            "linkId": "9.19",
+            "text": "Is the device capable of upgrading to alternative control devices?",
+            "type": "boolean",
+            "enableWhen": [
+              {
+                "question": "8.10",
+                "operator": "=",
+                "answerString": "Multi power option"
+              }
+            ],
+            "required": true
+          }
+        ]
+      }
+    ]
+  }

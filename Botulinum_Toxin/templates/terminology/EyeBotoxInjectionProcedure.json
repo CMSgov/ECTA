@@ -1,0 +1,38 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.6037.1001.23.93.92",
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.92",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113883.3.6037.1001.23.93.92"
+        }
+    ],
+    "version": "Latest",
+    "name": "Botox Injection into Eye Muscle",
+    "title": "Botox Injection into Eye Muscle",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2021-07",
+                "concept": [
+                    {
+                        "code": "231701000",
+                        "display": "Botulinum toxin injection into eye muscle (procedure)"
+                    },
+                    {
+                        "code": "274937009",
+                        "display": "Botulinum toxin injection into eyelid (procedure)"
+                    },
+                    {
+                        "code": "281259005",
+                        "display": "Retrobulbar injection of botulinum toxin (procedure)"
+                    }
+                ]
+            }
+        ]
+    }
+}

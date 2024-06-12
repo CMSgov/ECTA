@@ -1,0 +1,360 @@
+{
+    "resourceType": "Library",
+    "version": "1.0.0",
+    "title": "VeinAblation",
+    "name": "VeinAblation",
+    "status": "draft",
+    "type": {
+      "coding": [
+        {
+          "code": "logic-library"
+        }
+      ]
+    },
+    "relatedArtifact": [
+      {
+      "type": "depends-on",
+      "resource": "Library/FHIRHelpers"
+      }
+    ],
+    "dataRequirement": [
+      {
+        "type": "Condition",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "2.16.840.1.113883.3.6037.1001.23.99.90"
+          },
+          {
+            "path": "clinical-status",
+            "searchParam": "active"
+          }
+        ]
+      },
+      {
+        "type": "Condition",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "2.16.840.1.113883.3.6037.1001.23.99.92"
+          },
+          {
+            "path": "clinical-status",
+            "searchParam": "active"
+          }
+        ]
+      },
+      {
+        "type": "Condition",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "2.16.840.1.113883.3.6037.1001.23.99.93"
+          },
+          {
+            "path": "clinical-status",
+            "searchParam": "active"
+          }
+        ]
+      },
+      {
+        "type": "Condition",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "2.16.840.1.113883.3.6037.1001.23.99.94"
+          },
+          {
+            "path": "clinical-status",
+            "searchParam": "active"
+          }
+        ]
+      },
+      {
+        "type": "Condition",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "2.16.840.1.113883.3.6037.1001.23.99.95"
+          },
+          {
+            "path": "clinical-status",
+            "searchParam": "active"
+          }
+        ]
+      },
+      {
+        "type": "Condition",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "2.16.840.1.113883.3.6037.1001.23.99.96"
+          },
+          {
+            "path": "clinical-status",
+            "searchParam": "active"
+          }
+        ]
+      },
+      {
+        "type": "Condition",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "2.16.840.1.113883.3.6037.1001.23.99.97"
+          },
+          {
+            "path": "clinical-status",
+            "searchParam": "active"
+          }
+        ]
+      },
+      {
+        "type": "Condition",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "2.16.840.1.113883.3.6037.1001.23.99.98"
+          },
+          {
+            "path": "clinical-status",
+            "searchParam": "active"
+          }
+        ]
+      },
+      {
+        "type": "Condition",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "2.16.840.1.113883.3.6037.1001.23.99.99"
+          },
+          {
+            "path": "clinical-status",
+            "searchParam": "active"
+          }
+        ]
+      },
+      {
+        "type": "Condition",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "2.16.840.1.113883.3.6037.1001.23.95.1"
+          },
+          {
+            "path": "clinical-status",
+            "searchParam": "active"
+          }
+        ]
+      },
+      {
+        "type": "Condition",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "2.16.840.1.113883.3.6037.1001.23.95.4"
+          },
+          {
+            "path": "clinical-status",
+            "searchParam": "active"
+          }
+        ]
+      },
+      {
+        "type": "Condition",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "2.16.840.1.113883.3.6037.1001.23.95.8"
+          },
+          {
+            "path": "clinical-status",
+            "searchParam": "active"
+          }
+        ]
+      },
+      {
+        "type": "Condition",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "2.16.840.1.113883.3.6037.1001.23.95.7"
+          },
+          {
+            "path": "clinical-status",
+            "searchParam": "active"
+          }
+        ]
+      },
+      {
+        "type": "Condition",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "2.16.840.1.113883.3.6037.1001.23.95.15"
+          },
+          {
+            "path": "clinical-status",
+            "searchParam": "active"
+          }
+        ]
+      },
+      {
+        "type": "Condition",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "2.16.840.1.113762.1.4.1138.480"
+          },
+          {
+            "path": "clinical-status",
+            "searchParam": "active"
+          }
+        ]
+      },
+      {
+        "type": "Condition",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "2.16.840.1.113762.1.4.1146.703"
+          },
+          {
+            "path": "clinical-status",
+            "searchParam": "active"
+          }
+        ]
+      },
+      {
+        "type": "Condition",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "2.16.840.1.113883.3.6037.1001.23.99.88"
+          },
+          {
+            "path": "clinical-status",
+            "searchParam": "active"
+          }
+        ]
+      },
+      {
+        "type": "Condition",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "2.16.840.1.113883.3.6037.1001.23.95.6"
+          },
+          {
+            "path": "clinical-status",
+            "searchParam": "active"
+          }
+        ]
+      },
+      {
+        "type": "Condition",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "2.16.840.1.113883.3.6037.1001.23.99.91"
+          },
+          {
+            "path": "clinical-status",
+            "searchParam": "active"
+          }
+        ]
+      },
+      {
+        "type": "Condition",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "2.16.840.1.113883.3.6037.1001.23.95.5"
+          },
+          {
+            "path": "clinical-status",
+            "searchParam": "active"
+          }
+        ]
+      },
+      {
+        "type": "Condition",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "2.16.840.1.113883.3.6037.1001.23.99.96"
+          },
+          {
+            "path": "clinical-status",
+            "searchParam": "active"
+          }
+        ]
+      },
+      {
+        "type": "Condition",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "2.16.840.1.113883.3.6037.1001.23.95.14"
+          },
+          {
+            "path": "clinical-status",
+            "searchParam": "active"
+          }
+        ]
+      },
+      {
+        "type": "Procedure",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "2.16.840.1.113883.3.6037.1001.23.99.89"
+          },
+          {
+            "path": "status",
+            "searchParam": "completed"
+          }
+        ]
+      },
+      {
+        "type": "Procedure",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "2.16.840.1.113883.3.6037.1001.23.99.87"
+          },
+          {
+            "path": "status",
+            "searchParam": "completed"
+          }
+        ]
+      },
+      {
+        "type": "Procedure",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "2.16.840.1.113883.3.6037.1001.23.95.2"
+          },
+          {
+            "path": "status",
+            "searchParam": "completed"
+          }
+        ]
+      },
+      {
+        "type": "Encounter"
+      },
+      {
+        "type": "MedicationAdministration"
+      },
+      {
+        "type": "Medication"
+      },
+      {
+        "type": "Encounter"
+      }
+    ]
+  }
+  

@@ -1,0 +1,39 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.6037.1001.23.98.124",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2020-09-03T06:57:43.000+00:00",
+        "source": "#oHy6ltsnXpCgK6yP"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.98.124",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113883.3.6037.1001.23.98.124"
+        }
+    ],
+    "version": "Latest",
+    "name": "Stage 3 ulcer count",
+    "title": "Stage 3 ulcer count",
+    "status": "active",
+    "publisher": "Mettles",
+    "compose": {
+        "include": [
+            {
+                "system": "http://loinc.org",
+                "version": "2020-03",
+                "concept": [
+                    {
+                        "code": "55125-9",
+                        "display": "Number of pressure injuries - stage 3 [CMS Assessment]"
+                    },
+                    {
+                        "code": "45778-8",
+                        "display": "Ulcers.stage 3 # [Minimum Data Set]"
+                    }
+                ]
+            }
+        ]
+    }
+}

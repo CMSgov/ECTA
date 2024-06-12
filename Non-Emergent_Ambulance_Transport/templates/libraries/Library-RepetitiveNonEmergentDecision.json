@@ -1,0 +1,62 @@
+{
+  "resourceType": "Library",
+  "version": "1.0.0",
+  "name": "RepetitiveNonEmergentDecision",
+  "title": "Repetitive,Scheduled Non-Emergent Ambulance Transport Decision",
+  "status": "draft",
+  "type": {
+    "coding": [
+      {
+        "code": "logic-library"
+      }
+    ]
+  },
+  "relatedArtifact": [
+    {
+      "type": "depends-on",
+      "resource": "<FHIR-server>/Library/FHIRHelpers"
+    },
+    {
+      "type": "depends-on",
+      "resource": "<FHIR-server>/Library/library-lcd1-RepetitiveNonEmergent"
+    }
+  ],
+  "dataRequirement": [
+    {
+      "type": "DocumentReference",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "2.16.840.1.113883.3.6037.1001.23.98.111"
+        }
+        ]
+    },
+    {
+      "type": "DocumentReference",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "2.16.840.1.113883.3.6037.1001.23.98.112"
+        }
+        ]
+    },
+    {
+      "type": "DocumentReference",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "2.16.840.1.113883.3.6037.1001.23.98.113"
+        }
+        ]
+    },
+    {
+      "type": "DocumentReference",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "2.16.840.1.113883.3.6037.1001.23.98.114"
+        }
+        ]
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "resourceType": "ValueSet",
+  "id": "2.16.840.1.113883.3.6037.1001.23.98.92",
+  "meta": {
+    "versionId": "2",
+    "lastUpdated": "2020-08-28T07:47:19.553+00:00",
+    "source": "#XfzZDo4Vcf8jh2LU"
+  },
+  "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.98.92",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "2.16.840.1.113883.3.6037.1001.23.98.92"
+    }
+  ],
+  "version": "Latest",
+  "name": "Non-healed fractures",
+  "title": "Non-healed fractures",
+  "status": "active",
+  "publisher": "Mettles",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "version": "2020-03",
+        "concept": [
+          {
+            "code": "M84.75",
+            "display": "Atypical femoral fracture"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "2020-03",
+        "concept": [
+          {
+            "code": "125605004",
+            "display": "Fracture of bone (disorder)"
+          },
+          {
+            "display": "Avulsion of ligament with bony fragment (disorder)",
+            "code": "281602002"
+          },
+          {
+            "display": "Closed fracture of bone (disorder)",
+            "code": "423125000"
+          },
+          {
+            "display": "Complicated fracture of bone (disorder)",
+            "code": "706922007"
+          },
+          {
+            "display": "Compression fracture (disorder)",
+            "code": "443395009"
+          },
+          {
+            "display": "Disorder of fracture healing (disorder)",
+            "code": "281466008"
+          },
+          {
+            "display": "Fracture dislocation of joint (disorder)",
+            "code": "263063009"
+          },
+          {
+            "display": "Fracture of bone adjacent to prosthesis (disorder)",
+            "code": "441546003"
+          },
+          {
+            "display": "Fracture of bone after implantation of orthopedic device (disorder)",
+            "code": "788937001"
+          },
+          {
+            "display": "Fracture of bone due to accidental fall (disorder)",
+            "code": "32121000119107"
+          },
+          {
+            "display": "Fracture of bone of head (disorder)",
+            "code": "418764009"
+          },
+          {
+            "display": "Fracture of bone of nasal sinus (disorder)",
+            "code": "8550001000004107"
+          },
+          {
+            "display": "Fracture of bones of trunk (disorder)",
+            "code": "65354004"
+          },
+          {
+            "display": "Fracture of long bone, as birth trauma (disorder)",
+            "code": "20596003"
+          },
+          {
+            "display": "Fracture of lower limb (disorder)",
+            "code": "46866001"
+          },
+          {
+            "display": "Fracture of lumbar spine and/or pelvis (disorder)",
+            "code": "207986006"
+          },
+          {
+            "display": "Fracture of multiple bones (disorder)",
+            "code": "788192009"
+          },
+          {
+            "display": "Fracture of sesamoid bone (disorder)",
+            "code": "429339004"
+          },
+          {
+            "display": "Fracture of shoulder (disorder)",
+            "code": "16250001000004107"
+          },
+          {
+            "display": "Fracture of upper limb (disorder)",
+            "code": "23406007"
+          },
+          {
+            "display": "Fracture of vertebral column (disorder)",
+            "code": "50448004"
+          },
+          {
+            "display": "Fractured hyoid bone (disorder)",
+            "code": "262675006"
+          },
+          {
+            "display": "Insufficiency fracture (disorder)",
+            "code": "702561005"
+          },
+          {
+            "display": "Intraoperative fracture (disorder)",
+            "code": "213270002"
+          },
+          {
+            "display": "Open fracture of bone (disorder)",
+            "code": "439987009"
+          },
+          {
+            "display": "Pathological fracture (disorder)",
+            "code": "268029009"
+          },
+          {
+            "display": "Pathological fracture of vertebra (disorder)",
+            "code": "274146004"
+          },
+          {
+            "display": "Simple fracture of bone (disorder)",
+            "code": "706886007"
+          },
+          {
+            "display": "Stress fracture (disorder)",
+            "code": "240197007"
+          }
+        ]
+      }
+    ]
+  }
+}

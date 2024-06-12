@@ -1,0 +1,451 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.6037.1001.23.93.82",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2021-05-25T11:06:20.102+05:30",
+        "source": "#5JxgVWEWmF6j1fZZ"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.82",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113883.3.6037.1001.23.93.82"
+        }
+    ],
+    "version": "Latest",
+    "name": "Scopolamine",
+    "title": "Scopolamine",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "version": "2021-04",
+                "concept": [
+                    {
+                        "code": "1046787",
+                        "display": "atropine sulfate 0.00388 MG/ML / hyoscyamine sulfate 0.0207 MG/ML / phenobarbital 3.24 MG/ML / scopolamine hydrobromide 0.0013 MG/ML Oral Solution"
+                    },
+                    {
+                        "code": "1046807",
+                        "display": "scopolamine hydrobromide 0.0065 MG"
+                    },
+                    {
+                        "code": "200059",
+                        "display": "scopolamine 0.4 MG Oral Tablet"
+                    },
+                    {
+                        "code": "1046809",
+                        "display": "atropine sulfate 0.0194 MG / hyoscyamine sulfate 0.1037 MG / phenobarbital 16.2 MG / scopolamine hydrobromide 0.0065 MG [Donnatal]"
+                    },
+                    {
+                        "code": "1007162",
+                        "display": "atropine / hyoscyamine / phenylephrine / pseudoephedrine / scopolamine"
+                    },
+                    {
+                        "code": "1007163",
+                        "display": "nitrazepam / oxazepam / scopolamine"
+                    },
+                    {
+                        "code": "1007217",
+                        "display": "homatropine / scopolamine"
+                    },
+                    {
+                        "code": "1007331",
+                        "display": "metronidazole / scopolamine"
+                    },
+                    {
+                        "code": "1007446",
+                        "display": "azintamide / scopolamine"
+                    },
+                    {
+                        "code": "1008610",
+                        "display": "atropine / chlorpheniramine / hyoscyamine / phenylephrine / pseudoephedrine / scopolamine"
+                    },
+                    {
+                        "code": "1008691",
+                        "display": "caffeine / dimenhydrinate / scopolamine"
+                    },
+                    {
+                        "code": "1008901",
+                        "display": "chlorpheniramine / pseudoephedrine / scopolamine"
+                    },
+                    {
+                        "code": "1008931",
+                        "display": "atropine / chlorpheniramine / hyoscyamine / phenylephrine / phenylpropanolamine / scopolamine"
+                    },
+                    {
+                        "code": "1008579",
+                        "display": "carbinoxamine / pseudoephedrine / scopolamine"
+                    },
+                    {
+                        "code": "1008960",
+                        "display": "chlorpheniramine / dextromethorphan / scopolamine"
+                    },
+                    {
+                        "code": "1046712",
+                        "display": "scopolamine hydrobromide 0.01 MG"
+                    },
+                    {
+                        "code": "1046786",
+                        "display": "scopolamine hydrobromide 0.0013 MG/ML"
+                    },
+                    {
+                        "code": "1007585",
+                        "display": "papaveretum / scopolamine"
+                    },
+                    {
+                        "code": "1008362",
+                        "display": "dipyrone / scopolamine"
+                    },
+                    {
+                        "code": "1008367",
+                        "display": "atropine / hyoscyamine / scopolamine"
+                    },
+                    {
+                        "code": "1008440",
+                        "display": "ibuprofen / scopolamine"
+                    },
+                    {
+                        "code": "1007767",
+                        "display": "atropine / chlorpheniramine / hyoscyamine / pseudoephedrine / scopolamine"
+                    },
+                    {
+                        "code": "1008167",
+                        "display": "clonixin / scopolamine"
+                    },
+                    {
+                        "code": "1008184",
+                        "display": "diazepam / scopolamine"
+                    },
+                    {
+                        "code": "1046815",
+                        "display": "atropine sulfate 0.0194 MG / hyoscyamine sulfate 0.1037 MG / phenobarbital 16.2 MG / scopolamine hydrobromide 0.0065 MG Oral Tablet"
+                    },
+                    {
+                        "code": "1046861",
+                        "display": "atropine sulfate 0.00388 MG/ML / hyoscyamine sulfate 0.0207 MG/ML / phenobarbital 3.24 MG/ML / scopolamine hydrobromide 0.0013 MG/ML [D-Tal]"
+                    },
+                    {
+                        "code": "1046862",
+                        "display": "atropine sulfate 0.00388 MG/ML / hyoscyamine sulfate 0.0207 MG/ML / phenobarbital 3.24 MG/ML / scopolamine hydrobromide 0.0013 MG/ML Oral Solution [D-Tal]"
+                    },
+                    {
+                        "code": "1046923",
+                        "display": "atropine sulfate 0.00388 MG/ML / hyoscyamine sulfate 0.0207 MG/ML / phenobarbital 3.24 MG/ML / scopolamine hydrobromide 0.0013 MG/ML [Donnatal]"
+                    },
+                    {
+                        "code": "1046924",
+                        "display": "atropine sulfate 0.00388 MG/ML / hyoscyamine sulfate 0.0207 MG/ML / phenobarbital 3.24 MG/ML / scopolamine hydrobromide 0.0013 MG/ML Oral Solution [Donnatal]"
+                    },
+                    {
+                        "code": "1046978",
+                        "display": "atropine sulfate 0.0194 MG / hyoscyamine sulfate 0.1037 MG / phenobarbital 16.2 MG / scopolamine hydrobromide 0.0065 MG Oral Tablet [Donnatal]"
+                    },
+                    {
+                        "code": "1046997",
+                        "display": "atropine sulfate 0.0582 MG / hyoscyamine sulfate 0.311 MG / phenobarbital 48.6 MG / scopolamine hydrobromide 0.0195 MG Extended Release Oral Tablet"
+                    },
+                    {
+                        "code": "1046996",
+                        "display": "scopolamine hydrobromide 0.0195 MG"
+                    },
+                    {
+                        "code": "1048078",
+                        "display": "atropine sulfate 0.0194 MG / hyoscyamine sulfate 0.1037 MG / scopolamine hydrobromide 0.0065 MG Oral Tablet"
+                    },
+                    {
+                        "code": "1046998",
+                        "display": "atropine sulfate 0.0582 MG / hyoscyamine sulfate 0.311 MG / phenobarbital 48.6 MG / scopolamine hydrobromide 0.0195 MG [Donnatal]"
+                    },
+                    {
+                        "code": "1046999",
+                        "display": "atropine sulfate 0.0582 MG / hyoscyamine sulfate 0.311 MG / phenobarbital 48.6 MG / scopolamine hydrobromide 0.0195 MG Extended Release Oral Tablet [Donnatal]"
+                    },
+                    {
+                        "code": "1048124",
+                        "display": "12 HR atropine sulfate 0.04 MG / chlorpheniramine maleate 8 MG / hyoscyamine sulfate 0.19 MG / pseudoephedrine hydrochloride 90 MG / scopolamine hydrobromide 0.01 MG Extended Release Oral Tablet"
+                    },
+                    {
+                        "code": "1048147",
+                        "display": "atropine sulfate 0.0582 MG / hyoscyamine sulfate 0.3111 MG / phenobarbital 48.6 MG / scopolamine hydrobromide 0.0195 MG Extended Release Oral Tablet"
+                    },
+                    {
+                        "code": "106507",
+                        "display": "papaveretum 15.4 MG/ML / scopolamine 0.4 MG/ML Injectable Solution"
+                    },
+                    {
+                        "code": "106807",
+                        "display": "scopolamine 1.25 MG/ML Ophthalmic Solution"
+                    },
+                    {
+                        "code": "106808",
+                        "display": "scopolamine 5 MG/ML Ophthalmic Solution"
+                    },
+                    {
+                        "code": "198207",
+                        "display": "scopolamine 0.4 MG/ML Injectable Solution"
+                    },
+                    {
+                        "code": "226552",
+                        "display": "72 HR scopolamine 0.0139 MG/HR Transdermal System"
+                    },
+                    {
+                        "code": "1154660",
+                        "display": "atropine / chlorpheniramine / hyoscyamine / pseudoephedrine / scopolamine Oral Product"
+                    },
+                    {
+                        "code": "1154661",
+                        "display": "atropine / chlorpheniramine / hyoscyamine / pseudoephedrine / scopolamine Pill"
+                    },
+                    {
+                        "code": "1154678",
+                        "display": "atropine / hyoscyamine / phenobarbital / scopolamine Oral Liquid Product"
+                    },
+                    {
+                        "code": "1154679",
+                        "display": "atropine / hyoscyamine / phenobarbital / scopolamine Oral Product"
+                    },
+                    {
+                        "code": "1154680",
+                        "display": "atropine / hyoscyamine / phenobarbital / scopolamine Pill"
+                    },
+                    {
+                        "code": "1154684",
+                        "display": "atropine / hyoscyamine / scopolamine Oral Product"
+                    },
+                    {
+                        "code": "1154685",
+                        "display": "atropine / hyoscyamine / scopolamine Pill"
+                    },
+                    {
+                        "code": "1154779",
+                        "display": "chlorpheniramine / methscopolamine / phenylephrine Oral Product"
+                    },
+                    {
+                        "code": "1154780",
+                        "display": "chlorpheniramine / methscopolamine / phenylephrine Pill"
+                    },
+                    {
+                        "code": "1154784",
+                        "display": "chlorpheniramine / methscopolamine / pseudoephedrine Oral Product"
+                    },
+                    {
+                        "code": "1157624",
+                        "display": "scopolamine Injectable Product"
+                    },
+                    {
+                        "code": "1157625",
+                        "display": "scopolamine Ophthalmic Product"
+                    },
+                    {
+                        "code": "1157627",
+                        "display": "scopolamine Oral Product"
+                    },
+                    {
+                        "code": "1157628",
+                        "display": "scopolamine Pill"
+                    },
+                    {
+                        "code": "1157630",
+                        "display": "scopolamine Topical Product"
+                    },
+                    {
+                        "code": "1158131",
+                        "display": "phenylephrine / scopolamine Ophthalmic Product"
+                    },
+                    {
+                        "code": "1164115",
+                        "display": "papaveretum / scopolamine Injectable Product"
+                    },
+                    {
+                        "code": "1295698",
+                        "display": "scopolamine Transdermal Product"
+                    },
+                    {
+                        "code": "1739883",
+                        "display": "atropine sulfate 0.0194 MG / hyoscyamine sulfate 0.1037 MG / phenobarbital 16.2 MG / scopolamine hydrobromide 0.0065 MG [Phenohytro]"
+                    },
+                    {
+                        "code": "1739884",
+                        "display": "atropine / hyoscyamine / phenobarbital / scopolamine Oral Tablet [Phenohytro]"
+                    },
+                    {
+                        "code": "1739887",
+                        "display": "atropine sulfate 0.0194 MG / hyoscyamine sulfate 0.1037 MG / phenobarbital 16.2 MG / scopolamine hydrobromide 0.0065 MG Oral Tablet [Phenohytro]"
+                    },
+                    {
+                        "code": "1806049",
+                        "display": "scopolamine Transdermal System"
+                    },
+                    {
+                        "code": "1806063",
+                        "display": "scopolamine Transdermal System [Transderm Scop]"
+                    },
+                    {
+                        "code": "208123",
+                        "display": "scopolamine 2.5 MG/ML Ophthalmic Solution [Isopto Hyoscine]"
+                    },
+                    {
+                        "code": "214411",
+                        "display": "chlorpheniramine / methscopolamine / phenylpropanolamine"
+                    },
+                    {
+                        "code": "245350",
+                        "display": "scopolamine 0.6 MG/ML Injectable Solution"
+                    },
+                    {
+                        "code": "250536",
+                        "display": "scopolamine 0.3 MG Oral Tablet"
+                    },
+                    {
+                        "code": "250537",
+                        "display": "scopolamine 0.15 MG Oral Tablet"
+                    },
+                    {
+                        "code": "312910",
+                        "display": "scopolamine 2.5 MG/ML Ophthalmic Solution"
+                    },
+                    {
+                        "code": "323913",
+                        "display": "scopolamine 2.5 MG/ML"
+                    },
+                    {
+                        "code": "328661",
+                        "display": "scopolamine 0.4 MG/ML"
+                    },
+                    {
+                        "code": "331430",
+                        "display": "scopolamine 0.4 MG"
+                    },
+                    {
+                        "code": "334244",
+                        "display": "scopolamine 0.6 MG/ML"
+                    },
+                    {
+                        "code": "334245",
+                        "display": "scopolamine 0.15 MG"
+                    },
+                    {
+                        "code": "334246",
+                        "display": "scopolamine 0.3 MG"
+                    },
+                    {
+                        "code": "345093",
+                        "display": "scopolamine 1.25 MG/ML"
+                    },
+                    {
+                        "code": "345094",
+                        "display": "scopolamine 5 MG/ML"
+                    },
+                    {
+                        "code": "351875",
+                        "display": "72 HR scopolamine 0.0139 MG/HR Transdermal System [Transderm Scop]"
+                    },
+                    {
+                        "code": "352366",
+                        "display": "carbinoxamine / methscopolamine / pseudoephedrine"
+                    },
+                    {
+                        "code": "353526",
+                        "display": "scopolamine 0.0139 MG/HR"
+                    },
+                    {
+                        "code": "363862",
+                        "display": "scopolamine Ophthalmic Solution [Isopto Hyoscine]"
+                    },
+                    {
+                        "code": "368551",
+                        "display": "atropine / hyoscyamine / phenobarbital / scopolamine Oral Tablet [Donnatal]"
+                    },
+                    {
+                        "code": "373830",
+                        "display": "scopolamine Injectable Solution"
+                    },
+                    {
+                        "code": "373831",
+                        "display": "scopolamine Oral Tablet"
+                    },
+                    {
+                        "code": "374677",
+                        "display": "atropine / hyoscyamine / phenobarbital / scopolamine Oral Tablet"
+                    },
+                    {
+                        "code": "374818",
+                        "display": "atropine / hyoscyamine / phenobarbital / scopolamine Extended Release Oral Tablet"
+                    },
+                    {
+                        "code": "377414",
+                        "display": "scopolamine Ophthalmic Solution"
+                    },
+                    {
+                        "code": "378252",
+                        "display": "atropine / hyoscyamine / scopolamine Oral Tablet"
+                    },
+                    {
+                        "code": "379354",
+                        "display": "papaveretum / scopolamine Injectable Solution"
+                    },
+                    {
+                        "code": "568850",
+                        "display": "scopolamine 2.5 MG/ML [Isopto Hyoscine]"
+                    },
+                    {
+                        "code": "575640",
+                        "display": "scopolamine 0.0139 MG/HR [Transderm Scop]"
+                    },
+                    {
+                        "code": "608757",
+                        "display": "atropine / hyoscyamine / phenobarbital / scopolamine Extended Release Oral Tablet [Donnatal]"
+                    },
+                    {
+                        "code": "689597",
+                        "display": "atropine / chlorpheniramine / hyoscyamine / phenylephrine / scopolamine"
+                    },
+                    {
+                        "code": "689606",
+                        "display": "atropine / hyoscyamine / phenobarbital / scopolamine"
+                    },
+                    {
+                        "code": "689755",
+                        "display": "phenylephrine / scopolamine"
+                    },
+                    {
+                        "code": "692718",
+                        "display": "atropine / chlorpheniramine / hyoscyamine / pseudoephedrine / scopolamine Extended Release Oral Tablet"
+                    },
+                    {
+                        "code": "757058",
+                        "display": "atropine / hyoscyamine / phenobarbital / scopolamine Oral Solution"
+                    },
+                    {
+                        "code": "757063",
+                        "display": "atropine / hyoscyamine / phenobarbital / scopolamine Oral Solution [D-Tal]"
+                    },
+                    {
+                        "code": "757066",
+                        "display": "atropine / hyoscyamine / phenobarbital / scopolamine Oral Solution [Donnatal]"
+                    },
+                    {
+                        "code": "815781",
+                        "display": "chlorpheniramine / phenylephrine / scopolamine"
+                    },
+                    {
+                        "code": "816029",
+                        "display": "acetaminophen / scopolamine"
+                    },
+                    {
+                        "code": "9601",
+                        "display": "scopolamine"
+                    },
+                    {
+                        "code": "9603",
+                        "display": "scopolamine hydrobromide"
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.6037.1001.23.93.80",
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.80",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113883.3.6037.1001.23.93.80"
+        }
+    ],
+    "version": "Latest",
+    "name": "Laryngoscopy Codes",
+    "title": "Laryngoscopy Codes",
+    "status": "active",
+    "publisher": "Mettles",
+    "compose": {
+        "include": [
+            {
+                "system": "https://www.aapc.com/resources/medical-coding/cpt.aspx",
+                "version": "2021-06",
+                "concept": [
+                    {
+                        "code": "31573",
+                        "display": "Laryngoscopy, flexible; with therapeutic injection(s) (eg, chemodenervation agent or corticosteroid, injected percutaneous, transoral, or via endoscope channel), unilateral"
+                    }
+                ]
+            }
+        ]
+    }
+}

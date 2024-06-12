@@ -1,0 +1,51 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.6037.1001.23.98.120",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2020-09-03T06:57:43.000+00:00",
+        "source": "#oHy6ltsnXpCgK6yP"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.98.120",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113883.3.6037.1001.23.98.120"
+        }
+    ],
+    "version": "Latest",
+    "name": "Management of Incontinence",
+    "title": "Management of Incontinence",
+    "status": "active",
+    "publisher": "Mettles",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2020-03",
+                "concept": [
+                    {
+                        "code": "408979003",
+                        "display": "Urinary incontinence care management (procedure)"
+                    },
+                    {
+                        "code": "737841004",
+                        "display": "Urinary elimination care management (procedure)"
+                    },
+                    {
+                        "code": "410253009",
+                        "display": "Urinary catheter care management (procedure)"
+                    },
+                    {
+                        "code": "385886008",
+                        "display": "Bed rest care management (procedure)"
+                    },
+                    {
+                        "code": "385963002",
+                        "display": "Bladder care management (procedure)"
+                    }
+                ]
+            }
+        ]
+    }
+}

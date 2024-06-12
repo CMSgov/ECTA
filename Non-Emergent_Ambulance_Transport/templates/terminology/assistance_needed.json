@@ -1,0 +1,45 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.6037.1001.23.98.85",
+    "meta": {
+      "versionId": "2",
+      "lastUpdated": "2020-08-28T07:47:19.553+00:00",
+      "source": "#XfzZDo4Vcf8jh2LU"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.98.85",
+    "identifier": [
+      {
+        "system": "urn:ietf:rfc:3986",
+        "value": "2.16.840.1.113883.3.6037.1001.23.98.85"
+      }
+    ],
+    "version": "Latest",
+    "name": "Unable to get out of bed without assistance",
+    "title": "Unable to get out of bed without assistance",
+    "status": "active",
+    "publisher": "Mettles",
+    "compose": {
+      "include": [
+        {
+          "system": "http://hl7.org/fhir/sid/icd-10-cm",
+          "version": "2020-03",
+          "concept": [
+            {
+              "code": "Z74.9",
+              "display": "Problem related to care provider dependency, unspecified"
+            }
+          ]
+        },
+        {
+          "system": "http://snomed.info/sct",
+          "version": "2020-03",
+          "concept": [
+            {
+              "code": "301676004",
+              "display": "Unable to get off a bed (finding)"
+            }
+          ]
+        }
+      ]
+    }
+  }

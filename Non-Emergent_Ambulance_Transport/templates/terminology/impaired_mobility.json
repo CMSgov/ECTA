@@ -1,0 +1,49 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.6037.1001.23.98.94",
+    "meta": {
+      "versionId": "2",
+      "lastUpdated": "2020-08-28T07:47:19.553+00:00",
+      "source": "#XfzZDo4Vcf8jh2LU"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.98.94",
+    "identifier": [
+      {
+        "system": "urn:ietf:rfc:3986",
+        "value": "2.16.840.1.113883.3.6037.1001.23.98.94"
+      }
+    ],
+    "version": "Latest",
+    "name": "Impaired mobility",
+    "title": "Impaired mobility",
+    "status": "active",
+    "publisher": "Mettles",
+    "compose": {
+      "include": [
+        {
+          "system": "http://hl7.org/fhir/sid/icd-10-cm",
+          "version": "2020-03",
+          "concept": [
+            {
+              "code": "Z74.0",
+              "display": "Reduced mobility"
+            }
+          ]
+        },
+        {
+          "system": "http://snomed.info/sct",
+          "version": "2020-03",
+          "concept": [
+            {
+              "code": "8510008",
+              "display": "Reduced mobility (finding)"
+            },
+            {
+              "code": "82971005",
+              "display": "Impaired mobility (finding)"
+            }
+          ]
+        }
+      ]
+    }
+  }

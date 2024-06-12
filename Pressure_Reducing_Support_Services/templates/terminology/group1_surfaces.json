@@ -1,0 +1,83 @@
+{
+  "resourceType": "ValueSet",
+  "id": "2.16.840.1.113883.3.6037.1001.23.98.116",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2020-09-03T06:57:43.000+00:00",
+    "source": "#oHy6ltsnXpCgK6yP"
+  },
+  "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.98.116",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "2.16.840.1.113883.3.6037.1001.23.98.116"
+    }
+  ],
+  "version": "Latest",
+  "name": "Group 1 support surfaces",
+  "title": "Group 1 support surfaces",
+  "status": "active",
+  "publisher": "Mettles",
+  "compose": {
+    "include": [
+      {
+        "system": "https://hcpcs.codes/",
+        "version": "2020-03",
+        "concept": [
+          {
+            "code": "A4640",
+            "display": "Replacement pad for use with medically necessary alternating pressure pad owned by patient"
+          },
+          {
+            "code": "E0181",
+            "display": "Powered pressure reducing mattress overlay/pad, alternating, with pump, includes heavy duty"
+          },
+          {
+            "code": "E0182",
+            "display": "Pump for alternating pressure pad, for replacement only"
+          },
+          {
+            "code": "E0184",
+            "display": "Dry pressure mattress"
+          },
+          {
+            "code": "E0185",
+            "display": "Gel or gel-like pressure pad for mattress, standard mattress length and width"
+          },
+          {
+            "code": "E0186",
+            "display": "Air pressure mattress"
+          },
+          {
+            "code": "E0187",
+            "display": "Water pressure mattress"
+          },
+          {
+            "code": "E0188",
+            "display": "Synthetic sheepskin pad"
+          },
+          {
+            "code": "E0189",
+            "display": "Lambswool sheepskin pad, any size"
+          },
+          {
+            "code": "E0196",
+            "display": "Gel pressure mattress"
+          },
+          {
+            "code": "E0197",
+            "display": "Air pressure pad for mattress, standard mattress length and width"
+          },
+          {
+            "code": "E0198",
+            "display": "Water pressure pad for mattress, standard mattress length and width"
+          },
+          {
+            "code": "E0199",
+            "display": "Dry pressure pad for mattress, standard mattress length and width"
+          }
+        ]
+      }
+    ]
+  }
+}

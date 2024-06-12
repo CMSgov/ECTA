@@ -1,0 +1,25 @@
+{
+    "resourceType": "Library",
+    "version": "1.0.0",
+    "title": "VeinAblationDecision",
+    "name": "VeinAblationDecision",
+    "status": "draft",
+    "type": {
+      "coding": [
+        {
+          "code": "logic-library"
+        }
+      ]
+    },
+    "relatedArtifact": [
+      {
+      "type": "depends-on",
+      "resource": "<FHIR-server>/Library/FHIRHelpers"
+      },
+      {
+        "type": "depends-on",
+        "resource": "<FHIR-server>/Library/library-lcd1-VeinAblation"
+        }
+    ]
+  }
+  

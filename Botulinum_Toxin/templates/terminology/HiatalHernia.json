@@ -1,0 +1,48 @@
+{
+  "resourceType": "ValueSet",
+  "id": "2.16.840.1.113883.3.6037.1001.23.93.52",
+
+  "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.52",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "2.16.840.1.113883.3.6037.1001.23.93.52"
+    }
+  ],
+
+  "version": "Latest",
+    "name": "Hiatal Hernia",
+    "title": "Hiatal Hernia",
+    "status": "active",
+    "publisher": "Mettles",
+    "compose": {
+        "include": [
+            {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "version": "2021-05",
+                "concept": [
+                    {
+                        "code": "N99.523",
+                        "display": "Herniation of incontinent stoma of urinary tract"
+                    },
+                    {
+                        "code": "N99.533",
+                        "display": "Herniation of continent stoma of urinary tract"
+                    },
+                    {
+                        "code": "K44.0",
+                        "display": "Diaphragmatic hernia with obstruction, without gangrene"
+                    },
+                    {
+                        "code": "K44.1",
+                        "display": "Diaphragmatic hernia with gangrene"
+                    },
+                    {
+                        "code": "K44.9",
+                        "display": "Diaphragmatic hernia without obstruction or gangrene"
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,51 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.6037.1001.23.98.126",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2020-09-03T06:57:43.000+00:00",
+        "source": "#oHy6ltsnXpCgK6yP"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.98.126",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113883.3.6037.1001.23.98.126"
+        }
+    ],
+    "version": "Latest",
+    "name": "Myocutaneous flap",
+    "title": "Myocutaneous flap",
+    "status": "active",
+    "publisher": "Mettles",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2020-03",
+                "concept": [
+                    {
+                        "code": "74799003",
+                        "display": "Flap graft (procedure)"
+                    },
+                    {
+                        "code": "119561005",
+                        "display": "Grafting procedure (procedure)"
+                    },
+                    {
+                        "code": "71928005",
+                        "display": "Advancement of flap graft (procedure)"
+                    },
+                    {
+                        "code": "177434000",
+                        "display": "Local advancement flap, myocutaneous (procedure)"
+                    },
+                    {
+                        "code": "304040003",
+                        "display": "Grafting to skin (procedure)"
+                    }
+                ]
+            }
+        ]
+    }
+}

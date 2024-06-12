@@ -1,0 +1,52 @@
+{
+  "resourceType": "ValueSet",
+  "id": "2.16.840.1.113883.3.6037.1001.23.93.53",
+
+  "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.53",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "2.16.840.1.113883.3.6037.1001.23.93.53"
+    }
+  ],
+
+  "version": "Latest",
+    "name": "Constipation",
+    "title": "Constipation",
+    "status": "active",
+    "publisher": "Mettles",
+    "compose": {
+        "include": [
+            {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "version": "2021-05",
+                "concept": [
+                    {
+                        "code": "K59.00",
+                        "display": "Constipation, unspecified"
+                    },
+                    {
+                        "code": "K59.01",
+                        "display": "Slow transit constipation"
+                    },
+                    {
+                        "code": "K59.02",
+                        "display": "Outlet dysfunction constipation"
+                    },
+                    {
+                        "code": "K59.03",
+                        "display": "Drug induced constipation"
+                    },
+                    {
+                        "code": "K59.04",
+                        "display": "Chronic idiopathic constipation"
+                    },
+                    {
+                        "code": "K59.09",
+                        "display": "Other constipation"
+                    }
+                ]
+            }
+        ]
+    }
+}

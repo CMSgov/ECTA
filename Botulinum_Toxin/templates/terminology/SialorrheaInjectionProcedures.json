@@ -1,0 +1,42 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.6037.1001.23.93.97",
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.97",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113883.3.6037.1001.23.93.97"
+        }
+    ],
+    "version": "Latest",
+    "name": "Sialorrhea Injection Procedures",
+    "title": "Sialorrhea Injection Procedures",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2021-07",
+                "concept": [
+                    {
+                        "code": "426189004",
+                        "display": "Injection of therapeutic substance into salivary gland (procedure)"
+                    },
+                    {
+                        "code": "82976000",
+                        "display": "Injection of salivary duct (procedure)"
+                    },
+                    {
+                        "code": "90146000",
+                        "display": "Injection of salivary gland (procedure)"
+                    },
+                    {
+                        "code": "78426005",
+                        "display": "Injection of mouth (procedure)"
+                    }
+                ]
+            }
+        ]
+    }
+}

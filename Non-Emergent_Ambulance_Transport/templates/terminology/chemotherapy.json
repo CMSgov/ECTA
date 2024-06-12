@@ -1,0 +1,115 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113762.1.4.1047.453",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2020-12-17T11:37:06.000+00:00",
+        "source": "#yjFuqUQyBJOyJbct"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1047.453",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113762.1.4.1047.453"
+        }
+    ],
+    "version": "Latest",
+    "name": "Chemotherapy",
+    "title": "Chemotherapy",
+    "status": "active",
+    "publisher": "NLM",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2020-09",
+                "concept": [
+                    {
+                        "code": "12149006",
+                        "display": "Chemotherapy administration, subcutaneous, with local anesthesia (procedure)"
+                    },
+                    {
+                        "code": "22733003",
+                        "display": "Chemotherapy for non-malignant neoplasm (procedure)"
+                    },
+                    {
+                        "code": "265760000",
+                        "display": "Intravenous chemotherapy (procedure)"
+                    },
+                    {
+                        "code": "265761001",
+                        "display": "Intramuscular chemotherapy (procedure)"
+                    },
+                    {
+                        "code": "265762008",
+                        "display": "Subcutaneous chemotherapy (procedure)"
+                    },
+                    {
+                        "code": "266719004",
+                        "display": "Oral chemotherapy (procedure)"
+                    },
+                    {
+                        "code": "29391003",
+                        "display": "Chemotherapy administration into peritoneal cavity requiring paracentesis (procedure)"
+                    },
+                    {
+                        "code": "309698005",
+                        "display": "Continuous infusion of chemotherapy (procedure)"
+                    },
+                    {
+                        "code": "315601005",
+                        "display": "Ambulatory chemotherapy (procedure)"
+                    },
+                    {
+                        "code": "31652009",
+                        "display": "Intracavitary chemotherapy for malignant neoplasm (procedure)"
+                    },
+                    {
+                        "code": "367336001",
+                        "display": "Chemotherapy (procedure)"
+                    },
+                    {
+                        "code": "38216008",
+                        "display": "Infusion chemotherapy for malignant neoplasm (procedure)"
+                    },
+                    {
+                        "code": "394894008",
+                        "display": "Pre-operative chemotherapy (procedure)"
+                    },
+                    {
+                        "code": "394895009",
+                        "display": "Postoperative chemotherapy (procedure)"
+                    },
+                    {
+                        "code": "394935005",
+                        "display": "Combined post-operative chemotherapy and radiotherapy (procedure)"
+                    },
+                    {
+                        "code": "399042005",
+                        "display": "Chemotherapy cycle (procedure)"
+                    },
+                    {
+                        "code": "4114003",
+                        "display": "Parenteral chemotherapy for malignant neoplasm (procedure)"
+                    },
+                    {
+                        "code": "51534007",
+                        "display": "Oral chemotherapy for malignant neoplasm (procedure)"
+                    },
+                    {
+                        "code": "6872008",
+                        "display": "Perfusion chemotherapy for malignant neoplasm (procedure)"
+                    },
+                    {
+                        "code": "77738002",
+                        "display": "Local chemotherapy for malignant neoplasm (procedure)"
+                    },
+                    {
+                        "code": "86036005",
+                        "display": "Intravenous chemotherapy administration by push technique (procedure)"
+                    }
+                ]
+            }
+        ]
+    }
+}

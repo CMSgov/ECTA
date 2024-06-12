@@ -1,0 +1,45 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.6037.1001.23.98.91",
+    "meta": {
+      "versionId": "2",
+      "lastUpdated": "2020-08-28T07:47:19.553+00:00",
+      "source": "#XfzZDo4Vcf8jh2LU"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.98.91",
+    "identifier": [
+      {
+        "system": "urn:ietf:rfc:3986",
+        "value": "2.16.840.1.113883.3.6037.1001.23.98.91"
+      }
+    ],
+    "version": "Latest",
+    "name": "Muscular weakness",
+    "title": "Muscular weakness",
+    "status": "active",
+    "publisher": "Mettles",
+    "compose": {
+      "include": [
+        {
+          "system": "http://hl7.org/fhir/sid/icd-10-cm",
+          "version": "2020-03",
+          "concept": [
+            {
+              "code": "M62.81",
+              "display": "Muscle weakness (generalized)"
+            }
+          ]
+        },
+        {
+          "system": "http://snomed.info/sct",
+          "version": "2020-03",
+          "concept": [
+            {
+              "code": "26544005",
+              "display": "Muscle weakness (finding)"
+            }
+          ]
+        }
+      ]
+    }
+  }

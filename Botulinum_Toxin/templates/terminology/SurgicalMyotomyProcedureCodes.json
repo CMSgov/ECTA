@@ -1,0 +1,36 @@
+{
+  "resourceType": "ValueSet",
+  "id": "2.16.840.1.113883.3.6037.1001.23.93.67",
+
+  "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.67",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "2.16.840.1.113883.3.6037.1001.23.93.67"
+    }
+  ],
+
+  "version": "Latest",
+    "name": "Surgical Myotomy Codes",
+    "title": "Surgical Myotomy Codes",
+    "status": "active",
+    "publisher": "Mettles",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2021-05",
+                "concept": [
+                    {
+                        "code": "235183004",
+                        "display": "Esophagomyotomy (procedure)"
+                    },
+                    {
+                        "code": "785290008",
+                        "display": "Peroral endoscopic myotomy of esophagus (procedure)"
+                    }
+                ]
+            }
+        ]
+    }
+}

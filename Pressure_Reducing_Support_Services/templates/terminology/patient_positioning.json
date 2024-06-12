@@ -1,0 +1,71 @@
+{
+    "resourceType": "ValueSet",
+    "id": "2.16.840.1.113883.3.6037.1001.23.98.119",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2020-09-03T06:57:43.000+00:00",
+        "source": "#oHy6ltsnXpCgK6yP"
+    },
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.98.119",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "2.16.840.1.113883.3.6037.1001.23.98.119"
+        }
+    ],
+    "version": "Latest",
+    "name": "Patient Turning and Repositioning",
+    "title": "Patient Turning and Repositioning",
+    "status": "active",
+    "publisher": "Mettles",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2020-03",
+                "concept": [
+                    {
+                        "code": "359962006",
+                        "display": "Turning patient in bed (procedure)"
+                    },
+                    {
+                        "code": "359965008",
+                        "display": "Moving a patient in bed (procedure)"
+                    },
+                    {
+                        "code": "56469005",
+                        "display": "Moving a patient (procedure)"
+                    },
+                    {
+                        "code": "370857000",
+                        "display": "Transporting according to individual needs (procedure)"
+                    },
+                    {
+                        "code": "59408004",
+                        "display": "Sitting a patient up in a chair (procedure)"
+                    },
+                    {
+                        "code": "406182002",
+                        "display": "Self-care assistance: transfer (procedure)"
+                    },
+                    {
+                        "code": "308739004",
+                        "display": "Repositioning (procedure)"
+                    },
+                    {
+                        "code": "6506000",
+                        "display": "Placing a patient on a bedpan (regime/therapy)"
+                    },
+                    {
+                        "code": "710960001",
+                        "display": "Moving patient using transfer technique (procedure)"
+                    },
+                    {
+                        "code": "58715004",
+                        "display": "Moving a patient to a stretcher (procedure)"
+                    }
+                ]
+            }
+        ]
+    }
+}
