@@ -67,13 +67,6 @@
                                 "code": "64635",
                                 "display": "64635 - Destroy lumb/sac facet jnt"
                             }
-                        },
-                        {
-                            "valueCoding": {
-                                "system": "https://hcpcs.codes/",
-                                "code": "64999",
-                                "display": "64999 - Unlisted px nervous system"
-                            }
                         }
                     ]
                 },
@@ -136,74 +129,15 @@
                                 "code": "64635",
                                 "display": "64635 - Destroy lumb/sac facet jnt"
                             }
-                        },
-                        {
-                            "valueCoding": {
-                                "system": "https://hcpcs.codes/",
-                                "code": "64999",
-                                "display": "64999 - Unlisted px nervous system"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "linkId": "2.2",
-                    "text": "Does the procedure require additional levels?",
-                    "type": "boolean",
-                    "required": false,
-                    "enableBehavior": "any",
-                    "enableWhen": [
-                        {
-                            "operator": "=",
-                            "question": "2.1",
-                            "answerCoding": {
-                                "system": "https://hcpcs.codes/",
-                                "code": "64490",
-                                "display": "64490 - Inj paravert f jnt c/t 1 lev"
-                            }
-                        },
-                        {
-                            "operator": "=",
-                            "question": "2.1",
-                            "answerCoding": {
-                                "system": "https://hcpcs.codes/",
-                                "code": "64493",
-                                "display": "64493 - Inj paravert f jnt l/s 1 lev"
-                            }
-                        },
-                        {
-                            "operator": "=",
-                            "question": "2.1",
-                            "answerCoding": {
-                                "system": "https://hcpcs.codes/",
-                                "code": "64633",
-                                "display": "64633 - Destroy cerv/thor facet jnt"
-                            }
-                        },
-                        {
-                            "operator": "=",
-                            "question": "2.1",
-                            "answerCoding": {
-                                "system": "https://hcpcs.codes/",
-                                "code": "64635",
-                                "display": "64635 - Destroy lumb/sac facet jnt"
-                            }
                         }
                     ]
                 },
                 {
                     "linkId": "2.2.1",
-                    "text": "What is/are the additional level HCPC code(s) for the requested procedure?",
+                    "text": "How many additional levels are being requested?",
                     "type": "choice",
                     "required": false,
-                    "repeats": true,
-                    "enableBehavior": "all",
                     "enableWhen": [
-                        {
-                          "operator": "=",
-                          "question": "2.2",
-                          "answerBoolean": true
-                        },
                         {
                             "operator": "=",
                             "question": "2.1",
@@ -217,33 +151,54 @@
                     "answerOption":[
                         {
                             "valueCoding": {
+                                "code": "None, Primary only",
+                                "display": "None, Primary only"
+                            }
+                        },
+                        {
+                            "valueCoding": {
                                 "system": "https://hcpcs.codes/",
                                 "code": "64491",
-                                "display": "64491 - Inj paravert f jnt c/t 2 lev"
+                                "display": "One additional level: 64491 - Inj paravert f jnt c/t 2 lev"
                             }
                         },
                         {
                             "valueCoding": {
                                 "system": "https://hcpcs.codes/",
                                 "code": "64492",
-                                "display": "64492 - Inj paravert f jnt c/t 3 lev"
+                                "display": "Two additional levels: 64492 - Inj paravert f jnt c/t 3 lev"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "Three additional levels",
+                                "display": "Three additional levels"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "2.2.1.1",
+                    "text": "Specify the additional level being requested:",
+                    "type": "text",
+                    "required": false,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "2.2.1",
+                            "answerCoding": {
+                                "code": "Three additional levels",
+                                "display": "Three additional levels"
                             }
                         }
                     ]
                 },
                 {
                     "linkId": "2.2.2",
-                    "text": "What is/are the additional level HCPC code(s) for the requested procedure?",
+                    "text": "How many additional levels are being requested?",
                     "type": "choice",
                     "required": false,
-                    "repeats": true,
-                    "enableBehavior": "all",
                     "enableWhen": [
-                        {
-                          "operator": "=",
-                          "question": "2.2",
-                          "answerBoolean": true
-                        },
                         {
                             "operator": "=",
                             "question": "2.1",
@@ -257,33 +212,54 @@
                     "answerOption":[
                         {
                             "valueCoding": {
+                                "code": "None, Primary only",
+                                "display": "None, Primary only"
+                            }
+                        },
+                        {
+                            "valueCoding": {
                                 "system": "https://hcpcs.codes/",
                                 "code": "64494",
-                                "display": "64493 - Inj paravert f jnt l/s 2 lev"
+                                "display": "One additional level: 64493 - Inj paravert f jnt l/s 2 lev"
                             }
                         },
                         {
                             "valueCoding": {
                                 "system": "https://hcpcs.codes/",
                                 "code": "64495",
-                                "display": "64495 - Inj paravert f jnt l/s 3 lev"
+                                "display": "Two additional levels: 64495 - Inj paravert f jnt l/s 3 lev"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "Three additional levels",
+                                "display": "Three additional levels"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "2.2.2.1",
+                    "text": "Specify the additional level being requested:",
+                    "type": "text",
+                    "required": false,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "2.2.2",
+                            "answerCoding": {
+                                "code": "Three additional levels",
+                                "display": "Three additional levels"
                             }
                         }
                     ]
                 },
                 {
                     "linkId": "2.2.3",
-                    "text": "What is/are the additional level HCPC code(s) for the requested procedure?",
+                    "text": "How many additional levels are being requested?",
                     "type": "choice",
                     "required": false,
-                    "repeats": true,
-                    "enableBehavior": "all",
                     "enableWhen": [
-                        {
-                          "operator": "=",
-                          "question": "2.2",
-                          "answerBoolean": true
-                        },
                         {
                             "operator": "=",
                             "question": "2.1",
@@ -297,9 +273,37 @@
                     "answerOption":[
                         {
                             "valueCoding": {
+                                "code": "None, Primary only",
+                                "display": "None, Primary only"
+                            }
+                        },
+                        {
+                            "valueCoding": {
                                 "system": "https://hcpcs.codes/",
                                 "code": "64634",
-                                "display": "64634 - Destroy c/th facet jnt addl"
+                                "display": "One additional level: 64634 - Destroy c/th facet jnt addl"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "Two additional levels",
+                                "display": "Two additional levels"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "2.2.3.1",
+                    "text": "Specify the additional level being requested:",
+                    "type": "text",
+                    "required": false,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "2.2.3",
+                            "answerCoding": {
+                                "code": "Two additional levels",
+                                "display": "Two additional levels"
                             }
                         }
                     ]
@@ -313,11 +317,6 @@
                     "enableBehavior": "all",
                     "enableWhen": [
                         {
-                          "operator": "=",
-                          "question": "2.2",
-                          "answerBoolean": true
-                        },
-                        {
                             "operator": "=",
                             "question": "2.1",
                             "answerCoding": {
@@ -330,102 +329,37 @@
                     "answerOption":[
                         {
                             "valueCoding": {
+                                "code": "None, Primary only",
+                                "display": "None, Primary only"
+                            }
+                        },
+                        {
+                            "valueCoding": {
                                 "system": "https://hcpcs.codes/",
                                 "code": "64636",
                                 "display": "64636 - Destroy l/s facet jnt addl"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "Two additional levels",
+                                "display": "Two additional levels"
                             }
                         }
                     ]
                 },
                 {
-                    "linkId": "2.3",
-                    "text": "Any additional levels being requested beyond what is covered in the general guidance for this procedure?",
-                    "type": "boolean",
+                    "linkId": "2.2.4.1",
+                    "text": "Specify the additional level being requested:",
+                    "type": "text",
                     "required": false,
-                    "enableBehavior": "any",
                     "enableWhen": [
-                        {
-                            "operator": "=",
-                            "question": "2.2.1",
-                            "answerCoding": {
-                                "system": "https://hcpcs.codes/",
-                                "code": "64491",
-                                "display": "64491 - Inj paravert f jnt c/t 2 lev"
-                            }
-                        },
-                        {
-                            "operator": "=",
-                            "question": "2.2.1",
-                            "answerCoding": {
-                                "system": "https://hcpcs.codes/",
-                                "code": "64492",
-                                "display": "64492 - Inj paravert f jnt c/t 3 lev"
-                            }
-                        },
-                        {
-                            "operator": "=",
-                            "question": "2.2.2",
-                            "answerCoding": {
-                                "system": "https://hcpcs.codes/",
-                                "code": "64494",
-                                "display": "64494 - Inj paravert f jnt l/s 2 lev"
-                            }
-                        },
-                        {
-                            "operator": "=",
-                            "question": "2.2.2",
-                            "answerCoding": {
-                                "system": "https://hcpcs.codes/",
-                                "code": "64495",
-                                "display": "64495 - Inj paravert f jnt l/s 3 lev"
-                            }
-                        },
-                        {
-                            "operator": "=",
-                            "question": "2.2.3",
-                            "answerCoding": {
-                                "system": "https://hcpcs.codes/",
-                                "code": "64634",
-                                "display": "64634 - Destroy c/th facet jnt addl"
-                            }
-                        },
                         {
                             "operator": "=",
                             "question": "2.2.4",
                             "answerCoding": {
-                                "system": "https://hcpcs.codes/",
-                                "code": "64636",
-                                "display": "64636 - Destroy l/s facet jnt addl"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "linkId": "2.4",
-                    "text": "Specify the additional HCPC codes being requested:",
-                    "type": "text",
-                    "required": false,
-                    "enableWhen": [
-                        {
-                          "operator": "=",
-                          "question": "2.3",
-                          "answerBoolean": true
-                        }
-                    ]
-                },
-                {
-                    "linkId": "2.5",
-                    "text": "Diagnostic imaging study confirms compression or displacement of the corresponding nerve root by a facet joint synovial cyst AND pt has documented clinical and physical symptoms related to synovial facet cyst:",
-                    "type": "text",
-                    "required": false,
-                    "enableWhen": [
-                        {
-                            "operator": "=",
-                            "question": "2.1",
-                            "answerCoding": {
-                                "system": "https://hcpcs.codes/",
-                                "code": "64999",
-                                "display": "64999 - Unlisted px nervous system"
+                                "code": "Two additional levels",
+                                "display": "Two additional levels"
                             }
                         }
                     ]
@@ -435,17 +369,6 @@
                     "text": "Is the intervention for diagnostic, therapeutic, facet cyst ruptures, or RFA?",
                     "type": "choice",
                     "required": false,
-                    "enableWhen": [
-                        {
-                            "operator": "=",
-                            "question": "2.1",
-                            "answerCoding": {
-                                "system": "https://hcpcs.codes/",
-                                "code": "64999",
-                                "display": "64999 - Unlisted px nervous system"
-                            }
-                        }
-                    ],
                     "answerOption":[
                         {
                             "valueCoding":{
@@ -532,22 +455,6 @@
                     ]
                 },
                 {
-                    "linkId": "2.9",
-                    "text": "If a therepeutic what is the medical condition that makes an RFA contradicted and cannot be performed?",
-                    "type": "text",
-                    "required": false,
-                    "enableWhen": [
-                        {
-                            "operator": "=",
-                            "question": "2.6",
-                            "answerCoding": {
-                                "code": "Therapeutic",
-                                "display": "Therapeutic"
-                            }
-                        }
-                    ]
-                },
-                {
                     "linkId": "2.10",
                     "text": "What were the qualifying intraarticular (IA) first injection and intraarticular (IA) second injection dates?",
                     "type": "group",
@@ -577,7 +484,7 @@
                     ]
                 },
                 {
-                    "linkId": "2.1",
+                    "linkId": "2.11",
                     "text": "If an RFA is being performed what were the qualifying MBB first injection and MBB second injection dates?",
                     "type": "group",
                     "enableWhen": [
@@ -607,41 +514,28 @@
                 },
                 {
                     "linkId": "2.12",
-                    "text": "Is the prior authorization request for one region/area of the spine?",
+                    "text": "Are there treatments such as anticoagulation interruption of therapy that would support consideration for additional levels?",
                     "type": "boolean",
                     "required": false
                 },
                 {
                     "linkId": "2.13",
-                    "text": "If answered no, and two different areas of the spine in one session is requested, specify the medical necessity as the request may receive a non affirmed decision.",
-                    "type": "text",
-                    "required": false,
-                    "enableWhen":[
-                        {
-                            "operator": "=",
-                            "question": "2.12",
-                            "answerBoolean": false 
-                        }
-                    ]
+                    "text": "Is general anesthesia, moderate sedation, or monitored anesthesia care going to be used?",
+                    "type": "boolean",
+                    "required": false
                 },
                 {
                     "linkId": "2.14",
-                    "text": "What is the additional documentation to support the medical necessity of two different areas?",
-                    "type": "text",
+                    "text": "What is the specific condition or symptoms that make sedation medically necessary?  Select all that are well documented.",
+                    "type": "choice",
                     "required": false,
                     "enableWhen":[
                         {
                             "operator": "=",
-                            "question": "2.12",
-                            "answerBoolean": false 
+                            "question": "2.13",
+                            "answerBoolean": true
                         }
-                    ]
-                },
-                {
-                    "linkId": "2.15",
-                    "text": "Is general anesthesia, conscious sedation, or monitored anesthesia care going to be used?",
-                    "type": "choice",
-                    "required": false,
+                    ],
                     "answerOption":[
                         {
                             "valueCoding":{
@@ -682,18 +576,31 @@
                     ]
                 },
                 {
-                    "linkId": "2.16",
+                    "linkId": "2.15",
                     "text": "Specify other",
                     "type": "text",
                     "required": false,
                     "enableWhen":[
                         {
                             "operator": "=",
-                            "question": "2.15",
+                            "question": "2.14",
                             "answerCoding": {
                                 "code": "Other",
                                 "display": "Other"
                             } 
+                        }
+                    ]
+                },
+                {
+                    "linkId": "2.16",
+                    "text": "If the requested intervention will not meet the medical necessity criteria for anesthesia/sedation, was an advance beneficiary notice of non-coverage (ABN) given to the patient?",
+                    "type": "boolean",
+                    "required": false,
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "2.13",
+                            "answerBoolean": false
                         }
                     ]
                 },
@@ -765,12 +672,6 @@
                                 "code": "Anti-inflammatory",
                                 "display": "Anti-inflammatory"
                             }
-                        },
-                        {
-                            "valueCoding":{
-                                "code": "Neurolytic",
-                                "display": "Neurolytic"
-                            }
                         }
                     ]
                 },
@@ -797,7 +698,7 @@
         },
         {
             "linkId": "3",
-            "text": "Diagnosis(es) &  Hx of Relevant Procedures",
+            "text": "Diagnosis(es) and  Hx of Relevant Procedures",
             "type": "group",
             "item":[
                 {
@@ -912,18 +813,6 @@
                             "valueCoding":{
                                 "code": "M48.17",
                                 "display": "Ankylosing hyperostosis [Forestier], lumbosacral region"
-                            }
-                        },
-                        {
-                            "valueCoding":{
-                                "code": "M71.30",
-                                "display": "Other bursal cyst, unspecified site"
-                            }
-                        },
-                        {
-                            "valueCoding":{
-                                "code": "M71.38",
-                                "display": "Other bursal cyst, other site"
                             }
                         }
                     ]
@@ -1045,18 +934,6 @@
                         },
                         {
                             "valueCoding":{
-                                "code": "M71.30",
-                                "display": "Other bursal cyst, unspecified site"
-                            }
-                        },
-                        {
-                            "valueCoding":{
-                                "code": "M71.38",
-                                "display": "Other bursal cyst, other site"
-                            }
-                        },
-                        {
-                            "valueCoding":{
                                 "code":"Other",
                                 "display":"Other"
                             }
@@ -1081,7 +958,7 @@
                 },
                 {
                     "linkId": "3.3",
-                    "text": "Diagnosis(es) that explain anatomic restrictions and why an MBB cannot be performed.",
+                    "text": "For the requested therapeutic intra-articular [IA] injection(s), select the Diagnosis(es) that explain anatomic restrictions and why an MBB cannot be performed.",
                     "type": "choice",
                     "repeats": true,
                     "required": true,
@@ -1225,7 +1102,7 @@
                 },
                 {
                     "linkId": "4.2",
-                    "text": "Pain initial date of onset. Encounter date when the identified pain was first evaluated and documented.",
+                    "text": "Is there an initial pain onset encounter date PRIOR to the identified chronic pain baseline encounter, supporting the progression of chronic pain being identified, evaluated, and documented.",
                     "type": "date",
                     "required": false
                 },
@@ -1812,7 +1689,7 @@
                 },
                 {
                     "linkId": "4.7",
-                    "text": "The baseline encounter date.  The date the provider performed the required baseline evaluation for pain that has now been present for three months or greater and not responding to conservative pain management measures.",
+                    "text": "The baseline encounter date. The date the provider performed the required baseline evaluation for pain that has now been present for three months or greater and not responding to conservative pain management measures.",
                     "type": "date",
                     "required": false
                 },
@@ -2519,6 +2396,28 @@
                                 "code": "D000928",
                                 "display": "Antidepressants"
                             }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "Other",
+                                "display": "Other"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.15.1",
+                    "text": "Specify other:",
+                    "type": "text",
+                    "required": false,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "4.15",
+                            "answerCoding": {
+                                "code": "Other",
+                                "display": "Other"
+                            }
                         }
                     ]
                 },
@@ -2566,29 +2465,51 @@
                     "type": "choice",
                     "required": false,
                     "repeats": true,
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "4.8",
+                            "answerCoding":{
+                                "code": "Chronic low axial back pain greater than three months duration.",
+                                "display": "Chronic low axial back pain greater than three months duration."
+                            }
+                        }
+                    ],
                     "answerOption": [
                         {
                             "valueCoding": {
-                                "code": "183051005",
-                                "display": "Recommendation to rest"
+                                "code": "182660006-266694003",
+                                "display": "Cold Therapy or Heat Therapy"
                             }
-                        },
-                        {
-                            "valueCoding": {
-                                "code": "182660006",
-                                "display": "Cold Therapy"
-                            }
-                        },
-                        {
-                            "valueCoding": {
-                                "code": "266694003",
-                                "display": "Heat Therapy"
-                            }
-                        },
+                        }, 
                         {
                             "valueCoding": {
                                 "code": "C26387",
                                 "display": "Exercise(s) for pain management"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "Physical Therapy",
+                                "display": "Physical Therapy"
+                            }
+                        }, 
+                        {
+                            "valueCoding": {
+                                "code": "Acupuncture",
+                                "display": "Acupuncture"
+                            }
+                        }, 
+                        {
+                            "valueCoding": {
+                                "code": "Spinal manipulation",
+                                "display": "Spinal manipulation"
+                            }
+                        }, 
+                        {
+                            "valueCoding": {
+                                "code": "Application of biopsychosocial treatment techniques",
+                                "display": "Application of biopsychosocial treatment techniques"
                             }
                         },
                         {
@@ -2607,61 +2528,87 @@
                 },
                 {
                     "linkId": "4.18",
-                    "text": "Specify other:",
-                    "type": "text",
+                    "text": "Past non-parmacologic treatments attempted and failed to manage pain. Select all that apply.",
+                    "type": "choice",
                     "required": false,
-                    "enableWhen": [
+                    "repeats": true,
+                    "enableWhen":[
                         {
                             "operator": "=",
-                            "question": "4.17",
-                            "answerCoding": {
-                                "code": "183051005",
-                                "display": "Recommendation to rest"
+                            "question": "4.8",
+                            "answerCoding":{
+                                "code": "Chronic neck pain greater than three months duration.",
+                                "display": "Chronic neck pain greater than three months duration."
+                            }
+                        }
+                    ],
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "code": "182660006-266694003",
+                                "display": "Cold Therapy or Heat Therapy"
+                            }
+                        }, 
+                        {
+                            "valueCoding": {
+                                "code": "C26387",
+                                "display": "Exercise(s) for pain management"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "Acupuncture",
+                                "display": "Acupuncture"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "Application of biopsychosocial treatment techniques",
+                                "display": "Application of biopsychosocial treatment techniques"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "Diet",
+                                "display": "Diet"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "Other",
+                                "display": "Other"
                             }
                         }
                     ]
                 },
                 {
                     "linkId": "4.19",
-                    "text": "Response to Physical Therapy",
-                    "type": "choice",
+                    "text": "Specify other:",
+                    "type": "text",
                     "required": false,
-                    "answerOption": [
+                    "enableBehavior":"any",
+                    "enableWhen": [
                         {
-                            "valueCoding": {
-                                "code": "84190002",
-                                "display": "Poor/minimal"
+                            "operator": "=",
+                            "question": "4.17",
+                            "answerCoding": {
+                                "code": "Other",
+                                "display": "Other"
                             }
                         },
                         {
-                            "valueCoding": {
-                                "code": "21768001",
-                                "display": "Fair response"
-                            }
-                        },
-                        {
-                            "valueCoding": {
-                                "code": "78469002",
-                                "display": "Good response"
-                            }
-                        },
-                        {
-                            "valueCoding": {
-                                "code": "63432002",
-                                "display": "Excellent"
-                            }
-                        },
-                        {
-                            "valueCoding": {
-                                "code": "399056007",
-                                "display": "Complete"
+                            "operator": "=",
+                            "question": "4.18",
+                            "answerCoding": {
+                                "code": "Other",
+                                "display": "Other"
                             }
                         }
                     ]
                 },
                 {
                     "linkId": "4.20",
-                    "text": "Response to Acupuncture",
+                    "text": "Patient's therapeutic response:",
                     "type": "choice",
                     "required": false,
                     "answerOption": [
@@ -2718,6 +2665,12 @@
                     "answerOption":[
                         {
                             "valueCoding":{
+                                "code": "N/A initial request",
+                                "display": "N/A initial request"
+                            }
+                        },
+                        {
+                            "valueCoding":{
                                 "code": "1st diagnostic injection follow up",
                                 "display": "1st diagnostic injection follow up"
                             }
@@ -2736,8 +2689,8 @@
                         },
                         {
                             "valueCoding":{
-                                "code": "Repeat/second RFA intervention follow up",
-                                "display": "Repeat/second RFA intervention follow up"
+                                "code": "Second/subsequent RFA intervention follow up",
+                                "display": "Second/subsequent RFA intervention follow up"
                             }
                         },
                         {
@@ -2804,7 +2757,7 @@
                 },
                 {
                     "linkId": "5.3.4",
-                    "text": "What is the date of the  repeat/second RFA intervention pain follow up?",
+                    "text": "What is the date of the Second/subsequent RFA intervention follow up?",
                     "type": "date",
                     "required": false,
                     "enableWhen": [
@@ -2812,8 +2765,8 @@
                             "operator": "=",
                             "question": "5.2",
                             "answerCoding": {
-                                "code": "Repeat/second RFA intervention follow up",
-                                "display": "Repeat/second RFA intervention follow up"
+                                "code": "Second/subsequent RFA intervention follow up",
+                                "display": "Second/subsequent RFA intervention follow up"
                             }
                         }
                     ]
@@ -2908,8 +2861,8 @@
                             "operator": "=",
                             "question": "5.2",
                             "answerCoding": {
-                                "code": "Repeat/second RFA intervention follow up",
-                                "display": "Repeat/second RFA intervention follow up"
+                                "code": "Second/subsequent RFA intervention follow up",
+                                "display": "Second/subsequent RFA intervention follow up"
                             }
                         }
                     ]
@@ -3464,13 +3417,13 @@
             "item": [
                 {
                     "linkId": "6.1",
-                    "text": "The History & Physical note that supports the procedure:",
+                    "text": "The History and Physical note that supports the procedure:",
                     "type": "display",
                     "required": true
                 },
                 {
                     "linkId": "6.2",
-                    "text": "Date of the H&P:",
+                    "text": "Date of the History and Physical:",
                     "type": "date",
                     "required": false
                 },
