@@ -1,0 +1,39 @@
+{
+  "resourceType": "ValueSet",
+  "id": "2.16.840.1.113883.3.6037.1001.23.95.5",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2020-10-01T08:41:06.000+00:00",
+    "source": "#HtE7LOmNqcNm0xig"
+  },
+  "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.95.5",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "2.16.840.1.113883.3.6037.1001.23.95.5"
+    }
+  ],
+  "version": "Latest",
+  "name": "Venous Stripping",
+  "title": "Venous Stripping",
+  "status": "active",
+  "publisher": "Mettles",
+  "compose": {
+    "include": [
+      {
+        "system": "https://www.aapc.com/resources/medical-coding/cpt.aspx",
+        "version": "2020-07",
+        "concept": [
+          {
+            "code": "37720",
+            "display": "Ligation and division and complete stripping of long or short saphenous veins"
+          },
+          {
+            "code": "37730",
+            "display": "ligation and division and complete stripping, long and short saphenous veins"
+          }
+        ]
+      }
+    ]
+  }
+}

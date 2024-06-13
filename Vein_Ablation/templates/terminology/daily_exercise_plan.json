@@ -1,0 +1,35 @@
+{
+  "resourceType": "ValueSet",
+  "id": "2.16.840.1.113883.3.6037.1001.23.99.87",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2020-09-30T09:44:47.000+00:00",
+    "source": "#tlRCIKf0V2ZH4UPv"
+  },
+  "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.99.87",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "2.16.840.1.113883.3.6037.1001.23.99.87"
+    }
+  ],
+  "version": "Latest",
+  "name": "Daily exercise plan",
+  "title": "Daily exercise plan",
+  "status": "active",
+  "publisher": "Mettles",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "2020-07",
+        "concept": [
+          {
+            "code": "410289001",
+            "display": "Exercises education, guidance, and counseling (procedure)"
+          }
+        ]
+      }
+    ]
+  }
+}

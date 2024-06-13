@@ -1,0 +1,35 @@
+{
+  "resourceType": "ValueSet",
+  "id": "2.16.840.1.113883.3.6037.1001.23.95.14",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2020-10-01T05:25:35.000+00:00",
+    "source": "#FcymCXbbXGYw2AQb"
+  },
+  "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.95.14",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "2.16.840.1.113883.3.6037.1001.23.95.14"
+    }
+  ],
+  "version": "Latest",
+  "name": "Klippel-Trenaunay Syndrome",
+  "title": "Klippel-Trenaunay Syndrome",
+  "status": "active",
+  "publisher": "Mettles",
+  "compose": {
+    "include": [
+      {
+        "system": "https://www.aapc.com/resources/medical-coding/cpt.aspx",
+        "version": "2020-07",
+        "concept": [
+          {
+            "code": "Q87.2",
+            "display": "Klippel-Trenaunay Syndrome"
+          }
+        ]
+      }
+    ]
+  }
+}

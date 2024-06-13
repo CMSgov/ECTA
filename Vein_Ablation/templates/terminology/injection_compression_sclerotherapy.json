@@ -1,0 +1,51 @@
+{
+  "resourceType": "ValueSet",
+  "id": "2.16.840.1.113883.3.6037.1001.23.95.9",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2020-10-01T08:46:52.000+00:00",
+    "source": "#yII7xWulA6WLUkll"
+  },
+  "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.95.9",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "2.16.840.1.113883.3.6037.1001.23.95.9"
+    }
+  ],
+  "version": "Latest",
+  "name": "Injection/Compression Sclerotherapy",
+  "title": "Injection/Compression Sclerotherapy",
+  "status": "active",
+  "publisher": "Mettles",
+  "compose": {
+    "include": [
+      {
+        "system": "https://www.aapc.com/resources/medical-coding/cpt.aspx",
+        "version": "2020-07",
+        "concept": [
+          {
+            "code": "36465",
+            "display": "Injection Of Non-compounded Foam Sclerosant With Ultrasound Compression Maneuvers To Guide Dispersion Of The Injectate, Inclusive Of All Imaging Guidance And Monitoring; Single Incompetent Extremity Truncal Vein (Eg, Great Saphenous Vein, Accessory Saphenous Vein)"
+          },
+          {
+            "code": "36466",
+            "display": "Injection Of Non-compounded Foam Sclerosant With Ultrasound Compression Maneuvers To Guide Dispersion Of The Injectate, Inclusive Of All Imaging Guidance And Monitoring; Multiple Incompetent Truncal Veins (Eg, Great Saphenous Vein, Accessory Saphenous Vein), Same Leg"
+          },
+          {
+            "code": "36468",
+            "display": "Single or multiple injections of sclerosing solutions, spider veins (telangiectasia), limb or trunk"
+          },
+          {
+            "code": "36470",
+            "display": "Injection Of Sclerosant; Single Incompetent Vein (Other Than Telangiectasia)"
+          },
+          {
+            "code": "36471",
+            "display": "Injection Of Sclerosant; Multiple Incompetent Veins (Other Than Telangiectasia), Same Leg"
+          }
+        ]
+      }
+    ]
+  }
+}

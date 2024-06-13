@@ -1,0 +1,39 @@
+{
+  "resourceType": "ValueSet",
+  "id": "2.16.840.1.113883.3.6037.1001.23.95.12",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2020-10-01T05:12:38.000+00:00",
+    "source": "#YwYzFEogtaYdWaJH"
+  },
+  "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.95.12",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "2.16.840.1.113883.3.6037.1001.23.95.12"
+    }
+  ],
+  "version": "Latest",
+  "name": "Laser ablation of veins",
+  "title": "Laser ablation of veins",
+  "status": "active",
+  "publisher": "Mettles",
+  "compose": {
+    "include": [
+      {
+        "system": "https://www.aapc.com/resources/medical-coding/cpt.aspx",
+        "version": "2020-07",
+        "concept": [
+          {
+            "code": "36478",
+            "display": "Endovenous Ablation Therapy Of Incompetent Vein, Extremity, Inclusive Of All Imaging Guidance And Monitoring, Percutaneous, Laser; First Vein Treated"
+          },
+          {
+            "code": "36479",
+            "display": "Endovenous Ablation Therapy Of Incompetent Vein, Extremity, Inclusive Of All Imaging Guidance And Monitoring, Percutaneous, Laser; Subsequent Vein(S) Treated In A Single Extremity, Each Through Separate Access Sites (List Separately In Addition To Code For Primary Procedure)"
+          }
+        ]
+      }
+    ]
+  }
+}

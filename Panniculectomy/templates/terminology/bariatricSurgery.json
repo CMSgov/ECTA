@@ -1,0 +1,63 @@
+{
+  "resourceType": "ValueSet",
+  "id": "2.16.840.1.113883.3.6037.1001.23.99.83",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2020-09-21T07:10:55.000+00:00",
+    "source": "#oyOuZ90cYPv4m0JK"
+  },
+  "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.99.83",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "2.16.840.1.113883.3.6037.1001.23.99.83"
+    }
+  ],
+  "version": "Latest",
+  "name": "BariatricSurgery",
+  "title": "BariatricSurgery",
+  "status": "active",
+  "publisher": "Mettles",
+  "compose": {
+    "include": [
+      {
+        "system": "https://www.aapc.com/resources/medical-coding/cpt.aspx",
+        "version": "2020-07",
+        "concept": [
+          {
+            "code": "43644",
+            "display": "Laparoscopy, surgical, gastric restrictive procedure; with gastric bypass and Rouxen-Y gastroenterostomy (roux limb 150 cm or less)"
+          },
+          {
+            "code": "43645",
+            "display": "Laparoscopy, surgical, gastric restrictive procedure; with gastric bypass and small intestine reconstruction to limit absorption"
+          },
+          {
+            "code": "43770",
+            "display": "Laparoscopy, surgical, gastric restrictive procedure; placement of adjustable gastric restrictive device (e.g., gastric band and subcutaneous port components)"
+          },
+          {
+            "code": "43771",
+            "display": "Laparoscopy, surgical, gastric restrictive procedure; revision of adjustable gastric restrictive device component only"
+          },
+          {
+            "code": "43772",
+            "display": "Laparoscopy, surgical, gastric restrictive procedure; removal of adjustable gastric restrictive device component only"
+          },
+          {
+            "code": "43773",
+            "display": "Laparoscopy, surgical, gastric restrictive procedure; removal and replacement of adjustable gastric restrictive device component only"
+          },
+          {
+            "code": "43774",
+            "display": "Laparoscopy, surgical, gastric restrictive procedure; removal of adjustable gastric restrictive device and subcutaneous port components"
+          },
+          {
+            "code": "43775",
+            "display": "Laparoscopy, surgical, gastric restrictive procedure; longitudinal gastrectomy (ie, sleeve gastrectomy)"
+          }
+        ]
+      }
+    ]
+  }
+}

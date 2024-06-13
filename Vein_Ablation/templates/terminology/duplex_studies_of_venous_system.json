@@ -1,0 +1,47 @@
+{
+  "resourceType": "ValueSet",
+  "id": "2.16.840.1.113883.3.6037.1001.23.95.2",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2020-10-01T08:39:03.000+00:00",
+    "source": "#FQlO2VHpob8Dxmmw"
+  },
+  "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.95.2",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "2.16.840.1.113883.3.6037.1001.23.95.2"
+    }
+  ],
+  "version": "Latest",
+  "name": "Duplex studies of venous system",
+  "title": "Duplex studies of venous system",
+  "status": "active",
+  "publisher": "Mettles",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "2020-07",
+        "concept": [
+          {
+            "code": "312727008",
+            "display": "Duplex scan veins of upper limb (procedure)"
+          },
+          {
+            "code": "312725000",
+            "display": "Duplex scan of lower limb veins (procedure)"
+          },
+          {
+            "code": "312724001",
+            "display": "Duplex scan of lower limb arteries (procedure)"
+          },
+          {
+            "code": "312726004",
+            "display": "Duplex scan of upper limb arteries (procedure)"
+          }
+        ]
+      }
+    ]
+  }
+}

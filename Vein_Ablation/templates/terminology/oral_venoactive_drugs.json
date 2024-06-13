@@ -1,0 +1,87 @@
+{
+  "resourceType": "ValueSet",
+  "id": "2.16.840.1.113883.3.6037.1001.23.99.85",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2020-09-30T07:21:14.000+00:00",
+    "source": "#DjmvRZhMtpLoIkkP"
+  },
+  "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.99.85",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "2.16.840.1.113883.3.6037.1001.23.99.85"
+    }
+  ],
+  "version": "Latest",
+  "name": "Oral venoactive drugs",
+  "title": "Oral venoactive drugs",
+  "status": "active",
+  "publisher": "Mettles",
+  "compose": {
+    "include": [
+      {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "version": "2020-07",
+        "concept": [
+          {
+            "code": "1006971",
+            "display": "coumarin / rutin"
+          },
+          {
+            "code": "1008177",
+            "display": "coumarin / troxerutin"
+          },
+          {
+            "code": "2898",
+            "display": "coumarin"
+          },
+          {
+            "code": "67187",
+            "display": "oxerutins"
+          },
+          {
+            "code": "1006955",
+            "display": "rutin / vincamine"
+          },
+          {
+            "code": "236445",
+            "display": "rutin sodium sulfate"
+          },
+          {
+            "code": "236537",
+            "display": "rutin sodium propylsulfonate"
+          },
+          {
+            "code": "9500",
+            "display": "rutin"
+          },
+          {
+            "code": "1009064",
+            "display": "diosmin / hesperidin"
+          },
+          {
+            "code": "3489",
+            "display": "diosmin"
+          },
+          {
+            "code": "1309509",
+            "display": "Ruscus aculeatus root extract"
+          },
+          {
+            "code": "1007876",
+            "display": "escin / nylidrin"
+          },
+          {
+            "code": "4065",
+            "display": "escin"
+          },
+          {
+            "code": "1368708",
+            "display": "maritime pine extract"
+          }
+        ]
+      }
+    ]
+  }
+}

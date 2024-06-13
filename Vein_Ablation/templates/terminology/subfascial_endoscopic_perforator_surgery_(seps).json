@@ -1,0 +1,35 @@
+{
+  "resourceType": "ValueSet",
+  "id": "2.16.840.1.113883.3.6037.1001.23.95.11",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2020-10-01T05:09:22.000+00:00",
+    "source": "#az1ygcb0AjFFwCRg"
+  },
+  "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.95.11",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "2.16.840.1.113883.3.6037.1001.23.95.11"
+    }
+  ],
+  "version": "Latest",
+  "name": "Subfascial Endoscopic Perforator Surgery (SEPS)",
+  "title": "Subfascial Endoscopic Perforator Surgery (SEPS)",
+  "status": "active",
+  "publisher": "Mettles",
+  "compose": {
+    "include": [
+      {
+        "system": "https://www.aapc.com/resources/medical-coding/cpt.aspx",
+        "version": "2020-07",
+        "concept": [
+          {
+            "code": "37500",
+            "display": "Vascular Endoscopy Procedures"
+          }
+        ]
+      }
+    ]
+  }
+}

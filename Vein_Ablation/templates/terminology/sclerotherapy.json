@@ -1,0 +1,39 @@
+{
+  "resourceType": "ValueSet",
+  "id": "2.16.840.1.113883.3.6037.1001.23.95.3",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2020-10-01T08:39:36.000+00:00",
+    "source": "#4x6i0YAwLujIgksM"
+  },
+  "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.95.3",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "2.16.840.1.113883.3.6037.1001.23.95.3"
+    }
+  ],
+  "version": "Latest",
+  "name": "Sclerotherapy",
+  "title": "Sclerotherapy",
+  "status": "active",
+  "publisher": "Mettles",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "2020-07",
+        "concept": [
+          {
+            "code": "233461005",
+            "display": "Sclerotherapy of venous flares (procedure)"
+          },
+          {
+            "code": "723192001",
+            "display": "Sclerotherapy of vascular malformation of orbit using fluoroscopic guidance (procedure)"
+          }
+        ]
+      }
+    ]
+  }
+}

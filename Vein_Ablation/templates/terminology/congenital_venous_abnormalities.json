@@ -1,0 +1,35 @@
+{
+  "resourceType": "ValueSet",
+  "id": "2.16.840.1.113883.3.6037.1001.23.95.15",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2020-10-01T05:36:17.000+00:00",
+    "source": "#uKj6vP8u0XIhFWAE"
+  },
+  "url": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.95.15",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "2.16.840.1.113883.3.6037.1001.23.95.15"
+    }
+  ],
+  "version": "Latest",
+  "name": "Congenital venous abnormalities",
+  "title": "Congenital venous abnormalities",
+  "status": "active",
+  "publisher": "Mettles",
+  "compose": {
+    "include": [
+      {
+        "system": "https://www.aapc.com/resources/medical-coding/cpt.aspx",
+        "version": "2020-07",
+        "concept": [
+          {
+            "code": "Q26.9",
+            "display": "Congenital malformation of great vein, unspecified"
+          }
+        ]
+      }
+    ]
+  }
+}
