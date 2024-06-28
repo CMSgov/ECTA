@@ -118,14 +118,17 @@
           "text": "Has the patient been on the support surface immediately prior to discharge from a hospital or nursing facility?",
           "type": "boolean",
           "required": true,
+          "enableBehavior": "any",
           "enableWhen": [
             {
               "question": "1.5",
-              "operator": "exists"
+              "operator": "exists",
+              "answerBoolean": true
             },
             {
               "question": "1.6",
-              "operator": "exists"
+              "operator": "exists",
+              "answerBoolean": true
             }
           ]
         }
@@ -329,17 +332,20 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "Initial"
+                "code": "Initial",
+                "display": "Initial"
               }
             },
             {
               "valueCoding": {
-                "code": "Resubmission review"
+                "code": "Resubmission review",
+                "display": "Resubmission review"
               }
             },
             {
               "valueCoding": {
-                "code": "Expedite this request"
+                "code": "Expedite this request",
+                "display": "Expedite this request"
               }
             }
           ]
@@ -359,10 +365,11 @@
           "type": "text",
           "enableWhen": [
             {
-              "question": "4.7",
+              "question": "4.3",
               "operator": "=",
               "answerCoding": {
-                "code": "Expedite this request"
+                "code": "Expedite this request",
+                "display": "Expedite this request"
               }
             }
           ],

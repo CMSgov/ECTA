@@ -159,20 +159,20 @@
                             "valueCoding": {
                                 "system": "https://hcpcs.codes/",
                                 "code": "64491",
-                                "display": "One additional level: 64491 - Inj paravert f jnt c/t 2 lev"
+                                "display": "One additional level: 64491 - Inj paravert f jnt c/t 2 lev. (Primary level and a second level.)"
                             }
                         },
                         {
                             "valueCoding": {
                                 "system": "https://hcpcs.codes/",
                                 "code": "64492",
-                                "display": "Two additional levels: 64492 - Inj paravert f jnt c/t 3 lev"
+                                "display": "Two additional levels: 64492 - Inj paravert f jnt c/t 3 lev. (Primary level, second level and a third level.)  Provider education:  Three or four levels is not medically necessary and not covered."
                             }
                         },
                         {
                             "valueCoding": {
-                                "code": "Three additional levels",
-                                "display": "Three additional levels"
+                                "code": "Three additional levels. (Primary level, second level, third level and a fourth level.)  Provider education:  Three or four levels is not medically necessary and not covered.",
+                                "display": "Three additional levels. (Primary level, second level, third level and a fourth level.)  Provider education:  Three or four levels is not medically necessary and not covered."
                             }
                         }
                     ]
@@ -187,8 +187,8 @@
                             "operator": "=",
                             "question": "2.2.1",
                             "answerCoding": {
-                                "code": "Three additional levels",
-                                "display": "Three additional levels"
+                                "code": "Three additional levels. (Primary level, second level, third level and a fourth level.)  Provider education:  Three or four levels is not medically necessary and not covered.",
+                                "display": "Three additional levels. (Primary level, second level, third level and a fourth level.)  Provider education:  Three or four levels is not medically necessary and not covered."
                             }
                         }
                     ]
@@ -220,20 +220,20 @@
                             "valueCoding": {
                                 "system": "https://hcpcs.codes/",
                                 "code": "64494",
-                                "display": "One additional level: 64493 - Inj paravert f jnt l/s 2 lev"
+                                "display": "One additional level: 64493 - Inj paravert f jnt l/s 2 lev. (Primary level and a second level.)"
                             }
                         },
                         {
                             "valueCoding": {
                                 "system": "https://hcpcs.codes/",
                                 "code": "64495",
-                                "display": "Two additional levels: 64495 - Inj paravert f jnt l/s 3 lev"
+                                "display": "Two additional levels: 64495 - Inj paravert f jnt l/s 3 lev. (Primary level, second level and a third level.)  Provider education:  Three or four levels is not medically necessary and not covered."
                             }
                         },
                         {
                             "valueCoding": {
-                                "code": "Three additional levels",
-                                "display": "Three additional levels"
+                                "code": "Three additional levels. (Primary level, second level, third level and a fourth level.)  Provider education:  Three or four levels is not medically necessary and not covered.",
+                                "display": "Three additional levels. (Primary level, second level, third level and a fourth level.)  Provider education:  Three or four levels is not medically necessary and not covered."
                             }
                         }
                     ]
@@ -248,8 +248,8 @@
                             "operator": "=",
                             "question": "2.2.2",
                             "answerCoding": {
-                                "code": "Three additional levels",
-                                "display": "Three additional levels"
+                                "code": "Three additional levels. (Primary level, second level, third level and a fourth level.)  Provider education:  Three or four levels is not medically necessary and not covered.",
+                                "display": "Three additional levels. (Primary level, second level, third level and a fourth level.)  Provider education:  Three or four levels is not medically necessary and not covered."
                             }
                         }
                     ]
@@ -281,13 +281,13 @@
                             "valueCoding": {
                                 "system": "https://hcpcs.codes/",
                                 "code": "64634",
-                                "display": "One additional level: 64634 - Destroy c/th facet jnt addl"
+                                "display": "One additional level: 64634 - Destroy c/th facet jnt addl. (Primary level and a second level.)"
                             }
                         },
                         {
                             "valueCoding": {
-                                "code": "Two additional levels",
-                                "display": "Two additional levels"
+                                "code": "Two additional levels. (Primary level, second level and a third level.)  Provider education:  Three or four levels is not medically necessary and not covered.",
+                                "display": "Two additional levels. (Primary level, second level, and a third level.)  Provider education:  Three or four levels is not medically necessary and not covered."
                             }
                         }
                     ]
@@ -302,8 +302,8 @@
                             "operator": "=",
                             "question": "2.2.3",
                             "answerCoding": {
-                                "code": "Two additional levels",
-                                "display": "Two additional levels"
+                                "code": "Two additional levels. (Primary level, second level and a third level.)  Provider education:  Three or four levels is not medically necessary and not covered.",
+                                "display": "Two additional levels. (Primary level, second level and a third level.)  Provider education:  Three or four levels is not medically necessary and not covered."
                             }
                         }
                     ]
@@ -337,13 +337,13 @@
                             "valueCoding": {
                                 "system": "https://hcpcs.codes/",
                                 "code": "64636",
-                                "display": "64636 - Destroy l/s facet jnt addl"
+                                "display": "64636 - Destroy l/s facet jnt addl. (Primary level and a second level.)"
                             }
                         },
                         {
                             "valueCoding": {
-                                "code": "Two additional levels",
-                                "display": "Two additional levels"
+                                "code": "Two additional levels. (Primary level, second level and a third level.)  Provider education:  Three or four levels is not medically necessary and not covered.",
+                                "display": "Two additional levels. (Primary level, second level and a third level.)  Provider education:  Three or four levels is not medically necessary and not covered."
                             }
                         }
                     ]
@@ -358,8 +358,8 @@
                             "operator": "=",
                             "question": "2.2.4",
                             "answerCoding": {
-                                "code": "Two additional levels",
-                                "display": "Two additional levels"
+                                "code": "Two additional levels. (Primary level, second level and a third level.)  Provider education:  Three or four levels is not medically necessary and not covered.",
+                                "display": "Two additional levels. (Primary level, second level and a third level.)  Provider education:  Three or four levels is not medically necessary and not covered."
                             }
                         }
                     ]
@@ -384,8 +384,8 @@
                         },
                         {
                             "valueCoding":{
-                                "code": "Facet Cyst Ruptures",
-                                "display": "Facet Cyst Ruptures"
+                                "code": "Facet Cyst Rupture",
+                                "display": "Facet Cyst Rupture"
                             }
                         },
                         {
@@ -439,6 +439,38 @@
                     ]
                 },
                 {
+                    "linkId": "2.7.1",
+                    "text": "What were the qualifying first and second injection dates?",
+                    "type": "group",
+                    "enableBehavior": "any",
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "2.7",
+                            "answerCoding": {
+                                "code": "Intraarticular (IA): second injection.",
+                                "display": "Intraarticular (IA): second injection."
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "2.7",
+                            "answerCoding": {
+                                "code": "Medial branch block (MBB) second injection.",
+                                "display": "Medial branch block (MBB) second injection."
+                            }
+                        }
+                    ], 
+                    "item":[
+                        {
+                            "linkId": "2.7.1.1",
+                            "text": "First injection date:",
+                            "type": "date",
+                            "required": false
+                        }
+                    ]
+                },
+                {
                     "linkId": "2.8",
                     "text": "Procedure reports validate that if prior auth approved, the patient will/has received no more than four (4) therapeutic facet joint (IA) in the current rolling 12 months, including the one being requested?",
                     "type": "boolean",
@@ -456,7 +488,7 @@
                 },
                 {
                     "linkId": "2.10",
-                    "text": "What were the qualifying intraarticular (IA) first injection and intraarticular (IA) second injection dates?",
+                    "text": "What were the qualifying first and second injection dates?",
                     "type": "group",
                     "enableWhen": [
                         {
@@ -471,13 +503,13 @@
                     "item":[
                         {
                             "linkId": "2.10.1",
-                            "text": "Intraarticular (IA) first injection date:",
+                            "text": "First injection date:",
                             "type": "date",
                             "required": false
                         },
                         {
                             "linkId": "2.10.2",
-                            "text": "Intraarticular (IA) second injection date:",
+                            "text": "Second injection date:",
                             "type": "date",
                             "required": false
                         }
@@ -528,6 +560,7 @@
                     "linkId": "2.14",
                     "text": "What is the specific condition or symptoms that make sedation medically necessary?  Select all that are well documented.",
                     "type": "choice",
+                    "repeats": true,
                     "required": false,
                     "enableWhen":[
                         {
@@ -606,7 +639,7 @@
                 },
                 {
                     "linkId": "2.17",
-                    "text": "Expedited request documentation?",
+                    "text": "Is this request an expedited request?",
                     "type": "boolean",
                     "required": false
                 },
@@ -625,14 +658,14 @@
                 },
                 {
                     "linkId": "2.19",
-                    "text": "What is the date for the requested procedure to be performed?",
+                    "text": "What is the date for the requested expedited procedure to be performed?",
                     "type": "date",
                     "required": false,
                     "enableWhen":[
                         {
                             "operator": "=",
                             "question": "2.17",
-                            "answerBoolean": false
+                            "answerBoolean": true
                         }
                     ]
                 },
@@ -657,12 +690,6 @@
                         },
                         {
                             "valueCoding":{
-                                "code": "Anesthetic",
-                                "display": "Anesthetic"
-                            }
-                        },
-                        {
-                            "valueCoding":{
                                 "code": "Corticosteroids",
                                 "display": "Corticosteroids"
                             }
@@ -671,6 +698,72 @@
                             "valueCoding":{
                                 "code": "Anti-inflammatory",
                                 "display": "Anti-inflammatory"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Anesthetic",
+                                "display": "Anesthetic"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "2.21.1",
+                    "text": "Anesthetic injected:",
+                    "type": "choice",
+                    "required": false,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "2.21",
+                            "answerCoding": {
+                                "code": "Anesthetic",
+                                "display": "Anesthetic"
+                            }
+                        }
+                    ],
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "Procaine",
+                                "display": "Procaine"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Lidocaine",
+                                "display": "Lidocaine"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Tetracaine",
+                                "display": "Tetracaine"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Prilocaine",
+                                "display": "Prilocaine"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Etidocaine",
+                                "display": "Etidocaine"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Bupivacaine",
+                                "display": "Bupivacaine"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Ropivacaine",
+                                "display": "Ropivacaine"
                             }
                         }
                     ]
@@ -813,6 +906,33 @@
                             "valueCoding":{
                                 "code": "M48.17",
                                 "display": "Ankylosing hyperostosis [Forestier], lumbosacral region"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "3.1.1",
+                    "text": "The patient's primary diagnosis that supports approval and allowed for facet cyst rupture procedures only.",
+                    "type": "choice",
+                    "required": false,
+                    "enableWhen":[
+                        {
+                            "operator": "exists",
+                            "question": "3.1",
+                            "answerBoolean": false
+                        }
+                    ],
+                    "answerOption": [
+                        {
+                            "valueCoding":{
+                                "code": "M71.30",
+                                "display": "Other bursal cyst, unspecified site"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "M71.38",
+                                "display": "Other bursal cyst, other site"
                             }
                         }
                     ]
@@ -1108,7 +1228,7 @@
                 },
                 {
                     "linkId": "4.3",
-                    "text": "Which pain scale used at the initial encounter?",
+                    "text": "Which pain scale was used at the initial encounter? Provider education: Pain assessment must be performed and documented at baseline, after each procedure and at each follow-up using the same pain scale for each assessment.",
                     "type": "choice",
                     "required": false,
                     "answerOption":[
@@ -1270,7 +1390,7 @@
                 },
                 {
                     "linkId": "4.6.1",
-                    "text": "Which functional assessment (disability) scale was used at the initial encounter if applicable?",
+                    "text": "Which functional assessment (disability) scale was used at the initial encounter if applicable? Provider education: The SAME scale must be used at baseline, after each procedure and at each follow-up as applicable.)",
                     "type": "choice",
                     "required": false,
                     "answerOption":[
@@ -1336,7 +1456,7 @@
                 },
                 {
                     "linkId": "4.6.2",
-                    "text": "Which functional assessment (disability) scale was used at the initial encounter if applicable?",
+                    "text": "Which functional assessment (disability) scale was used at the initial encounter if applicable? Provider education: The SAME scale must be used at baseline, after each procedure and at each follow-up as applicable.)",
                     "type": "choice",
                     "required": false,
                     "answerOption":[
@@ -1775,7 +1895,7 @@
                 },
                 {
                     "linkId": "4.11",
-                    "text": "Which pain scale used at the initial encounter?",
+                    "text": "Which pain scale was used at the baseline visit encounter? Provider education: Pain assessment must be performed and documented at baseline, after each procedure and at each follow-up using the same pain scale for each assessment.",
                     "type": "choice",
                     "required": false,
                     "answerOption":[
@@ -1937,7 +2057,7 @@
                 },
                 {
                     "linkId": "4.14.1",
-                    "text": "Which functional assessment (disability) scale was used at the initial encounter if applicable?",
+                    "text": "Which functional assessment (disability) scale was used at the baseline visit? Provider education: The SAME scale must be used at baseline, after each procedure and at each follow-up as applicable.)",
                     "type": "choice",
                     "required": false,
                     "answerOption":[
@@ -2003,7 +2123,7 @@
                 },
                 {
                     "linkId": "4.14.2",
-                    "text": "Which functional assessment (disability) scale was used at the initial encounter if applicable?",
+                    "text": "Which functional assessment (disability) scale was used at the baseline visit? Provider education: The SAME scale must be used at baseline, after each procedure and at each follow-up as applicable.)",
                     "type": "choice",
                     "required": false,
                     "answerOption":[
@@ -2652,16 +2772,11 @@
             "type": "group",
             "item":[
                 {
-                    "linkId": "5.1",
-                    "text": "Post procedure pain relief results:",
-                    "type": "text",
-                    "required": false
-                },
-                {
                     "linkId": "5.2",
                     "text": "Which of the following procedures have been performed and their documented follow up results?",
                     "type": "choice",
                     "required": false,
+                    "repeats": true,
                     "answerOption":[
                         {
                             "valueCoding":{
@@ -2708,8 +2823,8 @@
                     ]
                 },
                 {
-                    "linkId": "5.3.1",
-                    "text": "What is the date of the 1st diagnostic injection pain follow up?",
+                    "linkId": "5.3.1.1",
+                    "text": "What was the date of the 1st diagnostic procedure performed?",
                     "type": "date",
                     "required": false,
                     "enableWhen": [
@@ -2724,8 +2839,24 @@
                     ]
                 },
                 {
-                    "linkId": "5.3.2",
-                    "text": "What is the date of the 2nd diagnostic injection pain follow up?",
+                    "linkId": "5.3.1.2",
+                    "text": "What was the date of the 1st diagnostic injection pain follow up?",
+                    "type": "date",
+                    "required": false,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "5.2",
+                            "answerCoding": {
+                                "code": "1st diagnostic injection follow up",
+                                "display": "1st diagnostic injection follow up"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.3.2.1",
+                    "text": "What was the date of the 2nd diagnostic procedure performed?",
                     "type": "date",
                     "required": false,
                     "enableWhen": [
@@ -2740,8 +2871,24 @@
                     ]
                 },
                 {
-                    "linkId": "5.3.3",
-                    "text": "What is the date of the initial RFA intervention pain follow up?",
+                    "linkId": "5.3.2.2",
+                    "text": "What was the date of the 2nd diagnostic injection pain follow up?",
+                    "type": "date",
+                    "required": false,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "5.2",
+                            "answerCoding": {
+                                "code": "2nd diagnostic injection follow up",
+                                "display": "2nd diagnostic injection follow up"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.3.3.1",
+                    "text": "What was the date of the initial RFA procedure performed?",
                     "type": "date",
                     "required": false,
                     "enableWhen": [
@@ -2756,8 +2903,24 @@
                     ]
                 },
                 {
-                    "linkId": "5.3.4",
-                    "text": "What is the date of the Second/subsequent RFA intervention follow up?",
+                    "linkId": "5.3.3.2",
+                    "text": "What was the date of the initial RFA intervention pain follow up?",
+                    "type": "date",
+                    "required": false,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "5.2",
+                            "answerCoding": {
+                                "code": "Initial RFA intervention follow up",
+                                "display": "Initial RFA intervention follow up"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.3.4.1",
+                    "text": "What was the date of the Second/subsequent RFA procedure performed?",
                     "type": "date",
                     "required": false,
                     "enableWhen": [
@@ -2772,8 +2935,24 @@
                     ]
                 },
                 {
-                    "linkId": "5.3.5",
-                    "text": "What is the date of the therapeutic intervention pain follow up?",
+                    "linkId": "5.3.4.2",
+                    "text": "What was the date of the Second/subsequent RFA intervention follow up?",
+                    "type": "date",
+                    "required": false,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "5.2",
+                            "answerCoding": {
+                                "code": "Second/subsequent RFA intervention follow up",
+                                "display": "Second/subsequent RFA intervention follow up"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.3.5.1",
+                    "text": "What was the date of the therapeutic procedure performed?",
                     "type": "date",
                     "required": false,
                     "enableWhen": [
@@ -2788,8 +2967,40 @@
                     ]
                 },
                 {
-                    "linkId": "5.3.6",
-                    "text": "What is the date of the IA injection performed with synovial cyst aspiration pain follow up?",
+                    "linkId": "5.3.5.2",
+                    "text": "What was the date of the therapeutic intervention pain follow up?",
+                    "type": "date",
+                    "required": false,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "5.2",
+                            "answerCoding": {
+                                "code": "Therapeutic intervention follow up",
+                                "display": "Therapeutic intervention follow up"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.3.6.1",
+                    "text": "What was the date of the IA procedure for cyst rupture performed?",
+                    "type": "date",
+                    "required": false,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "5.2",
+                            "answerCoding": {
+                                "code": "Facet cyst Aspiration/Rupture pain follow up",
+                                "display": "Facet cyst Aspiration/Rupture pain follow up"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.3.6.2",
+                    "text": "What was the date of the IA injection performed with synovial cyst aspiration pain follow up?",
                     "type": "date",
                     "required": false,
                     "enableWhen": [
@@ -2884,8 +3095,57 @@
                     ]
                 },
                 {
+                    "linkId": "5.4.6",
+                    "text": "The duration of pain relief is consistent with the agent used.  Specify the duration?",
+                    "type": "quantity",
+                    "required": false,
+                    "enableBehavior":"any",
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "5.2",
+                            "answerCoding": {
+                                "code": "1st diagnostic injection follow up",
+                                "display": "1st diagnostic injection follow up"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "5.2",
+                            "answerCoding": {
+                                "code": "2nd diagnostic injection follow up",
+                                "display": "2nd diagnostic injection follow up"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "5.2",
+                            "answerCoding": {
+                                "code": "Initial RFA intervention follow up",
+                                "display": "Initial RFA intervention follow up"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "5.2",
+                            "answerCoding": {
+                                "code": "Second/subsequent RFA intervention follow up",
+                                "display": "Second/subsequent RFA intervention follow up"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "5.2",
+                            "answerCoding": {
+                                "code": "Therapeutic intervention follow up",
+                                "display": "Therapeutic intervention follow up"
+                            }
+                        }
+                    ]
+                },
+                {
                     "linkId": "5.5",
-                    "text": "Pain Scale used.",
+                    "text": "Which pain scale was used at this follow up that reflects the reported pain relief? Provider education: Pain assessment must be performed and documented at baseline, after each procedure and at each follow-up using the same pain scale for each assessment.",
                     "type": "choice",
                     "required": false,
                     "answerOption":[
@@ -3083,7 +3343,7 @@
                 },
                 {
                     "linkId": "5.6.1",
-                    "text": "Which functional assessment (disability) scale was used?",
+                    "text": "Which functional assessment scale was used at this follow up? Provider education: The SAME scale must be used at baseline, after each procedure and at each follow-up as applicable.)",
                     "type": "choice",
                     "required": false,
                     "answerOption":[
