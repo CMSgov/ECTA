@@ -99,7 +99,7 @@
                     "linkId": "2.1",
                     "text": "What is the primary HCPC code for the requested procedure?",
                     "type": "choice",
-                    "required": false,
+                    "required": true,
                     "repeats": false,
                     "answerOption": [
                         {
@@ -136,7 +136,7 @@
                     "linkId": "2.2.1",
                     "text": "How many additional levels are being requested?",
                     "type": "choice",
-                    "required": false,
+                    "required": true,
                     "enableWhen": [
                         {
                             "operator": "=",
@@ -159,20 +159,20 @@
                             "valueCoding": {
                                 "system": "https://hcpcs.codes/",
                                 "code": "64491",
-                                "display": "One additional level: 64491 - Inj paravert f jnt c/t 2 lev. (Primary level and a second level.)"
+                                "display": "One additional level: 64491 - Inj paravert f jnt c/t 2 lev. (Primary level, and second level.)  Reminder: one to two levels, either unilateral or bilateral are allowed per session per spine region."
                             }
                         },
                         {
                             "valueCoding": {
                                 "system": "https://hcpcs.codes/",
                                 "code": "64492",
-                                "display": "Two additional levels: 64492 - Inj paravert f jnt c/t 3 lev. (Primary level, second level and a third level.)  Provider education:  Three or four levels is not medically necessary and not covered."
+                                "display": "Two additional levels: 64492 - Inj paravert f jnt c/t 3 lev. (Primary level, second level and a third level.)  Provider education:  Three or four levels is not medically necessary and not covered.  Reminder: one to two levels, either unilateral or bilateral are allowed per session per spine region."
                             }
                         },
                         {
                             "valueCoding": {
-                                "code": "Three additional levels. (Primary level, second level, third level and a fourth level.)  Provider education:  Three or four levels is not medically necessary and not covered.",
-                                "display": "Three additional levels. (Primary level, second level, third level and a fourth level.)  Provider education:  Three or four levels is not medically necessary and not covered."
+                                "code": "Three additional levels",
+                                "display": "Three additional levels.  (Primary level, second level, third level and a fourth level.)  Provider education:  Three or four levels is not medically necessary and not covered.  Reminder: one to two levels, either unilateral or bilateral are allowed per session per spine region."
                             }
                         }
                     ]
@@ -181,14 +181,14 @@
                     "linkId": "2.2.1.1",
                     "text": "Specify the additional level being requested:",
                     "type": "text",
-                    "required": false,
+                    "required": true,
                     "enableWhen": [
                         {
                             "operator": "=",
                             "question": "2.2.1",
                             "answerCoding": {
-                                "code": "Three additional levels. (Primary level, second level, third level and a fourth level.)  Provider education:  Three or four levels is not medically necessary and not covered.",
-                                "display": "Three additional levels. (Primary level, second level, third level and a fourth level.)  Provider education:  Three or four levels is not medically necessary and not covered."
+                                "code": "Three additional levels",
+                                "display": "Three additional levels.  (Primary level, second level, third level and a fourth level.)  Provider education:  Three or four levels is not medically necessary and not covered.  Reminder: one to two levels, either unilateral or bilateral are allowed per session per spine region."
                             }
                         }
                     ]
@@ -197,7 +197,7 @@
                     "linkId": "2.2.2",
                     "text": "How many additional levels are being requested?",
                     "type": "choice",
-                    "required": false,
+                    "required": true,
                     "enableWhen": [
                         {
                             "operator": "=",
@@ -220,20 +220,20 @@
                             "valueCoding": {
                                 "system": "https://hcpcs.codes/",
                                 "code": "64494",
-                                "display": "One additional level: 64493 - Inj paravert f jnt l/s 2 lev. (Primary level and a second level.)"
+                                "display": "One additional level: 64494 - Inj paravert f jnt l/s 2 lev. (Primary level, and second level.)  Reminder: one to two levels, unilateral or bilateral are allowed per session per spine region."
                             }
                         },
                         {
                             "valueCoding": {
                                 "system": "https://hcpcs.codes/",
                                 "code": "64495",
-                                "display": "Two additional levels: 64495 - Inj paravert f jnt l/s 3 lev. (Primary level, second level and a third level.)  Provider education:  Three or four levels is not medically necessary and not covered."
+                                "display": "Two additional levels: 64495 - Inj paravert f jnt l/s 3 lev.  (Primary level, second level and a third level.)  Provider education:  Three or four levels is not medically necessary and not covered.  Reminder: one to two levels, either unilateral or bilateral are allowed per session per spine region."
                             }
                         },
                         {
                             "valueCoding": {
-                                "code": "Three additional levels. (Primary level, second level, third level and a fourth level.)  Provider education:  Three or four levels is not medically necessary and not covered.",
-                                "display": "Three additional levels. (Primary level, second level, third level and a fourth level.)  Provider education:  Three or four levels is not medically necessary and not covered."
+                                "code": "Three additional levels",
+                                "display": "Three additional levels. (Primary level, second level, third leve and a fourth level.)  Provider education:  Three or four levels is not medically necessary and not covered.  Reminder: one to two levels, either unilateral or bilateral are allowed per session per spine region"
                             }
                         }
                     ]
@@ -242,14 +242,14 @@
                     "linkId": "2.2.2.1",
                     "text": "Specify the additional level being requested:",
                     "type": "text",
-                    "required": false,
+                    "required": true,
                     "enableWhen": [
                         {
                             "operator": "=",
                             "question": "2.2.2",
                             "answerCoding": {
-                                "code": "Three additional levels. (Primary level, second level, third level and a fourth level.)  Provider education:  Three or four levels is not medically necessary and not covered.",
-                                "display": "Three additional levels. (Primary level, second level, third level and a fourth level.)  Provider education:  Three or four levels is not medically necessary and not covered."
+                                "code": "Three additional levels",
+                                "display": "Three additional levels. (Primary level, second level, third leve and a fourth level.)  Provider education:  Three or four levels is not medically necessary and not covered.  Reminder: one to two levels, either unilateral or bilateral are allowed per session per spine region"
                             }
                         }
                     ]
@@ -258,7 +258,7 @@
                     "linkId": "2.2.3",
                     "text": "How many additional levels are being requested?",
                     "type": "choice",
-                    "required": false,
+                    "required": true,
                     "enableWhen": [
                         {
                             "operator": "=",
@@ -281,13 +281,13 @@
                             "valueCoding": {
                                 "system": "https://hcpcs.codes/",
                                 "code": "64634",
-                                "display": "One additional level: 64634 - Destroy c/th facet jnt addl. (Primary level and a second level.)"
+                                "display": "One additional level: 64634 - Destroy c/th facet jnt addl. (Primary level and a second level.) Reminder: one to two levels, either unilateral or bilateral are allowed per session per spine region."
                             }
                         },
                         {
                             "valueCoding": {
-                                "code": "Two additional levels. (Primary level, second level and a third level.)  Provider education:  Three or four levels is not medically necessary and not covered.",
-                                "display": "Two additional levels. (Primary level, second level, and a third level.)  Provider education:  Three or four levels is not medically necessary and not covered."
+                                "code": "Two additional levels",
+                                "display": "Two additional levels. (Primary level, second level, and a third level.)  Provider education:  Three or four levels is not medically necessary and not covered. Reminder: one to two levels, either unilateral or bilateral are allowed per session per spine region."
                             }
                         }
                     ]
@@ -296,25 +296,23 @@
                     "linkId": "2.2.3.1",
                     "text": "Specify the additional level being requested:",
                     "type": "text",
-                    "required": false,
+                    "required": true,
                     "enableWhen": [
                         {
                             "operator": "=",
                             "question": "2.2.3",
                             "answerCoding": {
-                                "code": "Two additional levels. (Primary level, second level and a third level.)  Provider education:  Three or four levels is not medically necessary and not covered.",
-                                "display": "Two additional levels. (Primary level, second level and a third level.)  Provider education:  Three or four levels is not medically necessary and not covered."
+                                "code": "Two additional levels",
+                                "display": "Two additional levels. (Primary level, second level, and a third level.)  Provider education:  Three or four levels is not medically necessary and not covered. Reminder: one to two levels, either unilateral or bilateral are allowed per session per spine region."
                             }
                         }
                     ]
                 },
                 {
                     "linkId": "2.2.4",
-                    "text": "What is/are the additional level HCPC code(s) for the requested procedure?",
+                    "text": "How many additional levels are being requested?",
                     "type": "choice",
-                    "required": false,
-                    "repeats": true,
-                    "enableBehavior": "all",
+                    "required": true,
                     "enableWhen": [
                         {
                             "operator": "=",
@@ -337,13 +335,13 @@
                             "valueCoding": {
                                 "system": "https://hcpcs.codes/",
                                 "code": "64636",
-                                "display": "64636 - Destroy l/s facet jnt addl. (Primary level and a second level.)"
+                                "display": "64636 - Destroy l/s facet jnt addl. (Primary level and a second level.)  Reminder: one to two levels, either unilateral or bilateral are allowed per session per spine region."
                             }
                         },
                         {
                             "valueCoding": {
-                                "code": "Two additional levels. (Primary level, second level and a third level.)  Provider education:  Three or four levels is not medically necessary and not covered.",
-                                "display": "Two additional levels. (Primary level, second level and a third level.)  Provider education:  Three or four levels is not medically necessary and not covered."
+                                "code": "Two additional levels",
+                                "display": "Two additional levels. (Primary level, second level and a third level.) Provider education: Three or four levels is not medically necessary and not covered. Reminder: one to two levels, either unilateral or bilateral are allowed per session per spine region."
                             }
                         }
                     ]
@@ -352,23 +350,23 @@
                     "linkId": "2.2.4.1",
                     "text": "Specify the additional level being requested:",
                     "type": "text",
-                    "required": false,
+                    "required": true,
                     "enableWhen": [
                         {
                             "operator": "=",
                             "question": "2.2.4",
                             "answerCoding": {
-                                "code": "Two additional levels. (Primary level, second level and a third level.)  Provider education:  Three or four levels is not medically necessary and not covered.",
-                                "display": "Two additional levels. (Primary level, second level and a third level.)  Provider education:  Three or four levels is not medically necessary and not covered."
+                                "code": "Two additional levels",
+                                "display": "Two additional levels. (Primary level, second level and a third level.) Provider education: Three or four levels is not medically necessary and not covered. Reminder: one to two levels, either unilateral or bilateral are allowed per session per spine region."
                             }
                         }
                     ]
                 },
                 {
                     "linkId": "2.6",
-                    "text": "Is the intervention for diagnostic, therapeutic, facet cyst ruptures, or RFA?",
+                    "text": "Is the intervention for diagnostic, therapeutic, facet cyst rupture, or RFA?",
                     "type": "choice",
-                    "required": false,
+                    "required": true,
                     "answerOption":[
                         {
                             "valueCoding":{
@@ -390,8 +388,8 @@
                         },
                         {
                             "valueCoding":{
-                                "code": "RFA ablations",
-                                "display": "RFA ablations"
+                                "code": "Radio Frequency Ablation",
+                                "display": "Radio Frequency Ablation"
                             }
                         }
                     ]
@@ -400,7 +398,7 @@
                     "linkId": "2.7",
                     "text": "If diagnostic is this the first or second injection?",
                     "type": "choice",
-                    "required": false,
+                    "required": true,
                     "enableWhen": [
                         {
                             "operator": "=",
@@ -440,9 +438,10 @@
                 },
                 {
                     "linkId": "2.7.1",
-                    "text": "What were the qualifying first and second injection dates?",
-                    "type": "group",
+                    "text": "What was the qualifying first injection date?",
+                    "type": "date",
                     "enableBehavior": "any",
+                    "required": true,
                     "enableWhen": [
                         {
                             "operator": "=",
@@ -460,28 +459,20 @@
                                 "display": "Medial branch block (MBB) second injection."
                             }
                         }
-                    ], 
-                    "item":[
-                        {
-                            "linkId": "2.7.1.1",
-                            "text": "First injection date:",
-                            "type": "date",
-                            "required": false
-                        }
                     ]
                 },
                 {
-                    "linkId": "2.8",
-                    "text": "Procedure reports validate that if prior auth approved, the patient will/has received no more than four (4) therapeutic facet joint (IA) in the current rolling 12 months, including the one being requested?",
+                    "linkId": "2.7.2",
+                    "text": "Provider Education: For each covered spinal region no more than four (4) diagnostic joint sessions will be reimbursed per rolling 12 months, in recognition that the pain generator cannot always be identified with the initial and confirmatory diagnostic procedure.",
                     "type": "boolean",
-                    "required": false,
+                    "required": true,
                     "enableWhen": [
                         {
                             "operator": "=",
                             "question": "2.6",
                             "answerCoding": {
-                                "code": "Therapeutic",
-                                "display": "Therapeutic"
+                                "code": "Diagnostic",
+                                "display": "Diagnostic"
                             }
                         }
                     ]
@@ -503,29 +494,57 @@
                     "item":[
                         {
                             "linkId": "2.10.1",
-                            "text": "First injection date:",
+                            "text": "IA First injection date:",
                             "type": "date",
                             "required": false
                         },
                         {
                             "linkId": "2.10.2",
-                            "text": "Second injection date:",
+                            "text": "IA Second injection date:",
+                            "type": "date",
+                            "required": false
+                        },
+                        {
+                            "linkId": "2.10.3",
+                            "text": "MBB First injection date:",
+                            "type": "date",
+                            "required": false
+                        },
+                        {
+                            "linkId": "2.10.4",
+                            "text": "MBB Second injection date:",
                             "type": "date",
                             "required": false
                         }
                     ]
                 },
                 {
+                    "linkId": "2.10.5",
+                    "text": "Provider Education: For each covered spinal region no more than four (4) therapeutic facet joint sessions will be reimbursed per rolling 12 months.",
+                    "type": "boolean",
+                    "required": true,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "2.6",
+                            "answerCoding": {
+                                "code": "Therapeutic",
+                                "display": "Therapeutic"
+                            }
+                        }
+                    ]
+                },
+                {
                     "linkId": "2.11",
-                    "text": "If an RFA is being performed what were the qualifying MBB first injection and MBB second injection dates?",
+                    "text": "If RFA is being performed what were the qualifying MBB first injection and MBB second injection dates?",
                     "type": "group",
                     "enableWhen": [
                         {
                             "operator": "=",
                             "question": "2.6",
                             "answerCoding": {
-                                "code": "RFA ablations",
-                                "display": "RFA ablations"
+                                "code": "Radio Frequency Ablation",
+                                "display": "Radio Frequency Ablation"
                             }
                         }
                     ],
@@ -541,6 +560,38 @@
                             "text": "Medial branch block (MBB) second injection date:",
                             "type": "date",
                             "required": false
+                        }
+                    ]
+                },
+                {
+                    "linkId": "2.11.3",
+                    "text": "Provider Education: For each covered spinal region no more than two (2) radiofrequency sessions will be reimbursed per rolling 12 months.",
+                    "type": "boolean",
+                    "required": true,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "2.6",
+                            "answerCoding": {
+                                "code": "Radio Frequency Ablation",
+                                "display": "Radio Frequency Ablation"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "2.11.4",
+                    "text": "Provider Education: Cyst aspiration/rupture may be repeated once per individual cyst and only if there is 50% or more consistent improvement in pain for at least three (3) months.",
+                    "type": "boolean",
+                    "required": true,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "2.6",
+                            "answerCoding": {
+                                "code": "Facet Cyst Rupture",
+                                "display": "Facet Cyst Rupture"
+                            }
                         }
                     ]
                 },
@@ -797,282 +848,535 @@
                 {
                     "linkId": "3.1",
                     "text": "The patient's primary diagnosis that supports approval for a facet joint intervention procedure.",
-                    "type": "choice",
-                    "required": false,
-                    "answerOption": [
+                    "type": "group",
+                    "enableBehavior": "any",
+                    "enableWhen": [
                         {
-                            "valueCoding":{
-                                "code": "M47.812",
-                                "display": "Spondylosis without myelopathy or radiculopathy, cervical region"
+                            "operator": "=",
+                            "question": "2.6",
+                            "answerCoding": {
+                                "code": "Diagnostic",
+                                "display": "Diagnostic"
                             }
                         },
                         {
-                            "valueCoding":{
-                                "code": "M47.813",
-                                "display": "Spondylosis without myelopathy or radiculopathy, cervicothoracic region"
+                            "operator": "=",
+                            "question": "2.6",
+                            "answerCoding": {
+                                "code": "Therapeutic",
+                                "display": "Therapeutic"
                             }
                         },
                         {
-                            "valueCoding":{
-                                "code": "M47.814",
-                                "display": "Spondylosis without myelopathy or radiculopathy, thoracic region"
+                            "operator": "=",
+                            "question": "2.6",
+                            "answerCoding": {
+                                "code": "Radio Frequency Ablation",
+                                "display": "Radio Frequency Ablation"
                             }
+                        }
+                    
+                    ],
+                    "item":[
+                        {
+                            "linkId": "3.1.a",
+                            "text": "Cervical/Thoracic",
+                            "type": "choice",
+                            "required": false,
+                            "answerOption": [
+                                {
+                                    "valueCoding":{
+                                        "code": "M47.812",
+                                        "display": "Spondylosis without myelopathy or radiculopathy, cervical region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M47.813",
+                                        "display": "Spondylosis without myelopathy or radiculopathy, cervicothoracic region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M47.814",
+                                        "display": "Spondylosis without myelopathy or radiculopathy, thoracic region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M47.815",
+                                        "display": "Spondylosis without myelopathy or radiculopathy, thoracolumbar region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M47.892",
+                                        "display": "Other spondylosis, cervical region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M47.893",
+                                        "display": "Other spondylosis, cervicothoracic region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M47.894",
+                                        "display": "Other spondylosis, thoracic region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M47.895",
+                                        "display": "Other spondylosis, thoracolumbar region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M48.12",
+                                        "display": "Ankylosing hyperostosis [Forestier], cervical region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M48.13",
+                                        "display": "Ankylosing hyperostosis [Forestier], cervicothoracic region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M48.14",
+                                        "display": "Ankylosing hyperostosis [Forestier], thoracic region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M48.15",
+                                        "display": "Ankylosing hyperostosis [Forestier], thoracolumbar region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "Other",
+                                        "display": "Other"
+                                    }
+                                }
+                            ]
                         },
                         {
-                            "valueCoding":{
-                                "code": "M47.815",
-                                "display": "Spondylosis without myelopathy or radiculopathy, thoracolumbar region"
-                            }
+                            "linkId": "3.1.a.1",
+                            "text": "Specify other",
+                            "type": "text",
+                            "required": true,
+                            "enableWhen":[
+                                {
+                                    "operator": "=",
+                                    "question": "3.1.a",
+                                    "answerCoding": {
+                                        "code": "Other",
+                                        "display": "Other"
+                                    } 
+                                }
+                            ]
                         },
                         {
-                            "valueCoding":{
-                                "code": "M47.816",
-                                "display": "Spondylosis without myelopathy or radiculopathy, lumbar region"
-                            }
+                            "linkId": "3.1.b",
+                            "text": "Lumbar/Sacral",
+                            "type": "choice",
+                            "required": false,
+                            "answerOption": [
+                                {
+                                    "valueCoding":{
+                                        "code": "M47.816",
+                                        "display": "Spondylosis without myelopathy or radiculopathy, lumbar region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M47.817",
+                                        "display": "Spondylosis without myelopathy or radiculopathy, lumbosacral region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M47.896",
+                                        "display": "Other spondylosis, lumbar region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M47.897",
+                                        "display": "Other spondylosis, lumbosacral region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M48.16",
+                                        "display": "Ankylosing hyperostosis [Forestier], lumbar region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M48.17",
+                                        "display": "Ankylosing hyperostosis [Forestier], lumbosacral region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "Other",
+                                        "display": "Other"
+                                    }
+                                }
+                            ]
                         },
                         {
-                            "valueCoding":{
-                                "code": "M47.817",
-                                "display": "Spondylosis without myelopathy or radiculopathy, lumbosacral region"
-                            }
-                        },
-                        {
-                            "valueCoding":{
-                                "code": "M47.892",
-                                "display": "Other spondylosis, cervical region"
-                            }
-                        },
-                        {
-                            "valueCoding":{
-                                "code": "M47.893",
-                                "display": "Other spondylosis, cervicothoracic region"
-                            }
-                        },
-                        {
-                            "valueCoding":{
-                                "code": "M47.894",
-                                "display": "Other spondylosis, thoracic region"
-                            }
-                        },
-                        {
-                            "valueCoding":{
-                                "code": "M47.895",
-                                "display": "Other spondylosis, thoracolumbar region"
-                            }
-                        },
-                        {
-                            "valueCoding":{
-                                "code": "M47.896",
-                                "display": "Other spondylosis, lumbar region"
-                            }
-                        },
-                        {
-                            "valueCoding":{
-                                "code": "M47.897",
-                                "display": "Other spondylosis, lumbosacral region"
-                            }
-                        },
-                        {
-                            "valueCoding":{
-                                "code": "M48.12",
-                                "display": "Ankylosing hyperostosis [Forestier], cervical region"
-                            }
-                        },
-                        {
-                            "valueCoding":{
-                                "code": "M48.13",
-                                "display": "Ankylosing hyperostosis [Forestier], cervicothoracic region"
-                            }
-                        },
-                        {
-                            "valueCoding":{
-                                "code": "M48.14",
-                                "display": "Ankylosing hyperostosis [Forestier], thoracic region"
-                            }
-                        },
-                        {
-                            "valueCoding":{
-                                "code": "M48.15",
-                                "display": "Ankylosing hyperostosis [Forestier], thoracolumbar region"
-                            }
-                        },
-                        {
-                            "valueCoding":{
-                                "code": "M48.16",
-                                "display": "Ankylosing hyperostosis [Forestier], lumbar region"
-                            }
-                        },
-                        {
-                            "valueCoding":{
-                                "code": "M48.17",
-                                "display": "Ankylosing hyperostosis [Forestier], lumbosacral region"
-                            }
+                            "linkId": "3.1.b.1",
+                            "text": "Specify other",
+                            "type": "text",
+                            "required": true,
+                            "enableWhen":[
+                                {
+                                    "operator": "=",
+                                    "question": "3.1.b",
+                                    "answerCoding": {
+                                        "code": "Other",
+                                        "display": "Other"
+                                    } 
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     "linkId": "3.1.1",
                     "text": "The patient's primary diagnosis that supports approval and allowed for facet cyst rupture procedures only.",
-                    "type": "choice",
+                    "type": "group",
                     "required": false,
                     "enableWhen":[
                         {
-                            "operator": "exists",
-                            "question": "3.1",
-                            "answerBoolean": false
+                            "operator": "=",
+                            "question": "2.6",
+                            "answerCoding": {
+                                "code": "Facet Cyst Rupture",
+                                "display": "Facet Cyst Rupture"
+                            }
                         }
                     ],
-                    "answerOption": [
+                    "item": [
                         {
-                            "valueCoding":{
-                                "code": "M71.30",
-                                "display": "Other bursal cyst, unspecified site"
-                            }
+                            "linkId": "3.1.1.a",
+                            "text": "Cervical/Thoracic",
+                            "type": "group",
+                            "required": true,
+                            "answerOption": [
+                                {
+                                    "valueCoding":{
+                                        "code": "M71.30",
+                                        "display": "Other bursal cyst, unspecified site"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M71.38",
+                                        "display": "Other bursal cyst, other site"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "Other specified dorsopathies",
+                                        "display": "Other specified dorsopathies"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "Other specified dorsopathies, cervical",
+                                        "display": "Other specified dorsopathies, cervical"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "Other specified dorsopathies, cervicothoracic",
+                                        "display": "Other specified dorsopathies, cervicothoracic"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "Other specified dorsopathies, thoracic",
+                                        "display": "Other specified dorsopathies, thoracic"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "Other specified dorsopathies, thoracolumbar",
+                                        "display": "Other specified dorsopathies, thoracolumbar"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "Other",
+                                        "display": "Other"
+                                    }
+                                }
+                            ]
                         },
                         {
-                            "valueCoding":{
-                                "code": "M71.38",
-                                "display": "Other bursal cyst, other site"
-                            }
+                            "linkId": "3.1.1.a.1",
+                            "text": "Specify other",
+                            "type": "text",
+                            "required": true,
+                            "enableWhen":[
+                                {
+                                    "operator": "=",
+                                    "question": "3.1.1.a",
+                                    "answerCoding": {
+                                        "code": "Other",
+                                        "display": "Other"
+                                    } 
+                                }
+                            ]
+                        },
+                        {
+                            "linkId": "3.1.1.b",
+                            "text": "Lumbar/Sacral",
+                            "type": "group",
+                            "required": true,
+                            "answerOption": [
+                                {
+                                    "valueCoding":{
+                                        "code": "M71.30",
+                                        "display": "Other bursal cyst, unspecified site"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M71.38",
+                                        "display": "Other bursal cyst, other site"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "Other specified dorsopathies",
+                                        "display": "Other specified dorsopathies"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "Other specified dorsopathies, lumbar",
+                                        "display": "Other specified dorsopathies, lumbar"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "Other specified dorsopathies, lumbosacral",
+                                        "display": "Other specified dorsopathies, lumbosacral"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "Other specified dorsopathies, sacral",
+                                        "display": "Other specified dorsopathies, sacral"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "Other",
+                                        "display": "Other"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "linkId": "3.1.1.b.1",
+                            "text": "Specify other",
+                            "type": "text",
+                            "required": true,
+                            "enableWhen":[
+                                {
+                                    "operator": "=",
+                                    "question": "3.1.1.b",
+                                    "answerCoding": {
+                                        "code": "Other",
+                                        "display": "Other"
+                                    } 
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     "linkId": "3.2",
                     "text": "Other relevant diagnosis or supported findings:",
-                    "type": "choice",
+                    "type": "group",
                     "repeats": true,
-                    "required": false,
-                    "answerOption": [
+                    "item":[
                         {
-                            "valueCoding":{
-                                "code": "M47.812",
-                                "display": "Spondylosis without myelopathy or radiculopathy, cervical region"
-                            }
+                            "linkId": "3.2.a",
+                            "text": "Cervical/Thoracic",
+                            "type": "choice",
+                            "required": false,
+                            "answerOption": [
+                                {
+                                    "valueCoding":{
+                                        "code": "M47.812",
+                                        "display": "Spondylosis without myelopathy or radiculopathy, cervical region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M47.813",
+                                        "display": "Spondylosis without myelopathy or radiculopathy, cervicothoracic region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M47.814",
+                                        "display": "Spondylosis without myelopathy or radiculopathy, thoracic region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M47.815",
+                                        "display": "Spondylosis without myelopathy or radiculopathy, thoracolumbar region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M47.892",
+                                        "display": "Other spondylosis, cervical region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M47.893",
+                                        "display": "Other spondylosis, cervicothoracic region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M47.894",
+                                        "display": "Other spondylosis, thoracic region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M47.895",
+                                        "display": "Other spondylosis, thoracolumbar region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M48.12",
+                                        "display": "Ankylosing hyperostosis [Forestier], cervical region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M48.13",
+                                        "display": "Ankylosing hyperostosis [Forestier], cervicothoracic region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M48.14",
+                                        "display": "Ankylosing hyperostosis [Forestier], thoracic region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M48.15",
+                                        "display": "Ankylosing hyperostosis [Forestier], thoracolumbar region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "Other",
+                                        "display": "Other"
+                                    }
+                                }
+                            ]
                         },
                         {
-                            "valueCoding":{
-                                "code": "M47.813",
-                                "display": "Spondylosis without myelopathy or radiculopathy, cervicothoracic region"
-                            }
+                            "linkId": "3.2.a.1",
+                            "text": "Specify other",
+                            "type": "text",
+                            "required": true,
+                            "enableWhen":[
+                                {
+                                    "operator": "=",
+                                    "question": "3.2.a",
+                                    "answerCoding": {
+                                        "code": "Other",
+                                        "display": "Other"
+                                    } 
+                                }
+                            ]
                         },
                         {
-                            "valueCoding":{
-                                "code": "M47.814",
-                                "display": "Spondylosis without myelopathy or radiculopathy, thoracic region"
-                            }
+                            "linkId": "3.2.b",
+                            "text": "Lumbar/Sacral",
+                            "type": "choice",
+                            "required": false,
+                            "answerOption": [
+                                {
+                                    "valueCoding":{
+                                        "code": "M47.816",
+                                        "display": "Spondylosis without myelopathy or radiculopathy, lumbar region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M47.817",
+                                        "display": "Spondylosis without myelopathy or radiculopathy, lumbosacral region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M47.896",
+                                        "display": "Other spondylosis, lumbar region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M47.897",
+                                        "display": "Other spondylosis, lumbosacral region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M48.16",
+                                        "display": "Ankylosing hyperostosis [Forestier], lumbar region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M48.17",
+                                        "display": "Ankylosing hyperostosis [Forestier], lumbosacral region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "Other",
+                                        "display": "Other"
+                                    }
+                                }
+                            ]
                         },
                         {
-                            "valueCoding":{
-                                "code": "M47.815",
-                                "display": "Spondylosis without myelopathy or radiculopathy, thoracolumbar region"
-                            }
-                        },
-                        {
-                            "valueCoding":{
-                                "code": "M47.816",
-                                "display": "Spondylosis without myelopathy or radiculopathy, lumbar region"
-                            }
-                        },
-                        {
-                            "valueCoding":{
-                                "code": "M47.817",
-                                "display": "Spondylosis without myelopathy or radiculopathy, lumbosacral region"
-                            }
-                        },
-                        {
-                            "valueCoding":{
-                                "code": "M47.892",
-                                "display": "Other spondylosis, cervical region"
-                            }
-                        },
-                        {
-                            "valueCoding":{
-                                "code": "M47.893",
-                                "display": "Other spondylosis, cervicothoracic region"
-                            }
-                        },
-                        {
-                            "valueCoding":{
-                                "code": "M47.894",
-                                "display": "Other spondylosis, thoracic region"
-                            }
-                        },
-                        {
-                            "valueCoding":{
-                                "code": "M47.895",
-                                "display": "Other spondylosis, thoracolumbar region"
-                            }
-                        },
-                        {
-                            "valueCoding":{
-                                "code": "M47.896",
-                                "display": "Other spondylosis, lumbar region"
-                            }
-                        },
-                        {
-                            "valueCoding":{
-                                "code": "M47.897",
-                                "display": "Other spondylosis, lumbosacral region"
-                            }
-                        },
-                        {
-                            "valueCoding":{
-                                "code": "M48.12",
-                                "display": "Ankylosing hyperostosis [Forestier], cervical region"
-                            }
-                        },
-                        {
-                            "valueCoding":{
-                                "code": "M48.13",
-                                "display": "Ankylosing hyperostosis [Forestier], cervicothoracic region"
-                            }
-                        },
-                        {
-                            "valueCoding":{
-                                "code": "M48.14",
-                                "display": "Ankylosing hyperostosis [Forestier], thoracic region"
-                            }
-                        },
-                        {
-                            "valueCoding":{
-                                "code": "M48.15",
-                                "display": "Ankylosing hyperostosis [Forestier], thoracolumbar region"
-                            }
-                        },
-                        {
-                            "valueCoding":{
-                                "code": "M48.16",
-                                "display": "Ankylosing hyperostosis [Forestier], lumbar region"
-                            }
-                        },
-                        {
-                            "valueCoding":{
-                                "code": "M48.17",
-                                "display": "Ankylosing hyperostosis [Forestier], lumbosacral region"
-                            }
-                        },
-                        {
-                            "valueCoding":{
-                                "code":"Other",
-                                "display":"Other"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "linkId": "3.2.1",
-                    "text": "Specify other",
-                    "type": "text",
-                    "required": false,
-                    "enableWhen":[
-                        {
-                            "operator": "=",
-                            "question": "3.2",
-                            "answerCoding": {
-                                "code": "Other",
-                                "display": "Other"
-                            } 
+                            "linkId": "3.2.b.1",
+                            "text": "Specify other",
+                            "type": "text",
+                            "required": true,
+                            "enableWhen":[
+                                {
+                                    "operator": "=",
+                                    "question": "3.2.b",
+                                    "answerCoding": {
+                                        "code": "Other",
+                                        "display": "Other"
+                                    } 
+                                }
+                            ]
                         }
                     ]
                 },
@@ -1172,17 +1476,27 @@
                     "text": "Non-facet pathology per clinical assessment or diagnostic studies has ruled out other sources of the patient's pain, including but not limited to fractures, tumors, infections or significant deformity.",
                     "type": "choice",
                     "required": false,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "2.6",
+                            "answerCoding": {
+                                "code": "Diagnostic",
+                                "display": "Diagnostic"
+                            }
+                        }
+                    ],
                     "answerOption":[
                         {
                             "valueCoding":{
-                                "code": "Negative for non-facet pathology sources.  Medical record indicates all of the following are ABSENT: active spine fractures, spine tumors, active infections, sciatica, hip osteoarthritis, sacroiliac impingement, untreated radiculopathy, neurogenic claudication, myofascial pain, compression fractures, disc herniation, osteophytes, rheumatoid arthritis.",
-                                "display": "Negative for non-facet pathology sources.  Medical record indicates all of the following are ABSENT: active spine fractures, spine tumors, active infections, sciatica, hip osteoarthritis, sacroiliac impingement, untreated radiculopathy, neurogenic claudication, myofascial pain, compression fractures, disc herniation, osteophytes, rheumatoid arthritis."
+                                "code": "Negative for non-facet pathology sources.  Medical record indicates all of the following are ABSENT: active spine fractures, spine tumors, active infections, sciatica, hip osteoarthritis, sacroiliac impingement, untreated radiculopathy, neurogenic claudication, myofascial pain, compression fractures, disc herniation, osteophytes, rheumatoid arthritis, fibromyalgia.",
+                                "display": "Negative for non-facet pathology sources.  Medical record indicates all of the following are ABSENT: active spine fractures, spine tumors, active infections, sciatica, hip osteoarthritis, sacroiliac impingement, untreated radiculopathy, neurogenic claudication, myofascial pain, compression fractures, disc herniation, osteophytes, rheumatoid arthritis, fibromyalgia."
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": " Positive for non-facet pathology sources:  Medical record indicates one or more of the following are PRESENT: active spine fractures, spine tumors, active infections, sciatica, hip osteoarthritis, sacroiliac impingement, untreated radiculopathy, neurogenic claudication, myofascial pain, compression fractures, disc herniation, osteophytes, rheumatoid arthritis.",
-                                "display": " Positive for non-facet pathology sources:  Medical record indicates one or more of the following are PRESENT: active spine fractures, spine tumors, active infections, sciatica, hip osteoarthritis, sacroiliac impingement, untreated radiculopathy, neurogenic claudication, myofascial pain, compression fractures, disc herniation, osteophytes, rheumatoid arthritis."
+                                "code": " Positive for non-facet pathology sources:  Medical record indicates one or more of the following are PRESENT: active spine fractures, spine tumors, active infections, sciatica, hip osteoarthritis, sacroiliac impingement, untreated radiculopathy, neurogenic claudication, myofascial pain, compression fractures, disc herniation, osteophytes, rheumatoid arthritis, fibromyalgia.",
+                                "display": " Positive for non-facet pathology sources:  Medical record indicates one or more of the following are PRESENT: active spine fractures, spine tumors, active infections, sciatica, hip osteoarthritis, sacroiliac impingement, untreated radiculopathy, neurogenic claudication, myofascial pain, compression fractures, disc herniation, osteophytes, rheumatoid arthritis, fibromyalgia."
                             }
                         }
                     ]
