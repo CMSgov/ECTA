@@ -1067,7 +1067,6 @@
                         {
                             "linkId": "3.1.1.a",
                             "text": "Cervical/Thoracic",
-                            "type": "group",
                             "required": true,
                             "answerOption": [
                                 {
@@ -1139,7 +1138,6 @@
                         {
                             "linkId": "3.1.1.b",
                             "text": "Lumbar/Sacral",
-                            "type": "group",
                             "required": true,
                             "answerOption": [
                                 {
@@ -1208,13 +1206,13 @@
                     "linkId": "3.2",
                     "text": "Other relevant diagnosis or supported findings:",
                     "type": "group",
-                    "repeats": true,
                     "item":[
                         {
                             "linkId": "3.2.a",
                             "text": "Cervical/Thoracic",
                             "type": "choice",
                             "required": false,
+                            "repeats": true,
                             "answerOption": [
                                 {
                                     "valueCoding":{
@@ -1317,6 +1315,7 @@
                             "text": "Lumbar/Sacral",
                             "type": "choice",
                             "required": false,
+                            "repeats": true,
                             "answerOption": [
                                 {
                                     "valueCoding":{
