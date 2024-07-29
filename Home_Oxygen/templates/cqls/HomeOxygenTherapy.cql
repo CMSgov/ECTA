@@ -264,6 +264,10 @@ define function "EncounterDiagnosis"(Encounter Encounter):
 define EncounterCondition:
   "EncounterDiagnosis"("EncounterResource")
 
+define OrderingPractitionerRole:
+  singleton from ( [PractitionerRole] P
+        where 'PractitionerRole/' + P.id.value = "DeviceRequest".requester.reference.value
+      )
 
 define OrderingPhysician:
   if (singleton from ( [Practitioner] P
@@ -272,6 +276,8 @@ define OrderingPhysician:
     singleton from ( [Practitioner] P
         where 'Practitioner/' + P.id.value = "DeviceRequest".requester.reference.value
       )
+  else if ("OrderingPractitionerRole" is not null and (singleton from ([Practitioner] P where 'Practitioner/' + P.id.value = "OrderingPractitionerRole".practitioner.reference.value) is not null )) then
+    singleton from ([Practitioner] P where 'Practitioner/' + P.id.value = "OrderingPractitionerRole".practitioner.reference.value)
   else 
     singleton from ( "DeviceRequest".contained.Practitioner P 
     where P is not null 
