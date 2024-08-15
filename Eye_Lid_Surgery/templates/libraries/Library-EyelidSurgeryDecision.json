@@ -30,6 +30,15 @@
           "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.193"
         }
       ]
+    },
+    {
+      "type": "Medication",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.194"
+        }
+      ]
     }
   ]
 }
