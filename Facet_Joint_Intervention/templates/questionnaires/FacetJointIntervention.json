@@ -29,12 +29,30 @@
             "type": "group",
             "item": [
                 {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                            "valueExpression": {
+                                "language": "text/cql",
+                                "expression": "OrderDate"
+                            }
+                        }
+                    ],
                   "linkId": "1.1",
                   "text": "Order Date",
                   "type": "date",
                   "required": true
                 },
                 {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                            "valueExpression": {
+                                "language": "text/cql",
+                                "expression": "PrimaryServiceRequest"
+                            }
+                        }
+                    ],
                   "linkId": "1.2",
                   "text": "Procedure ordered",
                   "type": "choice",
@@ -71,18 +89,45 @@
                     ]
                 },
                 {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                            "valueExpression": {
+                                "language": "text/cql",
+                                "expression": "OrderId"
+                            }
+                        }
+                    ],
                   "linkId": "1.3",
                   "text": "Order Id",
                   "type": "string",
                   "required": true
                 },
                 {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                            "valueExpression": {
+                                "language": "text/cql",
+                                "expression": "OrderingPhysicianName"
+                            }
+                        }
+                    ],
                   "linkId": "1.4",
                   "text": "Ordering Physician Name",
                   "type": "string",
                   "required": true
                 },
                 {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                            "valueExpression": {
+                                "language": "text/cql",
+                                "expression": "OrderingPhysicianNPI"
+                            }
+                        }
+                    ],
                   "linkId": "1.5",
                   "text": "Ordering Physician NPI",
                   "type": "string",
@@ -96,6 +141,15 @@
             "type": "group",
             "item": [
                 {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                            "valueExpression": {
+                                "language": "text/cql",
+                                "expression": "PrimaryServiceRequest"
+                            }
+                        }
+                    ],
                     "linkId": "2.1",
                     "text": "What is the primary HCPC code for the requested procedure?",
                     "type": "choice",
@@ -133,6 +187,15 @@
                     ]
                 },
                 {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                            "valueExpression": {
+                                "language": "text/cql",
+                                "expression": "AdditionalServiceRequest"
+                            }
+                        }
+                    ],
                     "linkId": "2.2.1",
                     "text": "How many additional levels are being requested?",
                     "type": "choice",
@@ -194,6 +257,15 @@
                     ]
                 },
                 {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                            "valueExpression": {
+                                "language": "text/cql",
+                                "expression": "AdditionalServiceRequest"
+                            }
+                        }
+                    ],
                     "linkId": "2.2.2",
                     "text": "How many additional levels are being requested?",
                     "type": "choice",
@@ -255,6 +327,15 @@
                     ]
                 },
                 {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                            "valueExpression": {
+                                "language": "text/cql",
+                                "expression": "AdditionalServiceRequest"
+                            }
+                        }
+                    ],
                     "linkId": "2.2.3",
                     "text": "How many additional levels are being requested?",
                     "type": "choice",
@@ -309,6 +390,15 @@
                     ]
                 },
                 {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                            "valueExpression": {
+                                "language": "text/cql",
+                                "expression": "AdditionalServiceRequest"
+                            }
+                        }
+                    ],
                     "linkId": "2.2.4",
                     "text": "How many additional levels are being requested?",
                     "type": "choice",
@@ -335,7 +425,7 @@
                             "valueCoding": {
                                 "system": "https://hcpcs.codes/",
                                 "code": "64636",
-                                "display": "64636 - Destroy l/s facet jnt addl. (Primary level and a second level.)  Reminder: one to two levels, either unilateral or bilateral are allowed per session per spine region."
+                                "display": "One additional level: 64636 - Destroy l/s facet jnt addl. (Primary level and a second level.)  Reminder: one to two levels, either unilateral or bilateral are allowed per session per spine region."
                             }
                         },
                         {
@@ -363,6 +453,15 @@
                     ]
                 },
                 {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                            "valueExpression": {
+                                "language": "text/cql",
+                                "expression": "InterventionType"
+                            }
+                        }
+                    ],
                     "linkId": "2.6",
                     "text": "Is the intervention for diagnostic, therapeutic, facet cyst rupture, or RFA?",
                     "type": "choice",
@@ -395,6 +494,15 @@
                     ]
                 },
                 {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                            "valueExpression": {
+                                "language": "text/cql",
+                                "expression": "FirstOrSecondDiagnosis"
+                            }
+                        }
+                    ],
                     "linkId": "2.7",
                     "text": "If diagnostic is this the first or second injection?",
                     "type": "choice",
@@ -437,6 +545,15 @@
                     ]
                 },
                 {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                            "valueExpression": {
+                                "language": "text/cql",
+                                "expression": "FirstDiagnosisInjectionDate"
+                            }
+                        }
+                    ],
                     "linkId": "2.7.1",
                     "text": "What was the qualifying first injection date?",
                     "type": "date",
@@ -493,12 +610,30 @@
                     ], 
                     "item":[
                         {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                                    "valueExpression": {
+                                        "language": "text/cql",
+                                        "expression": "FirstDiagnosisInjectionDate"
+                                    }
+                                }
+                            ],
                             "linkId": "2.10.1",
                             "text": "IA First injection date:",
                             "type": "date",
                             "required": false
                         },
                         {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                                    "valueExpression": {
+                                        "language": "text/cql",
+                                        "expression": "SecondDiagnosisInjectionDate"
+                                    }
+                                }
+                            ],
                             "linkId": "2.10.2",
                             "text": "IA Second injection date:",
                             "type": "date",
@@ -879,6 +1014,15 @@
                     ],
                     "item":[
                         {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                                    "valueExpression": {
+                                        "language": "text/cql",
+                                        "expression": "PrimaryDiagnosisCervicalThoracic"
+                                    }
+                                }
+                            ],
                             "linkId": "3.1.a",
                             "text": "Cervical/Thoracic",
                             "type": "choice",
@@ -981,6 +1125,15 @@
                             ]
                         },
                         {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                                    "valueExpression": {
+                                        "language": "text/cql",
+                                        "expression": "PrimaryDiagnosisLumbarSacral"
+                                    }
+                                }
+                            ],
                             "linkId": "3.1.b",
                             "text": "Lumbar/Sacral",
                             "type": "choice",
@@ -1083,31 +1236,31 @@
                                 },
                                 {
                                     "valueCoding":{
-                                        "code": "Other specified dorsopathies",
+                                        "code": "M53.8",
                                         "display": "Other specified dorsopathies"
                                     }
                                 },
                                 {
                                     "valueCoding":{
-                                        "code": "Other specified dorsopathies, cervical",
+                                        "code": "M53.82",
                                         "display": "Other specified dorsopathies, cervical"
                                     }
                                 },
                                 {
                                     "valueCoding":{
-                                        "code": "Other specified dorsopathies, cervicothoracic",
+                                        "code": "M53.83",
                                         "display": "Other specified dorsopathies, cervicothoracic"
                                     }
                                 },
                                 {
                                     "valueCoding":{
-                                        "code": "Other specified dorsopathies, thoracic",
+                                        "code": "M53.84",
                                         "display": "Other specified dorsopathies, thoracic"
                                     }
                                 },
                                 {
                                     "valueCoding":{
-                                        "code": "Other specified dorsopathies, thoracolumbar",
+                                        "code": "M53.85",
                                         "display": "Other specified dorsopathies, thoracolumbar"
                                     }
                                 },
@@ -1154,25 +1307,25 @@
                                 },
                                 {
                                     "valueCoding":{
-                                        "code": "Other specified dorsopathies",
+                                        "code": "M53.8",
                                         "display": "Other specified dorsopathies"
                                     }
                                 },
                                 {
                                     "valueCoding":{
-                                        "code": "Other specified dorsopathies, lumbar",
+                                        "code": "M53.86",
                                         "display": "Other specified dorsopathies, lumbar"
                                     }
                                 },
                                 {
                                     "valueCoding":{
-                                        "code": "Other specified dorsopathies, lumbosacral",
+                                        "code": "M53.87",
                                         "display": "Other specified dorsopathies, lumbosacral"
                                     }
                                 },
                                 {
                                     "valueCoding":{
-                                        "code": "Other specified dorsopathies, sacral",
+                                        "code": "M53.88",
                                         "display": "Other specified dorsopathies, sacral"
                                     }
                                 },
@@ -1488,14 +1641,14 @@
                     "answerOption":[
                         {
                             "valueCoding":{
-                                "code": "Negative for non-facet pathology sources.  Medical record indicates all of the following are ABSENT: active spine fractures, spine tumors, active infections, sciatica, hip osteoarthritis, sacroiliac impingement, untreated radiculopathy, neurogenic claudication, myofascial pain, compression fractures, disc herniation, osteophytes, rheumatoid arthritis, fibromyalgia.",
-                                "display": "Negative for non-facet pathology sources.  Medical record indicates all of the following are ABSENT: active spine fractures, spine tumors, active infections, sciatica, hip osteoarthritis, sacroiliac impingement, untreated radiculopathy, neurogenic claudication, myofascial pain, compression fractures, disc herniation, osteophytes, rheumatoid arthritis, fibromyalgia."
+                                "code": "Negative for non-facet pathology sources",
+                                "display": "Negative for non-facet pathology sources:  Medical record indicates all of the following are ABSENT: active spine fractures, spine tumors, active infections, sciatica, hip osteoarthritis, sacroiliac impingement, untreated radiculopathy, neurogenic claudication, myofascial pain, compression fractures, disc herniation, osteophytes, rheumatoid arthritis, fibromyalgia."
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": " Positive for non-facet pathology sources:  Medical record indicates one or more of the following are PRESENT: active spine fractures, spine tumors, active infections, sciatica, hip osteoarthritis, sacroiliac impingement, untreated radiculopathy, neurogenic claudication, myofascial pain, compression fractures, disc herniation, osteophytes, rheumatoid arthritis, fibromyalgia.",
-                                "display": " Positive for non-facet pathology sources:  Medical record indicates one or more of the following are PRESENT: active spine fractures, spine tumors, active infections, sciatica, hip osteoarthritis, sacroiliac impingement, untreated radiculopathy, neurogenic claudication, myofascial pain, compression fractures, disc herniation, osteophytes, rheumatoid arthritis, fibromyalgia."
+                                "code": "Positive for non-facet pathology sources",
+                                "display": "Positive for non-facet pathology sources:  Medical record indicates one or more of the following are PRESENT: active spine fractures, spine tumors, active infections, sciatica, hip osteoarthritis, sacroiliac impingement, untreated radiculopathy, neurogenic claudication, myofascial pain, compression fractures, disc herniation, osteophytes, rheumatoid arthritis, fibromyalgia."
                             }
                         }
                     ]
@@ -3505,40 +3658,14 @@
                             }
                         }
                     ],
-                    "enableBehavior": "any",
                     "enableWhen":[
                         {
-                            "operator": "=",
+                            "operator": "!=",
                             "question": "5.2",
                             "answerCoding": {
-                                "code": "Facet cyst Aspiration/Rupture pain follow up",
-                                "display": "Facet cyst Aspiration/Rupture pain follow up"
+                                "code": "N/A initial request",
+                                "display": "N/A initial request"
                             }
-                        },
-                        {
-                            "operator": "=",
-                            "question": "5.4.1",
-                            "answerBoolean": true
-                        },
-                        {
-                            "operator": "=",
-                            "question": "5.4.2",
-                            "answerBoolean": true
-                        },
-                        {
-                            "operator": "=",
-                            "question": "5.4.3",
-                            "answerBoolean": true
-                        },
-                        {
-                            "operator": "=",
-                            "question": "5.4.4",
-                            "answerBoolean": true
-                        },
-                        {
-                            "operator": "=",
-                            "question": "5.4.5",
-                            "answerBoolean": true
                         }
                     ]
                 },
@@ -3712,37 +3839,12 @@
                     "enableBehavior": "any",
                     "enableWhen":[
                         {
-                            "operator": "=",
+                            "operator": "!=",
                             "question": "5.2",
                             "answerCoding": {
-                                "code": "Facet cyst Aspiration/Rupture pain follow up",
-                                "display": "Facet cyst Aspiration/Rupture pain follow up"
+                                "code": "N/A initial request",
+                                "display": "N/A initial request"
                             }
-                        },
-                        {
-                            "operator": "=",
-                            "question": "5.4.1",
-                            "answerBoolean": true
-                        },
-                        {
-                            "operator": "=",
-                            "question": "5.4.2",
-                            "answerBoolean": true
-                        },
-                        {
-                            "operator": "=",
-                            "question": "5.4.3",
-                            "answerBoolean": true
-                        },
-                        {
-                            "operator": "=",
-                            "question": "5.4.4",
-                            "answerBoolean": true
-                        },
-                        {
-                            "operator": "=",
-                            "question": "5.4.5",
-                            "answerBoolean": true
                         }
                     ]
                 },
@@ -4233,13 +4335,13 @@
                         {
                             "linkId": "7.2.1.1",
                             "text": "Date:",
-                            "type": "date",
+                            "type": "reference",
                             "required": true
                         },
                         {
                             "linkId": "7.2.1.2",
                             "text": "Conclusion/Results:",
-                            "type": "text",
+                            "type": "attachment",
                             "required": false
                         },
                         {
