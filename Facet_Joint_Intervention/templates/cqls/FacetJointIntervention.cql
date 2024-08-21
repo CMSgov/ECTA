@@ -82,6 +82,14 @@ code "Compression fracture" : '21947006' from "SNOMED-CT" display 'Compression f
 code "Osteophyte of bone" : '235231000119100' from "SNOMED-CT" display 'Osteophyte of bone'
 code "Rheumatoid arthritis" : '69896004' from "SNOMED-CT" display 'Rheumatoid arthritis'
 
+
+code "Medically complex conditions" : 'LA28886-2' from "LOINC" display 'Medically complex conditions'
+code "Impaired executive functioning" : '736317001' from "SNOMED-CT" display 'Impaired executive functioning'
+code "Body disability AND/OR failure state": '105719004' from "SNOMED-CT" display 'Body disability AND/OR failure state'
+code "Impaired cognition": '386806002' from "SNOMED-CT" display 'Impaired cognition'
+code "Unable to maintain a position" : '282848007' from "SNOMED-CT" display 'Unable to maintain a position'
+
+
 parameter "Claim" Claim
 parameter "Encounter" Encounter
 parameter "ServiceRequest" ServiceRequest
@@ -89,6 +97,7 @@ parameter "PractitionerRole" PractitionerRole
 parameter "Practitioner" Practitioner
 parameter "Condition" Condition
 parameter "Procedure" Procedure
+parameter "Obeservation" Obeservation
 
 
 context Patient
@@ -176,7 +185,8 @@ define "AdditionalServiceRequest":
 
 
 define "InterventionType":
-    if (("PrimaryServiceRequest" ~ "64490 - Inj paravert f jnt c/t 1 lev​" or "PrimaryServiceRequest" ~ "64493 - Inj paravert f jnt l/s 1 lev​") and "PreviousInjectionsCount" < 2 )then 'Diagnostic'
+    if (("PrimaryServiceRequest" ~ "64490 - Inj paravert f jnt c/t 1 lev​" or "PrimaryServiceRequest" ~ "64493 - Inj paravert f jnt l/s 1 lev​") and "PreviousInjectionsCount" < 2 and "IsFacetCystRupture" is not null)then 'Facet Cyst Rupture'
+    else if (("PrimaryServiceRequest" ~ "64490 - Inj paravert f jnt c/t 1 lev​" or "PrimaryServiceRequest" ~ "64493 - Inj paravert f jnt l/s 1 lev​") and "PreviousInjectionsCount" < 2 )then 'Diagnostic'
     else if (("PrimaryServiceRequest" ~ "64490 - Inj paravert f jnt c/t 1 lev​" or "PrimaryServiceRequest" ~ "64493 - Inj paravert f jnt l/s 1 lev​") and "PreviousInjectionsCount" >= 2 )then 'Therapeutic'
     else if ("PrimaryServiceRequest" ~ "64633 - Destroy cerv/thor facet jnt​​" or "PrimaryServiceRequest" ~  "64635 - Destroy lumb/sac facet jnt​​") then 'Radio Frequency Ablation'
     else null
@@ -199,11 +209,44 @@ define "FirstTherapeuticInjectionDate":
 define "SecondTherapeuticInjectionDate":
     start of "Normalize Interval"(First("PreviousInjectionsDates" P where start of "Normalize Interval"(P.performed) after "FirstTherapeuticInjectionDate").performed)
 
+define "IAorMBB":
+    if "AnatomicRestrictionForMBBResource" is null then 'MBB'
+    else 'IA'
 
 define "FirstOrSecondDiagnosis":
-    if "FirstDiagnosisInjectionDate" is not null then 'Intraarticular (IA): second injection.'
-    else 'Intraarticular (IA): first injection.'
+    if "FirstDiagnosisInjectionDate" is not null and "IAorMBB" = 'IA' then 'Intraarticular (IA): second injection.'
+    else if "FirstDiagnosisInjectionDate" is not null and "IAorMBB" = 'MBB' then 'Medial branch block (MBB) second injection.'
+    if "FirstDiagnosisInjectionDate" is null and "IAorMBB" = 'IA' then 'Intraarticular (IA): first injection.'
+    else if "FirstDiagnosisInjectionDate" is null and "IAorMBB" = 'MBB' then 'Medial branch block (MBB) second injection.'
 
+define "PastProcedurePainFollowUp":
+    if "PreviousInjectionsCount" = 1 then '1st diagnostic injection follow up'
+    else if "PreviousInjectionsCount" = 2 then '2nd diagnostic injection follow up'
+    else if "PreviousInjectionsCount" = 3 then 'Therapeutic intervention follow up'
+    else null
+
+
+define "IsFacetCystRupture"
+    if "PrimaryFacetCystDiagnosisCervicalThoracic" is not null or "PrimaryFacetCystDiagnosisLumbarSacral" then 'FCR'
+    else null
+
+define "IsSedationNecessary":
+    if "SedationNecessary" is not null then true
+    else false
+
+
+define "SedationNecessary"
+    if (First([Condition] C where FHIRHelpers."ToCode"(First(C.code.coding)) is not null and FHIRHelpers."ToCode"(First(C.code.coding) is not null) = "Medically complex conditions" )) 
+        then 'Patient has a medical condition that would interfere with the procedure.'
+    else if (First([Condition] C where FHIRHelpers."ToCode"(First(C.code.coding)) is not null and FHIRHelpers."ToCode"(First(C.code.coding) is not null) = "Impaired executive functioning" )) 
+        then 'Patient does not have the cognitive capacity to cooperate.'
+    else if (First([Condition] C where FHIRHelpers."ToCode"(First(C.code.coding)) is not null and FHIRHelpers."ToCode"(First(C.code.coding) is not null) = "Body disability AND/OR failure state" )) 
+        then 'Patient does not have the functional capacity to cooperate.'    
+    else if (First([Condition] C where FHIRHelpers."ToCode"(First(C.code.coding)) is not null and FHIRHelpers."ToCode"(First(C.code.coding) is not null) = "Impaired cognition" )) 
+        then 'Patient does not have the capacity to remain motionless during the procedure.'
+    else if (First([Condition] C where FHIRHelpers."ToCode"(First(C.code.coding)) is not null and FHIRHelpers."ToCode"(First(C.code.coding) is not null) = "Unable to maintain a position" )) 
+        then 'Patient is not able to tolerate remaining in a painful position for a prolonged period of time.'
+    else null
 
 define "PrimaryDiagnosisCervicalThoracicResource":
     First([Condition : "CervicalThoracicConditions"])
@@ -224,22 +267,23 @@ define "NonFacetPathologySourcesCondition":
     First([Condition : "NonFacetPathologySources"])
 
 define "NonFacetPathologySourcesAssessment":
-    if "NonFacetPathologySourcesCondition" is null then 'Negative for non-facet pathology sources'
-    else 'Positive for non-facet pathology sources'
+    if "NonFacetPathologySourcesCondition" is null 
+        then 'Negative for non-facet pathology sources:  Medical record indicates all of the following are ABSENT: active spine fractures, spine tumors, active infections, sciatica, hip osteoarthritis, sacroiliac impingement, untreated radiculopathy, neurogenic claudication, myofascial pain, compression fractures, disc herniation, osteophytes, rheumatoid arthritis, fibromyalgia.'
+    else 'Positive for non-facet pathology sources:  Medical record indicates one or more of the following are PRESENT: active spine fractures, spine tumors, active infections, sciatica, hip osteoarthritis, sacroiliac impingement, untreated radiculopathy, neurogenic claudication, myofascial pain, compression fractures, disc herniation, osteophytes, rheumatoid arthritis, fibromyalgia.'
 
 define "PrimaryDiagnosisCervicalThoracic": 
     First("PrimaryDiagnosisCervicalThoracicResource".code.coding)
+
 define "PrimaryDiagnosisLumbarSacral":
     First("PrimaryDiagnosisLumbarSacralResource".code.coding)
+    
 define "AnatomicRestrictionForMBB":
     First("AnatomicRestrictionForMBBResource".code.coding)
 
 define "SupportiveFindingsForRequestedProcedure":
-    if ("PrimaryDiagnosisCervicalThoracicResource" is not null) then 'Neck pain and its progression'
-    else if("PrimaryDiagnosisLumbarSacralResource" is not null) then 'Axial low back pain and its progression'
+    if ("PrimaryDiagnosisCervicalThoracicResource" is not null) then 'Neck pain and its progression.'
+    else if("PrimaryDiagnosisLumbarSacralResource" is not null) then 'Axial low back pain and its progression.'
     else null
-
-
 
 define function "Normalize Interval Procedure"(choice Choice<FHIR.dateTime, FHIR.Age, FHIR.Period, FHIR.Range, FHIR.string>):
  	 if choice is FHIR.dateTime then
