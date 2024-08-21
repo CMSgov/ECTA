@@ -640,12 +640,30 @@
                             "required": false
                         },
                         {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                                    "valueExpression": {
+                                        "language": "text/cql",
+                                        "expression": "FirstDiagnosisInjectionDate"
+                                    }
+                                }
+                            ],
                             "linkId": "2.10.3",
                             "text": "MBB First injection date:",
                             "type": "date",
                             "required": false
                         },
                         {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                                    "valueExpression": {
+                                        "language": "text/cql",
+                                        "expression": "SecondDiagnosisInjectionDate"
+                                    }
+                                }
+                            ],
                             "linkId": "2.10.4",
                             "text": "MBB Second injection date:",
                             "type": "date",
@@ -737,12 +755,30 @@
                     "required": false
                 },
                 {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                            "valueExpression": {
+                                "language": "text/cql",
+                                "expression": "IsSedationNecessary"
+                            }
+                        }
+                    ],
                     "linkId": "2.13",
                     "text": "Is general anesthesia, moderate sedation, or monitored anesthesia care going to be used?",
                     "type": "boolean",
                     "required": false
                 },
                 {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                            "valueExpression": {
+                                "language": "text/cql",
+                                "expression": "SedationNecessary"
+                            }
+                        }
+                    ],
                     "linkId": "2.14",
                     "text": "What is the specific condition or symptoms that make sedation medically necessary?  Select all that are well documented.",
                     "type": "choice",
@@ -1217,7 +1253,16 @@
                         }
                     ],
                     "item": [
-                        {
+                        {     
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                                    "valueExpression": {
+                                        "language": "text/cql",
+                                        "expression": "AnatomicRestrictionForMBBResource"
+                                    }
+                                }
+                            ],
                             "linkId": "3.1.1.a",
                             "text": "Cervical/Thoracic",
                             "required": true,
@@ -1533,6 +1578,15 @@
                     ]
                 },
                 {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                        "valueExpression": {
+                          "language": "text/cql",
+                          "expression": "AnatomicRestrictionForMBBResource"
+                        }
+                      }
+                    ],
                     "linkId": "3.3",
                     "text": "For the requested therapeutic intra-articular [IA] injection(s), select the Diagnosis(es) that explain anatomic restrictions and why an MBB cannot be performed.",
                     "type": "choice",
@@ -1624,6 +1678,15 @@
                     "required": false
                 },
                 {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                            "valueExpression": {
+                                "language": "text/cql",
+                                "expression": "NonFacetPathologySourcesAssessment"
+                            }
+                        }
+                    ],
                     "linkId": "3.5",
                     "text": "Non-facet pathology per clinical assessment or diagnostic studies has ruled out other sources of the patient's pain, including but not limited to fractures, tumors, infections or significant deformity.",
                     "type": "choice",
@@ -1667,6 +1730,15 @@
             "type": "group",
             "item":[
                 {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                            "valueExpression": {
+                                "language": "text/cql",
+                                "expression": "SupportiveFindingsForRequestedProcedure"
+                            }
+                        }
+                    ],
                     "linkId": "4.1",
                     "text": "The supportive findings for the requested procedure, select one.",
                     "type": "choice",
@@ -3238,6 +3310,15 @@
             "type": "group",
             "item":[
                 {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                        "valueExpression": {
+                          "language": "text/cql",
+                          "expression": "PastProcedurePainFollowUp"
+                        }
+                      }
+                    ],
                     "linkId": "5.2",
                     "text": "Which of the following procedures have been performed and their documented follow up results?",
                     "type": "choice",
@@ -3289,6 +3370,15 @@
                     ]
                 },
                 {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                        "valueExpression": {
+                          "language": "text/cql",
+                          "expression": "FirstDiagnosisInjectionDate"
+                        }
+                      }
+                    ],
                     "linkId": "5.3.1.1",
                     "text": "What was the date of the 1st diagnostic procedure performed?",
                     "type": "date",
@@ -3321,6 +3411,15 @@
                     ]
                 },
                 {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                        "valueExpression": {
+                          "language": "text/cql",
+                          "expression": "SecondDiagnosisInjectionDate"
+                        }
+                      }
+                    ],
                     "linkId": "5.3.2.1",
                     "text": "What was the date of the 2nd diagnostic procedure performed?",
                     "type": "date",
@@ -3417,6 +3516,15 @@
                     ]
                 },
                 {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                        "valueExpression": {
+                          "language": "text/cql",
+                          "expression": "FirstTherapeuticInjectionDate"
+                        }
+                      }
+                    ],
                     "linkId": "5.3.5.1",
                     "text": "What was the date of the therapeutic procedure performed?",
                     "type": "date",
