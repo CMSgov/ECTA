@@ -1,24 +1,393 @@
 {
-    "resourceType": "Library",
-    "version": "1.0.0",
-    "title": "FacetJointIntervention",
-    "name": "FacetJointIntervention",
-    "status": "draft",
-    "type": {
-      "coding": [
-        {
-          "code": "logic-library"
-        }
-      ]
-    },
-    "relatedArtifact": [
+  "resourceType": "Library",
+  "version": "1.0.0",
+  "title": "FacetJointIntervention",
+  "name": "FacetJointIntervention",
+  "status": "draft",
+  "type": {
+    "coding": [
       {
-        "type": "depends-on",
-        "resource": "Library/FHIRHelpers"
+        "code": "logic-library"
       }
-    ],
-    "dataRequirement": [
-      
     ]
-  }
-  
+  },
+  "relatedArtifact": [
+    {
+      "type": "depends-on",
+      "resource": "Library/FHIRHelpers"
+    }
+  ],
+  "dataRequirement": [
+      {
+        "type": "Procedure",
+        "codeFilter": [
+          {
+            "path": "code",
+            "code":[
+              {
+                  "system": "http://www.ama-assn.org/go/cpt",
+                  "code": "64490",
+                  "display": "Inj paravert f jnt c/t 1 lev"
+              },
+              {
+                "system": "http://www.ama-assn.org/go/cpt",
+                "code": "64493",
+                "display": "Inj paravert f jnt l/s 1 lev"
+              },
+              {
+                "system": "http://www.ama-assn.org/go/cpt",
+                "code": "64633",
+                "display": "Destroy cerv/thor facet jnt"
+              },
+              {
+                "system": "http://www.ama-assn.org/go/cpt",
+                "code": "64635",
+                "display": "Destroy lumb/sac facet jnt"
+              },
+              {
+                "system": "http://www.ama-assn.org/go/cpt",
+                "code": "64491",
+                "display": "Inj paravert f jnt c/t 2 lev"
+              },
+              {
+                "system": "http://www.ama-assn.org/go/cpt",
+                "code": "64492",
+                "display": "Inj paravert f jnt c/t 3 lev"
+              },
+              {
+                "system": "http://www.ama-assn.org/go/cpt",
+                "code": "64634",
+                "display": "Destroy c/th facet jnt addl"
+              },
+              {
+                "system": "http://www.ama-assn.org/go/cpt",
+                "code": "64636",
+                "display": "Destroy l/s facet jnt addl​​"
+              },
+              {
+                "system": "http://www.ama-assn.org/go/cpt",
+                "code": "64494",
+                "display": "Inj paravert f jnt l/s 2 lev​"
+              },
+              {
+                "system": "http://www.ama-assn.org/go/cpt",
+                "code": "64495",
+                "display": "Inj paravert f jnt l/s 3 lev"
+              },
+              {
+                "system": "https://hcpcs.codes/",
+                "code": "64490",
+                "display": "Inj paravert f jnt c/t 1 lev"
+              },
+              {
+                "system": "https://hcpcs.codes/",
+                "code": "64493",
+                "display": "Inj paravert f jnt l/s 1 lev"
+              },
+              {
+                "system": "https://hcpcs.codes/",
+                "code": "64633",
+                "display": "Destroy cerv/thor facet jnt"
+              },
+              {
+                "system": "https://hcpcs.codes/",
+                "code": "64635",
+                "display": "Destroy lumb/sac facet jnt"
+              },
+              {
+                "system": "https://hcpcs.codes/",
+                "code": "64491",
+                "display": "Inj paravert f jnt c/t 2 lev"
+              },
+              {
+                "system": "https://hcpcs.codes/",
+                "code": "64492",
+                "display": "Inj paravert f jnt c/t 3 lev"
+              },
+              {
+                "system": "https://hcpcs.codes/",
+                "code": "64634",
+                "display": "Destroy c/th facet jnt addl"
+              },
+              {
+                "system": "https://hcpcs.codes/",
+                "code": "64636",
+                "display": "Destroy l/s facet jnt addl​​"
+              },
+              {
+                "system": "https://hcpcs.codes/",
+                "code": "64494",
+                "display": "Inj paravert f jnt l/s 2 lev​"
+              },
+              {
+                "system": "https://hcpcs.codes/",
+                "code": "64495",
+                "display": "Inj paravert f jnt l/s 3 lev"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "Condition",
+        "codeFilter": [
+          {
+            "path": "code",
+            "code":[
+              {
+                  "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                  "code": "M47.812",
+                  "display": "Spondylosis without myelopathy or radiculopathy, cervical region"
+              },
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "M47.813",
+                "display": "Spondylosis without myelopathy or radiculopathy, cervicothoracic region"
+              },
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "M47.814",
+                "display": "Spondylosis without myelopathy or radiculopathy, thoracic region"
+              },
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "M47.815",
+                "display": "Spondylosis without myelopathy or radiculopathy, thoracolumbar region"
+              },
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "M47.892",
+                "display": "Other spondylosis, cervical region"
+              },
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "M47.893",
+                "display": "Other spondylosis, cervicothoracic region"
+              },
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "M47.894",
+                "display": "Other spondylosis, thoracic region"
+              },
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "M47.895",
+                "display": "Other spondylosis, thoracolumbar region​​"
+              },
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "M48.12",
+                "display": "Ankylosing hyperostosis [Forestier], cervical region​"
+              },
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "M48.13",
+                "display": "Ankylosing hyperostosis [Forestier], cervicothoracic region"
+              },
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "M48.14",
+                "display": "Ankylosing hyperostosis [Forestier], thoracic region"
+              },
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "M48.15",
+                "display": "Ankylosing hyperostosis [Forestier], thoracolumbar region"
+              },
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "M47.816",
+                "display": "Spondylosis without myelopathy or radiculopathy, lumbar region"
+              },
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "M47.817",
+                "display": "Spondylosis without myelopathy or radiculopathy, lumbosacral region"
+              },
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "M47.896",
+                "display": "Other spondylosis, lumbar region"
+              },
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "M47.897",
+                "display": "Other spondylosis, lumbosacral region"
+              },
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "M48.16",
+                "display": "Ankylosing hyperostosis [Forestier], lumbar region"
+              },
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "M48.17",
+                "display": "Ankylosing hyperostosis [Forestier], lumbosacral region"
+              },
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "M71.30",
+                "display": "Other bursal cyst, unspecified site"
+              },
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "M71.38",
+                "display": "Other bursal cyst, other site"
+              },
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "M53.8",
+                "display": "Other specified dorsopathies"
+              },
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "M53.82",
+                "display": "Other specified dorsopathies, cervical"
+              },
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "M53.83",
+                "display": "Other specified dorsopathies, cervicothoracic"
+              },
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "M53.84",
+                "display": "Other specified dorsopathies, thoracic"
+              },
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "M53.85",
+                "display": "Other specified dorsopathies, thoracolumbar"
+              },
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "M53.86",
+                "display": "Other specified dorsopathies, lumbar"
+              },
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "M53.87",
+                "display": "Other specified dorsopathies, lumbosacral"
+              },
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "M53.88",
+                "display": "Other specified dorsopathies, sacral"
+              },
+              {
+                "system": "http://loinc.org",
+                "code": "LA32187-9",
+                "display": "Posterior Fusion"
+              },
+              {
+                "system": "http://loinc.org",
+                "code": "LP266363-3",
+                "display": "Scoliosis"
+              },
+              {
+                "system": "http://snomed.info/sct",
+                "code": "430962009",
+                "display": "Pseudoarthrosis"
+              },
+              {
+                "system": "http://snomed.info/sct",
+                "code": "40854002",
+                "display": "Presence of a sixth lumbar vertebra"
+              },
+              {
+                "system": "http://snomed.info/sct",
+                "code": "281373004",
+                "display": "Sacralization of the fifth lumbar vertebra"
+              },
+              {
+                "system": "http://loinc.org",
+                "code": "LA15324-9",
+                "display": "Severe Osteophytes (bone spurs)"
+              },
+              {
+                "system": "http://snomed.info/sct",
+                "code": "414916001",
+                "display": "Obesity or excessive adipose tissue"
+              },
+              {
+                "system": "http://snomed.info/sct",
+                "code": "363438000",
+                "display": "Spine Tumors"
+              },
+              {
+                "system": "http://snomed.info/sct",
+                "code": "23056005",
+                "display": "Sciatica"
+              },
+              {
+                "system": "http://snomed.info/sct",
+                "code": "239872002",
+                "display": "Hip Osteoarthritis"
+              },
+              {
+                "system": "http://snomed.info/sct",
+                "code": "125606003",
+                "display": "Fracture of cervical spine"
+              },
+              {
+                "system": "http://snomed.info/sct",
+                "code": "72274001",
+                "display": "Nerve root disorder"
+              },
+              {
+                "system": "http://snomed.info/sct",
+                "code": "303081002",
+                "display": "Neurogenic claudication"
+              },
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "M54.1",
+                "display": "Radiculopathy"
+              },
+              {
+                "system": "http://snomed.info/sct",
+                "code": "21947006",
+                "display": "Compression fracture"
+              },
+              {
+                "system": "http://snomed.info/sct",
+                "code": "235231000119100",
+                "display": "Osteophyte of bone"
+              },
+              {
+                "system": "http://snomed.info/sct",
+                "code": "69896004",
+                "display": "Rheumatoid arthritis"
+              },
+              {
+                "system": "http://loinc.org",
+                "code": "LA28886-2",
+                "display": "Medically complex conditions"
+              },
+              {
+                "system": "http://snomed.info/sct",
+                "code": "736317001",
+                "display": "Impaired executive functioning"
+              },
+              {
+                "system": "http://snomed.info/sct",
+                "code": "105719004",
+                "display": "Body disability AND/OR failure state"
+              },
+              {
+                "system": "http://snomed.info/sct",
+                "code": "386806002",
+                "display": "Impaired cognition"
+              },
+              {
+                "system": "http://snomed.info/sct",
+                "code": "282848007",
+                "display": "Unable to maintain a position"
+              }
+            ]
+          }
+        ]
+      }
+  ]
+}
+

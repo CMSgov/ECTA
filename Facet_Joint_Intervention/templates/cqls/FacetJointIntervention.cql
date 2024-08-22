@@ -97,7 +97,7 @@ parameter "PractitionerRole" PractitionerRole
 parameter "Practitioner" Practitioner
 parameter "Condition" Condition
 parameter "Procedure" Procedure
-parameter "Obeservation" Obeservation
+parameter "Observation" Observation
 
 
 context Patient
@@ -105,17 +105,6 @@ context Patient
 define "FjiProcedures": {"64490 - Inj paravert f jnt c/t 1 lev​", "64633 - Destroy cerv/thor facet jnt​​", "64635 - Destroy lumb/sac facet jnt​​", 
     "64491 - Inj paravert f jnt c/t 2 lev​", "64492 - Inj paravert f jnt c/t 3 lev​", "64634 - Destroy c/th facet jnt addl​​", "64636 - Destroy l/s facet jnt addl​​", "64494 - Inj paravert f jnt l/s 2 lev​", "64495 - Inj paravert f jnt l/s 3 lev​"}
 define "FjiPrimaryProcedures": {"64490 - Inj paravert f jnt c/t 1 lev​", "64633 - Destroy cerv/thor facet jnt​​", "64635 - Destroy lumb/sac facet jnt​​"}
-define "CervicalThoracicConditions": {"Spondylosis without myelopathy or radiculopathy, cervical region", "Spondylosis without myelopathy or radiculopathy, cervicothoracic region", "Spondylosis without myelopathy or radiculopathy, thoracic region", 
-    "Spondylosis without myelopathy or radiculopathy, thoracolumbar region", "Other spondylosis, cervical region", "Other spondylosis, cervicothoracic region", "Other spondylosis, thoracic region", "Other spondylosis, thoracolumbar region", 
-    "Ankylosing hyperostosis [Forestier], cervical region", "Ankylosing hyperostosis [Forestier], cervicothoracic region", "Ankylosing hyperostosis [Forestier], thoracic region", "Ankylosing hyperostosis [Forestier], thoracolumbar region"}
-define "LumbarSacralConditions": {"Spondylosis without myelopathy or radiculopathy, lumbar region", "Spondylosis without myelopathy or radiculopathy, lumbosacral region", "Other spondylosis, lumbar region", "Other spondylosis, lumbosacral region", 
-    "Ankylosing hyperostosis [Forestier], lumbar region", "Ankylosing hyperostosis [Forestier], lumbosacral region"}
-define "FacetCystCervicalThoracicConditions": {"Other bursal cyst, unspecified site", "Other bursal cyst, other site", "Other specified dorsopathies", "Other specified dorsopathies, cervical", "Other specified dorsopathies, cervicothoracic",
-    "Other specified dorsopathies, thoracic", "Other specified dorsopathies, thoracolumbar"}
-define "FacetCystLumbarSacralConditions": {"Other bursal cyst, unspecified site", "Other bursal cyst, other site", "Other specified dorsopathies", "Other specified dorsopathies, lumbar", "Other specified dorsopathies, lumbosacral", "Other specified dorsopathies, sacral"}
-define "AnatomicRestrictionConditions": {"Posterior Fusion", "Scoliosis", "Pseudoarthrosis", "Presence of a sixth lumbar vertebra", "Sacralization of the fifth lumbar vertebra", "Severe Osteophytes (bone spurs)", "Obesity or excessive adipose tissue"}
-define "NonFacetPathologySources": {"Spine Tumors", "Sciatica", "Hip Osteoarthritis", "Fracture of cervical spine", "Nerve root disorder", "Neurogenic claudication", "Radiculopathy", "Compression fracture", "Osteophyte of bone", "Rheumatoid arthritis"}
-
 
 
 define Request:
@@ -185,7 +174,7 @@ define "AdditionalServiceRequest":
 
 
 define "InterventionType":
-    if (("PrimaryServiceRequest" ~ "64490 - Inj paravert f jnt c/t 1 lev​" or "PrimaryServiceRequest" ~ "64493 - Inj paravert f jnt l/s 1 lev​") and "PreviousInjectionsCount" < 2 and "IsFacetCystRupture" is not null)then 'Facet Cyst Rupture'
+    if (("PrimaryServiceRequest" ~ "64490 - Inj paravert f jnt c/t 1 lev​" or "PrimaryServiceRequest" ~ "64493 - Inj paravert f jnt l/s 1 lev​") and "PreviousInjectionsCount" < 2 and "IsFacetCystRupture")then 'Facet Cyst Rupture'
     else if (("PrimaryServiceRequest" ~ "64490 - Inj paravert f jnt c/t 1 lev​" or "PrimaryServiceRequest" ~ "64493 - Inj paravert f jnt l/s 1 lev​") and "PreviousInjectionsCount" < 2 )then 'Diagnostic'
     else if (("PrimaryServiceRequest" ~ "64490 - Inj paravert f jnt c/t 1 lev​" or "PrimaryServiceRequest" ~ "64493 - Inj paravert f jnt l/s 1 lev​") and "PreviousInjectionsCount" >= 2 )then 'Therapeutic'
     else if ("PrimaryServiceRequest" ~ "64633 - Destroy cerv/thor facet jnt​​" or "PrimaryServiceRequest" ~  "64635 - Destroy lumb/sac facet jnt​​") then 'Radio Frequency Ablation'
@@ -216,8 +205,9 @@ define "IAorMBB":
 define "FirstOrSecondDiagnosis":
     if "FirstDiagnosisInjectionDate" is not null and "IAorMBB" = 'IA' then 'Intraarticular (IA): second injection.'
     else if "FirstDiagnosisInjectionDate" is not null and "IAorMBB" = 'MBB' then 'Medial branch block (MBB) second injection.'
-    if "FirstDiagnosisInjectionDate" is null and "IAorMBB" = 'IA' then 'Intraarticular (IA): first injection.'
+    else if "FirstDiagnosisInjectionDate" is null and "IAorMBB" = 'IA' then 'Intraarticular (IA): first injection.'
     else if "FirstDiagnosisInjectionDate" is null and "IAorMBB" = 'MBB' then 'Medial branch block (MBB) second injection.'
+    else null
 
 define "PastProcedurePainFollowUp":
     if "PreviousInjectionsCount" = 1 then '1st diagnostic injection follow up'
@@ -226,45 +216,94 @@ define "PastProcedurePainFollowUp":
     else null
 
 
-define "IsFacetCystRupture"
-    if "PrimaryFacetCystDiagnosisCervicalThoracic" is not null or "PrimaryFacetCystDiagnosisLumbarSacral" then 'FCR'
-    else null
+define "IsFacetCystRupture":
+    if ("PrimaryFacetCystDiagnosisCervicalThoracic" is not null and "PrimaryFacetCystDiagnosisLumbarSacral" is not null) then true
+    else false
 
 define "IsSedationNecessary":
     if "SedationNecessary" is not null then true
     else false
 
 
-define "SedationNecessary"
-    if (First([Condition] C where FHIRHelpers."ToCode"(First(C.code.coding)) is not null and FHIRHelpers."ToCode"(First(C.code.coding) is not null) = "Medically complex conditions" )) 
+define "SedationNecessary":
+    if (First([Condition] C where FHIRHelpers."ToCode"(First(C.code.coding)) is not null and FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Medically complex conditions" ) is not null) 
         then 'Patient has a medical condition that would interfere with the procedure.'
-    else if (First([Condition] C where FHIRHelpers."ToCode"(First(C.code.coding)) is not null and FHIRHelpers."ToCode"(First(C.code.coding) is not null) = "Impaired executive functioning" )) 
+    else if (First([Condition] C where FHIRHelpers."ToCode"(First(C.code.coding)) is not null and FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Impaired executive functioning" ) is not null) 
         then 'Patient does not have the cognitive capacity to cooperate.'
-    else if (First([Condition] C where FHIRHelpers."ToCode"(First(C.code.coding)) is not null and FHIRHelpers."ToCode"(First(C.code.coding) is not null) = "Body disability AND/OR failure state" )) 
+    else if (First([Condition] C where FHIRHelpers."ToCode"(First(C.code.coding)) is not null and FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Body disability AND/OR failure state" ) is not null) 
         then 'Patient does not have the functional capacity to cooperate.'    
-    else if (First([Condition] C where FHIRHelpers."ToCode"(First(C.code.coding)) is not null and FHIRHelpers."ToCode"(First(C.code.coding) is not null) = "Impaired cognition" )) 
+    else if (First([Condition] C where FHIRHelpers."ToCode"(First(C.code.coding)) is not null and FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Impaired cognition" ) is not null) 
         then 'Patient does not have the capacity to remain motionless during the procedure.'
-    else if (First([Condition] C where FHIRHelpers."ToCode"(First(C.code.coding)) is not null and FHIRHelpers."ToCode"(First(C.code.coding) is not null) = "Unable to maintain a position" )) 
+    else if (First([Condition] C where FHIRHelpers."ToCode"(First(C.code.coding)) is not null and FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Unable to maintain a position" ) is not null) 
         then 'Patient is not able to tolerate remaining in a painful position for a prolonged period of time.'
     else null
 
 define "PrimaryDiagnosisCervicalThoracicResource":
-    First([Condition : "CervicalThoracicConditions"])
+    First([Condition] C where FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Spondylosis without myelopathy or radiculopathy, cervical region" or 
+       FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Spondylosis without myelopathy or radiculopathy, cervicothoracic region" or 
+       FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Spondylosis without myelopathy or radiculopathy, thoracic region" or 
+       FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Spondylosis without myelopathy or radiculopathy, thoracolumbar region" or 
+       FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Other spondylosis, cervical region" or 
+       FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Other spondylosis, cervicothoracic region" or 
+       FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Other spondylosis, thoracic region" or 
+       FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Other spondylosis, thoracolumbar region" or 
+       FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Ankylosing hyperostosis [Forestier], cervical region" or 
+       FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Ankylosing hyperostosis [Forestier], cervicothoracic region" or 
+       FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Ankylosing hyperostosis [Forestier], thoracic region" or 
+       FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Ankylosing hyperostosis [Forestier], thoracolumbar region"
+       )
 
 define "PrimaryDiagnosisLumbarSacralResource":
-    First([Condition : "LumbarSacralConditions"])
+    First([Condition] C where FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Spondylosis without myelopathy or radiculopathy, lumbar region" or 
+       FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Spondylosis without myelopathy or radiculopathy, lumbosacral region" or 
+       FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Other spondylosis, lumbar region" or 
+       FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Other spondylosis, lumbosacral region" or 
+       FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Ankylosing hyperostosis [Forestier], lumbar region" or 
+       FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Ankylosing hyperostosis [Forestier], lumbosacral region"
+       )
 
 define "PrimaryFacetCystDiagnosisCervicalThoracic":
-    First([Condition : "FacetCystCervicalThoracicConditions"])
+    First([Condition] C where FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Other bursal cyst, unspecified site" or 
+       FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Other bursal cyst, other site" or 
+       FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Other specified dorsopathies" or 
+       FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Other specified dorsopathies, cervical" or 
+       FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Other specified dorsopathies, cervicothoracic" or 
+       FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Other specified dorsopathies, thoracic" or
+       FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Other specified dorsopathies, thoracolumbar"
+       )
 
 define "PrimaryFacetCystDiagnosisLumbarSacral":
-    First([Condition : "FacetCystLumbarSacralConditions"])
+    First([Condition] C where FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Other bursal cyst, unspecified site" or 
+       FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Other bursal cyst, other site" or 
+       FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Other specified dorsopathies" or 
+       FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Other specified dorsopathies, lumbar" or 
+       FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Other specified dorsopathies, lumbosacral" or 
+       FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Other specified dorsopathies, sacral"
+       )
 
 define "AnatomicRestrictionForMBBResource":
-    First([Condition : "AnatomicRestrictionConditions"])
+    First([Condition] C where FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Posterior Fusion" or 
+       FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Scoliosis" or 
+       FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Pseudoarthrosis" or 
+       FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Presence of a sixth lumbar vertebra" or 
+       FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Sacralization of the fifth lumbar vertebra" or 
+       FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Severe Osteophytes (bone spurs)" or
+       FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Obesity or excessive adipose tissue" 
+    )
 
 define "NonFacetPathologySourcesCondition":
-    First([Condition : "NonFacetPathologySources"])
+    First([Condition] C where FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Spine Tumors" or 
+       FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Sciatica" or 
+       FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Hip Osteoarthritis" or 
+       FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Fracture of cervical spine" or 
+       FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Nerve root disorder" or 
+       FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Neurogenic claudication" or
+       FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Radiculopathy" or 
+       FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Compression fracture" or 
+       FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Osteophyte of bone" or
+       FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Rheumatoid arthritis" 
+    )
+
 
 define "NonFacetPathologySourcesAssessment":
     if "NonFacetPathologySourcesCondition" is null 
