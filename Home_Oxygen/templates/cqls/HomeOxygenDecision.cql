@@ -205,10 +205,8 @@ code "Familial erythrocytosis" : 'D75.0' from "ICD10CM" display 'Familial erythr
 
 code "Dependent edema (finding)": '248499004' from "SNOMEDCT" display 'Dependent edema (finding)'
 code "Pulmonary artery pressure monitoring (regime/therapy)": '24599003' from "SNOMEDCT" display 'Pulmonary artery pressure monitoring (regime/therapy)'
-code "NM Heart Gated and Blood pool and Ejection fraction and Wall motion W single state of exercise": '81567-0' from "LOINC" display 'NM Heart Gated and Blood pool and Ejection fraction and Wall motion W single state of exercise'
 code "Echocardiography (procedure)": '40701008' from "SNOMEDCT" display 'Echocardiography (procedure)'
 code "P pulmonale (finding)": '164914003' from "SNOMEDCT" display 'P pulmonale (finding)'
-code "Treatment stopped - alternative therapy undertaken (situation) code": '182868002' from "SNOMEDCT" display 'Treatment stopped - alternative therapy undertaken (situation)'
 
 code "Cardiopulmonary exercise test (procedure)": '447346005' from "SNOMEDCT" display 'Cardiopulmonary exercise test (procedure)'
 code "Secondary polycythemia": 'D75.1' from "ICD10CM" display 'Secondary polycythemia'

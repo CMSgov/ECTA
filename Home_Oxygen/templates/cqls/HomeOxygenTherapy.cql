@@ -175,10 +175,8 @@ code "Cor pulmonale (chronic)": 'I27.81' from "ICD10CM" display 'Cor pulmonale (
 code "Familial erythrocytosis": 'D75.0' from "ICD10CM" display 'Familial erythrocytosis'
 code "Dependent edema (finding)": '248499004' from "SNOMEDCT" display 'Dependent edema (finding)'
 code "Pulmonary artery pressure monitoring (regime/therapy)": '24599003' from "SNOMEDCT" display 'Pulmonary artery pressure monitoring (regime/therapy)'
-code "NM Heart Gated and Blood pool and Ejection fraction and Wall motion W single state of exercise": '81567-0' from "LOINC" display 'NM Heart Gated and Blood pool and Ejection fraction and Wall motion W single state of exercise'
 code "Echocardiography (procedure)": '40701008' from "SNOMEDCT" display 'Echocardiography (procedure)'
 code "P pulmonale (finding)": '164914003' from "SNOMEDCT" display 'P pulmonale (finding)'
-code "Treatment stopped - alternative therapy undertaken (situation) code": '182868002' from "SNOMEDCT" display 'Treatment stopped - alternative therapy undertaken (situation)'
 code "Cardiopulmonary exercise test (procedure)": '447346005' from "SNOMEDCT" display 'Cardiopulmonary exercise test (procedure)'
 code "Secondary polycythemia": 'D75.1' from "ICD10CM" display 'Secondary polycythemia'
 code "Age-related physical debility": 'R54' from "ICD10CM" display 'Age-related physical debility'
@@ -209,6 +207,7 @@ code "Respiratory assist device, bi-level pressure capability, without backup ra
 code "Respiratory assist device, bi-level pressure capability, with back-up rate feature, used with noninvasive interface, e.g., nasal or facial mask (intermittent assist device with continuous positive airway pressure device)" : 'E0471' from "HCPCS" display 'Respiratory assist device, bi-level pressure capability, with back-up rate feature, used with noninvasive interface, e.g., nasal or facial mask (intermittent assist device with continuous positive airway pressure device)'
 code "Respiratory assist device, bi-level pressure capability, with backup rate feature, used with invasive interface, e.g., tracheostomy tube (intermittent assist device with continuous positive airway pressure device)": 'E0472' from "HCPCS" display 'Respiratory assist device, bi-level pressure capability, with backup rate feature, used with invasive interface, e.g., tracheostomy tube (intermittent assist device with continuous positive airway pressure device)'
 code "Cannula, nasal": 'A4615' from "HCPCS" display 'Cannula, nasal'
+
 code "Positive airway pressure nap study (procedure)": '703476007' from "SNOMEDCT" display 'Positive airway pressure nap study (procedure)'
 code "Continuous positive airway pressure titration (procedure)": '446573003' from "SNOMEDCT" display 'Continuous positive airway pressure titration (procedure)'
 code "Use of supplemental oxygen": '88658-0' from "LOINC" display 'Use of supplemental oxygen'
@@ -218,7 +217,6 @@ code "Nocturnal continuous positive airway pressure (regime/therapy)": '34281000
 code "Titration method (procedure)": '117007006' from "SNOMEDCT" display 'Titration method (procedure)'
 code "Pigmentation of skin or mucosa (finding)": '373923006' from "SNOMEDCT" display 'Pigmentation of skin or mucosa (finding)'
 code "Pulse oximetry (procedure)": '252465000' from "SNOMEDCT" display 'Pulse oximetry (procedure)'
-code "Ambulatory Health Care Facilities; Clinic/Center, Sleep Disorder Diagnostic": '261QS1200X' from "HealthCareProviderTaxonomy" display 'Ambulatory Health Care Facilities; Clinic/Center, Sleep Disorder Diagnostic'
 
 code "Apnea hypopnea index 24 hour": '69990-0' from "LOINC" display 'Apnea hypopnea index 24 hour'
 code "Respiratory disturbance index": '90566-1' from "LOINC" display 'Respiratory disturbance index'
@@ -227,14 +225,6 @@ code "Vitiligo (disorder)": '56727007' from "SNOMEDCT" display 'Vitiligo (disord
 code "Inflammatory bowel disease (disorder)": '24526004' from "SNOMEDCT" display 'Inflammatory bowel disease (disorder)'
 code "Dyspnea on exertion (finding)": '60845006' from "SNOMEDCT" display 'Dyspnea on exertion (finding)'
 
-//Immobilization_Codes
-
-code "102491009": '102491009' from "SNOMEDCT"
-code "129857008": '129857008' from "SNOMEDCT"
-code "129859006": '129859006' from "SNOMEDCT"
-code "160685001": '160685001' from "SNOMEDCT"
-code "371632003": '371632003' from "SNOMEDCT"
-code "8510008": '8510008' from "SNOMEDCT"
 
 parameter "Encounter" Encounter
 parameter "DeviceRequest" DeviceRequest
