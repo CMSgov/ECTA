@@ -651,6 +651,24 @@
           "codeFilter": [
             {
               "path": "code",
+              "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1034.477"
+            }
+          ]
+        },
+        {
+          "type": "Condition",
+          "codeFilter": [
+            {
+              "path": "code",
+              "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1182.47"
+            }
+          ]
+        },
+        {
+          "type": "Condition",
+          "codeFilter": [
+            {
+              "path": "code",
               "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.526.2.1353"
             }
           ]
@@ -870,17 +888,7 @@
                   "system": "http://snomed.info/sct",
                   "code": "3716002",
                   "display": "Goiter (disorder)"
-                },
-                {
-                  "system": "http://snomed.info/sct",
-                  "code": "3716002",
-                  "display": "Goiter (disorder)"
-                },
-                {
-                  "system": "http://snomed.info/sct",
-                  "code": "3716002",
-                  "display": "Goiter (disorder)"
-                },
+                }
                 {
                   "system": "http://snomed.info/sct",
                   "code": "166818002",
@@ -890,11 +898,6 @@
                   "system": "http://loinc.org",
                   "code": "94996-6",
                   "display": "Walks indoors - usual functional ability during assessment period [CMS Assessment]"
-                },
-                {
-                  "system": "http://hl7.org/fhir/sid/icd-10-cm",
-                  "code": "I20.9",
-                  "display": "Angina pectoris, unspecified"
                 },
                 {
                   "system": "http://hl7.org/fhir/sid/icd-10-cm",
@@ -965,11 +968,6 @@
                   "system": "http://snomed.info/sct",
                   "code": "56727007",
                   "display": "Vitiligo (disorder)"
-                },
-                {
-                  "system": "http://snomed.info/sct",
-                  "code": "24526004",
-                  "display": "Inflammatory bowel disease (disorder)"
                 },
                 {
                   "system": "http://snomed.info/sct",
@@ -1097,6 +1095,11 @@
                 },
                 {
                   "system": "http://snomed.info/sct",
+                  "code": "N0000011343",
+                  "display": "Interferon-gamma [Chemical/Ingredient]"
+                },
+                {
+                  "system": "http://snomed.info/sct",
                   "code": "278297009",
                   "display": "Blood gas analysis (procedure)"
                 },
@@ -1144,6 +1147,11 @@
                   "system": "http://snomed.info/sct",
                   "code": "252465000",
                   "display": "Pulse oximetry (procedure)"
+                },
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "117007006",
+                  "display": "Titration method (procedure)"
                 }
               ]
             }
@@ -1177,6 +1185,11 @@
                   "system": "http://loinc.org",
                   "code": "32354-3",
                   "display": "Hematocrit [Volume Fraction] of Arterial blood"
+                },
+                {
+                  "system": "http://loinc.org",
+                  "code": "16931-8",
+                  "display": "Hematocrit/Hemoglobin [Ratio] of Blood by Automated count"
                 },
                 {
                   "system": "http://loinc.org",
@@ -1310,6 +1323,141 @@
               "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1047.428"
             }
           ]
-        }
+        },
+        {
+          "type": "Encounter",
+          "codeFilter": [
+            {
+              "path": "type",
+              "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1182.285"
+            }
+          ]
+        },
+      {
+        "type": "DeviceRequest",
+        "codeFilter": [
+          {
+            "path": "type",
+            "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1219.130"
+          },
+          {
+            "path": "code",
+            "code":[
+              {
+                "system": "https://hcpcs.codes/",
+                "code": "E0433"
+              },
+              {
+                "system": "https://hcpcs.codes/",
+                "code": "E0434"
+              },
+              {
+                "system": "https://hcpcs.codes/",
+                "code": "E0444"
+              },
+              {
+                "system": "https://hcpcs.codes/",
+                "code": "E0431"
+              },
+              {
+                "system": "https://hcpcs.codes/",
+                "code": "K0738"
+              },
+              {
+                "system": "https://hcpcs.codes/",
+                "code": "E0443"
+              },
+              {
+                "system": "https://hcpcs.codes/",
+                "code": "E1392"
+              },
+              {
+                "system": "https://hcpcs.codes/",
+                "code": "E0439"
+              },
+              {
+                "system": "https://hcpcs.codes/",
+                "code": "E0442"
+              },
+              {
+                "system": "https://hcpcs.codes/",
+                "code": "E0424"
+              },
+              {
+                "system": "https://hcpcs.codes/",
+                "code": "E0441"
+              },
+              {
+                "system": "https://hcpcs.codes/",
+                "code": "E1390"
+              },
+              {
+                "system": "https://hcpcs.codes/",
+                "code": "E1391"
+              },
+              {
+                "system": "https://hcpcs.codes/",
+                "code": "E0465",
+                "display": "Home ventilator, any type, used with invasive interface, (e.g., tracheostomy tube)"
+              },
+              {
+                "system": "https://hcpcs.codes/",
+                "code": "E0466",
+                "display": "Home ventilator, any type, used with non-invasive interface, (e.g., mask, chest shell)"
+              },
+              {
+                "system": "https://hcpcs.codes/",
+                "code": "E0467",
+                "display": "Home ventilator, multi-function respiratory device, also performs any or all of the additional functions of oxygen concentration, drug nebulization, aspiration, and cough stimulation, includes all accessories, components and supplies for all functions"
+              },
+              {
+                "system": "https://hcpcs.codes/",
+                "code": "E0470",
+                "display": "Respiratory assist device, bi-level pressure capability, without backup rate feature, used with noninvasive interface, e.g., nasal or facial mask (intermittent assist device with continuous positive airway pressure device)"
+              },
+              {
+                "system": "https://hcpcs.codes/",
+                "code": "E0471",
+                "display": "Respiratory assist device, bi-level pressure capability, with back-up rate feature, used with noninvasive interface, e.g., nasal or facial mask (intermittent assist device with continuous positive airway pressure device)"
+              },
+              {
+                "system": "https://hcpcs.codes/",
+                "code": "E0472",
+                "display": "Respiratory assist device, bi-level pressure capability, with backup rate feature, used with invasive interface, e.g., tracheostomy tube (intermittent assist device with continuous positive airway pressure device)"
+              },
+              {
+                "system": "https://hcpcs.codes/",
+                "code": "A4615",
+                "display": "Cannula, nasal"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "Encounter",
+        "codeFilter": [
+          {
+            "path": "code",
+            "code":[
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              }
+            ]
+          },
+          {
+            "path": "code",
+            "code":[
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0004",
+                "code": "O",
+                "display": "Outpatient"
+              }
+            ]
+          }
+        ]
+      }
     ]
 }
