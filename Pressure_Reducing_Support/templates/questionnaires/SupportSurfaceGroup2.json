@@ -108,8 +108,8 @@
           "enableWhen": [
             {
               "question": "1.5",
-              "operator": "!=",
-              "answerString": ""
+              "operator": "exists",
+              "answerBoolean": true
             }
           ]
         },
