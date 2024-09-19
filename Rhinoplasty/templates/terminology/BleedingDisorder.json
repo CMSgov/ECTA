@@ -6,7 +6,7 @@
         "lastUpdated": "2021-08-13T23:44:35.655+05:30",
         "source": "#yRIHWAbrGR7sRW4B"
     },
-    "url": "<FHIR-server>/ ValueSet/2.16.840.1.113762.1.4.1029.287",
+    "url": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1029.287",
     "identifier": [
         {
             "system": "urn:ietf:rfc:3986",
