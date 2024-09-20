@@ -10,7 +10,7 @@
     "identifier": [
         {
             "system": "urn:ietf:rfc:3986",
-            "value": "1.2.91.13925.17760.4352590"
+            "value": "urn:oid:1.2.91.13925.17760.4352590"
         }
     ],
     "version": "Latest",
