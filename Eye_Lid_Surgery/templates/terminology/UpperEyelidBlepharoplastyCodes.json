@@ -16,7 +16,7 @@
   "compose": {
     "include": [
       {
-        "system": "https://www.aapc.com/resources/medical-coding/cpt.aspx ",
+        "system": "https://www.aapc.com/resources/medical-coding/cpt.aspx",
         "version": "2021-10",
         "concept": [
           {
