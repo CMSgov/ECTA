@@ -3018,7 +3018,10 @@
           ],
           "initial": [
             {
-              "valueString": "Initial or original order for certification"
+              "valueCoding": {
+                "code": "Initial or original order for certification",
+                "display": "Initial or original order for certification"
+              }
             }
           ]
         },
