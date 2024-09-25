@@ -24,326 +24,2156 @@
   "item": [
     {
       "linkId": "1",
-      "text": "Clinical Assessment",
+      "text": "Written Order for Support Surface",
       "type": "group",
       "item": [
         {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "RelevantDiagnoses"
-              }
-            }
-          ],
           "linkId": "1.1",
-          "text": "Relevant Diagnoses",
-          "type": "text",
+          "text": "Date of order",
+          "type": "date",
           "required": true
         },
         {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "ProgramsUndertaken"
-              }
-            }
-          ],
           "linkId": "1.2",
-          "text": "Comprehensive ulcer treatment programs undertaken over the past month",
-          "type": "text",
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "Group1DeviceUsage"
-              }
-            }
-          ],
-          "linkId": "1.3",
-          "text": "Group 1 surfaces used over the past month",
-          "type": "text",
-          "required": true
-        },
-        {
-          "linkId": "1.4",
-          "text": "Has there been improvement in the patient's condition over the past month?",
-          "type": "boolean",
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "UlcerTreatment"
-              }
-            }
-          ],
-          "linkId": "1.5",
-          "text": "Treatment undertaken for pressure ulcers within the past 60 days",
-          "type": "text"
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                  "language": "text/cql",
-                  "expression": "Group2or3SurfaceUsed"
-              }
-            }
-          ],
-          "linkId": "1.6",
-          "text": "Group 2 or 3 support surface the patient has been on, within the past 30 days after the treatment",
-          "type": "text",
-          "enableWhen": [
-            {
-              "question": "1.5",
-              "operator": "exists",
-              "answerBoolean": true
-            }
-          ]
-        },
-        {
-          "linkId": "1.7",
-          "text": "Has the patient been on the support surface immediately prior to discharge from a hospital or nursing facility?",
-          "type": "boolean",
-          "required": true,
-          "enableBehavior": "any",
-          "enableWhen": [
-            {
-              "question": "1.5",
-              "operator": "exists",
-              "answerBoolean": true
-            },
-            {
-              "question": "1.6",
-              "operator": "exists",
-              "answerBoolean": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "linkId": "2",
-      "text": "Observations",
-      "type": "group",
-      "item": [
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "Stage2UlcerCount"
-              }
-            }
-          ],
-          "linkId": "2.1",
-          "text": "Stage 2 Pressure ulcers count",
-          "type": "integer"
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "Stage3UlcerCount"
-              }
-            }
-          ],
-          "linkId": "2.2",
-          "text": "Stage 3 Pressure ulcers count",
-          "type": "integer"
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "Stage4UlcerCount"
-              }
-            }
-          ],
-          "linkId": "2.3",
-          "text": "Stage 4 Pressure ulcers count",
-          "type": "integer"
-        }
-      ]
-    },
-    {
-      "linkId": "3",
-      "text": "Supplier/Provider Information",
-      "type": "group",
-      "item": [
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "SupplierName"
-              }
-            }
-          ],
-          "linkId": "3.1",
-          "text": "Name",
+          "text": "Treating Practitioner Name",
           "type": "string",
           "required": true
         },
         {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "SupplierNPI"
-              }
-            }
-          ],
-          "linkId": "3.2",
+          "linkId": "1.3",
+          "text": "Credentials",
+          "type": "string",
+          "required": true
+        },
+        {
+          "linkId": "1.4",
           "text": "NPI",
           "type": "string",
           "required": true
         },
         {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "SupplierAddressLine"
-              }
-            }
-          ],
-          "linkId": "3.3",
-          "text": "Address Line",
-          "type": "string",
+          "linkId": "1.5",
+          "text": "Support Surface Item Requested/Description",
+          "type": "text",
           "required": true
         },
         {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "SupplierAddressCity"
-              }
-            }
-          ],
-          "linkId": "3.4",
-          "text": "Address City",
-          "type": "string",
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "SupplierAddressState"
-              }
-            }
-          ],
-          "linkId": "3.5",
-          "text": "Address State",
-          "type": "string",
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                  "language": "text/cql",
-                  "expression": "SupplierAddressPostalCode"
-              }
-            }
-          ],
-          "linkId": "3.6",
-          "text": "Address Postal Code",
+          "linkId": "1.6",
+          "text": "Provider Signature",
           "type": "string",
           "required": true
         }
       ]
     },
     {
-      "linkId": "4",
-      "text": "Other Required Information",
+      "linkId": "2",
+      "text": "Support Surface Request",
       "type": "group",
       "item": [
         {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "SubmissionDate"
-              }
-            }
-          ],
-          "linkId": "4.1",
-          "text": "Submission date",
-          "type": "date",
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "DeliveryAddress"
-              }
-            }
-          ],
-          "linkId": "4.2",
-          "text": "Deliver to",
-          "type": "text",
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "Typeofrequest"
-              }
-            }
-          ],
-          "linkId": "4.3",
-          "text": "Type of request",
+          "linkId": "2.1",
+          "text": "The requested support surface is from which group?",
           "type": "choice",
           "required": true,
-          "answerOption": [
+          "answerOption":[
             {
-              "valueCoding": {
+              "valueCoding":{
+                "code": "Group 1",
+                "display": "Group 1"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "Group 2",
+                "display": "Group 2"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "Group 3",
+                "display": "Group 3"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "2.1.1",
+          "text": "Group 1 type of request?",
+          "type": "choice",
+          "required": true,
+          "answerOption":[
+            {
+              "valueCoding":{
                 "code": "Initial",
                 "display": "Initial"
               }
             },
             {
-              "valueCoding": {
-                "code": "Resubmission review",
-                "display": "Resubmission review"
+              "valueCoding":{
+                "code": "Resubmission",
+                "display": "Resubmission"
+              }
+            }
+          ],
+          "enableWhen":[
+            {
+              "operator": "=",
+              "question": "2.1",
+              "answerCoding": {
+                "code": "Group 1",
+                "display": "Group 1"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "2.1.2",
+          "text": "Group 2 type of request?",
+          "type": "choice",
+          "required": true,
+          "answerOption":[
+            {
+              "valueCoding":{
+                "code": "Initial",
+                "display": "Initial"
               }
             },
             {
-              "valueCoding": {
+              "valueCoding":{
+                "code": "Resubmission",
+                "display": "Resubmission"
+              }
+            }
+          ],
+          "enableWhen":[
+            {
+              "operator": "=",
+              "question": "2.1",
+              "answerCoding": {
+                "code": "Group 2",
+                "display": "Group 2"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "2.1.3",
+          "text": "Group 3 type of request?",
+          "type": "choice",
+          "required": true,
+          "answerOption":[
+            {
+              "valueCoding":{
+                "code": "Initial",
+                "display": "Initial"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "Resubmission",
+                "display": "Resubmission"
+              }
+            }
+          ],
+          "enableWhen":[
+            {
+              "operator": "=",
+              "question": "2.1",
+              "answerCoding": {
+                "code": "Group 3",
+                "display": "Group 3"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "3",
+      "text": "Pressure Reducing Support Surface Being Requested",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "3.1",
+          "text": "Group 1 PRSS item being requested.",
+          "type": "choice",
+          "required": true,
+          "answerOption":[
+            {
+              "valueCoding":{
+                "code": "E0181",
+                "display": "Powered pressure reducing mattress overlay/pad, alternating, with pump, includes heavy duty"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "E0182",
+                "display": "Pump for alternating pressure pad, for replacement only"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "E0184",
+                "display": "Dry pressure mattress"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "E0185",
+                "display": "Gel or gel-like pressure pad for mattress, standard mattress length and width"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "E0186",
+                "display": "Air pressure mattress"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "E0187",
+                "display": "Water pressure mattress"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "E0188",
+                "display": "Synthetic sheepskin pad"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "E0189",
+                "display": "Lambswool sheepskin pad, any size"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "E0196",
+                "display": "Gel pressure mattress"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "E0197",
+                "display": "Air pressure pad for mattress, standard mattress length and width"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "E0198",
+                "display": "Water pressure pad for mattress, standard mattress length and width"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "E0199",
+                "display": "Dry pressure pad for mattress, standard mattress length and width"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "E1399",
+                "display": "Durable medical equipment, miscellaneous"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "A4640",
+                "display": "Replacement pad for use with medically necessary alternating pressure pad owned by patient"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "A9270",
+                "display": "Non-covered Item or service"
+              }
+            }
+          ],
+          "enableWhen":[
+            {
+              "operator": "=",
+              "question": "2.1",
+              "answerCoding": {
+                "code": "Group 1",
+                "display": "Group 1"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "3.2",
+          "text": "Group 2 PRSS item being requested.",
+          "type": "choice",
+          "required": true,
+          "answerOption":[
+            {
+              "valueCoding":{
+                "code": "E0193",
+                "display": "Powered air flotation bed (low air loss therapy)"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "E0277",
+                "display": "Powered pressure-reducing air mattress"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "E0371",
+                "display": "Nonpowered advanced pressure reducing overlay for mattess, standard mattress length and width"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "E0372",
+                "display": "Powered air overlay for mattress, standard mattress length and width"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "E0373",
+                "display": "Nonpowered advanced pressure reducing mattress"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "E1399",
+                "display": "Durable medical equipment, miscellaneous"
+              }
+            }
+          ],
+          "enableWhen":[
+            {
+              "operator": "=",
+              "question": "2.1",
+              "answerCoding": {
+                "code": "Group 2",
+                "display": "Group 2"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "3.3",
+          "text": "Group 3 PRSS item being requested.",
+          "type": "choice",
+          "required": true,
+          "answerOption":[
+            {
+              "valueCoding":{
+                "code": "E0194",
+                "display": "Group 3 - Air fluidized bed"
+              }
+            }
+          ],
+          "enableWhen":[
+            {
+              "operator": "=",
+              "question": "2.1",
+              "answerCoding": {
+                "code": "Group 3",
+                "display": "Group 3"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "4",
+      "text": "Pressure Reducing Support Surface Criteria",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "4.1",
+          "text": "Beneficiary's ability to make changes in body position, or presence of pressure ulcer/injury on the trunk or pelvis?",
+          "type": "choice",
+          "required": true,
+          "answerOption":[
+            {
+              "valueCoding":{
+                "code": "Criteria 1: Completely immobile, cannot makes changes without assistance.",
+                "display": "Criteria 1: Completely immobile, cannot makes changes without assistance."
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "Criteria 2: Limited mobility, cannot make changes significant enough to alleviate pressure without assistance.  Provider Note: The medical record must document the severity of the condition sufficiently to demonstrate the medical necessity for a PRSS.",
+                "display": "Criteria 2: Limited mobility, cannot make changes significant enough to alleviate pressure without assistance.  Provider Note: The medical record must document the severity of the condition sufficiently to demonstrate the medical necessity for a PRSS."
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "Criteria 3: Any stage pressure ulcer/injury on the trunk or pelvis. Provider Note: The medical record must document the severity of the condition sufficiently to demonstrate the medical necessity for a PRSS.",
+                "display": "Criteria 3: Any stage pressure ulcer/injury on the trunk or pelvis. Provider Note: The medical record must document the severity of the condition sufficiently to demonstrate the medical necessity for a PRSS."
+              }
+            }
+          ],
+          "enableWhen":[
+            {
+              "operator": "=",
+              "question": "2.1",
+              "answerCoding": {
+                "code": "Group 1",
+                "display": "Group 1"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "4.1.1",
+          "text": "Any stage pressure ulcer/injury on the trunk or pelvis.",
+          "type": "choice",
+          "required": true,
+          "repeats": true,
+          "answerOption":[
+            {
+              "valueCoding":{
+                "code": "L89.101",
+                "display": "Pressure ulcer of unspecified part of back, stage 1"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.111",
+                "display": "Pressure ulcer of right upper back, stage 1"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.121",
+                "display": "Pressure ulcer of left upper back, stage 1"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.131",
+                "display": "Pressure ulcer of right lower back, stage 1"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.141",
+                "display": "Pressure ulcer of left lower back, stage 1"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.151",
+                "display": "Pressure ulcer of sacral region, stage 1"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.201",
+                "display": "Pressure ulcer of unspecified hip, stage 1"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.211",
+                "display": "Pressure ulcer of right hip, stage 1"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.221",
+                "display": "Pressure ulcer of left hip, stage 1"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.301",
+                "display": "Pressure ulcer of unspecified buttock, stage 1"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.311",
+                "display": "Pressure ulcer of right buttock, stage 1"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.321",
+                "display": "Pressure ulcer of left buttock, stage 1"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.421",
+                "display": "Pressure ulcer of contiguous site of back, buttock and hip, stage 1"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.102",
+                "display": "Pressure ulcer of unspecified part of back, stage 2"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.112",
+                "display": "Pressure ulcer of right upper back, stage 2"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.122",
+                "display": "Pressure ulcer of left upper back, stage 2"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.132",
+                "display": "Pressure ulcer of right lower back, stage 2"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.142",
+                "display": "Pressure ulcer of left lower back, stage 2"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.142",
+                "display": "Pressure ulcer of sacral region, stage 2"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.202",
+                "display": "Pressure ulcer of unspecified hip, stage 2"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.212",
+                "display": "Pressure ulcer of right hip, stage 2"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.222",
+                "display": "Pressure ulcer of left hip, stage 2"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.302",
+                "display": "Pressure ulcer of unspecified buttock, stage 2"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.312",
+                "display": "Pressure ulcer of right buttock, stage 2"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.322",
+                "display": "Pressure ulcer of left buttock, stage 2"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.42",
+                "display": "Pressure ulcer of contiguous site of back, buttock and hip, stage 2"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.103",
+                "display": "Pressure ulcer of unspecified part of back, stage 3"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.113",
+                "display": "Pressure ulcer of right upper back, stage 3"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.123",
+                "display": "Pressure ulcer of left upper back, stage 3"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.133",
+                "display": "Pressure ulcer of right lower back, stage 3"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.143",
+                "display": "Pressure ulcer of left lower back, stage 3"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.153",
+                "display": "Pressure ulcer of sacral region, stage 3"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.203",
+                "display": "Pressure ulcer of unspecified hip, stage 3"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.213",
+                "display": "Pressure ulcer of right hip, stage 3"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.223",
+                "display": "Pressure ulcer of left hip, stage 3"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.303",
+                "display": "Pressure ulcer of unspecified buttock, stage 3"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.313",
+                "display": "Pressure ulcer of right buttock, stage 3"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.323",
+                "display": "Pressure ulcer of left buttock, stage 3"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.43",
+                "display": "Pressure ulcer of contiguous site of back, buttock and hip, stage 3"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.104",
+                "display": "Pressure ulcer of unspecified part of back, stage 4"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.114",
+                "display": "Pressure ulcer of right upper back, stage 4"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.124",
+                "display": "Pressure ulcer of left upper back, stage 4"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.134",
+                "display": "Pressure ulcer of right lower back, stage 4"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.144",
+                "display": "Pressure ulcer of left lower back, stage 4"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.154",
+                "display": "Pressure ulcer of sacral region, stage 4"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.204",
+                "display": "Pressure ulcer of unspecified hip, stage 4"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.214",
+                "display": "Pressure ulcer of right hip, stage 4"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.224",
+                "display": "Pressure ulcer of left hip, stage 4"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.304",
+                "display": "Pressure ulcer of unspecified buttock, stage 4"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.314",
+                "display": "Pressure ulcer of right buttock, stage 4"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.324",
+                "display": "Pressure ulcer of left buttock, stage 4"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.44",
+                "display": "Pressure ulcer of contiguous site of back, buttock and hip, stage 4"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.100",
+                "display": "Pressure ulcer of unspecified part of back, unstageable"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.110",
+                "display": "Pressure ulcer of right upper back, unstageable"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.120",
+                "display": "Pressure ulcer of left upper back, unstageable"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.130",
+                "display": "Pressure ulcer of right lower back, unstageable"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.140",
+                "display": "Pressure ulcer of left lower back, unstageable"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.150",
+                "display": "Pressure ulcer of sacral region, unstageable"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.200",
+                "display": "Pressure ulcer of unspecified hip, unstageable"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.210",
+                "display": "Pressure ulcer of right hip, unstageable"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.220",
+                "display": "Pressure ulcer of left hip, unstageable"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.300",
+                "display": "Pressure ulcer of unspecified buttock, unstageable"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.310",
+                "display": "Pressure ulcer of right buttock, unstageable"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.320",
+                "display": "Pressure ulcer of left buttock, unstageable"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.45",
+                "display": "Pressure ulcer of contiguous site of back, buttock and hip, unstageable"
+              }
+            }
+          ],
+          "enableWhen":[
+            {
+              "operator": "=",
+              "question": "4.1",
+              "answerCoding": {
+                "code": "Criteria 3: Any stage pressure ulcer/injury on the trunk or pelvis. Provider Note: The medical record must document the severity of the condition sufficiently to demonstrate the medical necessity for a PRSS.",
+                "display": "Criteria 3: Any stage pressure ulcer/injury on the trunk or pelvis. Provider Note: The medical record must document the severity of the condition sufficiently to demonstrate the medical necessity for a PRSS."
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "4.1.2",
+          "text": "The beneficiary has at least one of the following conditions. Select all that apply.",
+          "type": "choice",
+          "required": true,
+          "repeats": true,
+          "answerOption":[
+            {
+              "valueCoding":{
+                "code": "Altered sensory perception",
+                "display": "Altered sensory perception"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "Compromised circulatory status",
+                "display": "Compromised circulatory status"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "Fecal or urinary incontinence",
+                "display": "Fecal or urinary incontinence"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "Impaired nutritional status",
+                "display": "Impaired nutritional status"
+              }
+            }
+          ],
+          "enableWhen":[
+            {
+              "operator": "=",
+              "question": "2.1",
+              "answerCoding": {
+                "code": "Group 1",
+                "display": "Group 1"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "4.1.2.1",
+          "text": "The altered sensory perception(s).",
+          "type": "choice",
+          "required": true,
+          "repeats": true,
+          "answerOption":[
+            {
+              "valueCoding":{
+                "code": "Pain",
+                "display": "Pain"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "Paralysis",
+                "display": "Paralysis"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "Loss of sensitivity to superficial pressure",
+                "display": "Loss of sensitivity to superficial pressure"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "Loss of sensitivity to deep pressure",
+                "display": "Loss of sensitivity to deep pressure"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "Other",
+                "display": "Other"
+              }
+            }
+          ],
+          "enableWhen":[
+            {
+              "operator": "=",
+              "question": "4.1.2",
+              "answerCoding": {
+                "code": "Altered sensory perception",
+                "display": "Altered sensory perception"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "4.1.2.1.1",
+          "text": "Specify Other:",
+          "type": "text",
+          "required": true,
+          "enableWhen":[
+            {
+              "operator": "=",
+              "question": "4.1.2.1",
+              "answerCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "4.1.2.2",
+          "text": "Describe compromised circulatory status.",
+          "type": "text",
+          "required": true,
+          "enableWhen":[
+            {
+              "operator": "=",
+              "question": "4.1.2",
+              "answerCoding": {
+                "code": "Compromised circulatory status",
+                "display": "Compromised circulatory status"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "4.2",
+          "text": "The beneficiary meets one of the three criteria for a Group 2 PRSS. Select one",
+          "type": "choice",
+          "required": true,
+          "answerOption":[
+            {
+              "valueCoding":{
+                "code": "Criteria 1: Multiple stage 2 pressure ulcers located on the trunk or pelvis, which have failed to improve over the past month.",
+                "display": "Criteria 1: Multiple stage 2 pressure ulcers located on the trunk or pelvis, which have failed to improve over the past month."
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "Criteria 2: Has a large stage 3 or 4 pressure ulcer/injury on the trunk or pelvis.",
+                "display": "Criteria 2: Has a large stage 3 or 4 pressure ulcer/injury on the trunk or pelvis."
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "Criteria 2: Has multiple stage 3 or 4 pressure ulcer(s)/injury(s) on the trunk or pelvis.",
+                "display": "Criteria 2: Has multiple stage 3 or 4 pressure ulcer(s)/injury(s) on the trunk or pelvis."
+              }
+            }
+          ],
+          "enableWhen":[
+            {
+              "operator": "=",
+              "question": "2.1",
+              "answerCoding": {
+                "code": "Group 2",
+                "display": "Group 2"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "4.2.1",
+          "text": "Describe the large pressure ulcer/injury. Criteria 3 pre-req: The beneficiary has been on a group 2 or 3 support surface immediately prior to discharge from a hospital or nursing facility within the past 30 days",
+          "type": "choice",
+          "required": true,
+          "answerOption":[
+            {
+              "valueCoding":{
+                "code": "Criteria 3: Had a myocutaneous flap for a pressure ulcer/injury on the trunk or pelvis within the past 60 days.",
+                "display": "Criteria 3: Had a myocutaneous flap for a pressure ulcer/injury on the trunk or pelvis within the past 60 days."
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "Criteria 3: Had a skin graft for a pressure ulcer/injury on the trunk or pelvis within the past 60 days.",
+                "display": "Criteria 3: Had a skin graft for a pressure ulcer/injury on the trunk or pelvis within the past 60 days."
+              }
+            }
+          ],
+          "enableWhen":[
+            {
+              "operator": "=",
+              "question": "4.2",
+              "answerCoding": {
+                "code": "Criteria 2: Has a large stage 3 or 4 pressure ulcer/injury on the trunk or pelvis.",
+                "display": "Criteria 2: Has a large stage 3 or 4 pressure ulcer/injury on the trunk or pelvis."
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "4.2.2",
+          "text": "Multiple stage 2 pressure ulcers located on the trunk or pelvis, which have failed to improve over the past month.",
+          "type": "choice",
+          "required": true,
+          "repeats": true,
+          "answerOption":[
+            {
+              "valueCoding":{
+                "code": "L89.102",
+                "display": "Pressure ulcer of unspecified part of back, stage 2"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.112",
+                "display": "Pressure ulcer of right upper back, stage 2"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.122",
+                "display": "Pressure ulcer of left upper back, stage 2"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.132",
+                "display": "Pressure ulcer of right lower back, stage 2"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.142",
+                "display": "Pressure ulcer of left lower back, stage 2"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.152",
+                "display": "Pressure ulcer of sacral region, stage 2"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.202",
+                "display": "Pressure ulcer of unspecified hip, stage 2"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.212",
+                "display": "Pressure ulcer of right hip, stage 2"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.222",
+                "display": "Pressure ulcer of left hip, stage 2"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.302",
+                "display": "Pressure ulcer of unspecified buttock, stage 2"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.312",
+                "display": "Pressure ulcer of right buttock, stage 2"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.322",
+                "display": "Pressure ulcer of left buttock, stage 2"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.42",
+                "display": "Pressure ulcer of contiguous site of back, buttock and hip, stage 2"
+              }
+            }
+          ],
+          "enableWhen":[
+            {
+              "operator": "=",
+              "question": "4.2",
+              "answerCoding": {
+                "code": "Criteria 1: Multiple stage 2 pressure ulcers located on the trunk or pelvis, which have failed to improve over the past month.",
+                "display": "Criteria 1: Multiple stage 2 pressure ulcers located on the trunk or pelvis, which have failed to improve over the past month."
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "4.2.3",
+          "text": "Stage 3 or 4 pressure ulcer(s)/injury(s) located on trunk or pelvis.",
+          "type": "choice",
+          "required": true,
+          "repeats": true,
+          "answerOption":[
+            {
+              "valueCoding":{
+                "code": "L89.103",
+                "display": "Pressure ulcer of unspecified part of back, stage 3"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.113",
+                "display": "Pressure ulcer of right upper back, stage 3"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.123",
+                "display": "Pressure ulcer of left upper back, stage 3"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.133",
+                "display": "Pressure ulcer of right lower back, stage 3"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.143",
+                "display": "Pressure ulcer of left lower back, stage 3"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.153",
+                "display": "Pressure ulcer of sacral region, stage 3"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.203",
+                "display": "Pressure ulcer of unspecified hip, stage 3"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.213",
+                "display": "Pressure ulcer of right hip, stage 3"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.223",
+                "display": "Pressure ulcer of left hip, stage 3"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.303",
+                "display": "Pressure ulcer of unspecified buttock, stage 3"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.313",
+                "display": "Pressure ulcer of right buttock, stage 3"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.323",
+                "display": "Pressure ulcer of left buttock, stage 3"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.43",
+                "display": "Pressure ulcer of contiguous site of back, buttock and hip, stage 3"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.104",
+                "display": "Pressure ulcer of unspecified part of back, stage 4"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.114",
+                "display": "Pressure ulcer of right upper back, stage 4"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.124",
+                "display": "Pressure ulcer of left upper back, stage 4"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.134",
+                "display": "Pressure ulcer of right lower back, stage 4"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.144",
+                "display": "Pressure ulcer of left lower back, stage 4"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.154",
+                "display": "Pressure ulcer of sacral region, stage 4"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.204",
+                "display": "Pressure ulcer of unspecified hip, stage 4"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.214",
+                "display": "Pressure ulcer of right hip, stage 4"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.224",
+                "display": "Pressure ulcer of left hip, stage 4"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.304",
+                "display": "Pressure ulcer of unspecified buttock, stage 4"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.314",
+                "display": "Pressure ulcer of right buttock, stage 4"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.324",
+                "display": "Pressure ulcer of left buttock, stage 4"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "L89.44",
+                "display": "Pressure ulcer of contiguous site of back, buttock and hip, stage 4"
+              }
+            }
+          ],
+          "enableBehavior": "any",
+          "enableWhen":[
+            {
+              "operator": "=",
+              "question": "4.2",
+              "answerCoding": {
+                "code": "Criteria 2: Has a large stage 3 or 4 pressure ulcer/injury on the trunk or pelvis.",
+                "display": "Criteria 2: Has a large stage 3 or 4 pressure ulcer/injury on the trunk or pelvis."
+              }
+            },
+            {
+              "operator": "=",
+              "question": "4.2",
+              "answerCoding": {
+                "code": "Criteria 2: Has multiple stage 3 or 4 pressure ulcer(s)/injury(s) on the trunk or pelvis.",
+                "display": "Criteria 2: Has multiple stage 3 or 4 pressure ulcer(s)/injury(s) on the trunk or pelvis."
+              }
+            },
+            {
+              "operator": "=",
+              "question": "2.1",
+              "answerCoding": {
+                "code": "Group 3",
+                "display": "Group 3"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "4.2.4",
+          "text": "The group 1 support surface item currently in use for the past month.",
+          "type": "choice",
+          "required": true,
+          "answerOption":[
+            {
+              "valueCoding":{
+                "code": "E0181",
+                "display": "Powered pressure reducing mattress overlay/pad, alternating, with pump, includes heavy duty"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "E0182",
+                "display": "Pump for alternating pressure pad, for replacement only"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "E0184",
+                "display": "Dry pressure mattress"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "E0185",
+                "display": "Gel or gel-like pressure pad for mattress, standard mattress length and width"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "E0186",
+                "display": "Air pressure mattress"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "E0187",
+                "display": "Water pressure mattress"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "E0188",
+                "display": "Synthetic sheepskin pad"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "E0189",
+                "display": "Lambswool sheepskin pad, any size"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "E0196",
+                "display": "Gel pressure mattress"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "E0197",
+                "display": "Air pressure pad for mattress, standard mattress length and width"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "E0198",
+                "display": "Water pressure pad for mattress, standard mattress length and width"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "E0199",
+                "display": "Dry pressure pad for mattress, standard mattress length and width"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "E1399",
+                "display": "Durable medical equipment, miscellaneous"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "A4640",
+                "display": "Replacement pad for use with medically necessary alternating pressure pad owned by patient"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "A9270",
+                "display": "Non-covered Item or service"
+              }
+            }
+          ],
+          "enableWhen":[
+            {
+              "operator": "=",
+              "question": "2.1",
+              "answerCoding": {
+                "code": "Group 2",
+                "display": "Group 2"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "4.2.5",
+          "text": "Myocutaneous flap or skin graft for pressure ulcer/injury on the trunk or pelvis within the past 60 days",
+          "type": "choice",
+          "required": true,
+          "answerOption":[
+            {
+              "valueCoding":{
+                "code": "15734",
+                "display": "Muscle, myocutaneous  flap; trunk"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "Muscle, myocutaneous  flap; pelvis",
+                "display": "Muscle, myocutaneous  flap; pelvis"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "1500",
+                "display": "Skin graft to trunk"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "291162",
+                "display": "Skin graft to pelvis"
+              }
+            }
+          ],
+          "enableBehavior": "any",
+          "enableWhen":[
+            {
+              "operator": "=",
+              "question": "4.2",
+              "answerCoding": {
+                "code": "Criteria 2: Has a large stage 3 or 4 pressure ulcer/injury on the trunk or pelvis.",
+                "display": "Criteria 2: Has a large stage 3 or 4 pressure ulcer/injury on the trunk or pelvis."
+              }
+            },
+            {
+              "operator": "=",
+              "question": "4.2",
+              "answerCoding": {
+                "code": "Criteria 2: Has multiple stage 3 or 4 pressure ulcer(s)/injury(s) on the trunk or pelvis.",
+                "display": "Criteria 2: Has multiple stage 3 or 4 pressure ulcer(s)/injury(s) on the trunk or pelvis."
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "4.3",
+          "text": "Describe the stage 3 or 4 pressure ulcer/injury",
+          "type": "text",
+          "required": true,
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "2.1",
+              "answerCoding": {
+                "code": "Group 3",
+                "display": "Group 3"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "4.3.1",
+          "text": "The beneficiary is chair bound or bed bound because of severely limited mobility.",
+          "type": "boolean",
+          "required": true,
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "2.1",
+              "answerCoding": {
+                "code": "Group 3",
+                "display": "Group 3"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "4.3.2",
+          "text": "In the absence of an air-fluidized bed, institutional care would be required.",
+          "type": "boolean",
+          "required": true,
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "2.1",
+              "answerCoding": {
+                "code": "Group 3",
+                "display": "Group 3"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "4.3.3",
+          "text": "A documented evaluation demonstrates the beneficiary has participated in a conservative treatment for the past month that was designed with optimal wound healing interventions.",
+          "type": "boolean",
+          "required": true,
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "2.1",
+              "answerCoding": {
+                "code": "Group 3",
+                "display": "Group 3"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "4.3.4",
+          "text": "A trained adult caregiver is available to assist the beneficiary with ALL activities of daily living and the prescribed interventions for skin care and wound prevention assigned to the caregiver AND management of the air-fluidized bed.",
+          "type": "boolean",
+          "required": true,
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "2.1",
+              "answerCoding": {
+                "code": "Group 3",
+                "display": "Group 3"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "4.3.5",
+          "text": "The group 2 support surface item currently in use for the past month.",
+          "type": "choice",
+          "required": true,
+          "answerOption":[
+            {
+              "valueCoding":{
+                "code": "E0193",
+                "display": "Powered air flotation bed (low air loss therapy)"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "E0277",
+                "display": "Powered pressure-reducing air mattress"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "E0371",
+                "display": "Nonpowered advanced pressure reducing overlay for mattess, standard mattress length and width"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "E0372",
+                "display": "Powered air overlay for mattress, standard mattress length and width"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "E0373",
+                "display": "Nonpowered advanced pressure reducing mattress"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "E1399",
+                "display": "Durable medical equipment, miscellaneous"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "2.1",
+              "answerCoding": {
+                "code": "Group 3",
+                "display": "Group 3"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "4.3.6",
+          "text": "Date of last encounter for a face-to-face from treating practioner.",
+          "type": "group",
+          "item": [
+            {
+              "linkId": "4.3.6.1",
+              "text": "Date:",
+              "type": "date",
+              "required": true
+            },
+            {
+              "linkId": "4.3.6.2",
+              "text": "Name:",
+              "type": "string",
+              "required": true
+            },
+            {
+              "linkId": "4.3.6.3",
+              "text": "Credentials:",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "2.1",
+              "answerCoding": {
+                "code": "Group 3",
+                "display": "Group 3"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "4.3.7",
+          "text": "Is the entity above affiliated with the supplier in any manner, e.g., employee, consultant, or contractor?",
+          "type": "boolean",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "2.1",
+              "answerCoding": {
+                "code": "Group 3",
+                "display": "Group 3"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "5",
+      "text": "Skin Moisture: Fecal and/or Urinary Incontinence Management",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "5.1",
+          "text": "How is moisture managed? Select all that apply.",
+          "type": "choice",
+          "required": true,
+          "repeats": true,
+          "answerOption":[
+            {
+              "valueCoding":{
+                "code": "Caregiver provides scheduled incontinent care",
+                "display": "Caregiver provides scheduled incontinent care"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "Caregiver provides skin care, use of protective skin barrier products",
+                "display": "Caregiver provides skin care, use of protective skin barrier products"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "Incontinent diapers/briefs/pads",
+                "display": "Incontinent diapers/briefs/pads"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "Wicking/suction device",
+                "display": "Wicking/suction device"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "External catheter",
+                "display": "External catheter"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "Indwelling catheter",
+                "display": "Indwelling catheter"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "N/A, moisture is not a problem",
+                "display": "N/A, moisture is not a problem"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "Other",
+                "display": "Other"
+              }
+            }
+          ],
+          "enableBehavior": "any",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "2.1",
+              "answerCoding": {
+                "code": "Group 2",
+                "display": "Group 2"
+              }
+            },
+            {
+              "operator": "=",
+              "question": "2.1",
+              "answerCoding": {
+                "code": "Group 3",
+                "display": "Group 3"
+              }
+            },
+            {
+              "operator": "=",
+              "question": "4.1.2",
+              "answerCoding": {
+                "code": "Fecal or urinary incontinence",
+                "display": "Fecal or urinary incontinence"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "5.1.1",
+          "text": "Specify Other:",
+          "type": "text",
+          "required": true,
+          "enableWhen":[
+            {
+              "operator": "=",
+              "question": "5.1",
+              "answerCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "6",
+      "text": "Impaired Nutritional Status Management",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "6.1",
+          "text": "Impaired nutritional status: Based on nutrition assessment, if the beneficiary has a deficit, what interventions are in progress if any? Select all that apply.",
+          "type": "choice",
+          "required": true,
+          "repeats": true,
+          "answerOption":[
+            {
+              "valueCoding":{
+                "code": "NA, adequate nutritional status",
+                "display": "NA, adequate nutritional status"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "Recommended diet to promote wound healing",
+                "display": "Recommended diet to promote wound healing"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "Recommended protein intake to promote wound healing",
+                "display": "Recommended protein intake to promote wound healing"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "Recommended caloric intake to promote wound healing",
+                "display": "Recommended caloric intake to promote wound healing"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "Recommended fluid intake to promote wound healing",
+                "display": "Recommended fluid intake to promote wound healing"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "Recommended supplement(s) to promote wound healing",
+                "display": "Recommended supplement(s) to promote wound healing"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "Other",
+                "display": "Other"
+              }
+            }
+          ],
+          "enableBehavior": "any",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "2.1",
+              "answerCoding": {
+                "code": "Group 2",
+                "display": "Group 2"
+              }
+            },
+            {
+              "operator": "=",
+              "question": "2.1",
+              "answerCoding": {
+                "code": "Group 3",
+                "display": "Group 3"
+              }
+            },
+            {
+              "operator": "=",
+              "question": "4.1.2",
+              "answerCoding": {
+                "code": "Impaired nutritional status",
+                "display": "Impaired nutritional status"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "6.1.1",
+          "text": "Specify Other:",
+          "type": "text",
+          "required": true,
+          "enableWhen":[
+            {
+              "operator": "=",
+              "question": "6.1",
+              "answerCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "6.2",
+          "text": "Appropriate turning and positioning? E.g., every two (2) hours.",
+          "type": "boolean",
+          "required": true
+        }
+      ]
+    },
+    {
+      "linkId": "7",
+      "text": "Wound Treatment Information",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "7.1",
+          "text": "Targeted interventions initiated.",
+          "type": "choice",
+          "required": true,
+          "repeats": true,
+          "answerOption":[
+            {
+              "valueCoding":{
+                "code": "Intervention for wound infection",
+                "display": "Intervention for wound infection"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "Wound debridement",
+                "display": "Wound debridement"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "Occlusive barrier",
+                "display": "Occlusive barrier"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "Maintenance of the clean, moist bed of granulation tissue",
+                "display": "Maintenance of the clean, moist bed of granulation tissue"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "Education to the caregiver and beneficiary specific to prevention and management of pressure ulcer/injury",
+                "display": "Education to the caregiver and beneficiary specific to prevention and management of pressure ulcer/injury"
+              }
+            }
+          ],
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "2.1",
+              "answerCoding": {
+                "code": "Group 3",
+                "display": "Group 3"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "7.2",
+          "text": "Treatment plan goal status.",
+          "type": "choice",
+          "required": true,
+          "answerOption":[
+            {
+              "valueCoding":{
+                "code": "Pressure ulcer/injury condition is on target to heal",
+                "display": "Pressure ulcer/injury condition is on target to heal"
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "Pressure ulcer/injury condition is NOT on target to heal, treatment plan modified to promote healing due to not improving over the past month.",
+                "display": "Pressure ulcer/injury condition is NOT on target to heal, treatment plan modified to promote healing due to not improving over the past month."
+              }
+            },
+            {
+              "valueCoding":{
+                "code": "Pressure ulcer/injury condition not responding to optimal plan, target is to manage condition due to not improving over the past month.",
+                "display": "Pressure ulcer/injury condition not responding to optimal plan, target is to manage condition due to not improving over the past month."
+              }
+            }
+          ],
+          "enableBehavior": "any",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "2.1",
+              "answerCoding": {
+                "code": "Group 2",
+                "display": "Group 2"
+              }
+            },
+            {
+              "operator": "=",
+              "question": "2.1",
+              "answerCoding": {
+                "code": "Group 3",
+                "display": "Group 3"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "7.3",
+          "text": "Current wound care.",
+          "type": "text",
+          "required": true,
+          "enableBehavior": "any",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "2.1",
+              "answerCoding": {
+                "code": "Group 2",
+                "display": "Group 2"
+              }
+            },
+            {
+              "operator": "=",
+              "question": "2.1",
+              "answerCoding": {
+                "code": "Group 3",
+                "display": "Group 3"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "7.4",
+          "text": "Evidence of weekly wound assessments?",
+          "type": "boolean",
+          "required": true,
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "2.1",
+              "answerCoding": {
+                "code": "Group 3",
+                "display": "Group 3"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "7.5",
+          "text": "Date of last encounter for a face-to-face from treating practioner.",
+          "type": "group",
+          "item": [
+            {
+              "linkId": "7.5.1",
+              "text": "Date:",
+              "type": "date",
+              "required": true
+            },
+            {
+              "linkId": "7.5.2",
+              "text": "Name:",
+              "type": "string",
+              "required": true
+            },
+            {
+              "linkId": "7.5.3",
+              "text": "Credentials:",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "enableBehavior": "any",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "2.1",
+              "answerCoding": {
+                "code": "Group 2",
+                "display": "Group 2"
+              }
+            },
+            {
+              "operator": "=",
+              "question": "2.1",
+              "answerCoding": {
+                "code": "Group 3",
+                "display": "Group 3"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "7.6",
+          "text": "Is the entity above affiliated with the supplier in any manner, e.g., employee, consultant, or contractor?",
+          "type": "boolean",
+          "enableBehavior": "any",
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "2.1",
+              "answerCoding": {
+                "code": "Group 2",
+                "display": "Group 2"
+              }
+            },
+            {
+              "operator": "=",
+              "question": "2.1",
+              "answerCoding": {
+                "code": "Group 3",
+                "display": "Group 3"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "8",
+      "text": "Supplier Information",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "8.1",
+          "text": "Name",
+          "type": "string",
+          "required": true
+        },
+        {
+          "linkId": "8.2",
+          "text": "NPI",
+          "type": "string",
+          "required": true
+        },
+        {
+          "linkId": "8.3.1",
+          "text": "Address Line",
+          "type": "string",
+          "required": true
+        },
+        {
+          "linkId": "8.3.2",
+          "text": "Address City",
+          "type": "string",
+          "required": true
+        },
+        {
+          "linkId": "8.3.3",
+          "text": "Address State",
+          "type": "string",
+          "required": true
+        },
+        {
+          "linkId": "8.3.4",
+          "text": "Address Postal Code",
+          "type": "string",
+          "required": true
+        },
+        {
+          "linkId": "8.4",
+          "text": "Other Required Information",
+          "type": "display",
+          "required": true
+        },
+        {
+          "linkId": "8.5",
+          "text": "Submission date",
+          "type": "date",
+          "required": true
+        },
+        {
+          "linkId": "8.6",
+          "text": "Deliver To",
+          "type": "text",
+          "required": true
+        },
+        {
+          "linkId": "8.7",
+          "text": "Type of Request",
+          "type": "choice",
+          "required": true,
+          "answerOption":[
+            {
+              "valueCoding":{
+                "code":"Initial",
+                "display": "Initial"
+              }
+            },
+            {
+              "valueCoding":{
+                "code":"Resubmission Review",
+                "display": "Resubmission Review"
+              }
+            },
+            {
+              "valueCoding":{
+                "code":"Expedite this request",
+                "display": "Expedite this request"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "8.8",
+          "text": "Reason for the request to be expedited",
+          "type": "text",
+          "required": true,
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "8.7",
+              "answerCoding": {
                 "code": "Expedite this request",
                 "display": "Expedite this request"
               }
@@ -351,56 +2181,13 @@
           ]
         },
         {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "ReasonExpeditedRequest"
-              }
-            }
-          ],
-          "linkId": "4.4",
-          "text": "Reason for the request to be expedited",
-          "type": "text",
-          "enableWhen": [
-            {
-              "question": "4.3",
-              "operator": "=",
-              "answerCoding": {
-                "code": "Expedite this request",
-                "display": "Expedite this request"
-              }
-            }
-          ],
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "Description"
-              }
-            }
-          ],
-          "linkId": "4.5",
+          "linkId": "8.9",
           "text": "Description of the item requested",
           "type": "text",
           "required": true
         },
         {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "QuantityRequired"
-              }
-            }
-          ],
-          "linkId": "4.6",
+          "linkId": "8.10",
           "text": "Quantity to be dispensed",
           "type": "integer",
           "required": true
