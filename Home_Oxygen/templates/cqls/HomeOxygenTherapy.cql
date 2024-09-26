@@ -1990,7 +1990,7 @@ define OxygenDelivery:
 		then 'Ventilator'
 	else if ("RespiratoryAssistType" = true)
 		then 'Mask'
-	else ''
+	else 'Other'
 
 define HematocritThatIsGreaterThanThreshold:
   FHIRHelpers.ToQuantity ( singleton from ( [Observation] P
