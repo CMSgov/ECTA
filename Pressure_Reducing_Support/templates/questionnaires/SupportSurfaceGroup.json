@@ -3,12 +3,12 @@
   "identifier": [
     {
       "system": "http://identifiers.mettles.com/prior_authorization",
-      "value": "medicare_fee_for_service-support_surfaces_group2"
+      "value": "medicare_fee_for_service-support_surfaces_group"
     }
   ],
-  "name": "SupportSurfaceGroup2",
+  "name": "SupportSurfaceGroup",
   "version": "1.0.0",
-  "title": "Pressure Reducing Support Surfaces - Group 2",
+  "title": "Pressure Reducing Support Surfaces",
   "status": "draft",
   "subjectType": [
     "Patient"
@@ -18,9 +18,10 @@
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
-      "valueCanonical": "<FHIR-server>/Library/library-lcd1-SupportSurfaceGroup2"
+      "valueCanonical": "<FHIR-server>/Library/library-pressurereducingsupport-SupportSurfaceGroup"
     }
   ],
+  "url": "<FHIR-server>/Questionnaire/questionnaire-pressurereducingsupport-SupportSurfaceGroup",
   "item": [
     {
       "linkId": "1",
@@ -28,12 +29,30 @@
       "type": "group",
       "item": [
         {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "DeviceOrderDate"
+              }
+            }
+          ],
           "linkId": "1.1",
           "text": "Date of order",
           "type": "date",
           "required": true
         },
         {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "PractitionerFullName"
+              }
+            }
+          ],
           "linkId": "1.2",
           "text": "Treating Practitioner Name",
           "type": "string",
@@ -46,18 +65,45 @@
           "required": true
         },
         {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "OrderingPhysicianNPI"
+              }
+            }
+          ],
           "linkId": "1.4",
           "text": "NPI",
           "type": "string",
           "required": true
         },
         {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "DeviceRequestDescription"
+              }
+            }
+          ],
           "linkId": "1.5",
           "text": "Support Surface Item Requested/Description",
           "type": "text",
           "required": true
         },
         {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "PractitionerFullName"
+              }
+            }
+          ],
           "linkId": "1.6",
           "text": "Provider Signature",
           "type": "string",
@@ -71,6 +117,15 @@
       "type": "group",
       "item": [
         {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "SupportSurfaceGroup"
+              }
+            }
+          ],
           "linkId": "2.1",
           "text": "The requested support surface is from which group?",
           "type": "choice",
@@ -106,7 +161,8 @@
               "valueCoding":{
                 "code": "Initial",
                 "display": "Initial"
-              }
+              },
+              "initialSelected": true
             },
             {
               "valueCoding":{
@@ -136,7 +192,8 @@
               "valueCoding":{
                 "code": "Initial",
                 "display": "Initial"
-              }
+              },
+              "initialSelected": true
             },
             {
               "valueCoding":{
@@ -166,7 +223,8 @@
               "valueCoding":{
                 "code": "Initial",
                 "display": "Initial"
-              }
+              },
+              "initialSelected": true
             },
             {
               "valueCoding":{
@@ -194,6 +252,15 @@
       "type": "group",
       "item": [
         {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "Group1Item"
+              }
+            }
+          ],
           "linkId": "3.1",
           "text": "Group 1 PRSS item being requested.",
           "type": "choice",
@@ -302,6 +369,15 @@
           ]
         },
         {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "Group2Item"
+              }
+            }
+          ],
           "linkId": "3.2",
           "text": "Group 2 PRSS item being requested.",
           "type": "choice",
@@ -356,6 +432,15 @@
           ]
         },
         {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "Group3Item"
+              }
+            }
+          ],
           "linkId": "3.3",
           "text": "Group 3 PRSS item being requested.",
           "type": "choice",
@@ -387,6 +472,15 @@
       "type": "group",
       "item": [
         {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "BeneficiaryMobility"
+              }
+            }
+          ],
           "linkId": "4.1",
           "text": "Beneficiary's ability to make changes in body position, or presence of pressure ulcer/injury on the trunk or pelvis?",
           "type": "choice",
@@ -423,6 +517,15 @@
           ]
         },
         {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "AnyStagePressureUlcerInjury"
+              }
+            }
+          ],
           "linkId": "4.1.1",
           "text": "Any stage pressure ulcer/injury on the trunk or pelvis.",
           "type": "choice",
@@ -539,7 +642,7 @@
             },
             {
               "valueCoding":{
-                "code": "L89.142",
+                "code": "L89.152",
                 "display": "Pressure ulcer of sacral region, stage 2"
               }
             },
@@ -832,6 +935,15 @@
           ]
         },
         {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "Group1OtherConditions"
+              }
+            }
+          ],
           "linkId": "4.1.2",
           "text": "The beneficiary has at least one of the following conditions. Select all that apply.",
           "type": "choice",
@@ -875,6 +987,15 @@
           ]
         },
         {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "AlteredSensoryPerceptions"
+              }
+            }
+          ],
           "linkId": "4.1.2.1",
           "text": "The altered sensory perception(s).",
           "type": "choice",
@@ -909,7 +1030,8 @@
               "valueCoding":{
                 "code": "Other",
                 "display": "Other"
-              }
+              },
+              "initialSelected": true
             }
           ],
           "enableWhen":[
@@ -940,6 +1062,15 @@
           ]
         },
         {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "CompromisedCirculatoryStatusNotes"
+              }
+            }
+          ],
           "linkId": "4.1.2.2",
           "text": "Describe compromised circulatory status.",
           "type": "text",
@@ -956,6 +1087,15 @@
           ]
         },
         {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "Group2Criteria"
+              }
+            }
+          ],
           "linkId": "4.2",
           "text": "The beneficiary meets one of the three criteria for a Group 2 PRSS. Select one",
           "type": "choice",
@@ -1022,6 +1162,15 @@
           ]
         },
         {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "MultipleStage2PressureUlcerInjury"
+              }
+            }
+          ],
           "linkId": "4.2.2",
           "text": "Multiple stage 2 pressure ulcers located on the trunk or pelvis, which have failed to improve over the past month.",
           "type": "choice",
@@ -1119,6 +1268,15 @@
           ]
         },
         {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "Stage34PressureUlcerInjury"
+              }
+            }
+          ],
           "linkId": "4.2.3",
           "text": "Stage 3 or 4 pressure ulcer(s)/injury(s) located on trunk or pelvis.",
           "type": "choice",
@@ -1470,6 +1628,15 @@
           ]
         },
         {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "Stage34PressureUlcerInjuryStatus"
+              }
+            }
+          ],
           "linkId": "4.3",
           "text": "Describe the stage 3 or 4 pressure ulcer/injury",
           "type": "text",

@@ -1,0 +1,20 @@
+{
+    "resourceType": "Library",
+    "version": "1.0.0",
+    "title": "SupportSurfaceGroupAdaptive",
+    "name": "SupportSurfaceGroupAdaptive",
+    "status": "draft",
+    "type": {
+      "coding": [
+        {
+          "code": "logic-library"
+        }
+      ]
+    },
+    "relatedArtifact": [
+      {
+        "type": "depends-on",
+        "resource": "<FHIR-server>/Library/FHIRHelpers"
+      }
+    ]
+  }
