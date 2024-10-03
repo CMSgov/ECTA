@@ -1,8 +1,8 @@
 {
   "resourceType": "Library",
   "version": "1.0.0",
-  "name": "SupportSurfaceGroup2",
-  "title": "Pressure Reducing Support Surfaces - Group 2",
+  "name": "SupportSurfaceGroupDecision",
+  "title": "Pressure Reducing Support Surfaces Decision",
   "status": "draft",
   "type": {
     "coding": [
@@ -15,6 +15,10 @@
     {
       "type": "depends-on",
       "resource": "<FHIR-server>/Library/FHIRHelpers"
+    },
+    {
+      "type": "depends-on",
+      "resource": "<FHIR-server>/Library/library-pressurereducingsupport-SupportSurfaceGroupDecision"
     }
   ],
   "dataRequirement": [
