@@ -620,6 +620,15 @@ define "Group1OtherConditions":
         then 'Impaired nutritional status' else null
 }
 
+define "Group1TypeOfRequest":
+    'Initial'
+
+define "Group2TypeOfRequest":
+    'Initial'
+
+define "Group3TypeOfRequest":
+    'Initial'
+
 define "DeviceRequestDescription":
   'HCPCS ' + First("DeviceRequest".code.coding).code.value + ' - ' + First("DeviceRequest".code.coding).display.value
 
