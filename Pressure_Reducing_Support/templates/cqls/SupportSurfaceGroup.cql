@@ -155,17 +155,18 @@ concept "Group3": {
 
 parameter "Encounter" Encounter
 parameter "DeviceRequest" DeviceRequest
-
+parameter "Practitioner" Practitioner
+parameter "PractitionerRole" PractitionerRole
 
 context Patient
 
 define "SupportSurfaceGroup":
     if "Group1Item" is not null
-        then 'Group1'
+        then 'Group 1'
     else if "Group2Item" is not null
-        then 'Group2'
+        then 'Group 2'
     else if "Group3Item" is not null
-        then 'Group3'
+        then 'Group 3'
     else null
 
 define "Group1Item":
@@ -592,7 +593,9 @@ define "CompromisedCirculatoryStatus":
 
 define "CompromisedCirculatoryStatusNotes":
     if "CompromisedCirculatoryStatus" is not null
-        then FHIRHelpers.ToString(First(("CompromisedCirculatoryStatus").note.text))
+        then if FHIRHelpers.ToString(First(("CompromisedCirculatoryStatus").note.text)) is not null
+            then FHIRHelpers.ToString(First(("CompromisedCirculatoryStatus").note.text))
+        else First("CompromisedCirculatoryStatus".code.coding).display.value
     else null
 
 define "FecalUrinaryIncontinence":
@@ -631,6 +634,37 @@ define "Group3TypeOfRequest":
 
 define "DeviceRequestDescription":
   'HCPCS ' + First("DeviceRequest".code.coding).code.value + ' - ' + First("DeviceRequest".code.coding).display.value
+
+define "DeviceOrderDate":
+    FHIRHelpers.ToDateTime("DeviceRequest".authoredOn)
+
+define "DeviceQuantity":
+    if First("DeviceRequest".parameter).value is FHIR.Quantity
+        then FHIRHelpers.ToDecimal((First("DeviceRequest".parameter).value as FHIR.Quantity).value)
+    else 1.0
+
+define TreatingPractitioner:
+	singleton from ([Practitioner])
+
+define PractitionerName:
+    First("TreatingPractitioner".name name)
+
+define PractitionerLastName:
+	"PractitionerName".family.value
+
+define PractitionerMiddleInitial:
+  	Substring(Combine(("PractitionerName".given given return Substring(given.value,0,1)),', '),3)
+
+define "PractitionerFirstName":
+	"PractitionerName".given[0].value
+
+define "PractitionerFullName":
+  	Coalesce("PractitionerFirstName" + ' ' + "PractitionerMiddleInitial" + ' ' + "PractitionerLastName", "PractitionerFirstName" + ' ' + "PractitionerLastName")
+
+define "PractitionerNPI": (First(
+  	"TreatingPractitioner".identifier identifier
+    		where identifier.system.value = 'http://hl7.org/fhir/sid/us-npi')).value.value
+
 
 define function "Normalize Interval"(choice Choice<FHIR.dateTime,FHIR.Period>):
  	 if choice is FHIR.dateTime then
