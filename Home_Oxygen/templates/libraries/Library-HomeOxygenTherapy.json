@@ -767,7 +767,7 @@
                 },
                 {
                   "system": "http://hl7.org/fhir/sid/icd-10-cm",
-                  "code": "J96. 11",
+                  "code": "J96.11",
                   "display": "Chronic respiratory failure with hypoxia"
                 },
                 {
@@ -879,7 +879,7 @@
                   "system": "http://snomed.info/sct",
                   "code": "3716002",
                   "display": "Goiter (disorder)"
-                }
+                },
                 {
                   "system": "http://snomed.info/sct",
                   "code": "166818002",
@@ -1290,7 +1290,7 @@
                 {
                   "system": "http://loinc.org",
                   "code": "19254-2",
-                  "display": "Oxygen [Partial pressure] adjusted to patients actual temperature in Blood"
+                  "display": "Oxygen [Partial pressure] adjusted to patient's actual temperature in Blood"
                 },
                 {
                   "system": "http://snomed.info/sct",

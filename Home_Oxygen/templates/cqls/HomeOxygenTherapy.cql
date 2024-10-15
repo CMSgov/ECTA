@@ -120,7 +120,7 @@ code "Breathless - mild exertion (finding)": '161940008' from "SNOMEDCT" display
 code "Breathless - moderate exertion (finding)": '161939006' from "SNOMEDCT" display 'Breathless - moderate exertion (finding)'
 code "Overnight pulse oximetry (procedure)": '252568001' from "SNOMEDCT" display 'Overnight pulse oximetry (procedure)'
 code "Polysomnography (procedure)": '60554003' from "SNOMEDCT" display 'Polysomnography (procedure)'
-code "Chronic respiratory failure with hypoxia": 'J96. 11' from "ICD10CM" display 'Chronic respiratory failure with hypoxia'
+code "Chronic respiratory failure with hypoxia": 'J96.11' from "ICD10CM" display 'Chronic respiratory failure with hypoxia'
 code "Desaturation of blood (disorder)": '238159008' from "SNOMEDCT" display 'Desaturation of blood (disorder)'
 code "Long-term oxygen therapy (procedure)": '243137006' from "SNOMEDCT" display 'Long-term oxygen therapy (procedure)'
 code "6-minute walk test (procedure)": '252478000' from "SNOMEDCT" display '6-minute walk test (procedure)'
