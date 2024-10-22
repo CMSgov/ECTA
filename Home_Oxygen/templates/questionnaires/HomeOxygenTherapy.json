@@ -1144,10 +1144,11 @@
             }
           ],
           "linkId": "5.5",
-          "text": "Determination of  Pulmonary hypertension/Cor Pulmonale",
+          "text": "Determination of Pulmonary hypertension/Cor Pulmonale",
           "type": "choice",
           "repeats": true,
           "required": true,
+          "enableBehavior": "any",
           "answerOption": [
             {
               "valueCoding": {
@@ -1797,14 +1798,14 @@
             },
             {
               "valueCoding": {
-                "code": "arterial ulcers ",
-                "display": "arterial ulcers "
+                "code": "arterial ulcers",
+                "display": "arterial ulcers"
               }
             },
             {
               "valueCoding": {
-                "code": "venous stasis ulcers ",
-                "display": "venous stasis ulcers "
+                "code": "venous stasis ulcers",
+                "display": "venous stasis ulcers"
               }
             },
             {
@@ -1916,8 +1917,8 @@
             },
             {
               "valueCoding": {
-                "code": "ulcers ",
-                "display": "ulcers "
+                "code": "ulcers",
+                "display": "ulcers"
               }
             },
             {
@@ -3037,8 +3038,8 @@
             },
             {
               "valueCoding": {
-                "code": "High flow oxygen therapy ",
-                "display": "High flow oxygen therapy "
+                "code": "High flow oxygen therapy",
+                "display": "High flow oxygen therapy"
               }
             },
             {
@@ -3066,7 +3067,8 @@
               "valueCoding": {
                 "code": "Initial or original order for certification",
                 "display": "Initial or original order for certification"
-              }
+              },
+              "initialSelected": true
             },
             {
               "valueCoding": {
@@ -3084,14 +3086,6 @@
               "valueCoding": {
                 "code": "Replacement",
                 "display": "Replacement"
-              }
-            }
-          ],
-          "initial": [
-            {
-              "valueCoding": {
-                "code": "Initial or original order for certification",
-                "display": "Initial or original order for certification"
               }
             }
           ]
@@ -3121,8 +3115,8 @@
             },
             {
               "valueCoding": {
-                "code": "Different supplier ",
-                "display": "Different supplier "
+                "code": "Different supplier",
+                "display": "Different supplier"
               }
             },
             {

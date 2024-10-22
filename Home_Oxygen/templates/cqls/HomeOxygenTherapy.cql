@@ -110,7 +110,7 @@ code "Acute lymphadenitis of neck (disorder)": '10629031000119100' from "SNOMEDC
 code "Orthopnea": 'R06.01' from "ICD10CM" display 'Orthopnea'
 code "Cardiac murmur, unspecified": 'R01.1' from "ICD10CM" display 'Cardiac murmur, unspecified'
 code "Varicose vein finding (finding)": '271652003' from "SNOMEDCT" display 'Varicose vein finding (finding)'
-code "Cardiac blood pool imaging, gated equilibrium": '78472' from "CPT" display 'Cardiac blood pool imaging, gated equilibrium'
+code "Cardiac blood pool imaging, gated equilibrium": '78472' from "CPT" display 'Cardiac blood pool imaging, gated equilibrium; planar, single study at rest or stress (exercise and/or pharmacologic), wall motion study plus ejection fraction, with or without additional quantitative processing'
 code "P pulmonale by electrocardiogram": '164914003' from "SNOMEDCT" display 'P pulmonale by electrocardiogram'
 code "Hematocrit/Hemoglobin [Ratio] of Blood by Automated count": '16931-8' from "LOINC" display 'Hematocrit/Hemoglobin [Ratio] of Blood by Automated count'
 code "I tossed and turned at night in past 7 days [PROMIS]": '62008-8' from "LOINC" display 'I tossed and turned at night in past 7 days [PROMIS]'
@@ -128,7 +128,7 @@ code "Melena": 'K92.1' from "ICD10CM" display 'Melena'
 code "Hemorrhage of anus and rectum": 'K62.5' from "ICD10CM" display 'Hemorrhage of anus and rectum'
 code "Heartburn": 'R12' from "ICD10CM" display 'Heartburn'
 code "Inhaled oxygen flow rate": '3151-8' from "LOINC" display 'Inhaled oxygen flow rate'
-code "Oxygen [Partial pressure] adjusted to patients actual temperature in Arterial blood": '19255-9' from "LOINC" display 'Oxygen [Partial pressure] adjusted to patients actual temperature in Arterial blood'
+code "Oxygen [Partial pressure] adjusted to patient's actual temperature in Arterial blood": '19255-9' from "LOINC" display 'Oxygen [Partial pressure] adjusted to patient's actual temperature in Arterial blood'
 code "Oxygen saturation in Arterial blood by Pulse oximetry --W exercise": '89276-0' from "LOINC" display 'Oxygen saturation in Arterial blood by Pulse oximetry --W exercise'
 code "Oxygen saturation in Arterial blood by Pulse oximetry --on room air": '59410-1' from "LOINC" display 'Oxygen saturation in Arterial blood by Pulse oximetry --on room air'
 code "Oxygen saturation in Arterial blood by Pulse oximetry --resting": '59417-6' from "LOINC" display 'Oxygen saturation in Arterial blood by Pulse oximetry --resting'
@@ -140,7 +140,7 @@ code "Carbon dioxide [Partial pressure] in Arterial blood": '2019-8' from "LOINC
 code "pH of Arterial blood": '2744-1' from "LOINC" display 'pH of Arterial blood'
 code "Hematocrit [Volume Fraction] of Arterial blood": '32354-3' from "LOINC" display 'Hematocrit [Volume Fraction] of Arterial blood'
 code "Swelling (finding)": '65124004' from "SNOMEDCT" display 'Swelling (finding)'
-code "Functional limitation in range of motion [CMS Assessment]": '54525-1' from "LOINC" display 'Functional limitation in range of motion [CMS Assessment]'
+code "Functional limitation in range of motion during assessment period [CMS Assessment]": '92908-3' from "LOINC" display 'Functional limitation in range of motion during assessment period [CMS Assessment]'
 code "Fasciculation": 'R25.3' from "ICD10CM" display 'Fasciculation'
 code "Muscle wasting and atrophy, not elsewhere classified, unspecified site": 'M62.50' from "ICD10CM" display 'Muscle wasting and atrophy, not elsewhere classified, unspecified site'
 code "Numbness (finding)": '44077006' from "SNOMEDCT" display 'Numbness (finding)'
@@ -158,17 +158,15 @@ code "Mood disorder (disorder)": '46206005' from "SNOMEDCT" display 'Mood disord
 code "Bruising symptom (finding)": '161885008' from "SNOMEDCT" display 'Bruising symptom (finding)'
 code "Bleeding (finding)": '131148009' from "SNOMEDCT" display 'Bleeding (finding)'
 code "Goiter (disorder)": '3716002' from "SNOMEDCT" display 'Goiter (disorder)'
-code "Lipids abnormal (finding)": '166818002' from "SNOMEDCT" display 'Lipids abnormal (finding)'
+code "Lipids abnormal": '166818002' from "SNOMEDCT" display 'Lipids abnormal'
 code "Oral steroid therapy (procedure)": '297280007' from "SNOMEDCT" display 'Oral steroid therapy (procedure)'
 code "Intravenous hydrocortisone therapy (procedure)": '297283009' from "SNOMEDCT" display 'Intravenous hydrocortisone therapy (procedure)'
 code "Steroid therapy (procedure)": '297279009' from "SNOMEDCT" display 'Steroid therapy (procedure)'
 code "Inhaled steroid therapy (procedure)": '710818004' from "SNOMEDCT" display 'Inhaled steroid therapy (procedure)'
-code "Interferon-gamma [Chemical/Ingredient]": 'N0000011343' from "SNOMEDCT" display 'Interferon-gamma [Chemical/Ingredient]'
 code "Blood gas analysis (procedure)": '278297009' from "SNOMEDCT" display 'Blood gas analysis (procedure)'
 code "Blood gas measurement (procedure)": '167018008' from "SNOMEDCT" display 'Blood gas measurement (procedure)'
 code "Walks indoors - usual functional ability during assessment period [CMS Assessment]": '94996-6' from "LOINC" display 'Walks indoors - usual functional ability during assessment period [CMS Assessment]'
 code "Angina pectoris, unspecified": 'I20.9' from "ICD10CM" display 'Angina pectoris, unspecified'
-code "Cystic fibrosis with pulmonary manifestations": 'J84' from "ICD10CM" display 'Cystic fibrosis with pulmonary manifestations'
 code "Pulmonary hypertension, unspecified": 'I27.20' from "ICD10CM" display 'Pulmonary hypertension, unspecified'
 code "Congestive heart failure (disorder)": '42343007' from "SNOMEDCT" display 'Congestive heart failure (disorder)'
 code "Cor pulmonale (chronic)": 'I27.81' from "ICD10CM" display 'Cor pulmonale (chronic)'
@@ -182,11 +180,10 @@ code "Secondary polycythemia": 'D75.1' from "ICD10CM" display 'Secondary polycyt
 code "Age-related physical debility": 'R54' from "ICD10CM" display 'Age-related physical debility'
 code "Peripheral vascular disease (disorder)": '400047006' from "SNOMEDCT" display 'Peripheral vascular disease (disorder)'
 code "Hemoglobin [Mass/volume] in Blood": '718-7' from "LOINC" display 'Hemoglobin [Mass/volume] in Blood'
-code "High altitude residence (& accident caused by)": '271209008' from "SNOMEDCT" display 'High altitude residence (& accident caused by)'
+code "High altitude residence": '271209008' from "SNOMEDCT" display 'High altitude residence'
 code "Effects of high altitude (disorder)": '87284002' from "SNOMEDCT" display 'Effects of high altitude (disorder)'
 code "Accidents due to residence or prolonged visit at high altitude (event)": '217615009' from "SNOMEDCT" display 'Accidents due to residence or prolonged visit at high altitude (event)'
 code "Periodic breathing of sleep at high altitude (finding)": '442549008' from "SNOMEDCT" display 'Periodic breathing of sleep at high altitude (finding)'
-code "Air pressure effects: &/or altitude problems (disorder)": '157730009' from "SNOMEDCT" display 'Air pressure effects: &/or altitude problems (disorder)'
 code "E0433": 'E0433' from "HCPCS"
 code "E0434": 'E0434' from "HCPCS"
 code "E0444": 'E0444' from "HCPCS"
@@ -228,6 +225,8 @@ code "Dyspnea on exertion (finding)": '60845006' from "SNOMEDCT" display 'Dyspne
 
 parameter "Encounter" Encounter
 parameter "DeviceRequest" DeviceRequest
+parameter "PractitionerRole" PractitionerRole
+parameter "Practitioner" Practitioner
 
 context Patient
 
@@ -303,11 +302,10 @@ define function ToCode(coding FHIR.Coding):
 define TravelToHigherElevation:
   exists ( [Observation] O
       where O.status.value = 'final'
-        and ( "ToCode"(First(O.code.coding)) = "High altitude residence (& accident caused by)"
+        and ( "ToCode"(First(O.code.coding)) = "High altitude residence"
             or "ToCode"(First(O.code.coding)) = "Effects of high altitude (disorder)"
             or "ToCode"(First(O.code.coding)) = "Accidents due to residence or prolonged visit at high altitude (event)"
             or "ToCode"(First(O.code.coding)) = "Periodic breathing of sleep at high altitude (finding)"
-            or "ToCode"(First(O.code.coding)) = "Air pressure effects: &/or altitude problems (disorder)"
         )
         and start of "Normalize Interval"(O.effective) less than 2 months before start of "EncounterResource".period
   )
@@ -486,7 +484,7 @@ define ArterialOxygenSaturationExercise:
 
 define ArterialPO2ExerciseResource:
   First([Observation] P
-      where "ToCode"(First(P.code.coding)) = "Oxygen [Partial pressure] adjusted to patients actual temperature in Arterial blood"
+      where "ToCode"(First(P.code.coding)) = "Oxygen [Partial pressure] adjusted to patient's actual temperature in Arterial blood"
       and (start of "Normalize Interval"(P.effective) same day as "TestingDate")
   )
 
@@ -506,7 +504,7 @@ define ArterialOxygenSaturationExerciseWithOxygen:
 
 define ArterialPO2ExerciseWithOxygenResource:
   First([Observation] P
-      where "ToCode"(First(P.code.coding)) = "Oxygen [Partial pressure] adjusted to patients actual temperature in Arterial blood"
+      where "ToCode"(First(P.code.coding)) = "Oxygen [Partial pressure] adjusted to patient's actual temperature in Arterial blood"
         and "ToCode"(First(First(P.component).code.coding)) = "Use of supplemental oxygen"
         and First(P.component).value = true
         and (start of "Normalize Interval"(P.effective) same day as "TestingDate")
@@ -1260,7 +1258,7 @@ define GoiterResource:
 
 define LipidDisordersResource:
   First( [Condition] P
-      where "ToCode"(First(P.code.coding)) = "Lipids abnormal (finding)"
+      where "ToCode"(First(P.code.coding)) = "Lipids abnormal"
       and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 
@@ -1586,7 +1584,7 @@ define StiffnessResource:
 
 define LimitationOfROMResource:
   First( [Condition] P
-      where "ToCode"(First(P.code.coding)) = "Functional limitation in range of motion [CMS Assessment]"
+      where "ToCode"(First(P.code.coding)) = "Functional limitation in range of motion during assessment period [CMS Assessment]"
         and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed'
   ) 

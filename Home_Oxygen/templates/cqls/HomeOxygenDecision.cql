@@ -118,7 +118,7 @@ code "Cardiac murmur, unspecified": 'R01.1' from "ICD10CM" display 'Cardiac murm
 
 code "Varicose vein finding (finding)": '271652003' from "SNOMEDCT" display 'Varicose vein finding (finding)'
 
-code "Cardiac blood pool imaging, gated equilibrium": '78472' from "CPT" display 'Cardiac blood pool imaging, gated equilibrium'
+code "Cardiac blood pool imaging, gated equilibrium" : '78472' from "CPT" display 'Cardiac blood pool imaging, gated equilibrium; planar, single study at rest or stress (exercise and/or pharmacologic), wall motion study plus ejection fraction, with or without additional quantitative processing'
 code "P pulmonale by electrocardiogram" : '164914003' from "SNOMEDCT" display 'P pulmonale by electrocardiogram'
 
 code "Hematocrit/Hemoglobin [Ratio] of Blood by Automated count": '16931-8' from "LOINC" display 'Hematocrit/Hemoglobin [Ratio] of Blood by Automated count'
@@ -144,7 +144,7 @@ code "Hemorrhage of anus and rectum": 'K62.5' from "ICD10CM" display 'Hemorrhage
 code "Heartburn": 'R12' from "ICD10CM" display 'Heartburn'
 
 code "Inhaled oxygen flow rate": '3151-8' from "LOINC" display 'Inhaled oxygen flow rate'
-code "Oxygen [Partial pressure] adjusted to patients actual temperature in Arterial blood": '19255-9' from "LOINC" display 'Oxygen [Partial pressure] adjusted to patients actual temperature in Arterial blood'
+code "Oxygen [Partial pressure] adjusted to patient's actual temperature in Arterial blood": '19255-9' from "LOINC" display 'Oxygen [Partial pressure] adjusted to patient's actual temperature in Arterial blood'
 
 code "Oxygen saturation in Arterial blood by Pulse oximetry --W exercise": '89276-0' from "LOINC" display 'Oxygen saturation in Arterial blood by Pulse oximetry --W exercise'
 code "Oxygen saturation in Arterial blood by Pulse oximetry --on room air": '59410-1' from "LOINC" display 'Oxygen saturation in Arterial blood by Pulse oximetry --on room air'
@@ -159,7 +159,7 @@ code "pH of Arterial blood": '2744-1' from "LOINC" display 'pH of Arterial blood
 code "Hematocrit [Volume Fraction] of Arterial blood": '32354-3' from "LOINC" display 'Hematocrit [Volume Fraction] of Arterial blood'
 	
 code "Swelling (finding)": '65124004' from "SNOMEDCT" display 'Swelling (finding)'
-code "Functional limitation in range of motion [CMS Assessment]": '54525-1' from "LOINC" display 'Functional limitation in range of motion [CMS Assessment]'
+code "Functional limitation in range of motion during assessment period [CMS Assessment]": '92908-3' from "LOINC" display 'Functional limitation in range of motion during assessment period [CMS Assessment]'
 code "Fasciculation": 'R25.3' from "ICD10CM" display 'Fasciculation'
 code "Muscle wasting and atrophy, not elsewhere classified, unspecified site": 'M62.50' from "ICD10CM" display 'Muscle wasting and atrophy, not elsewhere classified, unspecified site'
 
@@ -181,13 +181,12 @@ code "Bruising symptom (finding)": '161885008' from "SNOMEDCT" display 'Bruising
 code "Bleeding (finding)": '131148009' from "SNOMEDCT" display 'Bleeding (finding)'
 
 code "Goiter (disorder)":'3716002' from "SNOMEDCT" display 'Goiter (disorder)'
-code "Lipids abnormal (finding)": '166818002' from "SNOMEDCT" display 'Lipids abnormal (finding)'
+code "Lipids abnormal": '166818002' from "SNOMEDCT" display 'Lipids abnormal'
 
 code "Oral steroid therapy (procedure)": '297280007' from "SNOMEDCT" display 'Oral steroid therapy (procedure)'
 code "Intravenous hydrocortisone therapy (procedure)": '297283009' from "SNOMEDCT" display 'Intravenous hydrocortisone therapy (procedure)'
 code "Steroid therapy (procedure)": '297279009' from "SNOMEDCT" display 'Steroid therapy (procedure)'
 code "Inhaled steroid therapy (procedure)": '710818004' from "SNOMEDCT" display 'Inhaled steroid therapy (procedure)'
-code "Interferon-gamma [Chemical/Ingredient]": 'N0000011343' from "SNOMEDCT" display 'Interferon-gamma [Chemical/Ingredient]'
 
 
 
@@ -197,7 +196,6 @@ code "Blood gas measurement (procedure)": '167018008' from "SNOMEDCT" display 'B
 
 code "Walks indoors - usual functional ability during assessment period [CMS Assessment]": '94996-6' from "LOINC" display 'Walks indoors - usual functional ability during assessment period [CMS Assessment]'
 code "Angina pectoris, unspecified": 'I20.9' from "ICD10CM" display 'Angina pectoris, unspecified'
-code "Cystic fibrosis with pulmonary manifestations": 'J84' from "ICD10CM" display 'Cystic fibrosis with pulmonary manifestations'
 code "Pulmonary hypertension, unspecified" : 'I27.20' from "ICD10CM" display 'Pulmonary hypertension, unspecified'
 code "Congestive heart failure (disorder)": '42343007' from "SNOMEDCT" display 'Congestive heart failure (disorder)'
 code "Cor pulmonale (chronic)" : 'I27.81' from "ICD10CM" display 'Cor pulmonale (chronic)'
