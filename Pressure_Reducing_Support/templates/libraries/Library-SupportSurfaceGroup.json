@@ -556,6 +556,126 @@
               "system": "http://snomed.info/sct",
               "code": "397643008",
               "display": "Ability to sense sharp point"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.503",
+              "display": "Pressure ulcer of unspecified ankle, stage 3"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.504",
+              "display": "Pressure ulcer of unspecified ankle, stage 4"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.513",
+              "display": "Pressure ulcer of right ankle, stage 3"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.514",
+              "display": "Pressure ulcer of right ankle, stage 4"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.523",
+              "display": "Pressure ulcer of left ankle, stage 3"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.524",
+              "display": "Pressure ulcer of left ankle, stage 4"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.603",
+              "display": "Pressure ulcer of unspecified heel, stage 3"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.604",
+              "display": "Pressure ulcer of unspecified heel, stage 4"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.613",
+              "display": "Pressure ulcer of right heel, stage 3"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.614",
+              "display": "Pressure ulcer of right heel, stage 4"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.623",
+              "display": "Pressure ulcer of left heel, stage 3"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.624",
+              "display": "Pressure ulcer of left heel, stage 4"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.813",
+              "display": "Pressure ulcer of head, stage 3"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.814",
+              "display": "Pressure ulcer of head, stage 4"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.893",
+              "display": "Pressure ulcer of other site, stage 3"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.894",
+              "display": "Pressure ulcer of other site, stage 4"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.93",
+              "display": "Pressure ulcer of unspecified site, stage 3"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.94",
+              "display": "Pressure ulcer of unspecified site, stage 4"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.003",
+              "display": "Pressure ulcer of unspecified elbow, stage 3"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.004",
+              "display": "Pressure ulcer of unspecified elbow, stage 4"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.013",
+              "display": "Pressure ulcer of right elbow, stage 3"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.014",
+              "display": "Pressure ulcer of right elbow, stage 4"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.023",
+              "display": "Pressure ulcer of left elbow, stage 3"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.024",
+              "display": "Pressure ulcer of left elbow, stage 4"
             }
           ]
         }

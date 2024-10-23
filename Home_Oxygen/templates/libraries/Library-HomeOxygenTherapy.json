@@ -23,18 +23,6 @@
     ],
     "dataRequirement": [
         {
-          "type": "Encounter",
-          "dateFilter": [
-            {
-              "path": "period",
-              "valuePeriod": {
-                "start": "2022-12-01T03:53:02",
-                "end": "2023-04-03T07:53:24"
-              }
-            }
-          ]
-        },
-        {
           "type": "Condition",
           "codeFilter": [
             {
@@ -792,8 +780,8 @@
                 },
                 {
                   "system": "http://loinc.org",
-                  "code": "54525-1",
-                  "display": "Functional limitation in range of motion [CMS Assessment]"
+                  "code": "92908-3",
+                  "display": "Functional limitation in range of motion during assessment period [CMS Assessment]"
                 },
                 {
                   "system": "http://hl7.org/fhir/sid/icd-10-cm",
@@ -883,7 +871,7 @@
                 {
                   "system": "http://snomed.info/sct",
                   "code": "166818002",
-                  "display": "Lipids abnormal (finding)"
+                  "display": "Lipids abnormal"
                 },
                 {
                   "system": "http://loinc.org",
@@ -894,11 +882,6 @@
                   "system": "http://hl7.org/fhir/sid/icd-10-cm",
                   "code": "I20.9",
                   "display": "Angina pectoris, unspecified"
-                },
-                {
-                  "system": "http://hl7.org/fhir/sid/icd-10-cm",
-                  "code": "J84",
-                  "display": "Cystic fibrosis with pulmonary manifestations"
                 },
                 {
                   "system": "http://hl7.org/fhir/sid/icd-10-cm",
@@ -1037,7 +1020,7 @@
                 {
                     "system": "http://www.ama-assn.org/go/cpt",
                     "code": "78472",
-                    "display": "Cardiac blood pool imaging, gated equilibrium"
+                    "display": "Cardiac blood pool imaging, gated equilibrium; planar, single study at rest or stress (exercise and/or pharmacologic), wall motion study plus ejection fraction, with or without additional quantitative processing"
                 },
                 {
                   "system": "http://snomed.info/sct",
@@ -1083,11 +1066,6 @@
                   "system": "http://snomed.info/sct",
                   "code": "710818004",
                   "display": "Inhaled steroid therapy (procedure)"
-                },
-                {
-                  "system": "http://snomed.info/sct",
-                  "code": "N0000011343",
-                  "display": "Interferon-gamma [Chemical/Ingredient]"
                 },
                 {
                   "system": "http://snomed.info/sct",
@@ -1195,7 +1173,7 @@
                 {
                   "system": "http://loinc.org",
                   "code": "19255-9",
-                  "display": "Oxygen [Partial pressure] adjusted to patients actual temperature in Arterial blood"
+                  "display": "Oxygen [Partial pressure] adjusted to patient's actual temperature in Arterial blood"
                 },
                 {
                   "system": "http://loinc.org",
@@ -1245,7 +1223,7 @@
                 {
                   "system": "http://snomed.info/sct",
                   "code": "271209008",
-                  "display": "High altitude residence (& accident caused by)"
+                  "display": "High altitude residence"
                 },
                 {
                   "system": "http://snomed.info/sct",
@@ -1261,11 +1239,6 @@
                   "system": "http://snomed.info/sct",
                   "code": "442549008",
                   "display": "Periodic breathing of sleep at high altitude (finding)"
-                },
-                {
-                  "system": "http://snomed.info/sct",
-                  "code": "157730009",
-                  "display": "Air pressure effects: &/or altitude problems (disorder)"
                 },
                 {
                   "system": "http://loinc.org",

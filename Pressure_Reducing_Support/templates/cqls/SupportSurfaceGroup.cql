@@ -1,4 +1,4 @@
-library SupportSurfaceGroup2 version '1.0.0'
+library SupportSurfaceGroup version '1.0.0'
 
 using FHIR version '4.0.0'
 
@@ -122,6 +122,32 @@ code "397704003": '397704003' from "SNOMED-CT" display 'Pain sensation, function
 code "44695005": '44695005' from "SNOMED-CT" display 'Paralysis'
 code "397623002": '397623002' from "SNOMED-CT" display 'Ability to sense pressure'
 code "397643008": '397643008' from "SNOMED-CT" display 'Ability to sense sharp point'
+
+code "L89.003": 'L89.003' from "ICD-10-CM" display 'Pressure ulcer of unspecified elbow, stage 3'
+code "L89.004": 'L89.004' from "ICD-10-CM" display 'Pressure ulcer of unspecified elbow, stage 4'
+code "L89.013": 'L89.013' from "ICD-10-CM" display 'Pressure ulcer of right elbow, stage 3'
+code "L89.014": 'L89.014' from "ICD-10-CM" display 'Pressure ulcer of right elbow, stage 4'
+code "L89.023": 'L89.023' from "ICD-10-CM" display 'Pressure ulcer of left elbow, stage 3'
+code "L89.024": 'L89.024' from "ICD-10-CM" display 'Pressure ulcer of left elbow, stage 4'
+
+code "L89.503": 'L89.503' from "ICD-10-CM" display 'Pressure ulcer of unspecified ankle, stage 3'
+code "L89.504": 'L89.504' from "ICD-10-CM" display 'Pressure ulcer of unspecified ankle, stage 4'
+code "L89.513": 'L89.513' from "ICD-10-CM" display 'Pressure ulcer of right ankle, stage 3'
+code "L89.514": 'L89.514' from "ICD-10-CM" display 'Pressure ulcer of right ankle, stage 4'
+code "L89.523": 'L89.523' from "ICD-10-CM" display 'Pressure ulcer of left ankle, stage 3'
+code "L89.524": 'L89.524' from "ICD-10-CM" display 'Pressure ulcer of left ankle, stage 4'
+code "L89.603": 'L89.603' from "ICD-10-CM" display 'Pressure ulcer of unspecified heel, stage 3'
+code "L89.604": 'L89.604' from "ICD-10-CM" display 'Pressure ulcer of unspecified heel, stage 4'
+code "L89.613": 'L89.613' from "ICD-10-CM" display 'Pressure ulcer of right heel, stage 3'
+code "L89.614": 'L89.614' from "ICD-10-CM" display 'Pressure ulcer of right heel, stage 4'
+code "L89.623": 'L89.623' from "ICD-10-CM" display 'Pressure ulcer of left heel, stage 3'
+code "L89.624": 'L89.624' from "ICD-10-CM" display 'Pressure ulcer of left heel, stage 4'
+code "L89.813": 'L89.813' from "ICD-10-CM" display 'Pressure ulcer of head, stage 3'
+code "L89.814": 'L89.814' from "ICD-10-CM" display 'Pressure ulcer of head, stage 4'
+code "L89.893": 'L89.893' from "ICD-10-CM" display 'Pressure ulcer of other site, stage 3'
+code "L89.894": 'L89.894' from "ICD-10-CM" display 'Pressure ulcer of other site, stage 4'
+code "L89.93": 'L89.93' from "ICD-10-CM" display 'Pressure ulcer of unspecified site, stage 3'
+code "L89.94": 'L89.94' from "ICD-10-CM" display 'Pressure ulcer of unspecified site, stage 4'
 
 concept "Group1": {
     "E0181",
