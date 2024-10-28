@@ -23,7 +23,7 @@
         "codeFilter": [
           {
             "path": "code",
-            "valueSet": "2.16.840.1.113883.3.6037.1001.23.99.81"
+            "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.99.81"
           },
           {
             "path": "clinical-status",
@@ -36,7 +36,7 @@
         "codeFilter": [
           {
             "path": "code",
-            "valueSet": "2.16.840.1.113883.3.6037.1001.23.99.82"
+            "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.99.82"
           },
           {
             "path": "clinical-status",
@@ -49,7 +49,7 @@
         "codeFilter": [
           {
             "path": "code",
-            "valueSet": "2.16.840.1.113883.3.6037.1001.23.99.84"
+            "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.99.84"
           },
           {
             "path": "clinical-status",
@@ -62,7 +62,7 @@
         "codeFilter": [
           {
             "path": "code",
-            "valueSet": "2.16.840.1.113883.3.6037.1001.23.99.83"
+            "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.99.83"
           }
         ]
       },

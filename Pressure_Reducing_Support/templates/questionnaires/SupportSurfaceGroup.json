@@ -509,19 +509,19 @@
           "answerOption":[
             {
               "valueCoding":{
-                "code": "Criteria 1: Completely immobile, cannot makes changes without assistance.",
+                "code": "Criteria1CompletelyImmobile",
                 "display": "Criteria 1: Completely immobile, cannot makes changes without assistance."
               }
             },
             {
               "valueCoding":{
-                "code": "Criteria 2: Limited mobility, cannot make changes significant enough to alleviate pressure without assistance.  Provider Note: The medical record must document the severity of the condition sufficiently to demonstrate the medical necessity for a PRSS.",
+                "code": "Criteria2LimitedMobility",
                 "display": "Criteria 2: Limited mobility, cannot make changes significant enough to alleviate pressure without assistance.  Provider Note: The medical record must document the severity of the condition sufficiently to demonstrate the medical necessity for a PRSS."
               }
             },
             {
               "valueCoding":{
-                "code": "Criteria 3: Any stage pressure ulcer/injury on the trunk or pelvis. Provider Note: The medical record must document the severity of the condition sufficiently to demonstrate the medical necessity for a PRSS.",
+                "code": "Criteria3AnyStagePressureUlcer",
                 "display": "Criteria 3: Any stage pressure ulcer/injury on the trunk or pelvis. Provider Note: The medical record must document the severity of the condition sufficiently to demonstrate the medical necessity for a PRSS."
               }
             }
@@ -949,7 +949,7 @@
               "operator": "=",
               "question": "4.1",
               "answerCoding": {
-                "code": "Criteria 3: Any stage pressure ulcer/injury on the trunk or pelvis. Provider Note: The medical record must document the severity of the condition sufficiently to demonstrate the medical necessity for a PRSS.",
+                "code": "Criteria3AnyStagePressureUlcer",
                 "display": "Criteria 3: Any stage pressure ulcer/injury on the trunk or pelvis. Provider Note: The medical record must document the severity of the condition sufficiently to demonstrate the medical necessity for a PRSS."
               }
             }
@@ -1130,32 +1130,32 @@
           "answerOption":[
             {
               "valueCoding":{
-                "code": "Criteria 1: Multiple stage 2 pressure ulcers located on the trunk or pelvis, which have failed to improve over the past month.",
+                "code": "Criteria1MultipleStage2PressureUlcers",
                 "display": "Criteria 1: Multiple stage 2 pressure ulcers located on the trunk or pelvis, which have failed to improve over the past month."
               }
             },
             {
               "valueCoding":{
-                "code": "Criteria 2: Has a large stage 3 or 4 pressure ulcer/injury on the trunk or pelvis.",
+                "code": "Criteria2LargeStage3or4PressureUlcer",
                 "display": "Criteria 2: Has a large stage 3 or 4 pressure ulcer/injury on the trunk or pelvis."
               }
             },
             {
               "valueCoding":{
-                "code": "Criteria 2: Has multiple stage 3 or 4 pressure ulcer(s)/injury(s) on the trunk or pelvis.",
+                "code": "Criteria2MultipleStage3or4PressureUlcer",
                 "display": "Criteria 2: Has multiple stage 3 or 4 pressure ulcer(s)/injury(s) on the trunk or pelvis."
               }
             },
             {
               "valueCoding":{
-                "code": "Criteria 3  Had a myocutaneous flap for a pressure ulcer/injury on the trunk or pelvis within the past 60 days.",
-                "display": "Criteria 3  Had a myocutaneous flap for a pressure ulcer/injury on the trunk or pelvis within the past 60 days."
+                "code": "Criteria3MyocutaneousFlapForPressureUlcer",
+                "display": "Criteria 3: Had a myocutaneous flap for a pressure ulcer/injury on the trunk or pelvis within the past 60 days. Criteria 3 pre-req: The beneficiary has been on a group 2 or 3 support surface immediately prior to discharge from a hospital or nursing facility within the past 30 days"
               }
             },
             {
               "valueCoding":{
-                "code": "Criteria 3  Had a skin graft for a pressure ulcer/injury on the trunk or pelvis within the past 60 days.",
-                "display": "Criteria 3  Had a skin graft for a pressure ulcer/injury on the trunk or pelvis within the past 60 days."
+                "code": "Criteria3SkinGraftForPressureUlcer",
+                "display": "Criteria 3: Had a skin graft for a pressure ulcer/injury on the trunk or pelvis within the past 60 days. Criteria 3 pre-req: The beneficiary has been on a group 2 or 3 support surface immediately prior to discharge from a hospital or nursing facility within the past 30 days"
               }
             }
           ],
@@ -1181,29 +1181,15 @@
             }
           ],
           "linkId": "4.2.1",
-          "text": "Describe the large pressure ulcer/injury. Criteria 3 pre-req: The beneficiary has been on a group 2 or 3 support surface immediately prior to discharge from a hospital or nursing facility within the past 30 days",
-          "type": "choice",
+          "text": "Describe the large pressure ulcer/injury.",
+          "type": "text",
           "required": true,
-          "answerOption":[
-            {
-              "valueCoding":{
-                "code": "Criteria 3: Had a myocutaneous flap for a pressure ulcer/injury on the trunk or pelvis within the past 60 days.",
-                "display": "Criteria 3: Had a myocutaneous flap for a pressure ulcer/injury on the trunk or pelvis within the past 60 days."
-              }
-            },
-            {
-              "valueCoding":{
-                "code": "Criteria 3: Had a skin graft for a pressure ulcer/injury on the trunk or pelvis within the past 60 days.",
-                "display": "Criteria 3: Had a skin graft for a pressure ulcer/injury on the trunk or pelvis within the past 60 days."
-              }
-            }
-          ],
           "enableWhen":[
             {
               "operator": "=",
               "question": "4.2",
               "answerCoding": {
-                "code": "Criteria 2: Has a large stage 3 or 4 pressure ulcer/injury on the trunk or pelvis.",
+                "code": "Criteria2LargeStage3or4PressureUlcer",
                 "display": "Criteria 2: Has a large stage 3 or 4 pressure ulcer/injury on the trunk or pelvis."
               }
             }
@@ -1309,7 +1295,7 @@
               "operator": "=",
               "question": "4.2",
               "answerCoding": {
-                "code": "Criteria 1: Multiple stage 2 pressure ulcers located on the trunk or pelvis, which have failed to improve over the past month.",
+                "code": "Criteria1MultipleStage2PressureUlcers",
                 "display": "Criteria 1: Multiple stage 2 pressure ulcers located on the trunk or pelvis, which have failed to improve over the past month."
               }
             }
@@ -1494,7 +1480,7 @@
               "operator": "=",
               "question": "4.2",
               "answerCoding": {
-                "code": "Criteria 2: Has a large stage 3 or 4 pressure ulcer/injury on the trunk or pelvis.",
+                "code": "Criteria2LargeStage3or4PressureUlcer",
                 "display": "Criteria 2: Has a large stage 3 or 4 pressure ulcer/injury on the trunk or pelvis."
               }
             },
@@ -1502,7 +1488,7 @@
               "operator": "=",
               "question": "4.2",
               "answerCoding": {
-                "code": "Criteria 2: Has multiple stage 3 or 4 pressure ulcer(s)/injury(s) on the trunk or pelvis.",
+                "code": "Criteria2MultipleStage3or4PressureUlcer",
                 "display": "Criteria 2: Has multiple stage 3 or 4 pressure ulcer(s)/injury(s) on the trunk or pelvis."
               }
             }
@@ -1626,7 +1612,7 @@
               "operator": "=",
               "question": "4.2",
               "answerCoding": {
-                "code": "Criteria 1: Multiple stage 2 pressure ulcers located on the trunk or pelvis, which have failed to improve over the past month.",
+                "code": "Criteria1MultipleStage2PressureUlcers",
                 "display": "Criteria 1: Multiple stage 2 pressure ulcers located on the trunk or pelvis, which have failed to improve over the past month."
               }
             },
@@ -1634,7 +1620,7 @@
               "operator": "=",
               "question": "4.2",
               "answerCoding": {
-                "code": "Criteria 2: Has a large stage 3 or 4 pressure ulcer/injury on the trunk or pelvis.",
+                "code": "Criteria2LargeStage3or4PressureUlcer",
                 "display": "Criteria 2: Has a large stage 3 or 4 pressure ulcer/injury on the trunk or pelvis."
               }
             },
@@ -1642,7 +1628,7 @@
               "operator": "=",
               "question": "4.2",
               "answerCoding": {
-                "code": "Criteria 2: Has multiple stage 3 or 4 pressure ulcer(s)/injury(s) on the trunk or pelvis.",
+                "code": "Criteria2MultipleStage3or4PressureUlcer",
                 "display": "Criteria 2: Has multiple stage 3 or 4 pressure ulcer(s)/injury(s) on the trunk or pelvis."
               }
             }
@@ -1666,13 +1652,13 @@
             {
               "valueCoding":{
                 "code": "15734",
-                "display": "Muscle, myocutaneous  flap; trunk"
+                "display": "Muscle, myocutaneous flap; trunk"
               }
             },
             {
               "valueCoding":{
-                "code": "Muscle, myocutaneous  flap; pelvis",
-                "display": "Muscle, myocutaneous  flap; pelvis"
+                "code": "MuscleMyocutaneousFlapPelvis",
+                "display": "Muscle, myocutaneous flap; pelvis"
               }
             },
             {
@@ -1694,7 +1680,7 @@
               "operator": "=",
               "question": "4.2",
               "answerCoding": {
-                "code": "Criteria 3  Had a myocutaneous flap for a pressure ulcer/injury on the trunk or pelvis within the past 60 days.",
+                "code": "Criteria3MyocutaneousFlapForPressureUlcer",
                 "display": "Criteria 3  Had a myocutaneous flap for a pressure ulcer/injury on the trunk or pelvis within the past 60 days."
               }
             },
@@ -1702,7 +1688,7 @@
               "operator": "=",
               "question": "4.2",
               "answerCoding": {
-                "code": "Criteria 3  Had a skin graft for a pressure ulcer/injury on the trunk or pelvis within the past 60 days.",
+                "code": "Criteria3SkinGraftForPressureUlcer",
                 "display": "Criteria 3  Had a skin graft for a pressure ulcer/injury on the trunk or pelvis within the past 60 days."
               }
             }

@@ -26,35 +26,6 @@
         }
       ],
       "url": "<FHIR-server>/Questionnaire/questionnaire-homehealth-HomeHealthService",
-      "contained": [
-        {
-          "resourceType": "ValueSet",
-          "id": "gender",
-          "name": "Gender",
-          "status": "draft",
-          "description": "Gender",
-          "compose": {
-            "include": [
-              {
-                "concept": [
-                  {
-                    "code": "male",
-                    "display": "Male"
-                  },
-                  {
-                    "code": "female",
-                    "display": "Female"
-                  },
-                  {
-                    "code": "other",
-                    "display": "Other"
-                  }
-                ]
-              }
-            ]
-          }
-        }
-      ],
     "item":[
        {
          "linkId": "1",

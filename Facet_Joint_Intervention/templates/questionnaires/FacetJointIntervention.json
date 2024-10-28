@@ -1265,6 +1265,7 @@
                             ],
                             "linkId": "3.1.1.a",
                             "text": "Cervical/Thoracic",
+                            "type": "choice",
                             "required": true,
                             "answerOption": [
                                 {
@@ -1336,6 +1337,7 @@
                         {
                             "linkId": "3.1.1.b",
                             "text": "Lumbar/Sacral",
+                            "type": "choice",
                             "required": true,
                             "answerOption": [
                                 {
@@ -1819,6 +1821,7 @@
                     "text": "Pain duration",
                     "type": "quantity",
                     "required": false,
+                    "enableBehavior": "any",
                     "enableWhen":[
                         {
                             "operator": "=",
@@ -1875,6 +1878,7 @@
                     "text": "Pain Intensity or Severity  (Pain Score)",
                     "type": "integer",
                     "required": false,
+                    "enableBehavior": "any",
                     "enableWhen":[
                         {
                             "operator": "=",
@@ -2486,6 +2490,7 @@
                     "text": "Pain duration",
                     "type": "quantity",
                     "required": false,
+                    "enableBehavior": "any",
                     "enableWhen":[
                         {
                             "operator": "=",
@@ -2542,6 +2547,7 @@
                     "text": "Pain Intensity or Severity  (Pain Score)",
                     "type": "integer",
                     "required": false,
+                    "enableBehavior": "any",
                     "enableWhen":[
                         {
                             "operator": "=",
@@ -3782,6 +3788,7 @@
                     "text": "Pain duration",
                     "type": "quantity",
                     "required": false,
+                    "enableBehavior": "any",
                     "enableWhen":[
                         {
                             "operator": "=",
@@ -3838,6 +3845,7 @@
                     "text": "Pain Intensity or Severity (Pain Score)",
                     "type": "integer",
                     "required": false,
+                    "enableBehavior": "any",
                     "enableWhen":[
                         {
                             "operator": "=",
@@ -3944,7 +3952,6 @@
                             }
                         }
                     ],
-                    "enableBehavior": "any",
                     "enableWhen":[
                         {
                             "operator": "!=",
@@ -4002,7 +4009,6 @@
                     "text": "Pain Intensity Score: ",
                     "type": "integer",
                     "required": false,
-                    "enableBehavior": "any",
                     "enableWhen":[
                         {
                             "operator": "=",
@@ -4073,7 +4079,6 @@
                     "text": "Pain Intensity Score: ",
                     "type": "choice",
                     "required": false,
-                    "enableBehavior": "any",
                     "enableWhen":[
                         {
                             "operator": "=",
@@ -4179,7 +4184,6 @@
                     "text": "Pain interference with ADLs Score/Results: ",
                     "type": "integer",
                     "required": false,
-                    "enableBehavior": "any",
                     "enableWhen":[
                         {
                             "operator": "=",
