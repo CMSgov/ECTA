@@ -27,7 +27,7 @@
         "codeFilter": [
           {
             "path": "code",
-            "valueSet": "2.16.840.1.113883.17.4077.3.2006"
+            "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.17.4077.3.2006"
           }
           ]
       },
@@ -36,52 +36,7 @@
         "codeFilter": [
           {
             "path": "code",
-            "valueSet": "2.16.840.1.113883.3.464.1003.199.12.1055"
-          }
-          ]
-      },
-      {
-        "type": "Procedure",
-        "codeFilter": [
-          {
-            "path": "status",
-            "searchParam": "completed"
-          }
-          ]
-      },
-      {
-        "type": "MedicationAdministration",
-        "codeFilter": [
-          {
-            "path": "status",
-            "searchParam": "in-progress"
-          }
-          ]
-      },
-      {
-        "type": "AllergyIntolerance",
-        "codeFilter": [
-          {
-            "path": "clinicalStatus",
-            "searchParam": "active"
-          }
-          ]
-      },
-      {
-        "type": "CarePlan",
-        "codeFilter": [
-          {
-            "path": "status",
-            "searchParam": "active"
-          }
-          ]
-      },
-      {
-        "type": "CarePlan",
-        "codeFilter": [
-          {
-            "path": "intent",
-            "searchParam": "order"
+            "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.464.1003.199.12.1055"
           }
           ]
       }

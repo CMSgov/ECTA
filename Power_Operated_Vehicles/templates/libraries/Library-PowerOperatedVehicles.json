@@ -23,7 +23,7 @@
         "codeFilter": [
           {
             "path": "code",
-            "valueSet": "2.16.840.1.113883.3.7643.3.1031"
+            "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.7643.3.1031"
           }
           ]
       },
@@ -32,7 +32,7 @@
         "codeFilter": [
           {
             "path": "code",
-            "valueSet": "2.16.840.1.113883.3.7643.3.1032"
+            "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.7643.3.1032"
           }
           ]
       },
@@ -41,7 +41,7 @@
         "codeFilter": [
           {
             "path": "code",
-            "valueSet": "2.16.840.1.113883.3.6037.1001.23.95.31"
+            "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.95.31"
           }
           ]
       },
@@ -50,7 +50,7 @@
         "codeFilter": [
           {
             "path": "code",
-            "valueSet": "2.16.840.1.113883.17.4077.3.2006"
+            "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.17.4077.3.2006"
           }
           ]
       },
@@ -59,7 +59,7 @@
         "codeFilter": [
           {
             "path": "code",
-            "valueSet": "2.16.840.1.113883.3.464.1003.199.12.1055"
+            "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.464.1003.199.12.1055"
           }
           ]
       },
@@ -68,7 +68,7 @@
         "codeFilter": [
           {
             "path": "code",
-            "valueSet": "2.16.840.1.113883.3.6037.1001.23.95.21"
+            "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.95.21"
           }
           ]
       },
@@ -77,7 +77,7 @@
         "codeFilter": [
           {
             "path": "code",
-            "valueSet": "2.16.840.1.113762.1.4.1045.159"
+            "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1045.159"
           }
         ]
       },
@@ -86,7 +86,7 @@
         "codeFilter": [
           {
             "path": "code",
-            "valueSet": "2.16.840.1.113883.3.464.1003.121.12.1014"
+            "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.464.1003.121.12.1014"
           }
         ]
       }

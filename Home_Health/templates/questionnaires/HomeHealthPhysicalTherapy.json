@@ -22,35 +22,6 @@
 		}
 	],
 	"url": "<FHIR-server>/Questionnaire/questionnaire-homehealth-HomeHealthPhysicalTherapy",
-	"contained": [
-		{
-			"resourceType": "ValueSet",
-			"id": "gender",
-			"name": "Gender",
-			"status": "draft",
-			"description": "Gender",
-			"compose": {
-				"include": [
-					{
-						"concept": [
-							{
-								"code": "male",
-								"display": "Male"
-							},
-							{
-								"code": "female",
-								"display": "Female"
-							},
-							{
-								"code": "other",
-								"display": "Other"
-							}
-						]
-					}
-				]
-			}
-		}
-	],
 	"item": [
 		{
 			"linkId": "1",
@@ -150,8 +121,7 @@
 				{
 					"linkId": "1.5",
 					"text": "Physical Therapy is medically necessary due to:",
-					"type": "display",
-					"required": true
+					"type": "display"
 				},
 				{
 					"linkId": "1.5.1",
@@ -4091,7 +4061,7 @@
 								},
 								{
 									"linkId": "2.10.16",
-									"text": "Does patient use a wheelchiar and/or schooter?",
+									"text": "Does patient use a wheelchiar and/or scooter?",
 									"type": "boolean",
 									"required": false
 								},
@@ -5017,6 +4987,7 @@
 						{
 							"linkId": "2.24.11",
 							"text": "Metacarpophalangeal (MCP) 3rd finger left extension",
+							"type": "decimal",
 							"required": false
 						},
 						{
@@ -5028,6 +4999,7 @@
 						{
 							"linkId": "2.24.13",
 							"text": "Metacarpophalangeal (MCP) 4th finger left extension",
+							"type": "decimal",
 							"required": false
 						},
 						{
@@ -5039,6 +5011,7 @@
 						{
 							"linkId": "2.24.15",
 							"text": "Metacarpophalangeal (MCP) 5th finger left extension",
+							"type": "decimal",
 							"required": false
 						}
 					]
@@ -5122,6 +5095,7 @@
 						{
 							"linkId": "2.25.11",
 							"text": "Proximal Interphalangeal (PIP) 5th finger left flexion",
+							"type": "decimal",
 							"required": false
 						},
 						{
@@ -5573,20 +5547,20 @@
 					"required": false
 				},
 				{
-					"linkId": "2.41",
+					"linkId": "2.42",
 					"text": "Other tests:",
 					"type": "boolean",
 					"required": false
 				},
 				{
-					"linkId": "2.42",
+					"linkId": "2.42.1",
 					"text": "Specify Other",
 					"type": "text",
 					"required": true,
 					"enableWhen": [
 						{
 							"operator": "=",
-							"question": "2.41",
+							"question": "2.42",
 							"answerBoolean": true
 						}
 					]

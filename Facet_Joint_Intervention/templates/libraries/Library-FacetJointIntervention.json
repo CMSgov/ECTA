@@ -27,22 +27,22 @@
               {
                   "system": "http://www.ama-assn.org/go/cpt",
                   "code": "64490",
-                  "display": "Inj paravert f jnt c/t 1 lev"
+                  "display": "Injection of diagnostic agent into single cervical paravertebral facet joint using fluoroscopic guidance"
               },
               {
                 "system": "http://www.ama-assn.org/go/cpt",
                 "code": "64493",
-                "display": "Inj paravert f jnt l/s 1 lev"
+                "display": "Injection of diagnostic agent into single lumbar paravertebral facet joint using fluoroscopic guidance"
               },
               {
                 "system": "http://www.ama-assn.org/go/cpt",
                 "code": "64633",
-                "display": "Destroy cerv/thor facet jnt"
+                "display": "Destruction of single cervical paravertebral facet joint nerve using neurolytic agent and using imaging guidance"
               },
               {
                 "system": "http://www.ama-assn.org/go/cpt",
                 "code": "64635",
-                "display": "Destroy lumb/sac facet jnt"
+                "display": "Destruction of single lumbar paravertebral facet joint nerve using neurolytic agent and using imaging guidance"
               },
               {
                 "system": "http://www.ama-assn.org/go/cpt",
@@ -62,12 +62,12 @@
               {
                 "system": "http://www.ama-assn.org/go/cpt",
                 "code": "64636",
-                "display": "Destroy l/s facet jnt addl​​"
+                "display": "Destruction of each additional sacral paravertebral facet joint nerve using neurolytic agent and using fluoroscopic guidance"
               },
               {
                 "system": "http://www.ama-assn.org/go/cpt",
                 "code": "64494",
-                "display": "Inj paravert f jnt l/s 2 lev​"
+                "display": "Injection of diagnostic agent into nerve of second lumbar paravertebral facet joint using imaging guidance"
               },
               {
                 "system": "http://www.ama-assn.org/go/cpt",
@@ -77,22 +77,22 @@
               {
                 "system": "https://hcpcs.codes/",
                 "code": "64490",
-                "display": "Inj paravert f jnt c/t 1 lev"
+                "display": "Injection of diagnostic agent into nerve of single thoracic paravertebral facet joint using imaging guidance"
               },
               {
                 "system": "https://hcpcs.codes/",
                 "code": "64493",
-                "display": "Inj paravert f jnt l/s 1 lev"
+                "display": "Injection of diagnostic agent into single lumbar paravertebral facet joint using fluoroscopic guidance"
               },
               {
                 "system": "https://hcpcs.codes/",
                 "code": "64633",
-                "display": "Destroy cerv/thor facet jnt"
+                "display": "Destruction of single cervical paravertebral facet joint nerve using neurolytic agent and using imaging guidance"
               },
               {
                 "system": "https://hcpcs.codes/",
                 "code": "64635",
-                "display": "Destroy lumb/sac facet jnt"
+                "display": "Destruction of single lumbar paravertebral facet joint nerve using neurolytic agent and using imaging guidance"
               },
               {
                 "system": "https://hcpcs.codes/",
@@ -112,12 +112,12 @@
               {
                 "system": "https://hcpcs.codes/",
                 "code": "64636",
-                "display": "Destroy l/s facet jnt addl​​"
+                "display": "Destruction of each additional sacral paravertebral facet joint nerve using neurolytic agent and using fluoroscopic guidance"
               },
               {
                 "system": "https://hcpcs.codes/",
                 "code": "64494",
-                "display": "Inj paravert f jnt l/s 2 lev​"
+                "display": "Injection of diagnostic agent into nerve of second sacral paravertebral facet joint using fluoroscopic guidance"
               },
               {
                 "system": "https://hcpcs.codes/",
@@ -177,7 +177,7 @@
               {
                 "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "M48.12",
-                "display": "Ankylosing hyperostosis [Forestier], cervical region​"
+                "display": "Ankylosing hyperostosis [Forestier], cervical region"
               },
               {
                 "system": "http://hl7.org/fhir/sid/icd-10-cm",
@@ -242,37 +242,37 @@
               {
                 "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "M53.82",
-                "display": "Other specified dorsopathies, cervical"
+                "display": "Other specified dorsopathies, cervical region"
               },
               {
                 "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "M53.83",
-                "display": "Other specified dorsopathies, cervicothoracic"
+                "display": "Other specified dorsopathies, cervicothoracic region"
               },
               {
                 "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "M53.84",
-                "display": "Other specified dorsopathies, thoracic"
+                "display": "Other specified dorsopathies, thoracic region"
               },
               {
                 "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "M53.85",
-                "display": "Other specified dorsopathies, thoracolumbar"
+                "display": "Other specified dorsopathies, thoracolumbar region"
               },
               {
                 "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "M53.86",
-                "display": "Other specified dorsopathies, lumbar"
+                "display": "Other specified dorsopathies, lumbar region"
               },
               {
                 "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "M53.87",
-                "display": "Other specified dorsopathies, lumbosacral"
+                "display": "Other specified dorsopathies, lumbosacral region"
               },
               {
                 "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "M53.88",
-                "display": "Other specified dorsopathies, sacral"
+                "display": "Other specified dorsopathies, sacral and sacrococcygeal region"
               },
               {
                 "system": "http://loinc.org",
@@ -287,32 +287,32 @@
               {
                 "system": "http://snomed.info/sct",
                 "code": "430962009",
-                "display": "Pseudoarthrosis"
+                "display": "Pseudoarthrosis of spine"
               },
               {
                 "system": "http://snomed.info/sct",
                 "code": "40854002",
-                "display": "Presence of a sixth lumbar vertebra"
+                "display": "Structure of body of sixth lumbar vertebra"
               },
               {
                 "system": "http://snomed.info/sct",
                 "code": "281373004",
-                "display": "Sacralization of the fifth lumbar vertebra"
+                "display": "Sacralisation of fifth lumbar vertebra"
               },
               {
                 "system": "http://loinc.org",
                 "code": "LA15324-9",
-                "display": "Severe Osteophytes (bone spurs)"
+                "display": "Grade 4: large osteophytes, marked narrowing of joint space, severe sclerosis and definite deformity of bone contour"
               },
               {
                 "system": "http://snomed.info/sct",
                 "code": "414916001",
-                "display": "Obesity or excessive adipose tissue"
+                "display": "Obesity"
               },
               {
                 "system": "http://snomed.info/sct",
                 "code": "363438000",
-                "display": "Spine Tumors"
+                "display": "Malignant tumour of vertebral column"
               },
               {
                 "system": "http://snomed.info/sct",
@@ -322,7 +322,7 @@
               {
                 "system": "http://snomed.info/sct",
                 "code": "239872002",
-                "display": "Hip Osteoarthritis"
+                "display": "Osteoarthritis of hip"
               },
               {
                 "system": "http://snomed.info/sct",
