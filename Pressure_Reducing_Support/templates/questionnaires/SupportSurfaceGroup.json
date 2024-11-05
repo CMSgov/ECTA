@@ -1708,6 +1708,7 @@
           "text": "Stage 3 or 4 pressure ulcer(s)/injury(s)",
           "type": "choice",
           "required": true,
+          "repeats": true,
           "answerOption": [
             {
               "valueCoding":{
@@ -2422,14 +2423,14 @@
               }
             }
           ]
-        },
-        {
-          "linkId": "6.2",
-          "text": "Appropriate turning and positioning? E.g., every two (2) hours.",
-          "type": "boolean",
-          "required": true
         }
       ]
+    },
+    {
+      "linkId": "6.2",
+      "text": "Appropriate turning and positioning? E.g., every two (2) hours.",
+      "type": "boolean",
+      "required": true
     },
     {
       "linkId": "7",
