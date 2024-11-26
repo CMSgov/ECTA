@@ -254,9 +254,10 @@ define EncounterCondition:
   "EncounterDiagnosis"("EncounterResource")
 
 define OrderingPractitionerRole:
-  singleton from ( [PractitionerRole] P
+    singleton from ( [PractitionerRole] P
         where 'PractitionerRole/' + P.id.value = "DeviceRequest".requester.reference.value
       )
+
 
 define OrderingPhysician:
   if (singleton from ( [Practitioner] P
@@ -267,11 +268,24 @@ define OrderingPhysician:
       )
   else if ("OrderingPractitionerRole" is not null and (singleton from ([Practitioner] P where 'Practitioner/' + P.id.value = "OrderingPractitionerRole".practitioner.reference.value) is not null )) then
     singleton from ([Practitioner] P where 'Practitioner/' + P.id.value = "OrderingPractitionerRole".practitioner.reference.value)
-  else 
+  else if (singleton from ( [Practitioner] P
+        where 'Practitioner/' + P.id.value = First("DeviceRequest".contained.PractitionerRole.practitioner.reference.value)
+      )) is not null then
+  singleton from ( [Practitioner] P
+        where 'Practitioner/' + P.id.value = First("DeviceRequest".contained.PractitionerRole.practitioner.reference.value)
+      )
+  else if (    singleton from ( "DeviceRequest".contained.Practitioner P 
+    where P is not null 
+    and 'Practitioner/' + ReplaceMatches(P.id.value, '#', '') = "DeviceRequest".requester.reference.value
+    )) is not null then
     singleton from ( "DeviceRequest".contained.Practitioner P 
     where P is not null 
     and 'Practitioner/' + ReplaceMatches(P.id.value, '#', '') = "DeviceRequest".requester.reference.value
     )
+  else 
+      singleton from ( [Practitioner] P
+        where 'Practitioner/' + P.id.value = First("DeviceRequest".contained.PractitionerRole.practitioner.reference.value)
+      )
 
 define OrderingPhysicianNPI:
   ( First("OrderingPhysician".identifier identifier
@@ -518,10 +532,13 @@ define OvernightOximetry:
     where "ToCode"(First(P.code.coding)) = "Overnight pulse oximetry (procedure)"
     and P.status.value = 'completed')
 
+define OvernightOximetryDate:
+    start of "Normalize Interval"("OvernightOximetry".performed)
+
 define NocturnalOximetryO2SATResource:
   First([Observation] P
       where "ToCode"(First(P.code.coding)) = "Oxygen saturation in Arterial blood by Pulse oximetry --resting"
-      and First(P.partOf).reference.value = 'Procedure/' + "OvernightOximetry".id.value
+        and (start of "Normalize Interval"(P.effective) same day as "OvernightOximetryDate")
   )
 
 define NocturnalOximetryO2SAT:
@@ -530,7 +547,7 @@ define NocturnalOximetryO2SAT:
 define NocturnalOximetryPO2Resource:
   First([Observation] P
       where "ToCode"(First(P.code.coding)) = "Oxygen [Partial pressure] in Arterial blood"
-      and First(P.partOf).reference.value = 'Procedure/' + "OvernightOximetry".id.value
+        and (start of "Normalize Interval"(P.effective) same day as "OvernightOximetryDate")
   )
 
 define NocturnalOximetryPO2:
@@ -539,9 +556,8 @@ define NocturnalOximetryPO2:
 define NocturnalOximetryO2SATWithOxygenResource:
   First([Observation] P
       where "ToCode"(First(P.code.coding)) = "Oxygen saturation in Arterial blood by Pulse oximetry --resting"
-      and First(P.partOf).reference.value = 'Procedure/' + "OvernightOximetry".id.value
+        and (start of "Normalize Interval"(P.effective) same day as "OvernightOximetryDate")
       and "ToCode"(First(First(P.component).code.coding)) = "Use of supplemental oxygen"
-        and First(P.component).value = true
   )
 
 define NocturnalOximetryO2SATWithOxygen:
@@ -550,9 +566,8 @@ define NocturnalOximetryO2SATWithOxygen:
 define NocturnalOximetryPO2WithOxygenResource:
   First([Observation] P
       where "ToCode"(First(P.code.coding)) = "Oxygen [Partial pressure] in Arterial blood"
-      and First(P.partOf).reference.value = 'Procedure/' + "OvernightOximetry".id.value
+        and (start of "Normalize Interval"(P.effective) same day as "OvernightOximetryDate")
       and "ToCode"(First(First(P.component).code.coding)) = "Use of supplemental oxygen"
-        and First(P.component).value = true
   )
 
 define NocturnalOximetryPO2WithOxygen:
