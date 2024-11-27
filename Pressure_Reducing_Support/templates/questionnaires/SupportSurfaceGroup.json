@@ -9,12 +9,12 @@
   "name": "SupportSurfaceGroup",
   "version": "1.0.0",
   "title": "Pressure Reducing Support Surfaces",
-  "status": "draft",
+  "status": "active",
   "subjectType": [
     "Patient"
   ],
   "date": "2020-12-03",
-  "publisher": "Mettle Solutions",
+  "publisher": "CMS",
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
