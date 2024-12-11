@@ -369,16 +369,12 @@ define PrimaryDiagnosis:
 			 	and First(Covered.verificationStatus.coding).code.value = 'confirmed')
 
 define BloodGasStudy:
-  if "EncounterResource".period.end is not null then
   First([Procedure] P
       where P.status.value = 'completed'
         and("ToCode"(First(P.code.coding)) = "Blood gas analysis (procedure)"
             or "ToCode"(First(P.code.coding)) = "Blood gas measurement (procedure)")
-        and((("Normalize Interval"(P.performed) starts before ("EncounterResource".period.end + 2days))
-            and "ToCode"("EncounterResource".class) = "inpatient encounter")
-        or("Normalize Interval"(P.performed) starts after "Normalize Interval"("PrimaryDiagnosis".onset)))
+      sort by end of "Normalize Interval"(performed) desc
   )
-  else null
 
 define "ExistsBloodGasStudy":
   if "BloodGasStudy" is not null
@@ -442,16 +438,11 @@ define function "GetId"(uri String):
   Last(Split(uri, '/'))
 
 define PulseOximetry:
-  if "EncounterResource".period.end is not null then
   First([Procedure] P
       where "ToCode"(First(P.code.coding)) = "Pulse oximetry (procedure)"
       and P.status.value = 'completed'
-      and ((("Normalize Interval"(P.performed) starts before ("EncounterResource".period.end + 2days))
-            and "ToCode"("EncounterResource".class) = "inpatient encounter")
-        or("ToCode"("EncounterResource".class) = "Outpatient"))
-      )
-  else null
-  
+      sort by end of "Normalize Interval"(performed) desc)
+
 define ExistsPulseOximetry:
   if "PulseOximetry" is not null
     then true
