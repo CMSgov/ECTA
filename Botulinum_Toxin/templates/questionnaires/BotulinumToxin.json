@@ -1,2280 +1,2652 @@
 {
   "resourceType": "Questionnaire",
   "extension": [
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
-      "valueCanonical": "<FHIR-server>/Library/library-botulinumtoxin-BotulinumToxin"
-    }
+      {
+          "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
+          "valueCanonical": "<FHIR-server>/Library/library-botulinumtoxin-BotulinumToxin"
+      }
   ],
   "url": "<FHIR-server>/Questionnaire/questionnaire-botulinumtoxin-BotulinumToxin",
   "identifier": [
-    {
-      "system": "http://identifiers.mettles.com/prior_authorization",
-      "value": "medicare_fee_for_service-botulinum_toxin"
-    }
+      {
+          "system": "http://identifiers.mettles.com/prior_authorization",
+          "value": "medicare_fee_for_service-botulinum_toxin"
+      }
   ],
   "name": "BotulinumToxin",
   "version": "1.0.0",
   "title": "Prior Authorization for Botulinum Toxin",
   "status": "draft",
   "subjectType": [
-    "Patient"
+      "Patient"
   ],
-  "date": "2021-05-27",
-  "publisher": "Mettle Solutions",
-  "contained": [
-    {
-      "resourceType": "ValueSet",
-      "id": "gender",
-      "name": "Gender",
-      "status": "draft",
-      "description": "Gender",
-      "compose": {
-        "include": [
-          {
-            "concept": [
-              {
-                "code": "male",
-                "display": "Male"
-              },
-              {
-                "code": "female",
-                "display": "Female"
-              },
-              {
-                "code": "other",
-                "display": "Other"
-              }
-            ]
-          }
-        ]
-      }
-    }
-  ],
+  "date": "2024-12-24",
+  "publisher": "CMS",
   "item": [
-    {
-      "linkId": "1",
-      "text": "Diagnosis Details",
-      "type": "group",
-      "item": [
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "BotoxDiagnosisConditions"
-              }
-            }
-          ],
-          "linkId": "BotulinumConditions",
-          "text": "Botulinum Toxin is considered for the following patient's condition:",
-          "type": "choice",
-          "answerOption": [
-            {
-              "valueCoding": {
-                "code": "Achalasia",
-                "display": "Achalasia"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Anal Fissure",
-                "display": "Anal Fissure"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Primary Axillary Hyperhidrosis",
-                "display": "Primary Axillary Hyperhidrosis"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Sialorrhea",
-                "display": "Sialorrhea"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Urinary Incontinence",
-                "display": "Urinary Incontinence"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Spasticity",
-                "display": "Spasticity"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Blepharospasm",
-                "display": "Blepharospasm"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Migraine",
-                "display": "Migraine"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Strabismus",
-                "display": "Strabismus"
-              }
-            }
-          ],
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "SpasticityMuscleGroups"
-              }
-            }
-          ],
-          "linkId": "Spasticity-MuscleGroups",
-          "text": "Botox is indicated for which muscle group?",
-          "type": "choice",
-          "answerOption": [
-            {
-              "valueCoding": {
-                "code": "Face",
-                "display": "Face"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Neck",
-                "display": "Neck"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Muscles of larynx",
-                "display": "Muscles of larynx"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Trunk muscles",
-                "display": "Trunk muscles"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Extremity muscles",
-                "display": "Extremity muscles"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Extraocular Mucles",
-                "display": "Extraocular Mucles"
-              }
-            }
-          ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "BotulinumConditions",
-              "answerCoding": {
-                "code": "Spasticity",
-                "display": "Spasticity"
-              }
-            }
-          ],
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "SpasticityFaceInjectionSide"
-              }
-            }
-          ],
-          "linkId": "Spasticity-SideInjection",
-          "text": "Side of injection",
-          "type": "choice",
-          "answerOption": [
-            {
-              "valueCoding": {
-                "code": "Unilateral",
-                "display": "Unilateral"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Bilateral",
-                "display": "Bilateral"
-              }
-            }
-          ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "Spasticity-MuscleGroups",
-              "answerCoding": {
-                "code": "Face",
-                "display": "Face"
-              }
-            }
-          ],
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "InjectionSideExtremity"
-              }
-            }
-          ],
-          "linkId": "Spasticity-Extremity",
-          "text": "Is the injection requested for",
-          "type": "choice",
-          "answerOption": [
-            {
-              "valueCoding": {
-                "code": "1-4 muscle groups",
-                "display": "1-4 muscle groups"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "5 or more muscles",
-                "display": "5 or more muscles"
-              }
-            }
-          ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "Spasticity-MuscleGroups",
-              "answerCoding": {
-                "code": "Extremity muscles",
-                "display": "Extremity muscles"
-              }
-            }
-          ],
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "InjectionSideTrunk"
-              }
-            }
-          ],
-          "linkId": "Spasticity-TrunkInjectionSide",
-          "text": "Is the injection requested for",
-          "type": "choice",
-          "answerOption": [
-            {
-              "valueCoding": {
-                "code": "1-5 muscles",
-                "display": "1-5 muscles"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "6 or more muscles",
-                "display": "6 or more muscles"
-              }
-            }
-          ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "Spasticity-MuscleGroups",
-              "answerCoding": {
-                "code": "Trunk muscles",
-                "display": "Trunk muscles"
-              }
-            }
-          ],
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "Etiology"
-              }
-            }
-          ],
-          "linkId": "Spasticity-Etiology",
-          "text": "The patient has spasticity secondary to which of the following conditions?",
-          "type": "choice",
-          "required": true,
-          "answerOption": [
-            {
-              "valueCoding": {
-                "code": "Ischemic Stroke",
-                "display": "Stroke"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Multiple Sclerosis",
-                "display": "Multiple Sclerosis"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Traumatic Brain Injury",
-                "display": "Traumatic Brain Injury"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Cerebral Palsy",
-                "display": "Cerebral Palsy"
-              }
-            }
-          ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "BotulinumConditions",
-              "answerCoding": {
-                "code": "Spasticity",
-                "display": "Spasticity"
-              }
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "AdjunctivePhysiotherapy"
-              }
-            }
-          ],
-          "linkId": "Spasticity-AdjunctivePhysiotherapy",
-          "text": "Is the patient receiving adjunctive physiotherapy?",
-          "type": "boolean",
-          "required": true,
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "BotulinumConditions",
-              "answerCoding": {
-                "code": "Spasticity",
-                "display": "Spasticity"
-              }
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "BlepharospasmMuscleGroups"
-              }
-            }
-          ],
-          "linkId": "Blepharospasm-MuscleGroups",
-          "text": "Botox is indicated for which muscle group?",
-          "type": "choice",
-          "answerOption": [
-            {
-              "valueCoding": {
-                "code": "Face",
-                "display": "Face"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Neck",
-                "display": "Neck"
-              }
-            }
-          ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "BotulinumConditions",
-              "answerCoding": {
-                "code": "Blepharospasm",
-                "display": "Blepharospasm"
-              }
-            }
-          ],
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "BlepharospasmFaceInjectionSide"
-              }
-            }
-          ],
-          "linkId": "Blepharospasm-SideInjection",
-          "text": "Side of injection",
-          "type": "choice",
-          "answerOption": [
-            {
-              "valueCoding": {
-                "code": "Unilateral",
-                "display": "Unilateral"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Bilateral",
-                "display": "Bilateral"
-              }
-            }
-          ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "Blepharospasm-MuscleGroups",
-              "answerCoding": {
-                "code": "Face",
-                "display": "Face"
-              }
-            }
-          ],
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "CheckAbnormalInvoluntaryMovements"
-              }
-            }
-          ],
-          "linkId": "Blepharospasm-InvoluntaryMovements",
-          "text": "Does the patient have a history of other abnormal involuntary movements?",
-          "type": "boolean",
-          "required": true,
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "BotulinumConditions",
-              "answerCoding": {
-                "code": "Blepharospasm",
-                "display": "Blepharospasm"
-              }
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "CheckKeratopathy"
-              }
-            }
-          ],
-          "linkId": "Blepharospasm-Keratopathy",
-          "text": "Does the patient have Keratopathy",
-          "type": "boolean",
-          "required": true,
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "BotulinumConditions",
-              "answerCoding": {
-                "code": "Blepharospasm",
-                "display": "Blepharospasm"
-              }
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "CheckOcularIrritation"
-              }
-            }
-          ],
-          "linkId": "Blepharospasm-OcularIrritation",
-          "text": " Does the patient have Ocular Irritation?",
-          "type": "boolean",
-          "required": true,
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "BotulinumConditions",
-              "answerCoding": {
-                "code": "Blepharospasm",
-                "display": "Blepharospasm"
-              }
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "NeuromuscularSensoryDysfunction"
-              }
-            }
-          ],
-          "linkId": "Sialorrhea-NeuromuscularDysfunction",
-          "text": "Does the patient have any Neuromuscular or Sensory Dysfunction causing Sialorrhea?",
-          "type": "boolean",
-          "required": true,
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "BotulinumConditions",
-              "answerCoding": {
-                "code": "Sialorrhea",
-                "display": "Sialorrhea"
-              }
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "LocalFactors"
-              }
-            }
-          ],
-          "linkId": "Sialorrhea-LocalFactors",
-          "text": "Does the patient have any dental condition causing Sialorrhea?",
-          "type": "boolean",
-          "required": true,
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "BotulinumConditions",
-              "answerCoding": {
-                "code": "Sialorrhea",
-                "display": "Sialorrhea"
-              }
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "AdverseEffect"
-              }
-            }
-          ],
-          "linkId": "Sialorrhea-AdverseEffect",
-          "text": "Is the Sialorrhea an adverse effect of sedatives or antiepileptic drugs?",
-          "type": "boolean",
-          "required": true,
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "BotulinumConditions",
-              "answerCoding": {
-                "code": "Sialorrhea",
-                "display": "Sialorrhea"
-              }
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "HypertensiveLOS"
-              }
-            }
-          ],
-          "linkId": "Achalasia-HypertensiveLOS",
-          "text": "Does the patient have hypertensive lower esophageal sphincter?",
-          "type": "boolean",
-          "required": true,
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "BotulinumConditions",
-              "answerCoding": {
-                "code": "Achalasia",
-                "display": "Achalasia"
-              }
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "RiskFactorsEsophagealPerforation"
-              }
-            }
-          ],
-          "linkId": "Achalasia-RiskFactorsEsophagealPerforation",
-          "text": "Does the patient have any risk factors for esophageal perforation",
-          "type": "boolean",
-          "required": true,
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "BotulinumConditions",
-              "answerCoding": {
-                "code": "Achalasia",
-                "display": "Achalasia"
-              }
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "CheckDurationOfAnalFissure"
-              }
-            }
-          ],
-          "linkId": "AnalFissure-Duration",
-          "text": "Has the patient had the anal fissures for more than 8-12 weeks?",
-          "type": "boolean",
-          "required": true,
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "BotulinumConditions",
-              "answerCoding": {
-                "code": "Anal Fissure",
-                "display": "Anal Fissure"
-              }
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "CheckSevereSweating"
-              }
-            }
-          ],
-          "linkId": "Hyperhydrosis-SevereSweating",
-          "text": "Does the patient have severe sweating, beyond physiological needs?",
-          "type": "boolean",
-          "required": true,
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "BotulinumConditions",
-              "answerCoding": {
-                "code": "Primary Axillary Hyperhidrosis",
-                "display": "Primary Axillary Hyperhidrosis"
-              }
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "CheckDurationOfSweating"
-              }
-            }
-          ],
-          "linkId": "Hyperhydrosis-DurationSweating",
-          "text": "Does the patient have visible sweating that has lasted for more than 6 months?",
-          "type": "boolean",
-          "required": true,
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "BotulinumConditions",
-              "answerCoding": {
-                "code": "Primary Axillary Hyperhidrosis",
-                "display": "Primary Axillary Hyperhidrosis"
-              }
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "MigraineMuscleGroups"
-              }
-            }
-          ],
-          "linkId": "Migraine-MuscleGroups",
-          "text": "Botox is indicated for which muscle group?",
-          "type": "choice",
-          "answerOption": [
-            {
-              "valueCoding": {
-                "code": "Face",
-                "display": "Face"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Neck",
-                "display": "Neck"
-              }
-            }
-          ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "BotulinumConditions",
-              "answerCoding": {
-                "code": "Migraine",
-                "display": "Migraine"
-              }
-            }
-          ],
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "MigraineFaceInjectionSide"
-              }
-            }
-          ],
-          "linkId": "Migraine-SideInjection",
-          "text": "Side of injection",
-          "type": "choice",
-          "answerOption": [
-            {
-              "valueCoding": {
-                "code": "Unilateral",
-                "display": "Unilateral"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Bilateral",
-                "display": "Bilateral"
-              }
-            }
-          ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "Migraine-MuscleGroups",
-              "answerCoding": {
-                "code": "Face",
-                "display": "Face"
-              }
-            }
-          ],
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "HeadachesForFifteenDays"
-              }
-            }
-          ],
-          "linkId": "Migraine-DurationFor15Days",
-          "text": "Do headache disorders occur for greater than 15 days a month?",
-          "type": "boolean",
-          "required": true,
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "BotulinumConditions",
-              "answerCoding": {
-                "code": "Migraine",
-                "display": "Migraine"
-              }
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "HeadachesForLastThreeMonths"
-              }
-            }
-          ],
-          "linkId": "Migraine-Duration",
-          "text": "Have the headaches existed for a period of at least 3 months?",
-          "type": "boolean",
-          "required": true,
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "BotulinumConditions",
-              "answerCoding": {
-                "code": "Migraine",
-                "display": "Migraine"
-              }
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "BinocularVision"
-              }
-            }
-          ],
-          "linkId": "Strabisumus-BinocularVision",
-          "text": "Does the patient have binocular vision?",
-          "type": "boolean",
-          "required": true,
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "BotulinumConditions",
-              "answerCoding": {
-                "code": "Strabismus",
-                "display": "Strabismus"
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "linkId": "2",
-      "text": "Previous Treatment Details",
-      "type": "group",
-      "item": [
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "SpasticityEarlierBotulinumAdministration"
-              }
-            }
-          ],
-          "linkId": "Spasticity-PriorBotoxAdministration",
-          "text": "Has the patient been administered botulinum toxin before?",
-          "type": "boolean",
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "BotulinumConditions",
-              "answerCoding": {
-                "code": "Spasticity",
-                "display": "Spasticity"
-              }
-            }
-          ],
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "SpasticitySpecifyBotoxAdministration"
-              }
-            }
-          ],
-          "linkId": "Spasticity-PriorBotoxStrain",
-          "text": "Which strain of botox was used?",
-          "type": "text",
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "Spasticity-PriorBotoxAdministration",
-              "answerBoolean": true
-            }
-          ],
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "SpasticityPostBotoxImprovement"
-              }
-            }
-          ],
-          "linkId": "Spasticity-ImprovementPostBotox",
-          "text": "Has there been improvement in the spasticity condition after Botox Treatment?",
-          "type": "boolean",
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "Spasticity-PriorBotoxAdministration",
-              "answerBoolean": true
-            }
-          ],
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "BlepharospasmEarlierBotulinumAdministration"
-              }
-            }
-          ],
-          "linkId": "Blepharospasm-PriorBotoxAdministration",
-          "text": "Has the patient been administered botulinum toxin before?",
-          "type": "boolean",
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "BotulinumConditions",
-              "answerCoding": {
-                "code": "Blepharospasm",
-                "display": "Blepharospasm"
-              }
-            }
-          ],
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "BlepharospasmSpecifyBotoxAdministration"
-              }
-            }
-          ],
-          "linkId": "Blepharospasm-PriorBotoxStrain",
-          "text": "Which strain of botox was used?",
-          "type": "text",
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "Blepharospasm-PriorBotoxAdministration",
-              "answerBoolean": true
-            }
-          ],
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "BlepharospasmPostBotoxImprovement"
-              }
-            }
-          ],
-          "linkId": "Blepharospasm-Improvement",
-          "text": "Has there been improvement in the Blepharospasm after Botox Injection?",
-          "type": "boolean",
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "Blepharospasm-PriorBotoxAdministration",
-              "answerBoolean": true
-            }
-          ],
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "BiofeedbackTherapy"
-              }
-            }
-          ],
-          "linkId": "Sialorrhea-BiofeedbacktTherapy",
-          "text": "Has biofeedback therapy been tried to manage Sialorrhea?",
-          "type": "boolean",
-          "required": true,
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "BotulinumConditions",
-              "answerCoding": {
-                "code": "Sialorrhea",
-                "display": "Sialorrhea"
-              }
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "PostBiofeedbackImprovement"
-              }
-            }
-          ],
-          "linkId": "Sialorrhea-ImprovementPostBiofeedback",
-          "text": "Has there been improvement in Sialorrhea severity?",
-          "type": "boolean",
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "Sialorrhea-BiofeedbacktTherapy",
-              "answerBoolean": true
-            }
-          ],
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "GlycopyrrolateMedication"
-              }
-            }
-          ],
-          "linkId": "Sialorrhea-GlycopyrrolateMedication",
-          "text": "Has the patient been on Glycopyrrolate  as treatment for Sialorrhea? ",
-          "type": "boolean",
-          "required": true,
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "BotulinumConditions",
-              "answerCoding": {
-                "code": "Sialorrhea",
-                "display": "Sialorrhea"
-              }
-            }
-          ]
-        },
-        {
-            "extension": [
+      {
+          "linkId": "10",
+          "text": "Botulinum Toxin Injection Contraindication",
+          "type": "group",
+          "item": [
               {
-                "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-                "valueExpression": {
-                  "language": "text/cql",
-                  "expression": "SpecifyGlycopyrrolateMedication"
-                }
-              }
-            ],
-            "linkId": "Sialorrhea-GlycopyrrolateMedicationDetails",
-            "text": "Details of the administered medication:",
-            "type": "open-choice",
-            "answerValueSet": "2.16.840.1.113883.3.3616.200.110.102.2067",
-            "enableWhen": [
+                  "linkId": "10.1",
+                  "text": "Does the beneficiary have a condition that is a contraindication to receiving botulinum toxin?",
+                  "type": "boolean"
+              },
               {
-                "question": "Sialorrhea-GlycopyrrolateMedication",
-                "operator": "=",
-                "answerBoolean": true
-              }
-            ],
-            "required": true
-          },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "PostGlycopyrrolateImprovement"
-              }
-            }
-          ],
-          "linkId": "Sialorrhea-ImprovementPostGlycopyrrolate",
-          "text": "Has there been an improvement in Sialorrhea severity?",
-          "type": "boolean",
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "Sialorrhea-GlycopyrrolateMedication",
-              "answerBoolean": true
-            }
-          ],
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "ScopolamineMedication"
-              }
-            }
-          ],
-          "linkId": "Sialorrhea-ScopolamineMedication",
-          "text": "Has the patient been on Scopolamine as treatment for Sialorrhea?",
-          "type": "boolean",
-          "required": true,
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "BotulinumConditions",
-              "answerCoding": {
-                "code": "Sialorrhea",
-                "display": "Sialorrhea"
-              }
-            }
-          ]
-        },
-        {
-            "extension": [
+                  "linkId": "10.2",
+                  "text": "Does the beneficiary have existing medical condition(s) which could affect the neuromuscular function?",
+                  "type": "boolean"
+              },
               {
-                "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-                "valueExpression": {
-                  "language": "text/cql",
-                  "expression": "SpecifyScopolamineMedication"
-                }
-              }
-            ],
-            "linkId": "Sialorrhea-ScopolamineMedicationDetails",
-            "text": "Details of the administered medication:",
-            "type": "open-choice",
-            "answerValueSet": "2.16.840.1.113883.3.6037.1001.23.93.82",
-            "enableWhen": [
+                  "linkId": "10.3",
+                  "text": "Does the beneficiary have a hypersensitivity to any botulinum toxin preparation or to any of the components in the formulation of the serotype?",
+                  "type": "boolean"
+              },
               {
-                "question": "Sialorrhea-ScopolamineMedication",
-                "operator": "=",
-                "answerBoolean": true
+                  "linkId": "10.4",
+                  "text": "Does the beneficiary have a severe clotting disorder?",
+                  "type": "boolean"
+              },
+              {
+                  "linkId": "10.5",
+                  "text": "Does the beneficiary have an infection at the proposed injection site?",
+                  "type": "boolean"
+              },
+              {
+                  "linkId": "10.6",
+                  "text": "Provider education note; any of the above contraindications will indicate botulinum toxin is not reasonable nor necessary.​",
+                  "type": "display"
               }
-            ],
-            "required": true
-          },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "PostScopolamineImprovement"
-              }
-            }
-          ],
-          "linkId": "Sialorrhea-ImprovementPostScopolamine",
-          "text": "Has there been an improvement in Sialorrhea severity?",
-          "type": "boolean",
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "Sialorrhea-ScopolamineMedication",
-              "answerBoolean": true
-            }
-          ],
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "SialorrheaEarlierBotulinumAdministration"
-              }
-            }
-          ],
-          "linkId": "Sialorrhea-BotoxAdministration",
-          "text": "Has the patient been administered Botulinum Toxin before?",
-          "type": "boolean",
-          "required": true,
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "BotulinumConditions",
-              "answerCoding": {
-                "code": "Sialorrhea",
-                "display": "Sialorrhea"
-              }
-            }
           ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "SialorrheaSpecifyBotoxAdministration"
+      },
+      {
+          "linkId": "1",
+          "text": "Order Details",
+          "type": "group",
+          "item": [
+              {
+                  "extension": [
+                      {
+                          "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                          "valueExpression": {
+                              "language": "text/cql",
+                              "expression": "OrderDate"
+                          }
+                      }
+                  ],
+                  "linkId": "1.1",
+                  "text": "Order date",
+                  "type": "date",
+                  "required": true
+              },
+              {
+                  "extension": [
+                      {
+                          "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                          "valueExpression": {
+                              "language": "text/cql",
+                              "expression": "RequestedDate"
+                          }
+                      }
+                  ],
+                  "linkId": "1.2",
+                  "text": "Requested procedure date of service",
+                  "type": "date",
+                  "required": true
+              },
+              {
+                  "extension": [
+                      {
+                          "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                          "valueExpression": {
+                              "language": "text/cql",
+                              "expression": "RequestedInjectionOccurence"
+                          }
+                      }
+                  ],
+                  "linkId": "1.3",
+                  "text": "The requested procedure is one of the following",
+                  "type": "choice",
+                  "required": true,
+                  "answerOption": [
+                      {
+                          "valueCoding": {
+                              "code": "Initial injection",
+                              "display": "Initial injection"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Subsequent injection",
+                              "display": "Subsequent injection"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Last injection",
+                              "display": "Last injection"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "One time dose/trial dose",
+                              "display": "One time dose/trial dose"
+                          }
+                      }
+                  ]
+              },
+              {
+                  "extension": [
+                      {
+                          "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                          "valueExpression": {
+                              "language": "text/cql",
+                              "expression": "ProposedFrequency"
+                          }
+                      }
+                  ],
+                  "linkId": "1.4",
+                  "text": "Proposed frequency of injections.  Provider Note: Administration must not be given more frequently than every 12 weeks, regardless of diagnosis, unless specifically address in the policy.",
+                  "type": "text",
+                  "required": true
+              },
+              {
+                  "extension": [
+                      {
+                          "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                          "valueExpression": {
+                              "language": "text/cql",
+                              "expression": "Orderdescription"
+                          }
+                      }
+                  ],
+                  "linkId": "1.5",
+                  "text": "Order Description; A request for injection of chemical (botulinum toxin) for destruction of nerve muscles (chemodenervation).",
+                  "type": "choice",
+                  "required": true,
+                  "answerOption": [
+                      {
+                          "valueCoding": {
+                              "code": "64612",
+                              "display": "CPT 64612 - Chemodenervation of muscles(s); muscle(s) innervated by facial nerve, unilateral (e.g.m for blepharospasm, hemifacial spasm)"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "64615",
+                              "display": "CPT 64615 - Chemodenervation of muscles(s); muscle(s) innervated by facial, trigeminal, cervical, spinal and accessory nerves, bilateral (e.g., for chronic migraine)"
+                          }
+                      }
+                  ]
+              },
+              {
+                  "extension": [
+                      {
+                          "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                          "valueExpression": {
+                              "language": "text/cql",
+                              "expression": "MedicalNecessaryReason"
+                          }
+                      }
+                  ],
+                  "linkId": "1.5.a",
+                  "text": "The medically necessary reason that supports Guidance procedure code CPT 95873 or CPT 95874  (if applicable) in conjunction with chemodenervation",
+                  "type": "choice",
+                  "required": true,
+                  "answerOption": [
+                      {
+                          "valueCoding": {
+                              "code": "N/A",
+                              "display": "N/A"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "95873",
+                              "display": "CPT 95873 - Muscle stimulation guidance will be used during chemodenervation to avoid the documented structures that are adjacent to or behind the target muscle, reducing the risk of complications.​"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "95874",
+                              "display": "CPT 95874 - Electromyographic guidance for chemodenervation to avoid the documented structures that are adjacent to or behind the target muscle, reducing the risk of complications​"
+                          }
+                      }
+                  ]
               }
-            }
-          ],
-          "linkId": "Sialorrhea-PriorBotoxStrain",
-          "text": "Which strain of Botulinum Toxin injection was used?",
-          "type": "open-choice",
-          "answerValueSet": "2.16.840.1.113883.3.6037.1001.23.93.60",
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "Sialorrhea-BotoxAdministration",
-              "answerBoolean": true
-            }
-          ],
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "SialorrheaPostBotoxImprovement"
-              }
-            }
-          ],
-          "linkId": "Sialorrhea-ImprovementPostBotox",
-          "text": "Has there been improvement in Sialorrhea severity after Botulinum Toxin injection?",
-          "type": "boolean",
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "Sialorrhea-BotoxAdministration",
-              "answerBoolean": true
-            }
-          ],
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "AchalasiaProcedures"
-              }
-            }
-          ],
-          "linkId": "Achalasia-Procedures",
-          "text": "Has the patient undergone any of the following for lower esophageal sphincter relaxation?",
-          "type": "choice",
-          "answerOption": [
-            {
-              "valueCoding": {
-                "code": "Pneumatic Dilation",
-                "display": "Pneumatic Dilation"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Surgical Myotomy",
-                "display": "Surgical Myotomy"
-              }
-            }
-          ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "BotulinumConditions",
-              "answerCoding": {
-                "code": "Achalasia",
-                "display": "Achalasia"
-              }
-            }
-          ],
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "AchalasiaPostProceduresImprovement"
-              }
-            }
-          ],
-          "linkId": "Achalasia-PostProceduresImprovement",
-          "text": "Has there been reduction in Lower Esophageal Sphincter Pressure?",
-          "type": "boolean",
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "Achalasia-Procedures",
-              "answerBoolean": true
-            }
-          ],
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "AchalasiaEarlierBotulinumAdministration"
-              }
-            }
-          ],
-          "linkId": "Achalasia-BotoxAdministration",
-          "text": "Has the patient been administered botulinum toxin for Achalasia before?",
-          "type": "boolean",
-          "required": true,
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "BotulinumConditions",
-              "answerCoding": {
-                "code": "Achalasia",
-                "display": "Achalasia"
-              }
-            }
           ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "AchalasiaSpecifyBotoxAdministration"
+      },
+      {
+          "linkId": "2",
+          "text": "Covered Diagnosis",
+          "type": "group",
+          "item": [
+              {
+                  "linkId": "2.0",
+                  "text": "Provider education: There must be objective documentation of the clinical features consistent with the covered diagnosis in the beneficiary record.",
+                  "type": "display"
+              },
+              {
+                  "extension": [
+                      {
+                          "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                          "valueExpression": {
+                              "language": "text/cql",
+                              "expression": "J0585INJECTION64612"
+                          }
+                      }
+                  ],
+                  "linkId": "2.1",
+                  "text": "J0585 INJECTION, ONABOTULINUMTOXINA, 1 UNIT in conjunction with 64612 - allowable diagnosis:",
+                  "type": "choice",
+                  "required": true,
+                  "answerOption": [
+                      {
+                          "valueCoding": {
+                              "code": "G24.4",
+                              "display": "Idiopathic orofacial dystonia​"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "G24.5",
+                              "display": "Blepharospasm"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "G24.8",
+                              "display": "Other Dystonia"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "G51.31",
+                              "display": "Clonic hemifacial spasm, right​"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "G51.32",
+                              "display": "CClonic hemifacial spasm, left​"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "G51.33",
+                              "display": "Clonic hemifacial spasm, bilateral​​"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Other",
+                              "display": "Other"
+                          }
+                      }
+                  ]
+              },
+              {
+                  "linkId": "2.1.a",
+                  "text": "The use of the selected serotype is not approved by the FDA and falls outside of treatment guidelines.  Submit robust published evidence for this off label request AND the reason an approved serotype is not used.",
+                  "type": "text",
+                  "required": true,
+                  "enableWhen": [
+                      {
+                          "operator": "=",
+                          "question": "2.1",
+                          "answerCoding": {
+                              "code": "Other",
+                              "display": "Other"
+                          }
+                      }
+                  ]
+              },
+              {
+                  "linkId": "2.2",
+                  "text": "Chronic Migraine (without aura) Covered Diagnosis",
+                  "type": "group",
+                  "item": [
+                      {
+                          "extension": [
+                              {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                                  "valueExpression": {
+                                      "language": "text/cql",
+                                      "expression": "J0585INJECTION64615WithoutAura"
+                                  }
+                              }
+                          ],
+                          "linkId": "2.2.a",
+                          "text": "J0585 INJECTION, ONABOTULINUMTOXINA, 1 UNIT in conjunction with 64615 - allowable diagnosis:",
+                          "type": "choice",
+                          "required": true,
+                          "answerOption": [
+                              {
+                                  "valueCoding": {
+                                      "code": "G43.001",
+                                      "display": "Migraine without aura, not intractable, with status migrainosus"
+                                  }
+                              },
+                              {
+                                  "valueCoding": {
+                                      "code": "G43.009",
+                                      "display": "Migraine without aura, not intractable, without status migrainosus"
+                                  }
+                              },
+                              {
+                                  "valueCoding": {
+                                      "code": "G43.011",
+                                      "display": "Migraine without aura, intractable, with status migrainosus"
+                                  }
+                              },
+                              {
+                                  "valueCoding": {
+                                      "code": "G43.019",
+                                      "display": "Migraine without aura, intractable, without status migrainosus"
+                                  }
+                              },
+                              {
+                                  "valueCoding": {
+                                      "code": "G43.101",
+                                      "display": "Migraine with aura, not intractable, with status migrainosus"
+                                  }
+                              },
+                              {
+                                  "valueCoding": {
+                                      "code": "G43.109",
+                                      "display": "Migraine with aura, not intractable, without status migrainosus"
+                                  }
+                              },
+                              {
+                                  "valueCoding": {
+                                      "code": "G43.111",
+                                      "display": "Migraine with aura, intractable, with status migrainosus"
+                                  }
+                              },
+                              {
+                                  "valueCoding": {
+                                      "code": "G43.119",
+                                      "display": "Migraine with aura, intractable, without status migrainosus"
+                                  }
+                              },
+                              {
+                                  "valueCoding": {
+                                      "code": "G43.401",
+                                      "display": "Hemiplegic migraine, not intractable, with status migrainosus"
+                                  }
+                              },
+                              {
+                                  "valueCoding": {
+                                      "code": "G43.409",
+                                      "display": "Hemiplegic migraine, not intractable, without status migrainosus"
+                                  }
+                              },
+                              {
+                                  "valueCoding": {
+                                      "code": "G43.411",
+                                      "display": "Hemiplegic migraine, intractable, with status migrainosus"
+                                  }
+                              },
+                              {
+                                  "valueCoding": {
+                                      "code": "G43.419",
+                                      "display": "Hemiplegic migraine, intractable, without status migrainosus"
+                                  }
+                              },
+                              {
+                                  "valueCoding": {
+                                      "code": "G43.501",
+                                      "display": "Persistent migraine aura without cerebral infarction, not intractable, with status migrainosus"
+                                  }
+                              },
+                              {
+                                  "valueCoding": {
+                                      "code": "G43.509",
+                                      "display": "Persistent migraine aura without cerebral infarction, not intractable, without status migrainosus"
+                                  }
+                              },
+                              {
+                                  "valueCoding": {
+                                      "code": "G43.511",
+                                      "display": "Persistent migraine aura without cerebral infarction, intractable, with status migrainosus"
+                                  }
+                              },
+                              {
+                                  "valueCoding": {
+                                      "code": "G43.519",
+                                      "display": "Persistent migraine aura without cerebral infarction, intractable, without status migrainosus"
+                                  }
+                              },
+                              {
+                                  "valueCoding": {
+                                      "code": "G43.601",
+                                      "display": "Persistent migraine aura with cerebral infarction, not intractable, with status migrainosus"
+                                  }
+                              },
+                              {
+                                  "valueCoding": {
+                                      "code": "G43.609",
+                                      "display": "Persistent migraine aura with cerebral infarction, not intractable, without status migrainosus"
+                                  }
+                              },
+                              {
+                                  "valueCoding": {
+                                      "code": "G43.611",
+                                      "display": "Persistent migraine aura with cerebral infarction, intractable, with status migrainosus"
+                                  }
+                              },
+                              {
+                                  "valueCoding": {
+                                      "code": "G43.619",
+                                      "display": "Persistent migraine aura with cerebral infarction, intractable, without status migrainosus"
+                                  }
+                              },
+                              {
+                                  "valueCoding": {
+                                      "code": "G43.701",
+                                      "display": "Chronic migraine without aura, not intractable, with status migrainosus"
+                                  }
+                              },
+                              {
+                                  "valueCoding": {
+                                      "code": "G43.709",
+                                      "display": "Chronic migraine without aura, not intractable, without status migrainosus"
+                                  }
+                              },
+                              {
+                                  "valueCoding": {
+                                      "code": "G43.711",
+                                      "display": "Chronic migraine without aura, intractable, with status migrainosus"
+                                  }
+                              },
+                              {
+                                  "valueCoding": {
+                                      "code": "G43.719",
+                                      "display": "Chronic migraine without aura, intractable, without status migrainosus"
+                                  }
+                              },
+                              {
+                                  "valueCoding": {
+                                      "code": "G43.A0",
+                                      "display": "Cyclical vomiting, in migraine, not intractable"
+                                  }
+                              },
+                              {
+                                  "valueCoding": {
+                                      "code": "G43.A1",
+                                      "display": "Cyclical vomiting, in migraine, intractable"
+                                  }
+                              },
+                              {
+                                  "valueCoding": {
+                                      "code": "G43.B0",
+                                      "display": "Ophthalmoplegic migraine, not intractable"
+                                  }
+                              },
+                              {
+                                  "valueCoding": {
+                                      "code": "G43.B1",
+                                      "display": "Ophthalmoplegic migraine, intractable"
+                                  }
+                              },
+                              {
+                                  "valueCoding": {
+                                      "code": "G43.C0",
+                                      "display": "Periodic headache syndromes in child or adult, not intractable"
+                                  }
+                              },
+                              {
+                                  "valueCoding": {
+                                      "code": "G43.C1",
+                                      "display": "Periodic headache syndromes in child or adult, intractable"
+                                  }
+                              },
+                              {
+                                  "valueCoding": {
+                                      "code": "G43.D0",
+                                      "display": "Abdominal migraine, not intractable"
+                                  }
+                              },
+                              {
+                                  "valueCoding": {
+                                      "code": "G43.D1",
+                                      "display": "Abdominal migraine, intractable"
+                                  }
+                              },
+                              {
+                                  "valueCoding": {
+                                      "code": "G43.801",
+                                      "display": "Other migraine, not intractable, with status migrainosus"
+                                  }
+                              },
+                              {
+                                  "valueCoding": {
+                                      "code": "G43.809",
+                                      "display": "Other migraine, not intractable, without status migrainosus"
+                                  }
+                              },
+                              {
+                                  "valueCoding": {
+                                      "code": "G43.811",
+                                      "display": "Other migraine, intractable, with status migrainosus"
+                                  }
+                              },
+                              {
+                                  "valueCoding": {
+                                      "code": "G43.819",
+                                      "display": "Other migraine, intractable, without status migrainosus"
+                                  }
+                              },
+                              {
+                                  "valueCoding": {
+                                      "code": "Other",
+                                      "display": "Other"
+                                  }
+                              }
+                          ]
+                      },
+                      {
+                          "linkId": "2.2.b",
+                          "text": "The use of the selected serotype is not approved by the FDA and falls outside of treatment guidelines.  Submit robust published evidence for this off label request AND the reason an approved serotype is not used.​",
+                          "type": "text",
+                          "required": true,
+                          "enableWhen": [
+                              {
+                                  "operator": "=",
+                                  "question": "2.2.a",
+                                  "answerCoding": {
+                                      "code": "Other",
+                                      "display": "Other"
+                                  }
+                              }
+                          ]
+                      }
+                  ]
+              },
+              {
+                  "linkId": "2.3",
+                  "text": "Chronic Migraine (with aura) Covered Diagnosis",
+                  "type": "group",
+                  "item": [
+                      {
+                          "extension": [
+                              {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                                  "valueExpression": {
+                                      "language": "text/cql",
+                                      "expression": "J0585INJECTION64615WithAura"
+                                  }
+                              }
+                          ],
+                          "linkId": "2.3.a",
+                          "text": "J0585 INJECTION, ONABOTULINUMTOXINA, 1 UNIT in conjunction with 64615 - allowable diagnosis:",
+                          "type": "choice",
+                          "required": true,
+                          "answerOption": [
+                              {
+                                  "valueCoding": {
+                                      "code": "G43.901",
+                                      "display": "Migraine, unspecified, not intractable, with status migrainosus"
+                                  }
+                              },
+                              {
+                                  "valueCoding": {
+                                      "code": "G43.909",
+                                      "display": "Migraine, unspecified, not intractable, without status migrainosus"
+                                  }
+                              },
+                              {
+                                  "valueCoding": {
+                                      "code": "G43.911",
+                                      "display": "Migraine, unspecified, intractable, with status migrainosus"
+                                  }
+                              },
+                              {
+                                  "valueCoding": {
+                                      "code": "G43.919",
+                                      "display": "Migraine, unspecified, intractable, without status migrainosus"
+                                  }
+                              },
+                              {
+                                  "valueCoding": {
+                                      "code": "G43.E01",
+                                      "display": "Chronic migraine with aura, not intractable, with status migrainosus"
+                                  }
+                              },
+                              {
+                                  "valueCoding": {
+                                      "code": "G43.E09",
+                                      "display": "Chronic migraine with aura, not intractable, without status migrainosus"
+                                  }
+                              },
+                              {
+                                  "valueCoding": {
+                                      "code": "G43.E11",
+                                      "display": "Chronic migraine with aura, intractable, with status migrainosus"
+                                  }
+                              },
+                              {
+                                  "valueCoding": {
+                                      "code": "G43.E19",
+                                      "display": "Chronic migraine with aura, intractable, without status migrainosus"
+                                  }
+                              },
+                              {
+                                  "valueCoding": {
+                                      "code": "Other",
+                                      "display": "Other"
+                                  }
+                              }
+                          ]
+                      },
+                      {
+                          "linkId": "2.3.b",
+                          "text": "The use of the selected serotype is not approved by the FDA and falls outside of treatment guidelines.  Submit robust published evidence for this off label request AND the reason an approved serotype is not used.​",
+                          "type": "text",
+                          "required": true,
+                          "enableWhen": [
+                              {
+                                  "operator": "=",
+                                  "question": "2.3.a",
+                                  "answerCoding": {
+                                      "code": "Other",
+                                      "display": "Other"
+                                  }
+                              }
+                          ]
+                      }
+                  ]
+              },
+              {
+                  "extension": [
+                      {
+                          "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                          "valueExpression": {
+                              "language": "text/cql",
+                              "expression": "J0586INJECTION64612"
+                          }
+                      }
+                  ],
+                  "linkId": "2.4",
+                  "text": "J0586 INJECTION, ABOBOTULINUMTOXINA, 5 UNITS in conjunction with 64612 - allowable diagnosis:",
+                  "type": "choice",
+                  "required": true,
+                  "answerOption": [
+                      {
+                          "valueCoding": {
+                              "code": "G24.4",
+                              "display": "Idiopathic orofacial dystonia"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "G24.5",
+                              "display": "Blepharospasm"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "G24.8",
+                              "display": "Other Dystonia"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "G51.31",
+                              "display": "Clonic hemifacial spasm, right"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "G51.32",
+                              "display": "Clonic hemifacial spasm, left"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "G51.33",
+                              "display": "Clonic hemifacial spasm, bilateral"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Other",
+                              "display": "Other"
+                          }
+                      }
+                  ]
+              },
+              {
+                  "linkId": "2.4.a",
+                  "text": "The use of the selected serotype is not approved by the FDA and falls outside of treatment guidelines.  Submit robust published evidence for this off label request AND the reason an approved serotype is not used.",
+                  "type": "text",
+                  "required": true,
+                  "enableWhen": [
+                      {
+                          "operator": "=",
+                          "question": "2.4",
+                          "answerCoding": {
+                              "code": "Other",
+                              "display": "Other"
+                          }
+                      }
+                  ]
+              },
+              {
+                  "extension": [
+                      {
+                          "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                          "valueExpression": {
+                              "language": "text/cql",
+                              "expression": "J0588INJECTION64612"
+                          }
+                      }
+                  ],
+                  "linkId": "2.5",
+                  "text": "J0588 INJECTION, INCOBOTULINUMTOXIN A, 1 UNIT in conjunction with 64612 allowable diagnosis",
+                  "type": "choice",
+                  "required": true,
+                  "answerOption": [
+                      {
+                          "valueCoding": {
+                              "code": "G24.5",
+                              "display": "Blepharospasm"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Other",
+                              "display": "Other"
+                          }
+                      }
+                  ]
+              },
+              {
+                  "linkId": "2.5.a",
+                  "text": "The use of the selected serotype is not approved by the FDA and falls outside of treatment guidelines.  Submit robust published evidence for this off label request AND the reason an approved serotype is not used.",
+                  "type": "text",
+                  "required": true,
+                  "enableWhen": [
+                      {
+                          "operator": "=",
+                          "question": "2.5",
+                          "answerCoding": {
+                              "code": "Other",
+                              "display": "Other"
+                          }
+                      }
+                  ]
               }
-            }
-          ],
-          "linkId": "Achalasia-PriorBotoxStrain",
-          "text": "Which strain of botox was used?",
-          "type": "text",
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "Achalasia-BotoxAdministration",
-              "answerBoolean": true
-            }
-          ],
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "AchalasiaPostBotoxImprovement"
-              }
-            }
-          ],
-          "linkId": "Achalasia-ImprovementPostBotox",
-          "text": "Was there a significant reduction in Lower Esophageal Sphincter Pressure after botox?",
-          "type": "boolean",
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "Achalasia-BotoxAdministration",
-              "answerBoolean": true
-            }
-          ],
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "ConservativeTreatmentOptions"
-              }
-            }
-          ],
-          "linkId": "AnalFissure-ConservativeTreatmentOptions",
-          "text": "Has the patient undergone any of the following conservative treatment options?",
-          "type": "choice",
-          "required": true,
-          "answerOption": [
-            {
-              "valueCoding": {
-                "code": "Fiber Supplements",
-                "display": "Fiber Supplements"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Stool Softeners",
-                "display": "Stool Softeners"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Sitz Bath",
-                "display": "Sitz Bath"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Topical Anaesthetic Application",
-                "display": "Topical Anaesthetic Application"
-              }
-            }
-          ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "BotulinumConditions",
-              "answerCoding": {
-                "code": "Anal Fissure",
-                "display": "Anal Fissure"
-              }
-            }
           ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "PostConservativeTreatmentImprovement"
+      },
+      {
+          "linkId": "3",
+          "text": "Botulinum toxin, strength, and total dosage requested",
+          "type": "group",
+          "item": [
+              {
+                  "linkId": "3.1",
+                  "text": "J0585 Injection, onabotulinumtoxinA(Botox), 1 unit",
+                  "type": "group",
+                  "item": [
+                      {
+                          "extension": [
+                              {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                                  "valueExpression": {
+                                      "language": "text/cql",
+                                      "expression": "J0585INJECTION50Units"
+                                  }
+                              }
+                          ],
+                          "linkId": "3.1.1",
+                          "text": "50 units per vial, vacuum-dried powder for reconstitution",
+                          "type": "number"
+                      },
+                      {
+                          "extension": [
+                              {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                                  "valueExpression": {
+                                      "language": "text/cql",
+                                      "expression": "J0585INJECTION100Units"
+                                  }
+                              }
+                          ],
+                          "linkId": "3.1.2",
+                          "text": "100 units per vial, vacuum-dried powder for reconstitution",
+                          "type": "number"
+                      },
+                      {
+                          "extension": [
+                              {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                                  "valueExpression": {
+                                      "language": "text/cql",
+                                      "expression": "J0585INJECTION200Units"
+                                  }
+                              }
+                          ],
+                          "linkId": "3.1.3",
+                          "text": "200 units per vial, vacuum-dried powder for reconstitution",
+                          "type": "number"
+                      }
+                  ]
+              },
+              {
+                  "linkId": "3.2",
+                  "text": "J0586 - Injection abobotulinumtoxinA (Dysport), 5 units",
+                  "type": "group",
+                  "item": [
+                      {
+                          "extension": [
+                              {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                                  "valueExpression": {
+                                      "language": "text/cql",
+                                      "expression": "J0586INJECTION300Units"
+                                  }
+                              }
+                          ],
+                          "linkId": "3.2.1",
+                          "text": "300 units per vial, vacuum-dried powder for reconstitution",
+                          "type": "number"
+                      },
+                      {
+                          "extension": [
+                              {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                                  "valueExpression": {
+                                      "language": "text/cql",
+                                      "expression": "J0586INJECTION500Units"
+                                  }
+                              }
+                          ],
+                          "linkId": "3.2.2",
+                          "text": "500 units per vial, vacuum-dried powder for reconstitution",
+                          "type": "number"
+                      }
+                  ]
+              },
+              {
+                  "linkId": "3.3",
+                  "text": "J0587- Injection rimabotulinumtoxinB (Myobloc), 100 units",
+                  "type": "group",
+                  "item": [
+                      {
+                          "extension": [
+                              {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                                  "valueExpression": {
+                                      "language": "text/cql",
+                                      "expression": "J0587INJECTION2500Units"
+                                  }
+                              }
+                          ],
+                          "linkId": "3.3.1",
+                          "text": "2500 units per vial, vacuum-dried powder for reconstitution",
+                          "type": "number"
+                      },
+                      {
+                          "extension": [
+                              {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                                  "valueExpression": {
+                                      "language": "text/cql",
+                                      "expression": "J0587INJECTION5000Units"
+                                  }
+                              }
+                          ],
+                          "linkId": "3.3.2",
+                          "text": "5000 units per vial, vacuum-dried powder for reconstitution",
+                          "type": "number"
+                      },
+                      {
+                          "extension": [
+                              {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                                  "valueExpression": {
+                                      "language": "text/cql",
+                                      "expression": "J0587INJECTION10000Units"
+                                  }
+                              }
+                          ],
+                          "linkId": "3.3.3",
+                          "text": "10000 units per vial, vacuum-dried powder for reconstitution",
+                          "type": "number"
+                      }
+                  ]
+              },
+              {
+                  "linkId": "3.4",
+                  "text": "J0588- Injection incobotulinumtoxinA (Xeomin), 1 unit",
+                  "type": "group",
+                  "item": [
+                      {
+                          "extension": [
+                              {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                                  "valueExpression": {
+                                      "language": "text/cql",
+                                      "expression": "J0588INJECTION50Units"
+                                  }
+                              }
+                          ],
+                          "linkId": "3.4.1",
+                          "text": "50 units per vial, vacuum-dried powder for reconstitution",
+                          "type": "number"
+                      },
+                      {
+                          "extension": [
+                              {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                                  "valueExpression": {
+                                      "language": "text/cql",
+                                      "expression": "J0588INJECTION100Units"
+                                  }
+                              }
+                          ],
+                          "linkId": "3.4.2",
+                          "text": "100 units per vial, vacuum-dried powder for reconstitution",
+                          "type": "number"
+                      },
+                      {
+                          "extension": [
+                              {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                                  "valueExpression": {
+                                      "language": "text/cql",
+                                      "expression": "J0588INJECTION200Units"
+                                  }
+                              }
+                          ],
+                          "linkId": "3.4.3",
+                          "text": "200 units per vial, vacuum-dried powder for reconstitution",
+                          "type": "number"
+                      }
+                  ]
               }
-            }
-          ],
-          "linkId": "AnalFissure-PostCoversativeTreatmentImprovement",
-          "text": "Has the patient not responded to conservative treatment?",
-          "type": "boolean",
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "AnalFissure-ConservativeTreatmentOptions",
-              "answerCoding": {
-                "code": "Fiber Supplements",
-                "display": "Fiber Supplements"
-              }
-            },
-            {
-              "operator": "=",
-              "question": "AnalFissure-ConservativeTreatmentOptions",
-              "answerCoding": {
-                "code": "Stool Softeners",
-                "display": "Stool Softeners"
-              }
-            },
-            {
-              "operator": "=",
-              "question": "AnalFissure-ConservativeTreatmentOptions",
-              "answerCoding": {
-                "code": "Sitz Bath",
-                "display": "Sitz Bath"
-              }
-            },
-            {
-              "operator": "=",
-              "question": "AnalFissure-ConservativeTreatmentOptions",
-              "answerCoding": {
-                "code": "Topical Anaesthetic Application",
-                "display": "Topical Anaesthetic Application"
-              }
-            }
-          ],
-          "enableBehavior": "any",
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "AnalFissurePriorBotulinumToxin"
-              }
-            }
-          ],
-          "linkId": "AnalFissure-PriorBotulinumToxin",
-          "text": "Has the patient been administered botulinum toxin before?",
-          "type": "boolean",
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "BotulinumConditions",
-              "answerCoding": {
-                "code": "Anal Fissure",
-                "display": "Anal Fissure"
-              }
-            }
-          ],
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "AnalFissureSpecifyBotoxAdministration"
-              }
-            }
-          ],
-          "linkId": "AnalFissure-PriorBotoxStrain",
-          "text": "Which strain of botox was used?",
-          "type": "text",
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "AnalFissure-PriorBotulinumToxin",
-              "answerBoolean": true
-            }
-          ],
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "AnalFissurePostBotoxImprovement"
-              }
-            }
-          ],
-          "linkId": "AnalFissure-PostBotoxImprovement",
-          "text": "Has there been improvement in Anal Fissure after Botox Injection?",
-          "type": "boolean",
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "AnalFissure-PriorBotulinumToxin",
-              "answerBoolean": true
-            }
-          ],
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "AnticholinergicMedicationsHyperhydrosis"
-              }
-            }
-          ],
-          "linkId": "Hyperhydrosis-AnticholinergicMedications",
-          "text": "Has the patient taken any Anticholinergic Medications previously?",
-          "type": "boolean",
-          "required": true,
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "BotulinumConditions",
-              "answerCoding": {
-                "code": "Primary Axillary Hyperhidrosis",
-                "display": "Primary Axillary Hyperhidrosis"
-              }
-            }
           ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "PostAnticholinergicImprovement"
+      },
+      {
+          "linkId": "4",
+          "text": "Complete anatomic description of the site(s) to be injected and dosage for each injection site",
+          "type": "group",
+          "item": [
+              {
+                  "linkId": "4.1",
+                  "text": "Blepharospasm  FDA approved for Botox (BOTOX)",
+                  "type": "group",
+                  "item": [
+                      {
+                          "extension": [
+                              {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                                  "valueExpression": {
+                                      "language": "text/cql",
+                                      "expression": "BlepharospasmBotoxMedialUpperLid"
+                                  }
+                              }
+                          ],
+                          "linkId": "4.1.1",
+                          "text": "Medial pre-tarsal orbicularis oculi muscle of the upper lid",
+                          "type": "number"
+                      },
+                      {
+                          "extension": [
+                              {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                                  "valueExpression": {
+                                      "language": "text/cql",
+                                      "expression": "BlepharospasmBotoxLateralUpperLid"
+                                  }
+                              }
+                          ],
+                          "linkId": "4.1.2",
+                          "text": "Lateral pre-tarsal orbicularis oculi muscle of the upper lid",
+                          "type": "number"
+                      },
+                      {
+                          "extension": [
+                              {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                                  "valueExpression": {
+                                      "language": "text/cql",
+                                      "expression": "BlepharospasmBotoxLateralLowerLid"
+                                  }
+                              }
+                          ],
+                          "linkId": "4.1.3",
+                          "text": "Lateral pre-tarsal orbicularis oculi muscle of the lower lid",
+                          "type": "number"
+                      }
+                  ]
+              },
+              {
+                  "linkId": "4.2",
+                  "text": "Blepharospasm FDA approved for (Xeomin)",
+                  "type": "group",
+                  "item": [
+                      {
+                          "extension": [
+                              {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                                  "valueExpression": {
+                                      "language": "text/cql",
+                                      "expression": "BlepharospasmXeominLateralSuperiorPreTarsal"
+                                  }
+                              }
+                          ],
+                          "linkId": "4.2.1",
+                          "text": "Lateral superior pre-tarsal part of the orbicularis oculi muscle",
+                          "type": "number"
+                      },
+                      {
+                          "extension": [
+                              {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                                  "valueExpression": {
+                                      "language": "text/cql",
+                                      "expression": "BlepharospasmXeominMedialSuperiorPreTarsal"
+                                  }
+                              }
+                          ],
+                          "linkId": "4.2.2",
+                          "text": "Medial superior pre-tarsal part of the orbicularis oculi muscle",
+                          "type": "number"
+                      },
+                      {
+                          "extension": [
+                              {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                                  "valueExpression": {
+                                      "language": "text/cql",
+                                      "expression": "BlepharospasmXeominLateralCanthus"
+                                  }
+                              }
+                          ],
+                          "linkId": "4.2.3",
+                          "text": "Lateral canthus of the orbicularis oculi muscle",
+                          "type": "number"
+                      },
+                      {
+                          "extension": [
+                              {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                                  "valueExpression": {
+                                      "language": "text/cql",
+                                      "expression": "BlepharospasmXeominInferolateralOrbicularisOculi"
+                                  }
+                              }
+                          ],
+                          "linkId": "4.2.4",
+                          "text": "Inferolateral portion of the orbicularis oculi muscle",
+                          "type": "number"
+                      },
+                      {
+                          "extension": [
+                              {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                                  "valueExpression": {
+                                      "language": "text/cql",
+                                      "expression": "BlepharospasmXeominCorrugator"
+                                  }
+                              }
+                          ],
+                          "linkId": "4.2.5",
+                          "text": "Corrugator muscle",
+                          "type": "number"
+                      }
+                  ]
+              },
+              {
+                  "linkId": "4.3",
+                  "text": "Chronic migraines FDA approved for (BOTOX)",
+                  "type": "group",
+                  "item": [
+                      {
+                          "extension": [
+                              {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                                  "valueExpression": {
+                                      "language": "text/cql",
+                                      "expression": "ChronicMigrainesBotoxCorrugator"
+                                  }
+                              }
+                          ],
+                          "linkId": "4.3.1",
+                          "text": "Corrugator",
+                          "type": "number"
+                      },
+                      {
+                          "extension": [
+                              {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                                  "valueExpression": {
+                                      "language": "text/cql",
+                                      "expression": "ChronicMigrainesBotoxProcerus"
+                                  }
+                              }
+                          ],
+                          "linkId": "4.3.2",
+                          "text": "Procerus",
+                          "type": "number"
+                      },
+                      {
+                          "extension": [
+                              {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                                  "valueExpression": {
+                                      "language": "text/cql",
+                                      "expression": "ChronicMigrainesBotoxFrontalis"
+                                  }
+                              }
+                          ],
+                          "linkId": "4.3.3",
+                          "text": "Frontalis",
+                          "type": "number"
+                      },
+                      {
+                          "extension": [
+                              {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                                  "valueExpression": {
+                                      "language": "text/cql",
+                                      "expression": "ChronicMigrainesBotoxTemporalis"
+                                  }
+                              }
+                          ],
+                          "linkId": "4.3.4",
+                          "text": "Temporalis",
+                          "type": "number"
+                      },
+                      {
+                          "extension": [
+                              {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                                  "valueExpression": {
+                                      "language": "text/cql",
+                                      "expression": "ChronicMigrainesBotoxOccipitalis"
+                                  }
+                              }
+                          ],
+                          "linkId": "4.3.5",
+                          "text": "Occipitalis",
+                          "type": "number"
+                      },
+                      {
+                          "extension": [
+                              {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                                  "valueExpression": {
+                                      "language": "text/cql",
+                                      "expression": "ChronicMigrainesBotoxCervicalParaspinals"
+                                  }
+                              }
+                          ],
+                          "linkId": "4.3.6",
+                          "text": "Cervical paraspinals",
+                          "type": "number"
+                      },
+                      {
+                          "extension": [
+                              {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                                  "valueExpression": {
+                                      "language": "text/cql",
+                                      "expression": "ChronicMigrainesBotoxTrapezius"
+                                  }
+                              }
+                          ],
+                          "linkId": "4.3.7",
+                          "text": "Trapezius",
+                          "type": "number"
+                      }
+                  ]
+              },
+              {
+                  "linkId": "4.4",
+                  "text": "Facial Hemispasm",
+                  "type": "group",
+                  "item": [
+                      {
+                          "extension": [
+                              {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                                  "valueExpression": {
+                                      "language": "text/cql",
+                                      "expression": "FacialHemispasmOrbicularisOculiUpperLid"
+                                  }
+                              }
+                          ],
+                          "linkId": "4.4.1",
+                          "text": "Orbicularis oculi muscle of the upper lid",
+                          "type": "number"
+                      },
+                      {
+                          "extension": [
+                              {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                                  "valueExpression": {
+                                      "language": "text/cql",
+                                      "expression": "FacialHemispasmOrbicularisOris"
+                                  }
+                              }
+                          ],
+                          "linkId": "4.4.2",
+                          "text": "Orbicularis oris muscles",
+                          "type": "number"
+                      },
+                      {
+                          "extension": [
+                              {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                                  "valueExpression": {
+                                      "language": "text/cql",
+                                      "expression": "FacialHemispasmZygomaticusMajor"
+                                  }
+                              }
+                          ],
+                          "linkId": "4.4.3",
+                          "text": "Zygomaticus major",
+                          "type": "number"
+                      },
+                      {
+                          "extension": [
+                              {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                                  "valueExpression": {
+                                      "language": "text/cql",
+                                      "expression": "FacialHemispasmZygomaticusMinor"
+                                  }
+                              }
+                          ],
+                          "linkId": "4.4.4",
+                          "text": "Zygomaticus minor",
+                          "type": "number"
+                      },
+                      {
+                          "extension": [
+                              {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                                  "valueExpression": {
+                                      "language": "text/cql",
+                                      "expression": "FacialHemispasmDepressorAnguliOris"
+                                  }
+                              }
+                          ],
+                          "linkId": "4.4.5",
+                          "text": "Depressor anguli oris muscle",
+                          "type": "number"
+                      }
+                  ]
               }
-            }
-          ],
-          "linkId": "Hyperhydrosis-PostAnticholinergicImprovement",
-          "text": "Has there been improvement in Sweating severity?",
-          "type": "boolean",
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "Hyperhydrosis-AnticholinergicMedications",
-              "answerBoolean": true
-            }
-          ],
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "HyperhydrosisPriorBotulinumToxin"
-              }
-            }
-          ],
-          "linkId": "Hyperhydrosis-PriorBotulinumToxin",
-          "text": "Has the patient been administered botulinum toxin before?",
-          "type": "boolean",
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "BotulinumConditions",
-              "answerCoding": {
-                "code": "Primary Axillary Hyperhidrosis",
-                "display": "Primary Axillary Hyperhidrosis"
-              }
-            }
-          ],
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "HyperhydrosisSpecifyBotoxAdministration"
-              }
-            }
-          ],
-          "linkId": "Hyperhydrosis-PriorBotoxStrain",
-          "text": "Which strain of botox was used?",
-          "type": "text",
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "Hyperhydrosis-PriorBotulinumToxin",
-              "answerBoolean": true
-            }
-          ],
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "HyperhydrosisPostBotoxImprovement"
-              }
-            }
-          ],
-          "linkId": "Hyperhydrosis-PostBotoxImprovement",
-          "text": "Has there been improvement in Sweating severity after Botox Injection?",
-          "type": "boolean",
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "Hyperhydrosis-PriorBotulinumToxin",
-              "answerBoolean": true
-            }
-          ],
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "CheckUrinaryIncontinenceAntiCholinergicTreatment"
-              }
-            }
-          ],
-          "linkId": "UrinaryIncontinence-AntichloniergicTreatment",
-          "text": "Has Anticholinergic Treatment been tried to manage Urinary Incontinence?",
-          "type": "boolean",
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "BotulinumConditions",
-              "answerCoding": {
-                "code": "Urinary Incontinence",
-                "display": "Urinary Incontinence"
-              }
-            }
-          ],
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "PostUrinaryIncontinenceAnticholinergicImprovement"
-              }
-            }
-          ],
-          "linkId": "UrinaryIncontinence-PostAntichloniergicTreatment",
-          "text": "Has there been improvement in Urine Continence?",
-          "type": "boolean",
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "UrinaryIncontinence-AntichloniergicTreatment",
-              "answerBoolean": true
-            }
-          ],
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "UrinaryIncontinencePriorBotulinumToxin"
-              }
-            }
-          ],
-          "linkId": "UrinaryIncontinence-PriorBotulinumToxin",
-          "text": "Has the patient been administered botulinum toxin before ?",
-          "type": "boolean",
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "BotulinumConditions",
-              "answerCoding": {
-                "code": "Urinary Incontinence",
-                "display": "Urinary Incontinence"
-              }
-            }
-          ],
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "UrinaryIncontinenceSpecifyBotoxAdministration"
-              }
-            }
-          ],
-          "linkId": "UrinaryIncontinence-PriorBotulinumStrain",
-          "text": "Which strain of botox was used?",
-          "type": "text",
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "UrinaryIncontinence-PriorBotulinumToxin",
-              "answerBoolean": true
-            }
-          ],
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "UrinaryIncontinencePostBotoxImprovement"
-              }
-            }
-          ],
-          "linkId": "UrinaryIncontinence-PostBotoxImprovement",
-          "text": "Has there been improvement in Urinary Continence after Botox Injection?",
-          "type": "boolean",
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "UrinaryIncontinence-PriorBotulinumToxin",
-              "answerBoolean": true
-            }
-          ],
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "ConventionalTreatment"
-              }
-            }
-          ],
-          "linkId": "Migraine-ConventionalTreatment",
-          "text": "Has the patient been given any conventional treatment previously?",
-          "type": "boolean",
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "BotulinumConditions",
-              "answerCoding": {
-                "code": "Migraine",
-                "display": "Migraine"
-              }
-            }
-          ],
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "ConventionalTreatmentImprovement"
-              }
-            }
-          ],
-          "linkId": "Migraine-ConventionalTreatmentImprovement",
-          "text": "Was there a significant decrease in the number and frequency of headaches upon receiving conventional therapy?",
-          "type": "boolean",
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "Migraine-ConventionalTreatment",
-              "answerBoolean": true
-            }
-          ],
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "MigraineCheckPriorBotoxTreatment"
-              }
-            }
-          ],
-          "linkId": "Migraine-PriorBotoxTreatment",
-          "text": "Has the patient had botox therapy previously?",
-          "type": "boolean",
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "BotulinumConditions",
-              "answerCoding": {
-                "code": "Migraine",
-                "display": "Migraine"
-              }
-            }
-          ],
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "MigrainePostBotoxImprovement"
-              }
-            }
-          ],
-          "linkId": "Migraine-PostBotoxImprovement",
-          "text": "Has the patient shown a significant decrease in the number and frequency of headaches upon receiving Botulinum toxin?",
-          "type": "boolean",
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "Migraine-PriorBotoxTreatment",
-              "answerBoolean": true
-            }
-          ],
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "MigraineTreatmentFailures"
-              }
-            }
-          ],
-          "linkId": "Migraine-TreatmentFailures",
-          "text": "Was there a failure of two definitive, consecutive, treatment sessions when treated with botulinum toxin?",
-          "type": "boolean",
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "Migraine-PriorBotoxTreatment",
-              "answerBoolean": true
-            }
-          ],
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "StrabismusSurgery"
-              }
-            }
-          ],
-          "linkId": "Strabisumus-CorrectionSurgery",
-          "text": "Has the patient undergone surgery for correction of strabismus?",
-          "type": "boolean",
-          "required": true,
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "BotulinumConditions",
-              "answerCoding": {
-                "code": "Strabismus",
-                "display": "Strabismus"
-              }
-            }
           ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "PostStrabismusSurgeryImprovement"
+      },
+      {
+          "linkId": "4.5",
+          "text": "Medical Necessity Documentation",
+          "type": "group",
+          "item": [
+              {
+                  "linkId": "4.5.1",
+                  "text": "Provider Education Note:  Specific information must be documented about the conservative methods of treatments such as medication, physical therapy, and other appropriate methods that have been tried and proven unsuccessful.  The documentation must include an objective assessment of the intolerance or inadequacy of the response(s). (Excludes hemifacial spasm or blepharospasm)​",
+                  "type": "text"
               }
-            }
-          ],
-          "linkId": "Strabisumus-ImprovementPostCorrectionSurgery",
-          "text": "Was there an improvement in the patient's condition after the correction surgery?",
-          "type": "boolean",
-          "required": true,
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "Strabisumus-CorrectionSurgery",
-              "answerBoolean": true
-            }
           ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "StrabismusPriorBotulinumToxin"
+      },
+      {
+          "linkId": "5",
+          "text": "Unsuccessful or inadequate response to treatments (Excludes hemifacial spasm or blepharospasm)​",
+          "type": "group",
+          "item": [
+              {
+                  "extension": [
+                      {
+                          "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                          "valueExpression": {
+                              "language": "text/cql",
+                              "expression": "MedicationsAttempted"
+                          }
+                      }
+                  ],
+                  "linkId": "5.2",
+                  "text": "Medication(s) that have been attempted.",
+                  "type": "choice",
+                  "repeats": true,
+                  "answerOption": [
+                      {
+                          "valueCoding": {
+                              "code": "Anticholinergics",
+                              "display": "Anticholinergics (Muscarinic receptor antagonist)"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Benzodiazepine",
+                              "display": "Benzodiazepine"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Skeletal Muscle Relaxants",
+                              "display": "Skeletal Muscle Relaxants"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Other",
+                              "display": "Other"
+                          }
+                      }
+                  ]
+              },
+              {
+                  "extension": [
+                      {
+                          "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                          "valueExpression": {
+                              "language": "text/cql",
+                              "expression": "Anticholinergics"
+                          }
+                      }
+                  ],
+                  "linkId": "5.2.1",
+                  "text": "Anticholinergics (Muscarinic receptor antagonist)",
+                  "type": "choice",
+                  "repeats": true,
+                  "answerOption": [
+                      {
+                          "valueCoding": {
+                              "code": "Benztropine",
+                              "display": "Benztropine"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Trihexyphenidyl",
+                              "display": "Trihexyphenidyl"
+                          }
+                      }
+                  ],
+                  "enableWhen": [
+                      {
+                          "operator": "=",
+                          "question": "5.2",
+                          "answerCoding": {
+                              "code": "Anticholinergics",
+                              "display": "Anticholinergics (Muscarinic receptor antagonist)"
+                          }
+                      }
+                  ]
+              },
+              {
+                  "extension": [
+                      {
+                          "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                          "valueExpression": {
+                              "language": "text/cql",
+                              "expression": "Benzodiazepine"
+                          }
+                      }
+                  ],
+                  "linkId": "5.2.2",
+                  "text": "Benzodiazepine",
+                  "type": "choice",
+                  "repeats": true,
+                  "answerOption": [
+                      {
+                          "valueCoding": {
+                              "code": "Clonazepam",
+                              "display": "Clonazepam"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Diazepam",
+                              "display": "Diazepam"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Lorazepam",
+                              "display": "Lorazepam"
+                          }
+                      }
+                  ],
+                  "enableWhen": [
+                      {
+                          "operator": "=",
+                          "question": "5.2",
+                          "answerCoding": {
+                              "code": "Benzodiazepine",
+                              "display": "Benzodiazepine"
+                          }
+                      }
+                  ]
+              },
+              {
+                  "extension": [
+                      {
+                          "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                          "valueExpression": {
+                              "language": "text/cql",
+                              "expression": "SkeletalMuscleRelaxants"
+                          }
+                      }
+                  ],
+                  "linkId": "5.2.3",
+                  "text": "Skeletal Muscle Relaxants",
+                  "type": "choice",
+                  "repeats": true,
+                  "answerOption": [
+                      {
+                          "valueCoding": {
+                              "code": "Baclofen",
+                              "display": "Baclofen"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Tizanidine",
+                              "display": "Tizanidine"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Cyclobenzaprine",
+                              "display": "Cyclobenzaprine"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Methocarbamol",
+                              "display": "Methocarbamol"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Dantrolene",
+                              "display": "Dantrolene"
+                          }
+                      }
+                  ],
+                  "enableWhen": [
+                      {
+                          "operator": "=",
+                          "question": "5.2",
+                          "answerCoding": {
+                              "code": "Skeletal Muscle Relaxants",
+                              "display": "Skeletal Muscle Relaxants"
+                          }
+                      }
+                  ]
+              },
+              {
+                  "linkId": "5.2.4",
+                  "text": "Specify Other:",
+                  "type": "text",
+                  "required": true,
+                  "enableWhen": [
+                      {
+                          "operator": "=",
+                          "question": "5.2",
+                          "answerCoding": {
+                              "code": "Other",
+                              "display": "Other"
+                          }
+                      }
+                  ]
+              },
+              {
+                  "extension": [
+                      {
+                          "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                          "valueExpression": {
+                              "language": "text/cql",
+                              "expression": "Conventionaltreatments"
+                          }
+                      }
+                  ],
+                  "linkId": "5.3",
+                  "text": "Conventional treatment methods that have been attempted.",
+                  "type": "choice",
+                  "repeats": true,
+                  "answerOption": [
+                      {
+                          "valueCoding": {
+                              "code": "Physical Therapy",
+                              "display": "Physical Therapy"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Biobehavioral therapy​",
+                              "display": "Biobehavioral therapy​"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Acupuncture",
+                              "display": "Acupuncture"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Lifestyle modifications",
+                              "display": "Lifestyle modifications"
+                          }
+                      }
+                  ]
+              },
+              {
+                  "extension": [
+                      {
+                          "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                          "valueExpression": {
+                              "language": "text/cql",
+                              "expression": "benificiarystherapeuticResponse"
+                          }
+                      }
+                  ],
+                  "linkId": "5.4",
+                  "text": "Beneficiary's therapeutic response to treatments attempted",
+                  "type": "choice",
+                  "answerOption": [
+                      {
+                          "valueCoding": {
+                              "code": "Poor/minimal",
+                              "display": "Poor/minimal"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Fair response",
+                              "display": "Fair response"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Good response",
+                              "display": "Good response"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Excellent",
+                              "display": "Excellent"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Complete",
+                              "display": "Complete"
+                          }
+                      }
+                  ]
+              },
+              {
+                  "extension": [
+                      {
+                          "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                          "valueExpression": {
+                              "language": "text/cql",
+                              "expression": "PertinentProcedureResults"
+                          }
+                      }
+                  ],
+                  "linkId": "5.5",
+                  "text": "Pertinent test/procedure results",
+                  "type": "text"
+              },
+              {
+                  "extension": [
+                      {
+                          "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                          "valueExpression": {
+                              "language": "text/cql",
+                              "expression": "MedicationsAttemped2MonthTrial"
+                          }
+                      }
+                  ],
+                  "linkId": "5.1",
+                  "text": "Medication(s) that have been attempted for chronic migraines with at least a 2-month trial.​ Provider Education Note: The beneficiary has had a trial of and inadequate response to a 2-month trial of at least one agent in any two of the following classes or has contraindication to the following medications.",
+                  "type": "choice",
+                  "repeats": true,
+                  "answerOption": [
+                      {
+                          "valueCoding": {
+                              "code": "Tricyclic Antidepressants",
+                              "display": "Tricyclic Antidepressants"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Beta Blocker",
+                              "display": "Beta Blocker"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Calcium Channel Blocker",
+                              "display": "Calcium Channel Blocker"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Antiepileptic",
+                              "display": "Antiepileptic"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Other",
+                              "display": "Other"
+                          }
+                      }
+                  ]
+              },
+              {
+                  "extension": [
+                      {
+                          "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                          "valueExpression": {
+                              "language": "text/cql",
+                              "expression": "TricyclicAntidepressants"
+                          }
+                      }
+                  ],
+                  "linkId": "5.1.1",
+                  "text": "Tricyclic Antidepressants",
+                  "type": "choice",
+                  "repeats": true,
+                  "answerOption": [
+                      {
+                          "valueCoding": {
+                              "code": "Amitriptyline",
+                              "display": "Amitriptyline"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Nortriptyline",
+                              "display": "Nortriptyline"
+                          }
+                      }
+                  ],
+                  "enableWhen": [
+                      {
+                          "operator": "=",
+                          "question": "5.1",
+                          "answerCoding": {
+                              "code": "Tricyclic Antidepressants",
+                              "display": "Tricyclic Antidepressants"
+                          }
+                      }
+                  ]
+              },
+              {
+                  "extension": [
+                      {
+                          "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                          "valueExpression": {
+                              "language": "text/cql",
+                              "expression": "BetaBlocker"
+                          }
+                      }
+                  ],
+                  "linkId": "5.1.2",
+                  "text": "Beta Blocker",
+                  "type": "choice",
+                  "repeats": true,
+                  "answerOption": [
+                      {
+                          "valueCoding": {
+                              "code": "Propranolol",
+                              "display": "Propranolol"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Metoprolol",
+                              "display": "Metoprolol"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Atenolol",
+                              "display": "Atenolol"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Nadolol",
+                              "display": "Nadolol"
+                          }
+                      }
+                  ],
+                  "enableWhen": [
+                      {
+                          "operator": "=",
+                          "question": "5.1",
+                          "answerCoding": {
+                              "code": "Beta Blocker",
+                              "display": "Beta Blocker"
+                          }
+                      }
+                  ]
+              },
+              {
+                  "extension": [
+                      {
+                          "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                          "valueExpression": {
+                              "language": "text/cql",
+                              "expression": "CalciumChannelBlocker"
+                          }
+                      }
+                  ],
+                  "linkId": "5.1.3",
+                  "text": "Calcium Channel Blocker",
+                  "type": "choice",
+                  "repeats": true,
+                  "answerOption": [
+                      {
+                          "valueCoding": {
+                              "code": "Verapamil",
+                              "display": "Verapamil"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Nifedipine",
+                              "display": "Nifedipine"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Nimodipine",
+                              "display": "Nimodipine"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Nicardipine",
+                              "display": "Nicardipine"
+                          }
+                      }
+                  ],
+                  "enableWhen": [
+                      {
+                          "operator": "=",
+                          "question": "5.1",
+                          "answerCoding": {
+                              "code": "Calcium Channel Blocker",
+                              "display": "Calcium Channel Blocker"
+                          }
+                      }
+                  ]
+              },
+              {
+                  "extension": [
+                      {
+                          "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                          "valueExpression": {
+                              "language": "text/cql",
+                              "expression": "Antiepileptic"
+                          }
+                      }
+                  ],
+                  "linkId": "5.1.4",
+                  "text": "Antiepileptic",
+                  "type": "choice",
+                  "repeats": true,
+                  "answerOption": [
+                      {
+                          "valueCoding": {
+                              "code": "Valproate sodium​",
+                              "display": "Valproate sodium​"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Divalproex sodium​",
+                              "display": "Divalproex sodium​"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Topiramate",
+                              "display": "Topiramate"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Gabapentin",
+                              "display": "Gabapentin"
+                          }
+                      }
+                  ],
+                  "enableWhen": [
+                      {
+                          "operator": "=",
+                          "question": "5.1",
+                          "answerCoding": {
+                              "code": "Antiepileptic",
+                              "display": "Antiepileptic"
+                          }
+                      }
+                  ]
+              },
+              {
+                  "linkId": "5.1.5",
+                  "text": "Specify Other:",
+                  "type": "text",
+                  "required": true,
+                  "enableWhen": [
+                      {
+                          "operator": "=",
+                          "question": "5.1",
+                          "answerCoding": {
+                              "code": "Other",
+                              "display": "Other"
+                          }
+                      }
+                  ]
               }
-            }
-          ],
-          "linkId": "Strabisumus-PriorBotoxTreatment",
-          "text": "Has the patient had a prior botox treatment?",
-          "type": "boolean",
-          "required": true,
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "BotulinumConditions",
-              "answerCoding": {
-                "code": "Strabismus",
-                "display": "Strabismus"
-              }
-            }
           ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "StrabismusSpecifyBotoxAdministration"
+      },
+      {
+          "linkId": "6.a",
+          "text": "History of Chronic Migraines Documentation​",
+          "type": "group",
+          "item": [
+              {
+                  "linkId": "6.a.1",
+                  "text": "Documented features of migraine headache ≥ 8 migraine headache days per month​",
+                  "type": "text"
+              },
+              {
+                  "linkId": "6.a.2",
+                  "text": "Migraine headache documented to be lasting for a duration ≥4 hours on a migraine day​",
+                  "type": "text"
+              },
+              {
+                  "linkId": "6.a.3",
+                  "text": "Supports monthly headache days have occurred ≥15 headaches days per month​",
+                  "type": "text"
+              },
+              {
+                  "linkId": "6.a.4",
+                  "text": "Chronic headaches have been present for a period of at least 3 months​",
+                  "type": "text"
               }
-            }
-          ],
-          "linkId": "Strabisumus-BotoxStrain",
-          "text": "Which Botox Strain was used?",
-          "type": "text",
-          "required": true,
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "Strabisumus-PriorBotoxTreatment",
-              "answerBoolean": true
-            }
           ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "StrabismusPostBotoxImprovement"
+      },
+      {
+          "linkId": "6",
+          "text": "Unsuccessful or inadequate response to treatments specific to Migraines​​",
+          "type": "group",
+          "item": [
+              {
+                  "extension": [
+                      {
+                          "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                          "valueExpression": {
+                              "language": "text/cql",
+                              "expression": "MedicationsAttemped2MonthTrial"
+                          }
+                      }
+                  ],
+                  "linkId": "6.1",
+                  "text": "Medication(s) that have been attempted for chronic migraines with at least a 2-month trial.​ Provider Education Note: The beneficiary has had a trial of and inadequate response to a 2-month trial of at least one agent in any two of the following classes or has contraindication to the following medications.",
+                  "type": "choice",
+                  "repeats": true,
+                  "answerOption": [
+                      {
+                          "valueCoding": {
+                              "code": "Tricyclic Antidepressants",
+                              "display": "Tricyclic Antidepressants"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Beta Blocker",
+                              "display": "Beta Blocker"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Calcium Channel Blocker",
+                              "display": "Calcium Channel Blocker"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Antiepileptic",
+                              "display": "Antiepileptic"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Other",
+                              "display": "Other"
+                          }
+                      }
+                  ]
+              },
+              {
+                  "extension": [
+                      {
+                          "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                          "valueExpression": {
+                              "language": "text/cql",
+                              "expression": "TricyclicAntidepressants"
+                          }
+                      }
+                  ],
+                  "linkId": "6.1.1",
+                  "text": "Tricyclic Antidepressants",
+                  "type": "choice",
+                  "repeats": true,
+                  "answerOption": [
+                      {
+                          "valueCoding": {
+                              "code": "Amitriptyline",
+                              "display": "Amitriptyline"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Nortriptyline",
+                              "display": "Nortriptyline"
+                          }
+                      }
+                  ],
+                  "enableWhen": [
+                      {
+                          "operator": "=",
+                          "question": "6.1",
+                          "answerCoding": {
+                              "code": "Tricyclic Antidepressants",
+                              "display": "Tricyclic Antidepressants"
+                          }
+                      }
+                  ]
+              },
+              {
+                  "extension": [
+                      {
+                          "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                          "valueExpression": {
+                              "language": "text/cql",
+                              "expression": "BetaBlocker"
+                          }
+                      }
+                  ],
+                  "linkId": "6.1.2",
+                  "text": "Beta Blocker",
+                  "type": "choice",
+                  "repeats": true,
+                  "answerOption": [
+                      {
+                          "valueCoding": {
+                              "code": "Propranolol",
+                              "display": "Propranolol"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Metoprolol",
+                              "display": "Metoprolol"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Atenolol",
+                              "display": "Atenolol"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Nadolol",
+                              "display": "Nadolol"
+                          }
+                      }
+                  ],
+                  "enableWhen": [
+                      {
+                          "operator": "=",
+                          "question": "6.1",
+                          "answerCoding": {
+                              "code": "Beta Blocker",
+                              "display": "Beta Blocker"
+                          }
+                      }
+                  ]
+              },
+              {
+                  "extension": [
+                      {
+                          "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                          "valueExpression": {
+                              "language": "text/cql",
+                              "expression": "CalciumChannelBlocker"
+                          }
+                      }
+                  ],
+                  "linkId": "6.1.3",
+                  "text": "Calcium Channel Blocker",
+                  "type": "choice",
+                  "repeats": true,
+                  "answerOption": [
+                      {
+                          "valueCoding": {
+                              "code": "Verapamil",
+                              "display": "Verapamil"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Nifedipine",
+                              "display": "Nifedipine"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Nimodipine",
+                              "display": "Nimodipine"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Nicardipine",
+                              "display": "Nicardipine"
+                          }
+                      }
+                  ],
+                  "enableWhen": [
+                      {
+                          "operator": "=",
+                          "question": "6.1",
+                          "answerCoding": {
+                              "code": "Calcium Channel Blocker",
+                              "display": "Calcium Channel Blocker"
+                          }
+                      }
+                  ]
+              },
+              {
+                  "extension": [
+                      {
+                          "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                          "valueExpression": {
+                              "language": "text/cql",
+                              "expression": "Antiepileptic"
+                          }
+                      }
+                  ],
+                  "linkId": "6.1.4",
+                  "text": "Antiepileptic",
+                  "type": "choice",
+                  "repeats": true,
+                  "answerOption": [
+                      {
+                          "valueCoding": {
+                              "code": "Valproate sodium​",
+                              "display": "Valproate sodium​"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Divalproex sodium​",
+                              "display": "Divalproex sodium​"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Topiramate",
+                              "display": "Topiramate"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Gabapentin",
+                              "display": "Gabapentin"
+                          }
+                      }
+                  ],
+                  "enableWhen": [
+                      {
+                          "operator": "=",
+                          "question": "6.1",
+                          "answerCoding": {
+                              "code": "Antiepileptic",
+                              "display": "Antiepileptic"
+                          }
+                      }
+                  ]
+              },
+              {
+                  "linkId": "6.1.5",
+                  "text": "Specify Other:",
+                  "type": "text",
+                  "required": true,
+                  "enableWhen": [
+                      {
+                          "operator": "=",
+                          "question": "6.1",
+                          "answerCoding": {
+                              "code": "Other",
+                              "display": "Other"
+                          }
+                      }
+                  ]
+              },
+              {
+                  "linkId": "6.1.6",
+                  "text": "Calcitonin gene-related peptide agent for chronic migraine prophylaxis is currently used.​",
+                  "type": "choice",
+                  "answerOption": [
+                      {
+                          "valueCoding": {
+                              "code": "N/A",
+                              "display": "N/A"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Yes, and the beneficiary has had a reduction in the overall number of migraine days but still has chronic migraines requiring additional therapy for chronic migraine prevention.​",
+                              "display": "Yes, and the beneficiary has had a reduction in the overall number of migraine days but still has chronic migraines requiring additional therapy for chronic migraine prevention.​"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Yes, and the beneficiary has had a reduction in number of severe migraine days per month with CGRP use, but still has chronic migraines requiring additional therapy for chronic migraine prevention.​",
+                              "display": "Yes, and the beneficiary has had a reduction in number of severe migraine days per month with CGRP use, but still has chronic migraines requiring additional therapy for chronic migraine prevention.​"
+                          }
+                      }
+                  ]
               }
-            }
-          ],
-          "linkId": "Strabisumus-PostBotoxImprovement",
-          "text": "Was there an improvement in patient's condition after botox treatment?",
-          "type": "boolean",
-          "required": true,
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "Strabisumus-PriorBotoxTreatment",
-              "answerBoolean": true
-            }
           ]
-        }
-      ]
-    },
-    {
-      "linkId": "3",
-      "text": "Co-morbidities",
-      "type": "group",
-      "item": [
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "SialorrheaAnticholinergicContraindications"
+      },
+      {
+          "linkId": "7",
+          "text": "Objective scale(s) to measure severity of migraine pain​",
+          "type": "group",
+          "item": [
+              {
+                  "linkId": "7.a",
+                  "text": "Baseline Date:",
+                  "type": "date"
+              },
+              {
+                  "linkId": "7.0",
+                  "text": "Objective scale score of the severity of pain, for Chronic Migraines e.g. Numerical Pain Scale, Verbal Descriptor.​",
+                  "type": "choice",
+                  "answerOption": [
+                      {
+                          "valueCoding": {
+                              "code": "0 - None",
+                              "display": "0 - None"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "1 - Mild symptom(s)",
+                              "display": "1 - Mild symptom(s)"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "2 - Moderate symptom(s)",
+                              "display": "2 - Moderate symptom(s)"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "3 - Severe symptom(s)",
+                              "display": "3 - Severe symptom(s)"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "4 - Not possible due to the disease",
+                              "display": "4 - Not possible due to the disease"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Not applicable",
+                              "display": "Not applicable"
+                          }
+                      }
+                  ]
+              },
+              {
+                  "extension": [
+                      {
+                          "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                          "valueExpression": {
+                              "language": "text/cql",
+                              "expression": "ClinicalInjectionEffectiveness"
+                          }
+                      }
+                  ],
+                  "linkId": "7.1",
+                  "text": "Clinical effectiveness of the injections",
+                  "type": "choice",
+                  "answerOption": [
+                      {
+                          "valueCoding": {
+                              "code": "0 - Complete effectiveness",
+                              "display": "0 - Complete effectiveness"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "1 - Highly effective",
+                              "display": "1 - Highly effective"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "2 - Moderately effective",
+                              "display": "2 - Moderately effective"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "3 - Minimally effective",
+                              "display": "3 - Minimally effective"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "4 - Not effective",
+                              "display": "4 - Not effective"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Not applicable",
+                              "display": "Not applicable"
+                          }
+                      }
+                  ]
+              },
+              {
+                  "extension": [
+                      {
+                          "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                          "valueExpression": {
+                              "language": "text/cql",
+                              "expression": "benificiarysInjectionResponse"
+                          }
+                      }
+                  ],
+                  "linkId": "7.2",
+                  "text": "Beneficiary’s response to the injections",
+                  "type": "choice",
+                  "answerOption": [
+                      {
+                          "valueCoding": {
+                              "code": "0 - Complete improvement",
+                              "display": "0 - Complete improvement"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "1 - Significant improvement",
+                              "display": "1 - Significant improvement"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "2 - Moderate improvement",
+                              "display": "2 - Moderate improvement"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "3 - Minimal improvement",
+                              "display": "3 - Minimal improvement"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "4 - No improvement",
+                              "display": "4 - No improvement"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Not applicable",
+                              "display": "Not applicable"
+                          }
+                      }
+                  ]
               }
-            }
-          ],
-          "linkId": "Sialorrhea-AnticholinergicContraindications",
-          "text": "Does the patient have any of the following contraindications to Anticholinergic treatment?",
-          "type": "choice",
-          "required": true,
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "BotulinumConditions",
-              "answerCoding": {
-                "code": "Sialorrhea",
-                "display": "Sialorrhea"
-              }
-            }
-          ],
-          "answerOption": [
-            {
-              "valueCoding": {
-                "code": "Myasthenia Gravis",
-                "display": "Myasthenia Gravis"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Hyperthyroidism",
-                "display": "Hyperthyroidism"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Glaucoma",
-                "display": "Glaucoma"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Enlarged Prostate",
-                "display": "Enlarged Prostate"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Urinary Tract Blockage",
-                "display": "Urinary Tract Blockage"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Tachycardia",
-                "display": "Tachycardia"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Heart Failure",
-                "display": "Heart Failure"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Dry Mouth",
-                "display": "Dry Mouth"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Hiatal Hernia",
-                "display": "Hiatal Hernia"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Constipation",
-                "display": "Constipation"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Down Syndrome",
-                "display": "Down Syndrome"
-              }
-            }
           ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "UrinaryIncontinenceAnticholinergicContraindications"
+      },
+      {
+          "linkId": "8",
+          "text": "Objective Scales -Blepharospasm​​",
+          "type": "group",
+          "item": [
+              {
+                  "linkId": "8.a",
+                  "text": "Baseline Date:",
+                  "type": "date"
+              },
+              {
+                  "linkId": "8.0",
+                  "text": "Objective scale score of the severity of symptoms, Moderate to severe chronic blepharospasm measured on objective clinical scale e.g. Jankovic Rating Scale (JRS) and Blepharospasm Disability Index (BSDI)​​",
+                  "type": "choice",
+                  "answerOption": [
+                      {
+                          "valueCoding": {
+                              "code": "0 - None",
+                              "display": "0 - None"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "1 - Mild symptom(s)",
+                              "display": "1 - Mild symptom(s)"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "2 - Moderate symptom(s)",
+                              "display": "2 - Moderate symptom(s)"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "3 - Severe symptom(s)",
+                              "display": "3 - Severe symptom(s)"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "4 - Not possible due to the disease",
+                              "display": "4 - Not possible due to the disease"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Not applicable",
+                              "display": "Not applicable"
+                          }
+                      }
+                  ]
+              },
+              {
+                  "extension": [
+                      {
+                          "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                          "valueExpression": {
+                              "language": "text/cql",
+                              "expression": "ClinicalInjectionEffectiveness"
+                          }
+                      }
+                  ],
+                  "linkId": "8.1",
+                  "text": "Clinical effectiveness of the injections",
+                  "type": "choice",
+                  "answerOption": [
+                      {
+                          "valueCoding": {
+                              "code": "0 - Complete effectiveness",
+                              "display": "0 - Complete effectiveness"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "1 - Highly effective",
+                              "display": "1 - Highly effective"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "2 - Moderately effective",
+                              "display": "2 - Moderately effective"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "3 - Minimally effective",
+                              "display": "3 - Minimally effective"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "4 - Not effective",
+                              "display": "4 - Not effective"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Not applicable",
+                              "display": "Not applicable"
+                          }
+                      }
+                  ]
+              },
+              {
+                  "extension": [
+                      {
+                          "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                          "valueExpression": {
+                              "language": "text/cql",
+                              "expression": "benificiarysInjectionResponse"
+                          }
+                      }
+                  ],
+                  "linkId": "8.2",
+                  "text": "Beneficiary’s response to the injections",
+                  "type": "choice",
+                  "answerOption": [
+                      {
+                          "valueCoding": {
+                              "code": "0 - Complete improvement",
+                              "display": "0 - Complete improvement"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "1 - Significant improvement",
+                              "display": "1 - Significant improvement"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "2 - Moderate improvement",
+                              "display": "2 - Moderate improvement"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "3 - Minimal improvement",
+                              "display": "3 - Minimal improvement"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "4 - No improvement",
+                              "display": "4 - No improvement"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Not applicable",
+                              "display": "Not applicable"
+                          }
+                      }
+                  ]
               }
-            }
-          ],
-          "linkId": "UrinaryIncontinence-AnticholinergicContraindications",
-          "text": "Does the patient have any of the following contraindications to Anticholinergic treatment?",
-          "type": "choice",
-          "required": true,
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "BotulinumConditions",
-              "answerCoding": {
-                "code": "Urinary Incontinence",
-                "display": "Urinary Incontinence"
-              }
-            }
-          ],
-          "answerOption": [
-            {
-              "valueCoding": {
-                "code": "Myasthenia Gravis",
-                "display": "Myasthenia Gravis"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Hyperthyroidism",
-                "display": "Hyperthyroidism"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Glaucoma",
-                "display": "Glaucoma"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Enlarged Prostate",
-                "display": "Enlarged Prostate"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Urinary Tract Blockage",
-                "display": "Urinary Tract Blockage"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Tachycardia",
-                "display": "Tachycardia"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Heart Failure",
-                "display": "Heart Failure"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Dry Mouth",
-                "display": "Dry Mouth"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Hiatal Hernia",
-                "display": "Hiatal Hernia"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Constipation",
-                "display": "Constipation"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Down Syndrome",
-                "display": "Down Syndrome"
-              }
-            }
           ]
-        }
-      ]
-    },
-    {
-      "linkId": "5",
-      "text": "Allergies and Adverse Reactions",
-      "type": "group",
-      "item": [
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "BotoxAllergy"
+      },
+      {
+          "linkId": "9",
+          "text": "Objective Scales (Dependent on Diagnosis)​",
+          "type": "group",
+          "item": [
+              {
+                  "linkId": "9.a",
+                  "text": "Baseline Date:",
+                  "type": "date"
+              },
+              {
+                  "linkId": "9.0",
+                  "text": "Objective scale score of the severity of symptoms, Moderate to severe chronic blepharospasm associated with orofacial dystonia should be measured on objective clinical scale e.g. Burke-Fahn-Marsden scale (BFMS), the global dystonia severity rating scale (GDRS), Craniocervical Dystonia Questionnaire, and the Jankovic Rating Scale (JRS)​",
+                  "type": "choice",
+                  "answerOption": [
+                      {
+                          "valueCoding": {
+                              "code": "0 - None",
+                              "display": "0 - None"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "1 - Mild symptom(s)",
+                              "display": "1 - Mild symptom(s)"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "2 - Moderate symptom(s)",
+                              "display": "2 - Moderate symptom(s)"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "3 - Severe symptom(s)",
+                              "display": "3 - Severe symptom(s)"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "4 - Not possible due to the disease",
+                              "display": "4 - Not possible due to the disease"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Not applicable",
+                              "display": "Not applicable"
+                          }
+                      }
+                  ]
+              },
+              {
+                  "extension": [
+                      {
+                          "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                          "valueExpression": {
+                              "language": "text/cql",
+                              "expression": "ClinicalInjectionEffectiveness"
+                          }
+                      }
+                  ],
+                  "linkId": "9.1",
+                  "text": "Clinical effectiveness of the injections",
+                  "type": "choice",
+                  "answerOption": [
+                      {
+                          "valueCoding": {
+                              "code": "0 - Complete effectiveness",
+                              "display": "0 - Complete effectiveness"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "1 - Highly effective",
+                              "display": "1 - Highly effective"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "2 - Moderately effective",
+                              "display": "2 - Moderately effective"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "3 - Minimally effective",
+                              "display": "3 - Minimally effective"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "4 - Not effective",
+                              "display": "4 - Not effective"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Not applicable",
+                              "display": "Not applicable"
+                          }
+                      }
+                  ]
+              },
+              {
+                  "extension": [
+                      {
+                          "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                          "valueExpression": {
+                              "language": "text/cql",
+                              "expression": "benificiarysInjectionResponse"
+                          }
+                      }
+                  ],
+                  "linkId": "9.2",
+                  "text": "Beneficiary’s response to the injections",
+                  "type": "choice",
+                  "answerOption": [
+                      {
+                          "valueCoding": {
+                              "code": "0 - Complete improvement",
+                              "display": "0 - Complete improvement"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "1 - Significant improvement",
+                              "display": "1 - Significant improvement"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "2 - Moderate improvement",
+                              "display": "2 - Moderate improvement"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "3 - Minimal improvement",
+                              "display": "3 - Minimal improvement"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "4 - No improvement",
+                              "display": "4 - No improvement"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Not applicable",
+                              "display": "Not applicable"
+                          }
+                      }
+                  ]
               }
-            }
-          ],
-          "linkId": "BotoxAllergy",
-          "text": "Is the patient allergic to Botulinum Toxin injection?",
-          "type": "boolean",
-          "required": true
-        }
-      ]
-    }
+          ]
+      }
   ]
 }
-
-
-
