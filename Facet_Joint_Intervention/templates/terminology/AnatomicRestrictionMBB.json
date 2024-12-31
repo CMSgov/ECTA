@@ -1,0 +1,62 @@
+{
+    "resourceType": "ValueSet",
+    "id": "anatomic-restriction-mbb",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-12-23T00:00:00.000+00:00"
+    },
+    "url": "<FHIR-server>/ValueSet/anatomic-restriction-mbb",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:oid:anatomic-restriction-mbb"
+        }
+    ],
+    "version": "1.0",
+    "name": "AnatomicRestrictionMBB",
+    "title": "Anatomic Restriction MBB",
+    "status": "active",
+    "publisher": "CMS",
+    "compose": {
+        "include": [
+            {
+                "system": "http://loinc.org",
+                "concept": [
+                    {
+                        "code": "LA32187-9",
+                        "display": "Posterior Fusion"
+                    },
+                    {
+                        "code": "LP266363-3",
+                        "display": "Scoliosis"
+                    },
+                    {
+                        "code": "LA15324-9",
+                        "display": "Severe Osteophytes (bone spurs)"
+                    }
+                ]
+            },
+            {
+                "system": "http://snomed.info/sct",
+                "concept": [
+                    {
+                        "code": "430962009",
+                        "display": "Pseudoarthrosis"
+                    },
+                    {
+                        "code": "40854002",
+                        "display": "Presence of a sixth lumbar vertebra"
+                    },
+                    {
+                        "code": "281373004",
+                        "display": "Sacralization of the fifth lumbar vertebra"
+                    },
+                    {
+                        "code": "414916001",
+                        "display": "Obesity or excessive adipose tissue"
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,74 @@
+{
+    "resourceType": "ValueSet",
+    "id": "non-facet-pathology",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-12-23T00:00:00.000+00:00"
+    },
+    "url": "<FHIR-server>/ValueSet/non-facet-pathology",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:oid:non-facet-pathology"
+        }
+    ],
+    "version": "1.0",
+    "name": "NonFacetPathology",
+    "title": "Non Facet Pathology",
+    "status": "active",
+    "publisher": "CMS",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "concept": [
+                    {
+                        "code": "363438000",
+                        "display": "Spine Tumors"
+                    },
+                    {
+                        "code": "23056005",
+                        "display": "Sciatica"
+                    },
+                    {
+                        "code": "239872002",
+                        "display": "Hip Osteoarthritis"
+                    },
+                    {
+                        "code": "125606003",
+                        "display": "Fracture of cervical spine"
+                    },
+                    {
+                        "code": "72274001",
+                        "display": "Nerve root disorder"
+                    },
+                    {
+                        "code": "303081002",
+                        "display": "Neurogenic claudication"
+                    },
+                    {
+                        "code": "21947006",
+                        "display": "Compression fracture"
+                    },
+                    {
+                        "code": "235231000119100",
+                        "display": "Osteophyte of bone"
+                    },
+                    {
+                        "code": "69896004",
+                        "display": "Rheumatoid arthritis"
+                    }
+                ]
+            },
+            {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "concept": [
+                    {
+                        "code": "M54.1",
+                        "display": "Radiculopathy"
+                    }
+                ]
+            }
+        ]
+    }
+}
