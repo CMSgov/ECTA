@@ -8,13 +8,13 @@
     ],
     "version": "1.0.0",
     "name": "FacetJointIntervention",
-    "title": "FacetJointIntervention",
+    "title": "Facet Joint Intervention",
     "status": "draft",
     "subjectType": [
       "Patient"
     ],
     "date": "2024-05-05",
-    "publisher": "Mettle Solutions",
+    "publisher": "CMS",
     "extension": [
         {
             "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
