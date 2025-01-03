@@ -17,7 +17,7 @@
     "name": "Medical Record",
     "title": "Medical Record",
     "status": "active",
-    "publisher": "Mettles",
+    "publisher": "CMS",
     "compose": {
       "include": [
         {

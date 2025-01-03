@@ -1307,7 +1307,7 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
-                "expression": "Stage34PressureUlcerInjury"
+                "expression": "Stage34PressureUlcerInjuryTrunkOrPelvis"
               }
             }
           ],
@@ -1700,7 +1700,7 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
-                "expression": "Stage34PressureUlcerInjuryStatus"
+                "expression": "Stage34PressureUlcerInjury"
               }
             }
           ],

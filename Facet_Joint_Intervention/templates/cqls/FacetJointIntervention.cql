@@ -13,13 +13,6 @@ code "64493 - Inj paravert f jnt l/s 1 lev​": '64493' from "CPT" display 
 code "64633 - Destroy cerv/thor facet jnt​​": '64633' from "CPT" display '64633 - Destroy cerv/thor facet jnt​​'
 code "64635 - Destroy lumb/sac facet jnt​​": '64635' from "CPT" display '64635 - Destroy lumb/sac facet jnt​​'
 
-code "64491 - Inj paravert f jnt c/t 2 lev​": '64491' from "CPT" display '64491 - Inj paravert f jnt c/t 2 lev​'
-code "64492 - Inj paravert f jnt c/t 3 lev​": '644992' from "CPT" display '64492 - Inj paravert f jnt c/t 3 lev​'
-code "64634 - Destroy c/th facet jnt addl​​": '64634' from "CPT" display '64634 - Destroy c/th facet jnt addl​​'
-code "64636 - Destroy l/s facet jnt addl​​": '64636' from "CPT" display '64636 - Destroy l/s facet jnt addl​​'
-code "64494 - Inj paravert f jnt l/s 2 lev​": '64494' from "CPT" display '64494 - Inj paravert f jnt l/s 2 lev​'
-code "64495 - Inj paravert f jnt l/s 3 lev​": '64495' from "CPT" display '64495 - Inj paravert f jnt l/s 3 lev​'
-
 valueset "Primary Diagnosis Cervical Thoracic Codes": 'primary-diagnosis-cervical-thoracic'
 valueset "Primary Diagnosis Lumbar Sacral Codes": 'primary-diagnosis-lumbar-sacral'
 valueset "Primary Facet Cyst Diagnosis Cervical Thoracic Codes": 'primary-facet-cyst-diagnosis-cervical-thoracic'
@@ -27,51 +20,54 @@ valueset "Primary Facet Cyst Diagnosis Lumbar Sacral Codes": 'primary-facet-cyst
 valueset "Anatomic Restriction MBB Codes": 'anatomic-restriction-mbb'
 valueset "Non Facet Pathology Codes": 'non-facet-pathology'
 
+valueset "64490 Codes": '64490-Codes'
+valueset "64493 Codes": '64493-Codes'
+valueset "64633 Codes": '64633-Codes'
+valueset "64635 Codes": '64635-Codes'
+valueset "Additonal Codes": 'AdditonalCodes'
+
 code "Medically complex conditions" : 'LA28886-2' from "LOINC" display 'Medically complex conditions'
 code "Impaired executive functioning" : '736317001' from "SNOMED-CT" display 'Impaired executive functioning'
 code "Body disability AND/OR failure state": '105719004' from "SNOMED-CT" display 'Body disability AND/OR failure state'
 code "Impaired cognition": '386806002' from "SNOMED-CT" display 'Impaired cognition'
 code "Unable to maintain a position" : '282848007' from "SNOMED-CT" display 'Unable to maintain a position'
 
-parameter "FJIServiceRequest" ServiceRequest
-parameter "FJIPractitionerRole" PractitionerRole
-parameter "FJIPractitioner" Practitioner
-parameter "FJICondition" Condition
-parameter "FJIProcedure" Procedure
+parameter "Claim" Claim
+parameter "Encounter" Encounter
+parameter "ServiceRequest" ServiceRequest
+parameter "PractitionerRole" PractitionerRole
+parameter "Practitioner" Practitioner
+parameter "Condition" Condition
+parameter "Procedure" Procedure
+parameter "Observation" Observation
 
 context Patient
 
-define "FjiProcedures": {"64490 - Inj paravert f jnt c/t 1 lev​", "64633 - Destroy cerv/thor facet jnt​​", "64635 - Destroy lumb/sac facet jnt​​", 
-    "64491 - Inj paravert f jnt c/t 2 lev​", "64492 - Inj paravert f jnt c/t 3 lev​", "64634 - Destroy c/th facet jnt addl​​", "64636 - Destroy l/s facet jnt addl​​", "64494 - Inj paravert f jnt l/s 2 lev​", "64495 - Inj paravert f jnt l/s 3 lev​"}
-
-define "FjiPrimaryProcedures": {"64490 - Inj paravert f jnt c/t 1 lev​", "64633 - Destroy cerv/thor facet jnt​​", "64635 - Destroy lumb/sac facet jnt​​"}
-
-
 define Request:
-	"FJIServiceRequest"
+	"ServiceRequest"
 
 define OrderId:
     "Request".id.value
 
 
 define OrderingPractitionerRole:
-  singleton from ( "FJIServiceRequest".contained.PractitionerRole P
-        where 'PractitionerRole/' + ReplaceMatches(P.id.value, '#', '') = "FJIServiceRequest".requester.reference.value
+  singleton from ( "ServiceRequest".contained.PractitionerRole P
+        where 'PractitionerRole/' + ReplaceMatches(P.id.value, '#', '') = "ServiceRequest".requester.reference.value
       )
 
 define OrderingPhysician:
   if (singleton from ( [Practitioner] P
-        where 'Practitioner/' + P.id.value = "FJIServiceRequest".requester.reference.value
+        where 'Practitioner/' + P.id.value = "ServiceRequest".requester.reference.value
       )) is not null then
     singleton from ( [Practitioner] P
-        where 'Practitioner/' + P.id.value = "FJIServiceRequest".requester.reference.value
+        where 'Practitioner/' + P.id.value = "ServiceRequest".requester.reference.value
       )
   else if ("OrderingPractitionerRole" is not null and (singleton from ([Practitioner] P where 'Practitioner/' + P.id.value = "OrderingPractitionerRole".practitioner.reference.value) is not null )) then
     singleton from ([Practitioner] P where 'Practitioner/' + P.id.value = "OrderingPractitionerRole".practitioner.reference.value)
   else 
-    singleton from ( "FJIServiceRequest".contained.Practitioner P 
+    singleton from ( "ServiceRequest".contained.Practitioner P 
     where P is not null 
-    and 'Practitioner/' + ReplaceMatches(P.id.value, '#', '') = "FJIServiceRequest".requester.reference.value
+    and 'Practitioner/' + ReplaceMatches(P.id.value, '#', '') = "ServiceRequest".requester.reference.value
     )
 
 define OrderingPhysicianNPI:
@@ -82,43 +78,31 @@ define OrderingPhysicianNPI:
 
 define OrderingPhysicianName: 
     singleton from (
-  	"OrderingPhysician".name name where name.use.value = 'official') 
-
-define OrderingPhysicianLastName: 
-	"OrderingPhysicianName".family.value
-	
-define OrderingPhysicianMiddleName: 
-  	Substring(Combine(("OrderingPhysicianName".given given return Substring(given.value,0,1)),', '),3)
-	
-define "OrderingPhysicianFirstName": 
-	"OrderingPhysicianName".given[0].value
+  	"OrderingPhysician".name name) 
 
 define "OrderDate":
     "Request".authoredOn
 
 define "ServiceRequestCode":
-    FHIRHelpers.ToCode(First(First([ServiceRequest]).code.coding))
+    FHIRHelpers.ToCode(First("ServiceRequest".code.coding))
     
 define "PrimaryServiceRequest":
-    if("ServiceRequestCode" ~ "64490 - Inj paravert f jnt c/t 1 lev​" or "ServiceRequestCode" ~ "64491 - Inj paravert f jnt c/t 2 lev​" or "ServiceRequestCode" ~  "64492 - Inj paravert f jnt c/t 3 lev​") then "64490 - Inj paravert f jnt c/t 1 lev​"
-    else if ("ServiceRequestCode" ~ "64493 - Inj paravert f jnt l/s 1 lev​" or "ServiceRequestCode" ~  "64494 - Inj paravert f jnt l/s 2 lev​" or "ServiceRequestCode" ~  "64495 - Inj paravert f jnt l/s 3 lev​") then "64493 - Inj paravert f jnt l/s 1 lev​"
-    else if ("ServiceRequestCode" ~ "64633 - Destroy cerv/thor facet jnt​​" or "ServiceRequestCode" ~  "64634 - Destroy c/th facet jnt addl​​") then "64633 - Destroy cerv/thor facet jnt​​"
-    else if ("ServiceRequestCode" ~ "64635 - Destroy lumb/sac facet jnt​​" or "ServiceRequestCode" ~  "64636 - Destroy l/s facet jnt addl​​") then "64635 - Destroy lumb/sac facet jnt​​"
+    if("ServiceRequestCode" in "64490 Codes") then System.Code{ code: '64490', system: "ServiceRequestCode".system, display: '64490 - Inj paravert f jnt c/t 1 lev​'}
+    else if ("ServiceRequestCode" in "64493 Codes") then System.Code{ code: '64493', system: "ServiceRequestCode".system, display: '64493 - Inj paravert f jnt l/s 1 lev​'}
+    else if ("ServiceRequestCode" in "64633 Codes") then System.Code{ code: '64633', system: "ServiceRequestCode".system, display: '64633 - Destroy cerv/thor facet jnt​​'}
+    else if ("ServiceRequestCode" in "64635 Codes") then System.Code{ code: '64635', system: "ServiceRequestCode".system, display: '64635 - Destroy lumb/sac facet jnt​​'}
     else null
 
 define "AdditionalServiceRequest":
-    if("ServiceRequestCode" ~ "64491 - Inj paravert f jnt c/t 2 lev​" or "ServiceRequestCode" ~  "64492 - Inj paravert f jnt c/t 3 lev​"
-    or "ServiceRequestCode" ~  "64494 - Inj paravert f jnt l/s 2 lev​" or "ServiceRequestCode" ~  "64495 - Inj paravert f jnt l/s 3 lev​"
-    or "ServiceRequestCode" ~  "64634 - Destroy c/th facet jnt addl​​" or "ServiceRequestCode" ~  "64636 - Destroy l/s facet jnt addl​​") then "ServiceRequestCode"
+    if("ServiceRequestCode" in "Additonal Codes") then "ServiceRequestCode"
     else null
-
 
 define "InterventionType":
-    if (("PrimaryServiceRequest" ~ "64490 - Inj paravert f jnt c/t 1 lev​" or "PrimaryServiceRequest" ~ "64493 - Inj paravert f jnt l/s 1 lev​") and "PreviousInjectionsCount" < 2 and "IsFacetCystRupture")then 'Facet Cyst Rupture'
-    else if (("PrimaryServiceRequest" ~ "64490 - Inj paravert f jnt c/t 1 lev​" or "PrimaryServiceRequest" ~ "64493 - Inj paravert f jnt l/s 1 lev​") and "PreviousInjectionsCount" < 2 )then 'Diagnostic'
-    else if (("PrimaryServiceRequest" ~ "64490 - Inj paravert f jnt c/t 1 lev​" or "PrimaryServiceRequest" ~ "64493 - Inj paravert f jnt l/s 1 lev​") and "PreviousInjectionsCount" >= 2 )then 'Therapeutic'
-    else if ("PrimaryServiceRequest" ~ "64633 - Destroy cerv/thor facet jnt​​" or "PrimaryServiceRequest" ~  "64635 - Destroy lumb/sac facet jnt​​") then 'Radio Frequency Ablation'
-    else null
+    if (("PrimaryServiceRequest" in "64490 Codes" or "PrimaryServiceRequest" in "64493 Codes") and "PreviousInjectionsCount" < 2 and "IsFacetCystRupture") then System.Code{ code: 'Facet Cyst Rupture', display: 'Facet Cyst Rupture'}
+    else if (("PrimaryServiceRequest" in "64490 Codes" or "PrimaryServiceRequest" in "64493 Codes") and "PreviousInjectionsCount" < 2 ) then System.Code{ code: 'Diagnostic', display: 'Diagnostic'}
+    else if (("PrimaryServiceRequest" in "64490 Codes" or "PrimaryServiceRequest" in "64493 Codes") and "PreviousInjectionsCount" >= 2 ) then System.Code{ code: 'Therapeutic', display: 'Therapeutic'}
+    else if ("PrimaryServiceRequest" in "64633 Codes" or "PrimaryServiceRequest" in "64635 Codes") then System.Code{ code: 'Radio Frequency Ablation', display: 'Radio Frequency Ablation'}
+    else System.Code{ code: 'None, Primary only', display: 'None, Primary only'}
     
 define "PreviousInjectionsCount":
     Count([Procedure] P where FHIRHelpers."ToCode"(First(P.code.coding)) is not null and FHIRHelpers."ToCode"(First(P.code.coding)) = "ServiceRequestCode" )
@@ -215,24 +199,6 @@ define "SupportiveFindingsForRequestedProcedure":
     else if("PrimaryDiagnosisLumbarSacralResource" is not null) then 'Axial low back pain and its progression.'
     else null
 
-define function "Normalize Interval Procedure"(choice Choice<FHIR.dateTime, FHIR.Age, FHIR.Period, FHIR.Range, FHIR.string>):
- 	 if choice is FHIR.dateTime then
- 		  Interval[FHIRHelpers.ToDateTime(choice as FHIR.dateTime), FHIRHelpers.ToDateTime(choice as FHIR.dateTime)]
-	  else if choice is FHIR.Period then
-		  FHIRHelpers.ToInterval(choice as FHIR.Period)
-		else if choice is FHIR.string then
-    Message(null as Interval<DateTime>, true, '1', 'Error', 'Cannot compute an interval from a String value')
-	  else if choice is FHIR.Age then
-	 	  Interval[FHIRHelpers.ToDate(Patient.birthDate) + FHIRHelpers.ToQuantity(choice as FHIR.Age),
- 		FHIRHelpers.ToDate(Patient.birthDate) + FHIRHelpers.ToQuantity(choice as FHIR.Age) + 1 year]
-		else if choice is FHIR.Range then
-	  Interval[FHIRHelpers.ToDate(Patient.birthDate) + FHIRHelpers.ToQuantity((choice as FHIR.Range).low),
-		  FHIRHelpers.ToDate(Patient.birthDate) + FHIRHelpers.ToQuantity((choice as FHIR.Range).high) + 1 year]
-	  else null
-
-define function "LengthInDays"(Value Interval<DateTime>):
-	difference in days between start of Value and end of Value
-
 define function "Normalize Interval"(choice Choice<FHIR.dateTime, FHIR.Age, FHIR.Period, FHIR.Range, FHIR.string>):
  	 if choice is FHIR.dateTime then
  		  Interval[FHIRHelpers.ToDateTime(choice as FHIR.dateTime), FHIRHelpers.ToDateTime(choice as FHIR.dateTime)]
@@ -247,18 +213,3 @@ define function "Normalize Interval"(choice Choice<FHIR.dateTime, FHIR.Age, FHIR
 	  Interval[FHIRHelpers.ToDate(Patient.birthDate) + FHIRHelpers.ToQuantity((choice as FHIR.Range).low),
 		  FHIRHelpers.ToDate(Patient.birthDate) + FHIRHelpers.ToQuantity((choice as FHIR.Range).high) + 1 year]
 	  else null
-
-define function "Normalize Onset"(onset Choice<FHIR.dateTime, FHIR.Age, FHIR.Period, FHIR.Range, FHIR.string>):
-  if onset is FHIR.dateTime then
-	  Interval[FHIRHelpers.ToDateTime(onset as FHIR.dateTime), FHIRHelpers.ToDateTime(onset as FHIR.dateTime)]
-	else if onset is FHIR.Period then
-	  FHIRHelpers.ToInterval(onset as FHIR.Period)
-	else if onset is FHIR.string then
-    Message(null as Interval<DateTime>, true, '1', 'Error', 'Cannot compute an interval from a String value')
-	else if onset is FHIR.Age then
-	  Interval[FHIRHelpers.ToDate(Patient.birthDate) + FHIRHelpers.ToQuantity(onset as FHIR.Age),
-		  FHIRHelpers.ToDate(Patient.birthDate) + FHIRHelpers.ToQuantity(onset as FHIR.Age) + 1 year]
-	else if onset is FHIR.Range then
-	  Interval[FHIRHelpers.ToDate(Patient.birthDate) + FHIRHelpers.ToQuantity((onset as FHIR.Range).low),
-		  FHIRHelpers.ToDate(Patient.birthDate) + FHIRHelpers.ToQuantity((onset as FHIR.Range).high) + 1 year]
-	else null

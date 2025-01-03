@@ -1,0 +1,58 @@
+{
+    "resourceType": "ValueSet",
+    "id": "64493-Codes",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-12-23T00:00:00.000+00:00"
+    },
+    "url": "<FHIR-server>/ValueSet/64493-Codes",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:oid:64493-Codes"
+        }
+    ],
+    "version": "1.0",
+    "name": "64493Codes",
+    "title": "64493 Codes",
+    "status": "active",
+    "publisher": "CMS",
+    "compose": {
+        "include": [
+            {
+                "system": "http://www.ama-assn.org/go/cpt",
+                "concept": [
+                    {
+                        "code": "64493",
+                        "display": "Inj paravert f jnt l/s 1 lev"
+                    },
+                    {
+                        "code": "64494",
+                        "display": "Inj paravert f jnt l/s 2 lev"
+                    },
+                    {
+                        "code": "64495",
+                        "display": "Inj paravert f jnt l/s 3 lev"
+                    }
+                ]
+            },
+            {
+                "system": "https://hcpcs.codes/",
+                "concept": [
+                    {
+                        "code": "64493",
+                        "display": "Inj paravert f jnt l/s 1 lev"
+                    },
+                    {
+                        "code": "64494",
+                        "display": "Inj paravert f jnt l/s 2 lev"
+                    },
+                    {
+                        "code": "64495",
+                        "display": "Inj paravert f jnt l/s 3 lev"
+                    }
+                ]
+            }
+        ]
+    }
+}

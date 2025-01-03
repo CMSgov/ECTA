@@ -17,7 +17,7 @@
   "name": "Pressure Ulcer Stage 3 or Stage 4",
   "title": "Pressure Ulcer Stage 3 or Stage 4",
   "status": "active",
-  "publisher": "Mettles",
+  "publisher": "CMS",
   "compose": {
     "include": [
       {
