@@ -17,7 +17,7 @@
   "name": "Pressure Ulcer Stage 2",
   "title": "Pressure Ulcer Stage 2",
   "status": "active",
-  "publisher": "Mettles",
+  "publisher": "CMS",
   "compose": {
     "include": [
       {

@@ -17,7 +17,7 @@
     "name": "Wound Assessment",
     "title": "Wound Assessment",
     "status": "active",
-    "publisher": "Mettles",
+    "publisher": "CMS",
     "compose": {
         "include": [
             {

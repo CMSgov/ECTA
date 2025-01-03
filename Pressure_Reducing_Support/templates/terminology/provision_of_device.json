@@ -17,7 +17,7 @@
     "name": "Provision of device",
     "title": "Provision of device",
     "status": "active",
-    "publisher": "Mettles",
+    "publisher": "CMS",
     "compose": {
       "include": [
         {

@@ -1,0 +1,30 @@
+{
+    "resourceType": "ValueSet",
+    "id": "Pain",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-12-23T00:00:00.000+00:00"
+    },
+    "url": "https://hcpcs.codes/ValueSet/Pain",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:oid:Pain"
+        }
+    ],
+    "version": "1.0",
+    "name": "Pain",
+    "title": "Pain",
+    "status": "active",
+    "publisher": "CMS",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "concept": [
+                    { "code": "397704003", "display": "Pain sensation, function" }
+                ]
+            }
+        ]
+    }
+}

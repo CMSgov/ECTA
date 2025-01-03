@@ -1,0 +1,36 @@
+{
+    "resourceType": "ValueSet",
+    "id": "Group3Codes",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-12-23T00:00:00.000+00:00"
+    },
+    "url": "https://hcpcs.codes/ValueSet/Group3Codes",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:oid:Group3Codes"
+        }
+    ],
+    "version": "1.0",
+    "name": "Group3Codes",
+    "title": "Group 3 Codes",
+    "status": "active",
+    "publisher": "CMS",
+    "compose": {
+        "include": [
+            {
+                "system": "https://hcpcs.codes/",
+                "concept": [
+                    { "code": "E0194", "display": "Group 3 - Air fluidized bed" }
+                ]
+            },
+            {
+                "system": "https://www.aapc.com/resources/medical-coding/cpt.aspx",
+                "concept": [
+                    { "code": "E0194", "display": "Group 3 - Air fluidized bed" }
+                ]
+            }
+        ]
+    }
+}

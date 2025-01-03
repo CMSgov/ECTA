@@ -17,7 +17,7 @@
     "name": "Patient Turning and Repositioning",
     "title": "Patient Turning and Repositioning",
     "status": "active",
-    "publisher": "Mettles",
+    "publisher": "CMS",
     "compose": {
         "include": [
             {

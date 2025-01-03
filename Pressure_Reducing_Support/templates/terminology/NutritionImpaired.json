@@ -1,0 +1,30 @@
+{
+    "resourceType": "ValueSet",
+    "id": "NutritionImpaired",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-12-23T00:00:00.000+00:00"
+    },
+    "url": "https://hcpcs.codes/ValueSet/NutritionImpaired",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:oid:NutritionImpaired"
+        }
+    ],
+    "version": "1.0",
+    "name": "NutritionImpaired",
+    "title": "Nutrition Impaired",
+    "status": "active",
+    "publisher": "CMS",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "concept": [
+                    { "code": "445261000124106", "display": "Nutrition impaired" }
+                ]
+            }
+        ]
+    }
+}

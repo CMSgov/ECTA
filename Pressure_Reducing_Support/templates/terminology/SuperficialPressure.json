@@ -1,0 +1,30 @@
+{
+    "resourceType": "ValueSet",
+    "id": "SuperficialPressure",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-12-23T00:00:00.000+00:00"
+    },
+    "url": "https://hcpcs.codes/ValueSet/SuperficialPressure",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:oid:SuperficialPressure"
+        }
+    ],
+    "version": "1.0",
+    "name": "SuperficialPressure",
+    "title": "Superficial Pressure",
+    "status": "active",
+    "publisher": "CMS",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "concept": [
+                    { "code": "397623002", "display": "Ability to sense pressure" }
+                ]
+            }
+        ]
+    }
+}

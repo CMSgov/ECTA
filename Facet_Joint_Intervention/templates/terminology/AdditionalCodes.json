@@ -1,0 +1,82 @@
+{
+    "resourceType": "ValueSet",
+    "id": "AdditonalCodes",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2024-12-23T00:00:00.000+00:00"
+    },
+    "url": "<FHIR-server>/ValueSet/AdditonalCodes",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:oid:AdditonalCodes"
+        }
+    ],
+    "version": "1.0",
+    "name": "AdditonalCodes",
+    "title": "Additonal Codes",
+    "status": "active",
+    "publisher": "CMS",
+    "compose": {
+        "include": [
+            {
+                "system": "http://www.ama-assn.org/go/cpt",
+                "concept": [
+                    {
+                        "code": "64491",
+                        "display": "Inj paravert f jnt c/t 2 lev"
+                    },
+                    {
+                        "code": "64492",
+                        "display": "Inj paravert f jnt c/t 3 lev"
+                    },
+                    {
+                        "code": "64494",
+                        "display": "Inj paravert f jnt l/s 2 lev"
+                    },
+                    {
+                        "code": "64495",
+                        "display": "Inj paravert f jnt l/s 3 lev"
+                    },
+                    {
+                        "code": "64634",
+                        "display": "Destroy c/th facet jnt addl​"
+                    },
+                    {
+                        "code": "64636",
+                        "display": "Destroy l/s facet jnt addl​​"
+                    }
+                ]
+            },
+            {
+                "system": "https://hcpcs.codes/",
+                "concept": [
+                    {
+                        "code": "64491",
+                        "display": "Inj paravert f jnt c/t 2 lev"
+                    },
+                    {
+                        "code": "64492",
+                        "display": "Inj paravert f jnt c/t 3 lev"
+                    },
+                    {
+                        "code": "64494",
+                        "display": "Inj paravert f jnt l/s 2 lev"
+                    },
+                    {
+                        "code": "64495",
+                        "display": "Inj paravert f jnt l/s 3 lev"
+                    },
+                    {
+                        "code": "64634",
+                        "display": "Destroy c/th facet jnt addl​"
+                    },
+                    {
+                        "code": "64636",
+                        "display": "Destroy l/s facet jnt addl​​"
+                    }
+                ]
+            }
+        ]
+    }
+}
