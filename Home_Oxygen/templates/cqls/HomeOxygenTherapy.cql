@@ -726,7 +726,9 @@ define RecurringCHFCorPulmonaleResource:
 define PatientDiagnoses:
 {
   if "COPDResource" is not null
-   then 'COPD' else null,
+   then 'COPD' else null,  
+  if "OSA" is not null
+  then 'Obstructive sleep apnea' else null,
   if "BronchiectasisResource" is not null
   then 'Bronchiectasis' else null,
   if "HypoxemiaResource" is not null
