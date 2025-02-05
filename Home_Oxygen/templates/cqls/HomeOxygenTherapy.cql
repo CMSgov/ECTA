@@ -424,6 +424,7 @@ define HypoxemiaSymptomsResource:
 define HypoxemiaSymptoms:
   if "HypoxemiaSymptomsResource" is not null
   then true
+  else if (NocturnalOximetryO2SAT.value < 89) or (NocturnalOximetryPO2.value < 89) then true
   else if exists([Condition] P
       where exists ( P.code.coding P
           where P in "Hypoxemia")
@@ -552,6 +553,10 @@ define NocturnalOximetryPO2WithOxygenResource:
 
 define NocturnalOximetryPO2WithOxygen:
   FHIRHelpers.ToQuantity ( "NocturnalOximetryPO2WithOxygenResource".value )
+
+
+define ImprovementWithTherapy:
+  if (NocturnalOximetryO2SATWithOxygen.value > 89) or (NocturnalOximetryPO2WithOxygen.value > 89) then true else true
 
 define TestingDate:
   start of "Normalize Interval"("PulseOximetry".performed)
