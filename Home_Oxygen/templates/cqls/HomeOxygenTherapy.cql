@@ -421,18 +421,6 @@ define HypoxemiaSymptomsResource:
           and First(P.clinicalStatus.coding).code.value = 'active'
           and First(P.verificationStatus.coding).code.value = 'confirmed')
 
-define HypoxemiaSymptoms:
-  if "HypoxemiaSymptomsResource" is not null
-  then true
-  else if (NocturnalOximetryO2SAT.value < 89) or (NocturnalOximetryPO2.value < 89) then true
-  else if exists([Condition] P
-      where exists ( P.code.coding P
-          where P in "Hypoxemia")
-          and (First(P.clinicalStatus.coding).code.value != 'active'
-          or First(P.verificationStatus.coding).code.value != 'confirmed'))
-  then false
-  else null
-
 // Other codes
 
 define function "GetId"(uri String):
@@ -554,9 +542,25 @@ define NocturnalOximetryPO2WithOxygenResource:
 define NocturnalOximetryPO2WithOxygen:
   FHIRHelpers.ToQuantity ( "NocturnalOximetryPO2WithOxygenResource".value )
 
-
 define ImprovementWithTherapy:
-  if (NocturnalOximetryO2SATWithOxygen.value > 89) or (NocturnalOximetryPO2WithOxygen.value > 89) then true else true
+  if "NocturnalOximetryO2SATWithOxygen".value > 89 then true
+  else if "NocturnalOximetryPO2WithOxygen".value > 89 then true 
+  else false
+
+
+define HypoxemiaSymptoms:
+  if "HypoxemiaSymptomsResource" is not null
+  then true
+  else if "NocturnalOximetryO2SAT".value < 89 then true
+  else if "NocturnalOximetryPO2".value < 89 then true
+  else if exists([Condition] P
+      where exists ( P.code.coding P
+          where P in "Hypoxemia")
+          and (First(P.clinicalStatus.coding).code.value != 'active'
+          or First(P.verificationStatus.coding).code.value != 'confirmed'))
+  then false
+  else null
+
 
 define TestingDate:
   start of "Normalize Interval"("PulseOximetry".performed)
