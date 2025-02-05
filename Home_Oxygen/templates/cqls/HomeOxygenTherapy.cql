@@ -1011,7 +1011,7 @@ define "GeneralSymptoms":
   then 'chills' 
     else if "NightSweatsResource" is not null 
   then 'night sweats / diaphoresi' 
-    else 'Other'
+    else 'None'
 
 define PainOnNeckMovementResource:
   First( [Condition] P
