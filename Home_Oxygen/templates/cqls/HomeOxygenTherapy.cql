@@ -833,6 +833,13 @@ define NocturnalRestlessness:
   then false
   else null
 
+define Nocturnalanswer:
+  { ( if ( "ToCode"(First("NocturnalRestlessnessResource".code.coding)) = "Morning headache (finding)" ) then 'Morning headache' 
+      else ''
+    ), ( if ( "ToCode"(First("NocturnalRestlessnessResource".code.coding)) = "Restlessness and agitation" ) then 'Nocturnal restlessness' 
+      else ''
+    )
+  }
 
 define NocturnalOximetryResource:
   First([Procedure] P 
