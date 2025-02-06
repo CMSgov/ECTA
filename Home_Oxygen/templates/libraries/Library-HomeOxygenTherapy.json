@@ -704,11 +704,6 @@
               "path": "code",
               "code":[
                 {
-                    "system": "http://snomed.info/sct",
-                    "code": "441361000124104",
-                    "display": "Unintentional weight gain (finding)"
-                },
-                {
                   "system": "http://snomed.info/sct",
                   "code": "448765001",
                   "display": "Unintentional weight loss (finding)"
@@ -732,11 +727,6 @@
                   "system": "http://snomed.info/sct",
                   "code": "271652003",
                   "display": "Varicose vein finding (finding)"
-                },
-                {
-                  "system": "http://snomed.info/sct",
-                  "code": "162310002",
-                  "display": "Morning headache (finding)"
                 },
                 {
                   "system": "http://snomed.info/sct",
@@ -1150,6 +1140,16 @@
             {
               "path": "code",
               "code":[
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "441361000124104",
+                  "display": "Unintentional weight gain (finding)"
+                },
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "162310002",
+                  "display": "Morning headache (finding)"
+                },
                 {
                   "system": "http://loinc.org",
                   "code": "32354-3",
