@@ -34,7 +34,7 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
-                "expression": "DeviceRequestDescription"
+                "expression": "H_O_DeviceRequestDescription"
               }
             }
           ],
@@ -49,7 +49,7 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
-                "expression": "DeviceRequestCode"
+                "expression": "H_O_DeviceRequestCode"
               }
             }
           ],
@@ -64,7 +64,7 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
-                "expression": "DeviceOrderId"
+                "expression": "H_O_DeviceRequestId"
               }
             }
           ],
@@ -79,7 +79,7 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
-                "expression": "OrderingPhysicianNPI"
+                "expression": "H_O_OrderingPractitionerNPI"
               }
             }
           ],
@@ -101,19 +101,14 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
-                "expression": "InpatientHospitalStay"
+                "expression": "H_O_Encounter_InpatientStay"
               }
             }
           ],
           "linkId": "2.2",
           "text": "Is this encounter an inpatient hospital stay?",
           "type": "boolean",
-          "required": false,
-          "initial": [
-            {
-              "valueBoolean": false
-            }
-          ]
+          "required": false
         },
         {
           "extension": [
@@ -158,6 +153,15 @@
           "required": false
         },
         {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "BloodGasStudyLocation"
+              }
+            }
+          ],
           "enableWhen": [
             {
               "operator": "=",
@@ -289,7 +293,7 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
-                "expression": "inaccurracy"
+                "expression": "IsABGPOInaccuracy"
               }
             }
           ],
@@ -309,7 +313,7 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
-                "expression": "inaccurracyanswer"
+                "expression": "ABGPOInaccuracyReason"
               }
             }
           ],
@@ -360,15 +364,6 @@
          
         },
         {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "OtherABG"
-              }
-            }
-          ],
           "enableWhen": [
             {
               "operator": "=",
@@ -395,7 +390,7 @@
             }
           ],
           "linkId": "3.4",
-          "text": "Does patient have symptoms of Hypoxemia ? ",
+          "text": "Does patient have symptoms of Hypoxemia ?",
           "type": "boolean",
           "required": false,
           "initial": [
@@ -410,7 +405,7 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
-                "expression": "ExertionalHypoxia"
+                "expression": "PresenceOfExertionalHypoxia"
               }
             }
           ],
@@ -457,7 +452,7 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
-                "expression": "NocturnalRestlessness"
+                "expression": "PresenceOfNocturnalSymptoms"
               }
             }
           ],
@@ -477,7 +472,7 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
-                "expression": "Nocturnalanswer"
+                "expression": "NocturnalSymptomsAnswer"
               }
             }
           ],
@@ -527,15 +522,6 @@
           "repeats":true
         },
         {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "sufferother"
-              }
-            }
-          ],
           "enableWhen": [
             {
               "operator": "=",
@@ -596,17 +582,7 @@
             }
           ]
         },
-        
         {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "PresenceOfPAP"
-              }
-            }
-          ],
           "enableWhen": [
             {
               "operator": "=",
@@ -625,6 +601,15 @@
           ]
         },
         {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "PresenceOfPAP"
+              }
+            }
+          ],
           "enableWhen": [
             {
               "operator": "=",
@@ -670,6 +655,15 @@
           ]
         },
         {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "BloodGasStudyAt4LPMOrHigher"
+              }
+            }
+          ],
           "linkId": "4.0.1",
           "text": "Was the qualifying blood gas study performed on 4LPM or higher",
           "type": "boolean",
@@ -693,7 +687,7 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
-                "expression": "ArterialOxygenSaturation"
+                "expression": "ArterialO2SatAtRest"
               }
             }
           ],
@@ -715,7 +709,7 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
-                "expression": "ArterialPO2"
+                "expression": "ArterialPO2AtRest"
               }
             }
           ],
@@ -737,7 +731,7 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
-                "expression": "ArterialOxygenSaturationExercise"
+                "expression": "ArterialO2SatDuringExercise"
               }
             }
           ],
@@ -759,7 +753,7 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
-                "expression": "ArterialPO2Exercise"
+                "expression": "ArterialPO2DuringExercise"
               }
             }
           ],
@@ -781,7 +775,7 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
-                "expression": "ArterialOxygenSaturationExerciseWithOxygen"
+                "expression": "ArterialO2SatWithO2DuringExcercise"
               }
             }
           ],
@@ -803,7 +797,7 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
-                "expression": "ArterialPO2ExerciseWithOxygen"
+                "expression": "ArterialPO2DuringExerciseWithO2"
               }
             }
           ],
@@ -862,7 +856,7 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
-                "expression": "NocturnalOximetryO2SAT"
+                "expression": "NocturnalO2SatAtRest"
               }
             }
           ],
@@ -884,7 +878,7 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
-                "expression": "NocturnalOximetryPO2"
+                "expression": "NocturnalPO2AtRest"
               }
             }
           ],
@@ -906,7 +900,7 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
-                "expression": "NocturnalOximetryO2SATWithOxygen"
+                "expression": "NocturnalO2SatWithO2AtRest"
               }
             }
           ],
@@ -927,7 +921,7 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
-                "expression": "NocturnalOximetryPO2WithOxygen"
+                "expression": "NocturnalPO2WithOxygen"
               }
             }
           ],
@@ -955,7 +949,7 @@
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
               "valueExpression": {
                 "language": "text/cql",
-                "expression": "PatientDiagnoses"
+                "expression": "PrimaryDiagnosis"
               }
             }
           ],
@@ -1267,7 +1261,7 @@
             {
               "valueCoding": {
                 "code": "Angina pectoris",
-                "display": "Angina pectoris in the absence of hypoxemia. "
+                "display": "Angina pectoris in the absence of hypoxemia."
               }
             },
             {
@@ -2787,12 +2781,30 @@
           "required": true
         },
         {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "BloodGasStudyTestedLPM"
+              }
+            }
+          ],
           "linkId": "maximum-flow-rate",
           "text": "Maximum Flow Rate (LPM)",
           "type": "decimal",
           "required": true 
         },
         {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "BloodGasStudyTestedLPM"
+              }
+            }
+          ],
           "linkId": "minimum-flow-rate",
           "text": "Minimum Flow Rate (LPM)",
           "type": "decimal",
@@ -3213,7 +3225,7 @@
           "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
           "valueExpression": {
             "language": "text/cql",
-            "expression": "SubmissionDate"
+            "expression": "H_O_QuestionnaireSubmissionDate"
           }
         }
       ]

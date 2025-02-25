@@ -705,6 +705,16 @@
               "code":[
                 {
                   "system": "http://snomed.info/sct",
+                  "code": "161939006",
+                  "display": "Breathless - moderate exertion (finding)"
+                },
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "441361000124104",
+                  "display": "Unintentional weight gain (finding)"
+                },
+                {
+                  "system": "http://snomed.info/sct",
                   "code": "448765001",
                   "display": "Unintentional weight loss (finding)"
                 },
@@ -732,11 +742,6 @@
                   "system": "http://snomed.info/sct",
                   "code": "161940008",
                   "display": "Breathless - mild exertion (finding)"
-                },
-                {
-                  "system": "http://hl7.org/fhir/sid/icd-10-cm",
-                  "code": "R45.1",
-                  "display": "Restlessness and agitation"
                 },
                 {
                   "system": "http://snomed.info/sct",
@@ -864,11 +869,6 @@
                   "display": "Lipids abnormal"
                 },
                 {
-                  "system": "http://loinc.org",
-                  "code": "94996-6",
-                  "display": "Walks indoors - usual functional ability during assessment period [CMS Assessment]"
-                },
-                {
                   "system": "http://hl7.org/fhir/sid/icd-10-cm",
                   "code": "I20.9",
                   "display": "Angina pectoris, unspecified"
@@ -899,16 +899,6 @@
                   "display": "Dependent edema (finding)"
                 },
                 {
-                  "system": "http://snomed.info/sct",
-                  "code": "24599003",
-                  "display": "Pulmonary artery pressure monitoring (regime/therapy)"
-                },
-                {
-                  "system": "http://snomed.info/sct",
-                  "code": "400047006",
-                  "display": "Peripheral vascular disease (disorder)"
-                },
-                {
                   "system": "http://hl7.org/fhir/sid/icd-10-cm",
                   "code": "D75.1",
                   "display": "Secondary polycythemia"
@@ -922,11 +912,6 @@
                   "system": "http://snomed.info/sct",
                   "code": "400047006",
                   "display": "Peripheral vascular disease (disorder)"
-                },
-                {
-                  "system": "http://snomed.info/sct",
-                  "code": "373923006",
-                  "display": "Pigmentation of skin or mucosa (finding)"
                 },
                 {
                   "system": "http://snomed.info/sct",
@@ -1008,16 +993,6 @@
               "path": "code",
               "code":[
                 {
-                    "system": "http://www.ama-assn.org/go/cpt",
-                    "code": "78472",
-                    "display": "Cardiac blood pool imaging, gated equilibrium; planar, single study at rest or stress (exercise and/or pharmacologic), wall motion study plus ejection fraction, with or without additional quantitative processing"
-                },
-                {
-                  "system": "http://snomed.info/sct",
-                  "code": "164914003",
-                  "display": "P pulmonale by electrocardiogram"
-                },
-                {
                   "system": "http://snomed.info/sct",
                   "code": "252568001",
                   "display": "Overnight pulse oximetry (procedure)"
@@ -1071,11 +1046,6 @@
                   "system": "http://snomed.info/sct",
                   "code": "447346005",
                   "display": "Cardiopulmonary exercise test (procedure)"
-                },
-                {
-                  "system": "http://snomed.info/sct",
-                  "code": "24599003",
-                  "display": "Pulmonary artery pressure monitoring (regime/therapy)"
                 },
                 {
                   "system": "http://snomed.info/sct",
@@ -1141,9 +1111,34 @@
               "path": "code",
               "code":[
                 {
+                  "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                  "code": "R45.1",
+                  "display": "Restlessness and agitation"
+                },
+                {
                   "system": "http://snomed.info/sct",
-                  "code": "441361000124104",
-                  "display": "Unintentional weight gain (finding)"
+                  "code": "164914003",
+                  "display": "P pulmonale by electrocardiogram"
+                },
+                {
+                    "system": "http://www.ama-assn.org/go/cpt",
+                    "code": "78472",
+                    "display": "Cardiac blood pool imaging, gated equilibrium; planar, single study at rest or stress (exercise and/or pharmacologic), wall motion study plus ejection fraction, with or without additional quantitative processing"
+                },
+                {
+                  "system": "http://loinc.org",
+                  "code": "94996-6",
+                  "display": "Walks indoors - usual functional ability during assessment period [CMS Assessment]"
+                },
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "24599003",
+                  "display": "Pulmonary artery pressure monitoring (regime/therapy)"
+                },
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "373923006",
+                  "display": "Pigmentation of skin or mucosa (finding)"
                 },
                 {
                   "system": "http://snomed.info/sct",
@@ -1269,11 +1264,6 @@
                   "system": "http://snomed.info/sct",
                   "code": "161940008",
                   "display": "Breathless - mild exertion (finding)"
-                },
-                {
-                  "system": "http://snomed.info/sct",
-                  "code": "161939006",
-                  "display": "Breathless - moderate exertion (finding)"
                 }
               ]
             }
