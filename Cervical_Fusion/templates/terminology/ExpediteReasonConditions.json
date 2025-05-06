@@ -1,0 +1,46 @@
+{
+    "resourceType": "ValueSet",
+    "id": "ExpediteReasonConditions",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2025-04-25T09:30:12.000+00:00"
+    },
+    "url": "<FHIR-server>/ValueSet/ExpediteReasonConditions",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:oid:ExpediteReasonConditions"
+        }
+    ],
+    "version": "Latest",
+    "name": "ExpediteReasonConditions",
+    "title": "Expedite Reason Conditions",
+    "status": "active",
+    "publisher": "CMS",
+    "compose": {
+        "include": [
+            {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "version": "2022-09",
+                "concept": [
+                    {
+                        "code": "M53.2",
+                        "display": "Spinal instability that places spinal cord at risk."
+                    }
+                ]
+            },
+            {
+                "concept": [
+                    {
+                        "code": "Acute injury that places beneficiary at risk for permanent damage.",
+                        "display": "Acute injury that places beneficiary at risk for permanent damage."
+                    },
+                    {
+                        "code": "Rapid worsening of symptoms specific to compression of nerve and/or spinal cord.",
+                        "display": "Rapid worsening of symptoms specific to compression of nerve and/or spinal cord."
+                    }
+                ]
+            }
+        ]
+    }
+}

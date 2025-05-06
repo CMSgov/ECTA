@@ -1,0 +1,1917 @@
+{
+    "resourceType": "ValueSet",
+    "id": "DecompressionOrStabilizationOfCervicalSpineConditions",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2025-04-25T00:00:00.000+00:00"
+    },
+    "url": "<FHIR-server>/ValueSet/DecompressionOrStabilizationOfCervicalSpineConditions",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:oid:DecompressionOrStabilizationOfCervicalSpineConditions"
+        }
+    ],
+    "version": "1.0",
+    "name": "DecompressionOrStabilizationOfCervicalSpineConditions",
+    "title": "Decompression or Stabilization of Cervical Spine Conditions",
+    "status": "active",
+    "publisher": "CMS",
+    "compose": {
+        "include": [
+            {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "concept": [
+                    {
+                        "code": "M48.31",
+                        "display": "Traumatic spondylopathy, occipito-atlanto-axial region"
+                    },
+                    {
+                        "code": "M48.32",
+                        "display": "Traumatic spondylopathy, cervical region"
+                    },
+                    {
+                        "code": "M48.33",
+                        "display": "Traumatic spondylopathy, cervicothoracic region"
+                    },
+                    {
+                        "code": "M48.42XA",
+                        "display": "Fatigue fracture of vertebra, cervical region, initial encounter for fracture"
+                    },
+                    {
+                        "code": "M48.42XD",
+                        "display": "Fatigue fracture of vertebra, cervical region, subsequent encounter for fracture with routine healing"
+                    },
+                    {
+                        "code": "M48.42XG",
+                        "display": "Fatigue fracture of vertebra, cervical region, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "M48.43XA",
+                        "display": "Fatigue fracture of vertebra, cervicothoracic region, initial encounter for fracture"
+                    },
+                    {
+                        "code": "M48.43XG",
+                        "display": "Fatigue fracture of vertebra, cervicothoracic region, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "M48.43XS",
+                        "display": "Fatigue fracture of vertebra, cervicothoracic region, sequela of fracture"
+                    },
+                    {
+                        "code": "M48.51XA",
+                        "display": "Collapsed vertebra, not elsewhere classified, occipito-atlanto-axial region, initial encounter for fracture"
+                    },
+                    {
+                        "code": "M48.51XG",
+                        "display": "Collapsed vertebra, not elsewhere classified, occipito-atlanto-axial region, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "M48.51XS",
+                        "display": "Collapsed vertebra, not elsewhere classified, occipito-atlanto-axial region, sequela of fracture"
+                    },
+                    {
+                        "code": "M48.52XA",
+                        "display": "Collapsed vertebra, not elsewhere classified, cervical region, initial encounter for fracture"
+                    },
+                    {
+                        "code": "M48.52XG",
+                        "display": "Collapsed vertebra, not elsewhere classified, cervical region, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "M48.52XS",
+                        "display": "Collapsed vertebra, not elsewhere classified, cervical region, sequela of fracture"
+                    },
+                    {
+                        "code": "M48.53XA",
+                        "display": "Collapsed vertebra, not elsewhere classified, cervicothoracic region, initial encounter for fracture"
+                    },
+                    {
+                        "code": "M48.53XG",
+                        "display": "Collapsed vertebra, not elsewhere classified, cervicothoracic region, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.000A",
+                        "display": "Unspecified displaced fracture of first cervical vertebra, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.000B",
+                        "display": "Unspecified displaced fracture of first cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.000D",
+                        "display": "Unspecified displaced fracture of first cervical vertebra, subsequent encounter for fracture with routine healing"
+                    },
+                    {
+                        "code": "S12.000G",
+                        "display": "Unspecified displaced fracture of first cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.000K",
+                        "display": "Unspecified displaced fracture of first cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.000S",
+                        "display": "Unspecified displaced fracture of first cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.001A",
+                        "display": "Unspecified nondisplaced fracture of first cervical vertebra, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.001B",
+                        "display": "Unspecified nondisplaced fracture of first cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.001D",
+                        "display": "Unspecified nondisplaced fracture of first cervical vertebra, subsequent encounter for fracture with routine healing"
+                    },
+                    {
+                        "code": "S12.001G",
+                        "display": "Unspecified nondisplaced fracture of first cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.001K",
+                        "display": "Unspecified nondisplaced fracture of first cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.001S",
+                        "display": "Unspecified nondisplaced fracture of first cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.01XB",
+                        "display": "Stable burst fracture of first cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.01XG",
+                        "display": "Stable burst fracture of first cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.01XK",
+                        "display": "Stable burst fracture of first cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.01XS",
+                        "display": "Stable burst fracture of first cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.02XA",
+                        "display": "Unstable burst fracture of first cervical vertebra, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.02XB",
+                        "display": "Unstable burst fracture of first cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.02XD",
+                        "display": "Unstable burst fracture of first cervical vertebra, subsequent encounter for fracture with routine healing"
+                    },
+                    {
+                        "code": "S12.02XG",
+                        "display": "Unstable burst fracture of first cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.02XK",
+                        "display": "Unstable burst fracture of first cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.02XS",
+                        "display": "Unstable burst fracture of first cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.030A",
+                        "display": "Displaced posterior arch fracture of first cervical vertebra, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.030B",
+                        "display": "Displaced posterior arch fracture of first cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.030D",
+                        "display": "Displaced posterior arch fracture of first cervical vertebra, subsequent encounter for fracture with routine healing"
+                    },
+                    {
+                        "code": "S12.030G",
+                        "display": "Displaced posterior arch fracture of first cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.030K",
+                        "display": "Displaced posterior arch fracture of first cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.030S",
+                        "display": "Displaced posterior arch fracture of first cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.031B",
+                        "display": "Nondisplaced posterior arch fracture of first cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.031G",
+                        "display": "Nondisplaced posterior arch fracture of first cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.031K",
+                        "display": "Nondisplaced posterior arch fracture of first cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.031S",
+                        "display": "Nondisplaced posterior arch fracture of first cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.040A",
+                        "display": "Displaced lateral mass fracture of first cervical vertebra, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.040B",
+                        "display": "Displaced lateral mass fracture of first cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.040D",
+                        "display": "Displaced lateral mass fracture of first cervical vertebra, subsequent encounter for fracture with routine healing"
+                    },
+                    {
+                        "code": "S12.040G",
+                        "display": "Displaced lateral mass fracture of first cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.040K",
+                        "display": "Displaced lateral mass fracture of first cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.040S",
+                        "display": "Displaced lateral mass fracture of first cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.041B",
+                        "display": "Nondisplaced lateral mass fracture of first cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.041G",
+                        "display": "Nondisplaced lateral mass fracture of first cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.041K",
+                        "display": "Nondisplaced lateral mass fracture of first cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.041S",
+                        "display": "Nondisplaced lateral mass fracture of first cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.090A",
+                        "display": "Other displaced fracture of first cervical vertebra, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.090B",
+                        "display": "Other displaced fracture of first cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.090G",
+                        "display": "Other displaced fracture of first cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.090K",
+                        "display": "Other displaced fracture of first cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.090S",
+                        "display": "Other displaced fracture of first cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.091A",
+                        "display": "Other nondisplaced fracture of first cervical vertebra, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.091B",
+                        "display": "Other nondisplaced fracture of first cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.091G",
+                        "display": "Other nondisplaced fracture of first cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.091K",
+                        "display": "Other nondisplaced fracture of first cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.091S",
+                        "display": "Other nondisplaced fracture of first cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.100A",
+                        "display": "Unspecified displaced fracture of second cervical vertebra, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.100B",
+                        "display": "Unspecified displaced fracture of second cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.100D",
+                        "display": "Unspecified displaced fracture of second cervical vertebra, subsequent encounter for fracture with routine healing"
+                    },
+                    {
+                        "code": "S12.100G",
+                        "display": "Unspecified displaced fracture of second cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.100K",
+                        "display": "Unspecified displaced fracture of second cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.100S",
+                        "display": "Unspecified displaced fracture of second cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.101B",
+                        "display": "Unspecified nondisplaced fracture of second cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.101G",
+                        "display": "Unspecified nondisplaced fracture of second cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.101K",
+                        "display": "Unspecified nondisplaced fracture of second cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.101S",
+                        "display": "Unspecified nondisplaced fracture of second cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.110A",
+                        "display": "Anterior displaced Type II dens fracture, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.110B",
+                        "display": "Anterior displaced Type II dens fracture, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.110G",
+                        "display": "Anterior displaced Type II dens fracture, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.110K",
+                        "display": "Anterior displaced Type II dens fracture, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.110S",
+                        "display": "Anterior displaced Type II dens fracture, sequela"
+                    },
+                    {
+                        "code": "S12.111A",
+                        "display": "Posterior displaced Type II dens fracture, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.111B",
+                        "display": "Posterior displaced Type II dens fracture, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.111G",
+                        "display": "Posterior displaced Type II dens fracture, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.111K",
+                        "display": "Posterior displaced Type II dens fracture, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.111S",
+                        "display": "Posterior displaced Type II dens fracture, sequela"
+                    },
+                    {
+                        "code": "S12.120A",
+                        "display": "Other displaced dens fracture, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.120B",
+                        "display": "Other displaced dens fracture, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.120G",
+                        "display": "Other displaced dens fracture, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.120K",
+                        "display": "Other displaced dens fracture, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.120S",
+                        "display": "Other displaced dens fracture, sequela"
+                    },
+                    {
+                        "code": "S12.130A",
+                        "display": "Unspecified traumatic displaced spondylolisthesis of second cervical vertebra, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.130B",
+                        "display": "Unspecified traumatic displaced spondylolisthesis of second cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.130D",
+                        "display": "Unspecified traumatic displaced spondylolisthesis of second cervical vertebra, subsequent encounter for fracture with routine healing"
+                    },
+                    {
+                        "code": "S12.130G",
+                        "display": "Unspecified traumatic displaced spondylolisthesis of second cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.130K",
+                        "display": "Unspecified traumatic displaced spondylolisthesis of second cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.130S",
+                        "display": "Unspecified traumatic displaced spondylolisthesis of second cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.131A",
+                        "display": "Unspecified traumatic nondisplaced spondylolisthesis of second cervical vertebra, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.131B",
+                        "display": "Unspecified traumatic nondisplaced spondylolisthesis of second cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.131G",
+                        "display": "Unspecified traumatic nondisplaced spondylolisthesis of second cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.131K",
+                        "display": "Unspecified traumatic nondisplaced spondylolisthesis of second cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.131S",
+                        "display": "Unspecified traumatic nondisplaced spondylolisthesis of second cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.14XA",
+                        "display": "Type III traumatic spondylolisthesis of second cervical vertebra, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.14XB",
+                        "display": "Type III traumatic spondylolisthesis of second cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.14XD",
+                        "display": "Type III traumatic spondylolisthesis of second cervical vertebra, subsequent encounter for fracture with routine healing"
+                    },
+                    {
+                        "code": "S12.14XG",
+                        "display": "Type III traumatic spondylolisthesis of second cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.14XK",
+                        "display": "Type III traumatic spondylolisthesis of second cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.14XS",
+                        "display": "Type III traumatic spondylolisthesis of second cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.150A",
+                        "display": "Other traumatic displaced spondylolisthesis of second cervical vertebra, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.150B",
+                        "display": "Other traumatic displaced spondylolisthesis of second cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.150D",
+                        "display": "Other traumatic displaced spondylolisthesis of second cervical vertebra, subsequent encounter for fracture with routine healing"
+                    },
+                    {
+                        "code": "S12.150G",
+                        "display": "Other traumatic displaced spondylolisthesis of second cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.150K",
+                        "display": "Other traumatic displaced spondylolisthesis of second cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.150S",
+                        "display": "Other traumatic displaced spondylolisthesis of second cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.151A",
+                        "display": "Other traumatic nondisplaced spondylolisthesis of second cervical vertebra, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.151B",
+                        "display": "Other traumatic nondisplaced spondylolisthesis of second cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.151D",
+                        "display": "Other traumatic nondisplaced spondylolisthesis of second cervical vertebra, subsequent encounter for fracture with routine healing"
+                    },
+                    {
+                        "code": "S12.151G",
+                        "display": "Other traumatic nondisplaced spondylolisthesis of second cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.151K",
+                        "display": "Other traumatic nondisplaced spondylolisthesis of second cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.151S",
+                        "display": "Other traumatic nondisplaced spondylolisthesis of second cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.190A",
+                        "display": "Other displaced fracture of second cervical vertebra, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.190B",
+                        "display": "Other displaced fracture of second cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.190D",
+                        "display": "Other displaced fracture of second cervical vertebra, subsequent encounter for fracture with routine healing"
+                    },
+                    {
+                        "code": "S12.190G",
+                        "display": "Other displaced fracture of second cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.190K",
+                        "display": "Other displaced fracture of second cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.190S",
+                        "display": "Other displaced fracture of second cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.191B",
+                        "display": "Other nondisplaced fracture of second cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.191G",
+                        "display": "Other nondisplaced fracture of second cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.191K",
+                        "display": "Other nondisplaced fracture of second cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.191S",
+                        "display": "Other nondisplaced fracture of second cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.200A",
+                        "display": "Unspecified displaced fracture of third cervical vertebra, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.200B",
+                        "display": "Unspecified displaced fracture of third cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.200D",
+                        "display": "Unspecified displaced fracture of third cervical vertebra, subsequent encounter for fracture with routine healing"
+                    },
+                    {
+                        "code": "S12.200G",
+                        "display": "Unspecified displaced fracture of third cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.200K",
+                        "display": "Unspecified displaced fracture of third cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.200S",
+                        "display": "Unspecified displaced fracture of third cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.201A",
+                        "display": "Unspecified nondisplaced fracture of third cervical vertebra, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.201B",
+                        "display": "Unspecified nondisplaced fracture of third cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.201D",
+                        "display": "Unspecified nondisplaced fracture of third cervical vertebra, subsequent encounter for fracture with routine healing"
+                    },
+                    {
+                        "code": "S12.201G",
+                        "display": "Unspecified nondisplaced fracture of third cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.201K",
+                        "display": "Unspecified nondisplaced fracture of third cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.201S",
+                        "display": "Unspecified nondisplaced fracture of third cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.230A",
+                        "display": "Unspecified traumatic displaced spondylolisthesis of third cervical vertebra, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.230B",
+                        "display": "Unspecified traumatic displaced spondylolisthesis of third cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.230D",
+                        "display": "Unspecified traumatic displaced spondylolisthesis of third cervical vertebra, subsequent encounter for fracture with routine healing"
+                    },
+                    {
+                        "code": "S12.230G",
+                        "display": "Unspecified traumatic displaced spondylolisthesis of third cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.230K",
+                        "display": "Unspecified traumatic displaced spondylolisthesis of third cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.230S",
+                        "display": "Unspecified traumatic displaced spondylolisthesis of third cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.231B",
+                        "display": "Unspecified traumatic nondisplaced spondylolisthesis of third cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.231G",
+                        "display": "Unspecified traumatic nondisplaced spondylolisthesis of third cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.231K",
+                        "display": "Unspecified traumatic nondisplaced spondylolisthesis of third cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.231S",
+                        "display": "Unspecified traumatic nondisplaced spondylolisthesis of third cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.24XA",
+                        "display": "Type III traumatic spondylolisthesis of third cervical vertebra, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.24XB",
+                        "display": "Type III traumatic spondylolisthesis of third cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.24XG",
+                        "display": "Type III traumatic spondylolisthesis of third cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.24XK",
+                        "display": "Type III traumatic spondylolisthesis of third cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.24XS",
+                        "display": "Type III traumatic spondylolisthesis of third cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.250A",
+                        "display": "Other traumatic displaced spondylolisthesis of third cervical vertebra, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.250B",
+                        "display": "Other traumatic displaced spondylolisthesis of third cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.250D",
+                        "display": "Other traumatic displaced spondylolisthesis of third cervical vertebra, subsequent encounter for fracture with routine healing"
+                    },
+                    {
+                        "code": "S12.250G",
+                        "display": "Other traumatic displaced spondylolisthesis of third cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.250K",
+                        "display": "Other traumatic displaced spondylolisthesis of third cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.250S",
+                        "display": "Other traumatic displaced spondylolisthesis of third cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.251A",
+                        "display": "Other traumatic nondisplaced spondylolisthesis of third cervical vertebra, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.251B",
+                        "display": "Other traumatic nondisplaced spondylolisthesis of third cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.251D",
+                        "display": "Other traumatic nondisplaced spondylolisthesis of third cervical vertebra, subsequent encounter for fracture with routine healing"
+                    },
+                    {
+                        "code": "S12.251G",
+                        "display": "Other traumatic nondisplaced spondylolisthesis of third cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.251K",
+                        "display": "Other traumatic nondisplaced spondylolisthesis of third cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.251S",
+                        "display": "Other traumatic nondisplaced spondylolisthesis of third cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.290A",
+                        "display": "Other displaced fracture of third cervical vertebra, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.290B",
+                        "display": "Other displaced fracture of third cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.290D",
+                        "display": "Other displaced fracture of third cervical vertebra, subsequent encounter for fracture with routine healing"
+                    },
+                    {
+                        "code": "S12.290G",
+                        "display": "Other displaced fracture of third cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.290K",
+                        "display": "Other displaced fracture of third cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.290S",
+                        "display": "Other displaced fracture of third cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.291A",
+                        "display": "Other nondisplaced fracture of third cervical vertebra, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.291B",
+                        "display": "Other nondisplaced fracture of third cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.291D",
+                        "display": "Other nondisplaced fracture of third cervical vertebra, subsequent encounter for fracture with routine healing"
+                    },
+                    {
+                        "code": "S12.291G",
+                        "display": "Other nondisplaced fracture of third cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.291K",
+                        "display": "Other nondisplaced fracture of third cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.291S",
+                        "display": "Other nondisplaced fracture of third cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.300A",
+                        "display": "Unspecified displaced fracture of fourth cervical vertebra, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.300B",
+                        "display": "Unspecified displaced fracture of fourth cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.300D",
+                        "display": "Unspecified displaced fracture of fourth cervical vertebra, subsequent encounter for fracture with routine healing"
+                    },
+                    {
+                        "code": "S12.300G",
+                        "display": "Unspecified displaced fracture of fourth cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.300K",
+                        "display": "Unspecified displaced fracture of fourth cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.300S",
+                        "display": "Unspecified displaced fracture of fourth cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.301A",
+                        "display": "Unspecified nondisplaced fracture of fourth cervical vertebra, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.301B",
+                        "display": "Unspecified nondisplaced fracture of fourth cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.301D",
+                        "display": "Unspecified nondisplaced fracture of fourth cervical vertebra, subsequent encounter for fracture with routine healing"
+                    },
+                    {
+                        "code": "S12.301G",
+                        "display": "Unspecified nondisplaced fracture of fourth cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.301K",
+                        "display": "Unspecified nondisplaced fracture of fourth cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.301S",
+                        "display": "Unspecified nondisplaced fracture of fourth cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.330A",
+                        "display": "Unspecified traumatic displaced spondylolisthesis of fourth cervical vertebra, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.330B",
+                        "display": "Unspecified traumatic displaced spondylolisthesis of fourth cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.330D",
+                        "display": "Unspecified traumatic displaced spondylolisthesis of fourth cervical vertebra, subsequent encounter for fracture with routine healing"
+                    },
+                    {
+                        "code": "S12.330G",
+                        "display": "Unspecified traumatic displaced spondylolisthesis of fourth cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.330K",
+                        "display": "Unspecified traumatic displaced spondylolisthesis of fourth cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.330S",
+                        "display": "Unspecified traumatic displaced spondylolisthesis of fourth cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.331B",
+                        "display": "Unspecified traumatic nondisplaced spondylolisthesis of fourth cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.331G",
+                        "display": "Unspecified traumatic nondisplaced spondylolisthesis of fourth cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.331K",
+                        "display": "Unspecified traumatic nondisplaced spondylolisthesis of fourth cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.331S",
+                        "display": "Unspecified traumatic nondisplaced spondylolisthesis of fourth cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.34XA",
+                        "display": "Type III traumatic spondylolisthesis of fourth cervical vertebra, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.34XB",
+                        "display": "Type III traumatic spondylolisthesis of fourth cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.34XD",
+                        "display": "Type III traumatic spondylolisthesis of fourth cervical vertebra, subsequent encounter for fracture with routine healing"
+                    },
+                    {
+                        "code": "S12.34XG",
+                        "display": "Type III traumatic spondylolisthesis of fourth cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.34XK",
+                        "display": "Type III traumatic spondylolisthesis of fourth cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.34XS",
+                        "display": "Type III traumatic spondylolisthesis of fourth cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.350A",
+                        "display": "Other traumatic displaced spondylolisthesis of fourth cervical vertebra, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.350B",
+                        "display": "Other traumatic displaced spondylolisthesis of fourth cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.350D",
+                        "display": "Other traumatic displaced spondylolisthesis of fourth cervical vertebra, subsequent encounter for fracture with routine healing"
+                    },
+                    {
+                        "code": "S12.350G",
+                        "display": "Other traumatic displaced spondylolisthesis of fourth cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.350K",
+                        "display": "Other traumatic displaced spondylolisthesis of fourth cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.350S",
+                        "display": "Other traumatic displaced spondylolisthesis of fourth cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.351B",
+                        "display": "Other traumatic nondisplaced spondylolisthesis of fourth cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.351D",
+                        "display": "Other traumatic nondisplaced spondylolisthesis of fourth cervical vertebra, subsequent encounter for fracture with routine healing"
+                    },
+                    {
+                        "code": "S12.351G",
+                        "display": "Other traumatic nondisplaced spondylolisthesis of fourth cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.351K",
+                        "display": "Other traumatic nondisplaced spondylolisthesis of fourth cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.351S",
+                        "display": "Other traumatic nondisplaced spondylolisthesis of fourth cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.390A",
+                        "display": "Other displaced fracture of fourth cervical vertebra, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.390B",
+                        "display": "Other displaced fracture of fourth cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.390D",
+                        "display": "Other displaced fracture of fourth cervical vertebra, subsequent encounter for fracture with routine healing"
+                    },
+                    {
+                        "code": "S12.390G",
+                        "display": "Other displaced fracture of fourth cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.390K",
+                        "display": "Other displaced fracture of fourth cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.390S",
+                        "display": "Other displaced fracture of fourth cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.391B",
+                        "display": "Other nondisplaced fracture of fourth cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.391G",
+                        "display": "Other nondisplaced fracture of fourth cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.391K",
+                        "display": "Other nondisplaced fracture of fourth cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.391S",
+                        "display": "Other nondisplaced fracture of fourth cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.400A",
+                        "display": "Unspecified displaced fracture of fifth cervical vertebra, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.400B",
+                        "display": "Unspecified displaced fracture of fifth cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.400D",
+                        "display": "Unspecified displaced fracture of fifth cervical vertebra, subsequent encounter for fracture with routine healing"
+                    },
+                    {
+                        "code": "S12.400G",
+                        "display": "Unspecified displaced fracture of fifth cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.400K",
+                        "display": "Unspecified displaced fracture of fifth cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.400S",
+                        "display": "Unspecified displaced fracture of fifth cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.401B",
+                        "display": "Unspecified nondisplaced fracture of fifth cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.401D",
+                        "display": "Unspecified nondisplaced fracture of fifth cervical vertebra, subsequent encounter for fracture with routine healing"
+                    },
+                    {
+                        "code": "S12.401G",
+                        "display": "Unspecified nondisplaced fracture of fifth cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.401K",
+                        "display": "Unspecified nondisplaced fracture of fifth cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.401S",
+                        "display": "Unspecified nondisplaced fracture of fifth cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.430A",
+                        "display": "Unspecified traumatic displaced spondylolisthesis of fifth cervical vertebra, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.430B",
+                        "display": "Unspecified traumatic displaced spondylolisthesis of fifth cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.430D",
+                        "display": "Unspecified traumatic displaced spondylolisthesis of fifth cervical vertebra, subsequent encounter for fracture with routine healing"
+                    },
+                    {
+                        "code": "S12.430G",
+                        "display": "Unspecified traumatic displaced spondylolisthesis of fifth cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.430K",
+                        "display": "Unspecified traumatic displaced spondylolisthesis of fifth cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.430S",
+                        "display": "Unspecified traumatic displaced spondylolisthesis of fifth cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.431A",
+                        "display": "Unspecified traumatic nondisplaced spondylolisthesis of fifth cervical vertebra, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.431B",
+                        "display": "Unspecified traumatic nondisplaced spondylolisthesis of fifth cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.431G",
+                        "display": "Unspecified traumatic nondisplaced spondylolisthesis of fifth cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.431K",
+                        "display": "Unspecified traumatic nondisplaced spondylolisthesis of fifth cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.431S",
+                        "display": "Unspecified traumatic nondisplaced spondylolisthesis of fifth cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.44XA",
+                        "display": "Type III traumatic spondylolisthesis of fifth cervical vertebra, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.44XB",
+                        "display": "Type III traumatic spondylolisthesis of fifth cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.44XD",
+                        "display": "Type III traumatic spondylolisthesis of fifth cervical vertebra, subsequent encounter for fracture with routine healing"
+                    },
+                    {
+                        "code": "S12.44XG",
+                        "display": "Type III traumatic spondylolisthesis of fifth cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.44XK",
+                        "display": "Type III traumatic spondylolisthesis of fifth cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.44XS",
+                        "display": "Type III traumatic spondylolisthesis of fifth cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.450A",
+                        "display": "Other traumatic displaced spondylolisthesis of fifth cervical vertebra, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.450B",
+                        "display": "Other traumatic displaced spondylolisthesis of fifth cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.450D",
+                        "display": "Other traumatic displaced spondylolisthesis of fifth cervical vertebra, subsequent encounter for fracture with routine healing"
+                    },
+                    {
+                        "code": "S12.450G",
+                        "display": "Other traumatic displaced spondylolisthesis of fifth cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.450K",
+                        "display": "Other traumatic displaced spondylolisthesis of fifth cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.450S",
+                        "display": "Other traumatic displaced spondylolisthesis of fifth cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.451A",
+                        "display": "Other traumatic nondisplaced spondylolisthesis of fifth cervical vertebra, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.451B",
+                        "display": "Other traumatic nondisplaced spondylolisthesis of fifth cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.451D",
+                        "display": "Other traumatic nondisplaced spondylolisthesis of fifth cervical vertebra, subsequent encounter for fracture with routine healing"
+                    },
+                    {
+                        "code": "S12.451G",
+                        "display": "Other traumatic nondisplaced spondylolisthesis of fifth cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.451K",
+                        "display": "Other traumatic nondisplaced spondylolisthesis of fifth cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.451S",
+                        "display": "Other traumatic nondisplaced spondylolisthesis of fifth cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.490A",
+                        "display": "Other displaced fracture of fifth cervical vertebra, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.490B",
+                        "display": "Other displaced fracture of fifth cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.490D",
+                        "display": "Other displaced fracture of fifth cervical vertebra, subsequent encounter for fracture with routine healing"
+                    },
+                    {
+                        "code": "S12.490G",
+                        "display": "Other displaced fracture of fifth cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.490K",
+                        "display": "Other displaced fracture of fifth cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.490S",
+                        "display": "Other displaced fracture of fifth cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.491A",
+                        "display": "Other nondisplaced fracture of fifth cervical vertebra, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.491B",
+                        "display": "Other nondisplaced fracture of fifth cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.491G",
+                        "display": "Other nondisplaced fracture of fifth cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.491K",
+                        "display": "Other nondisplaced fracture of fifth cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.491S",
+                        "display": "Other nondisplaced fracture of fifth cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.500A",
+                        "display": "Unspecified displaced fracture of sixth cervical vertebra, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.500B",
+                        "display": "Unspecified displaced fracture of sixth cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.500D",
+                        "display": "Unspecified displaced fracture of sixth cervical vertebra, subsequent encounter for fracture with routine healing"
+                    },
+                    {
+                        "code": "S12.500G",
+                        "display": "Unspecified displaced fracture of sixth cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.500K",
+                        "display": "Unspecified displaced fracture of sixth cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.500S",
+                        "display": "Unspecified displaced fracture of sixth cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.501A",
+                        "display": "Unspecified nondisplaced fracture of sixth cervical vertebra, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.501B",
+                        "display": "Unspecified nondisplaced fracture of sixth cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.501G",
+                        "display": "Unspecified nondisplaced fracture of sixth cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.501K",
+                        "display": "Unspecified nondisplaced fracture of sixth cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.501S",
+                        "display": "Unspecified nondisplaced fracture of sixth cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.530A",
+                        "display": "Unspecified traumatic displaced spondylolisthesis of sixth cervical vertebra, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.530B",
+                        "display": "Unspecified traumatic displaced spondylolisthesis of sixth cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.530D",
+                        "display": "Unspecified traumatic displaced spondylolisthesis of sixth cervical vertebra, subsequent encounter for fracture with routine healing"
+                    },
+                    {
+                        "code": "S12.530G",
+                        "display": "Unspecified traumatic displaced spondylolisthesis of sixth cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.530K",
+                        "display": "Unspecified traumatic displaced spondylolisthesis of sixth cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.530S",
+                        "display": "Unspecified traumatic displaced spondylolisthesis of sixth cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.531A",
+                        "display": "Unspecified traumatic nondisplaced spondylolisthesis of sixth cervical vertebra, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.531B",
+                        "display": "Unspecified traumatic nondisplaced spondylolisthesis of sixth cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.531G",
+                        "display": "Unspecified traumatic nondisplaced spondylolisthesis of sixth cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.531K",
+                        "display": "Unspecified traumatic nondisplaced spondylolisthesis of sixth cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.531S",
+                        "display": "Unspecified traumatic nondisplaced spondylolisthesis of sixth cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.54XA",
+                        "display": "Type III traumatic spondylolisthesis of sixth cervical vertebra, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.54XB",
+                        "display": "Type III traumatic spondylolisthesis of sixth cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.54XD",
+                        "display": "Type III traumatic spondylolisthesis of sixth cervical vertebra, subsequent encounter for fracture with routine healing"
+                    },
+                    {
+                        "code": "S12.54XG",
+                        "display": "Type III traumatic spondylolisthesis of sixth cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.54XK",
+                        "display": "Type III traumatic spondylolisthesis of sixth cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.54XS",
+                        "display": "Type III traumatic spondylolisthesis of sixth cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.550A",
+                        "display": "Other traumatic displaced spondylolisthesis of sixth cervical vertebra, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.550B",
+                        "display": "Other traumatic displaced spondylolisthesis of sixth cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.550D",
+                        "display": "Other traumatic displaced spondylolisthesis of sixth cervical vertebra, subsequent encounter for fracture with routine healing"
+                    },
+                    {
+                        "code": "S12.550G",
+                        "display": "Other traumatic displaced spondylolisthesis of sixth cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.550K",
+                        "display": "Other traumatic displaced spondylolisthesis of sixth cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.550S",
+                        "display": "Other traumatic displaced spondylolisthesis of sixth cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.551A",
+                        "display": "Other traumatic nondisplaced spondylolisthesis of sixth cervical vertebra, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.551B",
+                        "display": "Other traumatic nondisplaced spondylolisthesis of sixth cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.551D",
+                        "display": "Other traumatic nondisplaced spondylolisthesis of sixth cervical vertebra, subsequent encounter for fracture with routine healing"
+                    },
+                    {
+                        "code": "S12.551G",
+                        "display": "Other traumatic nondisplaced spondylolisthesis of sixth cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.551K",
+                        "display": "Other traumatic nondisplaced spondylolisthesis of sixth cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.551S",
+                        "display": "Other traumatic nondisplaced spondylolisthesis of sixth cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.590A",
+                        "display": "Other displaced fracture of sixth cervical vertebra, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.590B",
+                        "display": "Other displaced fracture of sixth cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.590D",
+                        "display": "Other displaced fracture of sixth cervical vertebra, subsequent encounter for fracture with routine healing"
+                    },
+                    {
+                        "code": "S12.590G",
+                        "display": "Other displaced fracture of sixth cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.590K",
+                        "display": "Other displaced fracture of sixth cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.590S",
+                        "display": "Other displaced fracture of sixth cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.591B",
+                        "display": "Other nondisplaced fracture of sixth cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.591G",
+                        "display": "Other nondisplaced fracture of sixth cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.591K",
+                        "display": "Other nondisplaced fracture of sixth cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.591S",
+                        "display": "Other nondisplaced fracture of sixth cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.600A",
+                        "display": "Unspecified displaced fracture of seventh cervical vertebra, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.600B",
+                        "display": "Unspecified displaced fracture of seventh cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.600D",
+                        "display": "Unspecified displaced fracture of seventh cervical vertebra, subsequent encounter for fracture with routine healing"
+                    },
+                    {
+                        "code": "S12.600G",
+                        "display": "Unspecified displaced fracture of seventh cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.600K",
+                        "display": "Unspecified displaced fracture of seventh cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.600S",
+                        "display": "Unspecified displaced fracture of seventh cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.601B",
+                        "display": "Unspecified nondisplaced fracture of seventh cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.601G",
+                        "display": "Unspecified nondisplaced fracture of seventh cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.601K",
+                        "display": "Unspecified nondisplaced fracture of seventh cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.601S",
+                        "display": "Unspecified nondisplaced fracture of seventh cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.630A",
+                        "display": "Unspecified traumatic displaced spondylolisthesis of seventh cervical vertebra, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.630B",
+                        "display": "Unspecified traumatic displaced spondylolisthesis of seventh cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.630D",
+                        "display": "Unspecified traumatic displaced spondylolisthesis of seventh cervical vertebra, subsequent encounter for fracture with routine healing"
+                    },
+                    {
+                        "code": "S12.630G",
+                        "display": "Unspecified traumatic displaced spondylolisthesis of seventh cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.630K",
+                        "display": "Unspecified traumatic displaced spondylolisthesis of seventh cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.630S",
+                        "display": "Unspecified traumatic displaced spondylolisthesis of seventh cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.631A",
+                        "display": "Unspecified traumatic nondisplaced spondylolisthesis of seventh cervical vertebra, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.631B",
+                        "display": "Unspecified traumatic nondisplaced spondylolisthesis of seventh cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.631D",
+                        "display": "Unspecified traumatic nondisplaced spondylolisthesis of seventh cervical vertebra, subsequent encounter for fracture with routine healing"
+                    },
+                    {
+                        "code": "S12.631G",
+                        "display": "Unspecified traumatic nondisplaced spondylolisthesis of seventh cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.631K",
+                        "display": "Unspecified traumatic nondisplaced spondylolisthesis of seventh cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.631S",
+                        "display": "Unspecified traumatic nondisplaced spondylolisthesis of seventh cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.64XA",
+                        "display": "Type III traumatic spondylolisthesis of seventh cervical vertebra, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.64XB",
+                        "display": "Type III traumatic spondylolisthesis of seventh cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.64XD",
+                        "display": "Type III traumatic spondylolisthesis of seventh cervical vertebra, subsequent encounter for fracture with routine healing"
+                    },
+                    {
+                        "code": "S12.64XG",
+                        "display": "Type III traumatic spondylolisthesis of seventh cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.64XK",
+                        "display": "Type III traumatic spondylolisthesis of seventh cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.64XS",
+                        "display": "Type III traumatic spondylolisthesis of seventh cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.650A",
+                        "display": "Other traumatic displaced spondylolisthesis of seventh cervical vertebra, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.650B",
+                        "display": "Other traumatic displaced spondylolisthesis of seventh cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.650D",
+                        "display": "Other traumatic displaced spondylolisthesis of seventh cervical vertebra, subsequent encounter for fracture with routine healing"
+                    },
+                    {
+                        "code": "S12.650G",
+                        "display": "Other traumatic displaced spondylolisthesis of seventh cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.650K",
+                        "display": "Other traumatic displaced spondylolisthesis of seventh cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.650S",
+                        "display": "Other traumatic displaced spondylolisthesis of seventh cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.651A",
+                        "display": "Other traumatic nondisplaced spondylolisthesis of seventh cervical vertebra, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.651B",
+                        "display": "Other traumatic nondisplaced spondylolisthesis of seventh cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.651D",
+                        "display": "Other traumatic nondisplaced spondylolisthesis of seventh cervical vertebra, subsequent encounter for fracture with routine healing"
+                    },
+                    {
+                        "code": "S12.651G",
+                        "display": "Other traumatic nondisplaced spondylolisthesis of seventh cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.651K",
+                        "display": "Other traumatic nondisplaced spondylolisthesis of seventh cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.651S",
+                        "display": "Other traumatic nondisplaced spondylolisthesis of seventh cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.690A",
+                        "display": "Other displaced fracture of seventh cervical vertebra, initial encounter for closed fracture"
+                    },
+                    {
+                        "code": "S12.690B",
+                        "display": "Other displaced fracture of seventh cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.690D",
+                        "display": "Other displaced fracture of seventh cervical vertebra, subsequent encounter for fracture with routine healing"
+                    },
+                    {
+                        "code": "S12.690G",
+                        "display": "Other displaced fracture of seventh cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.690K",
+                        "display": "Other displaced fracture of seventh cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.690S",
+                        "display": "Other displaced fracture of seventh cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.691B",
+                        "display": "Other nondisplaced fracture of seventh cervical vertebra, initial encounter for open fracture"
+                    },
+                    {
+                        "code": "S12.691G",
+                        "display": "Other nondisplaced fracture of seventh cervical vertebra, subsequent encounter for fracture with delayed healing"
+                    },
+                    {
+                        "code": "S12.691K",
+                        "display": "Other nondisplaced fracture of seventh cervical vertebra, subsequent encounter for fracture with nonunion"
+                    },
+                    {
+                        "code": "S12.691S",
+                        "display": "Other nondisplaced fracture of seventh cervical vertebra, sequela"
+                    },
+                    {
+                        "code": "S12.9XXA",
+                        "display": "Fracture of neck, unspecified, initial encounter"
+                    },
+                    {
+                        "code": "S12.9XXD",
+                        "display": "Fracture of neck, unspecified, subsequent encounter"
+                    },
+                    {
+                        "code": "S12.9XXS",
+                        "display": "Fracture of neck, unspecified, sequela"
+                    },
+                    {
+                        "code": "S13.101A",
+                        "display": "Dislocation of unspecified cervical vertebrae, initial encounter"
+                    },
+                    {
+                        "code": "S13.101D",
+                        "display": "Dislocation of unspecified cervical vertebrae, subsequent encounter"
+                    },
+                    {
+                        "code": "S13.101S",
+                        "display": "Dislocation of unspecified cervical vertebrae, sequela"
+                    },
+                    {
+                        "code": "S13.110A",
+                        "display": "Subluxation of C0/C1 cervical vertebrae, initial encounter"
+                    },
+                    {
+                        "code": "S13.110D",
+                        "display": "Subluxation of C0/C1 cervical vertebrae, subsequent encounter"
+                    },
+                    {
+                        "code": "S13.110S",
+                        "display": "Subluxation of C0/C1 cervical vertebrae, sequela"
+                    },
+                    {
+                        "code": "S13.111A",
+                        "display": "Dislocation of C0/C1 cervical vertebrae, initial encounter"
+                    },
+                    {
+                        "code": "S13.111D",
+                        "display": "Dislocation of C0/C1 cervical vertebrae, subsequent encounter"
+                    },
+                    {
+                        "code": "S13.111S",
+                        "display": "Dislocation of C0/C1 cervical vertebrae, sequela"
+                    },
+                    {
+                        "code": "S13.120A",
+                        "display": "Subluxation of C1/C2 cervical vertebrae, initial encounter"
+                    },
+                    {
+                        "code": "S13.120D",
+                        "display": "Subluxation of C1/C2 cervical vertebrae, subsequent encounter"
+                    },
+                    {
+                        "code": "S13.120S",
+                        "display": "Subluxation of C1/C2 cervical vertebrae, sequela"
+                    },
+                    {
+                        "code": "S13.121A",
+                        "display": "Dislocation of C1/C2 cervical vertebrae, initial encounter"
+                    },
+                    {
+                        "code": "S13.121D",
+                        "display": "Dislocation of C1/C2 cervical vertebrae, subsequent encounter"
+                    },
+                    {
+                        "code": "S13.121S",
+                        "display": "Dislocation of C1/C2 cervical vertebrae, sequela"
+                    },
+                    {
+                        "code": "S13.130A",
+                        "display": "Subluxation of C2/C3 cervical vertebrae, initial encounter"
+                    },
+                    {
+                        "code": "S13.130D",
+                        "display": "Subluxation of C2/C3 cervical vertebrae, subsequent encounter"
+                    },
+                    {
+                        "code": "S13.130S",
+                        "display": "Subluxation of C2/C3 cervical vertebrae, sequela"
+                    },
+                    {
+                        "code": "S13.131A",
+                        "display": "Dislocation of C2/C3 cervical vertebrae, initial encounter"
+                    },
+                    {
+                        "code": "S13.131D",
+                        "display": "Dislocation of C2/C3 cervical vertebrae, subsequent encounter"
+                    },
+                    {
+                        "code": "S13.131S",
+                        "display": "Dislocation of C2/C3 cervical vertebrae, sequela"
+                    },
+                    {
+                        "code": "S13.140A",
+                        "display": "Subluxation of C3/C4 cervical vertebrae, initial encounter"
+                    },
+                    {
+                        "code": "S13.140D",
+                        "display": "Subluxation of C3/C4 cervical vertebrae, subsequent encounter"
+                    },
+                    {
+                        "code": "S13.140S",
+                        "display": "Subluxation of C3/C4 cervical vertebrae, sequela"
+                    },
+                    {
+                        "code": "S13.141A",
+                        "display": "Dislocation of C3/C4 cervical vertebrae, initial encounter"
+                    },
+                    {
+                        "code": "S13.141D",
+                        "display": "Dislocation of C3/C4 cervical vertebrae, subsequent encounter"
+                    },
+                    {
+                        "code": "S13.141S",
+                        "display": "Dislocation of C3/C4 cervical vertebrae, sequela"
+                    },
+                    {
+                        "code": "S13.150A",
+                        "display": "Subluxation of C4/C5 cervical vertebrae, initial encounter"
+                    },
+                    {
+                        "code": "S13.150D",
+                        "display": "Subluxation of C4/C5 cervical vertebrae, subsequent encounter"
+                    },
+                    {
+                        "code": "S13.150S",
+                        "display": "Subluxation of C4/C5 cervical vertebrae, sequela"
+                    },
+                    {
+                        "code": "S13.151A",
+                        "display": "Dislocation of C4/C5 cervical vertebrae, initial encounter"
+                    },
+                    {
+                        "code": "S13.151D",
+                        "display": "Dislocation of C4/C5 cervical vertebrae, subsequent encounter"
+                    },
+                    {
+                        "code": "S13.151S",
+                        "display": "Dislocation of C4/C5 cervical vertebrae, sequela"
+                    },
+                    {
+                        "code": "S13.160A",
+                        "display": "Subluxation of C5/C6 cervical vertebrae, initial encounter"
+                    },
+                    {
+                        "code": "S13.160D",
+                        "display": "Subluxation of C5/C6 cervical vertebrae, subsequent encounter"
+                    },
+                    {
+                        "code": "S13.160S",
+                        "display": "Subluxation of C5/C6 cervical vertebrae, sequela"
+                    },
+                    {
+                        "code": "S13.161A",
+                        "display": "Dislocation of C5/C6 cervical vertebrae, initial encounter"
+                    },
+                    {
+                        "code": "S13.161D",
+                        "display": "Dislocation of C5/C6 cervical vertebrae, subsequent encounter"
+                    },
+                    {
+                        "code": "S13.161S",
+                        "display": "Dislocation of C5/C6 cervical vertebrae, sequela"
+                    },
+                    {
+                        "code": "S13.170A",
+                        "display": "Subluxation of C6/C7 cervical vertebrae, initial encounter"
+                    },
+                    {
+                        "code": "S13.170D",
+                        "display": "Subluxation of C6/C7 cervical vertebrae, subsequent encounter"
+                    },
+                    {
+                        "code": "S13.170S",
+                        "display": "Subluxation of C6/C7 cervical vertebrae, sequela"
+                    },
+                    {
+                        "code": "S13.171A",
+                        "display": "Dislocation of C6/C7 cervical vertebrae, initial encounter"
+                    },
+                    {
+                        "code": "S13.171D",
+                        "display": "Dislocation of C6/C7 cervical vertebrae, subsequent encounter"
+                    },
+                    {
+                        "code": "S13.171S",
+                        "display": "Dislocation of C6/C7 cervical vertebrae, sequela"
+                    },
+                    {
+                        "code": "S13.180A",
+                        "display": "Subluxation of C7/T1 cervical vertebrae, initial encounter"
+                    },
+                    {
+                        "code": "S13.180D",
+                        "display": "Subluxation of C7/T1 cervical vertebrae, subsequent encounter"
+                    },
+                    {
+                        "code": "S13.180S",
+                        "display": "Subluxation of C7/T1 cervical vertebrae, sequela"
+                    },
+                    {
+                        "code": "S13.181A",
+                        "display": "Dislocation of C7/T1 cervical vertebrae, initial encounter"
+                    },
+                    {
+                        "code": "S13.181D",
+                        "display": "Dislocation of C7/T1 cervical vertebrae, subsequent encounter"
+                    },
+                    {
+                        "code": "S13.181S",
+                        "display": "Dislocation of C7/T1 cervical vertebrae, sequela"
+                    },
+                    {
+                        "code": "S13.20XA",
+                        "display": "Dislocation of unspecified parts of neck, initial encounter"
+                    },
+                    {
+                        "code": "S13.20XD",
+                        "display": "Dislocation of unspecified parts of neck, subsequent encounter"
+                    },
+                    {
+                        "code": "S13.20XS",
+                        "display": "Dislocation of unspecified parts of neck, sequela"
+                    },
+                    {
+                        "code": "S13.29XA",
+                        "display": "Dislocation of other parts of neck, initial encounter"
+                    },
+                    {
+                        "code": "S13.29XD",
+                        "display": "Dislocation of other parts of neck, subsequent encounter"
+                    },
+                    {
+                        "code": "S13.29XS",
+                        "display": "Dislocation of other parts of neck, sequela"
+                    },
+                    {
+                        "code": "M53.2X1",
+                        "display": "Spinal instabilities, occipito-atlanto-axial region"
+                    },
+                    {
+                        "code": "M53.2X2",
+                        "display": "Spinal instabilities, cervical region"
+                    },
+                    {
+                        "code": "M53.2X3",
+                        "display": "Spinal instabilities, cervicothoracic region"
+                    },
+                    {
+                        "code": "C41.2",
+                        "display": "Malignant neoplasm of vertebral column"
+                    },
+                    {
+                        "code": "G06.1",
+                        "display": "Intraspinal abscess and granuloma"
+                    },
+                    {
+                        "code": "M46.21",
+                        "display": "Osteomyelitis of vertebra, occipito-atlanto-axial region"
+                    },
+                    {
+                        "code": "M46.22",
+                        "display": "Osteomyelitis of vertebra, cervical region"
+                    },
+                    {
+                        "code": "M46.23",
+                        "display": "Osteomyelitis of vertebra, cervicothoracic region"
+                    },
+                    {
+                        "code": "M46.31",
+                        "display": "Infection of intervertebral disc (pyogenic), occipito-atlanto-axial region"
+                    },
+                    {
+                        "code": "M46.32",
+                        "display": "Infection of intervertebral disc (pyogenic), cervical region"
+                    },
+                    {
+                        "code": "M46.33",
+                        "display": "Infection of intervertebral disc (pyogenic), cervicothoracic region"
+                    },
+                    {
+                        "code": "M46.41",
+                        "display": "Discitis, unspecified, occipito-atlanto-axial region"
+                    },
+                    {
+                        "code": "M46.42",
+                        "display": "Discitis, unspecified, cervical region"
+                    },
+                    {
+                        "code": "M46.43",
+                        "display": "Discitis, unspecified, cervicothoracic region"
+                    },
+                    {
+                        "code": "M46.51",
+                        "display": "Other infective spondylopathies, occipito-atlanto-axial region"
+                    },
+                    {
+                        "code": "M06.88",
+                        "display": "Other specified rheumatoid arthritis, vertebrae"
+                    },
+                    {
+                        "code": "M40.03",
+                        "display": "Postural kyphosis, cervicothoracic region"
+                    },
+                    {
+                        "code": "M40.12",
+                        "display": "Other secondary kyphosis, cervical region"
+                    },
+                    {
+                        "code": "M40.202",
+                        "display": "Unspecified kyphosis, cervical region"
+                    },
+                    {
+                        "code": "M40.292",
+                        "display": "Other kyphosis, cervical region"
+                    },
+                    {
+                        "code": "M41.22",
+                        "display": "Other idiopathic scoliosis, cervical region"
+                    },
+                    {
+                        "code": "M43.12",
+                        "display": "Spondylolisthesis, cervical region"
+                    },
+                    {
+                        "code": "M43.13",
+                        "display": "Spondylolisthesis, cervicothoracic region"
+                    },
+                    {
+                        "code": "M96.0",
+                        "display": "Pseudarthrosis after fusion or arthrodesis"
+                    },
+                    {
+                        "code": "M96.1",
+                        "display": "Postlaminectomy syndrome, not elsewhere classified"
+                    },
+                    {
+                        "code": "M53.2X1",
+                        "display": "Spinal instabilities, occipito-atlanto-axial region"
+                    },
+                    {
+                        "code": "M53.2X2",
+                        "display": "Spinal instabilities, cervical region"
+                    },
+                    {
+                        "code": "M53.2X3",
+                        "display": "Spinal instabilities, cervicothoracic region"
+                    }
+                ]
+            }
+        ]
+    }
+}
