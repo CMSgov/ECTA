@@ -548,7 +548,7 @@
                       }
                   ],
                   "linkId": "2.1.a",
-                  "text": "Documentation supports that all other sources of pain have been excluded.",
+                  "text": "Documentation supports that all other sources of pain have been excluded. Provider Note:  Non-Qualifying Conditions for for Cervical Fusion with Disc Removal include but are limited to:  The following medical conditions are not appropriate indicators for this procedure and must be ruled out: Isolated Chronic Axial Cervical Neck Pain, Thoracic Outlet Syndrome, Brachial Plexopathy, Peripheral Nerve Compression, Peripheral Neuropathy, Rotator Cuff Impingement, and Myofascial pain.",
                   "enableWhen": [
                       {
                           "question": "2.1",
@@ -1040,7 +1040,7 @@
                       }
                   ],
                   "linkId": "2.1.b",
-                  "text": "Documentation supports that all other sources of pain/neurological deficits have been excluded. Provider Note: Non-Qualifying Conditions for Cervical Fusion with Disc Removal: The following medical conditions are not appropriate indicators for this procedure and must be ruled out: isolated axial cervical pain, brachial plexopathy, peripheral nerve compression, peripheral neuropathy, rotator cuff impingement, and myofascial pain.",
+                  "text": "Documentation supports that all other sources of pain/neurological deficits have been excluded. Provider Note:  Non-Qualifying Conditions for Cervical Fusion with Disc Removal:  The following medical conditions are not appropriate indications for this procedure and must be ruled out:  Isolated Axial Neck Pain, Facet Joint Syndrome, Cervical Muscle Strain, Myofascial Pain Syndrome, Cardiac Ischemia, Spinal Epidural Abscess or Vertebral Osteomyelitis, Infections affecting the spine, or Primary or Metastatic Spinal Tumors",
                   "enableWhen": [
                       {
                           "question": "2.1",
@@ -5696,14 +5696,11 @@
                   "linkId": "4.6",
                   "text": "The description/sensation of the pain",
                   "enableWhen": [
-                      {
-                      "question": "4.4",
+                    {
+                      "question": "4.1",
                       "operator": "=",
-                      "answerCoding": {
-                          "code": "Radicular pain that aligns with diagnostic imaging findings",
-                          "display": "Radicular pain that aligns with diagnostic imaging findings"
-                      }
-                  }
+                      "answerBoolean": true
+                    }
                   ],
                   "required": true,
                   "repeats": true,
@@ -6182,26 +6179,119 @@
                   "answerOption": [
                       {
                           "valueCoding": {
-                              "code": "Medications",
+                              "code": "373873005",
                               "display": "Medications"
                           }
                       },
                       {
+                        "valueCoding": {
+                            "code": "91251008",
+                            "display": "Physical Therapy"
+                        }
+                      },
+                      {
+                        "valueCoding": {
+                            "code": "44275008",
+                            "display": "Spinal Manipulation"
+                        }
+                      },
+                      {
+                        "valueCoding": {
+                            "code": "228557008",
+                            "display": "Cognitive Behavioral Therapy (CBT)"
+                        }
+                      },
+                      {
+                        "valueCoding": {
+                            "code": "229075007",
+                            "display": "Home Exercise Program"
+                        }
+                      },
+                      {
+                        "valueCoding": {
+                            "code": "44868003",
+                            "display": "Acupuncture"
+                        }
+                      },
+                      {
+                        "valueCoding": {
+                            "code": "Activity/Lifestyle modifications",
+                            "display": "Activity/Lifestyle modifications"
+                        }
+                      }
+                  ]
+              },
+              {
+                  "type": "choice",
+                  "extension": [
+                      {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                              "coding": [
+                                  {
+                                      "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                      "code": "check-box",
+                                      "display": "Check-box"
+                                  }
+                              ]
+                          }
+                      }
+                  ],
+                  "linkId": "5.1.1.a",
+                  "text": "Medications. Provider Note: The reason MUST align with the described cervical related pain.",
+                  "enableWhen": [
+                      {
+                          "question": "5.1.1",
+                          "operator": "=",
+                          "answerCoding": {
+                              "code": "373873005",
+                              "display": "Medications"
+                          }
+                      }
+                  ],
+                  "required": true,
+                  "repeats": true,
+                  "answerOption": [
+                      {
                           "valueCoding": {
-                              "code": "Physical Therapy",
-                              "display": "Physical Therapy"
+                              "code": "373265006",
+                              "display": "Analgesics"
                           }
                       },
                       {
                           "valueCoding": {
-                              "code": "Exercise",
-                              "display": "Exercise"
+                              "code": "387517004",
+                              "display": "Acetaminophen (Paracetamol)"
                           }
                       },
                       {
                           "valueCoding": {
-                              "code": "Activity/Lifestyle modifications",
-                              "display": "Activity/Lifestyle modifications"
+                              "code": "372665008",
+                              "display": "NSAIDS (Non-Steroidal Anti-Inflammatory Drugs)"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "767560006",
+                              "display": "SNRIs (Serotonin and Norepinephrine Reuptake Inhibitors)"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "404642006",
+                              "display": "Opioids (including Tramadol)"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "LA29126-2",
+                              "display": "Topical Medications"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "116596006",
+                              "display": "Oral Glucocorticoids."
                           }
                       }
                   ]
