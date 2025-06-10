@@ -4,19 +4,125 @@
     "title": "CervicalFusion",
     "name": "CervicalFusion",
     "status": "draft",
-    "type": {
-      "coding": [
-        {
-          "code": "logic-library"
-        }
-      ]
-    },
-    "relatedArtifact": [
+  "type": {
+    "coding": [
       {
-      "type": "depends-on",
-      "resource": "Library/FHIRHelpers"
+        "code": "logic-library"
       }
-    ],
-    "dataRequirement": []
+    ]
+  },
+  "relatedArtifact": [
+    {
+      "type": "depends-on",
+      "resource": "<FHIR-server>/Library/FHIRHelpers"
+    }
+  ],
+    "dataRequirement": [
+      {
+        "type": "Condition",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "<FHIR-server>/ValueSet/ExpediteReasonConditions"
+          }
+        ]
+      },
+      {
+        "type": "Condition",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "<FHIR-server>/ValueSet/SymptomaticCervicalNerveRootImpingementConditions"
+          }
+        ]
+      },
+      {
+        "type": "Condition",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "<FHIR-server>/ValueSet/SymptomaticCervicalCanalStenosisConditions"
+          }
+        ]
+      },
+      {
+        "type": "Condition",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "<FHIR-server>/ValueSet/DecompressionOrStabilizationOfCervicalSpineConditions"
+          }
+        ]
+      },
+      {
+        "type": "Condition",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "<FHIR-server>/ValueSet/ConservativeTherapyExceptionConditions"
+          }
+        ]
+      },
+      {
+        "type": "Condition",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "<FHIR-server>/ValueSet/SourcesOfPain"
+          }
+        ]
+      },
+      {
+        "type": "ServiceRequest",
+        "codeFilter": [
+          {
+            "path": "type",
+            "valueSet": "<FHIR-server>/ValueSet/CervicalFusionProcedures"
+          }
+        ]
+      },
+      {
+        "type": "Encounter"
+      },
+      {
+        "type": "DiagnosticReport"
+      },
+      {
+        "type": "Observation",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "<FHIR-server>/ValueSet/SymptomaticCervicalNerveRootImpingementObservations"
+          }
+        ]
+      },
+      {
+        "type": "Observation",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "<FHIR-server>/ValueSet/SymptomaticCervicalCanalStenosisObservations"
+          }
+        ]
+      },
+      {
+        "type": "Observation",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "<FHIR-server>/ValueSet/DecompressionOrStabilizationOfCervicalSpineObservations"
+          }
+        ]
+      },
+      {
+        "type": "Observation",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "<FHIR-server>/ValueSet/SensationOfPainObservations"
+          }
+        ]
+      }
+    ]
   }
   

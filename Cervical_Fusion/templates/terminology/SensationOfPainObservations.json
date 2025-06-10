@@ -1,0 +1,58 @@
+{
+    "resourceType": "ValueSet",
+    "id": "SensationOfPainObservations",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2025-04-25T09:30:12.000+00:00"
+    },
+    "url": "<FHIR-server>/ValueSet/SensationOfPainObservations",
+    "identifier": [
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:oid:SensationOfPainObservations"
+        }
+    ],
+    "version": "Latest",
+    "name": "SensationOfPainObservations",
+    "title": "Sensation Of Pain Observations",
+    "status": "active",
+    "publisher": "CMS",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "2022-09",
+                "concept": [
+                    {
+                        "code": "36349006",
+                        "display": "Burning"
+                    },
+                    {
+                        "code": "Electric shock-like",
+                        "display": "Electric shock-like"
+                    },
+                    {
+                        "code": "410707003",
+                        "display": "Sharp"
+                    },
+                    {
+                        "code": "410705006",
+                        "display": "Shooting"
+                    },
+                    {
+                        "code": "62507009",
+                        "display": "Pins and needles"
+                    },
+                    {
+                        "code": "274676007",
+                        "display": "Tingling"
+                    },
+                    {
+                        "code": "102603008",
+                        "display": "Numbness"
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,11 +1,18 @@
 {
   "resourceType": "Questionnaire",
+  "id": "questionnaire-cervicalfusion-CervicalFusion",
+  "extension": [
+      {
+          "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
+          "valueCanonical": "<FHIR-server>/Library/library-cervicalfusion-CervicalFusion"
+      }
+  ],
   "meta": {
       "profile": [
           "http://hl7.org/fhir/4.0/StructureDefinition/Questionnaire"
       ]
   },
-  "url": "<FHIR-server>/Questionnaire/questionnaire-CervicalFusion-CervicalFusion",
+  "url": "<FHIR-server>/Questionnaire/questionnaire-cervicalfusion-CervicalFusion",
   "version": "1.0.0",
   "name": "CervicalFusion",
   "title": "Cervical Disc removal with Fusion",
@@ -29,6 +36,13 @@
                                   }
                               ]
                           }
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                        "valueExpression": {
+                          "language": "text/cql",
+                          "expression": "RequestType"
+                        }
                       }
                   ],
                   "linkId": "1.1",
@@ -37,11 +51,13 @@
                   "answerOption": [
                       {
                           "valueCoding": {
+                              "code": "Initial",
                               "display": "Initial"
                           }
                       },
                       {
                           "valueCoding": {
+                              "code": "Expedited Initial",
                               "display": "Expedited Initial"
                           }
                       }
@@ -51,7 +67,16 @@
                   "type": "date",
                   "linkId": "1.2",
                   "text": "Date being requested",
-                  "required": true
+                  "required": true,
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                      "valueExpression": {
+                        "language": "text/cql",
+                        "expression": "RequestingDate"
+                      }
+                    }
+                  ]
               },
               {
                   "type": "choice",
@@ -67,6 +92,13 @@
                                   }
                               ]
                           }
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                        "valueExpression": {
+                          "language": "text/cql",
+                          "expression": "RequestedProcedure"
+                        }
                       }
                   ],
                   "linkId": "1.3",
@@ -76,29 +108,25 @@
                   "answerOption": [
                       {
                           "valueCoding": {
-                              "system": "HCPCS",
                               "code": "22551",
                               "display": "Fusion of spine bones with removal of disc at upper spinal column, anterior approach, complex, initial."
                           }
                       },
                       {
                           "valueCoding": {
-                              "system": "HCPCS",
                               "code": "22552",
                               "display": "Fusion of spine bones with removal of disc in upper spinal column below second vertebra of neck, anterior approach, each additional interspace."
                           }
                       },
                       {
                           "valueCoding": {
-                              "system": "HCPCS",
-                              "code": "22552",
+                              "code": "22552-1",
                               "display": "Fusion of spine bones with removal of disc in upper spinal column below second vertebra of neck, anterior approach, each additional interspace."
                           }
                       },
                       {
                           "valueCoding": {
-                              "system": "HCPCS",
-                              "code": "22552",
+                              "code": "22552-2",
                               "display": "Fusion of spine bones with removal of disc in upper spinal column below second vertebra of neck, anterior approach, each additional interspace."
                           }
                       }
@@ -127,6 +155,7 @@
                           "question": "1.1",
                           "operator": "=",
                           "answerCoding": {
+                              "code": "Expedited Initial",
                               "display": "Expedited Initial"
                           }
                       }
@@ -136,18 +165,19 @@
                   "answerOption": [
                       {
                           "valueCoding": {
+                              "code": "Acute injury that places beneficiary at risk for permanent damage.",
                               "display": "Acute injury that places beneficiary at risk for permanent damage."
                           }
                       },
                       {
                           "valueCoding": {
-                              "system": "ICD10CM",
                               "code": "M53.2",
                               "display": "Spinal instability that places spinal cord at risk."
                           }
                       },
                       {
                           "valueCoding": {
+                              "code": "Rapid worsening of symptoms specific to compression of nerve and/or spinal cord.",
                               "display": "Rapid worsening of symptoms specific to compression of nerve and/or spinal cord."
                           }
                       }
@@ -174,32 +204,42 @@
                                   }
                               ]
                           }
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                        "valueExpression": {
+                          "language": "text/cql",
+                          "expression": "PrimaryDiagnosis"
+                        }
                       }
                   ],
                   "linkId": "2.1",
-                  "text": "The diagnosis that supports anterior cervical fusion for decompression of symptomatic cervical nerve root impingement..  Provider note: Imaging (MRI or CT) or physician interpretation must be present and supports central, lateral recess or foraminal stenosis at corresponding level with clinical signs and symptoms and including at least of the following ",
+                  "text": "The diagnosis that supports anterior cervical fusion for decompression of symptomatic cervical nerve root impingement. Provider note: Imaging (MRI or CT) or physician interpretation must be present and supports central, lateral recess or foraminal stenosis at corresponding level with clinical signs and symptoms and including at least of the following ",
                   "required": true,
                   "repeats": false,
                   "answerOption": [
                       {
                           "valueCoding": {
+                              "code": "Symptomatic Cervical Nerve Root Impingement",
                               "display": "Symptomatic Cervical Nerve Root Impingement"
                           }
                       },
                       {
                           "valueCoding": {
+                              "code": "Symptomatic Cervical Canal Stenosis",
                               "display": "Symptomatic Cervical Canal Stenosis"
                           }
                       },
                       {
                           "valueCoding": {
+                              "code": "Decompression or stabilization of the cervical spine",
                               "display": "Decompression or stabilization of the cervical spine"
                           }
                       }
                   ]
               },
               {
-                  "type": "choice",
+                  "type": "open-choice",
                   "extension": [
                       {
                           "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
@@ -207,11 +247,18 @@
                               "coding": [
                                   {
                                       "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                      "code": "radio-button",
-                                      "display": "Radio Button"
+                                      "code": "drop-down",
+                                      "display": "Drop down"
                                   }
                               ]
                           }
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                        "valueExpression": {
+                          "language": "text/cql",
+                          "expression": "SymptomaticCervicalNerveRootImpingementConditionCode"
+                        }
                       }
                   ],
                   "linkId": "2.1.0",
@@ -221,23 +268,258 @@
                           "question": "2.1",
                           "operator": "=",
                           "answerCoding": {
+                              "code": "Symptomatic Cervical Nerve Root Impingement",
                               "display": "Symptomatic Cervical Nerve Root Impingement"
                           }
                       }
                   ],
+                  "required": true,
+                  "repeats": false,
                   "answerOption": [
                       {
                           "valueCoding": {
-                              "system": "ICD-10-CM",
-                              "code": "M48.01",
-                              "display": "Spinal stenosis, occipito-atlanto-axial region"
+                              "display": "Spinal stenosis, occipito-atlanto-axial region",
+                              "code": "M48.01"
                           }
                       },
                       {
                           "valueCoding": {
-                              "system": "ICD-10-CM",
-                              "code": "M48.02",
-                              "display": "Spinal stenosis, cervical region"
+                              "display": "Spinal stenosis, cervical region",
+                              "code": "M48.02"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Spinal stenosis, cervicothoracic region",
+                              "code": "M48.03"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Cervical disc disorder with radiculopathy, high cervical region",
+                              "code": "M50.11"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Cervical disc disorder at C4-C5 level with radiculopathy",
+                              "code": "M50.121"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Cervical disc disorder at C5-C6 level with radiculopathy",
+                              "code": "M50.122"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Cervical disc disorder at C6-C7 level with radiculopathy",
+                              "code": "M50.123"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Cervical disc disorder with radiculopathy, cervicothoracic region",
+                              "code": "M50.13"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Other cervical disc displacement, unspecified cervical region",
+                              "code": "M50.20"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Other cervical disc displacement, unspecified cervical region",
+                              "code": "M50.21"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Other cervical disc displacement, high cervical region",
+                              "code": "M50.220"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Other cervical disc displacement, mid-cervical region, unspecified level",
+                              "code": "M50.221"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Other cervical disc displacement at C4-C5 level",
+                              "code": "M50.222"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Other cervical disc displacement at C5-C6 level",
+                              "code": "M50.223"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Other cervical disc displacement at C6-C7 level",
+                              "code": "M50.23"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Other cervical disc displacement, cervicothoracic region",
+                              "code": "M50.23"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Other cervical disc degeneration, unspecified cervical region",
+                              "code": "M50.30"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Other cervical disc degeneration, high cervical region",
+                              "code": "M50.31"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Other cervical disc degeneration, mid-cervical region, unspecified level",
+                              "code": "M50.320"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Other cervical disc degeneration at C4-C5 level",
+                              "code": "M50.321"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Other cervical disc degeneration at C5-C6 level",
+                              "code": "M50.322"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Other cervical disc degeneration at C6-C7 level",
+                              "code": "M50.323"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Other cervical disc degeneration, cervicothoracic region",
+                              "code": "M50.33"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Radiculopathy, occipito-atlanto-axial region",
+                              "code": "M54.11"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Radiculopathy, cervical region",
+                              "code": "M54.12"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Radiculopathy, cervicothoracic region",
+                              "code": "M54.13"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Malignant neoplasm of vertebral column",
+                              "code": "C41.2"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Intraspinal abscess and granuloma",
+                              "code": "G06.1"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Osteomyelitis of vertebra, occipito-atlanto-axial region",
+                              "code": "M46.21"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Osteomyelitis of vertebra, cervical region",
+                              "code": "M46.22"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Osteomyelitis of vertebra, cervicothoracic region",
+                              "code": "M46.23"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Infection of intervertebral disc (pyogenic), occipito-atlanto-axial region",
+                              "code": "M46.31"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Infection of intervertebral disc (pyogenic), cervical region",
+                              "code": "M46.32"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Infection of intervertebral disc (pyogenic), cervicothoracic region",
+                              "code": "M46.33"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Discitis, unspecified, occipito-atlanto-axial region",
+                              "code": "M46.41"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Discitis, unspecified, cervical region",
+                              "code": "M46.42"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Discitis, unspecified, cervicothoracic region",
+                              "code": "M46.43"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Other infective spondylopathies, occipito-atlanto-axial region",
+                              "code": "M46.51"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Spinal instabilities, occipito-atlanto-axial region",
+                              "code": "M53.2X1"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Spinal instabilities, cervical region",
+                              "code": "M53.2X2"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Spinal instabilities, cervicothoracic region",
+                              "code": "M53.2X3"
                           }
                       }
                   ]
@@ -256,15 +538,23 @@
                                   }
                               ]
                           }
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                        "valueExpression": {
+                          "language": "text/cql",
+                          "expression": "PresenceOfPain"
+                        }
                       }
                   ],
                   "linkId": "2.1.a",
-                  "text": "Documentation supports that all other sources of pain have been excluded.",
+                  "text": "Documentation supports that all other sources of pain have been excluded. Provider Note:  Non-Qualifying Conditions for for Cervical Fusion with Disc Removal include but are limited to:  The following medical conditions are not appropriate indicators for this procedure and must be ruled out: Isolated Chronic Axial Cervical Neck Pain, Thoracic Outlet Syndrome, Brachial Plexopathy, Peripheral Nerve Compression, Peripheral Neuropathy, Rotator Cuff Impingement, and Myofascial pain.",
                   "enableWhen": [
                       {
                           "question": "2.1",
                           "operator": "=",
                           "answerCoding": {
+                              "code": "Symptomatic Cervical Nerve Root Impingement",
                               "display": "Symptomatic Cervical Nerve Root Impingement"
                           }
                       }
@@ -274,16 +564,19 @@
                   "answerOption": [
                       {
                           "valueCoding": {
+                              "code": "N/A",
                               "display": "N/A"
                           }
                       },
                       {
                           "valueCoding": {
+                              "code": "Yes",
                               "display": "Yes, all other sources have been ruled out, including but not limited to e.g., thoracic outlet syndrome, isolated chronic axial cervical pain, and peripheral neuropathy."
                           }
                       },
                       {
                           "valueCoding": {
+                              "code": "No",
                               "display": "No"
                           }
                       }
@@ -303,6 +596,13 @@
                                   }
                               ]
                           }
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                        "valueExpression": {
+                          "language": "text/cql",
+                          "expression": "ConservativeTherapyExceptionConditionCode"
+                        }
                       }
                   ],
                   "linkId": "2.1.a.1",
@@ -312,6 +612,7 @@
                           "question": "2.1",
                           "operator": "=",
                           "answerCoding": {
+                              "code": "Symptomatic Cervical Nerve Root Impingement",
                               "display": "Symptomatic Cervical Nerve Root Impingement"
                           }
                       }
@@ -321,27 +622,31 @@
                   "answerOption": [
                       {
                           "valueCoding": {
+                              "code": "N/A",
                               "display": "N/A"
                           }
                       },
                       {
                           "valueCoding": {
+                              "code": "No",
                               "display": "No"
                           }
                       },
                       {
                           "valueCoding": {
                               "code": "M50.0",
-                              "display": "Concomitant myelopathy or myeloradiculopathy "
+                              "display": "Concomitant myelopathy or myeloradiculopathy"
                           }
                       },
                       {
                           "valueCoding": {
+                              "code": "M54.0",
                               "display": "Isolated radiculopathy"
                           }
                       },
                       {
                           "valueCoding": {
+                              "code": "Loss of bowel or bladder control due to cervical spinal cord compression",
                               "display": "Loss of bowel or bladder control due to cervical spinal cord compression"
                           }
                       }
@@ -380,11 +685,13 @@
                   "answerOption": [
                       {
                           "valueCoding": {
+                              "code": "Cervical myelopathy class III or above",
                               "display": "Cervical myelopathy class III or above"
                           }
                       },
                       {
                           "valueCoding": {
+                              "code": "Progression of neurological deficits during the trial of conservative treatment",
                               "display": "Progression of neurological deficits during the trial of conservative treatment"
                           }
                       }
@@ -413,6 +720,7 @@
                           "question": "2.1.a.1",
                           "operator": "=",
                           "answerCoding": {
+                              "code": "M54.0",
                               "display": "Isolated radiculopathy"
                           }
                       }
@@ -422,17 +730,288 @@
                   "answerOption": [
                       {
                           "valueCoding": {
-                              "display": "Presenting with progressive motor weakness OR"
+                              "code": "Presenting with progressive motor weakness",
+                              "display": "Presenting with progressive motor weakness"
                           }
                       },
                       {
                           "valueCoding": {
-                              "display": "Significant motor weakness interfering with ADLs OR"
+                              "code": "Significant motor weakness interfering with ADLs",
+                              "display": "Significant motor weakness interfering with ADLs"
                           }
                       },
                       {
                           "valueCoding": {
-                              "display": "Severe radicular pain defined as pain limiting ability to perform activities of daily living (AOLs) and ≥7/10 on VAS or equivalent scale2 AND associated with confirmatory imaging (computed tomography, magnetic resonance imaging) and clinical-radiological correlation"
+                              "code": "Severe radicular pain defined as pain limiting ability to perform activities of daily living (ADLs) and ≥7/10 on VAS or equivalent scale2 AND associated with confirmatory imaging (computed tomography, magnetic resonance imaging) and clinical-radiological correlation",
+                              "display": "Severe radicular pain defined as pain limiting ability to perform activities of daily living (ADLs) and ≥7/10 on VAS or equivalent scale2 AND associated with confirmatory imaging (computed tomography, magnetic resonance imaging) and clinical-radiological correlation"
+                          }
+                      }
+                  ]
+              },
+              {
+                  "type": "open-choice",
+                  "extension": [
+                      {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                              "coding": [
+                                  {
+                                      "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                      "code": "drop-down",
+                                      "display": "Drop down"
+                                  }
+                              ]
+                          }
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                        "valueExpression": {
+                          "language": "text/cql",
+                          "expression": "SymptomaticCervicalCanalStenosisConditionCode"
+                        }
+                      }
+                  ],
+                  "linkId": "2.1.1",
+                  "text": "Symptomatic Cervical Canal Stenosis",
+                  "enableWhen": [
+                      {
+                          "question": "2.1",
+                          "operator": "=",
+                          "answerCoding": {
+                              "code": "Symptomatic Cervical Canal Stenosis",
+                              "display": "Symptomatic Cervical Canal Stenosis"
+                          }
+                      }
+                  ],
+                  "required": true,
+                  "repeats": false,
+                  "answerOption": [
+                      {
+                          "valueCoding": {
+                              "display": "Spinal stenosis, occipito-atlanto-axial region",
+                              "code": "M48.01"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Spinal stenosis, cervical region",
+                              "code": "M48.02"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Spinal stenosis, cervicothoracic region",
+                              "code": "M48.03"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Cervical disc disorder with myelopathy, high cervical region",
+                              "code": "M50.01"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Cervical disc disorder at C4-C5 level with myelopathy",
+                              "code": "M50.021"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Cervical disc disorder at C5-C6 level with myelopathy",
+                              "code": "M50.022"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Cervical disc disorder at C6-C7 level with myelopathy",
+                              "code": "M50.023"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Cervical disc disorder with myelopathy, cervicothoracic region",
+                              "code": "M50.03"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Other cervical disc displacement, unspecified cervical region",
+                              "code": "M50.20"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Other cervical disc displacement, high cervical region",
+                              "code": "M50.21"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Other cervical disc displacement, mid-cervical region, unspecified level",
+                              "code": "M50.220"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Other cervical disc displacement at C4-C5 level",
+                              "code": "M50.221"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Other cervical disc displacement at C5-C6 level",
+                              "code": "M50.222"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Other cervical disc displacement at C6-C7 level",
+                              "code": "M50.223"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Other cervical disc displacement, cervicothoracic region",
+                              "code": "M50.23"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Other cervical disc degeneration, unspecified cervical region",
+                              "code": "M50.30"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Other cervical disc degeneration, high cervical region",
+                              "code": "M50.31"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Other cervical disc degeneration, mid-cervical region, unspecified level",
+                              "code": "M50.320"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Other cervical disc degeneration at C4-C5 level",
+                              "code": "M50.321"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Other cervical disc degeneration at C5-C6 level",
+                              "code": "M50.322"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Other cervical disc degeneration at C6-C7 level",
+                              "code": "M50.323"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Other cervical disc degeneration, cervicothoracic region",
+                              "code": "M50.33"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Mid-cervical disc disorder, unspecified level",
+                              "code": "M50.120"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Malignant neoplasm of vertebral column",
+                              "code": "C41.2"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Intraspinal abscess and granuloma",
+                              "code": "G06.1"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Osteomyelitis of vertebra, occipito-atlanto-axial region",
+                              "code": "M46.21"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Osteomyelitis of vertebra, cervical region",
+                              "code": "M46.22"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Osteomyelitis of vertebra, cervicothoracic region",
+                              "code": "M46.23"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Infection of intervertebral disc (pyogenic), occipito-atlanto-axial region",
+                              "code": "M46.31"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Infection of intervertebral disc (pyogenic), cervical region",
+                              "code": "M46.32"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Infection of intervertebral disc (pyogenic), cervicothoracic region",
+                              "code": "M46.33"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Discitis, unspecified, occipito-atlanto-axial region",
+                              "code": "M46.41"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Discitis, unspecified, cervical region",
+                              "code": "M46.42"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Discitis, unspecified, cervicothoracic region",
+                              "code": "M46.43"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Other infective spondylopathies, occipito-atlanto-axial region",
+                              "code": "M46.51"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Spinal instabilities, occipito-atlanto-axial region",
+                              "code": "M53.2X1"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Spinal instabilities, cervical region",
+                              "code": "M53.2X2"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "display": "Spinal instabilities, cervicothoracic region",
+                              "code": "M53.2X3"
                           }
                       }
                   ]
@@ -451,15 +1030,23 @@
                                   }
                               ]
                           }
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                        "valueExpression": {
+                          "language": "text/cql",
+                          "expression": "PresenceOfPain"
+                        }
                       }
                   ],
                   "linkId": "2.1.b",
-                  "text": "Documentation supports that all other sources of pain/neurological deficits have been excluded.",
+                  "text": "Documentation supports that all other sources of pain/neurological deficits have been excluded. Provider Note:  Non-Qualifying Conditions for Cervical Fusion with Disc Removal:  The following medical conditions are not appropriate indications for this procedure and must be ruled out:  Isolated Axial Neck Pain, Facet Joint Syndrome, Cervical Muscle Strain, Myofascial Pain Syndrome, Cardiac Ischemia, Spinal Epidural Abscess or Vertebral Osteomyelitis, Infections affecting the spine, or Primary or Metastatic Spinal Tumors",
                   "enableWhen": [
                       {
                           "question": "2.1",
                           "operator": "=",
                           "answerCoding": {
+                              "code": "Symptomatic Cervical Canal Stenosis",
                               "display": "Symptomatic Cervical Canal Stenosis"
                           }
                       }
@@ -469,16 +1056,19 @@
                   "answerOption": [
                       {
                           "valueCoding": {
+                              "code": "N/A",
                               "display": "N/A"
                           }
                       },
                       {
                           "valueCoding": {
+                              "code": "Yes",
                               "display": "Yes"
                           }
                       },
                       {
                           "valueCoding": {
+                              "code": "No",
                               "display": "No"
                           }
                       }
@@ -493,11 +1083,18 @@
                               "coding": [
                                   {
                                       "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                      "code": "drop-down",
-                                      "display": "Drop down"
+                                      "code": "radio-button",
+                                      "display": "Radio Button"
                                   }
                               ]
                           }
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                        "valueExpression": {
+                          "language": "text/cql",
+                          "expression": "ConservativeTherapyExceptionConditionCode"
+                        }
                       }
                   ],
                   "linkId": "2.1.b.1",
@@ -507,6 +1104,7 @@
                           "question": "2.1",
                           "operator": "=",
                           "answerCoding": {
+                              "code": "Symptomatic Cervical Canal Stenosis",
                               "display": "Symptomatic Cervical Canal Stenosis"
                           }
                       }
@@ -514,26 +1112,31 @@
                   "answerOption": [
                       {
                           "valueCoding": {
+                              "code": "N/A",
                               "display": "N/A"
                           }
                       },
                       {
                           "valueCoding": {
+                              "code": "No",
                               "display": "No"
                           }
                       },
                       {
                           "valueCoding": {
+                              "code": "M50.0",
                               "display": "Myelopathy"
                           }
                       },
                       {
                           "valueCoding": {
+                              "code": "M54.0",
                               "display": "Radiculopathy"
                           }
                       },
                       {
                           "valueCoding": {
+                              "code": "Loss of bowel or bladder control due to cervical spinal cord compression",
                               "display": "Loss of bowel or bladder control due to cervical spinal cord compression"
                           }
                       }
@@ -562,6 +1165,7 @@
                           "question": "2.1.b.1",
                           "operator": "=",
                           "answerCoding": {
+                              "code": "M50.0",
                               "display": "Myelopathy"
                           }
                       }
@@ -571,11 +1175,13 @@
                   "answerOption": [
                       {
                           "valueCoding": {
+                              "code": "Cervical myelopathy class III or above",
                               "display": "Cervical myelopathy class III or above"
                           }
                       },
                       {
                           "valueCoding": {
+                              "code": "Progression of neurological deficits during the trial of conservative treatment",
                               "display": "Progression of neurological deficits during the trial of conservative treatment"
                           }
                       }
@@ -604,6 +1210,7 @@
                           "question": "2.1.b.1",
                           "operator": "=",
                           "answerCoding": {
+                              "code": "M54.0",
                               "display": "Radiculopathy"
                           }
                       }
@@ -613,17 +1220,20 @@
                   "answerOption": [
                       {
                           "valueCoding": {
-                              "display": "Presenting with progressive motor weakness OR"
+                              "code": "Presenting with progressive motor weakness",
+                              "display": "Presenting with progressive motor weakness"
                           }
                       },
                       {
                           "valueCoding": {
-                              "display": "Significant motor weakness interfering with ADLs OR"
+                              "code": "Significant motor weakness interfering with ADLs",
+                              "display": "Significant motor weakness interfering with ADLs"
                           }
                       },
                       {
                           "valueCoding": {
-                              "display": "Severe radicular pain defined as pain limiting ability to perform activities of daily living (AOLs) and ≥7/10 on VAS or equivalent scale2 AND associated with confirmatory imaging (computed tomography, magnetic resonance imaging) and clinical-radiological correlation"
+                              "code": "Severe radicular pain defined as pain limiting ability to perform activities of daily living (ADLs) and ≥7/10 on VAS or equivalent scale2 AND associated with confirmatory imaging (computed tomography, magnetic resonance imaging) and clinical-radiological correlation",
+                              "display": "Severe radicular pain defined as pain limiting ability to perform activities of daily living (ADLs) and ≥7/10 on VAS or equivalent scale2 AND associated with confirmatory imaging (computed tomography, magnetic resonance imaging) and clinical-radiological correlation"
                           }
                       }
                   ]
@@ -642,6 +1252,13 @@
                                   }
                               ]
                           }
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                        "valueExpression": {
+                          "language": "text/cql",
+                          "expression": "DecompressionOrStabilizationOfCervicalSpineConditionCode"
+                        }
                       }
                   ],
                   "linkId": "2.1.c",
@@ -651,6 +1268,7 @@
                           "question": "2.1",
                           "operator": "=",
                           "answerCoding": {
+                              "code": "Decompression or stabilization of the cervical spine",
                               "display": "Decompression or stabilization of the cervical spine"
                           }
                       }
@@ -3503,11 +4121,21 @@
                   "type": "date",
                   "linkId": "3.1",
                   "text": "MRI or CT results or physician interpretation. Encounter date of Radiologic results:",
+                  "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                        "valueExpression": {
+                          "language": "text/cql",
+                          "expression": "MRIEncounterDate"
+                        }
+                      }
+                  ],
                   "enableWhen": [
                       {
                           "question": "2.1",
                           "operator": "=",
                           "answerCoding": {
+                              "code": "Symptomatic Cervical Nerve Root Impingement",
                               "display": "Symptomatic Cervical Nerve Root Impingement"
                           }
                       }
@@ -3529,6 +4157,13 @@
                                   }
                               ]
                           }
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                        "valueExpression": {
+                          "language": "text/cql",
+                          "expression": "MRIResultsSymptomaticCervicalNerveRootImpingement"
+                        }
                       }
                   ],
                   "linkId": "3.2",
@@ -3538,6 +4173,7 @@
                           "question": "2.1",
                           "operator": "=",
                           "answerCoding": {
+                              "code": "Symptomatic Cervical Nerve Root Impingement",
                               "display": "Symptomatic Cervical Nerve Root Impingement"
                           }
                       }
@@ -3547,16 +4183,19 @@
                   "answerOption": [
                       {
                           "valueCoding": {
+                              "code": "Evidence of central stenosis at the level corresponding with clinical myotome signs and symptoms and substantiates the condition/diagnosis for the procedure being requested.",
                               "display": "Evidence of central stenosis at the level corresponding with clinical myotome signs and symptoms and substantiates the condition/diagnosis for the procedure being requested."
                           }
                       },
                       {
                           "valueCoding": {
+                              "code": "Evidence of lateral recess stenosis at the level corresponding with clinical myotome signs and symptoms and substantiates the condition/diagnosis for the procedure is being requested.",
                               "display": "Evidence of lateral recess stenosis at the level corresponding with clinical myotome signs and symptoms and substantiates the condition/diagnosis for the procedure is being requested."
                           }
                       },
                       {
                           "valueCoding": {
+                              "code": "Evidence of foraminal stenosis at the level corresponding with clinical myotome signs and symptoms and substantiates the condition/diagnosis for the procedure is being requested.",
                               "display": "Evidence of foraminal stenosis at the level corresponding with clinical myotome signs and symptoms and substantiates the condition/diagnosis for the procedure is being requested."
                           }
                       },
@@ -3794,11 +4433,21 @@
                   "type": "date",
                   "linkId": "3.3",
                   "text": "MRI or CT results or physician interpretation. Encounter date of Radiologic results:",
+                  "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                        "valueExpression": {
+                          "language": "text/cql",
+                          "expression": "MRIEncounterDate"
+                        }
+                      }
+                  ],
                   "enableWhen": [
                       {
                           "question": "2.1",
                           "operator": "=",
                           "answerCoding": {
+                              "code": "Symptomatic Cervical Canal Stenosis",
                               "display": "Symptomatic Cervical Canal Stenosis"
                           }
                       }
@@ -3820,6 +4469,13 @@
                                   }
                               ]
                           }
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                        "valueExpression": {
+                          "language": "text/cql",
+                          "expression": "MRIResultsSymptomaticCervicalCanalStenosis"
+                        }
                       }
                   ],
                   "linkId": "3.4",
@@ -3829,6 +4485,7 @@
                           "question": "2.1",
                           "operator": "=",
                           "answerCoding": {
+                              "code": "Symptomatic Cervical Canal Stenosis",
                               "display": "Symptomatic Cervical Canal Stenosis"
                           }
                       }
@@ -3838,11 +4495,7 @@
                   "answerOption": [
                       {
                           "valueCoding": {
-                              "display": "Symptomatic cervical canal stenosis"
-                          }
-                      },
-                      {
-                          "valueCoding": {
+                              "code": "Evidence of central canal stenosis at the corresponding level with clinical myotome signs and symptoms and substantiates the condition/diagnosis for the procedure being requested",
                               "display": "Evidence of central canal stenosis at the corresponding level with clinical myotome signs and symptoms and substantiates the condition/diagnosis for the procedure being requested"
                           }
                       },
@@ -4058,12 +4711,12 @@
                       },
                       {
                           "valueCoding": {
-                              "display": "Congenital short pedicles Shortened Pedicles: Direct mention of short pedicles or congenitally shortened pedicles.   Reduced Spinal Canal Diameter: Descriptions such as narrowed spinal canal or reduced anteroposterior (AP) diameter.  Flattened Canal Appearance: Phrases like flattened spinal canal or reduced canal dimensions.  Congenital Stenosis: Indications of congenital spinal stenosis or developmental stenosis.  Uniform Narrowing: Observations of consistent narrowing throughout the spine, often associated with congenital conditions."
+                              "display": "Congenital short pedicles"
                           }
                       },
                       {
                           "valueCoding": {
-                              "display": "Ossification of the posterior longitudinal ligament Ossification: Direct mention of ossification of the posterior longitudinal ligament. Thickened Ligament: Descriptions such as thickened posterior longitudinal ligament. Bone Formation: Phrases like ectopic bone formation or bony overgrowth. Spinal Stenosis: Indications of central canal stenosis caused by ligament ossification. Continuous or Segmental Ossification: Terms like continuous ossification (spanning multiple vertebral levels) or segmental ossification (localized to specific levels).  Hyperdense Signal: On CT, hyperdense signal posterior to the vertebral bodies.   Low Signal Intensity: On MRI, low signal intensity in the posterior longitudinal ligament on T1- and T2-weighted images. Cord Compression: Evidence of spinal cord compression or cord impingement due to ossification."
+                              "display": "Ossification of the posterior longitudinal ligament"
                           }
                       },
                       {
@@ -4082,17 +4735,27 @@
                               "display": "Cord compression with or without increased cord signal"
                           }
                       }
-                  ]
+                ]
               },
               {
                   "type": "date",
                   "linkId": "3.5",
                   "text": "MRI or CT results or physician interpretation. Encounter date of Radiologic results:",
+                  "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                        "valueExpression": {
+                          "language": "text/cql",
+                          "expression": "MRIEncounterDate"
+                        }
+                      }
+                  ],
                   "enableWhen": [
                       {
                           "question": "2.1",
                           "operator": "=",
                           "answerCoding": {
+                              "code": "Decompression or stabilization of the cervical spine",
                               "display": "Decompression or stabilization of the cervical spine"
                           }
                       }
@@ -4114,6 +4777,13 @@
                                   }
                               ]
                           }
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                        "valueExpression": {
+                          "language": "text/cql",
+                          "expression": "MRIResultsDecompressionOrStabilizationOfCervicalSpine"
+                        }
                       }
                   ],
                   "linkId": "3.6",
@@ -4123,6 +4793,7 @@
                           "question": "2.1",
                           "operator": "=",
                           "answerCoding": {
+                              "code": "Decompression or stabilization of the cervical spine",
                               "display": "Decompression or stabilization of the cervical spine"
                           }
                       }
@@ -4733,12 +5404,49 @@
                   "linkId": "4.1",
                   "text": "Evidence of relevant symptoms?",
                   "required": true,
-                  "repeats": false
+                  "repeats": false,
+                  "enableBehavior": "any",
+                  "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                        "valueExpression": {
+                          "language": "text/cql",
+                          "expression": "EvidenceOfRelavantSymptoms"
+                        }
+                      }
+                  ],
+                  "enableWhen": [
+                      {
+                          "question": "2.1",
+                          "operator": "=",
+                          "answerCoding": {
+                              "code": "Symptomatic Cervical Canal Stenosis",
+                              "display": "Symptomatic Cervical Canal Stenosis"
+                          }
+                      },
+                      {
+                        "question": "2.1",
+                        "operator": "=",
+                        "answerCoding": {
+                            "code": "Symptomatic Cervical Nerve Root Impingement",
+                            "display": "Symptomatic Cervical Nerve Root Impingement"
+                        }
+                    }
+                  ]
               },
               {
                   "type": "date",
                   "linkId": "4.2",
                   "text": " Encounter Date",
+                  "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                        "valueExpression": {
+                          "language": "text/cql",
+                          "expression": "EvidenceOfRelavantSymptomsEncounterDate"
+                        }
+                      }
+                  ],
                   "enableWhen": [
                       {
                           "question": "4.1",
@@ -4785,6 +5493,7 @@
                               }
                           ],
                           "valueCoding": {
+                              "code": "None",
                               "display": "None"
                           }
                       },
@@ -4796,6 +5505,7 @@
                               }
                           ],
                           "valueCoding": {
+                              "code": "Mild",
                               "display": "Mild"
                           }
                       },
@@ -4807,6 +5517,7 @@
                               }
                           ],
                           "valueCoding": {
+                              "code": "Moderate",
                               "display": "Moderate"
                           }
                       },
@@ -4818,6 +5529,7 @@
                               }
                           ],
                           "valueCoding": {
+                              "code": "Severe",
                               "display": "Severe"
                           }
                       }
@@ -4837,6 +5549,13 @@
                                   }
                               ]
                           }
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                        "valueExpression": {
+                          "language": "text/cql",
+                          "expression": "RecurringPersistantRadicularPain"
+                        }
                       }
                   ],
                   "linkId": "4.4",
@@ -4846,19 +5565,30 @@
                           "question": "4.1",
                           "operator": "=",
                           "answerBoolean": true
+                      },
+                      {
+                          "question": "2.1",
+                          "operator": "=",
+                          "answerCoding": {
+                              "code": "Symptomatic Cervical Nerve Root Impingement",
+                              "display": "Symptomatic Cervical Nerve Root Impingement"
+                          }
                       }
                   ],
+                  "enableBehavior": "all",
                   "required": true,
                   "repeats": false,
                   "answerOption": [
                       {
                           "valueCoding": {
-                              "display": "Radicular pain that aligns with diagnostic imaging findings."
+                              "code": "Radicular pain that aligns with diagnostic imaging findings",
+                              "display": "Radicular pain that aligns with diagnostic imaging findings"
                           }
                       },
                       {
                           "valueCoding": {
-                              "display": "Radicular pain that DOES NOT align with diagnostic imaging findings."
+                              "code": "Radicular pain that DOES NOT align with diagnostic imaging findings",
+                              "display": "Radicular pain that DOES NOT align with diagnostic imaging findings"
                           }
                       }
                   ]
@@ -4877,6 +5607,13 @@
                                   }
                               ]
                           }
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                        "valueExpression": {
+                          "language": "text/cql",
+                          "expression": "SensationOfPainBodySite"
+                        }
                       }
                   ],
                   "linkId": "4.5",
@@ -4886,53 +5623,49 @@
                           "question": "4.4",
                           "operator": "=",
                           "answerCoding": {
-                              "display": "Radicular pain that aligns with diagnostic imaging findings."
+                              "code": "Radicular pain that aligns with diagnostic imaging findings",
+                              "display": "Radicular pain that aligns with diagnostic imaging findings"
                           }
                       }
                   ],
+                  "enableBehavior": "all",
                   "required": true,
                   "repeats": true,
                   "answerOption": [
                       {
                           "valueCoding": {
-                              "system": "SNOMED",
                               "code": "212198000",
                               "display": "Radicular pain: Back of head and upper neck"
                           }
                       },
                       {
                           "valueCoding": {
-                              "system": "SNOMED",
                               "code": "212199003",
                               "display": "Radicular pain: (rare) Side and back of neck"
                           }
                       },
                       {
                           "valueCoding": {
-                              "system": "SNOMED",
                               "code": "212200005",
                               "display": "Radicular pain: Localized to the base of the neck and over the shoulder."
                           }
                       },
                       {
                           "valueCoding": {
-                              "system": "SNOMED",
                               "code": "279039007",
-                              "display": " Radicular pain: Pain radiating from the neck to the lateral upper arm (deltoid)."
+                              "display": "Radicular pain: Pain radiating from the neck to the lateral upper arm (deltoid)."
                           }
                       },
                       {
                           "valueCoding": {
-                              "system": "SNOMED",
                               "code": "212202003",
                               "display": "Radicular pain: Running from the neck, over the shoulder, lateral outer arm, to the thumb and index finger."
                           }
                       },
                       {
                           "valueCoding": {
-                              "system": "SNOMED",
                               "code": "212203008",
-                              "display": " Radicular pain: Pain from the neck to the back of the shoulder back of the arm and into the middle finger."
+                              "display": "Radicular pain: Pain from the neck to the back of the shoulder back of the arm and into the middle finger."
                           }
                       }
                   ]
@@ -4951,35 +5684,36 @@
                                   }
                               ]
                           }
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                        "valueExpression": {
+                          "language": "text/cql",
+                          "expression": "SensationOfPain"
+                        }
                       }
                   ],
                   "linkId": "4.6",
-                  "code": [
-                      {
-                          "system": "SNOMED",
-                          "code": "276435006"
-                      }
-                  ],
                   "text": "The description/sensation of the pain",
                   "enableWhen": [
-                      {
-                          "question": "4.1",
-                          "operator": "=",
-                          "answerBoolean": true
-                      }
+                    {
+                      "question": "4.1",
+                      "operator": "=",
+                      "answerBoolean": true
+                    }
                   ],
                   "required": true,
                   "repeats": true,
                   "answerOption": [
                       {
                           "valueCoding": {
-                              "system": "SNOMED",
                               "code": "36349006",
                               "display": "Burning"
                           }
                       },
                       {
                           "valueCoding": {
+                              "code": "Electric shock-like",
                               "display": "Electric shock-like"
                           }
                       },
@@ -5015,6 +5749,7 @@
                       },
                       {
                           "valueCoding": {
+                              "code": "Other",
                               "display": "Other"
                           }
                       }
@@ -5029,6 +5764,7 @@
                           "question": "4.6",
                           "operator": "=",
                           "answerCoding": {
+                              "code": "Other",
                               "display": "Other"
                           }
                       }
@@ -5060,16 +5796,19 @@
                           "answerOption": [
                               {
                                   "valueCoding": {
+                                      "code": "Present",
                                       "display": "Present"
                                   }
                               },
                               {
                                   "valueCoding": {
+                                      "code": "Absent",
                                       "display": "Absent"
                                   }
                               },
                               {
                                   "valueCoding": {
+                                      "code": "N/A",
                                       "display": "N/A"
                                   }
                               }
@@ -5098,16 +5837,19 @@
                           "answerOption": [
                               {
                                   "valueCoding": {
+                                      "code": "Present",
                                       "display": "Present"
                                   }
                               },
                               {
                                   "valueCoding": {
+                                      "code": "Absent",
                                       "display": "Absent"
                                   }
                               },
                               {
                                   "valueCoding": {
+                                      "code": "N/A",
                                       "display": "N/A"
                                   }
                               }
@@ -5136,16 +5878,19 @@
                           "answerOption": [
                               {
                                   "valueCoding": {
+                                      "code": "Present",
                                       "display": "Present"
                                   }
                               },
                               {
                                   "valueCoding": {
+                                      "code": "Absent",
                                       "display": "Absent"
                                   }
                               },
                               {
                                   "valueCoding": {
+                                      "code": "N/A",
                                       "display": "N/A"
                                   }
                               }
@@ -5174,16 +5919,19 @@
                           "answerOption": [
                               {
                                   "valueCoding": {
+                                      "code": "Present",
                                       "display": "Present"
                                   }
                               },
                               {
                                   "valueCoding": {
+                                      "code": "Absent",
                                       "display": "Absent"
                                   }
                               },
                               {
                                   "valueCoding": {
+                                      "code": "N/A",
                                       "display": "N/A"
                                   }
                               }
@@ -5224,24 +5972,100 @@
                           "question": "4.1",
                           "operator": "=",
                           "answerBoolean": true
+                      },
+                      {
+                          "question": "2.1",
+                          "operator": "=",
+                          "answerCoding": {
+                              "code": "Symptomatic Cervical Canal Stenosis",
+                              "display": "Symptomatic Cervical Canal Stenosis"
+                          }
                       }
                   ],
+                  "enableBehavior": "all",
                   "required": true,
                   "repeats": false,
                   "answerOption": [
                       {
                           "valueCoding": {
+                              "code": "N/A",
                               "display": "N/A"
                           }
                       },
                       {
                           "valueCoding": {
+                              "code": "Spastic gait, loss of manual dexterity, problems with sphincter control",
                               "display": "Spastic gait, loss of manual dexterity, problems with sphincter control"
                           }
                       },
                       {
                           "valueCoding": {
+                              "code": "No",
                               "display": "No"
+                          }
+                      }
+                  ]
+              },
+              {
+                  "type": "choice",
+                  "extension": [
+                      {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                              "coding": [
+                                  {
+                                      "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                      "code": "check-box",
+                                      "display": "Check-box"
+                                  }
+                              ]
+                          }
+                      }
+                  ],
+                  "linkId": "4.10",
+                  "text": "Substantial functional limitation is present such as: ",
+                  "enableWhen": [
+                      {
+                          "question": "2.1",
+                          "operator": "=",
+                          "answerCoding": {
+                              "code": "Decompression or stabilization of the cervical spine",
+                              "display": "Decompression or stabilization of the cervical spine"
+                          }
+                      }
+                  ],
+                  "enableBehavior": "all",
+                  "required": true,
+                  "repeats": true,
+                  "answerOption": [
+                      {
+                          "valueCoding": {
+                              "code": "Severe neck pain",
+                              "display": "Severe neck pain"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Difficulty ambulating",
+                              "display": "Difficulty ambulating"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Decreased ability to perform ADLs",
+                              "display": "Decreased ability to perform ADLs"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Decreased ability to maintain forward gaze",
+                              "display": "Decreased ability to maintain forward gaze"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "Progressing deformity",
+                              "display": "Progressing deformity"
                           }
                       }
                   ]
@@ -5252,9 +6076,6 @@
           "text": "Corresponding Symptoms & Impact on Activities of Daily Living"
       },
       {
-          "type": "group",
-          "linkId": "5",
-          "text": "Failure of Conventional Treatments Documented",
           "item": [
               {
                   "type": "choice",
@@ -5274,21 +6095,43 @@
                   ],
                   "linkId": "5.1",
                   "text": "Conventional treatments were attempted and failed?",
+                  "enableWhen": [
+                      {
+                          "question": "2.1",
+                          "operator": "=",
+                          "answerCoding": {
+                              "code": "Symptomatic Cervical Nerve Root Impingement",
+                              "display": "Symptomatic Cervical Nerve Root Impingement"
+                          }
+                      },
+                      {
+                          "question": "2.1",
+                          "operator": "=",
+                          "answerCoding": {
+                              "code": "Symptomatic Cervical Canal Stenosis",
+                              "display": "Symptomatic Cervical Canal Stenosis"
+                          }
+                      }
+                  ],
+                  "enableBehavior": "any",
                   "required": true,
                   "repeats": false,
                   "answerOption": [
                       {
                           "valueCoding": {
+                              "code": "Yes",
                               "display": "Yes"
                           }
                       },
                       {
                           "valueCoding": {
+                              "code": "No",
                               "display": "No"
                           }
                       },
                       {
                           "valueCoding": {
+                              "code": "N/A",
                               "display": "N/A"
                           }
                       }
@@ -5315,9 +6158,94 @@
                   "enableWhen": [
                       {
                           "question": "5.1",
-                          "operator": "!=",
+                          "operator": "=",
                           "answerCoding": {
-                              "display": "N/A"
+                              "code": "No",
+                              "display": "No"
+                          }
+                      },
+                      {
+                          "question": "5.1",
+                          "operator": "=",
+                          "answerCoding": {
+                              "code": "Yes",
+                              "display": "Yes"
+                          }
+                      }
+                  ],
+                  "enableBehavior": "any",
+                  "required": true,
+                  "repeats": true,
+                  "answerOption": [
+                      {
+                          "valueCoding": {
+                              "code": "373873005",
+                              "display": "Medications"
+                          }
+                      },
+                      {
+                        "valueCoding": {
+                            "code": "91251008",
+                            "display": "Physical Therapy"
+                        }
+                      },
+                      {
+                        "valueCoding": {
+                            "code": "44275008",
+                            "display": "Spinal Manipulation"
+                        }
+                      },
+                      {
+                        "valueCoding": {
+                            "code": "228557008",
+                            "display": "Cognitive Behavioral Therapy (CBT)"
+                        }
+                      },
+                      {
+                        "valueCoding": {
+                            "code": "229075007",
+                            "display": "Home Exercise Program"
+                        }
+                      },
+                      {
+                        "valueCoding": {
+                            "code": "44868003",
+                            "display": "Acupuncture"
+                        }
+                      },
+                      {
+                        "valueCoding": {
+                            "code": "Activity/Lifestyle modifications",
+                            "display": "Activity/Lifestyle modifications"
+                        }
+                      }
+                  ]
+              },
+              {
+                  "type": "choice",
+                  "extension": [
+                      {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                              "coding": [
+                                  {
+                                      "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                      "code": "check-box",
+                                      "display": "Check-box"
+                                  }
+                              ]
+                          }
+                      }
+                  ],
+                  "linkId": "5.1.1.a",
+                  "text": "Medications. Provider Note: The reason MUST align with the described cervical related pain.",
+                  "enableWhen": [
+                      {
+                          "question": "5.1.1",
+                          "operator": "=",
+                          "answerCoding": {
+                              "code": "373873005",
+                              "display": "Medications"
                           }
                       }
                   ],
@@ -5326,22 +6254,44 @@
                   "answerOption": [
                       {
                           "valueCoding": {
-                              "display": "Medications"
+                              "code": "373265006",
+                              "display": "Analgesics"
                           }
                       },
                       {
                           "valueCoding": {
-                              "display": "Physical Therapy"
+                              "code": "387517004",
+                              "display": "Acetaminophen (Paracetamol)"
                           }
                       },
                       {
                           "valueCoding": {
-                              "display": "Exercise"
+                              "code": "372665008",
+                              "display": "NSAIDS (Non-Steroidal Anti-Inflammatory Drugs)"
                           }
                       },
                       {
                           "valueCoding": {
-                              "display": "Activity/Lifestyle modifications"
+                              "code": "767560006",
+                              "display": "SNRIs (Serotonin and Norepinephrine Reuptake Inhibitors)"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "404642006",
+                              "display": "Opioids (including Tramadol)"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "LA29126-2",
+                              "display": "Topical Medications"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "116596006",
+                              "display": "Oral Glucocorticoids."
                           }
                       }
                   ]
@@ -5367,43 +6317,102 @@
                   "enableWhen": [
                       {
                           "question": "5.1",
-                          "operator": "!=",
+                          "operator": "=",
                           "answerCoding": {
-                              "display": "N/A"
+                              "code": "Yes",
+                              "display": "Yes"
+                          }
+                      },
+                      {
+                          "question": "5.1",
+                          "operator": "=",
+                          "answerCoding": {
+                              "code": "No",
+                              "display": "No"
                           }
                       }
                   ],
+                  "enableBehavior": "any",
                   "required": true,
                   "repeats": false,
                   "answerOption": [
                       {
                           "valueCoding": {
+                              "code": "Poor/minimal",
                               "display": "Poor/minimal"
                           }
                       },
                       {
                           "valueCoding": {
+                              "code": "Fair response",
                               "display": "Fair response"
                           }
                       },
                       {
                           "valueCoding": {
+                              "code": "Good response",
                               "display": "Good response"
                           }
                       },
                       {
                           "valueCoding": {
+                              "code": "Excellent",
                               "display": "Excellent"
                           }
                       },
                       {
                           "valueCoding": {
+                              "code": "Complete",
                               "display": "Complete"
                           }
                       }
                   ]
+              },
+              {
+                  "type": "choice",
+                  "extension": [
+                      {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                              "coding": [
+                                  {
+                                      "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                      "code": "radio-button",
+                                      "display": "Radio Button"
+                                  }
+                              ]
+                          }
+                      }
+                  ],
+                  "linkId": "5.4",
+                  "text": "Providers documentation supports the beneficiary reported symptoms and the diagnostic interpretation(s).",
+                  "required": true,
+                  "repeats": false,
+                  "answerOption": [
+                      {
+                          "valueCoding": {
+                              "code": "Yes",
+                              "display": "Yes"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "No",
+                              "display": "No"
+                          }
+                      },
+                      {
+                          "valueCoding": {
+                              "code": "N/A",
+                              "display": "N/A"
+                          }
+                      }
+                  ]
               }
-          ]
+          ],
+          "type": "group",
+          "linkId": "5",
+          "text": "Failure of Conventional Treatments Documented"
       }
   ]
 }
