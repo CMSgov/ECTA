@@ -1,122 +1,1683 @@
 {
-    "resourceType": "Questionnaire",
-    "identifier": [
+  "resourceType": "Questionnaire",
+  "id": "questionnaire-veinablation-veinablation",
+  "extension": [
       {
+          "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
+          "valueCanonical": "<FHIR-server>/Library/library-veinablation-Veinablation"
+      },
+      {        
         "system": "http://identifiers.mettles.com/prior_authorization",
-        "value": "medicarefeeforservice-VeinAblation"
+        "value": "medicarefeeforservice-VeinAblation"      
       }
-    ],
-    "name": "VeinAblation",
-    "url": "<FHIR-server>/Questionnaire/questionnaire-lcd1-veinablation",
-    "version": "1.0.0",
-    "title": "VeinAblation",
-    "status": "draft",
-    "subjectType": [
-      "Patient"
-    ],
-    "date": "2019-12-03",
-    "publisher": "Mettle Solutions",
-    "extension": [
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
-        "valueCanonical": "<FHIR-server>/Library/library-lcd1-VeinAblation"
-      }
-    ],
-    "contained": [
-      {
-        "resourceType": "ValueSet",
-        "id": "gender",
-        "name": "Gender",
-        "status": "draft",
-        "description": "Gender",
-        "compose": {
-          "include": [
+  ],
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/4.0/StructureDefinition/Questionnaire"
+    ]
+  },
+  "url": "<FHIR-server>/Questionnaire/questionnaire-veinablation-veinablation",
+  "version": "1.0.0",
+  "name": "VeinAblation",
+  "title": "Vein Ablation",
+  "status": "draft",
+  "date": "2025-09-10",
+  "publisher": "CMS",
+  "purpose": "Prior Authorization for Vein Ablation",
+  "approvalDate": "2025-08-18",
+  "lastReviewDate": "2025-09-10",
+  "item": [
+    {
+      "item": [
+        {
+          "item": [
             {
-              "concept": [
+              "type": "text",
+              "linkId": "1.1.1",
+              "text": "Expedited Reason",
+              "enableWhen": [
                 {
-                  "code": "male",
-                  "display": "Male"
+                  "question": "1",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "Expedited Initial",
+                    "display": "Expedited Initial"
+                  }
                 },
                 {
-                  "code": "female",
-                  "display": "Female"
-                },
-                {
-                  "code": "other",
-                  "display": "Other"
+                  "question": "1",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "Expedited Resbumission",
+                    "display": "Expedited Resbumission"
+                  }
                 }
-              ]
+              ],
+              "enableBehavior": "any",
+              "required": true
+            }
+          ],
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "1",
+          "text": "Request type",
+          "required": true,
+          "repeats": false,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "Initial",
+                "display": "Initial"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Resubmission",
+                "display": "Resubmission"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Expedited Initial",
+                "display": "Expedited Initial"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Expedited Resbumission",
+                "display": "Expedited Resbumission"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "1.2",
+          "text": "Requested Vein Ablation HCPCS/CPT (Maximum of 4)",
+          "required": true,
+          "repeats": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "https://hcpcs.codes/",
+                "code": "36473",
+                "display": "36473  ENDOVENOUS ABLATION THERAPY OF INCOMPETENT VEIN, EXTREMITY, INCLUSIVE OF ALL IMAGING GUIDANCE AND MONITORING, PERCUTANEOUS, MECHANOCHEMICAL; FIRST VEIN TREATED"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "https://hcpcs.codes/",
+                "code": "36474",
+                "display": "36474 ENDOVENOUS ABLATION THERAPY OF INCOMPETENT VEIN, EXTREMITY, INCLUSIVE OF ALL IMAGING GUIDANCE AND MONITORING, PERCUTANEOUS, MECHANOCHEMICAL; SUBSEQUENT VEIN(S) TREATED IN A SINGLE EXTREMITY, EACH THROUGH SEPARATE ACCESS SITES (LIST SEPARATELY IN ADDITION TO CODE FOR PRIMARY PROCEDURE)"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "https://hcpcs.codes/",
+                "code": "36475",
+                "display": "36475 ENDOVENOUS ABLATION THERAPY OF INCOMPETENT VEIN, EXTREMITY, INCLUSIVE OF ALL IMAGING GUIDANCE AND MONITORING, PERCUTANEOUS, RADIOFREQUENCY; FIRST VEIN TREATED"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "https://hcpcs.codes/",
+                "code": "36476",
+                "display": "36476 ENDOVENOUS ABLATION THERAPY OF INCOMPETENT VEIN, EXTREMITY, INCLUSIVE OF ALL IMAGING GUIDANCE AND MONITORING, PERCUTANEOUS, RADIOFREQUENCY; SUBSEQUENT VEIN(S) TREATED IN A SINGLE EXTREMITY, EACH THROUGH SEPARATE ACCESS SITES (LIST SEPARATELY IN ADDITION TO CODE FOR PRIMARY PROCEDURE)"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "https://hcpcs.codes/",
+                "code": "36478",
+                "display": "36478 ENDOVENOUS ABLATION THERAPY OF INCOMPETENT VEIN, EXTREMITY, INCLUSIVE OF ALL IMAGING GUIDANCE AND MONITORING, PERCUTANEOUS, LASER; FIRST VEIN TREATED"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "https://hcpcs.codes/",
+                "code": "36479",
+                "display": "36479 ENDOVENOUS ABLATION THERAPY OF INCOMPETENT VEIN, EXTREMITY, INCLUSIVE OF ALL IMAGING GUIDANCE AND MONITORING, PERCUTANEOUS, LASER; SUBSEQUENT VEIN(S) TREATED IN A SINGLE EXTREMITY, EACH THROUGH SEPARATE ACCESS SITES (LIST SEPARATELY IN ADDITION TO CODE FOR PRIMARY PROCEDURE)"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "https://hcpcs.codes/",
+                "code": "36482",
+                "display": "36482 ENDOVENOUS ABLATION THERAPY OF INCOMPETENT VEIN, EXTREMITY, BY TRANSCATHETER DELIVERY OF A CHEMICAL ADHESIVE (EG, CYANOACRYLATE) REMOTE FROM THE ACCESS SITE, INCLUSIVE OF ALL IMAGING GUIDANCE AND MONITORING, PERCUTANEOUS; FIRST VEIN TREATED"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "https://hcpcs.codes/",
+                "code": "36483",
+                "display": "36483 ENDOVENOUS ABLATION THERAPY OF INCOMPETENT VEIN, EXTREMITY, BY TRANSCATHETER DELIVERY OF A CHEMICAL ADHESIVE (EG, CYANOACRYLATE) REMOTE FROM THE ACCESS SITE, INCLUSIVE OF ALL IMAGING GUIDANCE AND MONITORING, PERCUTANEOUS; SUBSEQUENT VEIN(S) TREATED IN A SINGLE EXTREMITY, EACH THROUGH SEPARATE ACCESS SITES (LIST SEPARATELY IN ADDITION TO CODE FOR PRIMARY PROCEDURE)"
+              }
             }
           ]
         }
-      }
-    ],
-    "item": [
-      {
-        "linkId": "1",
-        "text": "Diagnosis/Procedure",
-        "type": "group",
-        "item": [
-          {
-            "linkId": "1.1",
-            "text": "Relevant Diagnosis",
-            "type": "string",
-            "required": true,
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-                "valueExpression": {
-                  "language": "text/cql",
-                  "expression": "RelevantDiagnosis"
-                }
+      ],
+      "type": "group",
+      "linkId": "1.1",
+      "text": "Medical Coding & Procedure Details"
+    },
+    {
+      "item": [
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ]
               }
-            ]
-          }
-        ]
-      },
-      {
-        "linkId": "2",
-        "text": "Functional Information",
-        "type": "group",
-        "item": [
-          {
-            "linkId": "2.1",
-            "text": "Does the size of symptomatic varices measure about 3-6 mm ?",
-            "type": "boolean",
-            "required": true
-          },
-          {
-            "linkId": "2.2",
-            "text": "Does the patient display symptoms and functional problems, attributable only to the secondary, smaller vessels ?",
-            "type": "boolean",
-            "required": true
-          },
-          {
-            "linkId": "2.3",
-            "text": "Is the treatment for varicose veins, being performed for cosmetic reasons ?",
-            "type": "boolean",
-            "required": true
-          },
-          {
-            "linkId": "2.4",
-            "text": "Is a Reinjection being performed, following recanalization or failure of a vein closure without recurrent signs or symptoms ?",
-            "type": "boolean",
-            "required": true
-          },
-          {
-            "linkId": "2.5",
-            "text": "Does the interventional treatment use equipment not approved for such purposes by the FDA ?",
-            "type": "boolean",
-            "required": true
-          },
-          {
-            "linkId": "2.6",
-            "text": "Does the patient have any Advanced generalized systemic disease that limits quality-of life improvements expected following venous intervention ?",
-            "type": "boolean",
-            "required": true
-          }
-        ]
-      }
-    ]
-  }
-  
+            }
+          ],
+          "linkId": "2.1",
+          "text": "The beneficiary has a supporting symptomatic  diagnosis.",
+          "required": true,
+          "repeats": false,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "I80.01",
+                "display": "Phlebitis and thrombophlebitis of superficial vessels of right lower extremity"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "I80.02",
+                "display": "Phlebitis and thrombophlebitis of superficial vessels of left lower extremity"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "I80.03",
+                "display": "Phlebitis and thrombophlebitis of superficial vessels of lower extremities, bilateral"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "I83.011",
+                "display": "Varicose veins of right lower extremity with ulcer of thigh"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "I83.012",
+                "display": "Varicose veins of right lower extremity with ulcer of calf"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "I83.013",
+                "display": "Varicose veins of right lower extremity with ulcer of ankle"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "I83.014",
+                "display": "Varicose veins of right lower extremity with ulcer of heel and midfoot"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "I83.015",
+                "display": "Varicose veins of right lower extremity with ulcer other part of foot"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "I83.018",
+                "display": "Varicose veins of right lower extremity with ulcer other part of lower leg"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "I83.021",
+                "display": "Varicose veins of left lower extremity with ulcer of thigh"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "I83.022",
+                "display": "Varicose veins of left lower extremity with ulcer of calf"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "I83.023",
+                "display": "Varicose veins of left lower extremity with ulcer of ankle"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "I83.024",
+                "display": "Retrieving data. Wait a few seconds and try to cut or copy again"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "I83.025",
+                "display": "Varicose veins of left lower extremity with ulcer other part of foot"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "I83.028",
+                "display": "Varicose veins of left lower extremity with ulcer other part of lower leg"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "I83.11",
+                "display": "Varicose veins of right lower extremity with inflammation"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "I83.12",
+                "display": "Varicose veins of left lower extremity with inflammation"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "I83.211",
+                "display": "Varicose veins of right lower extremity with both ulcer of thigh and inflammation"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "I83.212",
+                "display": "Varicose veins of right lower extremity with both ulcer of calf and inflammation"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "I83.213",
+                "display": "Varicose veins of right lower extremity with both ulcer of ankle and inflammation"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "I83.214",
+                "display": "Varicose veins of right lower extremity with both ulcer of heel and midfoot and inflammation"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "I83.215",
+                "display": "Varicose veins of right lower extremity with both ulcer other part of foot and inflammation"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "I83.218",
+                "display": "Varicose veins of right lower extremity with both ulcer of other part of lower extremity and inflammation"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "I83.221",
+                "display": "Varicose veins of left lower extremity with both ulcer of thigh and inflammation"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "I83.222",
+                "display": "Varicose veins of left lower extremity with both ulcer of calf and inflammation"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "I83.223",
+                "display": "Varicose veins of left lower extremity with both ulcer of ankle and inflammation"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "I83.225",
+                "display": "Varicose veins of left lower extremity with both ulcer of heel and midfoot and inflammation"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "I83.228",
+                "display": "Varicose veins of left lower extremity with both ulcer of other part of lower extremity and inflammation"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "I83.811",
+                "display": "Varicose veins of right lower extremity with pain"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "I83.812",
+                "display": "Varicose veins of left lower extremity with pain"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "I83.813",
+                "display": "Varicose veins of bilateral lower extremities with pain"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "I83.891",
+                "display": "Varicose veins of right lower extremity with other complications"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "I83.892",
+                "display": "Varicose veins of left lower extremity with other complications"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "I83.893",
+                "display": "Varicose veins of bilateral lower extremities with other complications"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "I87.311",
+                "display": "Chronic venous hypertension (idiopathic) with ulcer of right lower extremity​"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "I87.312",
+                "display": "Chronic venous hypertension (idiopathic) with ulcer of left lower extremity"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "I87.313",
+                "display": "Chronic venous hypertension (idiopathic) with ulcer of bilateral lower extremity"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "I87.321",
+                "display": "Chronic venous hypertension (idiopathic) with inflammation of right lower extremity"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "I87.322",
+                "display": "Chronic venous hypertension (idiopathic) with inflammation of left lower extremity"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "I87.323",
+                "display": "Chronic venous hypertension (idiopathic) with inflammation of bilateral lower extremity"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "I87.331",
+                "display": "Chronic venous hypertension (idiopathic) with ulcer and inflammation of right lower extremity"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "I87.332",
+                "display": "Chronic venous hypertension (idiopathic) with ulcer and inflammation of left lower extremity"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "I87.333",
+                "display": "Chronic venous hypertension (idiopathic) with ulcer and inflammation of bilateral lower extremity"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "I87.391",
+                "display": "Chronic venous hypertension (idiopathic) with other complications of right lower extremity"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "I87.392",
+                "display": "Chronic venous hypertension (idiopathic) with other complications of left lower extremity"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "I87.393",
+                "display": "Chronic venous hypertension (idiopathic) with other complications of bilateral lower extremity"
+              }
+            }
+          ]
+        },
+        {
+          "type": "boolean",
+          "linkId": "2.2",
+          "text": "Supporting H & P documentation that support venous insufficiency.",
+          "required": true,
+          "repeats": false
+        },
+        {
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "2.3.1",
+              "text": "If required, does the documented reflux show a time greater than or equal to 500 msec? (>= 500 msec)",
+              "enableWhen": [
+                {
+                  "question": "2.3",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "Y",
+                    "display": "Yes, scan results are positive for reflux"
+                  }
+                }
+              ],
+              "required": true,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "Y",
+                    "display": "Yes, reflux time >= 500 msec"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "N",
+                    "display": "No, reflux time < 500 msec or absent"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "NA",
+                    "display": "NA - Not required by LCD"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "2.3",
+          "text": "Venous duplex scan documenting reflux is present.",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "Y",
+                "display": "Yes, scan results are positive for reflux"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "N",
+                "display": "No, scan results absent, negative, or inadequate to support reflux requirement"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "NA",
+                "display": "NA - Not required by LCD"
+              }
+            }
+          ]
+        },
+        {
+          "item": [
+            {
+              "type": "text",
+              "linkId": "2.4.1",
+              "text": "If yes, documentation must be present to clearly support why the procedure(s) could not be performed on a single day",
+              "enableWhen": [
+                {
+                  "question": "2.4",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "Y"
+                  }
+                }
+              ],
+              "required": true
+            }
+          ],
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "2.4",
+          "text": "The beneficiary has not had a vein of the same extremity treated within the last 90 days.",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "Y",
+                "display": "Yes"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "N",
+                "display": "No"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "NA",
+                "display": "NA - Not required by LCD"
+              }
+            }
+          ]
+        },
+        {
+          "item": [
+            {
+              "type": "text",
+              "linkId": "2.5.1",
+              "text": "Score",
+              "enableWhen": [
+                {
+                  "question": "2.5",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "Y",
+                    "display": "Yes"
+                  }
+                }
+              ],
+              "required": true
+            }
+          ],
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "2.5",
+          "text": "VCSS – Venous Clinical Severity Score",
+          "repeats": false,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "Y",
+                "display": "Yes"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "N",
+                "display": "No"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "NA",
+                "display": "N/A if not required"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "2.6",
+          "text": "The beneficiary's clinical classification",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "C0",
+                "display": "C0 - No visible or palpable signs of venous disease"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "C1",
+                "display": "C1 - Telangiectasias, reticular veins"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "C2",
+                "display": "C2 - Varicose veins"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "C2r",
+                "display": "C2r - Recurrent varicose veins"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "C3",
+                "display": "C3 - Edema"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "C4",
+                "display": "C4 - Changes in skin and subcutaneous tissue"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "C4a",
+                "display": "C4a - Pigmentation or eczema"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "C4b",
+                "display": "C4b - Lipodermatosclerosis or atrophie blanche"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "C4c",
+                "display": "C4c - Corona phlebectatica"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "C5",
+                "display": "C5 - Healed"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "C6",
+                "display": "C6 - Active venous ulcer"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "C6r",
+                "display": "C6r - Recurrent active venous ulcer"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "S",
+                "display": "S - With symptoms attributable to venous disease"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "A",
+                "display": "A - Absence of symptoms attributable to venous disease"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "NA",
+                "display": "NA - Not required by LCD"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "2.7",
+          "text": "Documentation demonstrates clinical findings that support CEAP C2  - C6 disease AND reflux is present per diagnostic test results documentation.",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "Y",
+                "display": "Yes (both clinical documentation and reflux requirement found)"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "N",
+                "display": "No, either clinical documentation and/or reflux documentation are missing"
+              }
+            }
+          ]
+        },
+        {
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "radio-button",
+                        "display": "Radio Button"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "2.8.1",
+              "text": "There is no evidence of other causes for the edema/ulceration pain?",
+              "enableWhen": [
+                {
+                  "question": "2.8",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "pain-edema"
+                  }
+                }
+              ],
+              "required": true,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "absence",
+                    "display": "Absence of other causes"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "presence",
+                    "display": "Presence of other causes"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "2.8",
+          "text": "Beneficiary is symptomatic and has documented evidence of any of the following signs and symptoms of the significantly diseased vessel(s) of the lower extremity(s)",
+          "required": true,
+          "repeats": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "1237117000",
+                "display": "Stasis ulcer of lower leg (secondary to venous stasis)"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "pain-edema",
+                "display": "Evidence of significant lower extremity pain and edema secondary to documented venous insufficiency. The symptoms interfere with activities of daily living."
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "40283005",
+                "display": "Recurrent episodes of superficial phlebitis"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "35498005",
+                "display": "Stasis dermatitis (thickened, discolored skin on the ankle, itching and discomfort in the affected area around the ankles, may worsen through open sores that may ooze or crust over, discoloration of the skin associated with poor circulation)"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "refractory-edema",
+                "display": "Refractory dependent edema"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "266330004",
+                "display": "Bleeding from diseased vessels of the lower extremities"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Bleeding associated with ruptured superficial varicosity",
+                "display": "Bleeding associated with ruptured superficial varicosity"
+              }
+            }
+          ]
+        },
+        {
+          "type": "boolean",
+          "linkId": "2.9",
+          "text": "Conservative therapy waived?",
+          "required": true,
+          "repeats": false
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "2.10",
+          "text": "Vein ablation therapy is not medically necessary if any of the stated conditions are present. (select all that apply)",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "N",
+                "display": " No contraindications"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "1254951000",
+                "display": "Venous obstruction"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "128053003",
+                "display": "Thrombosis/thrombus/DVT"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "267043001",
+                "display": "Vein tortuosity that would prevent catheter advancement"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "724440007",
+                "display": "Significant peripheral artery disease"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "40283005",
+                "display": "Recurrent superficial thrombophlebitis"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "NA",
+                "display": "NA - Not required by LCD"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "2.11",
+          "text": "36475/36478 radiofrequency/laser ablation limited to greater/lesser saphenous veins?",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "Y",
+                "display": "Yes"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "N",
+                "display": "No"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "NA",
+                "display": "NA - Not required by LCD"
+              }
+            }
+          ]
+        },
+        {
+          "type": "boolean",
+          "linkId": "2.12",
+          "text": "Only FDA approved devices will be used?",
+          "required": true
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "2.13",
+          "text": "36473/36474 MOCA: Maximum vein diameter of 12 mm",
+          "enableWhen": [
+            {
+              "question": "1.2",
+              "operator": "=",
+              "answerCoding": {
+                "system": "https://hcpcs.codes/",
+                "code": "36473",
+                "display": "36473  ENDOVENOUS ABLATION THERAPY OF INCOMPETENT VEIN, EXTREMITY, INCLUSIVE OF ALL IMAGING GUIDANCE AND MONITORING, PERCUTANEOUS, MECHANOCHEMICAL; FIRST VEIN TREATED"
+              }
+            },
+            {
+              "question": "1.2",
+              "operator": "=",
+              "answerCoding": {
+                "system": "https://hcpcs.codes/",
+                "code": "36474",
+                "display": "36474 ENDOVENOUS ABLATION THERAPY OF INCOMPETENT VEIN, EXTREMITY, INCLUSIVE OF ALL IMAGING GUIDANCE AND MONITORING, PERCUTANEOUS, MECHANOCHEMICAL; SUBSEQUENT VEIN(S) TREATED IN A SINGLE EXTREMITY, EACH THROUGH SEPARATE ACCESS SITES (LIST SEPARATELY IN ADDITION TO CODE FOR PRIMARY PROCEDURE)"
+              }
+            }
+          ],
+          "enableBehavior": "any",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "Y",
+                "display": "Yes, diameter <= 12 mm"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "N",
+                "display": "No, diameter > 12 mm"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "NA",
+                "display": "NA - Not required by LCD"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "2.14",
+          "text": "36475/36476 ERFA: Maximum vein diameter of 12 mm.",
+          "enableWhen": [
+            {
+              "question": "1.2",
+              "operator": "=",
+              "answerCoding": {
+                "system": "https://hcpcs.codes/",
+                "code": "36475",
+                "display": "36475 ENDOVENOUS ABLATION THERAPY OF INCOMPETENT VEIN, EXTREMITY, INCLUSIVE OF ALL IMAGING GUIDANCE AND MONITORING, PERCUTANEOUS, RADIOFREQUENCY; FIRST VEIN TREATED"
+              }
+            },
+            {
+              "question": "1.2",
+              "operator": "=",
+              "answerCoding": {
+                "system": "https://hcpcs.codes/",
+                "code": "36476",
+                "display": "36476 ENDOVENOUS ABLATION THERAPY OF INCOMPETENT VEIN, EXTREMITY, INCLUSIVE OF ALL IMAGING GUIDANCE AND MONITORING, PERCUTANEOUS, RADIOFREQUENCY; SUBSEQUENT VEIN(S) TREATED IN A SINGLE EXTREMITY, EACH THROUGH SEPARATE ACCESS SITES (LIST SEPARATELY IN ADDITION TO CODE FOR PRIMARY PROCEDURE)"
+              }
+            }
+          ],
+          "enableBehavior": "any",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "Y",
+                "display": "Yes, diameter <= 12 mm"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "N",
+                "display": "No, diameter > 12 mm"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "NA",
+                "display": "NA - Not required by LCD"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "2.15",
+          "text": "36475/36476 ERFA: Maximum vein diameter of 20 mm.",
+          "enableWhen": [
+            {
+              "question": "1.2",
+              "operator": "=",
+              "answerCoding": {
+                "system": "https://hcpcs.codes/",
+                "code": "36475",
+                "display": "36475 ENDOVENOUS ABLATION THERAPY OF INCOMPETENT VEIN, EXTREMITY, INCLUSIVE OF ALL IMAGING GUIDANCE AND MONITORING, PERCUTANEOUS, RADIOFREQUENCY; FIRST VEIN TREATED"
+              }
+            },
+            {
+              "question": "1.2",
+              "operator": "=",
+              "answerCoding": {
+                "system": "https://hcpcs.codes/",
+                "code": "36476",
+                "display": "36476 ENDOVENOUS ABLATION THERAPY OF INCOMPETENT VEIN, EXTREMITY, INCLUSIVE OF ALL IMAGING GUIDANCE AND MONITORING, PERCUTANEOUS, RADIOFREQUENCY; SUBSEQUENT VEIN(S) TREATED IN A SINGLE EXTREMITY, EACH THROUGH SEPARATE ACCESS SITES (LIST SEPARATELY IN ADDITION TO CODE FOR PRIMARY PROCEDURE)"
+              }
+            }
+          ],
+          "enableBehavior": "any",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "Y",
+                "display": "Yes, diameter <= 20 mm"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "N",
+                "display": "No, diameter > 20 mm"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "NA",
+                "display": "NA - Not required by LCD"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "2.16",
+          "text": "36478/36479 Laser Ablation: Maximum vein diameter of 30 mm.",
+          "enableWhen": [
+            {
+              "question": "1.2",
+              "operator": "=",
+              "answerCoding": {
+                "system": "https://hcpcs.codes/",
+                "code": "36478",
+                "display": "36478 ENDOVENOUS ABLATION THERAPY OF INCOMPETENT VEIN, EXTREMITY, INCLUSIVE OF ALL IMAGING GUIDANCE AND MONITORING, PERCUTANEOUS, LASER; FIRST VEIN TREATED"
+              }
+            },
+            {
+              "question": "1.2",
+              "operator": "=",
+              "answerCoding": {
+                "system": "https://hcpcs.codes/",
+                "code": "36479",
+                "display": "36479 ENDOVENOUS ABLATION THERAPY OF INCOMPETENT VEIN, EXTREMITY, INCLUSIVE OF ALL IMAGING GUIDANCE AND MONITORING, PERCUTANEOUS, LASER; SUBSEQUENT VEIN(S) TREATED IN A SINGLE EXTREMITY, EACH THROUGH SEPARATE ACCESS SITES (LIST SEPARATELY IN ADDITION TO CODE FOR PRIMARY PROCEDURE)"
+              }
+            }
+          ],
+          "enableBehavior": "any",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "Y",
+                "display": "Yes, diameter <= 30 mm"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "N",
+                "display": "No, diameter > 30 mm"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "NA",
+                "display": "NA - Not required by LCD"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "2.17",
+          "text": "36478/36479 Laser ablation: Maximum vein diameter of 20 mm.",
+          "enableWhen": [
+            {
+              "question": "1.2",
+              "operator": "=",
+              "answerCoding": {
+                "system": "https://hcpcs.codes/",
+                "code": "36478",
+                "display": "36478 ENDOVENOUS ABLATION THERAPY OF INCOMPETENT VEIN, EXTREMITY, INCLUSIVE OF ALL IMAGING GUIDANCE AND MONITORING, PERCUTANEOUS, LASER; FIRST VEIN TREATED"
+              }
+            },
+            {
+              "question": "1.2",
+              "operator": "=",
+              "answerCoding": {
+                "system": "https://hcpcs.codes/",
+                "code": "36479",
+                "display": "36479 ENDOVENOUS ABLATION THERAPY OF INCOMPETENT VEIN, EXTREMITY, INCLUSIVE OF ALL IMAGING GUIDANCE AND MONITORING, PERCUTANEOUS, LASER; SUBSEQUENT VEIN(S) TREATED IN A SINGLE EXTREMITY, EACH THROUGH SEPARATE ACCESS SITES (LIST SEPARATELY IN ADDITION TO CODE FOR PRIMARY PROCEDURE)"
+              }
+            }
+          ],
+          "enableBehavior": "any",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "Y",
+                "display": "Yes, diameter <= 20 mm"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "N",
+                "display": "No, diameter > 20 mm"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "NA",
+                "display": "NA - Not required by LCD"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "2.18",
+          "text": "36482/36483 CAE: Maximum vein diameter 12 mm.",
+          "enableWhen": [
+            {
+              "question": "1.2",
+              "operator": "=",
+              "answerCoding": {
+                "system": "https://hcpcs.codes/",
+                "code": "36482",
+                "display": "36482 ENDOVENOUS ABLATION THERAPY OF INCOMPETENT VEIN, EXTREMITY, BY TRANSCATHETER DELIVERY OF A CHEMICAL ADHESIVE (EG, CYANOACRYLATE) REMOTE FROM THE ACCESS SITE, INCLUSIVE OF ALL IMAGING GUIDANCE AND MONITORING, PERCUTANEOUS; FIRST VEIN TREATED"
+              }
+            },
+            {
+              "question": "1.2",
+              "operator": "=",
+              "answerCoding": {
+                "system": "https://hcpcs.codes/",
+                "code": "36483",
+                "display": "36483 ENDOVENOUS ABLATION THERAPY OF INCOMPETENT VEIN, EXTREMITY, BY TRANSCATHETER DELIVERY OF A CHEMICAL ADHESIVE (EG, CYANOACRYLATE) REMOTE FROM THE ACCESS SITE, INCLUSIVE OF ALL IMAGING GUIDANCE AND MONITORING, PERCUTANEOUS; SUBSEQUENT VEIN(S) TREATED IN A SINGLE EXTREMITY, EACH THROUGH SEPARATE ACCESS SITES (LIST SEPARATELY IN ADDITION TO CODE FOR PRIMARY PROCEDURE)"
+              }
+            }
+          ],
+          "enableBehavior": "any",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "Y",
+                "display": "Yes, diameter <= 12 mm"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "N",
+                "display": "No, diameter > 12 mm"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "NA",
+                "display": "NA - Not required by LCD"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "2.19",
+          "text": "Evidence of conservative treatment.",
+          "required": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "Y",
+                "display": "Yes, meets LCD guidance"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "N",
+                "display": "No, does not meet LCD guidance"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "NA",
+                "display": "NA - Not required by LCD"
+              }
+            }
+          ]
+        },
+        {
+          "type": "boolean",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "2.20",
+          "text": "Documentation that conservative therapy discussed or waiver criteria met.",
+          "enableWhen": [
+            {
+              "question": "2.19",
+              "operator": "=",
+              "answerCoding": {
+                "code": "NA"
+              }
+            },
+            {
+              "question": "2.9",
+              "operator": "=",
+              "answerBoolean": true
+            }
+          ],
+          "enableBehavior": "any"
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box",
+                    "display": "Check-box"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "2.21",
+          "text": "Conservative treatment methods attempted. (select all that apply)",
+          "repeats": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "388976009",
+                "display": "Weight reduction efforts"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "226029000",
+                "display": "Daily plan and prescribed physical activity"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "229509005",
+                "display": "Graduated compression therapy"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "449696005",
+                "display": "Elevate legs instructions/periodic leg elevation"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box",
+                    "display": "Check-box"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "2.22",
+          "text": "Beneficiary therapeutic response. (select all that apply)",
+          "required": true,
+          "repeats": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "trial-period",
+                "display": "Minimum trial period documented if applicable"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "attempted-treatment",
+                "display": "Evidence beneficiary tried recommended treatments"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "449696005",
+                "display": "Failed to resolve clinically significant symptoms"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "persistent-symptoms",
+                "display": "Symptoms have persisted or worsened"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://loinc.org",
+                "code": "LA26854-2",
+                "display": "Symptoms interfered with activities of daily living"
+              }
+            }
+          ]
+        }
+      ],
+      "type": "group",
+      "linkId": "2",
+      "text": "Baseline Documentation Required"
+    }
+  ]
+}
