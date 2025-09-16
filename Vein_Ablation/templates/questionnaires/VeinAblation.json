@@ -5,10 +5,6 @@
       {
           "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
           "valueCanonical": "<FHIR-server>/Library/library-veinablation-Veinablation"
-      },
-      {        
-        "system": "http://identifiers.mettles.com/prior_authorization",
-        "value": "medicarefeeforservice-VeinAblation"      
       }
   ],
   "meta": {
