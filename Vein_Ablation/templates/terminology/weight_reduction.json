@@ -1,0 +1,38 @@
+{
+  "resourceType": "ValueSet",
+  "id": "weight-reduction",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2025-10-08T08:44:46.000+00:00"
+  },
+  "url": "<FHIR-server>/ValueSet/weight-reduction",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+            "value": "urn:oid:weight-reduction"
+    }
+  ],
+  "version": "Latest",
+  "name": "Weight reduction",
+  "title": "Weight reduction",
+  "status": "active",
+  "publisher": "CMS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "2025-09",
+        "concept": [
+          {
+            "code": "441301000124100",
+            "display": "Counseling about nutrition using social support strategy (regime/therapy)"
+          },
+          {
+            "code": "388976009",
+            "display": "Weight reduction regimen (regime/therapy)"
+          }
+        ]
+      }
+    ]
+  }
+}                                           

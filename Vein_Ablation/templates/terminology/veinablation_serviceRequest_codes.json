@@ -1,0 +1,64 @@
+{
+  "resourceType": "ValueSet",
+  "id": "veinablation-serviceRequest-codes",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2025-10-08T08:44:46.000+00:00"
+  },
+  "url": "<FHIR-server>/ValueSet/veinablation-serviceRequest-codes",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+            "value": "urn:oid:veinablation-serviceRequest-codes"
+    }
+  ],
+  "version": "Latest",
+  "name": "Vein Ablation ServiceRequest Codes",
+  "title": "Vein Ablation ServiceRequest Codes",
+  "status": "active",
+  "publisher": "CMS",
+  "compose": {
+    "include": [
+      [
+        {
+          "system": "https://hcpcs.codes/",
+          "version": "2025",
+          "concept": [
+            {
+              "code": "36473",
+              "display": "ENDOVENOUS ABLATION THERAPY OF INCOMPETENT VEIN, EXTREMITY, INCLUSIVE OF ALL IMAGING GUIDANCE AND MONITORING, PERCUTANEOUS, MECHANOCHEMICAL; FIRST VEIN TREATED"
+            },
+            {
+              "code": "36474",
+              "display": "ENDOVENOUS ABLATION THERAPY OF INCOMPETENT VEIN, EXTREMITY, INCLUSIVE OF ALL IMAGING GUIDANCE AND MONITORING, PERCUTANEOUS, MECHANOCHEMICAL; SUBSEQUENT VEIN(S) TREATED IN A SINGLE EXTREMITY, EACH THROUGH SEPARATE ACCESS SITES (LIST SEPARATELY IN ADDITION TO CODE FOR PRIMARY PROCEDURE)"
+            },
+            {
+              "code": "36475",
+              "display": "ENDOVENOUS ABLATION THERAPY OF INCOMPETENT VEIN, EXTREMITY, INCLUSIVE OF ALL IMAGING GUIDANCE AND MONITORING, PERCUTANEOUS, RADIOFREQUENCY; FIRST VEIN TREATED"
+            },
+            {
+              "code": "36476",
+              "display": "ENDOVENOUS ABLATION THERAPY OF INCOMPETENT VEIN, EXTREMITY, INCLUSIVE OF ALL IMAGING GUIDANCE AND MONITORING, PERCUTANEOUS, RADIOFREQUENCY; SUBSEQUENT VEIN(S) TREATED IN A SINGLE EXTREMITY, EACH THROUGH SEPARATE ACCESS SITES (LIST SEPARATELY IN ADDITION TO CODE FOR PRIMARY PROCEDURE)"
+            },
+            {
+              "code": "36478",
+              "display": "ENDOVENOUS ABLATION THERAPY OF INCOMPETENT VEIN, EXTREMITY, INCLUSIVE OF ALL IMAGING GUIDANCE AND MONITORING, PERCUTANEOUS, LASER; FIRST VEIN TREATED"
+            },
+            {
+              "code": "36479",
+              "display": "ENDOVENOUS ABLATION THERAPY OF INCOMPETENT VEIN, EXTREMITY, INCLUSIVE OF ALL IMAGING GUIDANCE AND MONITORING, PERCUTANEOUS, LASER; SUBSEQUENT VEIN(S) TREATED IN A SINGLE EXTREMITY, EACH THROUGH SEPARATE ACCESS SITES (LIST SEPARATELY IN ADDITION TO CODE FOR PRIMARY PROCEDURE)"
+            },
+            {
+              "code": "36482",
+              "display": "ENDOVENOUS ABLATION THERAPY OF INCOMPETENT VEIN, EXTREMITY, BY TRANSCATHETER DELIVERY OF A CHEMICAL ADHESIVE (EG, CYANOACRYLATE) REMOTE FROM THE ACCESS SITE, INCLUSIVE OF ALL IMAGING GUIDANCE AND MONITORING, PERCUTANEOUS; FIRST VEIN TREATED"
+            },
+            {
+              "code": "36483",
+              "display": "ENDOVENOUS ABLATION THERAPY OF INCOMPETENT VEIN, EXTREMITY, BY TRANSCATHETER DELIVERY OF A CHEMICAL ADHESIVE (EG, CYANOACRYLATE) REMOTE FROM THE ACCESS SITE, INCLUSIVE OF ALL IMAGING GUIDANCE AND MONITORING, PERCUTANEOUS; SUBSEQUENT VEIN(S) TREATED IN A SINGLE EXTREMITY, EACH THROUGH SEPARATE ACCESS SITES (LIST SEPARATELY IN ADDITION TO CODE FOR PRIMARY PROCEDURE)"
+            }
+          ]
+        }
+      ]
+    ]
+  }
+}                                           

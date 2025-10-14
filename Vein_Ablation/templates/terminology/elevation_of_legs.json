@@ -1,0 +1,34 @@
+{
+  "resourceType": "ValueSet",
+  "id": "elevation-of-legs",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2025-10-08T08:44:46.000+00:00"
+  },
+  "url": "<FHIR-server>/ValueSet/elevation-of-legs",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+            "value": "urn:oid:elevation-of-legs"
+    }
+  ],
+  "version": "Latest",
+  "name": "Elev ation of legs",
+  "title": "Elev ation of legs",
+  "status": "active",
+  "publisher": "CMS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "2025-09",
+        "concept": [
+          {
+            "code": "449696005",
+            "display": "Elevation of lower leg (procedure)"
+          }
+        ]
+      }
+    ]
+  }
+}                                           

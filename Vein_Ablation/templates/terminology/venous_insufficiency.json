@@ -1,0 +1,62 @@
+{
+  "resourceType": "ValueSet",
+  "id": "venous-insufficiency",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2025-10-08T08:44:46.000+00:00"
+  },
+  "url": "<FHIR-server>/ValueSet/venous-insufficiency",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+            "value": "urn:oid:venous-insufficiency"
+    }
+  ],
+  "version": "Latest",
+  "name": "Venous insufficiency",
+  "title": "Venous insufficiency",
+  "status": "active",
+  "publisher": "CMS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "2025-09",
+        "concept": [
+          {
+            "code": "706883004",
+            "display": "Pain due to varicose veins of lower extremity (finding)"
+          },
+          {
+            "code": "449707004",
+            "display": "Edema of lower leg (finding)"
+          },
+          {
+            "code": "366362000",
+            "display": "Varicose eczema (disorder)"
+          },
+          {
+            "code": "762536003",
+            "display": "Lipodermatosclerosis of lower limb due to varicose veins of lower limb (disorder)"
+          },
+          {
+            "code": "443904006",
+            "display": "Corona phlebectatica (disorder)"
+          },
+          {
+            "code": "788949000",
+            "display": "Healed venous leg ulcer (disorder)"
+          },
+          {
+            "code": "35498005",
+            "display": "Stasis dermatitis (disorder)"
+          },
+          {
+            "code": "234050002",
+            "display": "Venous insufficiency of lower limb (disorder)"
+          }
+        ]
+      }
+    ]
+  }
+}                                           

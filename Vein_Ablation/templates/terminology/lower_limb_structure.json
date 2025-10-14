@@ -1,0 +1,34 @@
+{
+  "resourceType": "ValueSet",
+  "id": "lower-limb-structure",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2025-10-08T08:44:46.000+00:00"
+  },
+  "url": "<FHIR-server>/ValueSet/lower-limb-structure",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+            "value": "urn:oid:lower-limb-structure"
+    }
+  ],
+  "version": "Latest",
+  "name": "Lower Limb Structure",
+  "title": "Lower Limb Structure",
+  "status": "active",
+  "publisher": "CMS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "2025-09",
+        "concept": [
+          {
+            "code": "61685007",
+            "display": "Lower limb structure (body structure)"
+          }
+        ]
+      }
+    ]
+  }
+}                                           
