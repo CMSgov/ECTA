@@ -1,0 +1,29 @@
+{
+  "resourceType": "ValueSet",
+  "id": "SteroidTherapyProcedures",
+  "url": "<FHIR-server>/ValueSet/SteroidTherapyProcedures",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:SteroidTherapyProcedures"
+    }
+  ],
+  "version": "Latest",
+  "name": "SteroidTherapyProcedures",
+  "title": "SteroidTherapyProcedures",
+  "status": "active",
+  "publisher": "CMS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "297279009",
+            "display": "Steroid therapy (procedure)"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,672 +1,2351 @@
 {
-  "resourceType": "Questionnaire",
-  "id": "questionnaire-eyelidsurgery-eyelidsurgery",
-  "extension": [
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
-      "valueCanonical": "<FHIR-server>/Library/library-eyelidsurgery-EyelidSurgery"
-    }
-  ],
-  "url": "<FHIR-server>/Questionnaire/questionnaire-eyelidsurgery-eyelidsurgery",
-  "identifier": [
-    {
-      "system": "http://identifiers.mettles.com/prior_authorization",
-      "value": "medicare_fee_for_service-eyelid_surgery"
-    }
-  ],
-  "version": "1.0.0",
-  "name": "Prior Authorization For Blepharoplasty",
-  "title": "Prior Authorization For Blepharoplasty",
-  "status": "draft",
-  "subjectType": [
-    "Patient"
-  ],
-  "date": "2021-10-30",
-  "publisher": "Mettle Solutions",
-  "item": [
-    {
-      "linkId": "1",
-      "text": "Type of Surgery",
-      "type": "group",
-      "item": [
+    "resourceType": "Questionnaire",
+    "id": "questionnaire-eyelidsurgery-eyelidsurgery",
+    "extension": [
         {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "SurgeryPurpose"
-              }
-            }
-          ],
-          "linkId": "SurgeryPurpose",
-          "text": "What is the purpose of this surgery?",
-          "type": "choice",
-          "answerOption": [
-            {
-              "valueCoding": {
-                "code": "Cosmetic",
-                "display": "Cosmetic"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Reconstructive",
-                "display": "Reconstructive"
-              }
-            }
-          ],
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "AnatomicalLocationOfSurgery"
-              }
-            }
-          ],
-          "linkId": "AnatomicalLocationOfSurgery",
-          "text": "Is the surgery needed for:",
-          "type": "choice",
-          "answerOption": [
-            {
-              "valueCoding": {
-                "code": "Upper Eye Lid",
-                "display": "Upper Eye Lid"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Lower Eye Lid",
-                "display": "Lower Eye Lid"
-              }
-            }
-          ],
-          "required": true
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
+            "valueCanonical": "<FHIR-server>/Library/library-eyelidsurgery-EyelidSurgery"
         }
-      ]
+    ],
+    "meta": {
+        "profile": [
+            "http://hl7.org/fhir/4.0/StructureDefinition/Questionnaire"
+        ]
     },
-    {
-      "linkId": "2",
-      "text": "Functional Indications",
-      "type": "group",
-      "item": [
+    "identifier": [
         {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "VisionInterference"
-              }
-            }
-          ],
-          "linkId": "VisionInterference",
-          "text": "Is there an interference in the vision/visual field due to this condition?",
-          "type": "boolean",
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "ImpairmentInDailyActivities"
-              }
-            }
-          ],
-          "linkId": "ImpairmentInDailyActivities",
-          "text": "Does it cause an impairment in daily life activities (difficulty in driving, reading)?",
-          "type": "boolean",
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "VisionInterference",
-              "answerBoolean": true
-            }
-          ],
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "DifficultyFittingSpectacles"
-              }
-            }
-          ],
-          "linkId": "DifficultyFittingSpectacles",
-          "text": "Does the patient have difficulty fitting spectacles due to this condition?",
-          "type": "boolean",
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "EyelidIrritation"
-              }
-            }
-          ],
-          "linkId": "EyelidIrritation",
-          "text": "Does the patient have severe eyelid irritation due to this condition?",
-          "type": "boolean",
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "Socket"
-              }
-            }
-          ],
-          "linkId": "Socket",
-          "text": "Does the patient have Anophthalmic, Microphthalmic or Enophthalmic socket?",
-          "type": "boolean",
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "DifficultyFittingProsthesis"
-              }
-            }
-          ],
-          "linkId": "DifficultyFittingProsthesis",
-          "text": "Does the patient have any difficulty wearing or fitting a prosthesis due to this condition?",
-          "type": "boolean",
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "Socket",
-              "answerBoolean": true
-            }
-          ],
-          "required": true
+            "system": "http://identifiers.mettles.com/prior_authorization",
+            "value": "medicare_fee_for_service-eyelid_surgery"
         }
-      ]
-    },
-    {
-      "linkId": "3",
-      "text": "Diagnosis Information",
-      "type": "group",
-      "item": [
+    ],
+    "url": "<FHIR-server>/Questionnaire/questionnaire-eyelidsurgery-eyelidsurgery",
+    "version": "1.0.0",
+    "name": "Blepharoplasty",
+    "title": "Blepharoplasty",
+    "date": "2025-09-10",
+    "purpose": "Prior Authorization for Blepharoplasty",
+    "approvalDate": "2025-12-10",
+    "status": "active",
+    "publisher": "CMS",
+    "description": "Questionnaire for Blepharoplasty",
+    "lastReviewDate": "2025-12-16",
+    "item": [
         {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "CheckDermatochalasis"
-              }
-            }
-          ],
-          "linkId": "CheckDermatochalasis",
-          "text": "Does the patient have Dermatochalasis?",
-          "type": "boolean",
-          "required": true
+            "type": "choice",
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "radio-button",
+                                "display": "Radio Button"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "linkId": "0.1",
+            "text": "Request Type:",
+            "required": true,
+            "answerOption": [
+                {
+                    "valueCoding": {
+                        "code": "I",
+                        "display": "Initial"
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "code": "R",
+                        "display": "Resubmission"
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "code": "EI",
+                        "display": "Expedited Initial"
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "code": "ER",
+                        "display": "Expedited Resubmission"
+                    }
+                }
+            ]
         },
         {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "DifficultySpectaclesDermatochalasis"
-              }
-            }
-          ],
-          "linkId": "DifficultySpectaclesDermatochalasis",
-          "text": "Does it cause significant difficulty in fitting of spectacles?",
-          "type": "boolean",
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "CheckDermatochalasis",
-              "answerBoolean": true
-            }
-          ],
-          "required": true
+            "type": "choice",
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "check-box",
+                                "display": "Check-box"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                    "valueExpression": {
+                        "language": "text/cql",
+                        "expression": "ServiceRequestCode"
+                    }
+                }
+            ],
+            "linkId": "1",
+            "text": "Procedure being requested",
+            "required": true,
+            "repeats": true,
+            "answerOption": [
+                {
+                    "valueCoding": {
+                        "system": "https://www.aapc.com/resources/medical-coding/cpt.aspx",
+                        "code": "15820",
+                        "display": "Blepharoplasty, lower eyelid"
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "system": "https://www.aapc.com/resources/medical-coding/cpt.aspx",
+                        "code": "15821",
+                        "display": "Blepharoplasty, lower eyelid; with extensive herniated fat pad"
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "system": "https://www.aapc.com/resources/medical-coding/cpt.aspx",
+                        "code": "15822",
+                        "display": "Blepharoplasty, upper eyelid"
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "system": "https://www.aapc.com/resources/medical-coding/cpt.aspx",
+                        "code": "15823",
+                        "display": "Blepharoplasty, upper eyelid; with excessive skin weighting down lid"
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "system": "https://www.aapc.com/resources/medical-coding/cpt.aspx",
+                        "code": "67900",
+                        "display": "Repair of brow ptosis (supraciliary, mid-forehead or coronal approach)"
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "system": "https://www.aapc.com/resources/medical-coding/cpt.aspx",
+                        "code": "67901",
+                        "display": "Repair of blepharoptosis; frontalis muscle technique with suture or other material (eg, banked fascia)"
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "system": "https://www.aapc.com/resources/medical-coding/cpt.aspx",
+                        "code": "67902",
+                        "display": "Repair of blepharoptosis; frontalis muscle technique with autologous fascial sling (includes obtaining fascia)"
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "system": "https://www.aapc.com/resources/medical-coding/cpt.aspx",
+                        "code": "67903",
+                        "display": "Repair of blepharoptosis; (tarso) levator resection or advancement, internal approach"
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "system": "https://www.aapc.com/resources/medical-coding/cpt.aspx",
+                        "code": "67904",
+                        "display": "Repair of blepharoptosis; (tarso) levator resection or advancement, external approach"
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "system": "https://www.aapc.com/resources/medical-coding/cpt.aspx",
+                        "code": "67906",
+                        "display": "Repair of blepharoptosis; superior rectus technique with fascial sling (includes obtaining fascia)"
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "system": "https://www.aapc.com/resources/medical-coding/cpt.aspx",
+                        "code": "67908",
+                        "display": "Repair of blepharoptosis; conjunctivo-tarso-Muller's muscle-levator resection (eg, Fasanella-Servat type)"
+                    }
+                }
+            ]
         },
         {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "ThyroidEyeCondition"
-              }
-            }
-          ],
-          "linkId": "ThyroidEyeCondition",
-          "text": "Does the patient have Thyroid Eye disease/Eye infection/Eye allergy?",
-          "type": "boolean",
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "ThyroidChronicDermatitis"
-              }
-            }
-          ],
-          "linkId": "ThyroidChronicDermatitis",
-          "text": "Does it cause chronic dermatitis?",
-          "type": "boolean",
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "ThyroidEyeCondition",
-              "answerBoolean": true
-            }
-          ],
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "CheckBlepharochalasis"
-              }
-            }
-          ],
-          "linkId": "CheckBlepharochalasis",
-          "text": "Does the patient have blepharochalasis (eye lid edema)?",
-          "type": "boolean",
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "ChronicDermatitisOrEyeIrritation"
-              }
-            }
-          ],
-          "linkId": "ChronicDermatitisOrEyeIrritation",
-          "text": "Does it cause chronic dermatitis/eye irritation?",
-          "type": "boolean",
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "CheckBlepharochalasis",
-              "answerBoolean": true
-            }
-          ],
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "IdiopathicBlepharospasm"
-              }
-            }
-          ],
-          "linkId": "IdiopathicBlepharospasm",
-          "text": "Does the patient have primary idiopathic blepharospasm?",
-          "type": "boolean",
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "AnophthalmicSocket"
-              }
-            }
-          ],
-          "linkId": "AnophthalmicSocket",
-          "text": "Does the patient have an anophthalmic socket?",
-          "type": "boolean",
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "CheckPtosis"
-              }
-            }
-          ],
-          "linkId": "CheckPtosis",
-          "text": "Does the patient have ptosis?",
-          "type": "boolean",
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "AnophthalmicSocket",
-              "answerBoolean": true
-            }
-          ],
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "PtosisDifficultyProsthesis"
-              }
-            }
-          ],
-          "linkId": "PtosisDifficultyProsthesis",
-          "text": "Does it lead to difficulty in prosthesis fitting?",
-          "type": "boolean",
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "CheckPtosis",
-              "answerBoolean": true
-            }
-          ],
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "BrowPtosis"
-              }
-            }
-          ],
-          "linkId": "BrowPtosis",
-          "text": "Does the patient have brow ptosis?",
-          "type": "boolean",
-          "required": true
-        },
-        {
-          "linkId": "BrowPtosisBlepharoplasty",
-          "text": "Is the blepharoplasty suggested in addition to brow ptosis repair?",
-          "type": "boolean",
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "BrowPtosis",
-              "answerBoolean": true
-            }
-          ],
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "CheckBlepharoptosis"
-              }
-            }
-          ],
-          "linkId": "CheckBlepharoptosis",
-          "text": "Does the patient have blepharoptosis?",
-          "type": "boolean",
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "BlepharoptosisFunctionalDeficit"
-              }
-            }
-          ],
-          "linkId": "BlepharoptosisFunctionalDeficit",
-          "text": "Does it cause any functional deficit (visual field impairment/ brow fatigue)?",
-          "type": "boolean",
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "CheckBlepharoptosis",
-              "answerBoolean": true
-            }
-          ],
-          "required": true
+            "item": [
+                {
+                    "type": "choice",
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "radio-button",
+                                        "display": "Radio Button"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                            "valueExpression": {
+                                "language": "text/cql",
+                                "expression": "PresentingConditionOrChiefComplaint"
+                            }
+                        }
+                    ],
+                    "linkId": "2.1",
+                    "text": "Presenting Condition or Chief Complaint",
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "code": "chronic-dermatitis",
+                                "display": "Chronic dermatitis due to blepharochalasis from severe allergies or thyroid disease"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "eyelid-irritation",
+                                "display": "Debilitating eyelid irritation"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "difficulty-fitting-prosthesis",
+                                "display": "Difficulty fitting or wearing a prosthesis when associated with an anophthalmic, microphthalmic, or enophthalmic socket"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "interference-with-vision",
+                                "display": "Interference with vision or visual field that impacts an activity of daily living (such as difficulty reading or driving), looking through the eyelashes, seeing the upper eyelid skin, or brow fatigue"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "difficulty-fitting-spectacles",
+                                "display": "Significant/extreme difficulty fitting spectacles due to excessive eyelid tissue"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "choice",
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "drop-down",
+                                        "display": "Drop down"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                            "valueExpression": {
+                                "language": "text/cql",
+                                "expression": "PrimaryDiagnosisFor15820and15821"
+                            }
+                        }
+                    ],
+                    "linkId": "2.2.0",
+                    "text": "Primary Diagnosis. Provider Note: H02.032, H02.035, H02.832, and H02.835 cannot be submitted as the primary diagnosis.",
+                    "enableWhen": [
+                        {
+                            "question": "1",
+                            "operator": "=",
+                            "answerCoding": {
+                                "system": "https://www.aapc.com/resources/medical-coding/cpt.aspx",
+                                "code": "15820",
+                                "display": "Blepharoplasty, lower eyelid"
+                            }
+                        },
+                        {
+                            "question": "1",
+                            "operator": "=",
+                            "answerCoding": {
+                                "system": "https://www.aapc.com/resources/medical-coding/cpt.aspx",
+                                "code": "15821",
+                                "display": "Blepharoplasty, lower eyelid; with extensive herniated fat pad"
+                            }
+                        }
+                    ],
+                    "enableBehavior": "any",
+                    "repeats": false,
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H01.001",
+                                "display": "Unspecified blepharitis right upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H01.002",
+                                "display": "Unspecified blepharitis right lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H01.004",
+                                "display": "Unspecified blepharitis left upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H01.005",
+                                "display": "Unspecified blepharitis left lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H01.00A",
+                                "display": "Unspecified blepharitis right eye, upper and lower eyelids"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H01.00B",
+                                "display": "Unspecified blepharitis left eye, upper and lower eyelids"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H01.01A",
+                                "display": "Ulcerative blepharitis right eye, upper and lower eyelids"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H01.01B",
+                                "display": "Ulcerative blepharitis left eye, upper and lower eyelids"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H01.02A",
+                                "display": "Squamous blepharitis right eye, upper and lower eyelids"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H01.02B",
+                                "display": "Squamous blepharitis left eye, upper and lower eyelids"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.001",
+                                "display": "Unspecified entropion of right upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.002",
+                                "display": "Unspecified entropion of right lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.004",
+                                "display": "Unspecified entropion of left upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.005",
+                                "display": "Unspecified entropion of left lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.011",
+                                "display": "Cicatricial entropion of right upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.012",
+                                "display": "Cicatricial entropion of right lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.014",
+                                "display": "Cicatricial entropion of left upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.015",
+                                "display": "Cicatricial entropion of left lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.021",
+                                "display": "Mechanical entropion of right upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.022",
+                                "display": "Mechanical entropion of right lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.024",
+                                "display": "Mechanical entropion of left upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.025",
+                                "display": "Mechanical entropion of left lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.101",
+                                "display": "Unspecified ectropion of right upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.102",
+                                "display": "Unspecified ectropion of right lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.104",
+                                "display": "Unspecified ectropion of left upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.105",
+                                "display": "Unspecified ectropion of left lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.111",
+                                "display": "Cicatricial ectropion of right upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.112",
+                                "display": "Cicatricial ectropion of right lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.114",
+                                "display": "Cicatricial ectropion of left upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.115",
+                                "display": "Cicatricial ectropion of left lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.121",
+                                "display": "Mechanical ectropion of right upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.122",
+                                "display": "Mechanical ectropion of right lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.124",
+                                "display": "Mechanical ectropion of left upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.125",
+                                "display": "Mechanical ectropion of left lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.131",
+                                "display": "Senile ectropion of right upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.132",
+                                "display": "Senile ectropion of right lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.134",
+                                "display": "Senile ectropion of left upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.135",
+                                "display": "Senile ectropion of left lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.141",
+                                "display": "Spastic ectropion of right upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.142",
+                                "display": "Spastic ectropion of right lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.144",
+                                "display": "Spastic ectropion of left upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.145",
+                                "display": "Spastic ectropion of left lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.151",
+                                "display": "Paralytic ectropion of right upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.152",
+                                "display": "Paralytic ectropion of right lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.154",
+                                "display": "Paralytic ectropion of left upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.155",
+                                "display": "Paralytic ectropion of left lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.156",
+                                "display": "Paralytic ectropion of left eye, unspecified eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.159",
+                                "display": "Paralytic ectropion of unspecified eye, unspecified eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.041",
+                                "display": "Spastic entropion of right upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.042",
+                                "display": "Spastic entropion of right lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.044",
+                                "display": "Spastic entropion of left upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.045",
+                                "display": "Spastic entropion of left lower eyelid"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "choice",
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "drop-down",
+                                        "display": "Drop down"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                            "valueExpression": {
+                                "language": "text/cql",
+                                "expression": "PrimaryDiagnosisForOther"
+                            }
+                        }
+                    ],
+                    "linkId": "2.2.1",
+                    "text": "Primary Diagnosis. Provider Note: H02.032, H02.035, H02.832, and H02.835 cannot be submitted as the primary diagnosis.",
+                    "enableWhen": [
+                        {
+                            "question": "1",
+                            "operator": "!=",
+                            "answerCoding": {
+                                "system": "https://www.aapc.com/resources/medical-coding/cpt.aspx",
+                                "code": "15820",
+                                "display": "Blepharoplasty, lower eyelid"
+                            }
+                        },
+                        {
+                            "question": "1",
+                            "operator": "!=",
+                            "answerCoding": {
+                                "system": "https://www.aapc.com/resources/medical-coding/cpt.aspx",
+                                "code": "15821",
+                                "display": "Blepharoplasty, lower eyelid; with extensive herniated fat pad"
+                            }
+                        }
+                    ],
+                    "enableBehavior": "all",
+                    "repeats": false,
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "G24.5",
+                                "display": "Blepharospasm"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "G51.10",
+                                "display": "Bells Palsy"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "G51.2",
+                                "display": "Melkerssons’s syndrome"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "G51.31",
+                                "display": "Clonic hemifacial spasm, right"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "G51.32",
+                                "display": "Clonic hemifacial spasm, left"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "G51.33",
+                                "display": "Clonic hemifacial spasm, bilateral"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "G51.4",
+                                "display": "Facial myokymia"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "G51.8",
+                                "display": "Other disorders of facial nerve"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "G51.9",
+                                "display": "Disorder of facial nerve, unspecified"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "G70.00",
+                                "display": "Myasthenia gravis without (acute) exacerbation"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "G70.80",
+                                "display": "Lambert-Eaton syndrome, unspecified"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "G70.81",
+                                "display": "Lambert-Eaton syndrome in disease classified elsewhere"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "G73.1",
+                                "display": "Lambert-Eaton syndrome in neoplastic disease"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.31",
+                                "display": "Blepharochalasis right upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.32",
+                                "display": "Blepharochalasis right lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.34",
+                                "display": "Blepharochalasis left upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.35",
+                                "display": "Blepharochalasis left lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.401",
+                                "display": "Unspecified ptosis of right eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.402",
+                                "display": "Unspecified ptosis of left eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.403",
+                                "display": "Unspecified ptosis of bilateral eyelids"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.411",
+                                "display": "Mechanical ptosis of right eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.412",
+                                "display": "Mechanical ptosis of left eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.413",
+                                "display": "Mechanical ptosis of bilateral eyelids"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.421",
+                                "display": "Myogenic ptosis of right eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.422",
+                                "display": "Myogenic ptosis of left eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.423",
+                                "display": "Myogenic ptosis of bilateral eyelids"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.431",
+                                "display": "Paralytic ptosis of right eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.432",
+                                "display": "Paralytic ptosis of left eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.433",
+                                "display": "Paralytic ptosis of bilateral eyelids"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.521",
+                                "display": "Blepharophimosis right upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.522",
+                                "display": "Blepharophimosis right lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.524",
+                                "display": "Blepharophimosis left upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.525",
+                                "display": "Blepharophimosis left lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.70",
+                                "display": "Unspecified degenerative disorders of eyelid and periocular area"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.831",
+                                "display": "Dermatochalasis of right upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.832",
+                                "display": "Dermatochalasis of right lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.834",
+                                "display": "Dermatochalasis of left upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.835",
+                                "display": "Dermatochalasis of left lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H57.811",
+                                "display": "Brow ptosis, right"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H57.812",
+                                "display": "Brow ptosis, left"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H57.813",
+                                "display": "Brow ptosis, bilateral"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H57.8A1",
+                                "display": "Foreign body sensation, right eye"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H57.8A2",
+                                "display": "Foreign body sensation, left eye"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H57.8A3",
+                                "display": "Foreign body sensation, bilateral eyes"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "L57.4",
+                                "display": "Cutis laxa senilis"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "L85.8",
+                                "display": "Other specified epidermal thickening"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "Q10.0",
+                                "display": "Congenital ptosis"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.201",
+                                "display": "Unspecified lagophthalmos right upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.202",
+                                "display": "Unspecified lagophthalmos right lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.204",
+                                "display": "Unspecified lagophthalmos left upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.205",
+                                "display": "Unspecified lagophthalmos left lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.211",
+                                "display": "Cicatricial lagophthalmos right upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.212",
+                                "display": "Cicatricial lagophthalmos right lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.214",
+                                "display": "Cicatricial lagophthalmos left upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.215",
+                                "display": "Cicatricial lagophthalmos left lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.21A",
+                                "display": "Cicatricial lagophthalmos right eye, upper and lower eyelids"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.21B",
+                                "display": "Cicatricial lagophthalmos left eye, upper and lower eyelids"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.21C",
+                                "display": "Cicatricial lagophthalmos, bilateral, upper and lower eyelids"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.20A",
+                                "display": "Unspecified lagophthalmos right eye, upper and lower eyelids"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.20B",
+                                "display": "Unspecified lagophthalmos left eye, upper and lower eyelids"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.20C",
+                                "display": "Unspecified lagophthalmos, bilateral, upper and lower eyelids"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.221",
+                                "display": "Mechanical lagophthalmos right upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.222",
+                                "display": "Mechanical lagophthalmos right lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.224",
+                                "display": "Mechanical lagophthalmos left upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.225",
+                                "display": "Mechanical lagophthalmos left lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.22A",
+                                "display": "Mechanical lagophthalmos right eye, upper and lower eyelids"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.22B",
+                                "display": "Mechanical lagophthalmos left eye, upper and lower eyelids"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.22C",
+                                "display": "Mechanical lagophthalmos, bilateral, upper and lower eyelids"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.231",
+                                "display": "Paralytic lagophthalmos right upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.232",
+                                "display": "Paralytic lagophthalmos right lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.234",
+                                "display": "Paralytic lagophthalmos left upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.235",
+                                "display": "Paralytic lagophthalmos left lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.23A",
+                                "display": "Paralytic lagophthalmos right eye, upper and lower eyelids"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.23B",
+                                "display": "Paralytic lagophthalmos left eye, upper and lower eyelids"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.23C",
+                                "display": "Paralytic lagophthalmos, bilateral, upper and lower eyelids"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.051",
+                                "display": "Trichiasis without entropion right upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.052",
+                                "display": "Trichiasis without entropion right lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.054",
+                                "display": "Trichiasis without entropion left upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.055",
+                                "display": "Trichiasis without entropion left lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.156",
+                                "display": "Paralytic ectropion of left eye, unspecified eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.159",
+                                "display": "Paralytic ectropion of unspecified eye, unspecified eyelid"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "choice",
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "drop-down",
+                                        "display": "Drop down"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                            "valueExpression": {
+                                "language": "text/cql",
+                                "expression": "AdditionalDiagnosisForOther"
+                            }
+                        }
+                    ],
+                    "linkId": "2.2.2",
+                    "text": "Additional Diagnosis. Provider Note: H02.032, H02.035, H02.832, and H02.835 cannot be submitted as the primary diagnosis.",
+                    "enableWhen": [
+                        {
+                            "question": "2.2.1",
+                            "operator": "=",
+                            "answerCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.832",
+                                "display": "Dermatochalasis of right lower eyelid"
+                            }
+                        },
+                        {
+                            "question": "2.2.1",
+                            "operator": "=",
+                            "answerCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.835",
+                                "display": "Dermatochalasis of left lower eyelid"
+                            }
+                        },
+                        {
+                            "question": "2.2.1",
+                            "operator": "=",
+                            "answerCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.32",
+                                "display": "Blepharochalasis right lower eyelid"
+                            }
+                        },
+                        {
+                            "question": "2.2.1",
+                            "operator": "=",
+                            "answerCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.35",
+                                "display": "Blepharochalasis left lower eyelid"
+                            }
+                        }
+                    ],
+                    "enableBehavior": "any",
+                    "repeats": false,
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H01.001",
+                                "display": "Unspecified blepharitis right upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H01.002",
+                                "display": "Unspecified blepharitis right lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H01.004",
+                                "display": "Unspecified blepharitis left upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H01.005",
+                                "display": "Unspecified blepharitis left lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H01.00A",
+                                "display": "Unspecified blepharitis right eye, upper and lower eyelids"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H01.00B",
+                                "display": "Unspecified blepharitis left eye, upper and lower eyelids"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H01.01A",
+                                "display": "Ulcerative blepharitis right eye, upper and lower eyelids"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H01.01B",
+                                "display": "Ulcerative blepharitis left eye, upper and lower eyelids"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H01.02A",
+                                "display": "Squamous blepharitis right eye, upper and lower eyelids"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H01.02B",
+                                "display": "Squamous blepharitis left eye, upper and lower eyelids"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.001",
+                                "display": "Unspecified entropion of right upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.002",
+                                "display": "Unspecified entropion of right lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.004",
+                                "display": "Unspecified entropion of left upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.005",
+                                "display": "Unspecified entropion of left lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.011",
+                                "display": "Cicatricial entropion of right upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.012",
+                                "display": "Cicatricial entropion of right lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.014",
+                                "display": "Cicatricial entropion of left upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.015",
+                                "display": "Cicatricial entropion of left lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.021",
+                                "display": "Mechanical entropion of right upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.022",
+                                "display": "Mechanical entropion of right lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.024",
+                                "display": "Mechanical entropion of left upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.025",
+                                "display": "Mechanical entropion of left lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.101",
+                                "display": "Unspecified ectropion of right upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.102",
+                                "display": "Unspecified ectropion of right lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.104",
+                                "display": "Unspecified ectropion of left upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.105",
+                                "display": "Unspecified ectropion of left lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.111",
+                                "display": "Cicatricial ectropion of right upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.112",
+                                "display": "Cicatricial ectropion of right lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.114",
+                                "display": "Cicatricial ectropion of left upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.115",
+                                "display": "Cicatricial ectropion of left lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.121",
+                                "display": "Mechanical ectropion of right upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.122",
+                                "display": "Mechanical ectropion of right lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.124",
+                                "display": "Mechanical ectropion of left upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.125",
+                                "display": "Mechanical ectropion of left lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.131",
+                                "display": "Senile ectropion of right upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.132",
+                                "display": "Senile ectropion of right lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.134",
+                                "display": "Senile ectropion of left upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.135",
+                                "display": "Senile ectropion of left lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.141",
+                                "display": "Spastic ectropion of right upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.142",
+                                "display": "Spastic ectropion of right lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.144",
+                                "display": "Spastic ectropion of left upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.145",
+                                "display": "Spastic ectropion of left lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.151",
+                                "display": "Paralytic ectropion of right upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.152",
+                                "display": "Paralytic ectropion of right lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.154",
+                                "display": "Paralytic ectropion of left upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.155",
+                                "display": "Paralytic ectropion of left lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.156",
+                                "display": "Paralytic ectropion of left eye, unspecified eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.159",
+                                "display": "Paralytic ectropion of unspecified eye, unspecified eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.041",
+                                "display": "Spastic entropion of right upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.042",
+                                "display": "Spastic entropion of right lower eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.044",
+                                "display": "Spastic entropion of left upper eyelid"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                                "code": "H02.045",
+                                "display": "Spastic entropion of left lower eyelid"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "choice",
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "radio-button",
+                                        "display": "Radio Button"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "linkId": "2.3",
+                    "text": "Blepharoplasty: Pseudo-MRD​. Provider note a true MRD less than or equal to 2.0 mm supports true ptosis",
+                    "repeats": false,
+                    "answerOption": [
+                    {
+                      "valueCoding": {
+                        "code": "MRDLessThan2",
+                        "display": "Less than or equal to 2.0 mm"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "MRDLessThan2.5",
+                        "display": "Less than or equal to 2.5 mm"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "MRDGreaterThan2",
+                        "display": "Greater than 2.0 mm"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "MRDGreaterThan2.5",
+                        "display": "Greater than 2.5 mm"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "TrueMRDLessThan2",
+                        "display": "True MRD less than or equal to 2.0 mm"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "NA",
+                        "display": "NA – Not required by LCD"
+                      }
+                    }
+                  ]
+                },
+                {
+                    "type": "choice",
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "check-box",
+                                        "display": "Check-box"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "linkId": "2.4",
+                    "text": "Superior visual field testing results. Test results are recent, no greater than 12 months old.",
+                    "repeats": true,
+                    "answerOption": [
+                      {
+                        "valueCoding": {
+                          "code": "24-30PercentOrGreaterLossUpperField",
+                          "display": "Demonstrates 24 percent to 30 percent or greater loss of upper field of vision/superior visual field. (Untaped)"
+                        }
+                      },
+                      {
+                        "valueCoding": {
+                          "code": "30PercentOrGreaterLossUpperField",
+                          "display": "Demonstrates 30 percent or greater loss of upper field of vision/superior visual field. (Untaped)"
+                        }
+                      },
+                      {
+                        "valueCoding": {
+                          "code": "12DegreesOrGreaterLossUpperField",
+                          "display": "Demontrates 12 degrees or greater loss of upper filed of vision/superior visual field (Untaped)"
+                        }
+                      },
+                      {
+                        "valueCoding": {
+                          "code": "12-15DegreesOrlessRemainingSuperiorField",
+                          "display": "Demonstrates 12 degrees to 15 degrees or less remaining in the superior field. (Untaped)"
+                        }
+                      },
+                      {
+                        "valueCoding": {
+                          "code": "significantFieldRestriction30DegreesOrLess",
+                          "display": "Demonstrates a visually significant field restriction of 30 degrees or less from fixation"
+                        }
+                      },
+                      {
+                        "valueCoding": {
+                          "code": "RedundantEyelidObscuresLOS",
+                          "display": "Redundant eyelid tissue predominantly medially or laterally that clearly obscures the line of sight in corresponding gaze."
+                        }
+                      },
+                      {
+                        "valueCoding": {
+                          "code": "12DegreesOrMoreImprovemntSuperiorField",
+                          "display": "Demonstrates improvement of 12 degrees or more in the superior field after taping."
+                        }
+                      },
+                      {
+                        "valueCoding": {
+                          "code": "30PercentOrGreaterImprovemntSuperiorField",
+                          "display": "Demonstrates 30 percent or greater improvement in the superior field after taping."
+                        }
+                      },
+                      {
+                        "valueCoding": {
+                          "code": "other",
+                          "display": "Other"
+                        }
+                      },
+                      {
+                        "valueCoding": {
+                          "code": "NA",
+                          "display": "NA – Not required by LCD"
+                        }
+                      }
+                    ]
+                },
+                {
+                    "type": "text",
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "text-box",
+                                        "display": "Text Box"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "linkId": "2.4.1",
+                    "text": "Specify Other",
+                    "enableWhen": [
+                        {
+                            "question": "2.4",
+                            "operator": "=",
+                            "answerString": "Other"
+                        }
+                    ]
+                },
+                {
+                    "type": "choice",
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "check-box",
+                                        "display": "Check-box"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                            "valueExpression": {
+                                "language": "text/cql",
+                                "expression": "ProviderObjectiveSymptoms"
+                            }
+                        }
+                    ],
+                    "linkId": "2.5",
+                    "text": "Provider objective symptoms.",
+                    "repeats": true,
+                    "answerOption": [
+                      {
+                        "valueCoding": {
+                          "code": "CHRONIC_DERMATITIS_BLEPHAROCHALASIS",
+                          "display": "Chronic dermatitis due to blepharochalasis"
+                        }
+                      },
+                      {
+                        "valueCoding": {
+                          "code": "DEBILITATING_EYELID_IRRITATION_PAIN",
+                          "display": "Debilitating eyelid irritation/pain"
+                        }
+                      },
+                      {
+                        "valueCoding": {
+                          "code": "DIFFICULTY_READING",
+                          "display": "Difficulty reading"
+                        }
+                      },
+                      {
+                        "valueCoding": {
+                          "code": "DIFFICULTY_SEEING_OVERHEAD_SIGNS",
+                          "display": "Difficulty seeing top lines, overhead signs"
+                        }
+                      },
+                      {
+                        "valueCoding": {
+                          "code": "INTERFERES_WITH_OCULAR_PROSTHESIS",
+                          "display": "Excessive tissue interferes with ocular prosthesis"
+                        }
+                      },
+                      {
+                        "valueCoding": {
+                          "code": "INTERFERES_WITH_SPECTACLES",
+                          "display": "Excessive tissue interferes with spectacles fitting"
+                        }
+                      },
+                      {
+                        "valueCoding": {
+                          "code": "INTERFERES_WITH_ADL",
+                          "display": "Interferes with activities of daily living"
+                        }
+                      }
+                    ]
+                },
+                {
+                    "type": "choice",
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "check-box",
+                                        "display": "Check-box"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                            "valueExpression": {
+                                "language": "text/cql",
+                                "expression": "FailedConservativeTreatments"
+                            }
+                        }
+                    ],
+                    "linkId": "2.6",
+                    "text": "Failed conservative management for chronic dermatitis includes:",
+                    "repeats": true,
+                    "answerOption": [
+                      {
+                        "valueCoding": {
+                          "code": "TOPICAL_MEDICATIONS",
+                          "display": "Topical medications"
+                        }
+                      },
+                      {
+                        "valueCoding": {
+                          "code": "ALLERGY_CONTROL",
+                          "display": "Allergy control"
+                        }
+                      },
+                      {
+                        "valueCoding": {
+                          "code": "THYROID_TREATMENT",
+                          "display": "Thyroid treatment"
+                        }
+                      },
+                      {
+                        "valueCoding": {
+                          "code": "NA",
+                          "display": "NA"
+                        }
+                      }
+                    ]
+                },
+                {
+                    "type": "choice",
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "check-box",
+                                        "display": "Check-box"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                            "valueExpression": {
+                                "language": "text/cql",
+                                "expression": "BeneficiaryReportedSymptoms"
+                            }
+                        }
+                    ],
+                    "linkId": "2.7.0",
+                    "text": "Beneficiary reported symptoms.",
+                    "repeats": true,
+                    "enableWhen": [
+                        {
+                            "question": "2.1",
+                            "operator": "!=",
+                            "answerCoding": {
+                                "code": "difficulty-fitting-prosthesis",
+                                "display": "Difficulty fitting or wearing a prosthesis when associated with an anophthalmic, microphthalmic, or enophthalmic socket"
+                            }
+                        },
+                        {
+                            "question": "2.1",
+                            "operator": "!=",
+                            "answerCoding": {
+                                "code": "difficulty-fitting-spectacles",
+                                "display": "Significant/extreme difficulty fitting spectacles due to excessive eyelid tissue"
+                            }
+                        }
+                    ],
+                    "enableBehavior":"all",
+                    "answerOption": [
+                      {
+                      "valueCoding": {
+                        "code": "UPPER_EYELID_HEAVINESS",
+                        "display": "Heaviness in upper eyelids"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "INTERFERES_WITH_ADL",
+                        "display": "Condition interferes with activities of daily living"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "DIFFICULTY_DRIVING_VEHICLE",
+                        "display": "Difficulties driving vehicle (Trouble seeing traffic lights or overhead road signs)"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "DIFFICULTY_READING_OR_COMPUTER_WORK",
+                        "display": "Difficulties reading (can’t see top lines of text) or Difficulties performing computer work"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "DIFFICULTIES_AT_WORK_VISUAL_LIMITATIONS",
+                        "display": "Difficulties at work due to visual limitations"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "HITTING_HEAD_DUE_TO_VISUAL_FIELD_LOSS",
+                        "display": "Hitting head on objects due to tissue altering upper field of vision"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "DEBILITATING_EYELID_IRRITATION_PAIN",
+                        "display": "Debilitating eyelid irritation/pain"
+                      }
+                    }
+                    ]
+                },
+                {
+                    "type": "choice",
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "check-box",
+                                        "display": "Check-box"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                            "valueExpression": {
+                                "language": "text/cql",
+                                "expression": "BeneficiaryReportedSymptomsC"
+                            }
+                        }
+                    ],
+                    "linkId": "2.7.1",
+                    "text": "Beneficiary reported symptoms.",
+                    "repeats": true,
+                    "enableWhen": [
+                        {
+                            "question": "2.1",
+                            "operator": "=",
+                            "answerCoding": {
+                                "code": "difficulty-fitting-prosthesis",
+                                "display": "Difficulty fitting or wearing a prosthesis when associated with an anophthalmic, microphthalmic, or enophthalmic socket"
+                            }
+                        }
+                    ],
+                    "answerOption": [
+                      {
+                      "valueCoding": {
+                        "code": "UPPER_EYELID_HEAVINESS",
+                        "display": "Heaviness in upper eyelids"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "INTERFERES_WITH_ADL",
+                        "display": "Condition interferes with activities of daily living"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "DIFFICULTY_DRIVING_VEHICLE",
+                        "display": "Difficulties driving vehicle (Trouble seeing traffic lights or overhead road signs)"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "DIFFICULTY_READING_OR_COMPUTER_WORK",
+                        "display": "Difficulties reading (can’t see top lines of text) or Difficulties performing computer work"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "DIFFICULTIES_AT_WORK_VISUAL_LIMITATIONS",
+                        "display": "Difficulties at work due to visual limitations"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "HITTING_HEAD_DUE_TO_VISUAL_FIELD_LOSS",
+                        "display": "Hitting head on objects due to tissue altering upper field of vision"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "DEBILITATING_EYELID_IRRITATION_PAIN",
+                        "display": "Debilitating eyelid irritation/pain"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "PROSTHESIS_WONT_STAY_IN_PLACE",
+                        "display": "Prosthesis won't stay in place due to eyelid tissue"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "CANNOT_FIT_PROSTHESIS_DUE_TO_EYELID_ANATOMY",
+                        "display": "Cannot properly fit the prosthesis because eyelid anatomy is preventing proper insertion"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "PROSTHESIS_IRRITATION_OR_DISPLACEMENT",
+                        "display": "Eyelid tissue is causing irritation or displacement of the prosthesis"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "SURGEON_RECOMMENDS_BLEPHAROPLASTY_FOR_PROSTHESIS",
+                        "display": "Statement from the ophthalmologist/oculoplastic surgeon recommending blepharoplasty to improve prosthesis function"
+                      }
+                    }
+                    ]
+                },
+                {
+                    "type": "choice",
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "check-box",
+                                        "display": "Check-box"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                            "valueExpression": {
+                                "language": "text/cql",
+                                "expression": "BeneficiaryReportedSymptomsE"
+                            }
+                        }
+                    ],
+                    "linkId": "2.7.2",
+                    "text": "Beneficiary reported symptoms.",
+                    "repeats": true,
+                    "enableWhen": [
+                        {
+                            "question": "2.1",
+                            "operator": "=",
+                            "answerCoding": {
+                                "code": "difficulty-fitting-spectacles",
+                                "display": "Significant/extreme difficulty fitting spectacles due to excessive eyelid tissue"
+                            }
+                        }
+                    ],
+                    "answerOption": [
+                    {
+                      "valueCoding": {
+                        "code": "UPPER_EYELID_HEAVINESS",
+                        "display": "Heaviness in upper eyelids"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "INTERFERES_WITH_ADL",
+                        "display": "Condition interferes with activities of daily living"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "DIFFICULTY_DRIVING_VEHICLE",
+                        "display": "Difficulties driving vehicle (Trouble seeing traffic lights or overhead road signs)"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "DIFFICULTY_READING_OR_COMPUTER_WORK",
+                        "display": "Difficulties reading (can’t see top lines of text) or Difficulties performing computer work"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "DIFFICULTIES_AT_WORK_VISUAL_LIMITATIONS",
+                        "display": "Difficulties at work due to visual limitations"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "HITTING_HEAD_DUE_TO_VISUAL_FIELD_LOSS",
+                        "display": "Hitting head on objects due to tissue altering upper field of vision"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "DEBILITATING_EYELID_IRRITATION_PAIN",
+                        "display": "Debilitating eyelid irritation/pain"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "SPECTACLES_WONT_STAY_IN_PLACE",
+                        "display": "Spectacles won't stay in place due to eyelid tissue"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "SPECTACLES_IRRITATION_OR_DISPLACEMENT",
+                        "display": "Eyelid tissue is causing irritation or displacement of the spectacles"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "FUNCTIONAL_IMPAIRMENT_DUE_TO_INABILITY_TO_WEAR_GLASSES",
+                        "display": "Evidence that the inability to wear glasses is causing functional impairment (can't read, can't drive safely, can't perform job duties, etc.)"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "OPTICIAN_STATEMENT_UNABLE_TO_FIT_GLASSES",
+                        "display": "Optician's statement confirming inability to properly fit glasses due to eyelid anatomy"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "REQUIRES_PRESCRIPTION_EYEWEAR",
+                        "display": "Documentation that the patient requires prescription eyewear (not just cosmetic preference)"
+                      }
+                    }
+                  ]
+                },
+                {
+                    "type": "choice",
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "radio-button",
+                                        "display": "Radio Button"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "linkId": "2.8",
+                    "text": "Preoperative photos provided. *Provider note, validate the photographs are labeled with required identifiers per LCD guidance.",
+                    "repeats": false,
+                    "answerOption": [
+                      {
+                        "valueCoding": {
+                          "code": "YES",
+                          "display": "Yes, required by LCD"
+                        }
+                      },
+                      {
+                        "valueCoding": {
+                          "code": "NO",
+                          "display": "No"
+                        }
+                      },
+                      {
+                        "valueCoding": {
+                          "code": "NA",
+                          "display": "NA – not required by LCD"
+                        }
+                      }
+                    ]
+                }
+            ],
+            "type": "group",
+            "linkId": "2",
+            "text": "CLINICAL FINDINGS"
         }
-      ]
-    },
-    {
-      "linkId": "4",
-      "text": "Laterality",
-      "type": "group",
-      "item": [
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "Laterality"
-              }
-            }
-          ],
-          "linkId": "Laterality",
-          "text": "What is the laterality of the condition?",
-          "type": "choice",
-          "answerOption": [
-            {
-              "valueCoding": {
-                "code": "Unilateral",
-                "display": "Unilateral"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Bilateral",
-                "display": "Bilateral"
-              }
-            }
-          ],
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "AnatomicalLocationCondition"
-              }
-            }
-          ],
-          "linkId": "AnatomicalLocationCondition",
-          "text": "Is the affected eye:",
-          "type": "choice",
-          "answerOption": [
-            {
-              "valueCoding": {
-                "code": "Right",
-                "display": "Right"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Left",
-                "display": "Left"
-              }
-            }
-          ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "Laterality",
-              "answerCoding": {
-                "code": "Unilateral",
-                "display": "Unilateral"
-              }
-            }
-          ],
-          "required": true
-        }
-      ]
-    },
-    {
-      "linkId": "5",
-      "text": "Physical Signs",
-      "type": "group",
-      "item": [
-        {
-          "linkId": "ExcessiveSkinOverhanging",
-          "text": "Is an amount of excessive skin overhanging the eyelid margin causing Pseudoptosis?",
-          "type": "boolean",
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "CheckDermatochalasis",
-              "answerBoolean": true
-            },
-            {
-              "operator": "=",
-              "question": "CheckBlepharochalasis",
-              "answerBoolean": true
-            }
-          ],
-          "enableBehavior": "any",
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "PseudoMRD"
-              }
-            }
-          ],
-          "linkId": "PseudoMRD",
-          "text": "Is the central pseudo MRD less than 2mm?",
-          "type": "boolean",
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "ExcessiveSkinOverhanging",
-              "answerBoolean": true
-            }
-          ],
-          "required": true
-        },
-        {
-          "linkId": "RedundantTissueObscureSight",
-          "text": "Does the redundant tissue obscure the line of sight?",
-          "type": "boolean",
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "EdemaRedundantTissue"
-              }
-            }
-          ],
-          "linkId": "EdemaRedundantTissue",
-          "text": "Is there any erythema/edema of the redundant tissue?",
-          "type": "boolean",
-          "required": true
-        },
-        {
-          "linkId": "AngleEyelidLifting",
-          "text": "Is the angle between the resting field and the field performed by manually lifting the eyelid more than 12 degrees?",
-          "type": "boolean",
-          "required": true
-        }
-      ]
-    },
-    {
-      "linkId": "6",
-      "text": "Contraindications",
-      "type": "group",
-      "item": [
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "ThyroidOrbitopathy"
-              }
-            }
-          ],
-          "linkId": "ThyroidOrbitopathy",
-          "text": "Does the patient have thyroid orbitopathy?",
-          "type": "boolean",
-          "required": true
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "CheckProptosis"
-              }
-            }
-          ],
-          "linkId": "CheckProptosis",
-          "text": "Does the patient have proptosis? ",
-          "type": "boolean",
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "ThyroidOrbitopathy",
-              "answerBoolean": true
-            }
-          ],
-          "required": true
-        }
-      ]
-    },
-    {
-      "linkId": "7",
-      "text": "Photographic Evidence",
-      "type": "group",
-      "item": [
-        {
-          "linkId": "EvidenceDifficultyFittingProsthesis",
-          "text": "Photographic documentation demonstrating abnormalities as they relate to the abnormal upper and/or lower eyelid position are required.",
-          "type": "display"
-        },
-        {
-          "linkId": "EvidencePhysicalSigns",
-          "text": "Photographs of both eyelids in both frontal (straight ahead) and lateral (from the side) positions are required to demonstrate the physical signs.",
-          "type": "display"
-        }
-      ]
-    }
-  ]
+    ]
 }

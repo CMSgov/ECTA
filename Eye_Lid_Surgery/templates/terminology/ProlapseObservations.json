@@ -1,0 +1,29 @@
+{
+  "resourceType": "ValueSet",
+  "id": "ProlapseObservations",
+  "url": "<FHIR-server>/ValueSet/ProlapseObservations",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:ProlapseObservations"
+    }
+  ],
+  "version": "Latest",
+  "name": "ProlapseObservations",
+  "title": "ProlapseObservations",
+  "status": "active",
+  "publisher": "CMS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "29696001",
+            "display": "Prolapse (morphologic abnormality)"
+          }
+        ]
+      }
+    ]
+  }
+}

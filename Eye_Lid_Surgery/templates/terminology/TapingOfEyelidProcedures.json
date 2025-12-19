@@ -1,0 +1,29 @@
+{
+  "resourceType": "ValueSet",
+  "id": "TapingOfEyelidProcedures",
+  "url": "<FHIR-server>/ValueSet/TapingOfEyelidProcedures",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:TapingOfEyelidProcedures"
+    }
+  ],
+  "version": "Latest",
+  "name": "TapingOfEyelidProcedures",
+  "title": "TapingOfEyelidProcedures",
+  "status": "active",
+  "publisher": "CMS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "241720001",
+            "display": "Taping of eyelid (procedure)"
+          }
+        ]
+      }
+    ]
+  }
+}

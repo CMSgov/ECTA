@@ -7,33 +7,47 @@ include FHIRHelpers version '4.0.0' called FHIRHelpers
 codesystem "ICD-10-CM": 'http://hl7.org/fhir/sid/icd-10-cm'
 codesystem "LOINC": 'http://loinc.org'
 codesystem "HCPCS": 'https://hcpcs.codes/'
-codesystem "SNOMED-CT": 'http://snomed.info/sct'
+codesystem "SNOMEDCT": 'http://snomed.info/sct'
 codesystem "CPT": 'https://www.aapc.com/resources/medical-coding/cpt.aspx'
 
-valueset "Vision Interference": '2.16.840.1.113883.3.6037.1001.23.93.189'
-valueset "Impairment Daily Activities": '2.16.840.1.113883.3.6037.1001.23.93.190'
-valueset "Difficulty Wearing Spectacles": '2.16.840.1.113883.3.6037.1001.23.93.191'
-valueset "Disorder of Eye": '2.16.840.1.113883.3.6037.1001.23.93.59'
-valueset "Sockets": '2.16.840.1.113883.3.6037.1001.23.99.25'
-valueset "Difficulty Wearing Prosthesis": '2.16.840.1.113883.3.6037.1001.23.93.192'
-valueset "Lower Eyelid Blepharoplasty Codes": '2.16.840.1.113883.3.6037.1001.23.93.193'
-valueset "Upper Eyelid Blepharoplasty Codes": '2.16.840.1.113883.3.6037.1001.23.93.194'
-valueset "Dermatochalasis": '2.16.840.1.113883.3.6037.1001.23.93.195'
-valueset "Thyroid Eye Diseases": '2.16.840.1.113883.3.6037.1001.23.93.196'
-valueset "Chronic Dermatitis": '2.16.840.1.113883.3.6037.1001.23.93.197'
-valueset "Blepharochalasis": '2.16.840.1.113883.3.6037.1001.23.93.198'
-valueset "Blepharospasm Condition Codes": '2.16.840.1.113883.3.6037.1001.23.93.79'
-valueset "Ptosis": '2.16.840.1.113883.3.6037.1001.23.93.199'
-valueset "Brow Ptosis": '2.16.840.1.113883.3.6037.1001.23.93.200'
-valueset "Blepharoptosis": '2.16.840.1.113883.3.6037.1001.23.93.201'
-valueset "Left Eye Conditions for Eyelid Surgery": '2.16.840.1.113883.3.6037.1001.23.93.202'
-valueset "Right Eye Conditions for Eyelid Surgery": '2.16.840.1.113883.3.6037.1001.23.93.203'
-valueset "Bilateral Eye Conditions for Eyelid Surgery": '2.16.840.1.113883.3.6037.1001.23.93.204'
-valueset "Margin reflex distance": '2.16.840.1.113883.3.6037.1001.23.99.24'
-valueset "Edema of eyelids": '2.16.840.1.113883.3.6037.1001.23.93.205'
-valueset "Thyroid Orbitopathy": '2.16.840.1.113883.3.6037.1001.23.93.206'
-valueset "Proptosis": '2.16.840.1.113883.3.6037.1001.23.93.207'
+valueset "PrimaryConditionsFor15820and15821" : 'PrimaryConditionsFor15820and15821'
+valueset "PrimaryConditionsForOther" : 'PrimaryConditionsForOther'
+valueset "ChronicDermatitisConditions": 'ChronicDermatitisConditions'
+valueset "BlepharochalasisConditions": 'BlepharochalasisConditions'
+valueset "ConditionSeverityConditions": 'ConditionSeverityConditions'
+valueset "AllergicContactDermatitisOfEyelidConditions": 'AllergicContactDermatitisOfEyelidConditions'
+valueset "ThyroidEyeDiseaseConditions": 'ThyroidEyeDiseaseConditions'
+valueset "BlepharitisConditions": 'BlepharitisConditions'
+valueset "InflammationOfEyelidConditions": 'InflammationOfEyelidConditions'
+valueset "IrritantContactDermatitisConditions": 'IrritantContactDermatitisConditions'
+valueset "AnophthalmosConditions": 'AnophthalmosConditions'
+valueset "MicrophthalmosConditions": 'MicrophthalmosConditions'
+valueset "EnophthalmosConditions": 'EnophthalmosConditions'
+valueset "PtosisOfEyelidConditions": 'PtosisOfEyelidConditions'
 
+valueset "SwellingOfEyelidObservations": 'SwellingOfEyelidObservations'
+valueset "InterferenceWithVisionObservations": 'InterferenceWithVisionObservations'
+valueset "VisualFieldDefectObservations": 'VisualFieldDefectObservations'
+valueset "DifficultyPerformingActivityOfDailyLivingObservations": 'DifficultyPerformingActivityOfDailyLivingObservations'
+valueset "ExcessSkinOfEyelidObservations": 'ExcessSkinOfEyelidObservations'
+valueset "DifficultyUsingSpectaclesObservations": 'DifficultyUsingSpectaclesObservations'
+valueset "DermatochalasisOfLeftEyelidObservations": 'DermatochalasisOfLeftEyelidObservations'
+valueset "DermatochalasisOfRightEyelidObservations": 'DermatochalasisOfRightEyelidObservations'
+valueset "DermatochalasisOfBilateralUpperEyelidsObservations": 'DermatochalasisOfBilateralUpperEyelidsObservations'
+valueset "DermatochalasisOfBilateralLowerEyelidsObservations": 'DermatochalasisOfBilateralLowerEyelidsObservations'
+valueset "PainObservations": 'PainObservations'
+valueset "DifficultyReadingObservations": 'DifficultyReadingObservations'
+valueset "DifficultyUsingPersonalComputerObservations": 'DifficultyUsingPersonalComputerObservations'
+valueset "DifficultyWithPerformingWorkActivitiesObservations": 'DifficultyWithPerformingWorkActivitiesObservations'
+valueset "HeavyFeelingInEyelidsObservations": 'HeavyFeelingInEyelidsObservations'
+valueset "FindingRelatedToAbilityToPutOnProsthesisObservations": 'FindingRelatedToAbilityToPutOnProsthesisObservations'
+valueset "ProlapseObservations": 'ProlapseObservations'
+
+valueset "SteroidTherapyProcedures": 'SteroidTherapyProcedures'
+valueset "TapingOfEyelidProcedures": 'TapingOfEyelidProcedures'
+valueset "PrescribingFittingAndSupplyOfOcularProsthesisProcedures":  'PrescribingFittingAndSupplyOfOcularProsthesisProcedures'
+
+valueset "ThyroidMedications": 'ThyroidMedications'
 
 parameter "ServiceRequest" ServiceRequest
 parameter "QuestionnaireResponse" QuestionnaireResponse
@@ -43,283 +57,408 @@ context Patient
 define Request:
 	"ServiceRequest"
 
-define VisionInterferenceCondition:
-	[Condition]C
-    where exists(C.code.coding C where C in "Vision Interference")
-      and First(C.clinicalStatus.coding).code.value = 'active'
-        and First(C.verificationStatus.coding).code.value = 'confirmed'
+define BlepharoplastyRequest:
+	First([ServiceRequest])
 
-define ImpairmentInDailyActivitiesCondition:
-	[Condition]C
-    where exists(C.code.coding C where C in "Impairment Daily Activities")
-      and First(C.clinicalStatus.coding).code.value = 'active'
-        and First(C.verificationStatus.coding).code.value = 'confirmed'
+define "ServiceRequestCode":
+    FHIRHelpers.ToCode(First("BlepharoplastyRequest".code.coding))
 
-define DifficultyFittingSpectaclesCondition:
-	[Condition]C
-    where exists(C.code.coding C where C in "Difficulty Wearing Spectacles")
-      and First(C.clinicalStatus.coding).code.value = 'active'
-        and First(C.verificationStatus.coding).code.value = 'confirmed'
+define BlepharoplastyEncounter:
+	First([Encounter]E where 'Encounter/' + E.id.value = "BlepharoplastyRequest".encounter.reference.value)
 
-define EyeIrritationCondition:
-	[Condition]C
-    where exists(C.code.coding C where C in "Disorder of Eye")
-      and First(C.clinicalStatus.coding).code.value = 'active'
-        and First(C.verificationStatus.coding).code.value = 'confirmed'
+define PresentingConditionOrChiefComplaint:
+	{
+		(
+			if (
+				First([Condition]C where (FHIRHelpers.ToCode(First(C.code.coding)) in "ChronicDermatitisConditions")) is not null and 
+				First([Condition]C where (FHIRHelpers.ToCode(First(C.code.coding)) in "BlepharochalasisConditions")) is not null and 
+				(
+					First([Condition]C where (FHIRHelpers.ToCode(First(C.code.coding)) in "AllergicContactDermatitisOfEyelidConditions") and First(C.severity.coding).code = '24484000') is not null or
+					First([Condition]C where (FHIRHelpers.ToCode(First(C.code.coding)) in "ThyroidEyeDiseaseConditions") and First(C.severity.coding).code = '24484000') is not null
+				)
+			) then 'chronic-dermatitis'
+			else ''
+		), 
+		( 
+			if (
+				First([Condition]C where (FHIRHelpers.ToCode(First(C.code.coding)) in "BlepharitisConditions")) is not null or 
+				First([Condition]C where (FHIRHelpers.ToCode(First(C.code.coding)) in "InflammationOfEyelidConditions")) is not null or 
+				First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "SwellingOfEyelidObservations")) is not null or 
+				First([Condition]C where (FHIRHelpers.ToCode(First(C.code.coding)) in "IrritantContactDermatitisConditions") and First(C.severity.coding).code = '24484000') is not null
+			) then 'eyelid-irritation'
+			else ''
+		), 
+		(
+			if ( 
+				First([Procedure]P where (FHIRHelpers.ToCode(First(P.code.coding)) in "PrescribingFittingAndSupplyOfOcularProsthesisProcedures")) is not null and 
+				(
+					First([Condition]C where (FHIRHelpers.ToCode(First(C.code.coding)) in "AnophthalmosConditions")) is not null or
+					First([Condition]C where (FHIRHelpers.ToCode(First(C.code.coding)) in "MicrophthalmosConditions")) is not null or
+					First([Condition]C where (FHIRHelpers.ToCode(First(C.code.coding)) in "EnophthalmosConditions")) is not null
+				)
+			 ) then 'difficulty-fitting-prosthesis'
+			else ''
+		), 
+		( 	
+			if ( 
+				First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "InterferenceWithVisionObservations")) is not null or 
+				(
+					First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "InterferenceWithVisionObservations")) is not null and
+					First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "DifficultyPerformingActivityOfDailyLivingObservations")) is not null
+				) or 
+				First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "ExcessSkinOfEyelidObservations")) is not null or 
+				First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "ProlapseObservations")) is not null or 
+				First([Condition]C where (FHIRHelpers.ToCode(First(C.code.coding)) in "PtosisOfEyelidConditions")) is not null 
+			 ) then 'interference-with-vision'
+			else ''
+		), 
+		( 
+			if ( 
+				First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "DifficultyUsingSpectaclesObservations")) is not null and 
+				(
+					First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "DermatochalasisOfLeftEyelidObservations")) is not null or
+					First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "DermatochalasisOfRightEyelidObservations")) is not null or
+					First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "DermatochalasisOfBilateralUpperEyelidsObservations")) is not null or
+					First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "DermatochalasisOfBilateralLowerEyelidsObservations")) is not null
+				)
+			)	then 'difficulty-fitting-spectacles'
+			else ''
+		) 
+  	}
 
-define SocketCondition:
-  [Condition]C
-    where exists(C.code.coding C where C in "Sockets")
-      and First(C.clinicalStatus.coding).code.value = 'active'
-        and First(C.verificationStatus.coding).code.value = 'confirmed'
+define PrimaryDiagnosisFor15820and15821:
+	if (ServiceRequestCode.code = '15820' or ServiceRequestCode.code = '15821') then FHIRHelpers.ToCode(First(First([Condition]C
+		 where FHIRHelpers.ToCode(First(C.code.coding)) in "PrimaryConditionsFor15820and15821").code.coding))
+	else null
 
-define DifficultyFittingProsthesisCondition:
-	[Condition]C
-    where exists(C.code.coding C where C in "Difficulty Wearing Prosthesis")
-      and First(C.clinicalStatus.coding).code.value = 'active'
-        and First(C.verificationStatus.coding).code.value = 'confirmed'
+define PrimaryDiagnosisForOther:
+	if (ServiceRequestCode.code != '15820'and ServiceRequestCode.code != '15821') then FHIRHelpers.ToCode(First(First([Condition]C
+		 where FHIRHelpers.ToCode(First(C.code.coding)) in "PrimaryConditionsForOther").code.coding))
+	else null
 
-define LowerEyelidBlepharoplastySurgery:
-  "Request".code.coding C where C in "Lower Eyelid Blepharoplasty Codes"
+define AdditionalDiagnosisForOther:
+	if (ServiceRequestCode.code != '15820'and ServiceRequestCode.code != '15821' and (PrimaryDiagnosisForOther.code = 'H02.32​'or PrimaryDiagnosisForOther.code != 'H02.35​' or PrimaryDiagnosisForOther.code = 'H02.32​'or PrimaryDiagnosisForOther.code != 'H02.35​')) then FHIRHelpers.ToCode(First(First([Condition]C
+		 where FHIRHelpers.ToCode(First(C.code.coding)) in "PrimaryConditionsFor15820and15821").code.coding))
+	else null
 
-define SurgeryPurpose:
-	if (exists("VisionInterferenceCondition")
-				or exists("DifficultyFittingSpectaclesCondition")
-				or exists("EyeIrritationCondition")
-				or exists("SocketCondition"))
-					then 'Reconstructive'
-						else if exists("LowerEyelidBlepharoplastySurgery")
-							then 'Cosmetic'
-								else null
+define ProviderObjectiveSymptoms:
+	{
+		(
+			if (
+				First([Condition]C where (FHIRHelpers.ToCode(First(C.code.coding)) in "ChronicDermatitisConditions")) is not null and 
+				First([Condition]C where (FHIRHelpers.ToCode(First(C.code.coding)) in "BlepharochalasisConditions")) is not null 
+			) then 'CHRONIC_DERMATITIS_BLEPHAROCHALASIS'
+			else ''
+		), 
+		( 
+			if (
+				First([Condition]C where (FHIRHelpers.ToCode(First(C.code.coding)) in "BlepharitisConditions")) is not null or 
+				First([Condition]C where (FHIRHelpers.ToCode(First(C.code.coding)) in "InflammationOfEyelidConditions")) is not null or 
+				First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "SwellingOfEyelidObservations")) is not null or 
+				First([Condition]C where (FHIRHelpers.ToCode(First(C.code.coding)) in "IrritantContactDermatitisConditions") and First(C.severity.coding).code = '24484000') is not null
+			) then 'DEBILITATING_EYELID_IRRITATION_PAIN'
+			else ''
+		), 
+		(
+			if ( 
+					First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "DifficultyReadingObservations")) is not null and
+					First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "InterferenceWithVisionObservations")) is not null
+			 ) then 'DIFFICULTY_READING'
+			else ''
+		), 
+		( 	
+			if ( 
+				First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "ExcessSkinOfEyelidObservations")) is not null and 
+				First([Procedure]P where (FHIRHelpers.ToCode(First(P.code.coding)) in "PrescribingFittingAndSupplyOfOcularProsthesisProcedures")) is not null and  
+				(
+					First([Condition]C where (FHIRHelpers.ToCode(First(C.code.coding)) in "AnophthalmosConditions")) is not null or
+					First([Condition]C where (FHIRHelpers.ToCode(First(C.code.coding)) in "MicrophthalmosConditions")) is not null or
+					First([Condition]C where (FHIRHelpers.ToCode(First(C.code.coding)) in "EnophthalmosConditions")) is not null
+				)
+			 ) then 'INTERFERES_WITH_OCULAR_PROSTHESIS'
+			else ''
+		), 
+		( 
+			if ( 
+				First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "DifficultyUsingSpectaclesObservations")) is not null and 
+				(
+					First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "DermatochalasisOfLeftEyelidObservations")) is not null or
+					First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "DermatochalasisOfRightEyelidObservations")) is not null or
+					First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "DermatochalasisOfBilateralUpperEyelidsObservations")) is not null or
+					First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "DermatochalasisOfBilateralLowerEyelidsObservations")) is not null
+				)
+			)	then 'INTERFERES_WITH_SPECTACLES'
+			else ''
+		) , 
+		( 
+			if ( 
+				First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "InterferenceWithVisionObservations")) is not null and 
+				First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "DifficultyPerformingActivityOfDailyLivingObservations")) is not null and
+				(
+					First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "ExcessSkinOfEyelidObservations")) is not null or 
+					First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "ProlapseObservations")) is not null or 
+					First([Condition]C where (FHIRHelpers.ToCode(First(C.code.coding)) in "PtosisOfEyelidConditions")) is not null 
+				)
+			)	then 'INTERFERES_WITH_ADL'
+			else ''
+		) 
+  	}
 
-define UpperEyelidBlepharoplastySurgery:
-  "Request".code.coding C where C in "Upper Eyelid Blepharoplasty Codes"
+define FailedConservativeTreatments:
+	{
+		(
+			if (
+				First([Procedure]P where (FHIRHelpers.ToCode(First(P.code.coding)) in "SteroidTherapyProcedures" and 
+					First(P.complication.coding).code = '6064005' and 
+					First(P.bodySite.coding).code = '80243003'
+				)) is not null
+			) then 'TOPICAL_MEDICATIONS'
+			else ''
+		), 
+		( 
+			if ( 'chronic-dermatitis' in PresentingConditionOrChiefComplaint) then 'ALLERGY_CONTROL'
+			else ''
+		), 
+		(
+			if ( 
+				'chronic-dermatitis' in PresentingConditionOrChiefComplaint or
+				First([Medication]M where FHIRHelpers.ToCode(First(M.code.coding)) in ThyroidMedications) is not null
+			 ) then 'THYROID_TREATMENT'
+			else ''
+		)
+	}
 
-define AnatomicalLocationOfSurgery:
-	if exists("UpperEyelidBlepharoplastySurgery")
-			then 'Upper Eye Lid'
-				else if exists("LowerEyelidBlepharoplastySurgery")
-					then 'Lower Eye Lid'
-						else null
+define BeneficiaryReportedSymptoms:
+	{
+		(
+			if (
+				First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "HeavyFeelingInEyelidsObservations")) is not null
+			) then 'UPPER_EYELID_HEAVINESS'
+			else ''
+		), 
+		( 
+			if ( 
+				First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "InterferenceWithVisionObservations")) is not null and 
+				First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "DifficultyPerformingActivityOfDailyLivingObservations")) is not null and
+				(
+					First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "ExcessSkinOfEyelidObservations")) is not null or 
+					First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "ProlapseObservations")) is not null or 
+					First([Condition]C where (FHIRHelpers.ToCode(First(C.code.coding)) in "PtosisOfEyelidConditions")) is not null 
+				)
+			)	then 'INTERFERES_WITH_ADL'
+			else ''
+		), 
+		(
+			if ( 
+					First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "InterferenceWithVisionObservations")) is not null and
+					(
+						First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "DifficultyReadingObservations")) is not null or 
+						First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "DifficultyUsingPersonalComputerObservations")) is not null
+					)
+			 ) then 'DIFFICULTY_READING_OR_COMPUTER_WORK'
+			else ''
+		),
+		(
+			if ( 
+					First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "DifficultyWithPerformingWorkActivitiesObservations")) is not null and
+					First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "InterferenceWithVisionObservations")) is not null
+			 ) then 'DIFFICULTIES_AT_WORK_VISUAL_LIMITATIONS'
+			else ''
+		), 
+		( 
+			if (
+				First([Condition]C where (FHIRHelpers.ToCode(First(C.code.coding)) in "BlepharitisConditions")) is not null or 
+				First([Condition]C where (FHIRHelpers.ToCode(First(C.code.coding)) in "InflammationOfEyelidConditions")) is not null or 
+				First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "SwellingOfEyelidObservations")) is not null or 
+				First([Condition]C where (FHIRHelpers.ToCode(First(C.code.coding)) in "IrritantContactDermatitisConditions") and First(C.severity.coding).code = '24484000') is not null
+			) then 'DEBILITATING_EYELID_IRRITATION_PAIN'
+			else ''
+		)
+	}
 
-define VisionInterference:
-	if exists("VisionInterferenceCondition")
-		then true
-			else false
+define BeneficiaryReportedSymptomsC:
+	{
+		(
+			if (
+				First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "HeavyFeelingInEyelidsObservations")) is not null
+			) then 'UPPER_EYELID_HEAVINESS'
+			else ''
+		), 
+		( 
+			if ( 
+				First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "InterferenceWithVisionObservations")) is not null and 
+				First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "DifficultyPerformingActivityOfDailyLivingObservations")) is not null and
+				(
+					First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "ExcessSkinOfEyelidObservations")) is not null or 
+					First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "ProlapseObservations")) is not null or 
+					First([Condition]C where (FHIRHelpers.ToCode(First(C.code.coding)) in "PtosisOfEyelidConditions")) is not null 
+				)
+			)	then 'INTERFERES_WITH_ADL'
+			else ''
+		), 
+		(
+			if ( 
+					First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "InterferenceWithVisionObservations")) is not null and
+					(
+						First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "DifficultyReadingObservations")) is not null or 
+						First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "DifficultyUsingPersonalComputerObservations")) is not null
+					)
+			 ) then 'DIFFICULTY_READING_OR_COMPUTER_WORK'
+			else ''
+		),
+		(
+			if ( 
+					First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "DifficultyWithPerformingWorkActivitiesObservations")) is not null and
+					First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "InterferenceWithVisionObservations")) is not null
+			 ) then 'DIFFICULTIES_AT_WORK_VISUAL_LIMITATIONS'
+			else ''
+		), 
+		( 
+			if (
+				First([Condition]C where (FHIRHelpers.ToCode(First(C.code.coding)) in "BlepharitisConditions")) is not null or 
+				First([Condition]C where (FHIRHelpers.ToCode(First(C.code.coding)) in "InflammationOfEyelidConditions")) is not null or 
+				First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "SwellingOfEyelidObservations")) is not null or 
+				First([Condition]C where (FHIRHelpers.ToCode(First(C.code.coding)) in "IrritantContactDermatitisConditions") and First(C.severity.coding).code = '24484000') is not null
+			) then 'DEBILITATING_EYELID_IRRITATION_PAIN'
+			else ''
+		), 
+		(
+			if ( 
+					First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "FindingRelatedToAbilityToPutOnProsthesisObservations")) is not null and
+					First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "ExcessSkinOfEyelidObservations")) is not null
+			 ) then 'PROSTHESIS_WONT_STAY_IN_PLACE'
+			else ''
+		), 
+		(
+			if ( 
+				First([Procedure]P where (FHIRHelpers.ToCode(First(P.code.coding)) in "PrescribingFittingAndSupplyOfOcularProsthesisProcedures")) is not null and 
+				(
+					First([Condition]C where (FHIRHelpers.ToCode(First(C.code.coding)) in "AnophthalmosConditions")) is not null or
+					First([Condition]C where (FHIRHelpers.ToCode(First(C.code.coding)) in "MicrophthalmosConditions")) is not null or
+					First([Condition]C where (FHIRHelpers.ToCode(First(C.code.coding)) in "EnophthalmosConditions")) is not null
+				)
+			 ) then 'CANNOT_FIT_PROSTHESIS_DUE_TO_EYELID_ANATOMY'
+			else ''
+		),
+		(
+			if ( 
+					First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "FindingRelatedToAbilityToPutOnProsthesisObservations")) is not null and
+					First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "ExcessSkinOfEyelidObservations")) is not null
+			 ) then 'PROSTHESIS_IRRITATION_OR_DISPLACEMENT'
+			else ''
+		)
+		
+		,
+		(
+			if ( 
+					First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "DifficultyUsingSpectaclesObservations")) is not null and
+					First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "ExcessSkinOfEyelidObservations")) is not null
+			 ) then 'FUNCTIONAL_IMPAIRMENT_DUE_TO_INABILITY_TO_WEAR_GLASSES'
+			else ''
+		),
+		(
+			if ( 
+					First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "DifficultyUsingSpectaclesObservations")) is not null and
+					First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "ExcessSkinOfEyelidObservations")) is not null
+			 ) then 'FUNCTIONAL_IMPAIRMENT_DUE_TO_INABILITY_TO_WEAR_GLASSES'
+			else ''
+		),
+		(
+			if ( 
+					First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "DifficultyUsingSpectaclesObservations")) is not null and
+					First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "ExcessSkinOfEyelidObservations")) is not null
+			 ) then 'FUNCTIONAL_IMPAIRMENT_DUE_TO_INABILITY_TO_WEAR_GLASSES'
+			else ''
+		),
+		( 
+			if ( 'chronic-dermatitis' in PresentingConditionOrChiefComplaint) then 'ALLERGY_CONTROL'
+			else ''
+		), 
+		(
+			if ( 
+				'chronic-dermatitis' in PresentingConditionOrChiefComplaint or
+				First([Medication]M where FHIRHelpers.ToCode(First(M.code.coding)) in "ThyroidMedications") is not null
+			 ) then 'THYROID_TREATMENT'
+			else ''
+		)
+	}
 
-define ImpairmentInDailyActivities:
-	if exists("ImpairmentInDailyActivitiesCondition")
-		then true
-			else null
-
-define DifficultyFittingSpectacles:
-	if exists("DifficultyFittingSpectaclesCondition")
-		then true
-			else false
-
-define EyelidIrritation:
-	if exists("EyeIrritationCondition")
-		then true
-			else false
-
-define Socket:
-	if exists("SocketCondition")
-			then true
-				else false
-
-define DifficultyFittingProsthesis:
-	if exists("DifficultyFittingProsthesisCondition")
-		then true
-			else false
-
-define DermatochalasisCondition:
-	[Condition]C
-    where exists(C.code.coding C where C in "Dermatochalasis")
-      and First(C.clinicalStatus.coding).code.value = 'active'
-        and First(C.verificationStatus.coding).code.value = 'confirmed'
-
-define CheckDermatochalasis:
-	if exists("DermatochalasisCondition")
-		then true
-			else false
-
-define DifficultySpectaclesDermatochalasis:
-		if (exists("DermatochalasisCondition")
-			and exists("DifficultyFittingSpectaclesCondition"))
-				then true
-					else null
-
-define ThyroidEyeCondition:
-	exists([Condition]C
-    where exists(C.code.coding C where C in "Thyroid Eye Diseases")
-      and First(C.clinicalStatus.coding).code.value = 'active'
-        and First(C.verificationStatus.coding).code.value = 'confirmed')
-
-define ChronicDermatitis:
-	[Condition]C
-    where exists(C.code.coding C where C in "Chronic Dermatitis")
-      and First(C.clinicalStatus.coding).code.value = 'active'
-        and First(C.verificationStatus.coding).code.value = 'confirmed'
-
-define ThyroidChronicDermatitis:
-	if (("ThyroidEyeCondition" = true)
-				and exists("ChronicDermatitis"))
-						then true
-							else null
-
-define BlepharochalasisCondition:
-	[Condition]C
-    where exists(C.code.coding C where C in "Blepharochalasis")
-      and First(C.clinicalStatus.coding).code.value = 'active'
-        and First(C.verificationStatus.coding).code.value = 'confirmed'
-
-define CheckBlepharochalasis:
- if exists("BlepharochalasisCondition")
-			then true
-				else false
-
-define ChronicDermatitisOrEyeIrritation:
-	if (exists("ChronicDermatitis") or exists("EyeIrritationCondition"))
-				and ("CheckBlepharochalasis" = true)
-					then true
-						else null
-
-define IdiopathicBlepharospasmCondition:
-	[Condition]C
-    where exists(C.code.coding C where C in "Blepharospasm Condition Codes")
-      and First(C.clinicalStatus.coding).code.value = 'active'
-        and First(C.verificationStatus.coding).code.value = 'confirmed'
-
-define IdiopathicBlepharospasm:
-	if exists("IdiopathicBlepharospasmCondition")
-		then true
-			else false
-
-define AnophthalmicSocket:
-		if exists("SocketCondition")
-			then true
-				else false
-
-define PtosisCondition:
-	[Condition]C
-    where exists(C.code.coding C where C in "Ptosis")
-      and First(C.clinicalStatus.coding).code.value = 'active'
-        and First(C.verificationStatus.coding).code.value = 'confirmed'
-
-define CheckPtosis:
-	if (exists("PtosisCondition")
-				and exists("SocketCondition"))
-					then true
-						else null
-
-define PtosisDifficultyProsthesis:
- if (exists("PtosisCondition")
-			and exists("DifficultyFittingProsthesisCondition"))
-				then true
-					else null
-
-define BrowPtosisCondition:
-	[Condition]C
-    where exists(C.code.coding C where C in "Brow Ptosis")
-      and First(C.clinicalStatus.coding).code.value = 'active'
-        and First(C.verificationStatus.coding).code.value = 'confirmed'
-
-define BrowPtosis:
-	if exists("BrowPtosisCondition")
-		then true
-			else false
-
-define BlepharoptosisCondition:
-	[Condition]C
-    where exists(C.code.coding C where C in "Blepharoptosis")
-      and First(C.clinicalStatus.coding).code.value = 'active'
-        and First(C.verificationStatus.coding).code.value = 'confirmed'
-
-define CheckBlepharoptosis:
-	if exists("BlepharoptosisCondition")
-		then true
-			else false
-
-define BlepharoptosisFunctionalDeficit:
-	if (exists("BlepharoptosisCondition")
-				and exists("VisionInterferenceCondition"))
-					then true
-						else null
-
-define LeftEyeCondition:
-	[Condition]C
-    where exists(C.code.coding C where C in "Left Eye Conditions for Eyelid Surgery")
-      and First(C.clinicalStatus.coding).code.value = 'active'
-        and First(C.verificationStatus.coding).code.value = 'confirmed'
-
-define RightEyeCondition:
-	[Condition]C
-    where exists(C.code.coding C where C in "Right Eye Conditions for Eyelid Surgery")
-      and First(C.clinicalStatus.coding).code.value = 'active'
-        and First(C.verificationStatus.coding).code.value = 'confirmed'
-
-define BilateralEyeCondition:
-	[Condition]C
-    where exists(C.code.coding C where C in "Bilateral Eye Conditions for Eyelid Surgery")
-      and First(C.clinicalStatus.coding).code.value = 'active'
-        and First(C.verificationStatus.coding).code.value = 'confirmed'
-
-define Laterality:
-	if (exists("LeftEyeCondition") or exists("RightEyeCondition"))
-		then 'Unilateral'
-			else if exists("BilateralEyeCondition")
-				then 'Bilateral'
-					else null
-
-define AnatomicalLocationCondition:
-	if exists("LeftEyeCondition")
-		then 'Left'
-			else if exists("RightEyeCondition")
-				then 'Right'
-					else null
-
-define MRD:
-	(First([Observation]O
-		where First(O.code.coding) in "Margin reflex distance"
-			and O.status.value = 'final'
-			and FHIRHelpers.ToQuantity(O.value) <= 2))M
-		 return FHIRHelpers.ToQuantity(M.value).value
-
-define PseudoMRD:
-	if ("MRD" is not null
-		and "MRD" < 2)
-			then true
-				else null
-
-define EdemaRedundantTissueCondition:
-  [Condition]C
-    where exists(C.code.coding C where C in "Edema of eyelids")
-      and First(C.clinicalStatus.coding).code.value = 'active'
-        and First(C.verificationStatus.coding).code.value = 'confirmed'
-
-define EdemaRedundantTissue:
-	if exists("EdemaRedundantTissueCondition")
-		then true
-			else null
-
-define ThyroidOrbitopathyCondition:
-	[Condition]C
-    where exists(C.code.coding C where C in "Thyroid Orbitopathy")
-      and First(C.clinicalStatus.coding).code.value = 'active'
-        and First(C.verificationStatus.coding).code.value = 'confirmed'
-
-define ThyroidOrbitopathy:
-	if exists("ThyroidOrbitopathyCondition")
-		then true
-			else false
-
-define ProptosisCondition:
-	[Condition]C
-    where exists(C.code.coding C where C in "Proptosis")
-      and First(C.clinicalStatus.coding).code.value = 'active'
-        and First(C.verificationStatus.coding).code.value = 'confirmed'
-
-define CheckProptosis:
-	if exists("ProptosisCondition")
-			then true
-				else null
+	define BeneficiaryReportedSymptomsE:
+		{
+		(
+			if (
+				First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "HeavyFeelingInEyelidsObservations")) is not null
+			) then 'UPPER_EYELID_HEAVINESS'
+			else ''
+		), 
+		( 
+			if ( 
+				First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "InterferenceWithVisionObservations")) is not null and 
+				First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "DifficultyPerformingActivityOfDailyLivingObservations")) is not null and
+				(
+					First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "ExcessSkinOfEyelidObservations")) is not null or 
+					First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "ProlapseObservations")) is not null or 
+					First([Condition]C where (FHIRHelpers.ToCode(First(C.code.coding)) in "PtosisOfEyelidConditions")) is not null 
+				)
+			)	then 'INTERFERES_WITH_ADL'
+			else ''
+		), 
+		(
+			if ( 
+					First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "InterferenceWithVisionObservations")) is not null and
+					(
+						First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "DifficultyReadingObservations")) is not null or 
+						First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "DifficultyUsingPersonalComputerObservations")) is not null
+					)
+			 ) then 'DIFFICULTY_READING_OR_COMPUTER_WORK'
+			else ''
+		),
+		(
+			if ( 
+					First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "DifficultyWithPerformingWorkActivitiesObservations")) is not null and
+					First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "InterferenceWithVisionObservations")) is not null
+			 ) then 'DIFFICULTIES_AT_WORK_VISUAL_LIMITATIONS'
+			else ''
+		), 
+		( 
+			if (
+				First([Condition]C where (FHIRHelpers.ToCode(First(C.code.coding)) in "BlepharitisConditions")) is not null or 
+				First([Condition]C where (FHIRHelpers.ToCode(First(C.code.coding)) in "InflammationOfEyelidConditions")) is not null or 
+				First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "SwellingOfEyelidObservations")) is not null or 
+				First([Condition]C where (FHIRHelpers.ToCode(First(C.code.coding)) in "IrritantContactDermatitisConditions") and First(C.severity.coding).code = '24484000') is not null
+			) then 'DEBILITATING_EYELID_IRRITATION_PAIN'
+			else ''
+		),
+		(
+			if ( 
+					First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "DifficultyUsingSpectaclesObservations")) is not null and
+					First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "ExcessSkinOfEyelidObservations")) is not null
+			 ) then 'SPECTACLES_WONT_STAY_IN_PLACE'
+			else ''
+		),
+		(
+			if ( 
+					First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "DifficultyUsingSpectaclesObservations")) is not null and
+					First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "ExcessSkinOfEyelidObservations")) is not null
+			 ) then 'SPECTACLES_IRRITATION_OR_DISPLACEMENT'
+			else ''
+		),
+		(
+			if ( 
+					First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "DifficultyUsingSpectaclesObservations")) is not null and
+					First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "ExcessSkinOfEyelidObservations")) is not null
+			 ) then 'FUNCTIONAL_IMPAIRMENT_DUE_TO_INABILITY_TO_WEAR_GLASSES'
+			else ''
+		),
+		( 
+			if ( 'chronic-dermatitis' in PresentingConditionOrChiefComplaint) then 'ALLERGY_CONTROL'
+			else ''
+		), 
+		(
+			if ( 
+				'chronic-dermatitis' in PresentingConditionOrChiefComplaint or
+				First([Medication]M where FHIRHelpers.ToCode(First(M.code.coding)) in "ThyroidMedications") is not null
+			 ) then 'THYROID_TREATMENT'
+			else ''
+		)
+	}

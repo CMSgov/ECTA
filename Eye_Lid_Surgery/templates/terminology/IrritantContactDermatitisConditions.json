@@ -1,0 +1,29 @@
+{
+  "resourceType": "ValueSet",
+  "id": "IrritantContactDermatitisConditions",
+  "url": "<FHIR-server>/ValueSet/IrritantContactDermatitisConditions",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:IrritantContactDermatitisConditions"
+    }
+  ],
+  "version": "Latest",
+  "name": "Irritant contact dermatitis Condition",
+  "title": "Irritant contact dermatitis Condition",
+  "status": "active",
+  "publisher": "CMS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "110979008",
+            "display": "Irritant contact dermatitis (disorder)"
+          }
+        ]
+      }
+    ]
+  }
+}

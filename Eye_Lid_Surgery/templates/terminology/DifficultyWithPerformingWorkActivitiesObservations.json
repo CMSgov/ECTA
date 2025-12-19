@@ -1,0 +1,29 @@
+{
+  "resourceType": "ValueSet",
+  "id": "DifficultyWithPerformingWorkActivitiesObservations",
+  "url": "<FHIR-server>/ValueSet/DifficultyWithPerformingWorkActivitiesObservations",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:DifficultyWithPerformingWorkActivitiesObservations"
+    }
+  ],
+  "version": "Latest",
+  "name": "Difficulty with performing work activities Observation",
+  "title": "Difficulty with performing work activities Observation",
+  "status": "active",
+  "publisher": "CMS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "737352000",
+            "display": "Difficulty with performing work activities (finding)"
+          }
+        ]
+      }
+    ]
+  }
+}

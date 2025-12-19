@@ -1,0 +1,37 @@
+{
+  "resourceType": "ValueSet",
+  "id": "ThyroidMedications",
+  "url": "<FHIR-server>/ValueSet/ThyroidMedications",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:ThyroidMedications"
+    }
+  ],
+  "version": "Latest",
+  "name": "ThyroidMedications",
+  "title": "ThyroidMedications",
+  "status": "active",
+  "publisher": "CMS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "710809001",
+            "display": "Levothyroxine (substance)"
+          },
+          {
+            "code": "840364008",
+            "display": "Teprotumumab (substance)"
+          },
+          {
+            "code": "768532006",
+            "display": "Product containing levothyroxine (medicinal product)"
+          }
+        ]
+      }
+    ]
+  }
+}

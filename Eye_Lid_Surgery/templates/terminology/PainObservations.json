@@ -1,0 +1,29 @@
+{
+  "resourceType": "ValueSet",
+  "id": "PainObservations",
+  "url": "<FHIR-server>/ValueSet/PainObservations",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:PainObservations"
+    }
+  ],
+  "version": "Latest",
+  "name": "Pain Observation",
+  "title": "Pain Observation",
+  "status": "active",
+  "publisher": "CMS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "22253000",
+            "display": "Pain (finding)"
+          }
+        ]
+      }
+    ]
+  }
+}

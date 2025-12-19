@@ -1,0 +1,29 @@
+{
+  "resourceType": "ValueSet",
+  "id": "ConditionSeverityConditions",
+  "url": "<FHIR-server>/ValueSet/ConditionSeverityConditions",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:ConditionSeverityConditions"
+    }
+  ],
+  "version": "Latest",
+  "name": "Condition severity Condition",
+  "title": "Condition severity Condition",
+  "status": "active",
+  "publisher": "CMS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "116694002",
+            "display": "Condition severity (disorder)"
+          }
+        ]
+      }
+    ]
+  }
+}

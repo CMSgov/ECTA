@@ -1,0 +1,29 @@
+{
+  "resourceType": "ValueSet",
+  "id": "AnophthalmosConditions",
+  "url": "<FHIR-server>/ValueSet/AnophthalmosConditions",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:AnophthalmosConditions"
+    }
+  ],
+  "version": "Latest",
+  "name": "Anophthalmos Condition",
+  "title": "Anophthalmos Condition",
+  "status": "active",
+  "publisher": "CMS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "7183006",
+            "display": "Anophthalmos (disorder)"
+          }
+        ]
+      }
+    ]
+  }
+}

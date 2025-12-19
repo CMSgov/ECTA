@@ -1,0 +1,29 @@
+{
+  "resourceType": "ValueSet",
+  "id": "DifficultyReadingObservations",
+  "url": "<FHIR-server>/ValueSet/DifficultyReadingObservations",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:DifficultyReadingObservations"
+    }
+  ],
+  "version": "Latest",
+  "name": "Difficulty reading Observation",
+  "title": "Difficulty reading Observation",
+  "status": "active",
+  "publisher": "CMS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "309253009",
+            "display": "Difficulty reading (finding)"
+          }
+        ]
+      }
+    ]
+  }
+}

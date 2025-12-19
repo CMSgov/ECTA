@@ -1,0 +1,29 @@
+{
+  "resourceType": "ValueSet",
+  "id": "InterferenceWithVisionObservations",
+  "url": "<FHIR-server>/ValueSet/InterferenceWithVisionObservations",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:InterferenceWithVisionObservations"
+    }
+  ],
+  "version": "Latest",
+  "name": "Interference with vision Observation",
+  "title": "Interference with vision Observation",
+  "status": "active",
+  "publisher": "CMS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "246638009",
+            "display": "Interference with vision (finding)"
+          }
+        ]
+      }
+    ]
+  }
+}

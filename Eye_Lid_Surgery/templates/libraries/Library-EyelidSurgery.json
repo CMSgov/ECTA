@@ -1,229 +1,337 @@
 {
-  "resourceType": "Library",
-  "version": "1.0.0",
-  "title": "EyelidSurgery",
-  "name": "EyelidSurgery",
-  "status": "draft",
-  "type": {
-    "coding": [
-      {
-        "code": "logic-library"
-      }
-    ]
-  },
-  "relatedArtifact": [
+    "resourceType": "Library",
+    "version": "1.0.0",
+    "title": "EyelidSurgery",
+    "name": "EyelidSurgery",
+    "status": "draft",
+    "type": {
+        "coding": [
+            {
+                "code": "logic-library"
+            }
+        ]
+    },
+    "relatedArtifact": [
+        {
+            "type": "depends-on",
+            "resource": "<FHIR-server>/Library/FHIRHelpers"
+        }
+    ],
+    "dataRequirement": [
     {
-      "type": "depends-on",
-      "resource": "<FHIR-server>/Library/FHIRHelpers"
+        "type": "Condition",
+        "codeFilter": [
+            {
+                "path": "code",
+                "valueSet": "<FHIR-server>/ValueSet/PrimaryConditionsFor15820and15821"
+            }
+        ]
+    },
+    {
+        "type": "Condition",
+        "codeFilter": [
+            {
+                "path": "code",
+                "valueSet": "<FHIR-server>/ValueSet/PrimaryConditionsForOther"
+            }
+        ]
+    },
+    {
+        "type": "Condition",
+        "codeFilter": [
+            {
+                "path": "code",
+                "valueSet": "<FHIR-server>/ValueSet/ChronicDermatitisConditions"
+            }
+        ]
+    },
+    {
+        "type": "Condition",
+        "codeFilter": [
+            {
+                "path": "code",
+                "valueSet": "<FHIR-server>/ValueSet/BlepharochalasisConditions"
+            }
+        ]
+    },
+    {
+        "type": "Condition",
+        "codeFilter": [
+            {
+                "path": "code",
+                "valueSet": "<FHIR-server>/ValueSet/ConditionSeverityConditions"
+            }
+        ]
+    },
+    {
+        "type": "Condition",
+        "codeFilter": [
+            {
+                "path": "code",
+                "valueSet": "<FHIR-server>/ValueSet/AllergicContactDermatitisOfEyelidConditions"
+            }
+        ]
+    },
+    {
+        "type": "Condition",
+        "codeFilter": [
+            {
+                "path": "code",
+                "valueSet": "<FHIR-server>/ValueSet/ThyroidEyeDiseaseConditions"
+            }
+        ]
+    },
+    {
+        "type": "Condition",
+        "codeFilter": [
+            {
+                "path": "code",
+                "valueSet": "<FHIR-server>/ValueSet/BlepharitisConditions"
+            }
+        ]
+    },
+    {
+        "type": "Condition",
+        "codeFilter": [
+            {
+                "path": "code",
+                "valueSet": "<FHIR-server>/ValueSet/InflammationOfEyelidConditions"
+            }
+        ]
+    },
+    {
+        "type": "Condition",
+        "codeFilter": [
+            {
+                "path": "code",
+                "valueSet": "<FHIR-server>/ValueSet/IrritantContactDermatitisConditions"
+            }
+        ]
+    },
+    {
+        "type": "Condition",
+        "codeFilter": [
+            {
+                "path": "code",
+                "valueSet": "<FHIR-server>/ValueSet/AnophthalmosConditions"
+            }
+        ]
+    },
+    {
+        "type": "Condition",
+        "codeFilter": [
+            {
+                "path": "code",
+                "valueSet": "<FHIR-server>/ValueSet/MicrophthalmosConditions"
+            }
+        ]
+    },
+    {
+        "type": "Condition",
+        "codeFilter": [
+            {
+                "path": "code",
+                "valueSet": "<FHIR-server>/ValueSet/EnophthalmosConditions"
+            }
+        ]
+    },
+    {
+        "type": "Condition",
+        "codeFilter": [
+            {
+                "path": "code",
+                "valueSet": "<FHIR-server>/ValueSet/PtosisOfEyelidConditions"
+            }
+        ]
+    },
+    {
+        "type": "Observation",
+        "codeFilter": [
+            {
+                "path": "code",
+                "valueSet": "<FHIR-server>/ValueSet/SwellingOfEyelidObservations"
+            }
+        ]
+    },
+    {
+        "type": "Observation",
+        "codeFilter": [
+            {
+                "path": "code",
+                "valueSet": "<FHIR-server>/ValueSet/InterferenceWithVisionObservations"
+            }
+        ]
+    },
+    {
+        "type": "Observation",
+        "codeFilter": [
+            {
+                "path": "code",
+                "valueSet": "<FHIR-server>/ValueSet/VisualFieldDefectObservations"
+            }
+        ]
+    },
+    {
+        "type": "Observation",
+        "codeFilter": [
+            {
+                "path": "code",
+                "valueSet": "<FHIR-server>/ValueSet/DifficultyPerformingActivityOfDailyLivingObservations"
+            }
+        ]
+    },
+    {
+        "type": "Observation",
+        "codeFilter": [
+            {
+                "path": "code",
+                "valueSet": "<FHIR-server>/ValueSet/ExcessSkinOfEyelidObservations"
+            }
+        ]
+    },
+    {
+        "type": "Observation",
+        "codeFilter": [
+            {
+                "path": "code",
+                "valueSet": "<FHIR-server>/ValueSet/DifficultyUsingSpectaclesObservations"
+            }
+        ]
+    },
+    {
+        "type": "Observation",
+        "codeFilter": [
+            {
+                "path": "code",
+                "valueSet": "<FHIR-server>/ValueSet/DermatochalasisOfLeftEyelidObservations"
+            }
+        ]
+    },
+    {
+        "type": "Observation",
+        "codeFilter": [
+            {
+                "path": "code",
+                "valueSet": "<FHIR-server>/ValueSet/DermatochalasisOfRightEyelidObservations"
+            }
+        ]
+    },
+    {
+        "type": "Observation",
+        "codeFilter": [
+            {
+                "path": "code",
+                "valueSet": "<FHIR-server>/ValueSet/DermatochalasisOfBilateralUpperEyelidsObservations"
+            }
+        ]
+    },
+    {
+        "type": "Observation",
+        "codeFilter": [
+            {
+                "path": "code",
+                "valueSet": "<FHIR-server>/ValueSet/DermatochalasisOfBilateralLowerEyelidsObservations"
+            }
+        ]
+    },
+    {
+        "type": "Observation",
+        "codeFilter": [
+            {
+                "path": "code",
+                "valueSet": "<FHIR-server>/ValueSet/PainObservations"
+            }
+        ]
+    },
+    {
+        "type": "Observation",
+        "codeFilter": [
+            {
+                "path": "code",
+                "valueSet": "<FHIR-server>/ValueSet/DifficultyReadingObservations"
+            }
+        ]
+    },
+    {
+        "type": "Observation",
+        "codeFilter": [
+            {
+                "path": "code",
+                "valueSet": "<FHIR-server>/ValueSet/DifficultyUsingPersonalComputerObservations"
+            }
+        ]
+    },
+    {
+        "type": "Observation",
+        "codeFilter": [
+            {
+                "path": "code",
+                "valueSet": "<FHIR-server>/ValueSet/DifficultyWithPerformingWorkActivitiesObservations"
+            }
+        ]
+    },
+    {
+        "type": "Observation",
+        "codeFilter": [
+            {
+                "path": "code",
+                "valueSet": "<FHIR-server>/ValueSet/HeavyFeelingInEyelidsObservations"
+            }
+        ]
+    },
+    {
+        "type": "Observation",
+        "codeFilter": [
+            {
+                "path": "code",
+                "valueSet": "<FHIR-server>/ValueSet/FindingRelatedToAbilityToPutOnProsthesisObservations"
+            }
+        ]
+    },
+    {
+        "type": "Observation",
+        "codeFilter": [
+            {
+                "path": "code",
+                "valueSet": "<FHIR-server>/ValueSet/ProlapseObservations"
+            }
+        ]
+    },
+    {
+        "type": "Procedure",
+        "codeFilter": [
+            {
+                "path": "code",
+                "valueSet": "<FHIR-server>/ValueSet/SteroidTherapyProcedures"
+            }
+        ]
+    },
+    {
+        "type": "Procedure",
+        "codeFilter": [
+            {
+                "path": "code",
+                "valueSet": "<FHIR-server>/ValueSet/TapingOfEyelidProcedures"
+            }
+        ]
+    },
+    {
+        "type": "Procedure",
+        "codeFilter": [
+            {
+                "path": "code",
+                "valueSet": "<FHIR-server>/ValueSet/PrescribingFittingAndSupplyOfOcularProsthesisProcedures"
+            }
+        ]
+    },
+    {
+        "type": "Medication",
+        "codeFilter": [
+            {
+                "path": "code",
+                "valueSet": "<FHIR-server>/ValueSet/ThyroidMedications"
+            }
+        ]
     }
-  ],
-  "dataRequirement": [
-    {
-      "type": "Condition",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.189"
-        }
-        ]
-    },
-    {
-      "type": "Condition",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.190"
-        }
-        ]
-    },
-    {
-      "type": "Condition",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.191"
-        }
-        ]
-    },
-    {
-      "type": "Condition",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.59"
-        }
-        ]
-    },
-    {
-      "type": "Condition",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.99.25"
-        }
-      ]
-    },
-    {
-      "type": "Condition",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.192"
-        }
-      ]
-    },
-    {
-      "type": "Procedure",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.193"
-        }
-      ]
-    },
-    {
-      "type": "Procedure",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.194"
-        }
-      ]
-    },
-    {
-      "type": "Condition",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.195"
-        }
-      ]
-    },
-    {
-      "type": "Condition",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.196"
-        }
-      ]
-    },
-    {
-      "type": "Condition",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.197"
-        }
-      ]
-    },
-    {
-      "type": "Condition",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.198"
-        }
-      ]
-    },
-    {
-      "type": "Condition",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.79"
-        }
-      ]
-    },
-    {
-      "type": "Condition",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.199"
-        }
-      ]
-    },
-    {
-      "type": "Condition",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.200"
-        }
-      ]
-    },
-    {
-      "type": "Condition",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.201"
-        }
-      ]
-    },
-    {
-      "type": "Condition",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.202"
-        }
-      ]
-    },
-    {
-      "type": "Condition",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.203"
-        }
-      ]
-    },
-    {
-      "type": "Condition",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.204"
-        }
-      ]
-    },
-    {
-      "type": "Condition",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.205"
-        }
-      ]
-    },
-    {
-      "type": "Condition",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.206"
-        }
-      ]
-    },
-    {
-      "type": "Condition",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.207"
-        }
-      ]
-    },
-    {
-      "type": "Observation",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.99.24"
-        }
-      ]
-    }
-  ]
+]
 }

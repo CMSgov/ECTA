@@ -1,0 +1,29 @@
+{
+  "resourceType": "ValueSet",
+  "id": "VisualFieldDefectObservations",
+  "url": "<FHIR-server>/ValueSet/VisualFieldDefectObservations",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:VisualFieldDefectObservations"
+    }
+  ],
+  "version": "Latest",
+  "name": "Visual field defect Observation",
+  "title": "Visual field defect Observation",
+  "status": "active",
+  "publisher": "CMS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "12184005",
+            "display": "Visual field defect (finding)"
+          }
+        ]
+      }
+    ]
+  }
+}

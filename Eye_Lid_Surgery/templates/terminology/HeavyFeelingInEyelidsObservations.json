@@ -1,0 +1,29 @@
+{
+  "resourceType": "ValueSet",
+  "id": "HeavyFeelingInEyelidsObservations",
+  "url": "<FHIR-server>/ValueSet/HeavyFeelingInEyelidsObservations",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:HeavyFeelingInEyelidsObservations"
+    }
+  ],
+  "version": "Latest",
+  "name": "Heavy feeling in eyelids Observation",
+  "title": "Heavy feeling in eyelids Observation",
+  "status": "active",
+  "publisher": "CMS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "78860006",
+            "display": "Heavy feeling in eyelids (finding)"
+          }
+        ]
+      }
+    ]
+  }
+}

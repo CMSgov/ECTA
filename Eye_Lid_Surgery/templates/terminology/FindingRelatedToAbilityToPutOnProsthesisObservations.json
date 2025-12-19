@@ -1,0 +1,29 @@
+{
+  "resourceType": "ValueSet",
+  "id": "FindingRelatedToAbilityToPutOnProsthesisObservations",
+  "url": "<FHIR-server>/ValueSet/FindingRelatedToAbilityToPutOnProsthesisObservations",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:FindingRelatedToAbilityToPutOnProsthesisObservations"
+    }
+  ],
+  "version": "Latest",
+  "name": "Finding related to ability to put on prosthesis Observation",
+  "title": "Finding related to ability to put on prosthesis Observation",
+  "status": "active",
+  "publisher": "CMS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "365235003",
+            "display": "Finding related to ability to put on prosthesis (finding)"
+          }
+        ]
+      }
+    ]
+  }
+}
