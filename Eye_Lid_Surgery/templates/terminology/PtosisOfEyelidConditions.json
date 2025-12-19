@@ -1,0 +1,29 @@
+{
+  "resourceType": "ValueSet",
+  "id": "PtosisOfEyelidConditions",
+  "url": "<FHIR-server>/ValueSet/PtosisOfEyelidConditions",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:PtosisOfEyelidConditions"
+    }
+  ],
+  "version": "Latest",
+  "name": "Ptosis of eyelid Condition",
+  "title": "Ptosis of eyelid Condition",
+  "status": "active",
+  "publisher": "CMS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "11934000",
+            "display": "Ptosis of eyelid (disorder)"
+          }
+        ]
+      }
+    ]
+  }
+}

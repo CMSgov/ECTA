@@ -1,0 +1,30 @@
+{
+  "resourceType": "ValueSet",
+  "id": "ChronicDermatitisConditions",
+  "url": "<FHIR-server>/ValueSet/ChronicDermatitisConditions",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:ChronicDermatitisConditions"
+    }
+  ],
+  "version": "Latest",
+  "name": "ChronicDermatitisConditions",
+  "title": "Chronic dermatitis Condition",
+  "status": "active",
+  "publisher": "CMS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "2021-03",
+        "concept": [
+          {
+            "code": "34936007",
+            "display": "Chronic dermatitis (disorder)"
+          }
+        ]
+      }
+    ]
+  }
+}

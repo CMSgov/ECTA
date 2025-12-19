@@ -1,0 +1,29 @@
+{
+  "resourceType": "ValueSet",
+  "id": "PrescribingFittingAndSupplyOfOcularProsthesisProcedures",
+  "url": "<FHIR-server>/ValueSet/PrescribingFittingAndSupplyOfOcularProsthesisProcedures",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:PrescribingFittingAndSupplyOfOcularProsthesisProcedures"
+    }
+  ],
+  "version": "Latest",
+  "name": "PrescribingFittingAndSupplyOfOcularProsthesisProcedures",
+  "title": "PrescribingFittingAndSupplyOfOcularProsthesisProcedures",
+  "status": "active",
+  "publisher": "CMS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "63686000",
+            "display": "Prescribing, fitting and supply of ocular prosthesis (procedure)"
+          }
+        ]
+      }
+    ]
+  }
+}

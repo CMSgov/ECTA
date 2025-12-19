@@ -1,0 +1,29 @@
+{
+  "resourceType": "ValueSet",
+  "id": "BlepharitisConditions",
+  "url": "<FHIR-server>/ValueSet/BlepharitisConditions",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:BlepharitisConditions"
+    }
+  ],
+  "version": "Latest",
+  "name": "Blepharitis Condition",
+  "title": "Blepharitis Condition",
+  "status": "active",
+  "publisher": "CMS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "41446000",
+            "display": "Blepharitis (disorder)"
+          }
+        ]
+      }
+    ]
+  }
+}

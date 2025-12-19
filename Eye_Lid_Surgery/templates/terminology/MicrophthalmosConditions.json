@@ -1,0 +1,29 @@
+{
+  "resourceType": "ValueSet",
+  "id": "MicrophthalmosConditions",
+  "url": "<FHIR-server>/ValueSet/MicrophthalmosConditions",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:MicrophthalmosConditions"
+    }
+  ],
+  "version": "Latest",
+  "name": "Microphthalmos Condition",
+  "title": "Microphthalmos Condition",
+  "status": "active",
+  "publisher": "CMS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "61142002",
+            "display": "Microphthalmos (disorder)"
+          }
+        ]
+      }
+    ]
+  }
+}

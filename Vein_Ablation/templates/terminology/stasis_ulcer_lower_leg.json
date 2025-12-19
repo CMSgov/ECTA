@@ -1,0 +1,34 @@
+{
+  "resourceType": "ValueSet",
+  "id": "stasis-ulcer-lower-leg",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2025-10-08T08:44:46.000+00:00"
+  },
+  "url": "<FHIR-server>/ValueSet/stasis-ulcer-lower-leg",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+            "value": "urn:oid:stasis-ulcer-lower-leg"
+    }
+  ],
+  "version": "Latest",
+  "name": "Stasis Ulcer Lower Leg",
+  "title": "Stasis Ulcer Lower Leg",
+  "status": "active",
+  "publisher": "CMS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "2025-09",
+        "concept": [
+          {
+            "code": "1237117000",
+            "display": "Venous ulcer of lower leg (disorder)"
+          }
+        ]
+      }
+    ]
+  }
+}                                           

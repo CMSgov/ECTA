@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "title": "VeinAblation",
     "name": "VeinAblation",
-    "status": "draft",
+    "status": "active",
     "type": {
       "coding": [
         {
@@ -205,32 +205,6 @@
         "codeFilter": [
           {
             "path": "code",
-            "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1138.480"
-          },
-          {
-            "path": "clinical-status",
-            "searchParam": "active"
-          }
-        ]
-      },
-      {
-        "type": "Condition",
-        "codeFilter": [
-          {
-            "path": "code",
-            "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1146.703"
-          },
-          {
-            "path": "clinical-status",
-            "searchParam": "active"
-          }
-        ]
-      },
-      {
-        "type": "Condition",
-        "codeFilter": [
-          {
-            "path": "code",
             "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.99.88"
           },
           {
@@ -305,6 +279,266 @@
         ]
       },
       {
+        "type": "Condition",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "<FHIR-server>/ValueSet/veinablation-primary-codes"
+          },
+          {
+            "path": "clinical-status",
+            "searchParam": "active"
+          }
+        ]
+      },
+      {
+        "type": "Condition",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "<FHIR-server>/ValueSet/venous-insufficiency"
+          },
+          {
+            "path": "clinical-status",
+            "searchParam": "active"
+          }
+        ]
+      },
+      {
+        "type": "Condition",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "<FHIR-server>/ValueSet/stasis-ulcer-lower-leg"
+          },
+          {
+            "path": "clinical-status",
+            "searchParam": "active"
+          }
+        ]
+      },
+      {
+        "type": "Condition",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "<FHIR-server>/ValueSet/pain-varicose-vein-lower-leg"
+          },
+          {
+            "path": "clinical-status",
+            "searchParam": "active"
+          }
+        ]
+      },
+      {
+        "type": "Condition",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "<FHIR-server>/ValueSet/edema-lower-leg"
+          },
+          {
+            "path": "clinical-status",
+            "searchParam": "active"
+          }
+        ]
+      },
+      {
+        "type": "Observation",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "<FHIR-server>/ValueSet/difficulty-in-daily-activities"
+          },
+          {
+            "path": "clinical-status",
+            "searchParam": "active"
+          }
+        ]
+      },
+      {
+        "type": "Condition",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "<FHIR-server>/ValueSet/superficial-phlebitis"
+          },
+          {
+            "path": "clinical-status",
+            "searchParam": "active"
+          }
+        ]
+      },
+      {
+        "type": "Condition",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "<FHIR-server>/ValueSet/stasis-dermatitis"
+          },
+          {
+            "path": "clinical-status",
+            "searchParam": "active"
+          }
+        ]
+      },
+      {
+        "type": "Condition",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "<FHIR-server>/ValueSet/dependent-edema"
+          },
+          {
+            "path": "clinical-status",
+            "searchParam": "active"
+          }
+        ]
+      },
+      {
+        "type": "BodyStructure",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "<FHIR-server>/ValueSet/lower-limb-structure"
+          },
+          {
+            "path": "clinical-status",
+            "searchParam": "active"
+          }
+        ]
+      },
+      {
+        "type": "Condition",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "<FHIR-server>/ValueSet/bleeding-diseased-lower-vessels"
+          },
+          {
+            "path": "clinical-status",
+            "searchParam": "active"
+          }
+        ]
+      },
+      {
+        "type": "Condition",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "<FHIR-server>/ValueSet/bleeding-ruptured-superficial-varicosity"
+          },
+          {
+            "path": "clinical-status",
+            "searchParam": "active"
+          }
+        ]
+      },
+      {
+        "type": "Condition",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "<FHIR-server>/ValueSet/localized-edema-fluid-overload"
+          },
+          {
+            "path": "clinical-status",
+            "searchParam": "active"
+          }
+        ]
+      },
+      {
+        "type": "Condition",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "<FHIR-server>/ValueSet/atherosclerosis-artery-lower-limb"
+          },
+          {
+            "path": "clinical-status",
+            "searchParam": "active"
+          }
+        ]
+      },
+      {
+        "type": "Condition",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "<FHIR-server>/ValueSet/lymphedema-lower-extremity"
+          },
+          {
+            "path": "clinical-status",
+            "searchParam": "active"
+          }
+        ]
+      },
+      {
+        "type": "Condition",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "<FHIR-server>/ValueSet/veinablation-not-necessary-conditions"
+          },
+          {
+            "path": "clinical-status",
+            "searchParam": "active"
+          }
+        ]
+      },
+      {
+        "type": "Procedure",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "<FHIR-server>/ValueSet/weight-reduction"
+          },
+          {
+            "path": "clinical-status",
+            "searchParam": "active"
+          }
+        ]
+      },
+      {
+        "type": "Procedure",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "<FHIR-server>/ValueSet/prescribed-physical-activity"
+          },
+          {
+            "path": "clinical-status",
+            "searchParam": "active"
+          }
+        ]
+      },
+      {
+        "type": "Procedure",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "<FHIR-server>/ValueSet/graduated-compression-therapy"
+          },
+          {
+            "path": "clinical-status",
+            "searchParam": "active"
+          }
+        ]
+      },
+      {
+        "type": "Procedure",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "<FHIR-server>/ValueSet/elevation-of-legs"
+          },
+          {
+            "path": "clinical-status",
+            "searchParam": "active"
+          }
+        ]
+      },
+      {
         "type": "Procedure",
         "codeFilter": [
           {
@@ -340,6 +574,24 @@
           {
             "path": "status",
             "searchParam": "completed"
+          }
+        ]
+      },
+      {
+        "type": "ServiceRequest",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "<FHIR-server>/ValueSet/veinablation-serviceRequest-codes"
+          }
+        ]
+      },
+      {
+        "type": "Procedure",
+        "codeFilter": [
+          {
+            "path": "code",
+            "valueSet": "<FHIR-server>/ValueSet/veinablation-serviceRequest-codes"
           }
         ]
       },

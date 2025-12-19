@@ -1,0 +1,34 @@
+{
+  "resourceType": "ValueSet",
+  "id": "prescribed-physical-activity",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2025-10-08T08:44:46.000+00:00"
+  },
+  "url": "<FHIR-server>/ValueSet/prescribed-physical-activity",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+            "value": "urn:oid:prescribed-physical-activity"
+    }
+  ],
+  "version": "Latest",
+  "name": "Prescribed Physical Activity",
+  "title": "Prescribed Physical Activity",
+  "status": "active",
+  "publisher": "CMS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "2025-09",
+        "concept": [
+          {
+            "code": "226029000",
+            "display": "Exercises (regime/therapy)"
+          }
+        ]
+      }
+    ]
+  }
+}                                           

@@ -1,0 +1,29 @@
+{
+  "resourceType": "ValueSet",
+  "id": "DifficultyUsingPersonalComputerObservations",
+  "url": "<FHIR-server>/ValueSet/DifficultyUsingPersonalComputerObservations",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:DifficultyUsingPersonalComputerObservations"
+    }
+  ],
+  "version": "Latest",
+  "name": "Difficulty using personal computer Observation",
+  "title": "Difficulty using personal computer Observation",
+  "status": "active",
+  "publisher": "CMS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "761731000000100",
+            "display": "Difficulty using personal computer (finding)"
+          }
+        ]
+      }
+    ]
+  }
+}

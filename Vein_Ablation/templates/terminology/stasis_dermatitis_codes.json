@@ -1,0 +1,34 @@
+{
+  "resourceType": "ValueSet",
+  "id": "stasis-dermatitis",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2025-10-08T08:44:46.000+00:00"
+  },
+  "url": "<FHIR-server>/ValueSet/stasis-dermatitis",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+            "value": "urn:oid:stasis-dermatitis"
+    }
+  ],
+  "version": "Latest",
+  "name": "Stasis Dermatitis",
+  "title": "Stasis Dermatitis",
+  "status": "active",
+  "publisher": "CMS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "2024-09",
+        "concept": [
+          {
+            "code": "35498005",
+            "display": "Stasis dermatitis (disorder)"
+          }
+        ]
+      }
+    ]
+  }
+}                                           

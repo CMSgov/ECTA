@@ -113,6 +113,13 @@
                   }
                 ]
               }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "ServiceRequestCode"
+              }
             }
           ],
           "linkId": "1.2",
@@ -124,7 +131,7 @@
               "valueCoding": {
                 "system": "https://hcpcs.codes/",
                 "code": "36473",
-                "display": "36473  ENDOVENOUS ABLATION THERAPY OF INCOMPETENT VEIN, EXTREMITY, INCLUSIVE OF ALL IMAGING GUIDANCE AND MONITORING, PERCUTANEOUS, MECHANOCHEMICAL; FIRST VEIN TREATED"
+                "display": "36473 ENDOVENOUS ABLATION THERAPY OF INCOMPETENT VEIN, EXTREMITY, INCLUSIVE OF ALL IMAGING GUIDANCE AND MONITORING, PERCUTANEOUS, MECHANOCHEMICAL; FIRST VEIN TREATED"
               }
             },
             {
@@ -199,10 +206,17 @@
                   }
                 ]
               }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "SupportingSymptomaticDiagnosis"
+              }
             }
           ],
           "linkId": "2.1",
-          "text": "The beneficiary has a supporting symptomatic  diagnosis.",
+          "text": "The beneficiary has a supporting symptomatic diagnosis.",
           "required": true,
           "repeats": false,
           "answerOption": [
@@ -531,6 +545,15 @@
           ]
         },
         {
+          "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                  "valueExpression": {
+                    "language": "text/cql",
+                    "expression": "PresenceOfVenousInsufficiency"
+                  }
+                }
+              ],
           "type": "boolean",
           "linkId": "2.2",
           "text": "Supporting H & P documentation that support venous insufficiency.",
@@ -906,6 +929,13 @@
                       }
                     ]
                   }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                  "valueExpression": {
+                    "language": "text/cql",
+                    "expression": "PresenceOfEvidenceForEdemaOrUlceration"
+                  }
                 }
               ],
               "linkId": "2.8.1",
@@ -949,6 +979,13 @@
                   }
                 ]
               }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "LowerExtremityDiseasedVesselSymptoms"
+              }
             }
           ],
           "linkId": "2.8",
@@ -991,14 +1028,13 @@
             },
             {
               "valueCoding": {
-                "system": "http://snomed.info/sct",
-                "code": "266330004",
+                "code": "bleeding-diseased-lower-vessels",
                 "display": "Bleeding from diseased vessels of the lower extremities"
               }
             },
             {
               "valueCoding": {
-                "code": "Bleeding associated with ruptured superficial varicosity",
+                "code": "bleeding-ruptured-varicosity",
                 "display": "Bleeding associated with ruptured superficial varicosity"
               }
             }
@@ -1024,6 +1060,13 @@
                     "display": "Drop down"
                   }
                 ]
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "NonVeinAblationConditions"
               }
             }
           ],
@@ -1579,10 +1622,17 @@
                   }
                 ]
               }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "ConservativeTreatments"
+              }
             }
           ],
           "linkId": "2.21",
-          "text": "Conservative treatment methods attempted. (select all that apply)",
+          "text": "Conservative treatment which may include but is not limited to the following treatments",
           "repeats": true,
           "answerOption": [
             {

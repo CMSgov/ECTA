@@ -1,0 +1,29 @@
+{
+  "resourceType": "ValueSet",
+  "id": "DermatochalasisOfRightEyelidObservations",
+  "url": "<FHIR-server>/ValueSet/DermatochalasisOfRightEyelidObservations",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:DermatochalasisOfRightEyelidObservations"
+    }
+  ],
+  "version": "Latest",
+  "name": "Dermatochalasis of right eyelid Observation",
+  "title": "Dermatochalasis of right eyelid Observation",
+  "status": "active",
+  "publisher": "CMS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "335451000119104",
+            "display": "Dermatochalasis of right eyelid (finding)"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "resourceType": "ValueSet",
+  "id": "PrimaryConditionsFor15820and15821",
+  "url": "<FHIR-server>/ValueSet/PrimaryConditionsFor15820and15821",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:PrimaryConditionsFor15820and15821"
+    }
+  ],
+  "version": "Latest",
+  "name": "Primary_Conditions_for_15820_and_15821",
+  "title": "Primary Conditions for 15820 and 15821",
+  "status": "active",
+  "publisher": "CMS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "version": "2021-10",
+        "concept": [
+          { "code": "H01.001", "display": "Unspecified blepharitis right upper eyelid" },
+          { "code": "H01.002", "display": "Unspecified blepharitis right lower eyelid" },
+          { "code": "H01.004", "display": "Unspecified blepharitis left upper eyelid" },
+          { "code": "H01.005", "display": "Unspecified blepharitis left lower eyelid" },
+          { "code": "H01.00A", "display": "Unspecified blepharitis right eye, upper and lower eyelids" },
+          { "code": "H01.00B", "display": "Unspecified blepharitis left eye, upper and lower eyelids" },
+          { "code": "H01.01A", "display": "Ulcerative blepharitis right eye, upper and lower eyelids" },
+          { "code": "H01.01B", "display": "Ulcerative blepharitis left eye, upper and lower eyelids" },
+          { "code": "H01.02A", "display": "Squamous blepharitis right eye, upper and lower eyelids" },
+          { "code": "H01.02B", "display": "Squamous blepharitis left eye, upper and lower eyelids" },
+          { "code": "H02.001", "display": "Unspecified entropion of right upper eyelid" },
+          { "code": "H02.002", "display": "Unspecified entropion of right lower eyelid" },
+          { "code": "H02.004", "display": "Unspecified entropion of left upper eyelid" },
+          { "code": "H02.005", "display": "Unspecified entropion of left lower eyelid" },
+          { "code": "H02.011", "display": "Cicatricial entropion of right upper eyelid" },
+          { "code": "H02.012", "display": "Cicatricial entropion of right lower eyelid" },
+          { "code": "H02.014", "display": "Cicatricial entropion of left upper eyelid" },
+          { "code": "H02.015", "display": "Cicatricial entropion of left lower eyelid" },
+          { "code": "H02.021", "display": "Mechanical entropion of right upper eyelid" },
+          { "code": "H02.022", "display": "Mechanical entropion of right lower eyelid" },
+          { "code": "H02.024", "display": "Mechanical entropion of left upper eyelid" },
+          { "code": "H02.025", "display": "Mechanical entropion of left lower eyelid" },
+          { "code": "H02.041", "display": "Spastic entropion of right upper eyelid" },
+          { "code": "H02.042", "display": "Spastic entropion of right lower eyelid" },
+          { "code": "H02.044", "display": "Spastic entropion of left upper eyelid" },
+          { "code": "H02.045", "display": "Spastic entropion of left lower eyelid" },
+          { "code": "H02.101", "display": "Unspecified ectropion of right upper eyelid" },
+          { "code": "H02.102", "display": "Unspecified ectropion of right lower eyelid" },
+          { "code": "H02.104", "display": "Unspecified ectropion of left upper eyelid" },
+          { "code": "H02.105", "display": "Unspecified ectropion of left lower eyelid" },
+          { "code": "H02.111", "display": "Cicatricial ectropion of right upper eyelid" },
+          { "code": "H02.112", "display": "Cicatricial ectropion of right lower eyelid" },
+          { "code": "H02.114", "display": "Cicatricial ectropion of left upper eyelid" },
+          { "code": "H02.115", "display": "Cicatricial ectropion of left lower eyelid" },
+          { "code": "H02.121", "display": "Mechanical ectropion of right upper eyelid" },
+          { "code": "H02.122", "display": "Mechanical ectropion of right lower eyelid" },
+          { "code": "H02.124", "display": "Mechanical ectropion of left upper eyelid" },
+          { "code": "H02.125", "display": "Mechanical ectropion of left lower eyelid" },
+          { "code": "H02.131", "display": "Senile ectropion of right upper eyelid" },
+          { "code": "H02.132", "display": "Senile ectropion of right lower eyelid" },
+          { "code": "H02.134", "display": "Senile ectropion of left upper eyelid" },
+          { "code": "H02.135", "display": "Senile ectropion of left lower eyelid" },
+          { "code": "H02.141", "display": "Spastic ectropion of right upper eyelid" },
+          { "code": "H02.142", "display": "Spastic ectropion of right lower eyelid" },
+          { "code": "H02.144", "display": "Spastic ectropion of left upper eyelid" },
+          { "code": "H02.145", "display": "Spastic ectropion of left lower eyelid" },
+          { "code": "H02.151", "display": "Paralytic ectropion of right upper eyelid" },
+          { "code": "H02.152", "display": "Paralytic ectropion of right lower eyelid" },
+          { "code": "H02.154", "display": "Paralytic ectropion of left upper eyelid" },
+          { "code": "H02.155", "display": "Paralytic ectropion of left lower eyelid" },
+          { "code": "H02.156", "display": "Paralytic ectropion of left eye, unspecified eyelid" },
+          { "code": "H02.159", "display": "Paralytic ectropion of unspecified eye, unspecified eyelid" }
+        ]
+      }
+    ]
+  }
+}

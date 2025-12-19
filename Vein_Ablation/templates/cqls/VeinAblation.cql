@@ -30,28 +30,51 @@ valueset "Saphenous Reflux": '2.16.840.1.113883.3.6037.1001.23.99.94'
 valueset "Superficial varicosity": '2.16.840.1.113883.3.6037.1001.23.99.95'
 valueset "Superficial phlebitis": '2.16.840.1.113883.3.6037.1001.23.99.96'
 valueset "Stasis dermatitis": '2.16.840.1.113883.3.6037.1001.23.99.97'
-valueset "Dependent edema": '2.16.840.1.113883.3.6037.1001.23.99.98'
 valueset "Perforator reflux": '2.16.840.1.113883.3.6037.1001.23.99.99'
 valueset "Deep venous thromboembolism": '2.16.840.1.113883.3.6037.1001.23.95.1'
 valueset "Duplex studies of venous system": '2.16.840.1.113883.3.6037.1001.23.95.2'
 valueset "Sclerotherapy": '2.16.840.1.113883.3.6037.1001.23.95.3'
 valueset "Hereditary hemorrhagic telangiectasia": '2.16.840.1.113883.3.6037.1001.23.95.4'
 valueset "Venous Stripping": '2.16.840.1.113883.3.6037.1001.23.95.5'
-valueset "Venous insufficiency (chronic) (peripheral)": '2.16.840.1.113883.3.6037.1001.23.95.6'
 valueset "Varicose veins of bilateral lower extremities with pain": '2.16.840.1.113883.3.6037.1001.23.95.7'
 valueset "Phlebitis and thrombophlebitis": '2.16.840.1.113883.3.6037.1001.23.95.8'
 valueset "Klippel-Trenaunay Syndrome": '2.16.840.1.113883.3.6037.1001.23.95.14'
 valueset "Congenital venous abnormalities": '2.16.840.1.113883.3.6037.1001.23.95.15'
 valueset "Pregnancy equivalent diagnoses": '2.16.840.1.113762.1.4.1138.480'
 
+valueset "VeinAblationPrimaryConditions": 'veinablation-primary-codes'
+valueset "Venous insufficiency": 'venous-insufficiency'
+valueset "Stasis Ulcer Lower Leg": 'stasis-ulcer-lower-leg'
+valueset "Pain Varicode Vein Lower Leg": 'pain-varicose-vein-lower-leg'
+valueset "Edema Lower Leg": 'edema-lower-leg'
+valueset "Difficulty in daily activities": 'difficulty-in-daily-activities'
+valueset "Superficial Phlebitis": 'superficial-phlebitis'
+valueset "Stasis Dermatitis": 'stasis-dermatitis'
+valueset "Dependent Edema": 'dependent-edema'
+valueset "Lower Limb Structure": 'lower-limb-structure'
+valueset "Bleeding Diseased Lower Vessels": 'bleeding-diseased-lower-vessels'
+valueset "Bleeding Ruptured Superficial Varicosity": 'bleeding-ruptured-superficial-varicosity'
+valueset "Localized Edema Fluid Overload" : 'localized-edema-fluid-overload'
+valueset "Atherosclerosis of artery of lower limb" : 'atherosclerosis-artery-lower-limb'
+valueset "Lymphedema of lower extremity" : 'lymphedema-lower-extremity'
+valueset "VeinAblation not necessary conditions": 'veinablation-not-necessary-conditions'
+valueset "Weight Reduction": 'weight-reduction'
+valueset "Prescribed Physical Activity": 'prescribed-physical-activity'
+valueset "Graduated compression therapy": 'graduated-compression-therapy'
+valueset "Elevation of Legs": 'elevation-of-legs'
+valueset "Vein Ablation ServiceRequestCodes": 'veinablation-serviceRequest-codes'
 
-parameter "ServiceRequest" ServiceRequest
-parameter "QuestionnaireResponse" QuestionnaireResponse
 
 context Patient
 
-define ServiceEncounter:
-	First([Encounter]E where 'Encounter/' + E.id.value = "ServiceRequest".encounter.reference.value)
+define VeinAblationRequest:
+	First([ServiceRequest])
+
+define "ServiceRequestCode":
+    FHIRHelpers.ToCode(First("VeinAblationRequest".code.coding))
+
+define VeinAblationEncounter:
+	First([Encounter]E where 'Encounter/' + E.id.value = "VeinAblationRequest".encounter.reference.value)
 	
 define function "GetId"(uri String):
 	Last(Split(uri, '/'))
@@ -63,34 +86,86 @@ define function "EncounterDiagnosis"(Encounter Encounter):
 					and FHIRHelpers.ToInteger(D.rank) = 2)
 
 define ServiceCondition:
-	"EncounterDiagnosis"("ServiceEncounter")
+	"EncounterDiagnosis"("VeinAblationEncounter")
 
 define ServiceDiagnosis:
-	First("ServiceCondition" S
-			where (First(S.code.coding) in "Chronic Pain" 
-			or First(S.code.coding) in "Ulceration"
-			or First(S.code.coding) in "Edema"
-			or First(S.code.coding) in "Bleeding"
-			or First(S.code.coding) in "Saphenous Reflux"
-			or First(S.code.coding) in "Superficial varicosity"
-			or First(S.code.coding) in "Superficial phlebitis"
-			or First(S.code.coding) in "Stasis dermatitis"
-			or First(S.code.coding) in "Dependent edema"
-			or First(S.code.coding) in "Perforator reflux"
-			or First(S.code.coding) in "Deep venous thromboembolism"
-			or First(S.code.coding) in "Hereditary hemorrhagic telangiectasia"
-			or First(S.code.coding) in "Phlebitis and thrombophlebitis"
-			or First(S.code.coding) in "Varicose veins of bilateral lower extremities with pain"
-			or First(S.code.coding) in "Congenital venous abnormalities"
-			or First(S.code.coding) in "Pregnancy equivalent diagnoses"))
+	// if (ServiceCondition != null) then First("ServiceCondition" S
+	// 			 where FHIRHelpers."ToCode"(First(S.code.coding)) in "VeinAblationPrimaryConditions")
+	// else First([Condition] C where FHIRHelpers."ToCode"(First(C.code.coding)) in "VeinAblationPrimaryConditions")
 
-define RelevantDiagnosis:
-	"ServiceDiagnosis".code.coding[0].display.value
+	First([Condition]C
+		 where First(C.code.coding).code in "VeinAblationPrimaryConditions")
+
+define SupportingSymptomaticDiagnosis:
+	"ServiceDiagnosis".code.coding
+
+define PresenceOfVenousInsufficiency:
+	if (First([Condition]C
+		 where First(C.code.coding).code in "Venous insufficiency") != null) then true else false
+
+define LowerExtremityDiseasedVesselSymptoms:
+  { ( if (First([Condition]C
+		 where First(C.code.coding).code in "Stasis Ulcer Lower Leg") != null) then '1237117000' 
+      else ''
+  ), ( if ((First([Condition]C
+		 where First(C.code.coding).code in "Pain Varicode Vein Lower Leg") != null) and
+		 (First([Condition]C
+		 where First(C.code.coding).code in "Edema Lower Leg") != null) and 
+		 (First([Condition]C
+		 where First(C.code.coding).code in "Difficulty in daily activities") != null)) then 'pain-edema' 
+      else ''
+  ), ( if (First([Condition]C
+		 where First(C.code.coding).code in "Superficial Phlebitis") != null) then '40283005' 
+      else ''
+  ), ( if (First([Condition]C
+		 where First(C.code.coding).code in "Stasis Dermatitis") != null) then '35498005' 
+      else ''
+  ), ( if (First([Condition]C
+		 where First(C.code.coding).code in "Dependent Edema") != null) then 'refractory-edema' 
+      else ''
+  ), ( if (First([Condition]C
+		 where First(C.code.coding).code in "Bleeding Diseased Lower Vessels") != null) then 'bleeding-diseased-lower-vessels' 
+      else ''
+  ), ( if (First([Condition]C
+		 where First(C.code.coding).code in "Bleeding Ruptured Superficial Varicosity") != null) then 'bleeding-ruptured-varicosity' 
+      else ''
+  ) }
+
+define PresenceOfEvidenceForEdemaOrUlceration:
+	if (First([Condition]C
+		 where First(C.code.coding).code in "Localized Edema Fluid Overload" and First(C.bodySite.coding) in "Lower Limb Structure") != null ) then 'presence' 
+	else if (First([Condition]C
+		 where First(C.code.coding).code in "Atherosclerosis of artery of lower limb") != null ) then 'presence' 
+	else if (First([Condition]C
+		 where First(C.code.coding).code in "Lymphedema of lower extremity") != null ) then 'presence' 
+	else 'absence'
+
+define NonVeinAblationConditions:
+	if (First([Condition]C
+		 where First(C.code.coding).code in "VeinAblation not necessary conditions") != null ) then 
+		 First((First([Condition]C
+		 where First(C.code.coding).code in "VeinAblation not necessary conditions")).code.coding).code
+	else 'N'
+
+define ConservativeTreatments:
+	if (First([Procedure]P
+		 where First(P.code.coding) in "Weight Reduction") != null ) then '388976009'
+	else if (First([Procedure]P
+		 where First(P.code.coding) in "Prescribed Physical Activity") != null ) then 
+		 First((First([Condition]C
+		 where First(C.code.coding).code in "Prescribed Physical Activity")).code.coding).code
+	else if (First([Procedure]P
+		 where First(P.code.coding) in "Graduated compression therapy") != null ) then '229509005'
+	else if (First([Procedure]P
+		 where First(P.code.coding) in "Elevation of Legs") != null ) then 
+		 First((First([Condition]C
+		 where First(C.code.coding).code in "Elevation of Legs")).code.coding).code
+	else ''
 
 define CT:
 	First([Condition]C
-		where ( First(C.code.coding) in "Weight Loss (ICD10CM)"
-			or First(C.code.coding) in "Periodic leg elevation")
+		where ( First(C.code.coding).code in "Weight Loss (ICD10CM)"
+			or First(C.code.coding).code in "Periodic leg elevation")
 			and First(C.clinicalStatus.coding).code.value = 'active')
 
 define MedicationUsed:
@@ -107,65 +182,65 @@ define ExercisePlan:
 define PeriodicLegElevation:
 	First(([Condition]C
 		with [Procedure]P
-		such that First(C.code.coding) in "Periodic leg elevation"
+		such that First(C.code.coding).code in "Periodic leg elevation"
 			and First(P.code.coding) in "Compression Therapy"
 			and P.status.value = 'completed'))
 			
 define VenousStasis:
 	First([Condition]C
 		with [Condition]D
-			such that First(C.code.coding) in "Ulceration"
-			and First(D.code.coding) in "Venous insufficiency (chronic) (peripheral)")
+			such that First(C.code.coding).code in "Ulceration"
+			and First(D.code.coding) in "Venous insufficiency")
 			
 define SaphenousReflux:
 	First([Condition]C
 		with [Condition]D
-			such that (First(C.code.coding) in "Chronic Pain"
-					or First(C.code.coding) in "Edema")
-			and First(D.code.coding) in "Venous insufficiency (chronic) (peripheral)")
+			such that (First(C.code.coding).code in "Chronic Pain"
+					or First(C.code.coding).code in "Edema")
+			and First(D.code.coding) in "Venous insufficiency")
 	
 define SuperficialVaricosity:
 	First([Condition]C
 		with [Condition]D
-			such that First(C.code.coding) in "Bleeding"
+			such that First(C.code.coding).code in "Bleeding"
 			and First(D.code.coding) in "Saphenous Reflux")
 			
 define SuperficialPhlebitis:
 	First([Condition]C
-		where First(C.code.coding) in "Superficial phlebitis"
+		where First(C.code.coding).code in "Superficial phlebitis"
 			and First(C.clinicalStatus.coding).code.value = 'recurrence')
 			
 define StasisDermatitis:
 	First([Condition]C
-		where First(C.code.coding) in "Superficial phlebitis"
+		where First(C.code.coding).code in "Superficial phlebitis"
 			and First(C.clinicalStatus.coding).code.value = 'active')
 	
 define RefractoryEdema:
 	First([Condition]C
 		with [Condition]D
-			such that (First(C.code.coding) in "Dependent edema")
-			and First(D.code.coding) in "Venous insufficiency (chronic) (peripheral)")
+			such that (First(C.code.coding).code in "Dependent Edema")
+			and First(D.code.coding) in "Venous insufficiency")
 				
 define PerforatorReflux:
 	First([Condition]C
-		where First(C.code.coding) in "Perforator reflux")
+		where First(C.code.coding).code in "Perforator reflux")
 		
 define VeinStripping:
 	First([Condition]C
-		where First(C.code.coding) in "Venous Stripping")
+		where First(C.code.coding).code in "Venous Stripping")
 		
 define SuperficialVeinTreatment:
 	First([Condition]C
 		with [Procedure]P
 		such that First(P.code.coding) in "Compression Therapy"
-		 and First(C.code.coding) in "Phlebitis and thrombophlebitis"
+		 and First(C.code.coding).code in "Phlebitis and thrombophlebitis"
 		 and "LengthInDays"("Normalize Interval Procedure"(P.performed)) > 90 days)
 		 
 define DeepVenousThromboembolism:
 	First([Condition]C
 		without [Condition]D
-			such that (First(C.code.coding) in "Deep venous thromboembolism")
-			and First(D.code.coding) in "Venous insufficiency (chronic) (peripheral)")
+			such that (First(C.code.coding).code in "Deep venous thromboembolism")
+			and First(D.code.coding) in "Venous insufficiency")
 			
 define DuplexStudy:
 	First([Procedure]P
@@ -174,18 +249,18 @@ define DuplexStudy:
 		
 define KTSyndrome:
 	First([Condition]C
-		where (First(C.code.coding) in "Klippel-Trenaunay Syndrome"
-			or First(C.code.coding) in "Congenital venous abnormalities"))
+		where (First(C.code.coding).code in "Klippel-Trenaunay Syndrome"
+			or First(C.code.coding).code in "Congenital venous abnormalities"))
 		
 define Pregnancy:
 	First([Condition]C
-		where First(C.code.coding) in "Pregnancy equivalent diagnoses"
+		where First(C.code.coding).code in "Pregnancy equivalent diagnoses"
 		and First(C.clinicalStatus.coding).code.value = 'active')
 			
 define Telangiectasis:
 	First([Condition]C
 		with [Condition]D
-			such that First(C.code.coding) in "Bleeding"
+			such that First(C.code.coding).code in "Bleeding"
 			and First(D.code.coding) in "Hereditary hemorrhagic telangiectasia")
 			
 define function "Normalize Onset"(onset Choice<FHIR.dateTime, FHIR.Age, FHIR.Period, FHIR.Range, FHIR.string>):

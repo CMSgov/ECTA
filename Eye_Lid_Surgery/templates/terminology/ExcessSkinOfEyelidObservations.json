@@ -1,0 +1,29 @@
+{
+  "resourceType": "ValueSet",
+  "id": "ExcessSkinOfEyelidObservations",
+  "url": "<FHIR-server>/ValueSet/ExcessSkinOfEyelidObservations",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:ExcessSkinOfEyelidObservations"
+    }
+  ],
+  "version": "Latest",
+  "name": "Excess skin of eyelid Observation",
+  "title": "Excess skin of eyelid Observation",
+  "status": "active",
+  "publisher": "CMS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "246815009",
+            "display": "Excess skin of eyelid (finding)"
+          }
+        ]
+      }
+    ]
+  }
+}

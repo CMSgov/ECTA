@@ -1,0 +1,219 @@
+{
+  "resourceType": "ValueSet",
+  "id": "veinablation-primary-codes",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2020-09-30T11:13:46.000+00:00",
+    "source": "#tGsIytxLNzMaiEPD"
+  },
+  "url": "<FHIR-server>/ValueSet/veinablation-primary-codes",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+            "value": "urn:oid:veinablation-primary-codes"
+    }
+  ],
+  "version": "Latest",
+  "name": "VeinAblationPrimaryConditions",
+  "title": "VeinAblationPrimaryConditions",
+  "status": "active",
+  "publisher": "CMS",
+  "compose": {
+    "include": [
+  {
+    "system": "http://hl7.org/fhir/sid/icd-10-cm",
+    "version": "2020-07",
+    "concept": [
+          {
+            "code": "I80.01",
+            "display": "Phlebitis and thrombophlebitis of superficial vessels of right lower extremity"
+          },
+          {
+            "code": "I80.02",
+            "display": "Phlebitis and thrombophlebitis of superficial vessels of left lower extremity"
+          },
+          {
+            "code": "I80.03",
+            "display": "Phlebitis and thrombophlebitis of superficial vessels of lower extremities, bilateral"
+          },
+          {
+            "code": "I83.011",
+            "display": "Varicose veins of right lower extremity with ulcer of thigh"
+          },
+          {
+            "code": "I83.012",
+            "display": "Varicose veins of right lower extremity with ulcer of calf"
+          },
+          {
+            "code": "I83.013",
+            "display": "Varicose veins of right lower extremity with ulcer of ankle"
+          },
+          {
+            "code": "I83.014",
+            "display": "Varicose veins of right lower extremity with ulcer of heel and midfoot"
+          },
+          {
+            "code": "I83.015",
+            "display": "Varicose veins of right lower extremity with ulcer other part of foot"
+          },
+          {
+            "code": "I83.018",
+            "display": "Varicose veins of right lower extremity with ulcer other part of lower leg"
+          },
+          {
+            "code": "I83.021",
+            "display": "Varicose veins of left lower extremity with ulcer of thigh"
+          },
+          {
+            "code": "I83.022",
+            "display": "Varicose veins of left lower extremity with ulcer of calf"
+          },
+          {
+            "code": "I83.023",
+            "display": "Varicose veins of left lower extremity with ulcer of ankle"
+          },
+          {
+            "code": "I83.024",
+            "display": "Varicose veins of left lower extremity with ulcer of heel and midfoot"
+          },
+          {
+            "code": "I83.025",
+            "display": "Varicose veins of left lower extremity with ulcer other part of foot"
+          },
+          {
+            "code": "I83.028",
+            "display": "Varicose veins of left lower extremity with ulcer other part of lower leg"
+          },
+          {
+            "code": "I83.11",
+            "display": "Varicose veins of right lower extremity with inflammation"
+          },
+          {
+            "code": "I83.12",
+            "display": "Varicose veins of left lower extremity with inflammation"
+          },
+          {
+            "code": "I83.211",
+            "display": "Varicose veins of right lower extremity with both ulcer of thigh and inflammation"
+          },
+          {
+            "code": "I83.212",
+            "display": "Varicose veins of right lower extremity with both ulcer of calf and inflammation"
+          },
+          {
+            "code": "I83.213",
+            "display": "Varicose veins of right lower extremity with both ulcer of ankle and inflammation"
+          },
+          {
+            "code": "I83.214",
+            "display": "Varicose veins of right lower extremity with both ulcer of heel and midfoot and inflammation"
+          },
+          {
+            "code": "I83.215",
+            "display": "Varicose veins of right lower extremity with both ulcer other part of foot and inflammation"
+          },
+          {
+            "code": "I83.218",
+            "display": "Varicose veins of right lower extremity with both ulcer of other part of lower extremity and inflammation"
+          },
+          {
+            "code": "I83.221",
+            "display": "Varicose veins of left lower extremity with both ulcer of thigh and inflammation"
+          },
+          {
+            "code": "I83.222",
+            "display": "Varicose veins of left lower extremity with both ulcer of calf and inflammation"
+          },
+          {
+            "code": "I83.223",
+            "display": "Varicose veins of left lower extremity with both ulcer of ankle and inflammation"
+          },
+          {
+            "code": "I83.224",
+            "display": "Varicose veins of left lower extremity with both ulcer of heel and midfoot and inflammation"
+          },
+          {
+            "code": "I83.225",
+            "display": "Varicose veins of left lower extremity with both ulcer other part of foot and inflammation"
+          },
+          {
+            "code": "I83.228",
+            "display": "Varicose veins of left lower extremity with both ulcer of other part of lower extremity and inflammation"
+          },
+          {
+            "code": "I83.811",
+            "display": "Varicose veins of right lower extremity with pain"
+          },
+          {
+            "code": "I83.812",
+            "display": "Varicose veins of left lower extremity with pain"
+          },
+          {
+            "code": "I83.813",
+            "display": "Varicose veins of bilateral lower extremities with pain"
+          },
+          {
+            "code": "I83.891",
+            "display": "Varicose veins of right lower extremity with other complications"
+          },
+          {
+            "code": "I83.892",
+            "display": "Varicose veins of left lower extremity with other complications"
+          },
+          {
+            "code": "I83.893",
+            "display": "Varicose veins of bilateral lower extremities with other complications"
+          },
+          {
+            "code": "I87.311",
+            "display": "Chronic venous hypertension (idiopathic) with ulcer of right lower extremity"
+          },
+          {
+            "code": "I87.312",
+            "display": "Chronic venous hypertension (idiopathic) with ulcer of left lower extremity"
+          },
+          {
+            "code": "I87.313",
+            "display": "Chronic venous hypertension (idiopathic) with ulcer of bilateral lower extremity"
+          },
+          {
+            "code": "I87.321",
+            "display": "Chronic venous hypertension (idiopathic) with inflammation of right lower extremity"
+          },
+          {
+            "code": "I87.322",
+            "display": "Chronic venous hypertension (idiopathic) with inflammation of left lower extremity"
+          },
+          {
+            "code": "I87.323",
+            "display": "Chronic venous hypertension (idiopathic) with inflammation of bilateral lower extremity"
+          },
+          {
+            "code": "I87.331",
+            "display": "Chronic venous hypertension (idiopathic) with ulcer and inflammation of right lower extremity"
+          },
+          {
+            "code": "I87.332",
+            "display": "Chronic venous hypertension (idiopathic) with ulcer and inflammation of left lower extremity"
+          },
+          {
+            "code": "I87.333",
+            "display": "Chronic venous hypertension (idiopathic) with ulcer and inflammation of bilateral lower extremity"
+          },
+          {
+            "code": "I87.391",
+            "display": "Chronic venous hypertension (idiopathic) with other complications of right lower extremity"
+          },
+          {
+            "code": "I87.392",
+            "display": "Chronic venous hypertension (idiopathic) with other complications of left lower extremity"
+          },
+          {
+            "code": "I87.393",
+            "display": "Chronic venous hypertension (idiopathic) with other complications of bilateral lower extremity"
+          }
+        ]
+      }
+    ]
+  }
+}

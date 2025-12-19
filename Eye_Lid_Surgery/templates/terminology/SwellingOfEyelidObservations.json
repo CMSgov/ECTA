@@ -1,0 +1,29 @@
+{
+  "resourceType": "ValueSet",
+  "id": "SwellingOfEyelidObservations",
+  "url": "<FHIR-server>/ValueSet/SwellingOfEyelidObservations",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:SwellingOfEyelidObservations"
+    }
+  ],
+  "version": "Latest",
+  "name": "Swelling of eyelid Observation",
+  "title": "Swelling of eyelid Observation",
+  "status": "active",
+  "publisher": "CMS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "193967004",
+            "display": "Swelling of eyelid (finding)"
+          }
+        ]
+      }
+    ]
+  }
+}

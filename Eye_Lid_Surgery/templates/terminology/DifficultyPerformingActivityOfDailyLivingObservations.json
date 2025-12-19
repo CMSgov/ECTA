@@ -1,0 +1,29 @@
+{
+  "resourceType": "ValueSet",
+  "id": "DifficultyPerformingActivityOfDailyLivingObservations",
+  "url": "<FHIR-server>/ValueSet/DifficultyPerformingActivityOfDailyLivingObservations",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:DifficultyPerformingActivityOfDailyLivingObservations"
+    }
+  ],
+  "version": "Latest",
+  "name": "Difficulty performing activity of daily living Observation",
+  "title": "Difficulty performing activity of daily living Observation",
+  "status": "active",
+  "publisher": "CMS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "60641000087105",
+            "display": "Difficulty performing activity of daily living (finding)"
+          }
+        ]
+      }
+    ]
+  }
+}

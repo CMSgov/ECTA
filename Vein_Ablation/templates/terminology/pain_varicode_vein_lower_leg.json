@@ -1,0 +1,34 @@
+{
+  "resourceType": "ValueSet",
+  "id": "pain-varicose-vein-lower-leg",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2025-10-08T08:44:46.000+00:00"
+  },
+  "url": "<FHIR-server>/ValueSet/pain-varicose-vein-lower-leg",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+            "value": "urn:oid:pain-varicose-vein-lower-leg"
+    }
+  ],
+  "version": "Latest",
+  "name": "Pain Varicose vein Lower Leg",
+  "title": "Pain Varicose vein Lower Leg",
+  "status": "active",
+  "publisher": "CMS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "2025-09",
+        "concept": [
+          {
+            "code": "706883004",
+            "display": "Pain due to varicose veins of lower extremity (finding)"
+          }
+        ]
+      }
+    ]
+  }
+}                                           

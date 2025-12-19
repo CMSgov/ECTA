@@ -1,0 +1,29 @@
+{
+  "resourceType": "ValueSet",
+  "id": "DifficultyUsingSpectaclesObservations",
+  "url": "<FHIR-server>/ValueSet/DifficultyUsingSpectaclesObservations",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:DifficultyUsingSpectaclesObservations"
+    }
+  ],
+  "version": "Latest",
+  "name": "Difficulty using spectacles Observation",
+  "title": "Difficulty using spectacles Observation",
+  "status": "active",
+  "publisher": "CMS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "285045001",
+            "display": "Difficulty using spectacles (finding)"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "resourceType": "ValueSet",
+  "id": "DermatochalasisOfBilateralLowerEyelidsObservations",
+  "url": "<FHIR-server>/ValueSet/DermatochalasisOfBilateralLowerEyelidsObservations",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:DermatochalasisOfBilateralLowerEyelidsObservations"
+    }
+  ],
+  "version": "Latest",
+  "name": "Dermatochalasis of bilateral lower eyelids Observation",
+  "title": "Dermatochalasis of bilateral lower eyelids Observation",
+  "status": "active",
+  "publisher": "CMS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "324494491000119108",
+            "display": "Dermatochalasis of bilateral lower eyelids (finding)"
+          }
+        ]
+      }
+    ]
+  }
+}

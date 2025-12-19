@@ -1,0 +1,34 @@
+{
+  "resourceType": "ValueSet",
+  "id": "superficial-phlebitis",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2025-10-08T08:44:46.000+00:00"
+  },
+  "url": "<FHIR-server>/ValueSet/superficial-phlebitis",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+            "value": "urn:oid:superficial-phlebitis"
+    }
+  ],
+  "version": "Latest",
+  "name": "Superficial Phlebitis",
+  "title": "Superficial Phlebitis",
+  "status": "active",
+  "publisher": "CMS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "2025-09",
+        "concept": [
+          {
+            "code": "40283005",
+            "display": "Thrombophlebitis of superficial veins of lower extremity (disorder)"
+          }
+        ]
+      }
+    ]
+  }
+}                                           

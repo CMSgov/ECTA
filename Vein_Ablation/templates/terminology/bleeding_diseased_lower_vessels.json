@@ -1,0 +1,44 @@
+{
+  "resourceType": "ValueSet",
+  "id": "bleeding-diseased-lower-vessels",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2020-09-30T12:05:25.000+00:00",
+    "source": "#quDDHIDNm1hiWbal"
+  },
+  "url": "<FHIR-server>/ValueSet/bleeding-diseased-lower-vessels",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+            "value": "urn:oid:bleeding-diseased-lower-vessels"
+    }
+  ],
+  "version": "Latest",
+  "name": "Bleeding Diseased Lower Vessels",
+  "title": "Bleeding Diseased Lower Vessels",
+  "status": "active",
+  "publisher": "Mettles",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "2025-09",
+        "concept": [
+          {
+            "code": "266330004",
+            "display": "Ruptured varicose veins (disorder)"
+          }
+        ]
+      },
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "concept": [
+          {
+            "code": "I83.891",
+            "display": "Varicose veins of right lower extremity with other complications"
+          }
+        ]
+      }
+    ]
+  }
+}

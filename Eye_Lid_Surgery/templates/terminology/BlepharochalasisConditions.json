@@ -1,0 +1,29 @@
+{
+  "resourceType": "ValueSet",
+  "id": "BlepharochalasisConditions",
+  "url": "<FHIR-server>/ValueSet/BlepharochalasisConditions",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:BlepharochalasisConditions"
+    }
+  ],
+  "version": "Latest",
+  "name": "Blepharochalasis Condition",
+  "title": "Blepharochalasis Condition",
+  "status": "active",
+  "publisher": "CMS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "47704002",
+            "display": "Blepharochalasis (disorder)"
+          }
+        ]
+      }
+    ]
+  }
+}

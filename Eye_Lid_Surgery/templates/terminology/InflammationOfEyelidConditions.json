@@ -1,0 +1,29 @@
+{
+  "resourceType": "ValueSet",
+  "id": "InflammationOfEyelidConditions",
+  "url": "<FHIR-server>/ValueSet/InflammationOfEyelidConditions",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:InflammationOfEyelidConditions"
+    }
+  ],
+  "version": "Latest",
+  "name": "Inflammation of eyelid Condition",
+  "title": "Inflammation of eyelid Condition",
+  "status": "active",
+  "publisher": "CMS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "1231722004",
+            "display": "Inflammation of eyelid (disorder)"
+          }
+        ]
+      }
+    ]
+  }
+}
