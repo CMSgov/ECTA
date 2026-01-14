@@ -1,0 +1,141 @@
+{
+  "resourceType": "ValueSet",
+  "id": "botolinumtoxin-covered-conditions",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2025-10-08T08:44:46.000+00:00"
+  },
+  "url": "<FHIR-server>/ValueSet/botolinumtoxin-covered-conditions",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:botolinumtoxin-covered-conditions"
+    }
+  ],
+  "version": "Latest",
+  "name": "BotolinumToxinConditions",
+  "title": "BotolinumToxinConditions",
+  "status": "active",
+  "publisher": "CMS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "concept": [
+          {
+            "code": "G24.1",
+            "display": "Genetic torsion dystonia"
+          },
+          {
+            "code": "G24.2",
+            "display": "Idiopathic nonfamilial dystonia"
+          },
+          {
+            "code": "G24.3",
+            "display": "Spasmodic torticollis"
+          },
+          {
+            "code": "G24.4",
+            "display": "Idiopathic orofacial dystonia"
+          },
+          {
+            "code": "G24.5",
+            "display": "Blepharospasm"
+          },
+          {
+            "code": "G24.8",
+            "display": "Other Dystonia"
+          },
+          {
+            "code": "G51.2",
+            "display": "Melkersson's syndrome"
+          },
+          {
+            "code": "G51.31",
+            "display": "Clonic hemifacial spasm, right"
+          },
+          {
+            "code": "G51.32",
+            "display": "Clonic hemifacial spasm, left "
+          },
+          {
+            "code": "G51.33",
+            "display": "Clonic hemifacial spasm, bilateral"
+          },
+          {
+            "code": "G51.4",
+            "display": "Facial myokymia"
+          },
+          {
+            "code": "H02.041",
+            "display": "Spastic entropion of right upper eyelid"
+          },
+          {
+            "code": "H02.042",
+            "display": "Spastic entropion of right lower eyelid"
+          },
+          {
+            "code": "H02.044",
+            "display": "Spastic entropion of left upper eyelid"
+          },
+          {
+            "code": "H02.045",
+            "display": "Spastic entropion of left lower eyelid"
+          },
+          {
+            "code": "H02.141",
+            "display": "Spastic ectropion of right upper eyelid"
+          },
+          {
+            "code": "H02.142",
+            "display": "Spastic ectropion of right lower eyelid"
+          },
+          {
+            "code": "H02.144",
+            "display": "Spastic ectropion of left upper eyelid"
+          },
+          {
+            "code": "H02.145",
+            "display": "Spastic ectropion of left lower eyelid"
+          },
+          {
+            "code": "G81.11",
+            "display": "Spastic hemiplegia affecting right dominant side"
+          },
+          {
+            "code": "G81.12",
+            "display": "Spastic hemiplegia affecting left dominant side"
+          },
+          {
+            "code": "G81.13",
+            "display": "Spastic hemiplegia affecting right nondominant side"
+          },
+          {
+            "code": "G81.14",
+            "display": "Spastic hemiplegia affecting left nondominant side"
+          },
+          {
+            "code": "H02.431",
+            "display": "Paralytic ptosis of right eyelid"
+          },
+          {
+            "code": "H02.432",
+            "display": "Paralytic ptosis of left eyelid"
+          },
+          {
+            "code": "H02.433",
+            "display": "Paralytic ptosis of bilateral eyelids"
+          },
+          {
+            "code": "H02.59",
+            "display": "Other disorders affecting eyelid function"
+          },
+          {
+            "code": "R25.8",
+            "display": "Other abnormal involuntary movements"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -23,7 +23,7 @@
       "codeFilter": [
         {
           "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.99.27"
+          "valueSet": "<FHIR-server>/ValueSet/contraindication-conditions"
         }
         ]
     },
@@ -32,7 +32,7 @@
       "codeFilter": [
         {
           "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1146.1047"
+          "valueSet": "<FHIR-server>/ValueSet/botolinumtoxin-covered-conditions"
         }
         ]
     },
@@ -41,7 +41,7 @@
       "codeFilter": [
         {
           "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.464.1003.125.11.1009"
+          "valueSet": "<FHIR-server>/ValueSet/botolinumtoxin-covered-conditions"
         }
         ]
     },
@@ -50,16 +50,7 @@
       "codeFilter": [
         {
           "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.45"
-        }
-        ]
-    },
-    {
-      "type": "AdverseEvent",
-      "codeFilter": [
-        {
-          "path": "event",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.46"
+          "valueSet": "<FHIR-server>/ValueSet/migrane-conditions"
         }
         ]
     },
@@ -68,43 +59,25 @@
       "codeFilter": [
         {
           "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1034.570"
+          "valueSet": "<FHIR-server>/ValueSet/conventional-treatment-procedures"
         }
-        ]
+      ]
     },
     {
       "type": "Procedure",
       "codeFilter": [
         {
           "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.47"
+          "valueSet": "<FHIR-server>/ValueSet/botulinum-toxin-codes"
         }
-        ]
+      ]
     },
     {
-      "type": "Procedure",
+      "type": "ServiceRequest",
       "codeFilter": [
         {
           "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.48"
-        }
-        ]
-    },
-    {
-      "type": "Medication",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.3616.200.110.102.2067"
-        }
-        ]
-    },
-    {
-      "type": "MedicationAdministration",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.3616.200.110.102.2067"
+          "valueSet": "<FHIR-server>/ValueSet/botulinum-toxin-codes"
         }
       ]
     },
@@ -113,178 +86,7 @@
       "codeFilter": [
         {
           "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.60"
-        }
-        ]
-    },
-    {
-      "type": "MedicationAdministration",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.60"
-        }
-      ]
-    },
-    {
-      "type": "Procedure",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.96.12"
-        }
-        ]
-    },
-    {
-      "type": "Procedure",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.99.50"
-        }
-        ]
-    },
-    {
-      "type": "Condition",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.49"
-        }
-        ]
-    },
-    {
-      "type": "Condition",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.464.1003.117.11.1031"
-        }
-        ]
-    },
-    {
-      "type": "Condition",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.526.2.1561"
-        }
-        ]
-    },
-    {
-      "type": "Condition",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/1.2.91.13925.17760.4352590"
-        }
-        ]
-    },
-    {
-      "type": "Condition",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1029.330"
-        }
-        ]
-    },
-    {
-      "type": "Condition",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.50"
-        }
-        ]
-    },
-    {
-      "type": "Condition",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1146.1238"
-        }
-        ]
-    },
-    {
-      "type": "Condition",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1200.123"
-        }
-        ]
-    },
-    {
-      "type": "Condition",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.51"
-        }
-        ]
-    },
-    {
-      "type": "Condition",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.52"
-        }
-        ]
-    },
-    {
-      "type": "Condition",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.53"
-        }
-        ]
-    },
-    {
-      "type": "Condition",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.54"
-        }
-        ]
-    },
-    {
-      "type": "Procedure",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.99.41"
-        }
-      ]
-    },
-    {
-      "type": "Procedure",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.99.47"
-        }
-      ]
-    },
-    {
-      "type": "Procedure",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.73"
-        }
-      ]
-    },
-    {
-      "type": "Medication",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.82"
+          "valueSet": "<FHIR-server>/ValueSet/previous-medications-attempted"
         }
       ]
     },
@@ -293,97 +95,7 @@
       "codeFilter": [
         {
           "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.82"
-        }
-      ]
-    },
-    {
-      "type": "Procedure",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.91"
-        }
-      ]
-    },
-    {
-      "type": "Procedure",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.95"
-        }
-      ]
-    },
-    {
-      "type": "Procedure",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.97"
-        }
-      ]
-    },
-    {
-      "type": "Procedure",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.188"
-        }
-      ]
-    },
-    {
-      "type": "Condition",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.84"
-        }
-      ]
-    },
-    {
-      "type": "Medication",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1111.83"
-        }
-        ]
-    },
-    {
-      "type": "MedicationAdministration",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1111.83"
-        }
-      ]
-    },
-    {
-      "type": "Condition",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.72"
-        }
-      ]
-    },
-    {
-      "type": "Condition",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.117.1.7.1.247"
-        }
-      ]
-    },
-    {
-      "type": "Procedure",
-      "codeFilter": [
-        {
-          "path": "code",
-          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.93.89"
+          "valueSet": "<FHIR-server>/ValueSet/previous-medications-attempted"
         }
       ]
     }

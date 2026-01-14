@@ -1,0 +1,45 @@
+{
+  "resourceType": "ValueSet",
+  "id": "conventional-treatment-procedures",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2025-10-08T08:44:46.000+00:00"
+  },
+  "url": "<FHIR-server>/ValueSet/conventional-treatment-procedures",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+            "value": "urn:oid:conventional-treatment-procedures"
+    }
+  ],
+  "version": "Latest",
+  "name": "Conventional Treatment Procedures",
+  "title": "Conventional Treatment Procedures",
+  "status": "active",
+  "publisher": "CMS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "91251008",
+            "display": "Physical Therapy"
+          },
+          {
+            "code": "36430006",
+            "display": "Biofeedback (Electromyographic)"
+          },
+          {
+            "code": "44868003",
+            "display": "Acupuncture"
+          },
+          {
+            "code": "313204009",
+            "display": "Lifestyle modifications"
+          }
+        ]
+      }
+    ]
+  }
+}                                     
