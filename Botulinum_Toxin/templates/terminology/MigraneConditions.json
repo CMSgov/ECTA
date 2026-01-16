@@ -197,6 +197,14 @@
           {
             "code": "G43.E19",
             "display": "Chronic migraine with aura, intractable, without status migrainosus"
+          },
+          {
+            "code": "H02.433",
+            "display": "Paralytic ptosis of bilateral eyelids"
+          },
+          {
+            "code": "G51.33",
+            "display": "Clonic hemifacial spasm, bilateral"
           }
         ]
       }

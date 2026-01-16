@@ -59,10 +59,6 @@
             "display": "Clonic hemifacial spasm, left "
           },
           {
-            "code": "G51.33",
-            "display": "Clonic hemifacial spasm, bilateral"
-          },
-          {
             "code": "G51.4",
             "display": "Facial myokymia"
           },
@@ -121,10 +117,6 @@
           {
             "code": "H02.432",
             "display": "Paralytic ptosis of left eyelid"
-          },
-          {
-            "code": "H02.433",
-            "display": "Paralytic ptosis of bilateral eyelids"
           },
           {
             "code": "H02.59",

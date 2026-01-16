@@ -35,6 +35,13 @@
           "type": "choice",
           "extension": [
             {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "BoToxinContraindication"
+              }
+            },
+            {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
               "valueCodeableConcept": {
                 "coding": [
@@ -45,16 +52,9 @@
                   }
                 ]
               }
-            },
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "BoToxinContraindication"
-              }
             }
           ],
-          "linkId": "0.1",
+          "linkId": "1.1",
           "text": "Does the beneficiary have a condition that is a contraindication to receiving botulinum toxin?",
           "repeats": true,
           "answerOption": [
@@ -95,8 +95,8 @@
         }
       ],
       "type": "group",
-      "linkId": "0",
-      "text": "Botulinum Toxin Injection Contraindication"
+      "linkId": "1",
+      "text": "Contraindications Check"
     },
     {
       "item": [
@@ -111,7 +111,7 @@
               }
             }
           ],
-          "linkId": "1.1",
+          "linkId": "2.1",
           "text": "Order date",
           "required": true
         },
@@ -126,7 +126,7 @@
               }
             }
           ],
-          "linkId": "1.2",
+          "linkId": "2.2",
           "text": "Requested procedure date of service",
           "required": true
         },
@@ -153,8 +153,8 @@
               }
             }
           ],
-          "linkId": "1.3",
-          "text": "The requested procedure is one of the following",
+          "linkId": "2.3",
+          "text": "The requested procedure is one of the following: Proposed frequency of injections.  Provider Note: Administration must not be given more frequently than every 12 weeks, regardless of diagnosis, unless specifically address in the policy.",
           "required": true,
           "answerOption": [
             {
@@ -184,21 +184,6 @@
           ]
         },
         {
-          "type": "text",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "ProposedFrequency"
-              }
-            }
-          ],
-          "linkId": "1.4",
-          "text": "Proposed frequency of injections.  Provider Note: Administration must not be given more frequently than every 12 weeks, regardless of diagnosis, unless specifically address in the policy.",
-          "required": true
-        },
-        {
           "type": "choice",
           "extension": [
             {
@@ -221,8 +206,8 @@
               }
             }
           ],
-          "linkId": "1.5",
-          "text": "Order Description; A request for injection of chemical (botulinum toxin) for destruction of nerve muscles (chemodenervation).",
+          "linkId": "2.4",
+          "text": "Order Description: A request for injection of chemical (botulinum toxin) for destruction of nerve muscles (chemodenervation).",
           "required": true,
           "answerOption": [
             {
@@ -264,7 +249,7 @@
               }
             }
           ],
-          "linkId": "1.5.a",
+          "linkId": "2.5",
           "text": "The medically necessary reason that supports Guidance procedure code CPT 95873 or CPT 95874 (if applicable) in conjunction with chemodenervation",
           "required": true,
           "answerOption": [
@@ -286,13 +271,14 @@
               "valueCoding": {
                 "code": "N/A",
                 "display": "NA-LCD does not require "
-              }
+              },
+              "initialSelected": true
             }
           ]
         }
       ],
       "type": "group",
-      "linkId": "1",    
+      "linkId": "2",
       "text": "Order Details"
     },
     {
@@ -320,8 +306,20 @@
               }
             }
           ],
-          "linkId": "2.1",
+          "linkId": "3.1",
           "text": "Covered Diagnosis. Provider education: There must be objective documentation of the clinical features consistent with the covered diagnosis in the beneficiary record.",
+          "enableWhen": [
+            {
+              "question": "2.4",
+              "operator": "=",
+              "answerCoding": {
+                "system": "https://hcpcs.codes/",
+                "code": "64612",
+                "display": "CPT 64612 - Chemodenervation of muscles(s); muscle(s) innervated by facial nerve, unilateral (e.g.m for blepharospasm, hemifacial spasm)"
+              }
+            }
+          ],
+          "enableBehavior": "any",
           "required": true,
           "answerOption": [
             {
@@ -385,13 +383,6 @@
                 "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "G51.32",
                 "display": "G51.32 Clonic hemifacial spasm, left ​"
-              }
-            },
-            {
-              "valueCoding": {
-                "system": "http://hl7.org/fhir/sid/icd-10-cm",
-                "code": "G51.33",
-                "display": "G51.33 Clonic hemifacial spasm, bilateral​"
               }
             },
             {
@@ -502,13 +493,6 @@
             {
               "valueCoding": {
                 "system": "http://hl7.org/fhir/sid/icd-10-cm",
-                "code": "H02.433",
-                "display": "H02.433 Paralytic ptosis of bilateral eyelids"
-              }
-            },
-            {
-              "valueCoding": {
-                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "H02.59",
                 "display": "H02.59 Other disorders affecting eyelid function"
               }
@@ -529,444 +513,6 @@
           ]
         },
         {
-          "type": "text",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "text-box",
-                    "display": "Text Box"
-                  }
-                ]
-              }
-            }
-          ],
-          "linkId": "2.1.0",
-          "text": "Specify Other",
-          "enableWhen": [
-            {
-              "question": "2.1",
-              "operator": "=",
-              "answerCoding": {
-                "code": "Other",
-                "display": "Other"
-              }
-            }
-          ],
-          "enableBehavior": "any",
-          "repeats": false
-        },
-        {
-          "type": "text",
-          "linkId": "2.1.a",
-          "text": "If the selected ICD-10 code is not on the billing article allowable list, submit robust published evidence to support medical neccessity.",
-          "enableWhen": [
-            {
-              "question": "2.1",
-              "operator": "=",
-              "answerCoding": {
-                "code": "Other",
-                "display": "Other"
-              }
-            }
-          ],
-          "required": true
-        },
-        {
-          "type": "display",
-          "linkId": "2.2d",
-          "text": "Provider Education Note: Specific information must be documented about the conservative methods of treatments such as medication, physical therapy, and other appropriate methods that have been tried and proven unsuccessful. The documentation must include an objective assessment of the intolerance or inadequacy of the response(s). (Excludes hemifacial spasm or blepharospasm)"
-        },
-        {
-          "type": "choice",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "MedicationsAttempted"
-              }
-            },
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "drop-down",
-                    "display": "Drop down"
-                  }
-                ]
-              }
-            }
-          ],
-          "linkId": "2.2",
-          "text": "Medication(s) that have been attempted.",
-          "repeats": true,
-          "answerOption": [
-            {
-              "valueCoding": {
-                "system": "http://snomed.info/sct",
-                "code": "372679000",
-                "display": "Anticholinergics  (Muscarinic receptor antagonist (372679000)"
-              }
-            },
-            {
-              "valueCoding": {
-                "system": "http://snomed.info/sct",
-                "code": "372846002",
-                "display": "Benztropine"
-              }
-            },
-            {
-              "valueCoding": {
-                "system": "http://snomed.info/sct",
-                "code": "387120000",
-                "display": "Trihexyphenidyl"
-              }
-            },
-            {
-              "valueCoding": {
-                "system": "http://snomed.info/sct",
-                "code": "372664007",
-                "display": "Benzodiazepine"
-              }
-            },
-            {
-              "valueCoding": {
-                "system": "http://snomed.info/sct",
-                "code": "387383007",
-                "display": "Clonazepam"
-              }
-            },
-            {
-              "valueCoding": {
-                "system": "http://snomed.info/sct",
-                "code": "387264003",
-                "display": "Diazepam"
-              }
-            },
-            {
-              "valueCoding": {
-                "system": "http://snomed.info/sct",
-                "code": "387106007",
-                "display": "Lorazepam"
-              }
-            },
-            {
-              "valueCoding": {
-                "system": "http://snomed.info/sct",
-                "code": "17893001",
-                "display": "Skeletal Muscle relaxants"
-              }
-            },
-            {
-              "valueCoding": {
-                "system": "http://snomed.info/sct",
-                "code": "387342009",
-                "display": "Baclofen"
-              }
-            },
-            {
-              "valueCoding": {
-                "system": "http://snomed.info/sct",
-                "code": "373440006",
-                "display": "Tizanidine"
-              }
-            },
-            {
-              "valueCoding": {
-                "system": "http://snomed.info/sct",
-                "code": "373779004",
-                "display": "Cyclobenzaprine"
-              }
-            },
-            {
-              "valueCoding": {
-                "system": "http://snomed.info/sct",
-                "code": "387486000",
-                "display": "Methocarbamol"
-              }
-            },
-            {
-              "valueCoding": {
-                "system": "http://snomed.info/sct",
-                "code": "386845007",
-                "display": "Gabapentin"
-              }
-            },
-            {
-              "valueCoding": {
-                "system": "http://snomed.info/sct",
-                "code": "372819007",
-                "display": "Dantrolene"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "other",
-                "display": "Other"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "NA",
-                "display": "N/A -Not Required by LCD"
-              }
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "text-box",
-                    "display": "Text Box"
-                  }
-                ]
-              }
-            }
-          ],
-          "linkId": "2.2.1",
-          "text": "Specify Other",
-          "enableWhen": [
-            {
-              "question": "2.2",
-              "operator": "=",
-              "answerCoding": {
-                "code": "other",
-                "display": "Other"
-              }
-            }
-          ],
-          "enableBehavior": "any",
-          "repeats": false
-        },
-        {
-          "type": "choice",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "ConventionalTreatmentProcedures"
-              }
-            },
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "check-box",
-                    "display": "Check-box"
-                  }
-                ]
-              }
-            }
-          ],
-          "linkId": "2.4",
-          "text": "Conventional treatment methods that have been attempted.  (Excludes hemifacial spasm or blepharospasm)",
-          "repeats": true,
-          "answerOption": [
-            {
-              "valueCoding": {
-                "system": "http://snomed.info/sct",
-                "code": "91251008",
-                "display": "Physical Therapy"
-              }
-            },
-            {
-              "valueCoding": {
-                "system": "http://snomed.info/sct",
-                "code": "36430006",
-                "display": "Biofeedback (Electromyographic)"
-              }
-            },
-            {
-              "valueCoding": {
-                "system": "http://snomed.info/sct",
-                "code": "44868003",
-                "display": "Acupuncture"
-              }
-            },
-            {
-              "valueCoding": {
-                "system": "http://snomed.info/sct",
-                "code": "313204009",
-                "display": "Lifestyle modifications"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "NA",
-                "display": "N/A -Not Required by LCD"
-              }
-            }
-          ]
-        },
-        {
-          "type": "choice",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "benificiarystherapeuticResponse"
-              }
-            },
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "radio-button",
-                    "display": "Radio Button"
-                  }
-                ]
-              }
-            }
-          ],
-          "linkId": "2.5",
-          "text": "Beneficiary's therapeutic response to treatments attempted",
-          "repeats": false,
-          "answerOption": [
-            {
-              "valueCoding": {
-                "system": "http://snomed.info/sct",
-                "code": "399056007",
-                "display": "Complete"
-              }
-            },
-            {
-              "valueCoding": {
-                "system": "http://snomed.info/sct",
-                "code": "63432002",
-                "display": "Excellent"
-              }
-            },
-            {
-              "valueCoding": {
-                "system": "http://snomed.info/sct",
-                "code": "78469002",
-                "display": "Good response"
-              }
-            },
-            {
-              "valueCoding": {
-                "system": "http://snomed.info/sct",
-                "code": "21768001",
-                "display": "Fair response"
-              }
-            },
-            {
-              "valueCoding": {
-                "system": "http://snomed.info/sct",
-                "code": "84190002",
-                "display": "Poor/minimal"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "NA",
-                "display": "N/A -Not Required by LCD"
-              }
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
-              "valueExpression": {
-                "language": "text/cql",
-                "expression": "PertinentProcedureResults"
-              }
-            },
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "text-box",
-                    "display": "Text Box"
-                  }
-                ]
-              }
-            }
-          ],
-          "linkId": "2.6",
-          "text": "Pertinent test/procedure results"
-        },
-        {
-          "type": "choice",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "radio-button",
-                    "display": "Radio Button"
-                  }
-                ]
-              }
-            }
-          ],
-          "linkId": "2.7",
-          "text": "Objective scale score of the severity of symptoms",
-          "answerOption": [
-            {
-              "valueCoding": {
-                "code": "No",
-                "display": "0 - No impairment"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Mild",
-                "display": "1 - Mild impairment"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Moderate",
-                "display": "2 - Moderate impairment"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Severe",
-                "display": "3 - Severe impairment"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "Not",
-                "display": "4 - Not possible due to the disease"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "NA",
-                "display": "Not applicable"
-              }
-            }
-          ]
-        },
-        {
           "type": "choice",
           "extension": [
             {
@@ -977,8 +523,20 @@
               }
             }
           ],
-          "linkId": "2.8",
-          "text": "Covered Diagnosis for Migraine. Provider education: There must be objective documentation of the clinical features consistent with the covered diagnosis in the beneficiary record.",
+          "linkId": "3.2",
+          "text": "Covered Diagnosis. Provider education: There must be objective documentation of the clinical features consistent with the covered diagnosis in the beneficiary record.",
+          "enableWhen": [
+            {
+              "question": "2.4",
+              "operator": "=",
+              "answerCoding": {
+                "system": "https://hcpcs.codes/",
+                "code": "64615",
+                "display": "CPT 64615 - Chemodenervation of muscles(s); muscle(s) innervated by facial, trigeminal, cervical, spinal and accessory nerves, bilateral (e.g., for chronic migraine)"
+              }
+            }
+          ],
+          "enableBehavior": "any",
           "required": true,
           "answerOption": [
             {
@@ -1291,6 +849,20 @@
             },
             {
               "valueCoding": {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "G51.33",
+                "display": "Clonic hemifacial spasm, bilateral​"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "H02.433",
+                "display": "Paralytic ptosis of bilateral eyelids"
+              }
+            },
+            {
+              "valueCoding": {
                 "code": "other",
                 "display": "Other"
               }
@@ -1299,11 +871,33 @@
         },
         {
           "type": "text",
-          "linkId": "2.9",
-          "text": "The use of the selected serotype is not approved by the FDA and falls outside of treatment guidelines. Submit robust published evidence for this off label request AND the reason an approved serotype is not used.​",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "text-box",
+                    "display": "Text Box"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "3.3",
+          "text": "Specify Other",
           "enableWhen": [
             {
-              "question": "2.8",
+              "question": "3.1",
+              "operator": "=",
+              "answerCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
+            },
+            {
+              "question": "3.2",
               "operator": "=",
               "answerCoding": {
                 "code": "other",
@@ -1311,6 +905,452 @@
               }
             }
           ],
+          "enableBehavior": "any",
+          "repeats": false
+        },
+        {
+          "type": "text",
+          "linkId": "3.4",
+          "text": "If the selected ICD-10 code is not on the billing article allowable list, submit robust published evidence to support medical neccessity.",
+          "enableWhen": [
+            {
+              "question": "3.3",
+              "operator": "exists",
+              "answerBoolean": true
+            }
+          ],
+          "enableBehavior": "any",
+          "required": true
+        },
+        {
+          "type": "display",
+          "linkId": "3.5",
+          "text": "Provider Education Note: Specific information must be documented about the conservative methods of treatments such as medication, physical therapy, and other appropriate methods that have been tried and proven unsuccessful. The documentation must include an objective assessment of the intolerance or inadequacy of the response(s). (Excludes hemifacial spasm or blepharospasm)"
+        }
+      ],
+      "type": "group",
+      "linkId": "3",
+      "text": "Allowable Diagnosis",
+      "enableWhen": [
+        {
+          "question": "2.4",
+          "operator": "exists",
+          "answerBoolean": true
+        }
+      ],
+      "enableBehavior": "any"
+    },
+    {
+      "item": [
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "MedicationsAttempted"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "4.1",
+          "text": "Medication(s) that have been attempted.",
+          "repeats": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "372679000",
+                "display": "Anticholinergics  (Muscarinic receptor antagonist (372679000)"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "372846002",
+                "display": "Benztropine"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "387120000",
+                "display": "Trihexyphenidyl"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "372664007",
+                "display": "Benzodiazepine"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "387383007",
+                "display": "Clonazepam"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "387264003",
+                "display": "Diazepam"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "387106007",
+                "display": "Lorazepam"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "17893001",
+                "display": "Skeletal Muscle relaxants"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "387342009",
+                "display": "Baclofen"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "373440006",
+                "display": "Tizanidine"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "373779004",
+                "display": "Cyclobenzaprine"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "387486000",
+                "display": "Methocarbamol"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "386845007",
+                "display": "Gabapentin"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "372819007",
+                "display": "Dantrolene"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "other",
+                "display": "Other"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "NA",
+                "display": "N/A -Not Required by LCD"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "text-box",
+                    "display": "Text Box"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "4.2",
+          "text": "Specify Other",
+          "enableWhen": [
+            {
+              "question": "4.1",
+              "operator": "=",
+              "answerCoding": {
+                "code": "other",
+                "display": "Other"
+              }
+            }
+          ],
+          "enableBehavior": "any",
+          "repeats": false
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "ConventionalTreatmentProcedures"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box",
+                    "display": "Check-box"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "4.3",
+          "text": "Conventional treatment methods that have been attempted.  (Excludes hemifacial spasm or blepharospasm)",
+          "repeats": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "91251008",
+                "display": "Physical Therapy"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "36430006",
+                "display": "Biofeedback (Electromyographic)"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "44868003",
+                "display": "Acupuncture"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "313204009",
+                "display": "Lifestyle modifications"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "NA",
+                "display": "N/A -Not Required by LCD"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "ConventionalTreatmentResponse"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "4.4",
+          "text": "Beneficiary's therapeutic response to treatments attempted",
+          "repeats": false,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "399056007",
+                "display": "Complete"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "63432002",
+                "display": "Excellent"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "78469002",
+                "display": "Good response"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "21768001",
+                "display": "Fair response"
+              }
+            },
+            {
+              "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "84190002",
+                "display": "Poor/minimal"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "NA",
+                "display": "N/A -Not Required by LCD"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "PertinentProcedureResults"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "text-box",
+                    "display": "Text Box"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "4.5",
+          "text": "Pertinent test/procedure results"
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "4.6",
+          "text": "Objective scale score of the severity of symptoms",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "No",
+                "display": "0 - No impairment"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Mild",
+                "display": "1 - Mild impairment"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Moderate",
+                "display": "2 - Moderate impairment"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Severe",
+                "display": "3 - Severe impairment"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Not",
+                "display": "4 - Not possible due to the disease"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "NA",
+                "display": "Not applicable"
+              }
+            }
+          ]
+        }
+      ],
+      "type": "group",
+      "linkId": "4",
+      "text": "Non-Migraine Diagnosis Requirements",
+      "enableWhen": [
+        {
+          "question": "2.4",
+          "operator": "=",
+          "answerCoding": {
+            "system": "https://hcpcs.codes/",
+            "code": "64612",
+            "display": "CPT 64612 - Chemodenervation of muscles(s); muscle(s) innervated by facial nerve, unilateral (e.g.m for blepharospasm, hemifacial spasm)"
+          }
+        }
+      ],
+      "enableBehavior": "any"
+    },
+    {
+      "item": [
+        {
+          "type": "text",
+          "linkId": "5.1",
+          "text": "The use of the selected serotype is not approved by the FDA and falls outside of treatment guidelines. Submit robust published evidence for this off label request AND the reason an approved serotype is not used.​",
           "enableBehavior": "any",
           "required": true
         },
@@ -1330,7 +1370,7 @@
               }
             }
           ],
-          "linkId": "2.10",
+          "linkId": "5.2",
           "text": "History of Chronic Migraines, select all that apply.",
           "repeats": true,
           "answerOption": [
@@ -1389,7 +1429,7 @@
               }
             }
           ],
-          "linkId": "2.11",
+          "linkId": "5.3",
           "text": "Medication(s) that have been attempted for chronic migraines with at least a 2-month trial.​  Provider Education Note: The beneficiary has had a trial of and inadequate response to a 2-month trial of at least one agent in any two of the following classes or has contraindication to the following medications.",
           "required": true,
           "repeats": true,
@@ -1544,7 +1584,7 @@
               }
             }
           ],
-          "linkId": "2.12",
+          "linkId": "5.4",
           "text": "Calcitonin gene-related peptide agent for chronic migraine prophylaxis is currently used.",
           "required": true,
           "answerOption": [
@@ -1584,7 +1624,7 @@
               }
             }
           ],
-          "linkId": "2.13",
+          "linkId": "5.5",
           "text": "Specific information is summarized about the conservative methods of treatments such as medication, physical therapy, and other appropriate methods that have been tried and proven unsuccessful.  Must include an objective assessment of the intolerance or inadequacy of the response(s).",
           "required": true,
           "repeats": false,
@@ -1606,7 +1646,7 @@
               }
             }
           ],
-          "linkId": "2.14",
+          "linkId": "5.6",
           "text": "Objective scale score of the severity of pain, for Chronic Migraines e.g. Numeric Pain Scale, Verbal Descriptor.​",
           "required": true,
           "answerOption": [
@@ -1647,10 +1687,53 @@
               }
             }
           ]
-        },
+        }
+      ],
+      "type": "group",
+      "linkId": "5",
+      "text": "Migraine Diagnosis Requirements",
+      "enableWhen": [
+        {
+          "question": "2.4",
+          "operator": "=",
+          "answerCoding": {
+            "system": "https://hcpcs.codes/",
+            "code": "64615",
+            "display": "CPT 64615 - Chemodenervation of muscles(s); muscle(s) innervated by facial, trigeminal, cervical, spinal and accessory nerves, bilateral (e.g., for chronic migraine)"
+          }
+        }
+      ],
+      "enableBehavior": "any"
+    },
+    {
+      "type": "group",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                "code": "list",
+                "display": "List"
+              }
+            ]
+          }
+        }
+      ],
+      "linkId": "6",
+      "text": "Serotype and Dosage",
+      "item": [
         {
           "type": "choice",
           "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "RequestedSerotype"
+              }
+            },
             {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
               "valueCodeableConcept": {
@@ -1664,7 +1747,7 @@
               }
             }
           ],
-          "linkId": "2.15",
+          "linkId": "6.1",
           "text": "Which serotype will be used for the procedure and total dose:",
           "required": true,
           "repeats": false,
@@ -1673,28 +1756,28 @@
               "valueCoding": {
                 "system": "https://hcpcs.codes/",
                 "code": "J0585",
-                "display": "J0585 – Injection, onabotulinumtoxinA(Botox), 1 unit"
+                "display": "J0585: Injection, onabotulinumtoxinA(Botox), 1 unit"
               }
             },
             {
               "valueCoding": {
                 "system": "https://hcpcs.codes/",
                 "code": "J0586",
-                "display": "J0586 - Injection abobotulinumtoxinA (Dysport), 5 units"
+                "display": "J0586: Injection abobotulinumtoxinA (Dysport), 5 units"
               }
             },
             {
               "valueCoding": {
                 "system": "https://hcpcs.codes/",
                 "code": "J0587",
-                "display": "J0587- Injection rimabotulinumtoxinB (Myobloc), 100 units"
+                "display": "J0587: Injection rimabotulinumtoxinB (Myobloc), 100 units"
               }
             },
             {
               "valueCoding": {
                 "system": "https://hcpcs.codes/",
                 "code": "J0588",
-                "display": "J0588- Injection incobotulinumtoxinA (Xeomin), 1 unit "
+                "display": "J0588: Injection incobotulinumtoxinA (Xeomin), 1 unit "
               }
             }
           ]
@@ -1702,6 +1785,13 @@
         {
           "type": "choice",
           "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "SerotypeQuantity"
+              }
+            },
             {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
               "valueCodeableConcept": {
@@ -1715,11 +1805,11 @@
               }
             }
           ],
-          "linkId": "2.15.1",
-          "text": "J0585 Injection, onabotulinumtoxinA(Botox), 1 unit",
+          "linkId": "6.2",
+          "text": "Total dose (units)",
           "enableWhen": [
             {
-              "question": "2.15",
+              "question": "6.1",
               "operator": "=",
               "answerCoding": {
                 "system": "https://hcpcs.codes/",
@@ -1728,24 +1818,25 @@
               }
             }
           ],
+          "enableBehavior": "any",
           "required": true,
           "repeats": false,
           "answerOption": [
             {
               "valueCoding": {
-                "code": "50UnitsJ0585",
+                "code": "50",
                 "display": "50 units per vial, vacuum-dried powder for reconstitution"
               }
             },
             {
               "valueCoding": {
-                "code": "100UnitsJ0585",
+                "code": "100",
                 "display": "100 units per vial, vacuum-dried powder for reconstitution"
               }
             },
             {
               "valueCoding": {
-                "code": "200UnitsJ0585",
+                "code": "200",
                 "display": "200 units per vial, vacuum-dried powder for reconstitution"
               }
             }
@@ -1755,6 +1846,13 @@
           "type": "choice",
           "extension": [
             {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "SerotypeQuantity"
+              }
+            },
+            {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
               "valueCodeableConcept": {
                 "coding": [
@@ -1767,11 +1865,11 @@
               }
             }
           ],
-          "linkId": "2.15.2",
-          "text": "J0586 - Injection abobotulinumtoxinA (Dysport), 5 units",
+          "linkId": "6.3",
+          "text": "Total dose (units)",
           "enableWhen": [
             {
-              "question": "2.15",
+              "question": "6.1",
               "operator": "=",
               "answerCoding": {
                 "system": "https://hcpcs.codes/",
@@ -1780,18 +1878,19 @@
               }
             }
           ],
+          "enableBehavior": "any",
           "required": true,
           "repeats": false,
           "answerOption": [
             {
               "valueCoding": {
-                "code": "300UnitsJ0586",
+                "code": "300",
                 "display": "300 units per vial, vacuum-dried powder for reconstitution"
               }
             },
             {
               "valueCoding": {
-                "code": "500UnitsJ0586",
+                "code": "500",
                 "display": "500 units per vial, vacuum-dried powder for reconstitution"
               }
             }
@@ -1801,6 +1900,13 @@
           "type": "choice",
           "extension": [
             {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "SerotypeQuantity"
+              }
+            },
+            {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
               "valueCodeableConcept": {
                 "coding": [
@@ -1813,11 +1919,11 @@
               }
             }
           ],
-          "linkId": "2.15.3",
-          "text": "J0587- Injection rimabotulinumtoxinB (Myobloc), 100 units",
+          "linkId": "6.4",
+          "text": "Total dose (units)",
           "enableWhen": [
             {
-              "question": "2.15",
+              "question": "6.1",
               "operator": "=",
               "answerCoding": {
                 "system": "https://hcpcs.codes/",
@@ -1826,24 +1932,25 @@
               }
             }
           ],
+          "enableBehavior": "any",
           "required": true,
           "repeats": false,
           "answerOption": [
             {
               "valueCoding": {
-                "code": "2500UnitsJ0587",
+                "code": "2500",
                 "display": "2500 units per vial, vacuum-dried powder for reconstitution"
               }
             },
             {
               "valueCoding": {
-                "code": "5000UnitsJ0587",
+                "code": "5000",
                 "display": "5000 units per vial, vacuum-dried powder for reconstitution"
               }
             },
             {
               "valueCoding": {
-                "code": "10000UnitsJ0587",
+                "code": "10000",
                 "display": "10000 units per vial, vacuum-dried powder for reconstitution"
               }
             }
@@ -1853,6 +1960,13 @@
           "type": "choice",
           "extension": [
             {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "SerotypeQuantity"
+              }
+            },
+            {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
               "valueCodeableConcept": {
                 "coding": [
@@ -1865,11 +1979,11 @@
               }
             }
           ],
-          "linkId": "2.15.4",
-          "text": "J0588- Injection incobotulinumtoxinA (Xeomin), 1 unit ",
+          "linkId": "6.5",
+          "text": "Total dose (units)",
           "enableWhen": [
             {
-              "question": "2.15",
+              "question": "6.1",
               "operator": "=",
               "answerCoding": {
                 "system": "https://hcpcs.codes/",
@@ -1878,24 +1992,25 @@
               }
             }
           ],
+          "enableBehavior": "any",
           "required": true,
           "repeats": false,
           "answerOption": [
             {
               "valueCoding": {
-                "code": "50UnitsJ0585",
+                "code": "50",
                 "display": "50 units per vial, vacuum-dried powder for reconstitution"
               }
             },
             {
               "valueCoding": {
-                "code": "100UnitsJ0585",
+                "code": "100",
                 "display": "100 units per vial, vacuum-dried powder for reconstitution"
               }
             },
             {
               "valueCoding": {
-                "code": "200UnitsJ0585",
+                "code": "200",
                 "display": "200 units per vial, vacuum-dried powder for reconstitution"
               }
             }
@@ -1903,436 +2018,457 @@
         },
         {
           "type": "integer",
-          "linkId": "2.16",
+          "linkId": "6.6",
           "text": "Proposed frequency of injections.  Note: administration must not be given more frequently than every 12 weeks, regardless of diagnosis, unless specifically address in the policy.",
           "required": true,
           "repeats": false,
           "readOnly": false
         },
         {
-          "type": "choice",
-          "extension": [
+          "item": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "drop-down",
-                    "display": "Drop down"
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ]
                   }
-                ]
-              }
-            }
-          ],
-          "linkId": "2.17",
-          "text": "Complete anatomic description of the site(s) to be injected and dosage for each injection site.",
-          "repeats": true,
-          "answerOption": [
-            {
-              "valueCoding": {
-                "code": "56753004Medial",
-                "display": "Medial pre-tarsal orbicularis oculi muscle of the upper lid"
-              }
+                }
+              ],
+              "linkId": "6.7.1",
+              "text": "Injection site",
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "56753004Medial",
+                    "display": "Medial pre-tarsal orbicularis oculi muscle of the upper lid"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "56753004Lateral",
+                    "display": "Lateral pre-tarsal orbicularis oculi muscle of the upper lid"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "56753004LateralSuperior",
+                    "display": "Lateral superior pre-tarsal part of the orbicularis oculi muscle"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "56753004MedialSuperior",
+                    "display": "Medial superior pre-tarsal part of the orbicularis oculi muscle"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "56753004LateralCanthus",
+                    "display": "Lateral canthus of the orbicularis oculi muscle"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "56753004Inferolateral",
+                    "display": "Inferolateral portion of the orbicularis oculi muscle"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "88011006Depressor",
+                    "display": "Depressor supercilii"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "88011006Corrugator",
+                    "display": "Corrugator supercilii"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "244731008",
+                    "display": "Procerus"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "35201009",
+                    "display": "Frontalis"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "52927003",
+                    "display": "Temporalis"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "62431001",
+                    "display": "Occipitalis"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "82298000",
+                    "display": "Nasalis"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "10062000",
+                    "display": "Levator labii superioris"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "69596008",
+                    "display": "Zygomaticus minor"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "80352009",
+                    "display": "Zygomaticus major"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "21040006",
+                    "display": "Depressor anguli oris muscle"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "other",
+                    "display": "Other"
+                  }
+                }
+              ]
             },
             {
-              "valueCoding": {
-                "code": "56753004Lateral",
-                "display": "Lateral pre-tarsal orbicularis oculi muscle of the upper lid"
-              }
+              "type": "integer",
+              "linkId": "6.7.2",
+              "text": "Units for Medial pre-tarsal orbicularis oculi muscle of the upper lid",
+              "enableWhen": [
+                {
+                  "question": "6.7.1",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "56753004Medial",
+                    "display": "Medial pre-tarsal orbicularis oculi muscle of the upper lid"
+                  }
+                }
+              ],
+              "enableBehavior": "any",
+              "required": true
             },
             {
-              "valueCoding": {
-                "code": "56753004LateralSuperior",
-                "display": "Lateral superior pre-tarsal part of the orbicularis oculi muscle"
-              }
+              "type": "integer",
+              "linkId": "6.7.3",
+              "text": "Units for Lateral pre-tarsal orbicularis oculi muscle of the upper lid",
+              "enableWhen": [
+                {
+                  "question": "6.7.1",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "56753004Lateral",
+                    "display": "Lateral pre-tarsal orbicularis oculi muscle of the upper lid"
+                  }
+                }
+              ],
+              "enableBehavior": "any",
+              "required": true
             },
             {
-              "valueCoding": {
-                "code": "56753004MedialSuperior",
-                "display": "Medial superior pre-tarsal part of the orbicularis oculi muscle"
-              }
+              "type": "integer",
+              "linkId": "6.7.4",
+              "text": "Units for Lateral superior pre-tarsal part of the orbicularis oculi muscle",
+              "enableWhen": [
+                {
+                  "question": "6.7.1",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "56753004LateralSuperior",
+                    "display": "Lateral superior pre-tarsal part of the orbicularis oculi muscle"
+                  }
+                }
+              ],
+              "enableBehavior": "any",
+              "required": true
             },
             {
-              "valueCoding": {
-                "code": "56753004LateralCanthus",
-                "display": "Lateral canthus of the orbicularis oculi muscle"
-              }
+              "type": "integer",
+              "linkId": "6.7.5",
+              "text": "Units for Medial superior pre-tarsal part of the orbicularis oculi muscle",
+              "enableWhen": [
+                {
+                  "question": "6.7.1",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "56753004MedialSuperior",
+                    "display": "Medial superior pre-tarsal part of the orbicularis oculi muscle"
+                  }
+                }
+              ],
+              "enableBehavior": "any",
+              "required": true
             },
             {
-              "valueCoding": {
-                "code": "56753004Inferolateral",
-                "display": "Inferolateral portion of the orbicularis oculi muscle"
-              }
+              "type": "integer",
+              "linkId": "6.7.6",
+              "text": "Units for Lateral canthus of the orbicularis oculi muscle",
+              "enableWhen": [
+                {
+                  "question": "6.7.1",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "56753004LateralCanthus",
+                    "display": "Lateral canthus of the orbicularis oculi muscle"
+                  }
+                }
+              ],
+              "enableBehavior": "any",
+              "required": true
             },
             {
-              "valueCoding": {
-                "code": "88011006Depressor",
-                "display": "Depressor supercilii"
-              }
+              "type": "integer",
+              "linkId": "6.7.7",
+              "text": "Units for Inferolateral portion of the orbicularis oculi muscle",
+              "enableWhen": [
+                {
+                  "question": "6.7.1",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "56753004Inferolateral",
+                    "display": "Inferolateral portion of the orbicularis oculi muscle"
+                  }
+                }
+              ],
+              "enableBehavior": "any",
+              "required": true
             },
             {
-              "valueCoding": {
-                "code": "88011006Corrugator",
-                "display": "Corrugator supercilii"
-              }
+              "type": "integer",
+              "linkId": "6.7.8",
+              "text": "Units for Depressor supercilii",
+              "enableWhen": [
+                {
+                  "question": "6.7.1",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "88011006Depressor",
+                    "display": "Depressor supercilii"
+                  }
+                }
+              ],
+              "enableBehavior": "any",
+              "required": true
             },
             {
-              "valueCoding": {
-                "system": "http://snomed.info/sct",
-                "code": "244731008",
-                "display": "Procerus"
-              }
+              "type": "integer",
+              "linkId": "6.7.9",
+              "text": "Units for Corrugator supercilii",
+              "enableWhen": [
+                {
+                  "question": "6.7.1",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "88011006Corrugator",
+                    "display": "Corrugator supercilii"
+                  }
+                }
+              ],
+              "enableBehavior": "any",
+              "required": true
             },
             {
-              "valueCoding": {
-                "system": "http://snomed.info/sct",
-                "code": "35201009",
-                "display": "Frontalis"
-              }
+              "type": "integer",
+              "linkId": "6.7.10",
+              "text": "Units for Procerus",
+              "enableWhen": [
+                {
+                  "question": "6.7.1",
+                  "operator": "=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "244731008",
+                    "display": "Procerus"
+                  }
+                }
+              ],
+              "enableBehavior": "any",
+              "required": true
             },
             {
-              "valueCoding": {
-                "system": "http://snomed.info/sct",
-                "code": "52927003",
-                "display": "Temporalis"
-              }
+              "type": "integer",
+              "linkId": "6.7.11",
+              "text": "Units for Frontalis",
+              "enableWhen": [
+                {
+                  "question": "6.7.1",
+                  "operator": "=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "35201009",
+                    "display": "Frontalis"
+                  }
+                }
+              ],
+              "enableBehavior": "any",
+              "required": true
             },
             {
-              "valueCoding": {
-                "system": "http://snomed.info/sct",
-                "code": "62431001",
-                "display": "Occipitalis"
-              }
+              "type": "integer",
+              "linkId": "6.7.12",
+              "text": "Units for Temporalis",
+              "enableWhen": [
+                {
+                  "question": "6.7.1",
+                  "operator": "=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "52927003",
+                    "display": "Temporalis"
+                  }
+                }
+              ],
+              "enableBehavior": "any",
+              "required": true
             },
             {
-              "valueCoding": {
-                "system": "http://snomed.info/sct",
-                "code": "82298000",
-                "display": "Nasalis"
-              }
+              "type": "integer",
+              "linkId": "6.7.13",
+              "text": "Units for Occipitalis",
+              "enableWhen": [
+                {
+                  "question": "6.7.1",
+                  "operator": "=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "62431001",
+                    "display": "Occipitalis"
+                  }
+                }
+              ],
+              "enableBehavior": "any",
+              "required": true
             },
             {
-              "valueCoding": {
-                "system": "http://snomed.info/sct",
-                "code": "10062000",
-                "display": "Levator labii superioris"
-              }
+              "type": "integer",
+              "linkId": "6.7.14",
+              "text": "Units for Nasalis",
+              "enableWhen": [
+                {
+                  "question": "6.7.1",
+                  "operator": "=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "82298000",
+                    "display": "Nasalis"
+                  }
+                }
+              ],
+              "enableBehavior": "any",
+              "required": true
             },
             {
-              "valueCoding": {
-                "system": "http://snomed.info/sct",
-                "code": "69596008",
-                "display": "Zygomaticus minor"
-              }
+              "type": "integer",
+              "linkId": "6.7.15",
+              "text": "Units for Levator labii superioris",
+              "enableWhen": [
+                {
+                  "question": "6.7.1",
+                  "operator": "=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "10062000",
+                    "display": "Levator labii superioris"
+                  }
+                }
+              ],
+              "enableBehavior": "any",
+              "required": true
             },
             {
-              "valueCoding": {
-                "system": "http://snomed.info/sct",
-                "code": "80352009",
-                "display": "Zygomaticus major"
-              }
+              "type": "integer",
+              "linkId": "6.7.16",
+              "text": "Units for Zygomaticus minor",
+              "enableWhen": [
+                {
+                  "question": "6.7.1",
+                  "operator": "=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "69596008",
+                    "display": "Zygomaticus minor"
+                  }
+                }
+              ],
+              "enableBehavior": "any",
+              "required": true
             },
             {
-              "valueCoding": {
-                "system": "http://snomed.info/sct",
-                "code": "21040006",
-                "display": "Depressor anguli oris muscle"
-              }
+              "type": "integer",
+              "linkId": "6.7.17",
+              "text": "Units for Zygomaticus major",
+              "enableWhen": [
+                {
+                  "question": "6.7.1",
+                  "operator": "=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "80352009",
+                    "display": "Zygomaticus major"
+                  }
+                }
+              ],
+              "enableBehavior": "any",
+              "required": true
             },
             {
-              "valueCoding": {
-                "code": "other",
-                "display": "Other"
-              }
-            }
-          ]
-        },
-        {
-          "type": "integer",
-          "linkId": "2.17.1",
-          "text": "Units for Medial pre-tarsal orbicularis oculi muscle of the upper lid",
-          "enableWhen": [
-            {
-              "question": "2.17",
-              "operator": "=",
-              "answerCoding": {
-                "code": "56753004Medial",
-                "display": "Medial pre-tarsal orbicularis oculi muscle of the upper lid"
-              }
+              "type": "integer",
+              "linkId": "6.7.18",
+              "text": "Units for Depressor anguli oris muscle",
+              "enableWhen": [
+                {
+                  "question": "6.7.1",
+                  "operator": "=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "21040006",
+                    "display": "Depressor anguli oris muscle"
+                  }
+                }
+              ],
+              "enableBehavior": "any",
+              "required": true
             }
           ],
-          "required": true
-        },
-        {
-          "type": "integer",
-          "linkId": "2.17.2",
-          "text": "Units for Lateral pre-tarsal orbicularis oculi muscle of the upper lid",
-          "enableWhen": [
-            {
-              "question": "2.17",
-              "operator": "=",
-              "answerCoding": {
-                "code": "56753004Lateral",
-                "display": "Lateral pre-tarsal orbicularis oculi muscle of the upper lid"
-              }
-            }
-          ],
-          "required": true
-        },
-        {
-          "type": "integer",
-          "linkId": "2.17.3",
-          "text": "Units for Lateral superior pre-tarsal part of the orbicularis oculi muscle",
-          "enableWhen": [
-            {
-              "question": "2.17",
-              "operator": "=",
-              "answerCoding": {
-                "code": "56753004LateralSuperior",
-                "display": "Lateral superior pre-tarsal part of the orbicularis oculi muscle"
-              }
-            }
-          ],
-          "required": true
-        },
-        {
-          "type": "integer",
-          "linkId": "2.17.4",
-          "text": "Units for Medial superior pre-tarsal part of the orbicularis oculi muscle",
-          "enableWhen": [
-            {
-              "question": "2.17",
-              "operator": "=",
-              "answerCoding": {
-                "code": "56753004MedialSuperior",
-                "display": "Medial superior pre-tarsal part of the orbicularis oculi muscle"
-              }
-            }
-          ],
-          "required": true
-        },
-        {
-          "type": "integer",
-          "linkId": "2.17.5",
-          "text": "Units for Lateral canthus of the orbicularis oculi muscle",
-          "enableWhen": [
-            {
-              "question": "2.17",
-              "operator": "=",
-              "answerCoding": {
-                "code": "56753004LateralCanthus",
-                "display": "Lateral canthus of the orbicularis oculi muscle"
-              }
-            }
-          ],
-          "required": true
-        },
-        {
-          "type": "integer",
-          "linkId": "2.17.6",
-          "text": "Units for Inferolateral portion of the orbicularis oculi muscle",
-          "enableWhen": [
-            {
-              "question": "2.17",
-              "operator": "=",
-              "answerCoding": {
-                "code": "56753004Inferolateral",
-                "display": "Inferolateral portion of the orbicularis oculi muscle"
-              }
-            }
-          ],
-          "required": true
-        },
-        {
-          "type": "integer",
-          "linkId": "2.17.7",
-          "text": "Units for Depressor supercilii",
-          "enableWhen": [
-            {
-              "question": "2.17",
-              "operator": "=",
-              "answerCoding": {
-                "code": "88011006Depressor",
-                "display": "Depressor supercilii"
-              }
-            }
-          ],
-          "required": true
-        },
-        {
-          "type": "integer",
-          "linkId": "2.17.8",
-          "text": "Units for Corrugator supercilii",
-          "enableWhen": [
-            {
-              "question": "2.17",
-              "operator": "=",
-              "answerCoding": {
-                "code": "88011006Corrugator",
-                "display": "Corrugator supercilii"
-              }
-            }
-          ],
-          "required": true
-        },
-        {
-          "type": "integer",
-          "linkId": "2.17.9",
-          "text": "Units for Procerus",
-          "enableWhen": [
-            {
-              "question": "2.17",
-              "operator": "=",
-              "answerCoding": {
-                "system": "http://snomed.info/sct",
-                "code": "244731008",
-                "display": "Procerus"
-              }
-            }
-          ],
-          "required": true
-        },
-        {
-          "type": "integer",
-          "linkId": "2.17.10",
-          "text": "Units for Frontalis",
-          "enableWhen": [
-            {
-              "question": "2.17",
-              "operator": "=",
-              "answerCoding": {
-                "system": "http://snomed.info/sct",
-                "code": "35201009",
-                "display": "Frontalis"
-              }
-            }
-          ],
-          "required": true
-        },
-        {
-          "type": "integer",
-          "linkId": "2.17.11",
-          "text": "Units for Temporalis",
-          "enableWhen": [
-            {
-              "question": "2.17",
-              "operator": "=",
-              "answerCoding": {
-                "system": "http://snomed.info/sct",
-                "code": "52927003",
-                "display": "Temporalis"
-              }
-            }
-          ],
-          "required": true
-        },
-        {
-          "type": "integer",
-          "linkId": "2.17.12",
-          "text": "Units for Occipitalis",
-          "enableWhen": [
-            {
-              "question": "2.17",
-              "operator": "=",
-              "answerCoding": {
-                "system": "http://snomed.info/sct",
-                "code": "62431001",
-                "display": "Occipitalis"
-              }
-            }
-          ],
-          "required": true
-        },
-        {
-          "type": "integer",
-          "linkId": "2.17.13",
-          "text": "Units for Nasalis",
-          "enableWhen": [
-            {
-              "question": "2.17",
-              "operator": "=",
-              "answerCoding": {
-                "system": "http://snomed.info/sct",
-                "code": "82298000",
-                "display": "Nasalis"
-              }
-            }
-          ],
-          "required": true
-        },
-        {
-          "type": "integer",
-          "linkId": "2.17.14",
-          "text": "Units for Levator labii superioris",
-          "enableWhen": [
-            {
-              "question": "2.17",
-              "operator": "=",
-              "answerCoding": {
-                "system": "http://snomed.info/sct",
-                "code": "10062000",
-                "display": "Levator labii superioris"
-              }
-            }
-          ],
-          "required": true
-        },
-        {
-          "type": "integer",
-          "linkId": "2.17.15",
-          "text": "Units for Zygomaticus minor",
-          "enableWhen": [
-            {
-              "question": "2.17",
-              "operator": "=",
-              "answerCoding": {
-                "system": "http://snomed.info/sct",
-                "code": "69596008",
-                "display": "Zygomaticus minor"
-              }
-            }
-          ],
-          "required": true
-        },
-        {
-          "type": "integer",
-          "linkId": "2.17.16",
-          "text": "Units for Zygomaticus major",
-          "enableWhen": [
-            {
-              "question": "2.17",
-              "operator": "=",
-              "answerCoding": {
-                "system": "http://snomed.info/sct",
-                "code": "80352009",
-                "display": "Zygomaticus major"
-              }
-            }
-          ],
-          "required": true
-        },
-        {
-          "type": "integer",
-          "linkId": "2.17.17",
-          "text": "Units for Depressor anguli oris muscle",
-          "enableWhen": [
-            {
-              "question": "2.17",
-              "operator": "=",
-              "answerCoding": {
-                "system": "http://snomed.info/sct",
-                "code": "21040006",
-                "display": "Depressor anguli oris muscle"
-              }
-            }
-          ],
-          "required": true
+          "type": "group",
+          "linkId": "6544",
+          "text": "Complete anatomic description of the site(s) to be injected and dosage for each injection site."
         }
-      ],
-      "type": "group",
-      "linkId": "2",
-      "text": "Allowable Diagnosis"
+      ]
     },
     {
       "item": [
@@ -2359,7 +2495,7 @@
               }
             }
           ],
-          "linkId": "8.1",
+          "linkId": "7.1",
           "text": "Clinical effectiveness of the injections",
           "answerOption": [
             {
@@ -2428,7 +2564,7 @@
               }
             }
           ],
-          "linkId": "8.2",
+          "linkId": "7.2",
           "text": "Beneficiary’s response to the injections",
           "answerOption": [
             {
@@ -2476,7 +2612,7 @@
         }
       ],
       "type": "group",
-      "linkId": "8",
+      "linkId": "7",
       "text": "Post Procedure Documentation/Follow Up"
     }
   ]

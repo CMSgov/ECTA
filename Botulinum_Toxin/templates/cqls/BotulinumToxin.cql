@@ -18,6 +18,7 @@ valueset "Botox Covered Conditions": 'botolinumtoxin-covered-conditions'
 valueset "Previous Medications Attempted": 'previous-medications-attempted'
 valueset "Conventional Treatment Procedures": 'conventional-treatment-procedures'
 valueset "Migrane Covered Diagnosis": 'migrane-conditions'
+valueset "Botox Serotypes": 'BotoxSerotypesCodes'
 
 parameter "ServiceRequest" ServiceRequest
 
@@ -54,8 +55,8 @@ define "ServiceRequestCode":
 
 define "RequestedInjectionOccurence":
 	if (First([Procedure]P
-		 where FHIRHelpers.ToCode(First(P.code.coding)) in "BotoxCodes") is null ) then  'Initial injection'
-	else null
+		 where FHIRHelpers.ToCode(First(P.code.coding)) in "BotoxCodes") is not null ) then  'Subsequent injection'
+	else 'Initial injection'
 
 define "CoveredDiagnosis": 
 	if (First([Condition]C
@@ -78,6 +79,21 @@ define "ConventionalTreatmentProcedures":
 		 where FHIRHelpers.ToCode(First(P.code.coding)) in "Conventional Treatment Procedures")).code.coding).code
 	else null
 
+define "ConventionalTreatmentResponse":
+	if (First([Procedure]P
+		 where FHIRHelpers.ToCode(First(P.code.coding)) in "Conventional Treatment Procedures" and P.status = 'completed') is not null) then 
+		 '399056007'
+	else if (First([Procedure]P
+		 where FHIRHelpers.ToCode(First(P.code.coding)) in "Conventional Treatment Procedures" and FHIRHelpers.ToCode(First(P.outcome.coding)).code = '385669000') is not null ) then 
+		 '63432002'
+	else if (First([Procedure]P
+		 where FHIRHelpers.ToCode(First(P.code.coding)) in "Conventional Treatment Procedures" and FHIRHelpers.ToCode(First(P.outcome.coding)).code = '385670004') is not null ) then 
+		 '21768001'
+	else if (First([Procedure]P
+		 where FHIRHelpers.ToCode(First(P.code.coding)) in "Conventional Treatment Procedures" and FHIRHelpers.ToCode(First(P.outcome.coding)).code = '385671000') is not null ) then 
+		 '84190002'
+	else null 
+
 
 define "MigraneCoveredDiagnosis": 
 	if (First([Condition]C
@@ -86,6 +102,11 @@ define "MigraneCoveredDiagnosis":
 		 where FHIRHelpers.ToCode(First(C.code.coding)) in "Migrane Covered Diagnosis")).code.coding).code
 	else null
 
+define RequestedSerotype:
+	First(First("ServiceRequest".orderDetail).coding).code
+
+define SerotypeQuantity:
+	"ServiceRequest".quantity.value
 
 // Helper functions needed for this scope
 
