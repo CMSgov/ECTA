@@ -1,0 +1,85 @@
+{
+  "resourceType": "ValueSet",
+  "id": "previous-medications-attempted",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2025-10-08T08:44:46.000+00:00"
+  },
+  "url": "<FHIR-server>/ValueSet/previous-medications-attempted",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:previous-medications-attempted"
+    }
+  ],
+  "version": "Latest",
+  "name": "PreviousMedicationsAttempted",
+  "title": "Previous Medications Attempted",
+  "status": "active",
+  "publisher": "CMS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "372679000",
+            "display": "Anticholinergics"
+          },
+          {
+            "code": "372846002",
+            "display": "Benztropine"
+          },
+          {
+            "code": "387120000",
+            "display": "Trihexyphenidyl"
+          },
+          {
+            "code": "372664007",
+            "display": "Benzodiazepine"
+          },
+          {
+            "code": "387383007",
+            "display": "Clonazepam"
+          },
+          {
+            "code": "387264003",
+            "display": "Diazepam"
+          },
+          {
+            "code": "387106007",
+            "display": "Lorazepam"
+          },
+          {
+            "code": "17893001",
+            "display": "Skeletal Muscle relaxants"
+          },
+          {
+            "code": "387342009",
+            "display": "Baclofen"
+          },
+          {
+            "code": "373440006",
+            "display": "Tizanidine"
+          },
+          {
+            "code": "373779004",
+            "display": "Cyclobenzaprine"
+          },
+          {
+            "code": "387486000",
+            "display": "Methocarbamol"
+          },
+          {
+            "code": "386845007",
+            "display": "Gabapentin"
+          },
+          {
+            "code": "372819007",
+            "display": "Dantrolene"
+          }
+        ]
+      }
+    ]
+  }
+}
