@@ -56,6 +56,7 @@
           ],
           "linkId": "1.1",
           "text": "Does the beneficiary have a condition that is a contraindication to receiving botulinum toxin?",
+          "required": true,
           "repeats": true,
           "answerOption": [
             {
@@ -906,6 +907,7 @@
             }
           ],
           "enableBehavior": "any",
+          "required": false,
           "repeats": false
         },
         {
@@ -920,7 +922,7 @@
             }
           ],
           "enableBehavior": "any",
-          "required": true
+          "required": false
         },
         {
           "type": "display",
@@ -967,6 +969,7 @@
           ],
           "linkId": "4.1",
           "text": "Medication(s) that have been attempted.",
+          "required": true,
           "repeats": true,
           "answerOption": [
             {
@@ -1137,6 +1140,7 @@
           ],
           "linkId": "4.3",
           "text": "Conventional treatment methods that have been attempted.  (Excludes hemifacial spasm or blepharospasm)",
+          "required": true,
           "repeats": true,
           "answerOption": [
             {
@@ -1200,6 +1204,7 @@
           ],
           "linkId": "4.4",
           "text": "Beneficiary's therapeutic response to treatments attempted",
+          "required": true,
           "repeats": false,
           "answerOption": [
             {
@@ -1269,7 +1274,8 @@
             }
           ],
           "linkId": "4.5",
-          "text": "Pertinent test/procedure results"
+          "text": "Pertinent test/procedure results",
+          "required": true
         },
         {
           "type": "choice",
@@ -1289,6 +1295,7 @@
           ],
           "linkId": "4.6",
           "text": "Objective scale score of the severity of symptoms",
+          "required": true,
           "answerOption": [
             {
               "valueCoding": {
@@ -1352,7 +1359,7 @@
           "linkId": "5.1",
           "text": "The use of the selected serotype is not approved by the FDA and falls outside of treatment guidelines. Submit robust published evidence for this off label request AND the reason an approved serotype is not used.​",
           "enableBehavior": "any",
-          "required": true
+          "required": false
         },
         {
           "type": "choice",
@@ -1372,6 +1379,7 @@
           ],
           "linkId": "5.2",
           "text": "History of Chronic Migraines, select all that apply.",
+          "required": true,
           "repeats": true,
           "answerOption": [
             {
@@ -2021,8 +2029,11 @@
           "linkId": "6.6",
           "text": "Proposed frequency of injections.  Note: administration must not be given more frequently than every 12 weeks, regardless of diagnosis, unless specifically address in the policy.",
           "required": true,
-          "repeats": false,
-          "readOnly": false
+          "initial": [
+            {
+              "valueInteger": 12
+            }
+          ]
         },
         {
           "item": [
@@ -2044,6 +2055,7 @@
               ],
               "linkId": "6.7.1",
               "text": "Injection site",
+              "required": true,
               "repeats": true,
               "answerOption": [
                 {
@@ -2497,6 +2509,7 @@
           ],
           "linkId": "7.1",
           "text": "Clinical effectiveness of the injections",
+          "required": true,
           "answerOption": [
             {
               "valueCoding": {
@@ -2537,7 +2550,8 @@
               "valueCoding": {
                 "code": "Not applicable",
                 "display": "Not applicable"
-              }
+              },
+              "initialSelected": true
             }
           ]
         },
@@ -2566,6 +2580,7 @@
           ],
           "linkId": "7.2",
           "text": "Beneficiary’s response to the injections",
+          "required": true,
           "answerOption": [
             {
               "valueCoding": {
@@ -2606,7 +2621,8 @@
               "valueCoding": {
                 "code": "Not applicable",
                 "display": "Not applicable"
-              }
+              },
+              "initialSelected": true
             }
           ]
         }

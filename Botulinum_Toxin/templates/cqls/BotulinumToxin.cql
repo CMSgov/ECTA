@@ -106,7 +106,18 @@ define RequestedSerotype:
 	First(First("ServiceRequest".orderDetail).coding).code
 
 define SerotypeQuantity:
-	"ServiceRequest".quantity.value
+	if (RequestedSerotype = 'J0585' or RequestedSerotype = 'J0588' ) then 
+		if ("ServiceRequest".quantity.value = 100) then '100'
+		else if ("ServiceRequest".quantity.value = 200) then '200'
+		else '50'
+	else if (RequestedSerotype = 'J0586') then 
+		if ("ServiceRequest".quantity.value = 500) then '500'
+		else '300'
+	else if (RequestedSerotype = 'J0587' ) then 
+		if ("ServiceRequest".quantity.value = 5000) then '5000'
+		else if ("ServiceRequest".quantity.value = 10000) then '10000'
+		else '2500'
+	else null
 
 // Helper functions needed for this scope
 
