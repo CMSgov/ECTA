@@ -67,6 +67,18 @@ valueset "Vein Ablation ServiceRequestCodes": 'veinablation-serviceRequest-codes
 
 context Patient
 
+define function DisplayAnswer(label String):
+  FHIR.Coding {
+    display: FHIR.string { value: label }
+  }
+
+define function SnomedAnswer(codeValue String, label String):
+  FHIR.Coding {
+    system: FHIR.uri { value: 'http://snomed.info/sct' },
+    code: FHIR.code { value: codeValue },
+    display: FHIR.string { value: label }
+  }
+
 define VeinAblationRequest:
 	First([ServiceRequest])
 
@@ -104,48 +116,104 @@ define PresenceOfVenousInsufficiency:
 		 where First(C.code.coding).code in "Venous insufficiency") != null) then true else false
 
 define LowerExtremityDiseasedVesselSymptoms:
-  { ( if (First([Condition]C
-		 where First(C.code.coding).code in "Stasis Ulcer Lower Leg") != null) then '1237117000' 
-      else ''
-  ), ( if ((First([Condition]C
-		 where First(C.code.coding).code in "Pain Varicode Vein Lower Leg") != null) and
-		 (First([Condition]C
-		 where First(C.code.coding).code in "Edema Lower Leg") != null) and 
-		 (First([Condition]C
-		 where First(C.code.coding).code in "Difficulty in daily activities") != null)) then 'pain-edema' 
-      else ''
-  ), ( if (First([Condition]C
-		 where First(C.code.coding).code in "Superficial Phlebitis") != null) then '40283005' 
-      else ''
-  ), ( if (First([Condition]C
-		 where First(C.code.coding).code in "Stasis Dermatitis") != null) then '35498005' 
-      else ''
-  ), ( if (First([Condition]C
-		 where First(C.code.coding).code in "Dependent Edema") != null) then 'refractory-edema' 
-      else ''
-  ), ( if (First([Condition]C
-		 where First(C.code.coding).code in "Bleeding Diseased Lower Vessels") != null) then 'bleeding-diseased-lower-vessels' 
-      else ''
-  ), ( if (First([Condition]C
-		 where First(C.code.coding).code in "Bleeding Ruptured Superficial Varicosity") != null) then 'bleeding-ruptured-varicosity' 
-      else ''
-  ) }
+  ({
+    if exists([Condition: "Stasis Ulcer Lower Leg"])
+      then SnomedAnswer(
+        '1237117000',
+        'Stasis ulcer of lower leg (secondary to venous stasis)'
+      )
+      else null,
+
+    if (
+      exists([Condition: "Pain Varicode Vein Lower Leg"])
+      and exists([Condition: "Edema Lower Leg"])
+      and exists([Condition: "Difficulty in daily activities"])
+    )
+      then DisplayAnswer(
+        'Evidence of significant lower extremity pain and edema secondary to documented venous insufficiency. The symptoms interfere with activities of daily living.'
+      )
+      else null,
+
+    if exists([Condition: "Superficial Phlebitis"])
+      then SnomedAnswer(
+        '40283005',
+        'Recurrent episodes of superficial phlebitis'
+      )
+      else null,
+
+    if exists([Condition: "Stasis Dermatitis"])
+      then SnomedAnswer(
+        '35498005',
+        'Stasis dermatitis (thickened, discolored skin on the ankle, itching and discomfort in the affected area around the ankles, may worsen through open sores that may ooze or crust over, discoloration of the skin associated with poor circulation)'
+      )
+      else null,
+
+    if exists([Condition: "Dependent Edema"])
+      then DisplayAnswer('Refractory dependent edema')
+      else null,
+
+    if exists([Condition: "Bleeding Diseased Lower Vessels"])
+      then DisplayAnswer(
+        'Bleeding from diseased vessels of the lower extremities'
+      )
+      else null,
+
+    if exists([Condition: "Bleeding Ruptured Superficial Varicosity"])
+      then DisplayAnswer(
+        'Bleeding associated with ruptured superficial varicosity'
+      )
+      else null
+  }) Answer
+    where Answer is not null
 
 define PresenceOfEvidenceForEdemaOrUlceration:
-	if (First([Condition]C
-		 where First(C.code.coding).code in "Localized Edema Fluid Overload" and First(C.bodySite.coding) in "Lower Limb Structure") != null ) then 'presence' 
-	else if (First([Condition]C
-		 where First(C.code.coding).code in "Atherosclerosis of artery of lower limb") != null ) then 'presence' 
-	else if (First([Condition]C
-		 where First(C.code.coding).code in "Lymphedema of lower extremity") != null ) then 'presence' 
-	else 'absence'
+  if (
+    First([Condition] C
+      where First(C.code.coding).code in "Localized Edema Fluid Overload"
+        and First(C.bodySite.coding) in "Lower Limb Structure"
+    ) != null
+  ) then DisplayAnswer('Presence of other causes')
+
+  else if (
+    First([Condition] C
+      where First(C.code.coding).code in "Atherosclerosis of artery of lower limb"
+    ) != null
+  ) then DisplayAnswer('Presence of other causes')
+
+  else if (
+    First([Condition] C
+      where First(C.code.coding).code in "Lymphedema of lower extremity"
+    ) != null
+  ) then DisplayAnswer('Presence of other causes')
+
+  else DisplayAnswer('Absence of other causes')
 
 define NonVeinAblationConditions:
-	if (First([Condition]C
-		 where First(C.code.coding).code in "VeinAblation not necessary conditions") != null ) then 
-		 First((First([Condition]C
-		 where First(C.code.coding).code in "VeinAblation not necessary conditions")).code.coding).code
-	else 'N'
+	({
+		if exists([Condition: "VeinAblation not necessary conditions"] C
+			where First(C.code.coding).code.value = '1254951000'
+		) then SnomedAnswer('1254951000','Venous obstruction') else null,
+
+		if exists([Condition: "VeinAblation not necessary conditions"] C
+			where First(C.code.coding).code.value = '128053003'
+		) then SnomedAnswer('128053003','Thrombosis/thrombus/DVT') else null,
+
+		if exists([Condition: "VeinAblation not necessary conditions"] C
+			where First(C.code.coding).code.value = '267043001'
+		) then SnomedAnswer('267043001',Vein tortuosity that would prevent catheter advancement') else null,
+
+		if exists([Condition: "VeinAblation not necessary conditions"] C
+			where First(C.code.coding).code.value = '724440007'
+		) then SnomedAnswer('724440007','Significant peripheral artery disease') else null,
+
+		if exists([Condition: "VeinAblation not necessary conditions"] C
+			where First(C.code.coding).code.value = '40283005'
+		) then SnomedAnswer('40283005','Recurrent superficial thrombophlebitis') else null,
+
+		if not exists([Condition: "VeinAblation not necessary conditions"])
+			then DisplayAnswer('No contraindications') else null
+	}) Answer
+		where Answer is not null
 
 define ConservativeTreatments:
 	if (First([Procedure]P
