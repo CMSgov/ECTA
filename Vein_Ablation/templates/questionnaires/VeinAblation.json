@@ -36,16 +36,14 @@
                   "question": "1",
                   "operator": "=",
                   "answerCoding": {
-                    "code": "Expedited Initial",
-                    "display": "Expedited Initial"
+                        "display": "Expedited Initial"
                   }
                 },
                 {
                   "question": "1",
                   "operator": "=",
                   "answerCoding": {
-                    "code": "Expedited Resbumission",
-                    "display": "Expedited Resbumission"
+                         "display": "Expedited Resubmission"
                   }
                 }
               ],
@@ -75,26 +73,23 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "Initial",
-                "display": "Initial"
+                    "display": "Initial"
               }
             },
             {
               "valueCoding": {
-                "code": "Resubmission",
-                "display": "Resubmission"
+                     "display": "Resubmission"
               }
             },
             {
               "valueCoding": {
-                "code": "Expedited Initial",
+              
                 "display": "Expedited Initial"
               }
             },
             {
               "valueCoding": {
-                "code": "Expedited Resbumission",
-                "display": "Expedited Resbumission"
+                "display": "Expedited Resubmission"
               }
             }
           ]
@@ -585,8 +580,7 @@
                   "question": "2.3",
                   "operator": "=",
                   "answerCoding": {
-                    "code": "Y",
-                    "display": "Yes, scan results are positive for reflux"
+                      "display": "Yes, scan results are positive for reflux"
                   }
                 }
               ],
@@ -594,19 +588,16 @@
               "answerOption": [
                 {
                   "valueCoding": {
-                    "code": "Y",
                     "display": "Yes, reflux time >= 500 msec"
                   }
                 },
                 {
                   "valueCoding": {
-                    "code": "N",
                     "display": "No, reflux time < 500 msec or absent"
                   }
                 },
                 {
                   "valueCoding": {
-                    "code": "NA",
                     "display": "NA - Not required by LCD"
                   }
                 }
@@ -634,20 +625,17 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "Y",
-                "display": "Yes, scan results are positive for reflux"
+                   "display": "Yes, scan results are positive for reflux"
               }
             },
             {
               "valueCoding": {
-                "code": "N",
-                "display": "No, scan results absent, negative, or inadequate to support reflux requirement"
+                     "display": "No, scan results absent, negative, or inadequate to support reflux requirement"
               }
             },
             {
               "valueCoding": {
-                "code": "NA",
-                "display": "NA - Not required by LCD"
+                     "display": "NA - Not required by LCD"
               }
             }
           ]
@@ -663,7 +651,7 @@
                   "question": "2.4",
                   "operator": "=",
                   "answerCoding": {
-                    "code": "Y"
+                     "display": "Yes"
                   }
                 }
               ],
@@ -691,19 +679,16 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "Y",
                 "display": "Yes"
               }
             },
             {
               "valueCoding": {
-                "code": "N",
                 "display": "No"
               }
             },
             {
               "valueCoding": {
-                "code": "NA",
                 "display": "NA - Not required by LCD"
               }
             }
@@ -720,7 +705,6 @@
                   "question": "2.5",
                   "operator": "=",
                   "answerCoding": {
-                    "code": "Y",
                     "display": "Yes"
                   }
                 }
@@ -749,19 +733,16 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "Y",
                 "display": "Yes"
               }
             },
             {
               "valueCoding": {
-                "code": "N",
                 "display": "No"
               }
             },
             {
               "valueCoding": {
-                "code": "NA",
                 "display": "N/A if not required"
               }
             }
@@ -789,91 +770,91 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "C0",
+              
                 "display": "C0 - No visible or palpable signs of venous disease"
               }
             },
             {
               "valueCoding": {
-                "code": "C1",
+              
                 "display": "C1 - Telangiectasias, reticular veins"
               }
             },
             {
               "valueCoding": {
-                "code": "C2",
+              
                 "display": "C2 - Varicose veins"
               }
             },
             {
               "valueCoding": {
-                "code": "C2r",
+             
                 "display": "C2r - Recurrent varicose veins"
               }
             },
             {
               "valueCoding": {
-                "code": "C3",
+                
                 "display": "C3 - Edema"
               }
             },
             {
               "valueCoding": {
-                "code": "C4",
+                
                 "display": "C4 - Changes in skin and subcutaneous tissue"
               }
             },
             {
               "valueCoding": {
-                "code": "C4a",
+                
                 "display": "C4a - Pigmentation or eczema"
               }
             },
             {
               "valueCoding": {
-                "code": "C4b",
+                
                 "display": "C4b - Lipodermatosclerosis or atrophie blanche"
               }
             },
             {
               "valueCoding": {
-                "code": "C4c",
+                
                 "display": "C4c - Corona phlebectatica"
               }
             },
             {
               "valueCoding": {
-                "code": "C5",
+                
                 "display": "C5 - Healed"
               }
             },
             {
               "valueCoding": {
-                "code": "C6",
+                
                 "display": "C6 - Active venous ulcer"
               }
             },
             {
               "valueCoding": {
-                "code": "C6r",
+                
                 "display": "C6r - Recurrent active venous ulcer"
               }
             },
             {
               "valueCoding": {
-                "code": "S",
+                
                 "display": "S - With symptoms attributable to venous disease"
               }
             },
             {
               "valueCoding": {
-                "code": "A",
+                
                 "display": "A - Absence of symptoms attributable to venous disease"
               }
             },
             {
               "valueCoding": {
-                "code": "NA",
+                
                 "display": "NA - Not required by LCD"
               }
             }
@@ -901,13 +882,13 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "Y",
+              
                 "display": "Yes (both clinical documentation and reflux requirement found)"
               }
             },
             {
               "valueCoding": {
-                "code": "N",
+             
                 "display": "No, either clinical documentation and/or reflux documentation are missing"
               }
             }
@@ -945,7 +926,7 @@
                   "question": "2.8",
                   "operator": "=",
                   "answerCoding": {
-                    "code": "pain-edema"
+                    "display": "Evidence of significant lower extremity pain and edema secondary to documented venous insufficiency. The symptoms interfere with activities of daily living."
                   }
                 }
               ],
@@ -953,13 +934,13 @@
               "answerOption": [
                 {
                   "valueCoding": {
-                    "code": "absence",
+                
                     "display": "Absence of other causes"
                   }
                 },
                 {
                   "valueCoding": {
-                    "code": "presence",
+                   
                     "display": "Presence of other causes"
                   }
                 }
@@ -1002,8 +983,7 @@
             },
             {
               "valueCoding": {
-                "code": "pain-edema",
-                "display": "Evidence of significant lower extremity pain and edema secondary to documented venous insufficiency. The symptoms interfere with activities of daily living."
+                  "display": "Evidence of significant lower extremity pain and edema secondary to documented venous insufficiency. The symptoms interfere with activities of daily living."
               }
             },
             {
@@ -1022,20 +1002,17 @@
             },
             {
               "valueCoding": {
-                "code": "refractory-edema",
-                "display": "Refractory dependent edema"
+                  "display": "Refractory dependent edema"
               }
             },
             {
               "valueCoding": {
-                "code": "bleeding-diseased-lower-vessels",
-                "display": "Bleeding from diseased vessels of the lower extremities"
+                   "display": "Bleeding from diseased vessels of the lower extremities"
               }
             },
             {
               "valueCoding": {
-                "code": "bleeding-ruptured-varicosity",
-                "display": "Bleeding associated with ruptured superficial varicosity"
+                   "display": "Bleeding associated with ruptured superficial varicosity"
               }
             }
           ]
@@ -1075,8 +1052,7 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "N",
-                "display": " No contraindications"
+                 "display": "No contraindications"
               }
             },
             {
@@ -1116,8 +1092,7 @@
             },
             {
               "valueCoding": {
-                "code": "NA",
-                "display": "NA - Not required by LCD"
+               "display": "NA - Not required by LCD"
               }
             }
           ]
@@ -1144,19 +1119,19 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "Y",
+              
                 "display": "Yes"
               }
             },
             {
               "valueCoding": {
-                "code": "N",
+               
                 "display": "No"
               }
             },
             {
               "valueCoding": {
-                "code": "NA",
+               
                 "display": "NA - Not required by LCD"
               }
             }
@@ -1211,19 +1186,18 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "Y",
-                "display": "Yes, diameter <= 12 mm"
+                 "display": "Yes, diameter <= 12 mm"
               }
             },
             {
               "valueCoding": {
-                "code": "N",
+              
                 "display": "No, diameter > 12 mm"
               }
             },
             {
               "valueCoding": {
-                "code": "NA",
+                
                 "display": "NA - Not required by LCD"
               }
             }
@@ -1272,19 +1246,19 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "Y",
+              
                 "display": "Yes, diameter <= 12 mm"
               }
             },
             {
               "valueCoding": {
-                "code": "N",
+              
                 "display": "No, diameter > 12 mm"
               }
             },
             {
               "valueCoding": {
-                "code": "NA",
+               
                 "display": "NA - Not required by LCD"
               }
             }
@@ -1333,19 +1307,19 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "Y",
+               
                 "display": "Yes, diameter <= 20 mm"
               }
             },
             {
               "valueCoding": {
-                "code": "N",
+              
                 "display": "No, diameter > 20 mm"
               }
             },
             {
               "valueCoding": {
-                "code": "NA",
+               
                 "display": "NA - Not required by LCD"
               }
             }
@@ -1394,19 +1368,19 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "Y",
+              
                 "display": "Yes, diameter <= 30 mm"
               }
             },
             {
               "valueCoding": {
-                "code": "N",
+               
                 "display": "No, diameter > 30 mm"
               }
             },
             {
               "valueCoding": {
-                "code": "NA",
+               
                 "display": "NA - Not required by LCD"
               }
             }
@@ -1455,19 +1429,19 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "Y",
+             
                 "display": "Yes, diameter <= 20 mm"
               }
             },
             {
               "valueCoding": {
-                "code": "N",
+               
                 "display": "No, diameter > 20 mm"
               }
             },
             {
               "valueCoding": {
-                "code": "NA",
+               
                 "display": "NA - Not required by LCD"
               }
             }
@@ -1516,19 +1490,19 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "Y",
+           
                 "display": "Yes, diameter <= 12 mm"
               }
             },
             {
               "valueCoding": {
-                "code": "N",
+               
                 "display": "No, diameter > 12 mm"
               }
             },
             {
               "valueCoding": {
-                "code": "NA",
+              
                 "display": "NA - Not required by LCD"
               }
             }
@@ -1556,19 +1530,19 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "Y",
+              
                 "display": "Yes, meets LCD guidance"
               }
             },
             {
               "valueCoding": {
-                "code": "N",
+              
                 "display": "No, does not meet LCD guidance"
               }
             },
             {
               "valueCoding": {
-                "code": "NA",
+               
                 "display": "NA - Not required by LCD"
               }
             }
@@ -1597,7 +1571,7 @@
               "question": "2.19",
               "operator": "=",
               "answerCoding": {
-                "code": "NA"
+               "display": "NA - Not required by LCD"
               }
             },
             {
@@ -1688,13 +1662,13 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "trial-period",
+              
                 "display": "Minimum trial period documented if applicable"
               }
             },
             {
               "valueCoding": {
-                "code": "attempted-treatment",
+              
                 "display": "Evidence beneficiary tried recommended treatments"
               }
             },
