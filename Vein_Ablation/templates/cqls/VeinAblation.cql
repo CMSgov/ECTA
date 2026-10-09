@@ -200,7 +200,7 @@ define NonVeinAblationConditions:
 
 		if exists([Condition: "VeinAblation not necessary conditions"] C
 			where First(C.code.coding).code.value = '267043001'
-		) then SnomedAnswer('267043001',Vein tortuosity that would prevent catheter advancement') else null,
+		) then SnomedAnswer('267043001','Vein tortuosity that would prevent catheter advancement') else null,
 
 		if exists([Condition: "VeinAblation not necessary conditions"] C
 			where First(C.code.coding).code.value = '724440007'
