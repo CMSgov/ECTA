@@ -52,25 +52,25 @@
             "answerOption": [
                 {
                     "valueCoding": {
-                        "code": "I",
+                     
                         "display": "Initial"
                     }
                 },
                 {
                     "valueCoding": {
-                        "code": "R",
+                     
                         "display": "Resubmission"
                     }
                 },
                 {
                     "valueCoding": {
-                        "code": "EI",
+                       
                         "display": "Expedited Initial"
                     }
                 },
                 {
                     "valueCoding": {
-                        "code": "ER",
+                      
                         "display": "Expedited Resubmission"
                     }
                 }
@@ -213,31 +213,31 @@
                     "answerOption": [
                         {
                             "valueCoding": {
-                                "code": "chronic-dermatitis",
+                              
                                 "display": "Chronic dermatitis due to blepharochalasis from severe allergies or thyroid disease"
                             }
                         },
                         {
                             "valueCoding": {
-                                "code": "eyelid-irritation",
+                               
                                 "display": "Debilitating eyelid irritation"
                             }
                         },
                         {
                             "valueCoding": {
-                                "code": "difficulty-fitting-prosthesis",
+                           
                                 "display": "Difficulty fitting or wearing a prosthesis when associated with an anophthalmic, microphthalmic, or enophthalmic socket"
                             }
                         },
                         {
                             "valueCoding": {
-                                "code": "interference-with-vision",
+                             
                                 "display": "Interference with vision or visual field that impacts an activity of daily living (such as difficulty reading or driving), looking through the eyelashes, seeing the upper eyelid skin, or brow fatigue"
                             }
                         },
                         {
                             "valueCoding": {
-                                "code": "difficulty-fitting-spectacles",
+                               
                                 "display": "Significant/extreme difficulty fitting spectacles due to excessive eyelid tissue"
                             }
                         }
@@ -1728,37 +1728,37 @@
                     "answerOption": [
                     {
                       "valueCoding": {
-                        "code": "MRDLessThan2",
+                        
                         "display": "Less than or equal to 2.0 mm"
                       }
                     },
                     {
                       "valueCoding": {
-                        "code": "MRDLessThan2.5",
+                      
                         "display": "Less than or equal to 2.5 mm"
                       }
                     },
                     {
                       "valueCoding": {
-                        "code": "MRDGreaterThan2",
+                       
                         "display": "Greater than 2.0 mm"
                       }
                     },
                     {
                       "valueCoding": {
-                        "code": "MRDGreaterThan2.5",
+                     
                         "display": "Greater than 2.5 mm"
                       }
                     },
                     {
                       "valueCoding": {
-                        "code": "TrueMRDLessThan2",
+                       
                         "display": "True MRD less than or equal to 2.0 mm"
                       }
                     },
                     {
                       "valueCoding": {
-                        "code": "NA",
+                        
                         "display": "NA – Not required by LCD"
                       }
                     }
@@ -1786,61 +1786,61 @@
                     "answerOption": [
                       {
                         "valueCoding": {
-                          "code": "24-30PercentOrGreaterLossUpperField",
+                         
                           "display": "Demonstrates 24 percent to 30 percent or greater loss of upper field of vision/superior visual field. (Untaped)"
                         }
                       },
                       {
                         "valueCoding": {
-                          "code": "30PercentOrGreaterLossUpperField",
+                         
                           "display": "Demonstrates 30 percent or greater loss of upper field of vision/superior visual field. (Untaped)"
                         }
                       },
                       {
                         "valueCoding": {
-                          "code": "12DegreesOrGreaterLossUpperField",
+                        
                           "display": "Demontrates 12 degrees or greater loss of upper filed of vision/superior visual field (Untaped)"
                         }
                       },
                       {
                         "valueCoding": {
-                          "code": "12-15DegreesOrlessRemainingSuperiorField",
+                        
                           "display": "Demonstrates 12 degrees to 15 degrees or less remaining in the superior field. (Untaped)"
                         }
                       },
                       {
                         "valueCoding": {
-                          "code": "significantFieldRestriction30DegreesOrLess",
+                         
                           "display": "Demonstrates a visually significant field restriction of 30 degrees or less from fixation"
                         }
                       },
                       {
                         "valueCoding": {
-                          "code": "RedundantEyelidObscuresLOS",
+                        
                           "display": "Redundant eyelid tissue predominantly medially or laterally that clearly obscures the line of sight in corresponding gaze."
                         }
                       },
                       {
                         "valueCoding": {
-                          "code": "12DegreesOrMoreImprovemntSuperiorField",
+                         
                           "display": "Demonstrates improvement of 12 degrees or more in the superior field after taping."
                         }
                       },
                       {
                         "valueCoding": {
-                          "code": "30PercentOrGreaterImprovemntSuperiorField",
+                          
                           "display": "Demonstrates 30 percent or greater improvement in the superior field after taping."
                         }
                       },
                       {
                         "valueCoding": {
-                          "code": "other",
+                         
                           "display": "Other"
                         }
                       },
                       {
                         "valueCoding": {
-                          "code": "NA",
+                       
                           "display": "NA – Not required by LCD"
                         }
                       }
@@ -1868,7 +1868,9 @@
                         {
                             "question": "2.4",
                             "operator": "=",
-                            "answerString": "Other"
+                            "answerCoding": {
+                             "display": "Other"
+                             }
                         }
                     ]
                 },
@@ -1901,43 +1903,43 @@
                     "answerOption": [
                       {
                         "valueCoding": {
-                          "code": "CHRONIC_DERMATITIS_BLEPHAROCHALASIS",
+                       
                           "display": "Chronic dermatitis due to blepharochalasis"
                         }
                       },
                       {
                         "valueCoding": {
-                          "code": "DEBILITATING_EYELID_IRRITATION_PAIN",
+                        
                           "display": "Debilitating eyelid irritation/pain"
                         }
                       },
                       {
                         "valueCoding": {
-                          "code": "DIFFICULTY_READING",
+                         
                           "display": "Difficulty reading"
                         }
                       },
                       {
                         "valueCoding": {
-                          "code": "DIFFICULTY_SEEING_OVERHEAD_SIGNS",
+                         
                           "display": "Difficulty seeing top lines, overhead signs"
                         }
                       },
                       {
                         "valueCoding": {
-                          "code": "INTERFERES_WITH_OCULAR_PROSTHESIS",
+                         
                           "display": "Excessive tissue interferes with ocular prosthesis"
                         }
                       },
                       {
                         "valueCoding": {
-                          "code": "INTERFERES_WITH_SPECTACLES",
+                          
                           "display": "Excessive tissue interferes with spectacles fitting"
                         }
                       },
                       {
                         "valueCoding": {
-                          "code": "INTERFERES_WITH_ADL",
+                          
                           "display": "Interferes with activities of daily living"
                         }
                       }
@@ -1972,25 +1974,25 @@
                     "answerOption": [
                       {
                         "valueCoding": {
-                          "code": "TOPICAL_MEDICATIONS",
+                     
                           "display": "Topical medications"
                         }
                       },
                       {
                         "valueCoding": {
-                          "code": "ALLERGY_CONTROL",
+                        
                           "display": "Allergy control"
                         }
                       },
                       {
                         "valueCoding": {
-                          "code": "THYROID_TREATMENT",
+                          
                           "display": "Thyroid treatment"
                         }
                       },
                       {
                         "valueCoding": {
-                          "code": "NA",
+                        
                           "display": "NA"
                         }
                       }
@@ -2027,7 +2029,7 @@
                             "question": "2.1",
                             "operator": "!=",
                             "answerCoding": {
-                                "code": "difficulty-fitting-prosthesis",
+                             
                                 "display": "Difficulty fitting or wearing a prosthesis when associated with an anophthalmic, microphthalmic, or enophthalmic socket"
                             }
                         },
@@ -2035,7 +2037,7 @@
                             "question": "2.1",
                             "operator": "!=",
                             "answerCoding": {
-                                "code": "difficulty-fitting-spectacles",
+                              
                                 "display": "Significant/extreme difficulty fitting spectacles due to excessive eyelid tissue"
                             }
                         }
@@ -2044,43 +2046,43 @@
                     "answerOption": [
                       {
                       "valueCoding": {
-                        "code": "UPPER_EYELID_HEAVINESS",
+                     
                         "display": "Heaviness in upper eyelids"
                       }
                     },
                     {
                       "valueCoding": {
-                        "code": "INTERFERES_WITH_ADL",
+                      
                         "display": "Condition interferes with activities of daily living"
                       }
                     },
                     {
                       "valueCoding": {
-                        "code": "DIFFICULTY_DRIVING_VEHICLE",
+                      
                         "display": "Difficulties driving vehicle (Trouble seeing traffic lights or overhead road signs)"
                       }
                     },
                     {
                       "valueCoding": {
-                        "code": "DIFFICULTY_READING_OR_COMPUTER_WORK",
+                      
                         "display": "Difficulties reading (can’t see top lines of text) or Difficulties performing computer work"
                       }
                     },
                     {
                       "valueCoding": {
-                        "code": "DIFFICULTIES_AT_WORK_VISUAL_LIMITATIONS",
+                     
                         "display": "Difficulties at work due to visual limitations"
                       }
                     },
                     {
                       "valueCoding": {
-                        "code": "HITTING_HEAD_DUE_TO_VISUAL_FIELD_LOSS",
+                
                         "display": "Hitting head on objects due to tissue altering upper field of vision"
                       }
                     },
                     {
                       "valueCoding": {
-                        "code": "DEBILITATING_EYELID_IRRITATION_PAIN",
+                      
                         "display": "Debilitating eyelid irritation/pain"
                       }
                     }
@@ -2117,7 +2119,7 @@
                             "question": "2.1",
                             "operator": "=",
                             "answerCoding": {
-                                "code": "difficulty-fitting-prosthesis",
+                               
                                 "display": "Difficulty fitting or wearing a prosthesis when associated with an anophthalmic, microphthalmic, or enophthalmic socket"
                             }
                         }
@@ -2125,67 +2127,67 @@
                     "answerOption": [
                       {
                       "valueCoding": {
-                        "code": "UPPER_EYELID_HEAVINESS",
+                     
                         "display": "Heaviness in upper eyelids"
                       }
                     },
                     {
                       "valueCoding": {
-                        "code": "INTERFERES_WITH_ADL",
+                       
                         "display": "Condition interferes with activities of daily living"
                       }
                     },
                     {
                       "valueCoding": {
-                        "code": "DIFFICULTY_DRIVING_VEHICLE",
+                       
                         "display": "Difficulties driving vehicle (Trouble seeing traffic lights or overhead road signs)"
                       }
                     },
                     {
                       "valueCoding": {
-                        "code": "DIFFICULTY_READING_OR_COMPUTER_WORK",
+                    
                         "display": "Difficulties reading (can’t see top lines of text) or Difficulties performing computer work"
                       }
                     },
                     {
                       "valueCoding": {
-                        "code": "DIFFICULTIES_AT_WORK_VISUAL_LIMITATIONS",
+                      
                         "display": "Difficulties at work due to visual limitations"
                       }
                     },
                     {
                       "valueCoding": {
-                        "code": "HITTING_HEAD_DUE_TO_VISUAL_FIELD_LOSS",
+                     
                         "display": "Hitting head on objects due to tissue altering upper field of vision"
                       }
                     },
                     {
                       "valueCoding": {
-                        "code": "DEBILITATING_EYELID_IRRITATION_PAIN",
+                      
                         "display": "Debilitating eyelid irritation/pain"
                       }
                     },
                     {
                       "valueCoding": {
-                        "code": "PROSTHESIS_WONT_STAY_IN_PLACE",
+                    
                         "display": "Prosthesis won't stay in place due to eyelid tissue"
                       }
                     },
                     {
                       "valueCoding": {
-                        "code": "CANNOT_FIT_PROSTHESIS_DUE_TO_EYELID_ANATOMY",
+                     
                         "display": "Cannot properly fit the prosthesis because eyelid anatomy is preventing proper insertion"
                       }
                     },
                     {
                       "valueCoding": {
-                        "code": "PROSTHESIS_IRRITATION_OR_DISPLACEMENT",
+                        
                         "display": "Eyelid tissue is causing irritation or displacement of the prosthesis"
                       }
                     },
                     {
                       "valueCoding": {
-                        "code": "SURGEON_RECOMMENDS_BLEPHAROPLASTY_FOR_PROSTHESIS",
+                     
                         "display": "Statement from the ophthalmologist/oculoplastic surgeon recommending blepharoplasty to improve prosthesis function"
                       }
                     }
@@ -2222,7 +2224,7 @@
                             "question": "2.1",
                             "operator": "=",
                             "answerCoding": {
-                                "code": "difficulty-fitting-spectacles",
+                              
                                 "display": "Significant/extreme difficulty fitting spectacles due to excessive eyelid tissue"
                             }
                         }
@@ -2230,73 +2232,73 @@
                     "answerOption": [
                     {
                       "valueCoding": {
-                        "code": "UPPER_EYELID_HEAVINESS",
+                    
                         "display": "Heaviness in upper eyelids"
                       }
                     },
                     {
                       "valueCoding": {
-                        "code": "INTERFERES_WITH_ADL",
+                       
                         "display": "Condition interferes with activities of daily living"
                       }
                     },
                     {
                       "valueCoding": {
-                        "code": "DIFFICULTY_DRIVING_VEHICLE",
+                   
                         "display": "Difficulties driving vehicle (Trouble seeing traffic lights or overhead road signs)"
                       }
                     },
                     {
                       "valueCoding": {
-                        "code": "DIFFICULTY_READING_OR_COMPUTER_WORK",
+                       
                         "display": "Difficulties reading (can’t see top lines of text) or Difficulties performing computer work"
                       }
                     },
                     {
                       "valueCoding": {
-                        "code": "DIFFICULTIES_AT_WORK_VISUAL_LIMITATIONS",
+                      
                         "display": "Difficulties at work due to visual limitations"
                       }
                     },
                     {
                       "valueCoding": {
-                        "code": "HITTING_HEAD_DUE_TO_VISUAL_FIELD_LOSS",
+                     
                         "display": "Hitting head on objects due to tissue altering upper field of vision"
                       }
                     },
                     {
                       "valueCoding": {
-                        "code": "DEBILITATING_EYELID_IRRITATION_PAIN",
+                     
                         "display": "Debilitating eyelid irritation/pain"
                       }
                     },
                     {
                       "valueCoding": {
-                        "code": "SPECTACLES_WONT_STAY_IN_PLACE",
+                     
                         "display": "Spectacles won't stay in place due to eyelid tissue"
                       }
                     },
                     {
                       "valueCoding": {
-                        "code": "SPECTACLES_IRRITATION_OR_DISPLACEMENT",
+                      
                         "display": "Eyelid tissue is causing irritation or displacement of the spectacles"
                       }
                     },
                     {
                       "valueCoding": {
-                        "code": "FUNCTIONAL_IMPAIRMENT_DUE_TO_INABILITY_TO_WEAR_GLASSES",
+                      
                         "display": "Evidence that the inability to wear glasses is causing functional impairment (can't read, can't drive safely, can't perform job duties, etc.)"
                       }
                     },
                     {
                       "valueCoding": {
-                        "code": "OPTICIAN_STATEMENT_UNABLE_TO_FIT_GLASSES",
+                    
                         "display": "Optician's statement confirming inability to properly fit glasses due to eyelid anatomy"
                       }
                     },
                     {
                       "valueCoding": {
-                        "code": "REQUIRES_PRESCRIPTION_EYEWEAR",
+                       
                         "display": "Documentation that the patient requires prescription eyewear (not just cosmetic preference)"
                       }
                     }
@@ -2324,19 +2326,19 @@
                     "answerOption": [
                       {
                         "valueCoding": {
-                          "code": "YES",
+                          
                           "display": "Yes, required by LCD"
                         }
                       },
                       {
                         "valueCoding": {
-                          "code": "NO",
+                     
                           "display": "No"
                         }
                       },
                       {
                         "valueCoding": {
-                          "code": "NA",
+                        
                           "display": "NA – not required by LCD"
                         }
                       }

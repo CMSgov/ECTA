@@ -54,6 +54,11 @@ parameter "QuestionnaireResponse" QuestionnaireResponse
 
 context Patient
 
+define function DisplayAnswer(label String):
+	FHIR.Coding {
+		display: FHIR.string { value: label }
+	}
+
 define Request:
 	"ServiceRequest"
 
@@ -66,7 +71,7 @@ define "ServiceRequestCode":
 define BlepharoplastyEncounter:
 	First([Encounter]E where 'Encounter/' + E.id.value = "BlepharoplastyRequest".encounter.reference.value)
 
-define PresentingConditionOrChiefComplaint:
+define PresentingConditionOrChiefComplaintCodes:
 	{
 		(
 			if (
@@ -126,6 +131,26 @@ define PresentingConditionOrChiefComplaint:
 		) 
   	}
 
+define PresentingConditionOrChiefComplaint:
+	({
+		if 'chronic-dermatitis' in PresentingConditionOrChiefComplaintCodes
+			then DisplayAnswer('Chronic dermatitis due to blepharochalasis from severe allergies or thyroid disease')
+			else null,
+		if 'eyelid-irritation' in PresentingConditionOrChiefComplaintCodes
+			then DisplayAnswer('Debilitating eyelid irritation')
+			else null,
+		if 'difficulty-fitting-prosthesis' in PresentingConditionOrChiefComplaintCodes
+			then DisplayAnswer('Difficulty fitting or wearing a prosthesis when associated with an anophthalmic, microphthalmic, or enophthalmic socket')
+			else null,
+		if 'interference-with-vision' in PresentingConditionOrChiefComplaintCodes
+			then DisplayAnswer('Interference with vision or visual field that impacts an activity of daily living (such as difficulty reading or driving), looking through the eyelashes, seeing the upper eyelid skin, or brow fatigue')
+			else null,
+		if 'difficulty-fitting-spectacles' in PresentingConditionOrChiefComplaintCodes
+			then DisplayAnswer('Significant/extreme difficulty fitting spectacles due to excessive eyelid tissue')
+			else null
+	}) Answer
+		where Answer is not null
+
 define PrimaryDiagnosisFor15820and15821:
 	if (ServiceRequestCode.code = '15820' or ServiceRequestCode.code = '15821') then FHIRHelpers.ToCode(First(First([Condition]C
 		 where FHIRHelpers.ToCode(First(C.code.coding)) in "PrimaryConditionsFor15820and15821").code.coding))
@@ -141,7 +166,7 @@ define AdditionalDiagnosisForOther:
 		 where FHIRHelpers.ToCode(First(C.code.coding)) in "PrimaryConditionsFor15820and15821").code.coding))
 	else null
 
-define ProviderObjectiveSymptoms:
+define ProviderObjectiveSymptomsCodes:
 	{
 		(
 			if (
@@ -166,6 +191,11 @@ define ProviderObjectiveSymptoms:
 			 ) then 'DIFFICULTY_READING'
 			else ''
 		), 
+		(
+			if First([Observation]O where FHIRHelpers.ToCode(First(O.code.coding)) in "VisualFieldDefectObservations") is not null
+				then 'DIFFICULTY_SEEING_OVERHEAD_SIGNS'
+			else ''
+		),
 		( 	
 			if ( 
 				First([Observation]O where (FHIRHelpers.ToCode(First(O.code.coding)) in "ExcessSkinOfEyelidObservations")) is not null and 
@@ -202,33 +232,52 @@ define ProviderObjectiveSymptoms:
 			)	then 'INTERFERES_WITH_ADL'
 			else ''
 		) 
-  	}
+	  	}
+
+define ProviderObjectiveSymptoms:
+	({
+		if 'CHRONIC_DERMATITIS_BLEPHAROCHALASIS' in ProviderObjectiveSymptomsCodes
+			then DisplayAnswer('Chronic dermatitis due to blepharochalasis')
+			else null,
+		if 'DEBILITATING_EYELID_IRRITATION_PAIN' in ProviderObjectiveSymptomsCodes
+			then DisplayAnswer('Debilitating eyelid irritation/pain')
+			else null,
+		if 'DIFFICULTY_READING' in ProviderObjectiveSymptomsCodes
+			then DisplayAnswer('Difficulty reading')
+			else null,
+		if 'DIFFICULTY_SEEING_OVERHEAD_SIGNS' in ProviderObjectiveSymptomsCodes
+			then DisplayAnswer('Difficulty seeing top lines, overhead signs')
+			else null,
+		if 'INTERFERES_WITH_OCULAR_PROSTHESIS' in ProviderObjectiveSymptomsCodes
+			then DisplayAnswer('Excessive tissue interferes with ocular prosthesis')
+			else null,
+		if 'INTERFERES_WITH_SPECTACLES' in ProviderObjectiveSymptomsCodes
+			then DisplayAnswer('Excessive tissue interferes with spectacles fitting')
+			else null,
+		if 'INTERFERES_WITH_ADL' in ProviderObjectiveSymptomsCodes
+			then DisplayAnswer('Interferes with activities of daily living')
+			else null
+	}) Answer
+		where Answer is not null
 
 define FailedConservativeTreatments:
-	{
-		(
-			if (
-				First([Procedure]P where (FHIRHelpers.ToCode(First(P.code.coding)) in "SteroidTherapyProcedures" and 
-					First(P.complication.coding).code = '6064005' and 
-					First(P.bodySite.coding).code = '80243003'
-				)) is not null
-			) then 'TOPICAL_MEDICATIONS'
-			else ''
-		), 
-		( 
-			if ( 'chronic-dermatitis' in PresentingConditionOrChiefComplaint) then 'ALLERGY_CONTROL'
-			else ''
-		), 
-		(
-			if ( 
-				'chronic-dermatitis' in PresentingConditionOrChiefComplaint or
-				First([Medication]M where FHIRHelpers.ToCode(First(M.code.coding)) in ThyroidMedications) is not null
-			 ) then 'THYROID_TREATMENT'
-			else ''
-		)
-	}
+	({
+		if First([Procedure]P where FHIRHelpers.ToCode(First(P.code.coding)) in "SteroidTherapyProcedures"
+			and First(P.complication.coding).code = '6064005'
+			and First(P.bodySite.coding).code = '80243003') is not null
+			then DisplayAnswer('Topical medications')
+			else null,
+		if 'chronic-dermatitis' in PresentingConditionOrChiefComplaintCodes
+			then DisplayAnswer('Allergy control')
+			else null,
+		if 'chronic-dermatitis' in PresentingConditionOrChiefComplaintCodes
+			or First([Medication]M where FHIRHelpers.ToCode(First(M.code.coding)) in ThyroidMedications) is not null
+			then DisplayAnswer('Thyroid treatment')
+			else null
+	}) Answer
+		where Answer is not null
 
-define BeneficiaryReportedSymptoms:
+define BeneficiaryReportedSymptomsCodes:
 	{
 		(
 			if (
@@ -276,7 +325,27 @@ define BeneficiaryReportedSymptoms:
 		)
 	}
 
-define BeneficiaryReportedSymptomsC:
+define BeneficiaryReportedSymptoms:
+	({
+		if 'UPPER_EYELID_HEAVINESS' in BeneficiaryReportedSymptomsCodes
+			then DisplayAnswer('Heaviness in upper eyelids')
+			else null,
+		if 'INTERFERES_WITH_ADL' in BeneficiaryReportedSymptomsCodes
+			then DisplayAnswer('Condition interferes with activities of daily living')
+			else null,
+		if 'DIFFICULTY_READING_OR_COMPUTER_WORK' in BeneficiaryReportedSymptomsCodes
+			then DisplayAnswer('Difficulties reading (can’t see top lines of text) or Difficulties performing computer work')
+			else null,
+		if 'DIFFICULTIES_AT_WORK_VISUAL_LIMITATIONS' in BeneficiaryReportedSymptomsCodes
+			then DisplayAnswer('Difficulties at work due to visual limitations')
+			else null,
+		if 'DEBILITATING_EYELID_IRRITATION_PAIN' in BeneficiaryReportedSymptomsCodes
+			then DisplayAnswer('Debilitating eyelid irritation/pain')
+			else null
+	}) Answer
+		where Answer is not null
+
+define BeneficiaryReportedSymptomsCCodes:
 	{
 		(
 			if (
@@ -371,19 +440,48 @@ define BeneficiaryReportedSymptomsC:
 			else ''
 		),
 		( 
-			if ( 'chronic-dermatitis' in PresentingConditionOrChiefComplaint) then 'ALLERGY_CONTROL'
+			if ( 'chronic-dermatitis' in PresentingConditionOrChiefComplaintCodes) then 'ALLERGY_CONTROL'
 			else ''
 		), 
 		(
 			if ( 
-				'chronic-dermatitis' in PresentingConditionOrChiefComplaint or
+				'chronic-dermatitis' in PresentingConditionOrChiefComplaintCodes or
 				First([Medication]M where FHIRHelpers.ToCode(First(M.code.coding)) in "ThyroidMedications") is not null
 			 ) then 'THYROID_TREATMENT'
 			else ''
 		)
 	}
 
-	define BeneficiaryReportedSymptomsE:
+	define BeneficiaryReportedSymptomsC:
+	({
+		if 'UPPER_EYELID_HEAVINESS' in BeneficiaryReportedSymptomsCCodes
+			then DisplayAnswer('Heaviness in upper eyelids')
+			else null,
+		if 'INTERFERES_WITH_ADL' in BeneficiaryReportedSymptomsCCodes
+			then DisplayAnswer('Condition interferes with activities of daily living')
+			else null,
+		if 'DIFFICULTY_READING_OR_COMPUTER_WORK' in BeneficiaryReportedSymptomsCCodes
+			then DisplayAnswer('Difficulties reading (can’t see top lines of text) or Difficulties performing computer work')
+			else null,
+		if 'DIFFICULTIES_AT_WORK_VISUAL_LIMITATIONS' in BeneficiaryReportedSymptomsCCodes
+			then DisplayAnswer('Difficulties at work due to visual limitations')
+			else null,
+		if 'DEBILITATING_EYELID_IRRITATION_PAIN' in BeneficiaryReportedSymptomsCCodes
+			then DisplayAnswer('Debilitating eyelid irritation/pain')
+			else null,
+		if 'PROSTHESIS_WONT_STAY_IN_PLACE' in BeneficiaryReportedSymptomsCCodes
+			then DisplayAnswer('Prosthesis won''t stay in place due to eyelid tissue')
+			else null,
+		if 'CANNOT_FIT_PROSTHESIS_DUE_TO_EYELID_ANATOMY' in BeneficiaryReportedSymptomsCCodes
+			then DisplayAnswer('Cannot properly fit the prosthesis because eyelid anatomy is preventing proper insertion')
+			else null,
+		if 'PROSTHESIS_IRRITATION_OR_DISPLACEMENT' in BeneficiaryReportedSymptomsCCodes
+			then DisplayAnswer('Eyelid tissue is causing irritation or displacement of the prosthesis')
+			else null
+	}) Answer
+		where Answer is not null
+
+	define BeneficiaryReportedSymptomsECodes:
 		{
 		(
 			if (
@@ -451,14 +549,43 @@ define BeneficiaryReportedSymptomsC:
 			else ''
 		),
 		( 
-			if ( 'chronic-dermatitis' in PresentingConditionOrChiefComplaint) then 'ALLERGY_CONTROL'
+			if ( 'chronic-dermatitis' in PresentingConditionOrChiefComplaintCodes) then 'ALLERGY_CONTROL'
 			else ''
 		), 
 		(
 			if ( 
-				'chronic-dermatitis' in PresentingConditionOrChiefComplaint or
+				'chronic-dermatitis' in PresentingConditionOrChiefComplaintCodes or
 				First([Medication]M where FHIRHelpers.ToCode(First(M.code.coding)) in "ThyroidMedications") is not null
 			 ) then 'THYROID_TREATMENT'
 			else ''
 		)
 	}
+
+	define BeneficiaryReportedSymptomsE:
+	({
+		if 'UPPER_EYELID_HEAVINESS' in BeneficiaryReportedSymptomsECodes
+			then DisplayAnswer('Heaviness in upper eyelids')
+			else null,
+		if 'INTERFERES_WITH_ADL' in BeneficiaryReportedSymptomsECodes
+			then DisplayAnswer('Condition interferes with activities of daily living')
+			else null,
+		if 'DIFFICULTY_READING_OR_COMPUTER_WORK' in BeneficiaryReportedSymptomsECodes
+			then DisplayAnswer('Difficulties reading (can’t see top lines of text) or Difficulties performing computer work')
+			else null,
+		if 'DIFFICULTIES_AT_WORK_VISUAL_LIMITATIONS' in BeneficiaryReportedSymptomsECodes
+			then DisplayAnswer('Difficulties at work due to visual limitations')
+			else null,
+		if 'DEBILITATING_EYELID_IRRITATION_PAIN' in BeneficiaryReportedSymptomsECodes
+			then DisplayAnswer('Debilitating eyelid irritation/pain')
+			else null,
+		if 'SPECTACLES_WONT_STAY_IN_PLACE' in BeneficiaryReportedSymptomsECodes
+			then DisplayAnswer('Spectacles won''t stay in place due to eyelid tissue')
+			else null,
+		if 'SPECTACLES_IRRITATION_OR_DISPLACEMENT' in BeneficiaryReportedSymptomsECodes
+			then DisplayAnswer('Eyelid tissue is causing irritation or displacement of the spectacles')
+			else null,
+		if 'FUNCTIONAL_IMPAIRMENT_DUE_TO_INABILITY_TO_WEAR_GLASSES' in BeneficiaryReportedSymptomsECodes
+			then DisplayAnswer('Evidence that the inability to wear glasses is causing functional impairment (can''t read, can''t drive safely, can''t perform job duties, etc.)')
+			else null
+	}) Answer
+		where Answer is not null
