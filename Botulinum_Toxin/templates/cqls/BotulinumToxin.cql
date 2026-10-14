@@ -24,23 +24,46 @@ parameter "ServiceRequest" ServiceRequest
 
 context Patient
 
+define function DisplayAnswer(label String):
+  FHIR.Coding {
+    display: FHIR.string { value: label }
+  }
+
+define function IcdAnswer(codeValue String, label String):
+  FHIR.Coding {
+    system: FHIR.uri { value: 'http://hl7.org/fhir/sid/icd-10-cm' },
+    code: FHIR.code { value: codeValue },
+    display: FHIR.string { value: label }
+  }
+
+define function HasConditionCode(Conditions List<FHIR.Condition>, codeValue String):
+	exists(Conditions S where exists(S.code.coding C where C.code.value = codeValue))
+
+define function ContraindicationAnswers(Conditions List<FHIR.Condition>):
+	({
+		if HasConditionCode(Conditions, 'G70.00')
+			then IcdAnswer('G70.00', 'An existing medical condition(s) which could affect the neuromuscular function') else null,
+
+		if HasConditionCode(Conditions, 'D68.9')
+			then IcdAnswer('D68.9', 'A severe clotting disorder') else null,
+
+		if HasConditionCode(Conditions, 'M46.3')
+			then IcdAnswer('M46.3', 'An infection at the proposed injection site') else null,
+
+		if not exists(Conditions)
+			then DisplayAnswer('No Contraindications') else null
+	}) Answer
+		where Answer is not null
+
 define "BoToxinContraindication":
-	if(First([Condition]S
+	ContraindicationAnswers([Condition]S
 		where exists(S.code.coding C where C in "Contraindication Conditions")
-		  and First(S.clinicalStatus.coding).code.value = 'active'
-			  and First(S.verificationStatus.coding).code.value = 'confirmed') is not null)
-			  then First(First([Condition]S
-				where exists(S.code.coding C where C in "Contraindication Conditions")
-				and First(S.clinicalStatus.coding).code.value = 'active'
-				and First(S.verificationStatus.coding).code.value = 'confirmed').code.coding).code 
-	else 'NoContraindications'
+			and First(S.clinicalStatus.coding).code.value = 'active'
+			and First(S.verificationStatus.coding).code.value = 'confirmed')
 
 define "BoToxinContraindicationCopy":
-	if (First([Condition]C
-		 where FHIRHelpers.ToCode(First(C.code.coding)) in "Contraindication Conditions") is not null ) then 
-		 First((First([Condition]C
-		 where FHIRHelpers.ToCode(First(C.code.coding)) in "Contraindication Conditions")).code.coding).code
-	else 'NoContraindications'
+	ContraindicationAnswers([Condition]C
+		where FHIRHelpers.ToCode(First(C.code.coding)) in "Contraindication Conditions")
 
 define "OrderDate":
     "ServiceRequest".authoredOn
@@ -55,8 +78,8 @@ define "ServiceRequestCode":
 
 define "RequestedInjectionOccurence":
 	if (First([Procedure]P
-		 where FHIRHelpers.ToCode(First(P.code.coding)) in "BotoxCodes") is not null ) then  'Subsequent injection'
-	else 'Initial injection'
+		 where FHIRHelpers.ToCode(First(P.code.coding)) in "BotoxCodes") is not null ) then DisplayAnswer('Subsequent injection')
+	else DisplayAnswer('Initial injection')
 
 define "CoveredDiagnosis": 
 	if (First([Condition]C
@@ -107,16 +130,16 @@ define RequestedSerotype:
 
 define SerotypeQuantity:
 	if (RequestedSerotype = 'J0585' or RequestedSerotype = 'J0588' ) then 
-		if ("ServiceRequest".quantity.value = 100) then '100'
-		else if ("ServiceRequest".quantity.value = 200) then '200'
-		else '50'
+		if ("ServiceRequest".quantity.value = 100) then DisplayAnswer('100 units per vial, vacuum-dried powder for reconstitution')
+		else if ("ServiceRequest".quantity.value = 200) then DisplayAnswer('200 units per vial, vacuum-dried powder for reconstitution')
+		else DisplayAnswer('50 units per vial, vacuum-dried powder for reconstitution')
 	else if (RequestedSerotype = 'J0586') then 
-		if ("ServiceRequest".quantity.value = 500) then '500'
-		else '300'
+		if ("ServiceRequest".quantity.value = 500) then DisplayAnswer('500 units per vial, vacuum-dried powder for reconstitution')
+		else DisplayAnswer('300 units per vial, vacuum-dried powder for reconstitution')
 	else if (RequestedSerotype = 'J0587' ) then 
-		if ("ServiceRequest".quantity.value = 5000) then '5000'
-		else if ("ServiceRequest".quantity.value = 10000) then '10000'
-		else '2500'
+		if ("ServiceRequest".quantity.value = 5000) then DisplayAnswer('5000 units per vial, vacuum-dried powder for reconstitution')
+		else if ("ServiceRequest".quantity.value = 10000) then DisplayAnswer('10000 units per vial, vacuum-dried powder for reconstitution')
+		else DisplayAnswer('2500 units per vial, vacuum-dried powder for reconstitution')
 	else null
 
 // Helper functions needed for this scope

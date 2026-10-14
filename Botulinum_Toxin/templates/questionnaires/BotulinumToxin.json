@@ -61,7 +61,6 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "NoContraindications",
                 "display": "No Contraindications"
               }
             },
@@ -74,7 +73,6 @@
             },
             {
               "valueCoding": {
-                "code": "AllergyIntolerance",
                 "display": "A hypersensitivity to any botulinum toxin preparation or to any of the components in the formulation of the serotype"
               }
             },
@@ -160,25 +158,21 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "Initial injection",
                 "display": "Initial injection"
               }
             },
             {
               "valueCoding": {
-                "code": "Subsequent injection",
                 "display": "Subsequent injection"
               }
             },
             {
               "valueCoding": {
-                "code": "Last injection",
                 "display": "Last injection"
               }
             },
             {
               "valueCoding": {
-                "code": "One time dose/trial dose",
                 "display": "One time dose/trial dose"
               }
             }
@@ -270,8 +264,7 @@
             },
             {
               "valueCoding": {
-                "code": "N/A",
-                "display": "NA-LCD does not require "
+                "display": "NA-LCD does not require"
               },
               "initialSelected": true
             }
@@ -507,7 +500,6 @@
             },
             {
               "valueCoding": {
-                "code": "Other",
                 "display": "Other"
               }
             }
@@ -864,7 +856,6 @@
             },
             {
               "valueCoding": {
-                "code": "other",
                 "display": "Other"
               }
             }
@@ -893,7 +884,6 @@
               "question": "3.1",
               "operator": "=",
               "answerCoding": {
-                "code": "Other",
                 "display": "Other"
               }
             },
@@ -901,7 +891,6 @@
               "question": "3.2",
               "operator": "=",
               "answerCoding": {
-                "code": "other",
                 "display": "Other"
               }
             }
@@ -1072,13 +1061,11 @@
             },
             {
               "valueCoding": {
-                "code": "other",
                 "display": "Other"
               }
             },
             {
               "valueCoding": {
-                "code": "NA",
                 "display": "N/A -Not Required by LCD"
               }
             }
@@ -1107,7 +1094,6 @@
               "question": "4.1",
               "operator": "=",
               "answerCoding": {
-                "code": "other",
                 "display": "Other"
               }
             }
@@ -1173,7 +1159,6 @@
             },
             {
               "valueCoding": {
-                "code": "NA",
                 "display": "N/A -Not Required by LCD"
               }
             }
@@ -1244,7 +1229,6 @@
             },
             {
               "valueCoding": {
-                "code": "NA",
                 "display": "N/A -Not Required by LCD"
               }
             }
@@ -1299,37 +1283,31 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "No",
                 "display": "0 - No impairment"
               }
             },
             {
               "valueCoding": {
-                "code": "Mild",
                 "display": "1 - Mild impairment"
               }
             },
             {
               "valueCoding": {
-                "code": "Moderate",
                 "display": "2 - Moderate impairment"
               }
             },
             {
               "valueCoding": {
-                "code": "Severe",
                 "display": "3 - Severe impairment"
               }
             },
             {
               "valueCoding": {
-                "code": "Not",
                 "display": "4 - Not possible due to the disease"
               }
             },
             {
               "valueCoding": {
-                "code": "NA",
                 "display": "Not applicable"
               }
             }
@@ -1384,31 +1362,26 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "GreaterThan15Days",
                 "display": "Headache disorders occurring greater than 15 days a month, with a duration of four or more hours, for a period of at least three months​"
               }
             },
             {
               "valueCoding": {
-                "code": "GreatherThan4Hours",
                 "display": "Migraine headache documented to be lasting for a duration ≥4 hours on a migraine day​"
               }
             },
             {
               "valueCoding": {
-                "code": "GreaterThan15DaysAnd8Hours",
                 "display": "Headache occurs 15 or more days per month, at least 8 of the headache days per month meet the migraine without aura criteria, or respond to migraine specific treatment. ​"
               }
             },
             {
               "valueCoding": {
-                "code": "RefractoryToTherapy",
                 "display": "The beneficiary has significant disability due to the headaches and have been refractory to standard and conventional therapy.​"
               }
             },
             {
               "valueCoding": {
-                "code": "DecreasedHeadaches",
                 "display": "For continuing Botulism toxin therapy the beneficiary demonstrates a significant decrease in the number and frequency of headaches and an improvement in function upon receiving Botulinum toxin​"
               }
             }
@@ -1570,7 +1543,6 @@
             },
             {
               "valueCoding": {
-                "code": "other",
                 "display": "Other"
               }
             }
@@ -1598,19 +1570,16 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "NA",
                 "display": "NA"
               }
             },
             {
               "valueCoding": {
-                "code": "YesReducedButChronicMigranes",
                 "display": "Yes, and the beneficiary has had a reduction in the overall number of migraine days but still has chronic migraines requiring additional therapy for chronic migraine prevention.​"
               }
             },
             {
               "valueCoding": {
-                "code": "YesReducedWithCGRP",
                 "display": "Yes, and the beneficiary has had a reduction in number of severe migraine days per month with CGRP use, but still has chronic migraines requiring additional therapy for chronic migraine prevention.​"
               }
             }
@@ -1660,37 +1629,31 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "0",
                 "display": "0 - None​ (NRS 0)"
               }
             },
             {
               "valueCoding": {
-                "code": "1",
                 "display": "1 - Mild ​(NRS 1 - 3)"
               }
             },
             {
               "valueCoding": {
-                "code": "2",
                 "display": "2 - Moderate ​(NRS 4 - 6)"
               }
             },
             {
               "valueCoding": {
-                "code": "3",
                 "display": "3 - Severe​ (NRS 7 - 9)"
               }
             },
             {
               "valueCoding": {
-                "code": "4",
                 "display": "4 –Extreme, worst possible​ (NRS 10)"
               }
             },
             {
               "valueCoding": {
-                "code": "NA",
                 "display": "Not Applicable"
               }
             }
@@ -1832,19 +1795,16 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "50",
                 "display": "50 units per vial, vacuum-dried powder for reconstitution"
               }
             },
             {
               "valueCoding": {
-                "code": "100",
                 "display": "100 units per vial, vacuum-dried powder for reconstitution"
               }
             },
             {
               "valueCoding": {
-                "code": "200",
                 "display": "200 units per vial, vacuum-dried powder for reconstitution"
               }
             }
@@ -1892,13 +1852,11 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "300",
                 "display": "300 units per vial, vacuum-dried powder for reconstitution"
               }
             },
             {
               "valueCoding": {
-                "code": "500",
                 "display": "500 units per vial, vacuum-dried powder for reconstitution"
               }
             }
@@ -1946,19 +1904,16 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "2500",
                 "display": "2500 units per vial, vacuum-dried powder for reconstitution"
               }
             },
             {
               "valueCoding": {
-                "code": "5000",
                 "display": "5000 units per vial, vacuum-dried powder for reconstitution"
               }
             },
             {
               "valueCoding": {
-                "code": "10000",
                 "display": "10000 units per vial, vacuum-dried powder for reconstitution"
               }
             }
@@ -2006,19 +1961,16 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "50",
                 "display": "50 units per vial, vacuum-dried powder for reconstitution"
               }
             },
             {
               "valueCoding": {
-                "code": "100",
                 "display": "100 units per vial, vacuum-dried powder for reconstitution"
               }
             },
             {
               "valueCoding": {
-                "code": "200",
                 "display": "200 units per vial, vacuum-dried powder for reconstitution"
               }
             }
@@ -2060,49 +2012,41 @@
               "answerOption": [
                 {
                   "valueCoding": {
-                    "code": "56753004Medial",
                     "display": "Medial pre-tarsal orbicularis oculi muscle of the upper lid"
                   }
                 },
                 {
                   "valueCoding": {
-                    "code": "56753004Lateral",
                     "display": "Lateral pre-tarsal orbicularis oculi muscle of the upper lid"
                   }
                 },
                 {
                   "valueCoding": {
-                    "code": "56753004LateralSuperior",
                     "display": "Lateral superior pre-tarsal part of the orbicularis oculi muscle"
                   }
                 },
                 {
                   "valueCoding": {
-                    "code": "56753004MedialSuperior",
                     "display": "Medial superior pre-tarsal part of the orbicularis oculi muscle"
                   }
                 },
                 {
                   "valueCoding": {
-                    "code": "56753004LateralCanthus",
                     "display": "Lateral canthus of the orbicularis oculi muscle"
                   }
                 },
                 {
                   "valueCoding": {
-                    "code": "56753004Inferolateral",
                     "display": "Inferolateral portion of the orbicularis oculi muscle"
                   }
                 },
                 {
                   "valueCoding": {
-                    "code": "88011006Depressor",
                     "display": "Depressor supercilii"
                   }
                 },
                 {
                   "valueCoding": {
-                    "code": "88011006Corrugator",
                     "display": "Corrugator supercilii"
                   }
                 },
@@ -2171,7 +2115,6 @@
                 },
                 {
                   "valueCoding": {
-                    "code": "other",
                     "display": "Other"
                   }
                 }
@@ -2186,7 +2129,6 @@
                   "question": "6.7.1",
                   "operator": "=",
                   "answerCoding": {
-                    "code": "56753004Medial",
                     "display": "Medial pre-tarsal orbicularis oculi muscle of the upper lid"
                   }
                 }
@@ -2203,7 +2145,6 @@
                   "question": "6.7.1",
                   "operator": "=",
                   "answerCoding": {
-                    "code": "56753004Lateral",
                     "display": "Lateral pre-tarsal orbicularis oculi muscle of the upper lid"
                   }
                 }
@@ -2220,7 +2161,6 @@
                   "question": "6.7.1",
                   "operator": "=",
                   "answerCoding": {
-                    "code": "56753004LateralSuperior",
                     "display": "Lateral superior pre-tarsal part of the orbicularis oculi muscle"
                   }
                 }
@@ -2237,7 +2177,6 @@
                   "question": "6.7.1",
                   "operator": "=",
                   "answerCoding": {
-                    "code": "56753004MedialSuperior",
                     "display": "Medial superior pre-tarsal part of the orbicularis oculi muscle"
                   }
                 }
@@ -2254,7 +2193,6 @@
                   "question": "6.7.1",
                   "operator": "=",
                   "answerCoding": {
-                    "code": "56753004LateralCanthus",
                     "display": "Lateral canthus of the orbicularis oculi muscle"
                   }
                 }
@@ -2271,7 +2209,6 @@
                   "question": "6.7.1",
                   "operator": "=",
                   "answerCoding": {
-                    "code": "56753004Inferolateral",
                     "display": "Inferolateral portion of the orbicularis oculi muscle"
                   }
                 }
@@ -2288,7 +2225,6 @@
                   "question": "6.7.1",
                   "operator": "=",
                   "answerCoding": {
-                    "code": "88011006Depressor",
                     "display": "Depressor supercilii"
                   }
                 }
@@ -2305,7 +2241,6 @@
                   "question": "6.7.1",
                   "operator": "=",
                   "answerCoding": {
-                    "code": "88011006Corrugator",
                     "display": "Corrugator supercilii"
                   }
                 }
@@ -2548,7 +2483,6 @@
             },
             {
               "valueCoding": {
-                "code": "Not applicable",
                 "display": "Not applicable"
               },
               "initialSelected": true
@@ -2619,7 +2553,6 @@
             },
             {
               "valueCoding": {
-                "code": "Not applicable",
                 "display": "Not applicable"
               },
               "initialSelected": true
