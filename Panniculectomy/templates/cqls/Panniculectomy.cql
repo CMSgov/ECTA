@@ -30,6 +30,11 @@ valueset "Chronic pain location": 'chronic-pain-location-panniculectonomy'
 
 context Patient
 
+define function DisplayAnswer(label String):
+	FHIR.Coding {
+		display: FHIR.string { value: label }
+	}
+
 define PanniculectomyRequest:
   Last([ServiceRequest] ServiceReq where "ToCode"(First(ServiceReq.code.coding)) in "Panniculectomy")
 
@@ -37,10 +42,21 @@ define "ServiceRequestCode":
     FHIRHelpers.ToCode(First("PanniculectomyRequest".code.coding))
 
 define "PrimaryServiceRequestCode":
-	if ("ServiceRequestCode".code = '15830') then '15830' else 'other'
+	if ("ServiceRequestCode".code = '15830') then
+		FHIR.Coding {
+			system: FHIR.uri { value: 'http://www.ama-assn.org/go/cpt' },
+			code: FHIR.code { value: '15830' },
+			display: FHIR.string { value: '15830 – Excision, excessive skin and subcutaneous tissue (includes lipectomy); abdomen, infraumbilical panniculectomy' }
+		}
+	else FHIR.Coding {
+		display: FHIR.string { value: 'Other' }
+	}
 
 define "AddOnServiceRequestCode":
-	if ("ServiceRequestCode".code != '15830') then "ServiceRequestCode".code else null
+	"PanniculectomyRequest".code.coding AddOnCoding
+		where AddOnCoding.system.value = 'http://www.ama-assn.org/go/cpt'
+			and AddOnCoding.code.value in { '15847', '15877' }
+		return AddOnCoding
 
 define ServiceEncounter:
 	First([Encounter]E where 'Encounter/' + E.id.value = "PanniculectomyRequest".encounter.reference.value)
@@ -51,45 +67,48 @@ define "OrderDate":
 define "RequestedDate": 
 	ToDate(start of "Normalize Interval"("PanniculectomyRequest".occurrence))
 
-define "PanniculectomyPrimaryCondition":
-	if(First([Condition]S
+define "PanniculectomyPrimaryConditionResource":
+	First([Condition]S
 		where exists(S.code.coding C where C in "Panniculectomy related diagnoses")
-		  and First(S.clinicalStatus.coding).code.value = 'active'
-			  and First(S.verificationStatus.coding).code.value = 'confirmed') is not null)
-			  then First(First([Condition]S
-				where exists(S.code.coding C where C in "Panniculectomy related diagnoses")
-				and First(S.clinicalStatus.coding).code.value = 'active'
-				and First(S.verificationStatus.coding).code.value = 'confirmed').code.coding).code 
-	else 'other'
+		and First(S.clinicalStatus.coding).code.value = 'active'
+		and First(S.verificationStatus.coding).code.value = 'confirmed')
+
+define "PanniculectomyPrimaryConditionCoding":
+	First("PanniculectomyPrimaryConditionResource".code.coding DiagnosisCoding
+		where ToCode(DiagnosisCoding) in "Panniculectomy related diagnoses")
+
+define "PanniculectomyPrimaryCondition":
+	if "PanniculectomyPrimaryConditionCoding" is not null
+		then "PanniculectomyPrimaryConditionCoding"
+	else DisplayAnswer('Other')
+
+define "PanniculectomySecondaryConditionResource":
+	First([Condition]S
+		where exists(S.code.coding C where C in "Panniculectomy related secondary diagnoses")
+		and First(S.clinicalStatus.coding).code.value = 'active'
+		and First(S.verificationStatus.coding).code.value = 'confirmed')
 
 define "PanniculectomySecondaryCondition":
-	if (PanniculectomyPrimaryCondition = 'L98.7' or PanniculectomyPrimaryCondition = 'M79.3') then 
-		if(First([Condition]S
-			where exists(S.code.coding C where C in "Panniculectomy related secondary diagnoses")
-			and First(S.clinicalStatus.coding).code.value = 'active'
-				and First(S.verificationStatus.coding).code.value = 'confirmed') is not null)
-				then First(First([Condition]S
-					where exists(S.code.coding C where C in "Panniculectomy related secondary diagnoses")
-					and First(S.clinicalStatus.coding).code.value = 'active'
-					and First(S.verificationStatus.coding).code.value = 'confirmed').code.coding).code 
-		else 'other'
-	else ''
+	if (PanniculectomyPrimaryCondition.code.value = 'L98.7' or PanniculectomyPrimaryCondition.code.value = 'M79.3') then
+		First("PanniculectomySecondaryConditionResource".code.coding DiagnosisCoding
+			where ToCode(DiagnosisCoding) in "Panniculectomy related secondary diagnoses")
+	else null
 
 define "PannusConditionPresence":
 	if(First([Condition]S
 		where exists(S.code.coding C where C in "Pannus Conditions")
 		and First(S.clinicalStatus.coding).code.value = 'active'
 			and First(S.verificationStatus.coding).code.value = 'confirmed') is not null)
-			then 'yes' 
-	else 'no'
+			then DisplayAnswer('Yes')
+	else DisplayAnswer('No')
 
 define "DifficultyWalkingPresence":
 	if(First([Condition]S
 		where exists(S.code.coding C where C in "Difficulty Walking Conditions")
 		and First(S.clinicalStatus.coding).code.value = 'active'
 			and First(S.verificationStatus.coding).code.value = 'confirmed') is not null)
-			then 'yes' 
-	else 'no'
+			then DisplayAnswer('Yes')
+	else DisplayAnswer('No')
 
 define "ChronicPainObservation":
 	First([Observation]O
@@ -97,11 +116,23 @@ define "ChronicPainObservation":
 		exists(O.bodySite.coding C where C in "Chronic pain location"))
 
 
+define "ChronicPainLocationCoding":
+	First(ChronicPainObservation.bodySite.coding)
+
 define "ChronicPainLocation":
-	ToCode(First(ChronicPainObservation.bodySite.coding)).code
+	if "ChronicPainLocationCoding".code.value = 'other'
+		or "ChronicPainLocationCoding".display.value = 'Other'
+		then DisplayAnswer('Other')
+	else "ChronicPainLocationCoding"
+
+define "ChronicPainCharacterCoding":
+	First(ChronicPainObservation.code.coding)
 
 define "ChronicPainCharacter":
-	ToCode(First(ChronicPainObservation.code.coding)).code
+	if "ChronicPainCharacterCoding".code.value = 'other'
+		or "ChronicPainCharacterCoding".display.value = 'Other'
+		then DisplayAnswer('Other')
+	else "ChronicPainCharacterCoding"
 
 define "TissueBreakdownCondition":
 	First([Condition]S
@@ -110,11 +141,25 @@ define "TissueBreakdownCondition":
 		and First(S.clinicalStatus.coding).code.value = 'active'
 			and First(S.verificationStatus.coding).code.value = 'confirmed')
 
+define "TissueBreakdownLocationCoding":
+	First(First(TissueBreakdownCondition.bodySite).coding)
+
 define "TissueBreakdownLocation":
-	ToCode(First(First(TissueBreakdownCondition.bodySite).coding)).code
+	if "TissueBreakdownLocationCoding".code.value = 'other'
+		or "TissueBreakdownLocationCoding".display.value = 'Other'
+		then DisplayAnswer('Other')
+	else "TissueBreakdownLocationCoding"
+
+define "TissueBreakdownSeverityCoding":
+	First(TissueBreakdownCondition.code.coding)
 
 define "TissueBreakdownSeverity":
-	ToCode(First(TissueBreakdownCondition.code.coding)).code
+	if "TissueBreakdownSeverityCoding".code.value = 'other'
+		or "TissueBreakdownSeverityCoding".display.value = 'Other'
+		then DisplayAnswer('Other')
+	else if "TissueBreakdownSeverityCoding".display.value = 'Fungal colonization (satellite lesions)'
+		then DisplayAnswer('Fungal colonization (satellite lesions)')
+	else "TissueBreakdownSeverityCoding"
 
 define "IsObesityPresent":
 	First([Condition]S
@@ -153,11 +198,22 @@ define "IsInflammationOnSkin":
 			and First(S.verificationStatus.coding).code.value = 'confirmed') is not null	
 
 define "SurgeryNecessary":
-	{
-		(if (IsObesityPresent) then '162864005' else ''),
-		(if (IsWeightSteady and IsIntentionalWeightLoss) then 'stable-weight-6mo' else ''),
-		(if (IsIntentionalWeightLoss and IsBariatricSurgery and IsInfectionOnSkin and IsInflammationOnSkin) then 'stable-weight-6mo' else '')
-	}
+	({
+		if IsObesityPresent then
+			FHIR.Coding {
+				system: FHIR.uri { value: 'http://snomed.info/sct' },
+				code: FHIR.code { value: '162864005' },
+				display: FHIR.string { value: 'BMI 35 or lower if applicable' }
+			}
+		else null,
+		if IsWeightSteady and IsIntentionalWeightLoss
+			then DisplayAnswer('Stable weight for six months after significant weight loss to treat morbid obesity')
+			else null,
+		if IsIntentionalWeightLoss and IsBariatricSurgery and IsInfectionOnSkin and IsInflammationOnSkin
+			then DisplayAnswer('Weight loss is result of bariatric surgery that occurred at least 18 months ago, and weight has been stable for at least six months, and infection and inflammation has continued for the most recent three months')
+			else null
+	}) Answer
+		where Answer is not null
 
 define "TopicalAntifungals":
 		if (First([Condition]S
@@ -167,7 +223,7 @@ define "TopicalAntifungals":
 				First([Condition]S
 			where ToCode(First(S.code.coding)).code = '266721009'
 			and First(S.clinicalStatus.coding).code.value = 'active'
-				and First(S.verificationStatus.coding).code.value = 'confirmed') is not null) then 'refractory' 
+				and First(S.verificationStatus.coding).code.value = 'confirmed') is not null) then DisplayAnswer('Refractory to treatment')
 		else if (First([Condition]S
 			where ToCode(First(S.code.coding)).code = '373219008'
 			and First(S.clinicalStatus.coding).code.value = 'active'
@@ -175,7 +231,7 @@ define "TopicalAntifungals":
 				First([Condition]S
 			where ToCode(First(S.code.coding)).code = '736979001'
 			and First(S.clinicalStatus.coding).code.value = 'active'
-				and First(S.verificationStatus.coding).code.value = 'confirmed') is not null) then 'recurrent' 
+				and First(S.verificationStatus.coding).code.value = 'confirmed') is not null) then DisplayAnswer('Recurrent (responds temporarily but returns)')
 		else if (First([Condition]S
 			where ToCode(First(S.code.coding)).code = '373219008'
 			and First(S.clinicalStatus.coding).code.value = 'active'
@@ -183,7 +239,7 @@ define "TopicalAntifungals":
 				First([Condition]S
 			where ToCode(First(S.code.coding)).code = '62459000'
 			and First(S.clinicalStatus.coding).code.value = 'active'
-				and First(S.verificationStatus.coding).code.value = 'confirmed') is not null) then 'persistent' else ''
+				and First(S.verificationStatus.coding).code.value = 'confirmed') is not null) then DisplayAnswer('Persistent (never fully responds)') else null
 	
 define "Corticosteroids":
 		if (First([Condition]S
@@ -193,7 +249,7 @@ define "Corticosteroids":
 				First([Condition]S
 			where ToCode(First(S.code.coding)).code = '266721009'
 			and First(S.clinicalStatus.coding).code.value = 'active'
-				and First(S.verificationStatus.coding).code.value = 'confirmed') is not null) then 'refractory' 
+				and First(S.verificationStatus.coding).code.value = 'confirmed') is not null) then DisplayAnswer('Refractory to treatment')
 		else if (First([Condition]S
 			where ToCode(First(S.code.coding)).code = '266721009'
 			and First(S.clinicalStatus.coding).code.value = 'active'
@@ -201,7 +257,7 @@ define "Corticosteroids":
 				First([Condition]S
 			where ToCode(First(S.code.coding)).code = '255227004'
 			and First(S.clinicalStatus.coding).code.value = 'active'
-				and First(S.verificationStatus.coding).code.value = 'confirmed') is not null) then 'recurrent' 
+				and First(S.verificationStatus.coding).code.value = 'confirmed') is not null) then DisplayAnswer('Recurrent (responds temporarily but returns)')
 		else if (First([Condition]S
 			where ToCode(First(S.code.coding)).code = '266721009'
 			and First(S.clinicalStatus.coding).code.value = 'active'
@@ -209,7 +265,7 @@ define "Corticosteroids":
 				First([Condition]S
 			where ToCode(First(S.code.coding)).code = '62459000'
 			and First(S.clinicalStatus.coding).code.value = 'active'
-				and First(S.verificationStatus.coding).code.value = 'confirmed') is not null) then 'persistent' else ''
+				and First(S.verificationStatus.coding).code.value = 'confirmed') is not null) then DisplayAnswer('Persistent (never fully responds)') else null
 
 define "Antibiotics":
 		if (First([Condition]S
@@ -219,7 +275,7 @@ define "Antibiotics":
 				First([Condition]S
 			where ToCode(First(S.code.coding)).code = '281789004'
 			and First(S.clinicalStatus.coding).code.value = 'active'
-				and First(S.verificationStatus.coding).code.value = 'confirmed') is not null) then 'refractory'
+				and First(S.verificationStatus.coding).code.value = 'confirmed') is not null) then DisplayAnswer('Refractory to treatment')
 		else if (First([Condition]S
 			where ToCode(First(S.code.coding)).code = '255227004'
 			and First(S.clinicalStatus.coding).code.value = 'active'
@@ -227,7 +283,7 @@ define "Antibiotics":
 				First([Condition]S
 			where ToCode(First(S.code.coding)).code = '281789004'
 			and First(S.clinicalStatus.coding).code.value = 'active'
-				and First(S.verificationStatus.coding).code.value = 'confirmed') is not null) then 'recurrent'
+				and First(S.verificationStatus.coding).code.value = 'confirmed') is not null) then DisplayAnswer('Recurrent (responds temporarily but returns)')
 		else if (First([Condition]S
 			where ToCode(First(S.code.coding)).code = '62459000'
 			and First(S.clinicalStatus.coding).code.value = 'active'
@@ -235,7 +291,7 @@ define "Antibiotics":
 				First([Condition]S
 			where ToCode(First(S.code.coding)).code = '281789004'
 			and First(S.clinicalStatus.coding).code.value = 'active'
-				and First(S.verificationStatus.coding).code.value = 'confirmed') is not null) then 'persistent' else ''
+				and First(S.verificationStatus.coding).code.value = 'confirmed') is not null) then DisplayAnswer('Persistent (never fully responds)') else null
  
 define function "Normalize Onset"(onset Choice<FHIR.dateTime, FHIR.Age, FHIR.Period, FHIR.Range, FHIR.string>):
   if onset is FHIR.dateTime then

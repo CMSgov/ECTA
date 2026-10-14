@@ -78,25 +78,25 @@
                     "answerOption": [
                         {
                             "valueCoding": {
-                                "code": "initial",
+                               
                                 "display": "Initial"
                             }
                         },
                         {
                             "valueCoding": {
-                                "code": "resubmission",
+                              
                                 "display": "Resubmission"
                             }
                         },
                         {
                             "valueCoding": {
-                                "code": "expedited-initial",
+                               
                                 "display": "Expedited Initial"
                             }
                         },
                         {
                             "valueCoding": {
-                                "code": "expedited-resubmission",
+                               
                                 "display": "Expedited Resubmission"
                             }
                         }
@@ -111,7 +111,7 @@
                             "question": "1.3",
                             "operator": "=",
                             "answerCoding": {
-                                "code": "expedited-initial",
+                               
                                 "display": "Expedited Initial"
                             }
                         },
@@ -119,7 +119,7 @@
                             "question": "1.3",
                             "operator": "=",
                             "answerCoding": {
-                                "code": "expedited-resubmission",
+                               
                                 "display": "Expedited Resubmission"
                             }
                         }
@@ -164,7 +164,7 @@
                         },
                         {
                             "valueCoding": {
-                                "code": "other",
+                               
                                 "display": "Other"
                             }
                         }
@@ -537,7 +537,7 @@
                 },
                 {
                     "valueCoding": {
-                        "code": "other",
+                      
                         "display": "Other"
                     }
                 }
@@ -619,7 +619,7 @@
                 },
                 {
                     "valueCoding": {
-                        "code": "NA",
+                       
                         "display": "NA – Not required by LCD"
                     }
                 }
@@ -656,19 +656,19 @@
                     "answerOption": [
                         {
                             "valueCoding": {
-                                "code": "yes",
+                          
                                 "display": "Yes"
                             }
                         },
                         {
                             "valueCoding": {
-                                "code": "no",
+                          
                                 "display": "No"
                             }
                         },
                         {
                             "valueCoding": {
-                                "code": "NA",
+                          
                                 "display": "NA – Not required by LCD"
                             }
                         }
@@ -697,7 +697,7 @@
                             "question": "3.1",
                             "operator": "=",
                             "answerCoding": {
-                                "code": "yes",
+                               
                                 "display": "Yes"
                             }
                         }
@@ -707,31 +707,31 @@
                     "answerOption": [
                         {
                             "valueCoding": {
-                                "code": "grade-1",
+                               
                                 "display": "Grade 1 – The panniculus reaches the pubic hair but not the genitals"
                             }
                         },
                         {
                             "valueCoding": {
-                                "code": "grade-2",
+                               
                                 "display": "Grade 2 – The panniculus lies over the genitals down to the thigh crease"
                             }
                         },
                         {
                             "valueCoding": {
-                                "code": "grade-3",
+                               
                                 "display": "Grade 3 – The panniculus reaches down to the upper thigh"
                             }
                         },
                         {
                             "valueCoding": {
-                                "code": "grade-4",
+                               
                                 "display": "Grade 4 – The panniculus hangs down to the mid-thigh level"
                             }
                         },
                         {
                             "valueCoding": {
-                                "code": "grade-5",
+                              
                                 "display": "Grade 5 – The panniculus reaches the knees"
                             }
                         }
@@ -766,19 +766,19 @@
                     "answerOption": [
                         {
                             "valueCoding": {
-                                "code": "yes",
+                             
                                 "display": "Yes"
                             }
                         },
                         {
                             "valueCoding": {
-                                "code": "no",
+                              
                                 "display": "No"
                             }
                         },
                         {
                             "valueCoding": {
-                                "code": "NA",
+                              
                                 "display": "NA – Not required by LCD"
                             }
                         }
@@ -855,7 +855,7 @@
                                 },
                                 {
                                     "valueCoding": {
-                                        "code": "other",
+                                       
                                         "display": "Other"
                                     }
                                 }
@@ -870,7 +870,6 @@
                                     "question": "3.3.1",
                                     "operator": "=",
                                     "answerCoding": {
-                                        "code": "other",
                                         "display": "Other"
                                     }
                                 }
@@ -962,7 +961,7 @@
                                 },
                                 {
                                     "valueCoding": {
-                                        "code": "other",
+                                     
                                         "display": "Other"
                                     }
                                 }
@@ -977,7 +976,6 @@
                                     "question": "3.3.2",
                                     "operator": "=",
                                     "answerCoding": {
-                                        "code": "other",
                                         "display": "Other"
                                     }
                                 }
@@ -1041,7 +1039,7 @@
                                 },
                                 {
                                     "valueCoding": {
-                                        "code": "other",
+                                     
                                         "display": "Other"
                                     }
                                 }
@@ -1056,7 +1054,7 @@
                                     "question": "3.3.3",
                                     "operator": "=",
                                     "answerCoding": {
-                                        "code": "other",
+                                     
                                         "display": "Other"
                                     }
                                 }
@@ -1085,7 +1083,7 @@
                             "answerOption": [
                                 {
                                     "valueCoding": {
-                                        "code": "NA",
+                                      
                                         "display": "NA"
                                     }
                                 }
@@ -1171,7 +1169,7 @@
                                 },
                                 {
                                     "valueCoding": {
-                                        "code": "other",
+                                    
                                         "display": "Other"
                                     }
                                 }
@@ -1186,7 +1184,6 @@
                                     "question": "3.4.1",
                                     "operator": "=",
                                     "answerCoding": {
-                                        "code": "other",
                                         "display": "Other"
                                     }
                                 }
@@ -1250,7 +1247,7 @@
                                 },
                                 {
                                     "valueCoding": {
-                                        "code": "fungal-colonization",
+                                      
                                         "display": "Fungal colonization (satellite lesions)"
                                     }
                                 },
@@ -1277,7 +1274,7 @@
                                 },
                                 {
                                     "valueCoding": {
-                                        "code": "other",
+                                      
                                         "display": "Other"
                                     }
                                 }
@@ -1292,7 +1289,6 @@
                                     "question": "3.4.2",
                                     "operator": "=",
                                     "answerCoding": {
-                                        "code": "other",
                                         "display": "Other"
                                     }
                                 }
@@ -1320,7 +1316,7 @@
                             "answerOption": [
                                 {
                                     "valueCoding": {
-                                        "code": "NA",
+                                     
                                         "display": "NA"
                                     }
                                 }
@@ -1350,13 +1346,13 @@
                     "answerOption": [
                         {
                             "valueCoding": {
-                                "code": "yes",
+                             
                                 "display": "Yes"
                             }
                         },
                         {
                             "valueCoding": {
-                                "code": "no",
+                             
                                 "display": "No"
                             }
                         }
@@ -1399,13 +1395,13 @@
                         },
                         {
                             "valueCoding": {
-                                "code": "stable-weight-6mo",
+                              
                                 "display": "Stable weight for six months after significant weight loss to treat morbid obesity"
                             }
                         },
                         {
                             "valueCoding": {
-                                "code": "bariatric-18mo",
+                               
                                 "display": "Weight loss is result of bariatric surgery that occurred at least 18 months ago, and weight has been stable for at least six months, and infection and inflammation has continued for the most recent three months"
                             }
                         }
@@ -1450,25 +1446,24 @@
                     "answerOption": [
                         {
                             "valueCoding": {
-                                "code": "refractory",
+                             
                                 "display": "Refractory to treatment"
                             }
                         },
                         {
                             "valueCoding": {
-                                "code": "recurrent",
+                              
                                 "display": "Recurrent (responds temporarily but returns)"
                             }
                         },
                         {
                             "valueCoding": {
-                                "code": "persistent",
+                           
                                 "display": "Persistent (never fully responds)"
                             }
                         },
                         {
                             "valueCoding": {
-                                "code": "NA",
                                 "display": "NA"
                             }
                         }
@@ -1503,25 +1498,24 @@
                     "answerOption": [
                         {
                             "valueCoding": {
-                                "code": "refractory",
+                              
                                 "display": "Refractory to treatment"
                             }
                         },
                         {
                             "valueCoding": {
-                                "code": "recurrent",
+                              
                                 "display": "Recurrent (responds temporarily but returns)"
                             }
                         },
                         {
                             "valueCoding": {
-                                "code": "persistent",
+                              
                                 "display": "Persistent (never fully responds)"
                             }
                         },
                         {
                             "valueCoding": {
-                                "code": "NA",
                                 "display": "NA"
                             }
                         }
@@ -1556,25 +1550,25 @@
                     "answerOption": [
                         {
                             "valueCoding": {
-                                "code": "refractory",
+                            
                                 "display": "Refractory to treatment"
                             }
                         },
                         {
                             "valueCoding": {
-                                "code": "recurrent",
+                             
                                 "display": "Recurrent (responds temporarily but returns)"
                             }
                         },
                         {
                             "valueCoding": {
-                                "code": "persistent",
+                              
                                 "display": "Persistent (never fully responds)"
                             }
                         },
                         {
                             "valueCoding": {
-                                "code": "NA",
+                               
                                 "display": "NA"
                             }
                         }

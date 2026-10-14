@@ -470,7 +470,7 @@ define BeneficiaryReportedSymptomsCCodes:
 			then DisplayAnswer('Debilitating eyelid irritation/pain')
 			else null,
 		if 'PROSTHESIS_WONT_STAY_IN_PLACE' in BeneficiaryReportedSymptomsCCodes
-			then DisplayAnswer('Prosthesis won''t stay in place due to eyelid tissue')
+			then DisplayAnswer('Prosthesis won\'t stay in place due to eyelid tissue')
 			else null,
 		if 'CANNOT_FIT_PROSTHESIS_DUE_TO_EYELID_ANATOMY' in BeneficiaryReportedSymptomsCCodes
 			then DisplayAnswer('Cannot properly fit the prosthesis because eyelid anatomy is preventing proper insertion')
@@ -579,13 +579,13 @@ define BeneficiaryReportedSymptomsCCodes:
 			then DisplayAnswer('Debilitating eyelid irritation/pain')
 			else null,
 		if 'SPECTACLES_WONT_STAY_IN_PLACE' in BeneficiaryReportedSymptomsECodes
-			then DisplayAnswer('Spectacles won''t stay in place due to eyelid tissue')
+			then DisplayAnswer('Spectacles won\'t stay in place due to eyelid tissue')
 			else null,
 		if 'SPECTACLES_IRRITATION_OR_DISPLACEMENT' in BeneficiaryReportedSymptomsECodes
 			then DisplayAnswer('Eyelid tissue is causing irritation or displacement of the spectacles')
 			else null,
 		if 'FUNCTIONAL_IMPAIRMENT_DUE_TO_INABILITY_TO_WEAR_GLASSES' in BeneficiaryReportedSymptomsECodes
-			then DisplayAnswer('Evidence that the inability to wear glasses is causing functional impairment (can''t read, can''t drive safely, can''t perform job duties, etc.)')
+			then DisplayAnswer('Evidence that the inability to wear glasses is causing functional impairment (can\'t read, can\'t drive safely, can\'t perform job duties, etc.)')
 			else null
 	}) Answer
 		where Answer is not null
