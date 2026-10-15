@@ -127,19 +127,16 @@
           "answerOption":[
             {
               "valueCoding":{
-                "code": "Group 1",
                 "display": "Group 1"
               }
             },
             {
               "valueCoding":{
-                "code": "Group 2",
                 "display": "Group 2"
               }
             },
             {
               "valueCoding":{
-                "code": "Group 3",
                 "display": "Group 3"
               }
             }
@@ -162,14 +159,12 @@
           "answerOption":[
             {
               "valueCoding":{
-                "code": "Initial",
                 "display": "Initial"
               },
               "initialSelected": true
             },
             {
               "valueCoding":{
-                "code": "Resubmission",
                 "display": "Resubmission"
               }
             }
@@ -179,7 +174,6 @@
               "operator": "=",
               "question": "2.1",
               "answerCoding": {
-                "code": "Group 1",
                 "display": "Group 1"
               }
             }
@@ -202,14 +196,12 @@
           "answerOption":[
             {
               "valueCoding":{
-                "code": "Initial",
                 "display": "Initial"
               },
               "initialSelected": true
             },
             {
               "valueCoding":{
-                "code": "Resubmission",
                 "display": "Resubmission"
               }
             }
@@ -219,7 +211,6 @@
               "operator": "=",
               "question": "2.1",
               "answerCoding": {
-                "code": "Group 2",
                 "display": "Group 2"
               }
             }
@@ -242,14 +233,12 @@
           "answerOption":[
             {
               "valueCoding":{
-                "code": "Initial",
                 "display": "Initial"
               },
               "initialSelected": true
             },
             {
               "valueCoding":{
-                "code": "Resubmission",
                 "display": "Resubmission"
               }
             }
@@ -259,7 +248,6 @@
               "operator": "=",
               "question": "2.1",
               "answerCoding": {
-                "code": "Group 3",
                 "display": "Group 3"
               }
             }
@@ -289,90 +277,105 @@
           "answerOption":[
             {
               "valueCoding":{
+                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
                 "code": "E0181",
                 "display": "Powered pressure reducing mattress overlay/pad, alternating, with pump, includes heavy duty"
               }
             },
             {
               "valueCoding":{
+                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
                 "code": "E0182",
                 "display": "Pump for alternating pressure pad, for replacement only"
               }
             },
             {
               "valueCoding":{
+                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
                 "code": "E0184",
                 "display": "Dry pressure mattress"
               }
             },
             {
               "valueCoding":{
+                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
                 "code": "E0185",
                 "display": "Gel or gel-like pressure pad for mattress, standard mattress length and width"
               }
             },
             {
               "valueCoding":{
+                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
                 "code": "E0186",
                 "display": "Air pressure mattress"
               }
             },
             {
               "valueCoding":{
+                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
                 "code": "E0187",
                 "display": "Water pressure mattress"
               }
             },
             {
               "valueCoding":{
+                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
                 "code": "E0188",
                 "display": "Synthetic sheepskin pad"
               }
             },
             {
               "valueCoding":{
+                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
                 "code": "E0189",
                 "display": "Lambswool sheepskin pad, any size"
               }
             },
             {
               "valueCoding":{
+                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
                 "code": "E0196",
                 "display": "Gel pressure mattress"
               }
             },
             {
               "valueCoding":{
+                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
                 "code": "E0197",
                 "display": "Air pressure pad for mattress, standard mattress length and width"
               }
             },
             {
               "valueCoding":{
+                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
                 "code": "E0198",
                 "display": "Water pressure pad for mattress, standard mattress length and width"
               }
             },
             {
               "valueCoding":{
+                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
                 "code": "E0199",
                 "display": "Dry pressure pad for mattress, standard mattress length and width"
               }
             },
             {
               "valueCoding":{
+                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
                 "code": "E1399",
                 "display": "Durable medical equipment, miscellaneous"
               }
             },
             {
               "valueCoding":{
+                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
                 "code": "A4640",
                 "display": "Replacement pad for use with medically necessary alternating pressure pad owned by patient"
               }
             },
             {
               "valueCoding":{
+                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
                 "code": "A9270",
                 "display": "Non-covered Item or service"
               }
@@ -383,7 +386,6 @@
               "operator": "=",
               "question": "2.1",
               "answerCoding": {
-                "code": "Group 1",
                 "display": "Group 1"
               }
             }
@@ -406,36 +408,42 @@
           "answerOption":[
             {
               "valueCoding":{
+                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
                 "code": "E0193",
                 "display": "Powered air flotation bed (low air loss therapy)"
               }
             },
             {
               "valueCoding":{
+                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
                 "code": "E0277",
                 "display": "Powered pressure-reducing air mattress"
               }
             },
             {
               "valueCoding":{
+                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
                 "code": "E0371",
                 "display": "Nonpowered advanced pressure reducing overlay for mattess, standard mattress length and width"
               }
             },
             {
               "valueCoding":{
+                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
                 "code": "E0372",
                 "display": "Powered air overlay for mattress, standard mattress length and width"
               }
             },
             {
               "valueCoding":{
+                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
                 "code": "E0373",
                 "display": "Nonpowered advanced pressure reducing mattress"
               }
             },
             {
               "valueCoding":{
+                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
                 "code": "E1399",
                 "display": "Durable medical equipment, miscellaneous"
               }
@@ -446,7 +454,6 @@
               "operator": "=",
               "question": "2.1",
               "answerCoding": {
-                "code": "Group 2",
                 "display": "Group 2"
               }
             }
@@ -469,6 +476,7 @@
           "answerOption":[
             {
               "valueCoding":{
+                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
                 "code": "E0194",
                 "display": "Group 3 - Air fluidized bed"
               }
@@ -479,7 +487,6 @@
               "operator": "=",
               "question": "2.1",
               "answerCoding": {
-                "code": "Group 3",
                 "display": "Group 3"
               }
             }
@@ -509,19 +516,16 @@
           "answerOption":[
             {
               "valueCoding":{
-                "code": "Criteria1CompletelyImmobile",
                 "display": "Criteria 1: Completely immobile, cannot makes changes without assistance."
               }
             },
             {
               "valueCoding":{
-                "code": "Criteria2LimitedMobility",
                 "display": "Criteria 2: Limited mobility, cannot make changes significant enough to alleviate pressure without assistance.  Provider Note: The medical record must document the severity of the condition sufficiently to demonstrate the medical necessity for a PRSS."
               }
             },
             {
               "valueCoding":{
-                "code": "Criteria3AnyStagePressureUlcer",
                 "display": "Criteria 3: Any stage pressure ulcer/injury on the trunk or pelvis. Provider Note: The medical record must document the severity of the condition sufficiently to demonstrate the medical necessity for a PRSS."
               }
             }
@@ -531,7 +535,6 @@
               "operator": "=",
               "question": "2.1",
               "answerCoding": {
-                "code": "Group 1",
                 "display": "Group 1"
               }
             }
@@ -555,390 +558,455 @@
           "answerOption":[
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.101",
                 "display": "Pressure ulcer of unspecified part of back, stage 1"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.111",
                 "display": "Pressure ulcer of right upper back, stage 1"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.121",
                 "display": "Pressure ulcer of left upper back, stage 1"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.131",
                 "display": "Pressure ulcer of right lower back, stage 1"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.141",
                 "display": "Pressure ulcer of left lower back, stage 1"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.151",
                 "display": "Pressure ulcer of sacral region, stage 1"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.201",
                 "display": "Pressure ulcer of unspecified hip, stage 1"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.211",
                 "display": "Pressure ulcer of right hip, stage 1"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.221",
                 "display": "Pressure ulcer of left hip, stage 1"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.301",
                 "display": "Pressure ulcer of unspecified buttock, stage 1"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.311",
                 "display": "Pressure ulcer of right buttock, stage 1"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.321",
                 "display": "Pressure ulcer of left buttock, stage 1"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.421",
                 "display": "Pressure ulcer of contiguous site of back, buttock and hip, stage 1"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.102",
                 "display": "Pressure ulcer of unspecified part of back, stage 2"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.112",
                 "display": "Pressure ulcer of right upper back, stage 2"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.122",
                 "display": "Pressure ulcer of left upper back, stage 2"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.132",
                 "display": "Pressure ulcer of right lower back, stage 2"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.142",
                 "display": "Pressure ulcer of left lower back, stage 2"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.152",
                 "display": "Pressure ulcer of sacral region, stage 2"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.202",
                 "display": "Pressure ulcer of unspecified hip, stage 2"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.212",
                 "display": "Pressure ulcer of right hip, stage 2"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.222",
                 "display": "Pressure ulcer of left hip, stage 2"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.302",
                 "display": "Pressure ulcer of unspecified buttock, stage 2"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.312",
                 "display": "Pressure ulcer of right buttock, stage 2"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.322",
                 "display": "Pressure ulcer of left buttock, stage 2"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.42",
                 "display": "Pressure ulcer of contiguous site of back, buttock and hip, stage 2"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.103",
                 "display": "Pressure ulcer of unspecified part of back, stage 3"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.113",
                 "display": "Pressure ulcer of right upper back, stage 3"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.123",
                 "display": "Pressure ulcer of left upper back, stage 3"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.133",
                 "display": "Pressure ulcer of right lower back, stage 3"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.143",
                 "display": "Pressure ulcer of left lower back, stage 3"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.153",
                 "display": "Pressure ulcer of sacral region, stage 3"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.203",
                 "display": "Pressure ulcer of unspecified hip, stage 3"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.213",
                 "display": "Pressure ulcer of right hip, stage 3"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.223",
                 "display": "Pressure ulcer of left hip, stage 3"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.303",
                 "display": "Pressure ulcer of unspecified buttock, stage 3"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.313",
                 "display": "Pressure ulcer of right buttock, stage 3"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.323",
                 "display": "Pressure ulcer of left buttock, stage 3"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.43",
                 "display": "Pressure ulcer of contiguous site of back, buttock and hip, stage 3"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.104",
                 "display": "Pressure ulcer of unspecified part of back, stage 4"
               }
             },
           {
             "valueCoding":{
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
               "code": "L89.114",
               "display": "Pressure ulcer of right upper back, stage 4"
             }
           },
           {
             "valueCoding":{
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
               "code": "L89.124",
               "display": "Pressure ulcer of left upper back, stage 4"
             }
           },
           {
             "valueCoding":{
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
               "code": "L89.134",
               "display": "Pressure ulcer of right lower back, stage 4"
             }
           },
           {
             "valueCoding":{
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
               "code": "L89.144",
               "display": "Pressure ulcer of left lower back, stage 4"
             }
           },
           {
             "valueCoding":{
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
               "code": "L89.154",
               "display": "Pressure ulcer of sacral region, stage 4"
             }
           },
           {
             "valueCoding":{
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
               "code": "L89.204",
               "display": "Pressure ulcer of unspecified hip, stage 4"
             }
           },
           {
             "valueCoding":{
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
               "code": "L89.214",
               "display": "Pressure ulcer of right hip, stage 4"
             }
           },
           {
             "valueCoding":{
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
               "code": "L89.224",
               "display": "Pressure ulcer of left hip, stage 4"
             }
           },
           {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.304",
                 "display": "Pressure ulcer of unspecified buttock, stage 4"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.314",
                 "display": "Pressure ulcer of right buttock, stage 4"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.324",
                 "display": "Pressure ulcer of left buttock, stage 4"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.44",
                 "display": "Pressure ulcer of contiguous site of back, buttock and hip, stage 4"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.100",
                 "display": "Pressure ulcer of unspecified part of back, unstageable"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.110",
                 "display": "Pressure ulcer of right upper back, unstageable"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.120",
                 "display": "Pressure ulcer of left upper back, unstageable"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.130",
                 "display": "Pressure ulcer of right lower back, unstageable"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.140",
                 "display": "Pressure ulcer of left lower back, unstageable"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.150",
                 "display": "Pressure ulcer of sacral region, unstageable"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.200",
                 "display": "Pressure ulcer of unspecified hip, unstageable"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.210",
                 "display": "Pressure ulcer of right hip, unstageable"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.220",
                 "display": "Pressure ulcer of left hip, unstageable"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.300",
                 "display": "Pressure ulcer of unspecified buttock, unstageable"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.310",
                 "display": "Pressure ulcer of right buttock, unstageable"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.320",
                 "display": "Pressure ulcer of left buttock, unstageable"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.45",
                 "display": "Pressure ulcer of contiguous site of back, buttock and hip, unstageable"
               }
@@ -949,7 +1017,6 @@
               "operator": "=",
               "question": "4.1",
               "answerCoding": {
-                "code": "Criteria3AnyStagePressureUlcer",
                 "display": "Criteria 3: Any stage pressure ulcer/injury on the trunk or pelvis. Provider Note: The medical record must document the severity of the condition sufficiently to demonstrate the medical necessity for a PRSS."
               }
             }
@@ -973,31 +1040,26 @@
           "answerOption":[
             {
               "valueCoding":{
-                "code": "N/A",
                 "display": "N/A"
               }
             },
             {
               "valueCoding":{
-                "code": "Altered sensory perception",
                 "display": "Altered sensory perception"
               }
             },
             {
               "valueCoding":{
-                "code": "Compromised circulatory status",
                 "display": "Compromised circulatory status"
               }
             },
             {
               "valueCoding":{
-                "code": "Fecal or urinary incontinence",
                 "display": "Fecal or urinary incontinence"
               }
             },
             {
               "valueCoding":{
-                "code": "Impaired nutritional status",
                 "display": "Impaired nutritional status"
               }
             }
@@ -1007,7 +1069,6 @@
               "operator": "=",
               "question": "2.1",
               "answerCoding": {
-                "code": "Group 1",
                 "display": "Group 1"
               }
             }
@@ -1031,31 +1092,26 @@
           "answerOption":[
             {
               "valueCoding":{
-                "code": "Pain",
                 "display": "Pain"
               }
             },
             {
               "valueCoding":{
-                "code": "Paralysis",
                 "display": "Paralysis"
               }
             },
             {
               "valueCoding":{
-                "code": "Loss of sensitivity to superficial pressure",
                 "display": "Loss of sensitivity to superficial pressure"
               }
             },
             {
               "valueCoding":{
-                "code": "Loss of sensitivity to deep pressure",
                 "display": "Loss of sensitivity to deep pressure"
               }
             },
             {
               "valueCoding":{
-                "code": "Other",
                 "display": "Other"
               },
               "initialSelected": true
@@ -1066,7 +1122,6 @@
               "operator": "=",
               "question": "4.1.2",
               "answerCoding": {
-                "code": "Altered sensory perception",
                 "display": "Altered sensory perception"
               }
             }
@@ -1082,7 +1137,6 @@
               "operator": "=",
               "question": "4.1.2.1",
               "answerCoding": {
-                "code": "Other",
                 "display": "Other"
               }
             }
@@ -1107,7 +1161,6 @@
               "operator": "=",
               "question": "4.1.2",
               "answerCoding": {
-                "code": "Compromised circulatory status",
                 "display": "Compromised circulatory status"
               }
             }
@@ -1130,31 +1183,26 @@
           "answerOption":[
             {
               "valueCoding":{
-                "code": "Criteria1MultipleStage2PressureUlcers",
                 "display": "Criteria 1: Multiple stage 2 pressure ulcers located on the trunk or pelvis, which have failed to improve over the past month."
               }
             },
             {
               "valueCoding":{
-                "code": "Criteria2LargeStage3or4PressureUlcer",
                 "display": "Criteria 2: Has a large stage 3 or 4 pressure ulcer/injury on the trunk or pelvis."
               }
             },
             {
               "valueCoding":{
-                "code": "Criteria2MultipleStage3or4PressureUlcer",
                 "display": "Criteria 2: Has multiple stage 3 or 4 pressure ulcer(s)/injury(s) on the trunk or pelvis."
               }
             },
             {
               "valueCoding":{
-                "code": "Criteria3MyocutaneousFlapForPressureUlcer",
                 "display": "Criteria 3: Had a myocutaneous flap for a pressure ulcer/injury on the trunk or pelvis within the past 60 days. Criteria 3 pre-req: The beneficiary has been on a group 2 or 3 support surface immediately prior to discharge from a hospital or nursing facility within the past 30 days"
               }
             },
             {
               "valueCoding":{
-                "code": "Criteria3SkinGraftForPressureUlcer",
                 "display": "Criteria 3: Had a skin graft for a pressure ulcer/injury on the trunk or pelvis within the past 60 days. Criteria 3 pre-req: The beneficiary has been on a group 2 or 3 support surface immediately prior to discharge from a hospital or nursing facility within the past 30 days"
               }
             }
@@ -1164,7 +1212,6 @@
               "operator": "=",
               "question": "2.1",
               "answerCoding": {
-                "code": "Group 2",
                 "display": "Group 2"
               }
             }
@@ -1189,7 +1236,6 @@
               "operator": "=",
               "question": "4.2",
               "answerCoding": {
-                "code": "Criteria2LargeStage3or4PressureUlcer",
                 "display": "Criteria 2: Has a large stage 3 or 4 pressure ulcer/injury on the trunk or pelvis."
               }
             }
@@ -1213,78 +1259,91 @@
           "answerOption":[
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.102",
                 "display": "Pressure ulcer of unspecified part of back, stage 2"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.112",
                 "display": "Pressure ulcer of right upper back, stage 2"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.122",
                 "display": "Pressure ulcer of left upper back, stage 2"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.132",
                 "display": "Pressure ulcer of right lower back, stage 2"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.142",
                 "display": "Pressure ulcer of left lower back, stage 2"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.152",
                 "display": "Pressure ulcer of sacral region, stage 2"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.202",
                 "display": "Pressure ulcer of unspecified hip, stage 2"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.212",
                 "display": "Pressure ulcer of right hip, stage 2"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.222",
                 "display": "Pressure ulcer of left hip, stage 2"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.302",
                 "display": "Pressure ulcer of unspecified buttock, stage 2"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.312",
                 "display": "Pressure ulcer of right buttock, stage 2"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.322",
                 "display": "Pressure ulcer of left buttock, stage 2"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.42",
                 "display": "Pressure ulcer of contiguous site of back, buttock and hip, stage 2"
               }
@@ -1295,7 +1354,6 @@
               "operator": "=",
               "question": "4.2",
               "answerCoding": {
-                "code": "Criteria1MultipleStage2PressureUlcers",
                 "display": "Criteria 1: Multiple stage 2 pressure ulcers located on the trunk or pelvis, which have failed to improve over the past month."
               }
             }
@@ -1319,156 +1377,182 @@
           "answerOption":[
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.103",
                 "display": "Pressure ulcer of unspecified part of back, stage 3"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.113",
                 "display": "Pressure ulcer of right upper back, stage 3"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.123",
                 "display": "Pressure ulcer of left upper back, stage 3"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.133",
                 "display": "Pressure ulcer of right lower back, stage 3"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.143",
                 "display": "Pressure ulcer of left lower back, stage 3"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.153",
                 "display": "Pressure ulcer of sacral region, stage 3"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.203",
                 "display": "Pressure ulcer of unspecified hip, stage 3"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.213",
                 "display": "Pressure ulcer of right hip, stage 3"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.223",
                 "display": "Pressure ulcer of left hip, stage 3"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.303",
                 "display": "Pressure ulcer of unspecified buttock, stage 3"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.313",
                 "display": "Pressure ulcer of right buttock, stage 3"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.323",
                 "display": "Pressure ulcer of left buttock, stage 3"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.43",
                 "display": "Pressure ulcer of contiguous site of back, buttock and hip, stage 3"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.104",
                 "display": "Pressure ulcer of unspecified part of back, stage 4"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.114",
                 "display": "Pressure ulcer of right upper back, stage 4"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.124",
                 "display": "Pressure ulcer of left upper back, stage 4"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.134",
                 "display": "Pressure ulcer of right lower back, stage 4"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.144",
                 "display": "Pressure ulcer of left lower back, stage 4"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.154",
                 "display": "Pressure ulcer of sacral region, stage 4"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.204",
                 "display": "Pressure ulcer of unspecified hip, stage 4"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.214",
                 "display": "Pressure ulcer of right hip, stage 4"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.224",
                 "display": "Pressure ulcer of left hip, stage 4"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.304",
                 "display": "Pressure ulcer of unspecified buttock, stage 4"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.314",
                 "display": "Pressure ulcer of right buttock, stage 4"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.324",
                 "display": "Pressure ulcer of left buttock, stage 4"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.44",
                 "display": "Pressure ulcer of contiguous site of back, buttock and hip, stage 4"
               }
@@ -1480,7 +1564,6 @@
               "operator": "=",
               "question": "4.2",
               "answerCoding": {
-                "code": "Criteria2LargeStage3or4PressureUlcer",
                 "display": "Criteria 2: Has a large stage 3 or 4 pressure ulcer/injury on the trunk or pelvis."
               }
             },
@@ -1488,7 +1571,6 @@
               "operator": "=",
               "question": "4.2",
               "answerCoding": {
-                "code": "Criteria2MultipleStage3or4PressureUlcer",
                 "display": "Criteria 2: Has multiple stage 3 or 4 pressure ulcer(s)/injury(s) on the trunk or pelvis."
               }
             }
@@ -1512,96 +1594,110 @@
           "answerOption":[
             {
               "valueCoding":{
-                "code": "N/A",
                 "display": "N/A"
               }
             },
             {
               "valueCoding":{
+                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
                 "code": "E0181",
                 "display": "Powered pressure reducing mattress overlay/pad, alternating, with pump, includes heavy duty"
               }
             },
             {
               "valueCoding":{
+                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
                 "code": "E0182",
                 "display": "Pump for alternating pressure pad, for replacement only"
               }
             },
             {
               "valueCoding":{
+                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
                 "code": "E0184",
                 "display": "Dry pressure mattress"
               }
             },
             {
               "valueCoding":{
+                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
                 "code": "E0185",
                 "display": "Gel or gel-like pressure pad for mattress, standard mattress length and width"
               }
             },
             {
               "valueCoding":{
+                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
                 "code": "E0186",
                 "display": "Air pressure mattress"
               }
             },
             {
               "valueCoding":{
+                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
                 "code": "E0187",
                 "display": "Water pressure mattress"
               }
             },
             {
               "valueCoding":{
+                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
                 "code": "E0188",
                 "display": "Synthetic sheepskin pad"
               }
             },
             {
               "valueCoding":{
+                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
                 "code": "E0189",
                 "display": "Lambswool sheepskin pad, any size"
               }
             },
             {
               "valueCoding":{
+                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
                 "code": "E0196",
                 "display": "Gel pressure mattress"
               }
             },
             {
               "valueCoding":{
+                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
                 "code": "E0197",
                 "display": "Air pressure pad for mattress, standard mattress length and width"
               }
             },
             {
               "valueCoding":{
+                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
                 "code": "E0198",
                 "display": "Water pressure pad for mattress, standard mattress length and width"
               }
             },
             {
               "valueCoding":{
+                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
                 "code": "E0199",
                 "display": "Dry pressure pad for mattress, standard mattress length and width"
               }
             },
             {
               "valueCoding":{
+                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
                 "code": "E1399",
                 "display": "Durable medical equipment, miscellaneous"
               }
             },
             {
               "valueCoding":{
+                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
                 "code": "A4640",
                 "display": "Replacement pad for use with medically necessary alternating pressure pad owned by patient"
               }
             },
             {
               "valueCoding":{
+                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
                 "code": "A9270",
                 "display": "Non-covered Item or service"
               }
@@ -1612,7 +1708,6 @@
               "operator": "=",
               "question": "4.2",
               "answerCoding": {
-                "code": "Criteria1MultipleStage2PressureUlcers",
                 "display": "Criteria 1: Multiple stage 2 pressure ulcers located on the trunk or pelvis, which have failed to improve over the past month."
               }
             },
@@ -1620,7 +1715,6 @@
               "operator": "=",
               "question": "4.2",
               "answerCoding": {
-                "code": "Criteria2LargeStage3or4PressureUlcer",
                 "display": "Criteria 2: Has a large stage 3 or 4 pressure ulcer/injury on the trunk or pelvis."
               }
             },
@@ -1628,7 +1722,6 @@
               "operator": "=",
               "question": "4.2",
               "answerCoding": {
-                "code": "Criteria2MultipleStage3or4PressureUlcer",
                 "display": "Criteria 2: Has multiple stage 3 or 4 pressure ulcer(s)/injury(s) on the trunk or pelvis."
               }
             }
@@ -1651,25 +1744,21 @@
           "answerOption":[
             {
               "valueCoding":{
-                "code": "15734",
                 "display": "Muscle, myocutaneous flap; trunk"
               }
             },
             {
               "valueCoding":{
-                "code": "MuscleMyocutaneousFlapPelvis",
                 "display": "Muscle, myocutaneous flap; pelvis"
               }
             },
             {
               "valueCoding":{
-                "code": "1500",
                 "display": "Skin graft to trunk"
               }
             },
             {
               "valueCoding":{
-                "code": "291162",
                 "display": "Skin graft to pelvis"
               }
             }
@@ -1680,16 +1769,14 @@
               "operator": "=",
               "question": "4.2",
               "answerCoding": {
-                "code": "Criteria3MyocutaneousFlapForPressureUlcer",
-                "display": "Criteria 3  Had a myocutaneous flap for a pressure ulcer/injury on the trunk or pelvis within the past 60 days."
+                "display": "Criteria 3: Had a myocutaneous flap for a pressure ulcer/injury on the trunk or pelvis within the past 60 days. Criteria 3 pre-req: The beneficiary has been on a group 2 or 3 support surface immediately prior to discharge from a hospital or nursing facility within the past 30 days"
               }
             },
             {
               "operator": "=",
               "question": "4.2",
               "answerCoding": {
-                "code": "Criteria3SkinGraftForPressureUlcer",
-                "display": "Criteria 3  Had a skin graft for a pressure ulcer/injury on the trunk or pelvis within the past 60 days."
+                "display": "Criteria 3: Had a skin graft for a pressure ulcer/injury on the trunk or pelvis within the past 60 days. Criteria 3 pre-req: The beneficiary has been on a group 2 or 3 support surface immediately prior to discharge from a hospital or nursing facility within the past 30 days"
               }
             }
           ]
@@ -1712,299 +1799,349 @@
           "answerOption": [
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.003",
                 "display": "Pressure ulcer of unspecified elbow, stage 3"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.004",
                 "display": "Pressure ulcer of unspecified elbow, stage 4"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.013",
                 "display": "Pressure ulcer of right elbow, stage 3"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.014",
                 "display": "Pressure ulcer of right elbow, stage 4"
               }
             },{
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.023",
                 "display": "Pressure ulcer of left elbow, stage 3"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.024",
                 "display": "Pressure ulcer of left elbow, stage 4"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.103",
                 "display": "Pressure ulcer of unspecified part of back, stage 3"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.104",
                 "display": "Pressure ulcer of unspecified part of back, stage 4"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.113",
                 "display": "Pressure ulcer of right upper back, stage 3"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.114",
                 "display": "Pressure ulcer of right upper back, stage 4"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.123",
                 "display": "Pressure ulcer of left upper back, stage 3"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.124",
                 "display": "Pressure ulcer of left upper back, stage 4"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.133",
                 "display": "Pressure ulcer of right lower back, stage 3"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.134",
                 "display": "Pressure ulcer of right lower back, stage 4"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.143",
                 "display": "Pressure ulcer of left lower back, stage 3"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.144",
                 "display": "Pressure ulcer of left lower back, stage 4"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.153",
                 "display": "Pressure ulcer of sacral region, stage 3"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.154",
                 "display": "Pressure ulcer of sacral region, stage 4"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.203",
                 "display": "Pressure ulcer of unspecified hip, stage 3"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.204",
                 "display": "Pressure ulcer of unspecified hip, stage 4"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.213",
                 "display": "Pressure ulcer of right hip, stage 3"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.214",
                 "display": "Pressure ulcer of right hip, stage 4"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.223",
                 "display": "Pressure ulcer of left hip, stage 3"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.224",
                 "display": "Pressure ulcer of left hip, stage 4"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.303",
                 "display": "Pressure ulcer of unspecified buttock, stage 3"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.304",
                 "display": "Pressure ulcer of unspecified buttock, stage 4"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.313",
                 "display": "Pressure ulcer of right buttock, stage 3"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.314",
                 "display": "Pressure ulcer of right buttock, stage 4"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.323",
                 "display": "Pressure ulcer of left buttock, stage 3"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.324",
                 "display": "Pressure ulcer of left buttock, stage 4"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.43",
                 "display": "Pressure ulcer of contiguous site of back, buttock and hip, stage 3"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.44",
                 "display": "Pressure ulcer of contiguous site of back, buttock and hip, stage 4"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.503",
                 "display": "Pressure ulcer of unspecified ankle, stage 3"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.504",
                 "display": "Pressure ulcer of unspecified ankle, stage 4"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.513",
                 "display": "Pressure ulcer of right ankle, stage 3"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.514",
-                "display": "Pressure ulcer of right ankle, stage 3"
+                "display": "Pressure ulcer of right ankle, stage 4"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.523",
                 "display": "Pressure ulcer of left ankle, stage 3"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.524",
                 "display": "Pressure ulcer of left ankle, stage 4"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.603",
                 "display": "Pressure ulcer of unspecified heel, stage 3"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.604",
                 "display": "Pressure ulcer of unspecified heel, stage 4"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.613",
                 "display": "Pressure ulcer of right heel, stage 3"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.614",
                 "display": "Pressure ulcer of right heel, stage 4"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.623",
                 "display": "Pressure ulcer of left heel, stage 3"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.624",
                 "display": "Pressure ulcer of left heel, stage 4"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.813",
                 "display": "Pressure ulcer of head, stage 3"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.814",
                 "display": "Pressure ulcer of head, stage 4"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.893",
                 "display": "Pressure ulcer of other site, stage 3"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.894",
                 "display": "Pressure ulcer of other site, stage 4"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.93",
                 "display": "Pressure ulcer of unspecified site, stage 3"
               }
             },
             {
               "valueCoding":{
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
                 "code": "L89.94",
                 "display": "Pressure ulcer of unspecified site, stage 4"
               }
@@ -2015,7 +2152,6 @@
               "operator": "=",
               "question": "2.1",
               "answerCoding": {
-                "code": "Group 3",
                 "display": "Group 3"
               }
             }
@@ -2031,7 +2167,6 @@
               "operator": "=",
               "question": "2.1",
               "answerCoding": {
-                "code": "Group 3",
                 "display": "Group 3"
               }
             }
@@ -2047,7 +2182,6 @@
               "operator": "=",
               "question": "2.1",
               "answerCoding": {
-                "code": "Group 3",
                 "display": "Group 3"
               }
             }
@@ -2063,7 +2197,6 @@
               "operator": "=",
               "question": "2.1",
               "answerCoding": {
-                "code": "Group 3",
                 "display": "Group 3"
               }
             }
@@ -2079,7 +2212,6 @@
               "operator": "=",
               "question": "2.1",
               "answerCoding": {
-                "code": "Group 3",
                 "display": "Group 3"
               }
             }
@@ -2102,42 +2234,47 @@
           "answerOption":[
             {
               "valueCoding":{
-                "code": "N/A",
                 "display": "N/A"
               }
             },
             {
               "valueCoding":{
+                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
                 "code": "E0193",
                 "display": "Powered air flotation bed (low air loss therapy)"
               }
             },
             {
               "valueCoding":{
+                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
                 "code": "E0277",
                 "display": "Powered pressure-reducing air mattress"
               }
             },
             {
               "valueCoding":{
+                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
                 "code": "E0371",
                 "display": "Nonpowered advanced pressure reducing overlay for mattess, standard mattress length and width"
               }
             },
             {
               "valueCoding":{
+                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
                 "code": "E0372",
                 "display": "Powered air overlay for mattress, standard mattress length and width"
               }
             },
             {
               "valueCoding":{
+                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
                 "code": "E0373",
                 "display": "Nonpowered advanced pressure reducing mattress"
               }
             },
             {
               "valueCoding":{
+                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
                 "code": "E1399",
                 "display": "Durable medical equipment, miscellaneous"
               }
@@ -2148,7 +2285,6 @@
               "operator": "=",
               "question": "2.1",
               "answerCoding": {
-                "code": "Group 3",
                 "display": "Group 3"
               }
             }
@@ -2177,7 +2313,6 @@
               "operator": "=",
               "question": "2.1",
               "answerCoding": {
-                "code": "Group 3",
                 "display": "Group 3"
               }
             }
@@ -2192,7 +2327,6 @@
               "operator": "=",
               "question": "2.1",
               "answerCoding": {
-                "code": "Group 3",
                 "display": "Group 3"
               }
             }
@@ -2223,49 +2357,41 @@
           "answerOption":[
             {
               "valueCoding":{
-                "code": "Caregiver provides scheduled incontinent care",
                 "display": "Caregiver provides scheduled incontinent care"
               }
             },
             {
               "valueCoding":{
-                "code": "Caregiver provides skin care, use of protective skin barrier products",
                 "display": "Caregiver provides skin care, use of protective skin barrier products"
               }
             },
             {
               "valueCoding":{
-                "code": "Incontinent diapers/briefs/pads",
                 "display": "Incontinent diapers/briefs/pads"
               }
             },
             {
               "valueCoding":{
-                "code": "Wicking/suction device",
                 "display": "Wicking/suction device"
               }
             },
             {
               "valueCoding":{
-                "code": "External catheter",
                 "display": "External catheter"
               }
             },
             {
               "valueCoding":{
-                "code": "Indwelling catheter",
                 "display": "Indwelling catheter"
               }
             },
             {
               "valueCoding":{
-                "code": "N/A, moisture is not a problem",
                 "display": "N/A, moisture is not a problem"
               }
             },
             {
               "valueCoding":{
-                "code": "Other",
                 "display": "Other"
               }
             }
@@ -2276,7 +2402,6 @@
               "operator": "=",
               "question": "2.1",
               "answerCoding": {
-                "code": "Group 2",
                 "display": "Group 2"
               }
             },
@@ -2284,7 +2409,6 @@
               "operator": "=",
               "question": "2.1",
               "answerCoding": {
-                "code": "Group 3",
                 "display": "Group 3"
               }
             },
@@ -2292,7 +2416,6 @@
               "operator": "=",
               "question": "4.1.2",
               "answerCoding": {
-                "code": "Fecal or urinary incontinence",
                 "display": "Fecal or urinary incontinence"
               }
             }
@@ -2308,7 +2431,6 @@
               "operator": "=",
               "question": "5.1",
               "answerCoding": {
-                "code": "Other",
                 "display": "Other"
               }
             }
@@ -2339,43 +2461,36 @@
           "answerOption":[
             {
               "valueCoding":{
-                "code": "NA, adequate nutritional status",
                 "display": "NA, adequate nutritional status"
               }
             },
             {
               "valueCoding":{
-                "code": "Recommended diet to promote wound healing",
                 "display": "Recommended diet to promote wound healing"
               }
             },
             {
               "valueCoding":{
-                "code": "Recommended protein intake to promote wound healing",
                 "display": "Recommended protein intake to promote wound healing"
               }
             },
             {
               "valueCoding":{
-                "code": "Recommended caloric intake to promote wound healing",
                 "display": "Recommended caloric intake to promote wound healing"
               }
             },
             {
               "valueCoding":{
-                "code": "Recommended fluid intake to promote wound healing",
                 "display": "Recommended fluid intake to promote wound healing"
               }
             },
             {
               "valueCoding":{
-                "code": "Recommended supplement(s) to promote wound healing",
                 "display": "Recommended supplement(s) to promote wound healing"
               }
             },
             {
               "valueCoding":{
-                "code": "Other",
                 "display": "Other"
               }
             }
@@ -2386,7 +2501,6 @@
               "operator": "=",
               "question": "2.1",
               "answerCoding": {
-                "code": "Group 2",
                 "display": "Group 2"
               }
             },
@@ -2394,7 +2508,6 @@
               "operator": "=",
               "question": "2.1",
               "answerCoding": {
-                "code": "Group 3",
                 "display": "Group 3"
               }
             },
@@ -2402,7 +2515,6 @@
               "operator": "=",
               "question": "4.1.2",
               "answerCoding": {
-                "code": "Impaired nutritional status",
                 "display": "Impaired nutritional status"
               }
             }
@@ -2418,7 +2530,6 @@
               "operator": "=",
               "question": "6.1",
               "answerCoding": {
-                "code": "Other",
                 "display": "Other"
               }
             }
@@ -2455,31 +2566,26 @@
           "answerOption":[
             {
               "valueCoding":{
-                "code": "Intervention for wound infection",
                 "display": "Intervention for wound infection"
               }
             },
             {
               "valueCoding":{
-                "code": "Wound debridement",
                 "display": "Wound debridement"
               }
             },
             {
               "valueCoding":{
-                "code": "Occlusive barrier",
                 "display": "Occlusive barrier"
               }
             },
             {
               "valueCoding":{
-                "code": "Maintenance of the clean, moist bed of granulation tissue",
                 "display": "Maintenance of the clean, moist bed of granulation tissue"
               }
             },
             {
               "valueCoding":{
-                "code": "Education to the caregiver and beneficiary specific to prevention and management of pressure ulcer/injury",
                 "display": "Education to the caregiver and beneficiary specific to prevention and management of pressure ulcer/injury"
               }
             }
@@ -2489,7 +2595,6 @@
               "operator": "=",
               "question": "2.1",
               "answerCoding": {
-                "code": "Group 3",
                 "display": "Group 3"
               }
             }
@@ -2512,19 +2617,16 @@
           "answerOption":[
             {
               "valueCoding":{
-                "code": "Pressure ulcer/injury condition is on target to heal",
                 "display": "Pressure ulcer/injury condition is on target to heal"
               }
             },
             {
               "valueCoding":{
-                "code": "Pressure ulcer/injury condition is NOT on target to heal, treatment plan modified to promote healing due to not improving over the past month.",
                 "display": "Pressure ulcer/injury condition is NOT on target to heal, treatment plan modified to promote healing due to not improving over the past month."
               }
             },
             {
               "valueCoding":{
-                "code": "Pressure ulcer/injury condition not responding to optimal plan, target is to manage condition due to not improving over the past month.",
                 "display": "Pressure ulcer/injury condition not responding to optimal plan, target is to manage condition due to not improving over the past month."
               }
             }
@@ -2535,7 +2637,6 @@
               "operator": "=",
               "question": "2.1",
               "answerCoding": {
-                "code": "Group 2",
                 "display": "Group 2"
               }
             },
@@ -2543,7 +2644,6 @@
               "operator": "=",
               "question": "2.1",
               "answerCoding": {
-                "code": "Group 3",
                 "display": "Group 3"
               }
             }
@@ -2560,7 +2660,6 @@
               "operator": "=",
               "question": "2.1",
               "answerCoding": {
-                "code": "Group 2",
                 "display": "Group 2"
               }
             },
@@ -2568,7 +2667,6 @@
               "operator": "=",
               "question": "2.1",
               "answerCoding": {
-                "code": "Group 3",
                 "display": "Group 3"
               }
             }
@@ -2584,7 +2682,6 @@
               "operator": "=",
               "question": "2.1",
               "answerCoding": {
-                "code": "Group 3",
                 "display": "Group 3"
               }
             }
@@ -2614,7 +2711,6 @@
               "operator": "=",
               "question": "2.1",
               "answerCoding": {
-                "code": "Group 2",
                 "display": "Group 2"
               }
             },
@@ -2622,7 +2718,6 @@
               "operator": "=",
               "question": "2.1",
               "answerCoding": {
-                "code": "Group 3",
                 "display": "Group 3"
               }
             }
@@ -2638,7 +2733,6 @@
               "operator": "=",
               "question": "2.1",
               "answerCoding": {
-                "code": "Group 2",
                 "display": "Group 2"
               }
             },
@@ -2646,7 +2740,6 @@
               "operator": "=",
               "question": "2.1",
               "answerCoding": {
-                "code": "Group 3",
                 "display": "Group 3"
               }
             }
@@ -2691,20 +2784,17 @@
           "answerOption":[
             {
               "valueCoding":{
-                "code":"Initial",
                 "display": "Initial"
               },
               "initialSelected": true
             },
             {
               "valueCoding":{
-                "code":"Resubmission Review",
                 "display": "Resubmission Review"
               }
             },
             {
               "valueCoding":{
-                "code":"Expedite this request",
                 "display": "Expedite this request"
               }
             }
@@ -2720,7 +2810,6 @@
               "operator": "=",
               "question": "8.2",
               "answerCoding": {
-                "code": "Expedite this request",
                 "display": "Expedite this request"
               }
             }

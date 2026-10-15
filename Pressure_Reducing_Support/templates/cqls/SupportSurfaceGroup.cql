@@ -40,13 +40,18 @@ parameter "PractitionerRole" PractitionerRole
 
 context Patient
 
+define function DisplayAnswer(label String):
+  FHIR.Coding {
+    display: FHIR.string { value: label }
+  }
+
 define "SupportSurfaceGroup":
     if "Group1Item" is not null
-        then 'Group 1'
+        then DisplayAnswer('Group 1')
     else if "Group2Item" is not null
-        then 'Group 2'
+        then DisplayAnswer('Group 2')
     else if "Group3Item" is not null
-        then 'Group 3'
+        then DisplayAnswer('Group 3')
     else null
 
 define "Group1Item":
@@ -92,21 +97,21 @@ define "BeneficiaryMobility":
     if First(([Condition]C where FHIRHelpers.ToCode(First(C.code.coding)) in "Complete Immobility")Covered
 			 where First(Covered.clinicalStatus.coding).code.value = 'active'
 			 	and First(Covered.verificationStatus.coding).code.value = 'confirmed') is not null
-        then System.Code{ code: 'Criteria1CompletelyImmobile', display: 'Criteria 1: Completely immobile, cannot makes changes without assistance.'}
+        then DisplayAnswer('Criteria 1: Completely immobile, cannot makes changes without assistance.')
     else if First(([Condition]C where FHIRHelpers.ToCode(First(C.code.coding)) in "Impaired Mobility")Covered
 			 where First(Covered.clinicalStatus.coding).code.value = 'active'
 			 	and First(Covered.verificationStatus.coding).code.value = 'confirmed') is not null
-        then System.Code{ code: 'Criteria2LimitedMobility', display: 'Criteria 2: Limited mobility, cannot make changes significant enough to alleviate pressure without assistance.  Provider Note: The medical record must document the severity of the condition sufficiently to demonstrate the medical necessity for a PRSS.'}
+        then DisplayAnswer('Criteria 2: Limited mobility, cannot make changes significant enough to alleviate pressure without assistance.  Provider Note: The medical record must document the severity of the condition sufficiently to demonstrate the medical necessity for a PRSS.')
     else if "AnyStagePressureUlcerInjury" is not null
-        then System.Code{ code: 'Criteria3AnyStagePressureUlcer', display: 'Criteria 3: Any stage pressure ulcer/injury on the trunk or pelvis. Provider Note: The medical record must document the severity of the condition sufficiently to demonstrate the medical necessity for a PRSS.'}
+        then DisplayAnswer('Criteria 3: Any stage pressure ulcer/injury on the trunk or pelvis. Provider Note: The medical record must document the severity of the condition sufficiently to demonstrate the medical necessity for a PRSS.')
     else null
 
 
 define "Group2Criteria":
     if exists("MultipleStage2PressureUlcerInjury")
-        then System.Code{ code: 'Criteria1MultipleStage2PressureUlcers', display: 'Criteria 1: Multiple stage 2 pressure ulcers located on the trunk or pelvis, which have failed to improve over the past month.'}
+        then DisplayAnswer('Criteria 1: Multiple stage 2 pressure ulcers located on the trunk or pelvis, which have failed to improve over the past month.')
     else if exists("Stage34PressureUlcerInjuryTrunkOrPelvis")
-        then System.Code{ code: 'Criteria2MultipleStage3or4PressureUlcer', display: 'Criteria 2: Has multiple stage 3 or 4 pressure ulcer(s)/injury(s) on the trunk or pelvis.'}
+        then DisplayAnswer('Criteria 2: Has multiple stage 3 or 4 pressure ulcer(s)/injury(s) on the trunk or pelvis.')
     else null
 
 define "PainResource":
@@ -134,16 +139,17 @@ define "DeepPressureResource":
 			 	and First(Covered.verificationStatus.coding).code.value = 'confirmed')
 
 define "AlteredSensoryPerceptions":
-{
+({
     (if "PainResource" is not null
-        then 'Pain' else ''),
+        then DisplayAnswer('Pain') else null),
     (if "ParalysisResource" is not null
-        then 'Paralysis' else ''),
+        then DisplayAnswer('Paralysis') else null),
     (if "SuperficialPressureResource" is not null
-        then 'Loss of sensitivity to superficial pressure' else ''),
+        then DisplayAnswer('Loss of sensitivity to superficial pressure') else null),
     (if "DeepPressureResource" is not null
-        then 'Loss of sensitivity to deep pressure' else '')
-}
+        then DisplayAnswer('Loss of sensitivity to deep pressure') else null)
+}) Answer
+    where Answer is not null
 
 define "CompromisedCirculatoryStatus":
   First(([Condition]C
@@ -171,25 +177,26 @@ define "ImpairedNutritionalStatus":
 			 	and First(Covered.verificationStatus.coding).code.value = 'confirmed')
 
 define "Group1OtherConditions":
-{
+({
     if ("PainResource" is not null or "ParalysisResource" is not null or "SuperficialPressureResource" is not null or "DeepPressureResource" is not null)
-        then 'Altered sensory perception' else null,
+        then DisplayAnswer('Altered sensory perception') else null,
     if "CompromisedCirculatoryStatus" is not null
-        then 'Compromised circulatory status' else null,
+        then DisplayAnswer('Compromised circulatory status') else null,
     if "FecalUrinaryIncontinence" is not null
-        then 'Fecal or urinary incontinence' else null,
+        then DisplayAnswer('Fecal or urinary incontinence') else null,
     if "ImpairedNutritionalStatus" is not null
-        then 'Impaired nutritional status' else null
-}
+        then DisplayAnswer('Impaired nutritional status') else null
+}) Answer
+    where Answer is not null
 
 define "Group1TypeOfRequest":
-    'Initial'
+    DisplayAnswer('Initial')
 
 define "Group2TypeOfRequest":
-    'Initial'
+    DisplayAnswer('Initial')
 
 define "Group3TypeOfRequest":
-    'Initial'
+    DisplayAnswer('Initial')
 
 define "DeviceRequestDescription":
   'HCPCS ' + First("DeviceRequest".code.coding).code.value + ' - ' + First("DeviceRequest".code.coding).display.value
