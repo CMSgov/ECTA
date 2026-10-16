@@ -207,14 +207,14 @@
           "answerOption": [
             {
               "valueCoding": {
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "64612",
                 "display": "CPT 64612 - Chemodenervation of muscles(s); muscle(s) innervated by facial nerve, unilateral (e.g.m for blepharospasm, hemifacial spasm)"
               }
             },
             {
               "valueCoding": {
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "64615",
                 "display": "CPT 64615 - Chemodenervation of muscles(s); muscle(s) innervated by facial, trigeminal, cervical, spinal and accessory nerves, bilateral (e.g., for chronic migraine)"
               }
@@ -250,14 +250,14 @@
           "answerOption": [
             {
               "valueCoding": {
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "95873",
                 "display": "CPT 95873 -Muscle stimulation guidance will be used during chemodenervation to avoid the documented structures that are adjacent to or behind the target muscle, reducing the risk of complications."
               }
             },
             {
               "valueCoding": {
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "95874",
                 "display": "CPT 95874 - Electromyographic guidance for chemodenervation to avoid the documented structures that are adjacent to or behind the target muscle, reducing the risk of complications"
               }
@@ -307,7 +307,7 @@
               "question": "2.4",
               "operator": "=",
               "answerCoding": {
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "64612",
                 "display": "CPT 64612 - Chemodenervation of muscles(s); muscle(s) innervated by facial nerve, unilateral (e.g.m for blepharospasm, hemifacial spasm)"
               }
@@ -523,7 +523,7 @@
               "question": "2.4",
               "operator": "=",
               "answerCoding": {
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "64615",
                 "display": "CPT 64615 - Chemodenervation of muscles(s); muscle(s) innervated by facial, trigeminal, cervical, spinal and accessory nerves, bilateral (e.g., for chronic migraine)"
               }
@@ -1322,7 +1322,7 @@
           "question": "2.4",
           "operator": "=",
           "answerCoding": {
-            "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+            "system": "https://hcpcs.codes/",
             "code": "64612",
             "display": "CPT 64612 - Chemodenervation of muscles(s); muscle(s) innervated by facial nerve, unilateral (e.g.m for blepharospasm, hemifacial spasm)"
           }
@@ -1668,7 +1668,7 @@
           "question": "2.4",
           "operator": "=",
           "answerCoding": {
-            "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+            "system": "https://hcpcs.codes/",
             "code": "64615",
             "display": "CPT 64615 - Chemodenervation of muscles(s); muscle(s) innervated by facial, trigeminal, cervical, spinal and accessory nerves, bilateral (e.g., for chronic migraine)"
           }
@@ -1725,28 +1725,28 @@
           "answerOption": [
             {
               "valueCoding": {
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "J0585",
                 "display": "J0585: Injection, onabotulinumtoxinA(Botox), 1 unit"
               }
             },
             {
               "valueCoding": {
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "J0586",
                 "display": "J0586: Injection abobotulinumtoxinA (Dysport), 5 units"
               }
             },
             {
               "valueCoding": {
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "J0587",
                 "display": "J0587: Injection rimabotulinumtoxinB (Myobloc), 100 units"
               }
             },
             {
               "valueCoding": {
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "J0588",
                 "display": "J0588: Injection incobotulinumtoxinA (Xeomin), 1 unit "
               }
@@ -1783,7 +1783,7 @@
               "question": "6.1",
               "operator": "=",
               "answerCoding": {
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "J0585",
                 "display": "J0585 – Injection, onabotulinumtoxinA(Botox), 1 unit"
               }
@@ -1840,7 +1840,7 @@
               "question": "6.1",
               "operator": "=",
               "answerCoding": {
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "J0586",
                 "display": "J0586 - Injection abobotulinumtoxinA (Dysport), 5 units"
               }
@@ -1892,7 +1892,7 @@
               "question": "6.1",
               "operator": "=",
               "answerCoding": {
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "J0587",
                 "display": "J0587- Injection rimabotulinumtoxinB (Myobloc), 100 units"
               }
@@ -1949,7 +1949,7 @@
               "question": "6.1",
               "operator": "=",
               "answerCoding": {
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "J0588",
                 "display": "J0588- Injection incobotulinumtoxinA (Xeomin), 1 unit "
               }

@@ -21,7 +21,7 @@
   "compose": {
     "include": [
       {
-        "system": "http://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+        "system": "https://hcpcs.codes/",
         "concept": [
           {
             "code": "15830",

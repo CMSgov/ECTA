@@ -277,105 +277,105 @@
           "answerOption":[
             {
               "valueCoding":{
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "E0181",
                 "display": "Powered pressure reducing mattress overlay/pad, alternating, with pump, includes heavy duty"
               }
             },
             {
               "valueCoding":{
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "E0182",
                 "display": "Pump for alternating pressure pad, for replacement only"
               }
             },
             {
               "valueCoding":{
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "E0184",
                 "display": "Dry pressure mattress"
               }
             },
             {
               "valueCoding":{
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "E0185",
                 "display": "Gel or gel-like pressure pad for mattress, standard mattress length and width"
               }
             },
             {
               "valueCoding":{
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "E0186",
                 "display": "Air pressure mattress"
               }
             },
             {
               "valueCoding":{
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "E0187",
                 "display": "Water pressure mattress"
               }
             },
             {
               "valueCoding":{
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "E0188",
                 "display": "Synthetic sheepskin pad"
               }
             },
             {
               "valueCoding":{
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "E0189",
                 "display": "Lambswool sheepskin pad, any size"
               }
             },
             {
               "valueCoding":{
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "E0196",
                 "display": "Gel pressure mattress"
               }
             },
             {
               "valueCoding":{
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "E0197",
                 "display": "Air pressure pad for mattress, standard mattress length and width"
               }
             },
             {
               "valueCoding":{
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "E0198",
                 "display": "Water pressure pad for mattress, standard mattress length and width"
               }
             },
             {
               "valueCoding":{
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "E0199",
                 "display": "Dry pressure pad for mattress, standard mattress length and width"
               }
             },
             {
               "valueCoding":{
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "E1399",
                 "display": "Durable medical equipment, miscellaneous"
               }
             },
             {
               "valueCoding":{
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "A4640",
                 "display": "Replacement pad for use with medically necessary alternating pressure pad owned by patient"
               }
             },
             {
               "valueCoding":{
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "A9270",
                 "display": "Non-covered Item or service"
               }
@@ -408,42 +408,42 @@
           "answerOption":[
             {
               "valueCoding":{
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "E0193",
                 "display": "Powered air flotation bed (low air loss therapy)"
               }
             },
             {
               "valueCoding":{
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "E0277",
                 "display": "Powered pressure-reducing air mattress"
               }
             },
             {
               "valueCoding":{
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "E0371",
                 "display": "Nonpowered advanced pressure reducing overlay for mattess, standard mattress length and width"
               }
             },
             {
               "valueCoding":{
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "E0372",
                 "display": "Powered air overlay for mattress, standard mattress length and width"
               }
             },
             {
               "valueCoding":{
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "E0373",
                 "display": "Nonpowered advanced pressure reducing mattress"
               }
             },
             {
               "valueCoding":{
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "E1399",
                 "display": "Durable medical equipment, miscellaneous"
               }
@@ -476,7 +476,7 @@
           "answerOption":[
             {
               "valueCoding":{
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "E0194",
                 "display": "Group 3 - Air fluidized bed"
               }
@@ -1599,105 +1599,105 @@
             },
             {
               "valueCoding":{
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "E0181",
                 "display": "Powered pressure reducing mattress overlay/pad, alternating, with pump, includes heavy duty"
               }
             },
             {
               "valueCoding":{
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "E0182",
                 "display": "Pump for alternating pressure pad, for replacement only"
               }
             },
             {
               "valueCoding":{
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "E0184",
                 "display": "Dry pressure mattress"
               }
             },
             {
               "valueCoding":{
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "E0185",
                 "display": "Gel or gel-like pressure pad for mattress, standard mattress length and width"
               }
             },
             {
               "valueCoding":{
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "E0186",
                 "display": "Air pressure mattress"
               }
             },
             {
               "valueCoding":{
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "E0187",
                 "display": "Water pressure mattress"
               }
             },
             {
               "valueCoding":{
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "E0188",
                 "display": "Synthetic sheepskin pad"
               }
             },
             {
               "valueCoding":{
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "E0189",
                 "display": "Lambswool sheepskin pad, any size"
               }
             },
             {
               "valueCoding":{
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "E0196",
                 "display": "Gel pressure mattress"
               }
             },
             {
               "valueCoding":{
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "E0197",
                 "display": "Air pressure pad for mattress, standard mattress length and width"
               }
             },
             {
               "valueCoding":{
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "E0198",
                 "display": "Water pressure pad for mattress, standard mattress length and width"
               }
             },
             {
               "valueCoding":{
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "E0199",
                 "display": "Dry pressure pad for mattress, standard mattress length and width"
               }
             },
             {
               "valueCoding":{
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "E1399",
                 "display": "Durable medical equipment, miscellaneous"
               }
             },
             {
               "valueCoding":{
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "A4640",
                 "display": "Replacement pad for use with medically necessary alternating pressure pad owned by patient"
               }
             },
             {
               "valueCoding":{
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "A9270",
                 "display": "Non-covered Item or service"
               }
@@ -2239,42 +2239,42 @@
             },
             {
               "valueCoding":{
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "E0193",
                 "display": "Powered air flotation bed (low air loss therapy)"
               }
             },
             {
               "valueCoding":{
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "E0277",
                 "display": "Powered pressure-reducing air mattress"
               }
             },
             {
               "valueCoding":{
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "E0371",
                 "display": "Nonpowered advanced pressure reducing overlay for mattess, standard mattress length and width"
               }
             },
             {
               "valueCoding":{
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "E0372",
                 "display": "Powered air overlay for mattress, standard mattress length and width"
               }
             },
             {
               "valueCoding":{
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "E0373",
                 "display": "Nonpowered advanced pressure reducing mattress"
               }
             },
             {
               "valueCoding":{
-                "system": "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets",
+                "system": "https://hcpcs.codes/",
                 "code": "E1399",
                 "display": "Durable medical equipment, miscellaneous"
               }
