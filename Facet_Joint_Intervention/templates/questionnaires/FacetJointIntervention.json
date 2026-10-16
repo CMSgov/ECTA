@@ -214,7 +214,6 @@
                     "answerOption":[
                         {
                             "valueCoding": {
-                                "code": "None, Primary only",
                                 "display": "None, Primary only"
                             }
                         },
@@ -234,7 +233,6 @@
                         },
                         {
                             "valueCoding": {
-                                "code": "Three additional levels",
                                 "display": "Three additional levels.  (Primary level, second level, third level and a fourth level.)  Provider education:  Three or four levels is not medically necessary and not covered.  Reminder: one to two levels, either unilateral or bilateral are allowed per session per spine region."
                             }
                         }
@@ -250,7 +248,6 @@
                             "operator": "=",
                             "question": "2.2.1",
                             "answerCoding": {
-                                "code": "Three additional levels",
                                 "display": "Three additional levels.  (Primary level, second level, third level and a fourth level.)  Provider education:  Three or four levels is not medically necessary and not covered.  Reminder: one to two levels, either unilateral or bilateral are allowed per session per spine region."
                             }
                         }
@@ -284,7 +281,6 @@
                     "answerOption":[
                         {
                             "valueCoding": {
-                                "code": "None, Primary only",
                                 "display": "None, Primary only"
                             }
                         },
@@ -304,7 +300,6 @@
                         },
                         {
                             "valueCoding": {
-                                "code": "Three additional levels",
                                 "display": "Three additional levels. (Primary level, second level, third leve and a fourth level.)  Provider education:  Three or four levels is not medically necessary and not covered.  Reminder: one to two levels, either unilateral or bilateral are allowed per session per spine region"
                             }
                         }
@@ -320,7 +315,6 @@
                             "operator": "=",
                             "question": "2.2.2",
                             "answerCoding": {
-                                "code": "Three additional levels",
                                 "display": "Three additional levels. (Primary level, second level, third leve and a fourth level.)  Provider education:  Three or four levels is not medically necessary and not covered.  Reminder: one to two levels, either unilateral or bilateral are allowed per session per spine region"
                             }
                         }
@@ -354,7 +348,6 @@
                     "answerOption":[
                         {
                             "valueCoding": {
-                                "code": "None, Primary only",
                                 "display": "None, Primary only"
                             }
                         },
@@ -367,7 +360,6 @@
                         },
                         {
                             "valueCoding": {
-                                "code": "Two additional levels",
                                 "display": "Two additional levels. (Primary level, second level, and a third level.)  Provider education:  Three or four levels is not medically necessary and not covered. Reminder: one to two levels, either unilateral or bilateral are allowed per session per spine region."
                             }
                         }
@@ -383,7 +375,6 @@
                             "operator": "=",
                             "question": "2.2.3",
                             "answerCoding": {
-                                "code": "Two additional levels",
                                 "display": "Two additional levels. (Primary level, second level, and a third level.)  Provider education:  Three or four levels is not medically necessary and not covered. Reminder: one to two levels, either unilateral or bilateral are allowed per session per spine region."
                             }
                         }
@@ -417,7 +408,6 @@
                     "answerOption":[
                         {
                             "valueCoding": {
-                                "code": "None, Primary only",
                                 "display": "None, Primary only"
                             }
                         },
@@ -430,7 +420,6 @@
                         },
                         {
                             "valueCoding": {
-                                "code": "Two additional levels",
                                 "display": "Two additional levels. (Primary level, second level and a third level.) Provider education: Three or four levels is not medically necessary and not covered. Reminder: one to two levels, either unilateral or bilateral are allowed per session per spine region."
                             }
                         }
@@ -446,7 +435,6 @@
                             "operator": "=",
                             "question": "2.2.4",
                             "answerCoding": {
-                                "code": "Two additional levels",
                                 "display": "Two additional levels. (Primary level, second level and a third level.) Provider education: Three or four levels is not medically necessary and not covered. Reminder: one to two levels, either unilateral or bilateral are allowed per session per spine region."
                             }
                         }
@@ -469,25 +457,21 @@
                     "answerOption":[
                         {
                             "valueCoding":{
-                                "code": "Diagnostic",
                                 "display": "Diagnostic"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Therapeutic",
                                 "display": "Therapeutic"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Facet Cyst Rupture",
                                 "display": "Facet Cyst Rupture"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Radio Frequency Ablation",
                                 "display": "Radio Frequency Ablation"
                             }
                         }
@@ -512,7 +496,6 @@
                             "operator": "=",
                             "question": "2.6",
                             "answerCoding": {
-                                "code": "Diagnostic",
                                 "display": "Diagnostic"
                             }
                         }
@@ -520,25 +503,21 @@
                     "answerOption":[
                         {
                             "valueCoding":{
-                                "code": "Intraarticular (IA): first injection.",
                                 "display": "Intraarticular (IA): first injection."
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Intraarticular (IA): second injection.",
                                 "display": "Intraarticular (IA): second injection."
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Medial branch block (MBB) first injection.",
                                 "display": "Medial branch block (MBB) first injection."
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Medial branch block (MBB) second injection.",
                                 "display": "Medial branch block (MBB) second injection."
                             }
                         }
@@ -564,7 +543,6 @@
                             "operator": "=",
                             "question": "2.7",
                             "answerCoding": {
-                                "code": "Intraarticular (IA): second injection.",
                                 "display": "Intraarticular (IA): second injection."
                             }
                         },
@@ -572,7 +550,6 @@
                             "operator": "=",
                             "question": "2.7",
                             "answerCoding": {
-                                "code": "Medial branch block (MBB) second injection.",
                                 "display": "Medial branch block (MBB) second injection."
                             }
                         }
@@ -588,7 +565,6 @@
                             "operator": "=",
                             "question": "2.6",
                             "answerCoding": {
-                                "code": "Diagnostic",
                                 "display": "Diagnostic"
                             }
                         }
@@ -603,7 +579,6 @@
                             "operator": "=",
                             "question": "2.6",
                             "answerCoding": {
-                                "code": "Therapeutic",
                                 "display": "Therapeutic"
                             }
                         }
@@ -681,7 +656,6 @@
                             "operator": "=",
                             "question": "2.6",
                             "answerCoding": {
-                                "code": "Therapeutic",
                                 "display": "Therapeutic"
                             }
                         }
@@ -696,7 +670,6 @@
                             "operator": "=",
                             "question": "2.6",
                             "answerCoding": {
-                                "code": "Radio Frequency Ablation",
                                 "display": "Radio Frequency Ablation"
                             }
                         }
@@ -726,7 +699,6 @@
                             "operator": "=",
                             "question": "2.6",
                             "answerCoding": {
-                                "code": "Radio Frequency Ablation",
                                 "display": "Radio Frequency Ablation"
                             }
                         }
@@ -742,7 +714,6 @@
                             "operator": "=",
                             "question": "2.6",
                             "answerCoding": {
-                                "code": "Facet Cyst Rupture",
                                 "display": "Facet Cyst Rupture"
                             }
                         }
@@ -794,38 +765,32 @@
                     "answerOption":[
                         {
                             "valueCoding":{
-                                "code":"Patient has a medical condition that would interfere with the procedure.",
-                                "display":"Patient has a medical condition that would interfere with the procedure."
+                                "display": "Patient has a medical condition that would interfere with the procedure."
                             }
                         },
                         {
                             "valueCoding":{
-                                "code":"Patient does not have the cognitive capacity to cooperate.",
-                                "display":"Patient does not have the cognitive capacity to cooperate."
+                                "display": "Patient does not have the cognitive capacity to cooperate."
                             }
                         },
                         {
                             "valueCoding":{
-                                "code":"Patient does not have the functional capacity to cooperate.",
-                                "display":"Patient does not have the functional capacity to cooperate."
+                                "display": "Patient does not have the functional capacity to cooperate."
                             }
                         },
                         {
                             "valueCoding":{
-                                "code":"Patient does not have the capacity to remain motionless during the procedure.",
-                                "display":"Patient does not have the capacity to remain motionless during the procedure."
+                                "display": "Patient does not have the capacity to remain motionless during the procedure."
                             }
                         },
                         {
                             "valueCoding":{
-                                "code":"Patient is not able to tolerate remaining in a painful position for a prolonged period of time.",
-                                "display":"Patient is not able to tolerate remaining in a painful position for a prolonged period of time."
+                                "display": "Patient is not able to tolerate remaining in a painful position for a prolonged period of time."
                             }
                         },
                         {
                             "valueCoding":{
-                                "code":"Other",
-                                "display":"Other"
+                                "display": "Other"
                             }
                         }
                     ]
@@ -840,7 +805,6 @@
                             "operator": "=",
                             "question": "2.14",
                             "answerCoding": {
-                                "code": "Other",
                                 "display": "Other"
                             } 
                         }
@@ -906,25 +870,21 @@
                     "answerOption":[
                         {
                             "valueCoding":{
-                                "code": "Contrast agent",
                                 "display": "Contrast agent"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Corticosteroids",
                                 "display": "Corticosteroids"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Anti-inflammatory",
                                 "display": "Anti-inflammatory"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Anesthetic",
                                 "display": "Anesthetic"
                             }
                         }
@@ -940,7 +900,6 @@
                             "operator": "=",
                             "question": "2.21",
                             "answerCoding": {
-                                "code": "Anesthetic",
                                 "display": "Anesthetic"
                             }
                         }
@@ -948,43 +907,36 @@
                     "answerOption":[
                         {
                             "valueCoding":{
-                                "code": "Procaine",
                                 "display": "Procaine"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Lidocaine",
                                 "display": "Lidocaine"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Tetracaine",
                                 "display": "Tetracaine"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Prilocaine",
                                 "display": "Prilocaine"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Etidocaine",
                                 "display": "Etidocaine"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Bupivacaine",
                                 "display": "Bupivacaine"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Ropivacaine",
                                 "display": "Ropivacaine"
                             }
                         }
@@ -1026,7 +978,6 @@
                             "operator": "=",
                             "question": "2.6",
                             "answerCoding": {
-                                "code": "Diagnostic",
                                 "display": "Diagnostic"
                             }
                         },
@@ -1034,7 +985,6 @@
                             "operator": "=",
                             "question": "2.6",
                             "answerCoding": {
-                                "code": "Therapeutic",
                                 "display": "Therapeutic"
                             }
                         },
@@ -1042,7 +992,6 @@
                             "operator": "=",
                             "question": "2.6",
                             "answerCoding": {
-                                "code": "Radio Frequency Ablation",
                                 "display": "Radio Frequency Ablation"
                             }
                         }
@@ -1066,79 +1015,90 @@
                             "answerOption": [
                                 {
                                     "valueCoding":{
+                                        "system": "http://hl7.org/fhir/sid/icd-10-cm",
                                         "code": "M47.812",
                                         "display": "Spondylosis without myelopathy or radiculopathy, cervical region"
                                     }
                                 },
                                 {
                                     "valueCoding":{
+                                        "system": "http://hl7.org/fhir/sid/icd-10-cm",
                                         "code": "M47.813",
                                         "display": "Spondylosis without myelopathy or radiculopathy, cervicothoracic region"
                                     }
                                 },
                                 {
                                     "valueCoding":{
+                                        "system": "http://hl7.org/fhir/sid/icd-10-cm",
                                         "code": "M47.814",
                                         "display": "Spondylosis without myelopathy or radiculopathy, thoracic region"
                                     }
                                 },
                                 {
                                     "valueCoding":{
+                                        "system": "http://hl7.org/fhir/sid/icd-10-cm",
                                         "code": "M47.815",
                                         "display": "Spondylosis without myelopathy or radiculopathy, thoracolumbar region"
                                     }
                                 },
                                 {
                                     "valueCoding":{
+                                        "system": "http://hl7.org/fhir/sid/icd-10-cm",
                                         "code": "M47.892",
                                         "display": "Other spondylosis, cervical region"
                                     }
                                 },
                                 {
                                     "valueCoding":{
+                                        "system": "http://hl7.org/fhir/sid/icd-10-cm",
                                         "code": "M47.893",
                                         "display": "Other spondylosis, cervicothoracic region"
                                     }
                                 },
                                 {
                                     "valueCoding":{
+                                        "system": "http://hl7.org/fhir/sid/icd-10-cm",
                                         "code": "M47.894",
                                         "display": "Other spondylosis, thoracic region"
                                     }
                                 },
                                 {
                                     "valueCoding":{
+                                        "system": "http://hl7.org/fhir/sid/icd-10-cm",
                                         "code": "M47.895",
                                         "display": "Other spondylosis, thoracolumbar region"
                                     }
                                 },
                                 {
                                     "valueCoding":{
+                                        "system": "http://hl7.org/fhir/sid/icd-10-cm",
                                         "code": "M48.12",
                                         "display": "Ankylosing hyperostosis [Forestier], cervical region"
                                     }
                                 },
                                 {
                                     "valueCoding":{
+                                        "system": "http://hl7.org/fhir/sid/icd-10-cm",
                                         "code": "M48.13",
                                         "display": "Ankylosing hyperostosis [Forestier], cervicothoracic region"
                                     }
                                 },
                                 {
                                     "valueCoding":{
+                                        "system": "http://hl7.org/fhir/sid/icd-10-cm",
                                         "code": "M48.14",
                                         "display": "Ankylosing hyperostosis [Forestier], thoracic region"
                                     }
                                 },
                                 {
                                     "valueCoding":{
+                                        "system": "http://hl7.org/fhir/sid/icd-10-cm",
                                         "code": "M48.15",
                                         "display": "Ankylosing hyperostosis [Forestier], thoracolumbar region"
                                     }
                                 },
                                 {
                                     "valueCoding":{
-                                        "code": "Other",
                                         "display": "Other"
                                     }
                                 }
@@ -1154,7 +1114,6 @@
                                     "operator": "=",
                                     "question": "3.1.a",
                                     "answerCoding": {
-                                        "code": "Other",
                                         "display": "Other"
                                     } 
                                 }
@@ -1177,43 +1136,48 @@
                             "answerOption": [
                                 {
                                     "valueCoding":{
+                                        "system": "http://hl7.org/fhir/sid/icd-10-cm",
                                         "code": "M47.816",
                                         "display": "Spondylosis without myelopathy or radiculopathy, lumbar region"
                                     }
                                 },
                                 {
                                     "valueCoding":{
+                                        "system": "http://hl7.org/fhir/sid/icd-10-cm",
                                         "code": "M47.817",
                                         "display": "Spondylosis without myelopathy or radiculopathy, lumbosacral region"
                                     }
                                 },
                                 {
                                     "valueCoding":{
+                                        "system": "http://hl7.org/fhir/sid/icd-10-cm",
                                         "code": "M47.896",
                                         "display": "Other spondylosis, lumbar region"
                                     }
                                 },
                                 {
                                     "valueCoding":{
+                                        "system": "http://hl7.org/fhir/sid/icd-10-cm",
                                         "code": "M47.897",
                                         "display": "Other spondylosis, lumbosacral region"
                                     }
                                 },
                                 {
                                     "valueCoding":{
+                                        "system": "http://hl7.org/fhir/sid/icd-10-cm",
                                         "code": "M48.16",
                                         "display": "Ankylosing hyperostosis [Forestier], lumbar region"
                                     }
                                 },
                                 {
                                     "valueCoding":{
+                                        "system": "http://hl7.org/fhir/sid/icd-10-cm",
                                         "code": "M48.17",
                                         "display": "Ankylosing hyperostosis [Forestier], lumbosacral region"
                                     }
                                 },
                                 {
                                     "valueCoding":{
-                                        "code": "Other",
                                         "display": "Other"
                                     }
                                 }
@@ -1229,7 +1193,6 @@
                                     "operator": "=",
                                     "question": "3.1.b",
                                     "answerCoding": {
-                                        "code": "Other",
                                         "display": "Other"
                                     } 
                                 }
@@ -1247,7 +1210,6 @@
                             "operator": "=",
                             "question": "2.6",
                             "answerCoding": {
-                                "code": "Facet Cyst Rupture",
                                 "display": "Facet Cyst Rupture"
                             }
                         }
@@ -1270,49 +1232,55 @@
                             "answerOption": [
                                 {
                                     "valueCoding":{
+                                        "system": "http://hl7.org/fhir/sid/icd-10-cm",
                                         "code": "M71.30",
                                         "display": "Other bursal cyst, unspecified site"
                                     }
                                 },
                                 {
                                     "valueCoding":{
+                                        "system": "http://hl7.org/fhir/sid/icd-10-cm",
                                         "code": "M71.38",
                                         "display": "Other bursal cyst, other site"
                                     }
                                 },
                                 {
                                     "valueCoding":{
+                                        "system": "http://hl7.org/fhir/sid/icd-10-cm",
                                         "code": "M53.8",
                                         "display": "Other specified dorsopathies"
                                     }
                                 },
                                 {
                                     "valueCoding":{
+                                        "system": "http://hl7.org/fhir/sid/icd-10-cm",
                                         "code": "M53.82",
                                         "display": "Other specified dorsopathies, cervical"
                                     }
                                 },
                                 {
                                     "valueCoding":{
+                                        "system": "http://hl7.org/fhir/sid/icd-10-cm",
                                         "code": "M53.83",
                                         "display": "Other specified dorsopathies, cervicothoracic"
                                     }
                                 },
                                 {
                                     "valueCoding":{
+                                        "system": "http://hl7.org/fhir/sid/icd-10-cm",
                                         "code": "M53.84",
                                         "display": "Other specified dorsopathies, thoracic"
                                     }
                                 },
                                 {
                                     "valueCoding":{
+                                        "system": "http://hl7.org/fhir/sid/icd-10-cm",
                                         "code": "M53.85",
                                         "display": "Other specified dorsopathies, thoracolumbar"
                                     }
                                 },
                                 {
                                     "valueCoding":{
-                                        "code": "Other",
                                         "display": "Other"
                                     }
                                 }
@@ -1328,7 +1296,6 @@
                                     "operator": "=",
                                     "question": "3.1.1.a",
                                     "answerCoding": {
-                                        "code": "Other",
                                         "display": "Other"
                                     } 
                                 }
@@ -1342,43 +1309,48 @@
                             "answerOption": [
                                 {
                                     "valueCoding":{
+                                        "system": "http://hl7.org/fhir/sid/icd-10-cm",
                                         "code": "M71.30",
                                         "display": "Other bursal cyst, unspecified site"
                                     }
                                 },
                                 {
                                     "valueCoding":{
+                                        "system": "http://hl7.org/fhir/sid/icd-10-cm",
                                         "code": "M71.38",
                                         "display": "Other bursal cyst, other site"
                                     }
                                 },
                                 {
                                     "valueCoding":{
+                                        "system": "http://hl7.org/fhir/sid/icd-10-cm",
                                         "code": "M53.8",
                                         "display": "Other specified dorsopathies"
                                     }
                                 },
                                 {
                                     "valueCoding":{
+                                        "system": "http://hl7.org/fhir/sid/icd-10-cm",
                                         "code": "M53.86",
                                         "display": "Other specified dorsopathies, lumbar"
                                     }
                                 },
                                 {
                                     "valueCoding":{
+                                        "system": "http://hl7.org/fhir/sid/icd-10-cm",
                                         "code": "M53.87",
                                         "display": "Other specified dorsopathies, lumbosacral"
                                     }
                                 },
                                 {
                                     "valueCoding":{
+                                        "system": "http://hl7.org/fhir/sid/icd-10-cm",
                                         "code": "M53.88",
                                         "display": "Other specified dorsopathies, sacral"
                                     }
                                 },
                                 {
                                     "valueCoding":{
-                                        "code": "Other",
                                         "display": "Other"
                                     }
                                 }
@@ -1394,7 +1366,6 @@
                                     "operator": "=",
                                     "question": "3.1.1.b",
                                     "answerCoding": {
-                                        "code": "Other",
                                         "display": "Other"
                                     } 
                                 }
@@ -1416,79 +1387,90 @@
                             "answerOption": [
                                 {
                                     "valueCoding":{
+                                        "system": "http://hl7.org/fhir/sid/icd-10-cm",
                                         "code": "M47.812",
                                         "display": "Spondylosis without myelopathy or radiculopathy, cervical region"
                                     }
                                 },
                                 {
                                     "valueCoding":{
+                                        "system": "http://hl7.org/fhir/sid/icd-10-cm",
                                         "code": "M47.813",
                                         "display": "Spondylosis without myelopathy or radiculopathy, cervicothoracic region"
                                     }
                                 },
                                 {
                                     "valueCoding":{
+                                        "system": "http://hl7.org/fhir/sid/icd-10-cm",
                                         "code": "M47.814",
                                         "display": "Spondylosis without myelopathy or radiculopathy, thoracic region"
                                     }
                                 },
                                 {
                                     "valueCoding":{
+                                        "system": "http://hl7.org/fhir/sid/icd-10-cm",
                                         "code": "M47.815",
                                         "display": "Spondylosis without myelopathy or radiculopathy, thoracolumbar region"
                                     }
                                 },
                                 {
                                     "valueCoding":{
+                                        "system": "http://hl7.org/fhir/sid/icd-10-cm",
                                         "code": "M47.892",
                                         "display": "Other spondylosis, cervical region"
                                     }
                                 },
                                 {
                                     "valueCoding":{
+                                        "system": "http://hl7.org/fhir/sid/icd-10-cm",
                                         "code": "M47.893",
                                         "display": "Other spondylosis, cervicothoracic region"
                                     }
                                 },
                                 {
                                     "valueCoding":{
+                                        "system": "http://hl7.org/fhir/sid/icd-10-cm",
                                         "code": "M47.894",
                                         "display": "Other spondylosis, thoracic region"
                                     }
                                 },
                                 {
                                     "valueCoding":{
+                                        "system": "http://hl7.org/fhir/sid/icd-10-cm",
                                         "code": "M47.895",
                                         "display": "Other spondylosis, thoracolumbar region"
                                     }
                                 },
                                 {
                                     "valueCoding":{
+                                        "system": "http://hl7.org/fhir/sid/icd-10-cm",
                                         "code": "M48.12",
                                         "display": "Ankylosing hyperostosis [Forestier], cervical region"
                                     }
                                 },
                                 {
                                     "valueCoding":{
+                                        "system": "http://hl7.org/fhir/sid/icd-10-cm",
                                         "code": "M48.13",
                                         "display": "Ankylosing hyperostosis [Forestier], cervicothoracic region"
                                     }
                                 },
                                 {
                                     "valueCoding":{
+                                        "system": "http://hl7.org/fhir/sid/icd-10-cm",
                                         "code": "M48.14",
                                         "display": "Ankylosing hyperostosis [Forestier], thoracic region"
                                     }
                                 },
                                 {
                                     "valueCoding":{
+                                        "system": "http://hl7.org/fhir/sid/icd-10-cm",
                                         "code": "M48.15",
                                         "display": "Ankylosing hyperostosis [Forestier], thoracolumbar region"
                                     }
                                 },
                                 {
                                     "valueCoding":{
-                                        "code": "Other",
                                         "display": "Other"
                                     }
                                 }
@@ -1504,7 +1486,6 @@
                                     "operator": "=",
                                     "question": "3.2.a",
                                     "answerCoding": {
-                                        "code": "Other",
                                         "display": "Other"
                                     } 
                                 }
@@ -1519,43 +1500,48 @@
                             "answerOption": [
                                 {
                                     "valueCoding":{
+                                        "system": "http://hl7.org/fhir/sid/icd-10-cm",
                                         "code": "M47.816",
                                         "display": "Spondylosis without myelopathy or radiculopathy, lumbar region"
                                     }
                                 },
                                 {
                                     "valueCoding":{
+                                        "system": "http://hl7.org/fhir/sid/icd-10-cm",
                                         "code": "M47.817",
                                         "display": "Spondylosis without myelopathy or radiculopathy, lumbosacral region"
                                     }
                                 },
                                 {
                                     "valueCoding":{
+                                        "system": "http://hl7.org/fhir/sid/icd-10-cm",
                                         "code": "M47.896",
                                         "display": "Other spondylosis, lumbar region"
                                     }
                                 },
                                 {
                                     "valueCoding":{
+                                        "system": "http://hl7.org/fhir/sid/icd-10-cm",
                                         "code": "M47.897",
                                         "display": "Other spondylosis, lumbosacral region"
                                     }
                                 },
                                 {
                                     "valueCoding":{
+                                        "system": "http://hl7.org/fhir/sid/icd-10-cm",
                                         "code": "M48.16",
                                         "display": "Ankylosing hyperostosis [Forestier], lumbar region"
                                     }
                                 },
                                 {
                                     "valueCoding":{
+                                        "system": "http://hl7.org/fhir/sid/icd-10-cm",
                                         "code": "M48.17",
                                         "display": "Ankylosing hyperostosis [Forestier], lumbosacral region"
                                     }
                                 },
                                 {
                                     "valueCoding":{
-                                        "code": "Other",
                                         "display": "Other"
                                     }
                                 }
@@ -1571,7 +1557,6 @@
                                     "operator": "=",
                                     "question": "3.2.b",
                                     "answerCoding": {
-                                        "code": "Other",
                                         "display": "Other"
                                     } 
                                 }
@@ -1597,42 +1582,49 @@
                     "answerOption": [
                         {
                             "valueCoding":{
+                                "system": "http://loinc.org",
                                 "code": "LA32187-9",
                                 "display": "Posterior Fusion"
                             }
                         },
                         {
                             "valueCoding":{
+                                "system": "http://loinc.org",
                                 "code": "LP266363-3",
                                 "display": "Scoliosis"
                             }
                         },
                         {
                             "valueCoding":{
+                                "system": "http://snomed.info/sct",
                                 "code": "430962009",
                                 "display": "Pseudoarthrosis"
                             }
                         },
                         {
                             "valueCoding":{
+                                "system": "http://snomed.info/sct",
                                 "code": "40854002",
                                 "display": "Presence of a sixth lumbar vertebra"
                             }
                         },
                         {
                             "valueCoding":{
+                                "system": "http://snomed.info/sct",
                                 "code": "281373004",
                                 "display": "Sacralization of the fifth lumbar vertebra"
                             }
                         },
                         {
                             "valueCoding":{
+                                "system": "http://loinc.org",
                                 "code": "LA15324-9",
                                 "display": "Severe Osteophytes (bone spurs)"
                             }
                         },
                         {
                             "valueCoding":{
+                                "system": "http://snomed.info/sct",
                                 "code": "414916001",
                                 "display": "Obesity or excessive adipose tissue"
                             }
@@ -1645,14 +1637,12 @@
                         },
                         {
                             "valueCoding":{
-                                "code": "Prior surgical scarring",
                                 "display": "Prior surgical scarring"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code":"Other",
-                                "display":"Other"
+                                "display": "Other"
                             }
                         }
                     ]
@@ -1667,7 +1657,6 @@
                             "operator": "=",
                             "question": "3.3",
                             "answerCoding": {
-                                "code": "Other",
                                 "display": "Other"
                             } 
                         }
@@ -1698,7 +1687,6 @@
                             "operator": "=",
                             "question": "2.6",
                             "answerCoding": {
-                                "code": "Diagnostic",
                                 "display": "Diagnostic"
                             }
                         }
@@ -1706,13 +1694,11 @@
                     "answerOption":[
                         {
                             "valueCoding":{
-                                "code": "Negative for non-facet pathology sources",
                                 "display": "Negative for non-facet pathology sources:  Medical record indicates all of the following are ABSENT: active spine fractures, spine tumors, active infections, sciatica, hip osteoarthritis, sacroiliac impingement, untreated radiculopathy, neurogenic claudication, myofascial pain, compression fractures, disc herniation, osteophytes, rheumatoid arthritis, fibromyalgia."
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Positive for non-facet pathology sources",
                                 "display": "Positive for non-facet pathology sources:  Medical record indicates one or more of the following are PRESENT: active spine fractures, spine tumors, active infections, sciatica, hip osteoarthritis, sacroiliac impingement, untreated radiculopathy, neurogenic claudication, myofascial pain, compression fractures, disc herniation, osteophytes, rheumatoid arthritis, fibromyalgia."
                             }
                         }
@@ -1748,13 +1734,11 @@
                     "answerOption":[
                         {
                             "valueCoding":{
-                                "code": "Neck pain and its progression.",
                                 "display": "Neck pain and its progression."
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Axial low back pain and its progression.",
                                 "display": "Axial low back pain and its progression."
                             }
                         }
@@ -1774,43 +1758,36 @@
                     "answerOption":[
                         {
                             "valueCoding":{
-                                "code": "Numerical Pain Rating Scale (NRS) (0-10)",
                                 "display": "Numerical Pain Rating Scale (NRS) (0-10)"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Visual Analog Scale (VAS) Score",
                                 "display": "Visual Analog Scale (VAS) Score"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Wong-Baker FACES",
                                 "display": "Wong-Baker FACES"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Verbal Rating Scale for pain intensity",
                                 "display": "Verbal Rating Scale for pain intensity"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Pain Assessment in Advanced Dementia Scale (PAINAD)",
                                 "display": "Pain Assessment in Advanced Dementia Scale (PAINAD)"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Other",
                                 "display": "Other"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "No tool used",
                                 "display": "No tool used"
                             }
                         }
@@ -1827,7 +1804,6 @@
                             "operator": "=",
                             "question": "4.3",
                             "answerCoding": {
-                                "code": "Numerical Pain Rating Scale (NRS) (0-10)",
                                 "display": "Numerical Pain Rating Scale (NRS) (0-10)"
                             }
                         },
@@ -1835,7 +1811,6 @@
                             "operator": "=",
                             "question": "4.3",
                             "answerCoding": {
-                                "code": "Visual Analog Scale (VAS) Score",
                                 "display": "Visual Analog Scale (VAS) Score"
                             }
                         },
@@ -1843,7 +1818,6 @@
                             "operator": "=",
                             "question": "4.3",
                             "answerCoding": {
-                                "code": "Wong-Baker FACES",
                                 "display": "Wong-Baker FACES"
                             }
                         },
@@ -1851,7 +1825,6 @@
                             "operator": "=",
                             "question": "4.3",
                             "answerCoding": {
-                                "code": "Verbal Rating Scale for pain intensity",
                                 "display": "Verbal Rating Scale for pain intensity"
                             }
                         },
@@ -1859,7 +1832,6 @@
                             "operator": "=",
                             "question": "4.3",
                             "answerCoding": {
-                                "code": "Pain Assessment in Advanced Dementia Scale (PAINAD)",
                                 "display": "Pain Assessment in Advanced Dementia Scale (PAINAD)"
                             }
                         },
@@ -1867,7 +1839,6 @@
                             "operator": "=",
                             "question": "4.3",
                             "answerCoding": {
-                                "code": "Other",
                                 "display": "Other"
                             }
                         }
@@ -1884,7 +1855,6 @@
                             "operator": "=",
                             "question": "4.3",
                             "answerCoding": {
-                                "code": "Numerical Pain Rating Scale (NRS) (0-10)",
                                 "display": "Numerical Pain Rating Scale (NRS) (0-10)"
                             }
                         },
@@ -1892,7 +1862,6 @@
                             "operator": "=",
                             "question": "4.3",
                             "answerCoding": {
-                                "code": "Visual Analog Scale (VAS) Score",
                                 "display": "Visual Analog Scale (VAS) Score"
                             }
                         },
@@ -1900,7 +1869,6 @@
                             "operator": "=",
                             "question": "4.3",
                             "answerCoding": {
-                                "code": "Wong-Baker FACES",
                                 "display": "Wong-Baker FACES"
                             }
                         },
@@ -1908,7 +1876,6 @@
                             "operator": "=",
                             "question": "4.3",
                             "answerCoding": {
-                                "code": "Verbal Rating Scale for pain intensity",
                                 "display": "Verbal Rating Scale for pain intensity"
                             }
                         },
@@ -1916,7 +1883,6 @@
                             "operator": "=",
                             "question": "4.3",
                             "answerCoding": {
-                                "code": "Pain Assessment in Advanced Dementia Scale (PAINAD)",
                                 "display": "Pain Assessment in Advanced Dementia Scale (PAINAD)"
                             }
                         },
@@ -1924,7 +1890,6 @@
                             "operator": "=",
                             "question": "4.3",
                             "answerCoding": {
-                                "code": "Other",
                                 "display": "Other"
                             }
                         }
@@ -1938,49 +1903,41 @@
                     "answerOption":[
                         {
                             "valueCoding":{
-                                "code": "Pain Disability Index",
                                 "display": "Pain Disability Index"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Oswestry Disability Index (ODI)",
                                 "display": "Oswestry Disability Index (ODI)"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Oswestry Low Back Pain Disability Questionnaire (OSW)",
                                 "display": "Oswestry Low Back Pain Disability Questionnaire (OSW)"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Quebec Low Back Pain Disability Scare (QUE)",
                                 "display": "Quebec Low Back Pain Disability Scare (QUE)"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Roland Morris Pain Scale",
                                 "display": "Roland Morris Pain Scale"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Back Pain Functional Scale (BPFS)",
                                 "display": "Back Pain Functional Scale (BPFS)"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
                                 "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "No functional assessment tool used",
                                 "display": "No functional assessment tool used"
                             }
                         }
@@ -1990,7 +1947,6 @@
                             "operator": "=",
                             "question": "4.1",
                             "answerCoding": {
-                                "code": "Axial low back pain and its progression.",
                                 "display": "Axial low back pain and its progression."
                             }
                         }
@@ -2004,37 +1960,31 @@
                     "answerOption":[
                         {
                             "valueCoding":{
-                                "code": "Pain Disability Index",
                                 "display": "Pain Disability Index"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Oswestry Disability Index (ODI)",
                                 "display": "Oswestry Disability Index (ODI)"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Roland Morris Pain Scale",
                                 "display": "Roland Morris Pain Scale"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Back Pain Functional Scale (BPFS)",
                                 "display": "Back Pain Functional Scale (BPFS)"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
                                 "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "No functional assessment tool used",
                                 "display": "No functional assessment tool used"
                             }
                         }
@@ -2044,7 +1994,6 @@
                             "operator": "=",
                             "question": "4.1",
                             "answerCoding": {
-                                "code": "Neck pain and its progression.",
                                 "display": "Neck pain and its progression."
                             }
                         }
@@ -2061,7 +2010,6 @@
                             "operator": "=",
                             "question": "4.6.1",
                             "answerCoding": {
-                                "code": "Pain Disability Index",
                                 "display": "Pain Disability Index"
                             }
                         },
@@ -2069,7 +2017,6 @@
                             "operator": "=",
                             "question": "4.6.2",
                             "answerCoding": {
-                                "code": "Pain Disability Index",
                                 "display": "Pain Disability Index"
                             }
                         },
@@ -2077,7 +2024,6 @@
                             "operator": "=",
                             "question": "4.6.1",
                             "answerCoding": {
-                                "code": "Quebec Low Back Pain Disability Scare (QUE)",
                                 "display": "Quebec Low Back Pain Disability Scare (QUE)"
                             }
                         },
@@ -2085,7 +2031,6 @@
                             "operator": "=",
                             "question": "4.6.1",
                             "answerCoding": {
-                                "code": "Roland Morris Pain Scale",
                                 "display": "Roland Morris Pain Scale"
                             }
                         },
@@ -2093,7 +2038,6 @@
                             "operator": "=",
                             "question": "4.6.2",
                             "answerCoding": {
-                                "code": "Roland Morris Pain Scale",
                                 "display": "Roland Morris Pain Scale"
                             }
                         },
@@ -2101,7 +2045,6 @@
                             "operator": "=",
                             "question": "4.6.1",
                             "answerCoding": {
-                                "code": "Back Pain Functional Scale (BPFS)",
                                 "display": "Back Pain Functional Scale (BPFS)"
                             }
                         },
@@ -2109,7 +2052,6 @@
                             "operator": "=",
                             "question": "4.6.2",
                             "answerCoding": {
-                                "code": "Back Pain Functional Scale (BPFS)",
                                 "display": "Back Pain Functional Scale (BPFS)"
                             }
                         }
@@ -2126,7 +2068,6 @@
                             "operator": "=",
                             "question": "4.6.1",
                             "answerCoding": {
-                                "code": "Oswestry Disability Index (ODI)",
                                 "display": "Oswestry Disability Index (ODI)"
                             }
                         },
@@ -2134,7 +2075,6 @@
                             "operator": "=",
                             "question": "4.6.2",
                             "answerCoding": {
-                                "code": "Oswestry Disability Index (ODI)",
                                 "display": "Oswestry Disability Index (ODI)"
                             }
                         }
@@ -2150,7 +2090,6 @@
                             "operator": "=",
                             "question": "4.6.1",
                             "answerCoding": {
-                                "code": "Oswestry Low Back Pain Disability Questionnaire (OSW)",
                                 "display": "Oswestry Low Back Pain Disability Questionnaire (OSW)"
                             }
                         }
@@ -2158,37 +2097,31 @@
                     "answerOption":[
                         {
                             "valueCoding":{
-                                "code": "0",
                                 "display": "No pain or can tolerate pain without pain killers"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "1",
                                 "display": "Able to manage pain without pain killers"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "2",
                                 "display": "Complete relief of pain with pain killers"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "3",
                                 "display": "Moderate relief of pain with pain killers"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "4",
                                 "display": "Very little relief of pain with pain killers"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "5",
                                 "display": "No relief/no effect, and does not use due to not helpful"
                             }
                         }
@@ -2205,7 +2138,6 @@
                             "operator": "=",
                             "question": "4.6.1",
                             "answerCoding": {
-                                "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
                                 "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
                             }
                         },
@@ -2213,7 +2145,6 @@
                             "operator": "=",
                             "question": "4.6.2",
                             "answerCoding": {
-                                "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
                                 "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
                             }
                         }
@@ -2221,31 +2152,26 @@
                     "answerOption":[
                         {
                             "valueCoding":{
-                                "code": "1",
                                 "display": "No pain"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "2",
                                 "display": "Mild"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "3",
                                 "display": "Moderate"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "4",
                                 "display": "Severe"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "5",
                                 "display": "Very Severe"
                             }
                         }
@@ -2262,7 +2188,6 @@
                             "operator": "=",
                             "question": "4.6.1",
                             "answerCoding": {
-                                "code": "Oswestry Disability Index (ODI)",
                                 "display": "Oswestry Disability Index (ODI)"
                             }
                         },
@@ -2270,7 +2195,6 @@
                             "operator": "=",
                             "question": "4.6.2",
                             "answerCoding": {
-                                "code": "Oswestry Disability Index (ODI)",
                                 "display": "Oswestry Disability Index (ODI)"
                             }
                         },
@@ -2278,7 +2202,6 @@
                             "operator": "=",
                             "question": "4.6.1",
                             "answerCoding": {
-                                "code": "Oswestry Low Back Pain Disability Questionnaire (OSW)",
                                 "display": "Oswestry Low Back Pain Disability Questionnaire (OSW)"
                             }
                         },
@@ -2286,7 +2209,6 @@
                             "operator": "=",
                             "question": "4.6.2",
                             "answerCoding": {
-                                "code": "Oswestry Low Back Pain Disability Questionnaire (OSW)",
                                 "display": "Oswestry Low Back Pain Disability Questionnaire (OSW)"
                             }
                         }
@@ -2294,31 +2216,26 @@
                     "answerOption":[
                         {
                             "valueCoding":{
-                                "code": "0 - 4 No disability",
                                 "display": "0 - 4 No disability"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "5 - 14 Mild disability",
                                 "display": "5 - 14 Mild disability"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "15 - 24 Moderate disability",
                                 "display": "15 - 24 Moderate disability"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "25 - 34 Severe disability",
                                 "display": "25 - 34 Severe disability"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "35 - 50 Completely disabled",
                                 "display": "35 - 50 Completely disabled"
                             }
                         }
@@ -2335,7 +2252,6 @@
                             "operator": "=",
                             "question": "4.6.1",
                             "answerCoding": {
-                                "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
                                 "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
                             }
                         },
@@ -2343,7 +2259,6 @@
                             "operator": "=",
                             "question": "4.6.2",
                             "answerCoding": {
-                                "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
                                 "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
                             }
                         }
@@ -2363,13 +2278,11 @@
                     "answerOption":[
                         {
                             "valueCoding":{
-                                "code": "Chronic neck pain greater than three months duration.",
                                 "display": "Chronic neck pain greater than three months duration."
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Chronic low axial back pain greater than three months duration.",
                                 "display": "Chronic low axial back pain greater than three months duration."
                             }
                         }
@@ -2383,13 +2296,11 @@
                     "answerOption":[
                         {
                             "valueCoding":{
-                                "code": "Pain in cervical spine.",
                                 "display": "Pain in cervical spine."
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Pain in thoracic spine.",
                                 "display": "Pain in thoracic spine."
                             }
                         }
@@ -2399,7 +2310,6 @@
                             "operator": "=",
                             "question": "4.8",
                             "answerCoding":{
-                                "code": "Chronic neck pain greater than three months duration.",
                                 "display": "Chronic neck pain greater than three months duration."
                             }
                         }
@@ -2413,13 +2323,11 @@
                     "answerOption":[
                         {
                             "valueCoding":{
-                                "code": "Pain in lumber spine.",
                                 "display": "Pain in lumber spine."
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Pain in sacral spine.",
                                 "display": "Pain in sacral spine."
                             }
                         }
@@ -2429,7 +2337,6 @@
                             "operator": "=",
                             "question": "4.8",
                             "answerCoding":{
-                                "code": "Chronic low axial back pain greater than three months duration.",
                                 "display": "Chronic low axial back pain greater than three months duration."
                             }
                         }
@@ -2443,43 +2350,36 @@
                     "answerOption":[
                         {
                             "valueCoding":{
-                                "code": "Numerical Pain Rating Scale (NRS) (0-10)",
                                 "display": "Numerical Pain Rating Scale (NRS) (0-10)"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Visual Analog Scale (VAS) Score",
                                 "display": "Visual Analog Scale (VAS) Score"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Wong-Baker FACES",
                                 "display": "Wong-Baker FACES"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Verbal Rating Scale for pain intensity",
                                 "display": "Verbal Rating Scale for pain intensity"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Pain Assessment in Advanced Dementia Scale (PAINAD)",
                                 "display": "Pain Assessment in Advanced Dementia Scale (PAINAD)"
                             }
                         },
                         {
                             "valueCoding": {
-                                "code": "Other",
                                 "display": "Other"
                             }
                         },
                         {
                             "valueCoding": {
-                                "code": "No tool used",
                                 "display": "No tool used"
                             }
                         }
@@ -2496,7 +2396,6 @@
                             "operator": "=",
                             "question": "4.11",
                             "answerCoding": {
-                                "code": "Numerical Pain Rating Scale (NRS) (0-10)",
                                 "display": "Numerical Pain Rating Scale (NRS) (0-10)"
                             }
                         },
@@ -2504,7 +2403,6 @@
                             "operator": "=",
                             "question": "4.11",
                             "answerCoding": {
-                                "code": "Visual Analog Scale (VAS) Score",
                                 "display": "Visual Analog Scale (VAS) Score"
                             }
                         },
@@ -2512,7 +2410,6 @@
                             "operator": "=",
                             "question": "4.11",
                             "answerCoding": {
-                                "code": "Wong-Baker FACES",
                                 "display": "Wong-Baker FACES"
                             }
                         },
@@ -2520,7 +2417,6 @@
                             "operator": "=",
                             "question": "4.11",
                             "answerCoding": {
-                                "code": "Verbal Rating Scale for pain intensity",
                                 "display": "Verbal Rating Scale for pain intensity"
                             }
                         },
@@ -2528,7 +2424,6 @@
                             "operator": "=",
                             "question": "4.11",
                             "answerCoding": {
-                                "code": "Pain Assessment in Advanced Dementia Scale (PAINAD)",
                                 "display": "Pain Assessment in Advanced Dementia Scale (PAINAD)"
                             }
                         },
@@ -2536,7 +2431,6 @@
                             "operator": "=",
                             "question": "4.11",
                             "answerCoding": {
-                                "code": "Other",
                                 "display": "Other"
                             }
                         }
@@ -2553,7 +2447,6 @@
                             "operator": "=",
                             "question": "4.11",
                             "answerCoding": {
-                                "code": "Numerical Pain Rating Scale (NRS) (0-10)",
                                 "display": "Numerical Pain Rating Scale (NRS) (0-10)"
                             }
                         },
@@ -2561,7 +2454,6 @@
                             "operator": "=",
                             "question": "4.11",
                             "answerCoding": {
-                                "code": "Visual Analog Scale (VAS) Score",
                                 "display": "Visual Analog Scale (VAS) Score"
                             }
                         },
@@ -2569,7 +2461,6 @@
                             "operator": "=",
                             "question": "4.11",
                             "answerCoding": {
-                                "code": "Wong-Baker FACES",
                                 "display": "Wong-Baker FACES"
                             }
                         },
@@ -2577,7 +2468,6 @@
                             "operator": "=",
                             "question": "4.11",
                             "answerCoding": {
-                                "code": "Verbal Rating Scale for pain intensity",
                                 "display": "Verbal Rating Scale for pain intensity"
                             }
                         },
@@ -2585,7 +2475,6 @@
                             "operator": "=",
                             "question": "4.11",
                             "answerCoding": {
-                                "code": "Pain Assessment in Advanced Dementia Scale (PAINAD)",
                                 "display": "Pain Assessment in Advanced Dementia Scale (PAINAD)"
                             }
                         },
@@ -2593,7 +2482,6 @@
                             "operator": "=",
                             "question": "4.11",
                             "answerCoding": {
-                                "code": "Other",
                                 "display": "Other"
                             }
                         }
@@ -2607,49 +2495,41 @@
                     "answerOption":[
                         {
                             "valueCoding":{
-                                "code": "Pain Disability Index",
                                 "display": "Pain Disability Index"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Oswestry Disability Index (ODI)",
                                 "display": "Oswestry Disability Index (ODI)"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Oswestry Low Back Pain Disability Questionnaire (OSW)",
                                 "display": "Oswestry Low Back Pain Disability Questionnaire (OSW)"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Quebec Low Back Pain Disability Scare (QUE)",
                                 "display": "Quebec Low Back Pain Disability Scare (QUE)"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Roland Morris Pain Scale",
                                 "display": "Roland Morris Pain Scale"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Back Pain Functional Scale (BPFS)",
                                 "display": "Back Pain Functional Scale (BPFS)"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
                                 "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "No functional assessment tool used",
                                 "display": "No functional assessment tool used"
                             }
                         }
@@ -2659,7 +2539,6 @@
                             "operator": "=",
                             "question": "4.8",
                             "answerCoding": {
-                                "code": "Chronic low axial back pain greater than three months duration.",
                                 "display": "Chronic low axial back pain greater than three months duration."
                             }
                         }
@@ -2673,37 +2552,31 @@
                     "answerOption":[
                         {
                             "valueCoding":{
-                                "code": "Pain Disability Index",
                                 "display": "Pain Disability Index"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Oswestry Disability Index (ODI)",
                                 "display": "Oswestry Disability Index (ODI)"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Roland Morris Pain Scale",
                                 "display": "Roland Morris Pain Scale"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Back Pain Functional Scale (BPFS)",
                                 "display": "Back Pain Functional Scale (BPFS)"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
                                 "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "No functional assessment tool used",
                                 "display": "No functional assessment tool used"
                             }
                         }
@@ -2713,7 +2586,6 @@
                             "operator": "=",
                             "question": "4.8",
                             "answerCoding": {
-                                "code": "Chronic neck pain greater than three months duration.",
                                 "display": "Chronic neck pain greater than three months duration."
                             }
                         }
@@ -2730,7 +2602,6 @@
                             "operator": "=",
                             "question": "4.14.1",
                             "answerCoding": {
-                                "code": "Pain Disability Index",
                                 "display": "Pain Disability Index"
                             }
                         },
@@ -2738,7 +2609,6 @@
                             "operator": "=",
                             "question": "4.14.2",
                             "answerCoding": {
-                                "code": "Pain Disability Index",
                                 "display": "Pain Disability Index"
                             }
                         },
@@ -2746,7 +2616,6 @@
                             "operator": "=",
                             "question": "4.14.1",
                             "answerCoding": {
-                                "code": "Quebec Low Back Pain Disability Scare (QUE)",
                                 "display": "Quebec Low Back Pain Disability Scare (QUE)"
                             }
                         },
@@ -2754,7 +2623,6 @@
                             "operator": "=",
                             "question": "4.14.1",
                             "answerCoding": {
-                                "code": "Roland Morris Pain Scale",
                                 "display": "Roland Morris Pain Scale"
                             }
                         },
@@ -2762,7 +2630,6 @@
                             "operator": "=",
                             "question": "4.14.2",
                             "answerCoding": {
-                                "code": "Roland Morris Pain Scale",
                                 "display": "Roland Morris Pain Scale"
                             }
                         },
@@ -2770,7 +2637,6 @@
                             "operator": "=",
                             "question": "4.14.1",
                             "answerCoding": {
-                                "code": "Back Pain Functional Scale (BPFS)",
                                 "display": "Back Pain Functional Scale (BPFS)"
                             }
                         },
@@ -2778,7 +2644,6 @@
                             "operator": "=",
                             "question": "4.14.2",
                             "answerCoding": {
-                                "code": "Back Pain Functional Scale (BPFS)",
                                 "display": "Back Pain Functional Scale (BPFS)"
                             }
                         }
@@ -2795,7 +2660,6 @@
                             "operator": "=",
                             "question": "4.14.1",
                             "answerCoding": {
-                                "code": "Oswestry Disability Index (ODI)",
                                 "display": "Oswestry Disability Index (ODI)"
                             }
                         },
@@ -2803,7 +2667,6 @@
                             "operator": "=",
                             "question": "4.14.2",
                             "answerCoding": {
-                                "code": "Oswestry Disability Index (ODI)",
                                 "display": "Oswestry Disability Index (ODI)"
                             }
                         }
@@ -2819,7 +2682,6 @@
                             "operator": "=",
                             "question": "4.14.1",
                             "answerCoding": {
-                                "code": "Oswestry Low Back Pain Disability Questionnaire (OSW)",
                                 "display": "Oswestry Low Back Pain Disability Questionnaire (OSW)"
                             }
                         }
@@ -2827,37 +2689,31 @@
                     "answerOption":[
                         {
                             "valueCoding":{
-                                "code": "0",
                                 "display": "No pain or can tolerate pain without pain killers"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "1",
                                 "display": "Able to manage pain without pain killers"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "2",
                                 "display": "Complete relief of pain with pain killers"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "3",
                                 "display": "Moderate relief of pain with pain killers"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "4",
                                 "display": "Very little relief of pain with pain killers"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "5",
                                 "display": "No relief/no effect, and does not use due to not helpful"
                             }
                         }
@@ -2874,7 +2730,6 @@
                             "operator": "=",
                             "question": "4.14.1",
                             "answerCoding": {
-                                "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
                                 "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
                             }
                         },
@@ -2882,7 +2737,6 @@
                             "operator": "=",
                             "question": "4.14.2",
                             "answerCoding": {
-                                "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
                                 "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
                             }
                         }
@@ -2890,31 +2744,26 @@
                     "answerOption":[
                         {
                             "valueCoding":{
-                                "code": "1",
                                 "display": "No pain"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "2",
                                 "display": "Mild"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "3",
                                 "display": "Moderate"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "4",
                                 "display": "Severe"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "5",
                                 "display": "Very Severe"
                             }
                         }
@@ -2931,7 +2780,6 @@
                             "operator": "=",
                             "question": "4.14.1",
                             "answerCoding": {
-                                "code": "Oswestry Disability Index (ODI)",
                                 "display": "Oswestry Disability Index (ODI)"
                             }
                         },
@@ -2939,7 +2787,6 @@
                             "operator": "=",
                             "question": "4.14.2",
                             "answerCoding": {
-                                "code": "Oswestry Disability Index (ODI)",
                                 "display": "Oswestry Disability Index (ODI)"
                             }
                         },
@@ -2947,7 +2794,6 @@
                             "operator": "=",
                             "question": "4.14.1",
                             "answerCoding": {
-                                "code": "Oswestry Low Back Pain Disability Questionnaire (OSW)",
                                 "display": "Oswestry Low Back Pain Disability Questionnaire (OSW)"
                             }
                         },
@@ -2955,7 +2801,6 @@
                             "operator": "=",
                             "question": "4.14.2",
                             "answerCoding": {
-                                "code": "Oswestry Low Back Pain Disability Questionnaire (OSW)",
                                 "display": "Oswestry Low Back Pain Disability Questionnaire (OSW)"
                             }
                         }
@@ -2963,31 +2808,26 @@
                     "answerOption":[
                         {
                             "valueCoding":{
-                                "code": "0 - 4 No disability",
                                 "display": "0 - 4 No disability"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "5 - 14 Mild disability",
                                 "display": "5 - 14 Mild disability"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "15 - 24 Moderate disability",
                                 "display": "15 - 24 Moderate disability"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "25 - 34 Severe disability",
                                 "display": "25 - 34 Severe disability"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "35 - 50 Completely disabled",
                                 "display": "35 - 50 Completely disabled"
                             }
                         }
@@ -3004,7 +2844,6 @@
                             "operator": "=",
                             "question": "4.14.1",
                             "answerCoding": {
-                                "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
                                 "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
                             }
                         },
@@ -3012,7 +2851,6 @@
                             "operator": "=",
                             "question": "4.14.2",
                             "answerCoding": {
-                                "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
                                 "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
                             }
                         }
@@ -3063,7 +2901,6 @@
                         },
                         {
                             "valueCoding": {
-                                "code": "Other",
                                 "display": "Other"
                             }
                         }
@@ -3079,7 +2916,6 @@
                             "operator": "=",
                             "question": "4.15",
                             "answerCoding": {
-                                "code": "Other",
                                 "display": "Other"
                             }
                         }
@@ -3093,30 +2929,35 @@
                     "answerOption": [
                         {
                             "valueCoding": {
+                                "system": "http://snomed.info/sct",
                                 "code": "84190002",
                                 "display": "Poor/minimal"
                             }
                         },
                         {
                             "valueCoding": {
+                                "system": "http://snomed.info/sct",
                                 "code": "21768001",
                                 "display": "Fair response"
                             }
                         },
                         {
                             "valueCoding": {
+                                "system": "http://snomed.info/sct",
                                 "code": "78469002",
                                 "display": "Good response"
                             }
                         },
                         {
                             "valueCoding": {
+                                "system": "http://snomed.info/sct",
                                 "code": "63432002",
                                 "display": "Excellent"
                             }
                         },
                         {
                             "valueCoding": {
+                                "system": "http://snomed.info/sct",
                                 "code": "399056007",
                                 "display": "Complete"
                             }
@@ -3134,7 +2975,6 @@
                             "operator": "=",
                             "question": "4.8",
                             "answerCoding":{
-                                "code": "Chronic low axial back pain greater than three months duration.",
                                 "display": "Chronic low axial back pain greater than three months duration."
                             }
                         }
@@ -3142,7 +2982,6 @@
                     "answerOption": [
                         {
                             "valueCoding": {
-                                "code": "182660006-266694003",
                                 "display": "Cold Therapy or Heat Therapy"
                             }
                         }, 
@@ -3154,37 +2993,31 @@
                         },
                         {
                             "valueCoding": {
-                                "code": "Physical Therapy",
                                 "display": "Physical Therapy"
                             }
                         }, 
                         {
                             "valueCoding": {
-                                "code": "Acupuncture",
                                 "display": "Acupuncture"
                             }
                         }, 
                         {
                             "valueCoding": {
-                                "code": "Spinal manipulation",
                                 "display": "Spinal manipulation"
                             }
                         }, 
                         {
                             "valueCoding": {
-                                "code": "Application of biopsychosocial treatment techniques",
                                 "display": "Application of biopsychosocial treatment techniques"
                             }
                         },
                         {
                             "valueCoding": {
-                                "code": "Diet",
                                 "display": "Diet"
                             }
                         },
                         {
                             "valueCoding": {
-                                "code": "Other",
                                 "display": "Other"
                             }
                         }
@@ -3201,7 +3034,6 @@
                             "operator": "=",
                             "question": "4.8",
                             "answerCoding":{
-                                "code": "Chronic neck pain greater than three months duration.",
                                 "display": "Chronic neck pain greater than three months duration."
                             }
                         }
@@ -3221,25 +3053,21 @@
                         },
                         {
                             "valueCoding": {
-                                "code": "Acupuncture",
                                 "display": "Acupuncture"
                             }
                         },
                         {
                             "valueCoding": {
-                                "code": "Application of biopsychosocial treatment techniques",
                                 "display": "Application of biopsychosocial treatment techniques"
                             }
                         },
                         {
                             "valueCoding": {
-                                "code": "Diet",
                                 "display": "Diet"
                             }
                         },
                         {
                             "valueCoding": {
-                                "code": "Other",
                                 "display": "Other"
                             }
                         }
@@ -3256,7 +3084,6 @@
                             "operator": "=",
                             "question": "4.17",
                             "answerCoding": {
-                                "code": "Other",
                                 "display": "Other"
                             }
                         },
@@ -3264,7 +3091,6 @@
                             "operator": "=",
                             "question": "4.18",
                             "answerCoding": {
-                                "code": "Other",
                                 "display": "Other"
                             }
                         }
@@ -3278,30 +3104,35 @@
                     "answerOption": [
                         {
                             "valueCoding": {
+                                "system": "http://snomed.info/sct",
                                 "code": "84190002",
                                 "display": "Poor/minimal"
                             }
                         },
                         {
                             "valueCoding": {
+                                "system": "http://snomed.info/sct",
                                 "code": "21768001",
                                 "display": "Fair response"
                             }
                         },
                         {
                             "valueCoding": {
+                                "system": "http://snomed.info/sct",
                                 "code": "78469002",
                                 "display": "Good response"
                             }
                         },
                         {
                             "valueCoding": {
+                                "system": "http://snomed.info/sct",
                                 "code": "63432002",
                                 "display": "Excellent"
                             }
                         },
                         {
                             "valueCoding": {
+                                "system": "http://snomed.info/sct",
                                 "code": "399056007",
                                 "display": "Complete"
                             }
@@ -3333,43 +3164,36 @@
                     "answerOption":[
                         {
                             "valueCoding":{
-                                "code": "N/A initial request",
                                 "display": "N/A initial request"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "1st diagnostic injection follow up",
                                 "display": "1st diagnostic injection follow up"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "2nd diagnostic injection follow up",
                                 "display": "2nd diagnostic injection follow up"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Initial RFA intervention follow up",
                                 "display": "Initial RFA intervention follow up"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Second/subsequent RFA intervention follow up",
                                 "display": "Second/subsequent RFA intervention follow up"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Therapeutic intervention follow up",
                                 "display": "Therapeutic intervention follow up"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Facet cyst Aspiration/Rupture pain follow up",
                                 "display": "Facet cyst Aspiration/Rupture pain follow up"
                             }
                         }
@@ -3394,7 +3218,6 @@
                             "operator": "=",
                             "question": "5.2",
                             "answerCoding": {
-                                "code": "1st diagnostic injection follow up",
                                 "display": "1st diagnostic injection follow up"
                             }
                         }
@@ -3410,7 +3233,6 @@
                             "operator": "=",
                             "question": "5.2",
                             "answerCoding": {
-                                "code": "1st diagnostic injection follow up",
                                 "display": "1st diagnostic injection follow up"
                             }
                         }
@@ -3435,7 +3257,6 @@
                             "operator": "=",
                             "question": "5.2",
                             "answerCoding": {
-                                "code": "2nd diagnostic injection follow up",
                                 "display": "2nd diagnostic injection follow up"
                             }
                         }
@@ -3451,7 +3272,6 @@
                             "operator": "=",
                             "question": "5.2",
                             "answerCoding": {
-                                "code": "2nd diagnostic injection follow up",
                                 "display": "2nd diagnostic injection follow up"
                             }
                         }
@@ -3467,7 +3287,6 @@
                             "operator": "=",
                             "question": "5.2",
                             "answerCoding": {
-                                "code": "Initial RFA intervention follow up",
                                 "display": "Initial RFA intervention follow up"
                             }
                         }
@@ -3483,7 +3302,6 @@
                             "operator": "=",
                             "question": "5.2",
                             "answerCoding": {
-                                "code": "Initial RFA intervention follow up",
                                 "display": "Initial RFA intervention follow up"
                             }
                         }
@@ -3499,7 +3317,6 @@
                             "operator": "=",
                             "question": "5.2",
                             "answerCoding": {
-                                "code": "Second/subsequent RFA intervention follow up",
                                 "display": "Second/subsequent RFA intervention follow up"
                             }
                         }
@@ -3515,7 +3332,6 @@
                             "operator": "=",
                             "question": "5.2",
                             "answerCoding": {
-                                "code": "Second/subsequent RFA intervention follow up",
                                 "display": "Second/subsequent RFA intervention follow up"
                             }
                         }
@@ -3540,7 +3356,6 @@
                             "operator": "=",
                             "question": "5.2",
                             "answerCoding": {
-                                "code": "Therapeutic intervention follow up",
                                 "display": "Therapeutic intervention follow up"
                             }
                         }
@@ -3556,7 +3371,6 @@
                             "operator": "=",
                             "question": "5.2",
                             "answerCoding": {
-                                "code": "Therapeutic intervention follow up",
                                 "display": "Therapeutic intervention follow up"
                             }
                         }
@@ -3572,7 +3386,6 @@
                             "operator": "=",
                             "question": "5.2",
                             "answerCoding": {
-                                "code": "Facet cyst Aspiration/Rupture pain follow up",
                                 "display": "Facet cyst Aspiration/Rupture pain follow up"
                             }
                         }
@@ -3588,7 +3401,6 @@
                             "operator": "=",
                             "question": "5.2",
                             "answerCoding": {
-                                "code": "Facet cyst Aspiration/Rupture pain follow up",
                                 "display": "Facet cyst Aspiration/Rupture pain follow up"
                             }
                         }
@@ -3604,7 +3416,6 @@
                             "operator": "=",
                             "question": "5.2",
                             "answerCoding": {
-                                "code": "1st diagnostic injection follow up",
                                 "display": "1st diagnostic injection follow up"
                             }
                         }
@@ -3620,7 +3431,6 @@
                             "operator": "=",
                             "question": "5.2",
                             "answerCoding": {
-                                "code": "2nd diagnostic injection follow up",
                                 "display": "2nd diagnostic injection follow up"
                             }
                         }
@@ -3636,7 +3446,6 @@
                             "operator": "=",
                             "question": "5.2",
                             "answerCoding": {
-                                "code": "Initial RFA intervention follow up",
                                 "display": "Initial RFA intervention follow up"
                             }
                         }
@@ -3652,7 +3461,6 @@
                             "operator": "=",
                             "question": "5.2",
                             "answerCoding": {
-                                "code": "Second/subsequent RFA intervention follow up",
                                 "display": "Second/subsequent RFA intervention follow up"
                             }
                         }
@@ -3668,7 +3476,6 @@
                             "operator": "=",
                             "question": "5.2",
                             "answerCoding": {
-                                "code": "Therapeutic intervention follow up",
                                 "display": "Therapeutic intervention follow up"
                             }
                         }
@@ -3685,7 +3492,6 @@
                             "operator": "=",
                             "question": "5.2",
                             "answerCoding": {
-                                "code": "1st diagnostic injection follow up",
                                 "display": "1st diagnostic injection follow up"
                             }
                         },
@@ -3693,7 +3499,6 @@
                             "operator": "=",
                             "question": "5.2",
                             "answerCoding": {
-                                "code": "2nd diagnostic injection follow up",
                                 "display": "2nd diagnostic injection follow up"
                             }
                         },
@@ -3701,7 +3506,6 @@
                             "operator": "=",
                             "question": "5.2",
                             "answerCoding": {
-                                "code": "Initial RFA intervention follow up",
                                 "display": "Initial RFA intervention follow up"
                             }
                         },
@@ -3709,7 +3513,6 @@
                             "operator": "=",
                             "question": "5.2",
                             "answerCoding": {
-                                "code": "Second/subsequent RFA intervention follow up",
                                 "display": "Second/subsequent RFA intervention follow up"
                             }
                         },
@@ -3717,7 +3520,6 @@
                             "operator": "=",
                             "question": "5.2",
                             "answerCoding": {
-                                "code": "Therapeutic intervention follow up",
                                 "display": "Therapeutic intervention follow up"
                             }
                         }
@@ -3731,43 +3533,36 @@
                     "answerOption":[
                         {
                             "valueCoding":{
-                                "code": "Numerical Pain Rating Scale (NRS) (0-10)",
                                 "display": "Numerical Pain Rating Scale (NRS) (0-10)"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Visual Analog Scale (VAS) Score",
                                 "display": "Visual Analog Scale (VAS) Score"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Wong-Baker FACES",
                                 "display": "Wong-Baker FACES"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Verbal Rating Scale for pain intensity",
                                 "display": "Verbal Rating Scale for pain intensity"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Pain Assessment in Advanced Dementia Scale (PAINAD)",
                                 "display": "Pain Assessment in Advanced Dementia Scale (PAINAD)"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Other",
                                 "display": "Other"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "No tool used",
                                 "display": "No tool used"
                             }
                         }
@@ -3777,7 +3572,6 @@
                             "operator": "!=",
                             "question": "5.2",
                             "answerCoding": {
-                                "code": "N/A initial request",
                                 "display": "N/A initial request"
                             }
                         }
@@ -3794,7 +3588,6 @@
                             "operator": "=",
                             "question": "5.5",
                             "answerCoding": {
-                                "code": "Numerical Pain Rating Scale (NRS) (0-10)",
                                 "display": "Numerical Pain Rating Scale (NRS) (0-10)"
                             }
                         },
@@ -3802,7 +3595,6 @@
                             "operator": "=",
                             "question": "5.5",
                             "answerCoding": {
-                                "code": "Visual Analog Scale (VAS) Score",
                                 "display": "Visual Analog Scale (VAS) Score"
                             }
                         },
@@ -3810,7 +3602,6 @@
                             "operator": "=",
                             "question": "5.5",
                             "answerCoding": {
-                                "code": "Wong-Baker FACES",
                                 "display": "Wong-Baker FACES"
                             }
                         },
@@ -3818,7 +3609,6 @@
                             "operator": "=",
                             "question": "5.5",
                             "answerCoding": {
-                                "code": "Verbal Rating Scale for pain intensity",
                                 "display": "Verbal Rating Scale for pain intensity"
                             }
                         },
@@ -3826,7 +3616,6 @@
                             "operator": "=",
                             "question": "5.5",
                             "answerCoding": {
-                                "code": "Pain Assessment in Advanced Dementia Scale (PAINAD)",
                                 "display": "Pain Assessment in Advanced Dementia Scale (PAINAD)"
                             }
                         },
@@ -3834,7 +3623,6 @@
                             "operator": "=",
                             "question": "5.5",
                             "answerCoding": {
-                                "code": "Other",
                                 "display": "Other"
                             }
                         }
@@ -3851,7 +3639,6 @@
                             "operator": "=",
                             "question": "5.5",
                             "answerCoding": {
-                                "code": "Numerical Pain Rating Scale (NRS) (0-10)",
                                 "display": "Numerical Pain Rating Scale (NRS) (0-10)"
                             }
                         },
@@ -3859,7 +3646,6 @@
                             "operator": "=",
                             "question": "5.5",
                             "answerCoding": {
-                                "code": "Visual Analog Scale (VAS) Score",
                                 "display": "Visual Analog Scale (VAS) Score"
                             }
                         },
@@ -3867,7 +3653,6 @@
                             "operator": "=",
                             "question": "5.5",
                             "answerCoding": {
-                                "code": "Wong-Baker FACES",
                                 "display": "Wong-Baker FACES"
                             }
                         },
@@ -3875,7 +3660,6 @@
                             "operator": "=",
                             "question": "5.5",
                             "answerCoding": {
-                                "code": "Verbal Rating Scale for pain intensity",
                                 "display": "Verbal Rating Scale for pain intensity"
                             }
                         },
@@ -3883,7 +3667,6 @@
                             "operator": "=",
                             "question": "5.5",
                             "answerCoding": {
-                                "code": "Pain Assessment in Advanced Dementia Scale (PAINAD)",
                                 "display": "Pain Assessment in Advanced Dementia Scale (PAINAD)"
                             }
                         },
@@ -3891,7 +3674,6 @@
                             "operator": "=",
                             "question": "5.5",
                             "answerCoding": {
-                                "code": "Other",
                                 "display": "Other"
                             }
                         }
@@ -3905,49 +3687,41 @@
                     "answerOption":[
                         {
                             "valueCoding":{
-                                "code": "Pain Disability Index",
                                 "display": "Pain Disability Index"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Oswestry Disability Index (ODI)",
                                 "display": "Oswestry Disability Index (ODI)"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Oswestry Low Back Pain Disability Questionnaire (OSW)",
                                 "display": "Oswestry Low Back Pain Disability Questionnaire (OSW)"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Quebec Low Back Pain Disability Scare (QUE)",
                                 "display": "Quebec Low Back Pain Disability Scare (QUE)"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Roland Morris Pain Scale",
                                 "display": "Roland Morris Pain Scale"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "Back Pain Functional Scale (BPFS)",
                                 "display": "Back Pain Functional Scale (BPFS)"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
                                 "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "No functional assessment tool used",
                                 "display": "No functional assessment tool used"
                             }
                         }
@@ -3957,7 +3731,6 @@
                             "operator": "!=",
                             "question": "5.2",
                             "answerCoding": {
-                                "code": "N/A initial request",
                                 "display": "N/A initial request"
                             }
                         }
@@ -3974,7 +3747,6 @@
                             "operator": "=",
                             "question": "5.6.1",
                             "answerCoding": {
-                                "code": "Pain Disability Index",
                                 "display": "Pain Disability Index"
                             }
                         },
@@ -3982,7 +3754,6 @@
                             "operator": "=",
                             "question": "5.6.1",
                             "answerCoding": {
-                                "code": "Quebec Low Back Pain Disability Scare (QUE)",
                                 "display": "Quebec Low Back Pain Disability Scare (QUE)"
                             }
                         },
@@ -3990,7 +3761,6 @@
                             "operator": "=",
                             "question": "5.6.1",
                             "answerCoding": {
-                                "code": "Roland Morris Pain Scale",
                                 "display": "Roland Morris Pain Scale"
                             }
                         },
@@ -3998,7 +3768,6 @@
                             "operator": "=",
                             "question": "5.6.1",
                             "answerCoding": {
-                                "code": "Back Pain Functional Scale (BPFS)",
                                 "display": "Back Pain Functional Scale (BPFS)"
                             }
                         }
@@ -4014,7 +3783,6 @@
                             "operator": "=",
                             "question": "5.6.1",
                             "answerCoding": {
-                                "code": "Oswestry Disability Index (ODI)",
                                 "display": "Oswestry Disability Index (ODI)"
                             }
                         }
@@ -4030,7 +3798,6 @@
                             "operator": "=",
                             "question": "5.6.1",
                             "answerCoding": {
-                                "code": "Oswestry Low Back Pain Disability Questionnaire (OSW)",
                                 "display": "Oswestry Low Back Pain Disability Questionnaire (OSW)"
                             }
                         }
@@ -4038,37 +3805,31 @@
                     "answerOption":[
                         {
                             "valueCoding":{
-                                "code": "0",
                                 "display": "No pain or can tolerate pain without pain killers"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "1",
                                 "display": "Able to manage pain without pain killers"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "2",
                                 "display": "Complete relief of pain with pain killers"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "3",
                                 "display": "Moderate relief of pain with pain killers"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "4",
                                 "display": "Very little relief of pain with pain killers"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "5",
                                 "display": "No relief/no effect, and does not use due to not helpful"
                             }
                         }
@@ -4084,7 +3845,6 @@
                             "operator": "=",
                             "question": "5.6.1",
                             "answerCoding": {
-                                "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
                                 "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
                             }
                         }
@@ -4092,31 +3852,26 @@
                     "answerOption":[
                         {
                             "valueCoding":{
-                                "code": "1",
                                 "display": "No pain"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "2",
                                 "display": "Mild"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "3",
                                 "display": "Moderate"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "4",
                                 "display": "Severe"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "5",
                                 "display": "Very Severe"
                             }
                         }
@@ -4133,7 +3888,6 @@
                             "operator": "=",
                             "question": "5.6.1",
                             "answerCoding": {
-                                "code": "Oswestry Disability Index (ODI)",
                                 "display": "Oswestry Disability Index (ODI)"
                             }
                         },
@@ -4141,7 +3895,6 @@
                             "operator": "=",
                             "question": "5.6.1",
                             "answerCoding": {
-                                "code": "Oswestry Low Back Pain Disability Questionnaire (OSW)",
                                 "display": "Oswestry Low Back Pain Disability Questionnaire (OSW)"
                             }
                         }
@@ -4149,31 +3902,26 @@
                     "answerOption":[
                         {
                             "valueCoding":{
-                                "code": "0 - 4 No disability",
                                 "display": "0 - 4 No disability"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "5 - 14 Mild disability",
                                 "display": "5 - 14 Mild disability"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "15 - 24 Moderate disability",
                                 "display": "15 - 24 Moderate disability"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "25 - 34 Severe disability",
                                 "display": "25 - 34 Severe disability"
                             }
                         },
                         {
                             "valueCoding":{
-                                "code": "35 - 50 Completely disabled",
                                 "display": "35 - 50 Completely disabled"
                             }
                         }
@@ -4189,7 +3937,6 @@
                             "operator": "=",
                             "question": "5.6.1",
                             "answerCoding": {
-                                "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
                                 "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
                             }
                         }

@@ -43,6 +43,11 @@ parameter "Observation" Observation
 
 context Patient
 
+define function DisplayAnswer(label String):
+  FHIR.Coding {
+    display: FHIR.string { value: label }
+  }
+
 define Request:
 	"ServiceRequest"
 
@@ -98,11 +103,11 @@ define "AdditionalServiceRequest":
     else null
 
 define "InterventionType":
-    if (("PrimaryServiceRequest" in "64490 Codes" or "PrimaryServiceRequest" in "64493 Codes") and "PreviousInjectionsCount" < 2 and "IsFacetCystRupture") then System.Code{ code: 'Facet Cyst Rupture', display: 'Facet Cyst Rupture'}
-    else if (("PrimaryServiceRequest" in "64490 Codes" or "PrimaryServiceRequest" in "64493 Codes") and "PreviousInjectionsCount" < 2 ) then System.Code{ code: 'Diagnostic', display: 'Diagnostic'}
-    else if (("PrimaryServiceRequest" in "64490 Codes" or "PrimaryServiceRequest" in "64493 Codes") and "PreviousInjectionsCount" >= 2 ) then System.Code{ code: 'Therapeutic', display: 'Therapeutic'}
-    else if ("PrimaryServiceRequest" in "64633 Codes" or "PrimaryServiceRequest" in "64635 Codes") then System.Code{ code: 'Radio Frequency Ablation', display: 'Radio Frequency Ablation'}
-    else System.Code{ code: 'None, Primary only', display: 'None, Primary only'}
+    if (("PrimaryServiceRequest" in "64490 Codes" or "PrimaryServiceRequest" in "64493 Codes") and "PreviousInjectionsCount" < 2 and "IsFacetCystRupture") then DisplayAnswer('Facet Cyst Rupture')
+    else if (("PrimaryServiceRequest" in "64490 Codes" or "PrimaryServiceRequest" in "64493 Codes") and "PreviousInjectionsCount" < 2 ) then DisplayAnswer('Diagnostic')
+    else if (("PrimaryServiceRequest" in "64490 Codes" or "PrimaryServiceRequest" in "64493 Codes") and "PreviousInjectionsCount" >= 2 ) then DisplayAnswer('Therapeutic')
+    else if ("PrimaryServiceRequest" in "64633 Codes" or "PrimaryServiceRequest" in "64635 Codes") then DisplayAnswer('Radio Frequency Ablation')
+    else DisplayAnswer('None, Primary only')
     
 define "PreviousInjectionsCount":
     Count([Procedure] P where FHIRHelpers."ToCode"(First(P.code.coding)) is not null and FHIRHelpers."ToCode"(First(P.code.coding)) = "ServiceRequestCode" )
@@ -127,16 +132,16 @@ define "IAorMBB":
     else 'IA'
 
 define "FirstOrSecondDiagnosis":
-    if "FirstDiagnosisInjectionDate" is not null and "IAorMBB" = 'IA' then 'Intraarticular (IA): second injection.'
-    else if "SecondDiagnosisInjectionDate" is not null and "IAorMBB" = 'MBB' then 'Medial branch block (MBB) second injection.'
-    else if "FirstDiagnosisInjectionDate" is null and "IAorMBB" = 'IA' then 'Intraarticular (IA): first injection.'
-    else if "SecondDiagnosisInjectionDate" is null and "IAorMBB" = 'MBB' then 'Medial branch block (MBB) second injection.'
+    if "FirstDiagnosisInjectionDate" is not null and "IAorMBB" = 'IA' then DisplayAnswer('Intraarticular (IA): second injection.')
+    else if "SecondDiagnosisInjectionDate" is not null and "IAorMBB" = 'MBB' then DisplayAnswer('Medial branch block (MBB) second injection.')
+    else if "FirstDiagnosisInjectionDate" is null and "IAorMBB" = 'IA' then DisplayAnswer('Intraarticular (IA): first injection.')
+    else if "SecondDiagnosisInjectionDate" is null and "IAorMBB" = 'MBB' then DisplayAnswer('Medial branch block (MBB) second injection.')
     else null
 
 define "PastProcedurePainFollowUp":
-    if "PreviousInjectionsCount" = 1 then '1st diagnostic injection follow up'
-    else if "PreviousInjectionsCount" = 2 then '2nd diagnostic injection follow up'
-    else if "PreviousInjectionsCount" = 3 then 'Therapeutic intervention follow up'
+    if "PreviousInjectionsCount" = 1 then DisplayAnswer('1st diagnostic injection follow up')
+    else if "PreviousInjectionsCount" = 2 then DisplayAnswer('2nd diagnostic injection follow up')
+    else if "PreviousInjectionsCount" = 3 then DisplayAnswer('Therapeutic intervention follow up')
     else null
 
 
@@ -151,15 +156,15 @@ define "IsSedationNecessary":
 
 define "SedationNecessary":
     if (First([Condition] C where FHIRHelpers."ToCode"(First(C.code.coding)) is not null and FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Medically complex conditions" ) is not null) 
-        then 'Patient has a medical condition that would interfere with the procedure.'
+        then DisplayAnswer('Patient has a medical condition that would interfere with the procedure.')
     else if (First([Condition] C where FHIRHelpers."ToCode"(First(C.code.coding)) is not null and FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Impaired executive functioning" ) is not null) 
-        then 'Patient does not have the cognitive capacity to cooperate.'
+        then DisplayAnswer('Patient does not have the cognitive capacity to cooperate.')
     else if (First([Condition] C where FHIRHelpers."ToCode"(First(C.code.coding)) is not null and FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Body disability AND/OR failure state" ) is not null) 
-        then 'Patient does not have the functional capacity to cooperate.'    
+        then DisplayAnswer('Patient does not have the functional capacity to cooperate.')    
     else if (First([Condition] C where FHIRHelpers."ToCode"(First(C.code.coding)) is not null and FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Impaired cognition" ) is not null) 
-        then 'Patient does not have the capacity to remain motionless during the procedure.'
+        then DisplayAnswer('Patient does not have the capacity to remain motionless during the procedure.')
     else if (First([Condition] C where FHIRHelpers."ToCode"(First(C.code.coding)) is not null and FHIRHelpers."ToCode"(First(C.code.coding)) ~ "Unable to maintain a position" ) is not null) 
-        then 'Patient is not able to tolerate remaining in a painful position for a prolonged period of time.'
+        then DisplayAnswer('Patient is not able to tolerate remaining in a painful position for a prolonged period of time.')
     else null
 
 define "PrimaryDiagnosisCervicalThoracicResource":
@@ -182,8 +187,8 @@ define "NonFacetPathologySourcesCondition":
 
 define "NonFacetPathologySourcesAssessment":
     if "NonFacetPathologySourcesCondition" is null 
-        then 'Negative for non-facet pathology sources:  Medical record indicates all of the following are ABSENT: active spine fractures, spine tumors, active infections, sciatica, hip osteoarthritis, sacroiliac impingement, untreated radiculopathy, neurogenic claudication, myofascial pain, compression fractures, disc herniation, osteophytes, rheumatoid arthritis, fibromyalgia.'
-    else 'Positive for non-facet pathology sources:  Medical record indicates one or more of the following are PRESENT: active spine fractures, spine tumors, active infections, sciatica, hip osteoarthritis, sacroiliac impingement, untreated radiculopathy, neurogenic claudication, myofascial pain, compression fractures, disc herniation, osteophytes, rheumatoid arthritis, fibromyalgia.'
+        then DisplayAnswer('Negative for non-facet pathology sources:  Medical record indicates all of the following are ABSENT: active spine fractures, spine tumors, active infections, sciatica, hip osteoarthritis, sacroiliac impingement, untreated radiculopathy, neurogenic claudication, myofascial pain, compression fractures, disc herniation, osteophytes, rheumatoid arthritis, fibromyalgia.')
+    else DisplayAnswer('Positive for non-facet pathology sources:  Medical record indicates one or more of the following are PRESENT: active spine fractures, spine tumors, active infections, sciatica, hip osteoarthritis, sacroiliac impingement, untreated radiculopathy, neurogenic claudication, myofascial pain, compression fractures, disc herniation, osteophytes, rheumatoid arthritis, fibromyalgia.')
 
 define "PrimaryDiagnosisCervicalThoracic": 
     First("PrimaryDiagnosisCervicalThoracicResource".code.coding)
@@ -195,8 +200,8 @@ define "AnatomicRestrictionForMBB":
     First("AnatomicRestrictionForMBBResource".code.coding)
 
 define "SupportiveFindingsForRequestedProcedure":
-    if ("PrimaryDiagnosisCervicalThoracicResource" is not null) then 'Neck pain and its progression.'
-    else if("PrimaryDiagnosisLumbarSacralResource" is not null) then 'Axial low back pain and its progression.'
+    if ("PrimaryDiagnosisCervicalThoracicResource" is not null) then DisplayAnswer('Neck pain and its progression.')
+    else if("PrimaryDiagnosisLumbarSacralResource" is not null) then DisplayAnswer('Axial low back pain and its progression.')
     else null
 
 define function "Normalize Interval"(choice Choice<FHIR.dateTime, FHIR.Age, FHIR.Period, FHIR.Range, FHIR.string>):
