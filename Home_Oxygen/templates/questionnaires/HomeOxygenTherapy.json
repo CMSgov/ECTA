@@ -332,31 +332,26 @@
               "answerOption": [
                 {
                   "valueCoding": {
-                    "code": "highaltitude",
                     "display": "Lives in or travels to high altitude"
                   }
                 },
                 {
                   "valueCoding": {
-                    "code": "Age",
                     "display": "Age"
                   }
                 },
                 {
                   "valueCoding": {
-                    "code": "Skin pigmentation",
                     "display": "Skin pigmentation"
                   }
                 },
                 {
                   "valueCoding": {
-                    "code": "o2capacity",
                     "display": "Reduced O2 carrying capacity"
                   }
                 },
                 {
                   "valueCoding": {
-                    "code": "Other",
                     "display": "Other"
                   }
                 }
@@ -369,7 +364,6 @@
               "operator": "=",
               "question": "3.1",
               "answerCoding": {
-                "code": "Other",
                 "display": "Other"
               }
             }
@@ -489,31 +483,26 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "Impairment of cognitive processes",
                 "display": "Impairment of cognitive processes"
               }
             },
             {
               "valueCoding": {
-                "code": "Nocturnal restlessness",
                 "display": "Nocturnal restlessness"
               }
             },
             {
               "valueCoding": {
-                "code": "Insomnia",
                 "display": "Insomnia"
               }
             },
             {
               "valueCoding": {
-                "code": "Morning headache",
                 "display": "Morning headache"
               }
             },
             {
               "valueCoding": {
-                "code": "Other",
                 "display": "Other"
               }
             }
@@ -527,7 +516,6 @@
               "operator": "=",
               "question": "3.7",
               "answerCoding": {
-                "code": "Other",
                 "display": "Other"
               }
             }
@@ -838,13 +826,11 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "Nocturnal oximetry",
                 "display": "Nocturnal oximetry"
               }
             },
             {
               "valueCoding": {
-                "code": "Titration Polysomnography",
                 "display": "Titration Polysomnography"
               }
             }
@@ -961,97 +947,81 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "COPD",
                 "display": "COPD"
               }
             },
             {
               "valueCoding": {
-                "code": "Heart failure",
                 "display": "Heart failure"
               }
             },
             {
               "valueCoding": {
-                "code": "COVID-19",
                 "display": "COVID-19"
               }
             },
             {
               "valueCoding": {
-                "code": "Hypoxemia",
                 "display": "Hypoxemia"
               }
             },
             {
               "valueCoding": {
-                "code": "Obstructive sleep apnea",
                 "display": "Obstructive sleep apnea"
               }
             },
             {
               "valueCoding": {
-                "code": "Chronic respiratory failure with hypoxia",
                 "display": "Chronic respiratory failure with hypoxia"
               }
             },
             {
               "valueCoding": {
-                "code": "Acute respiratory failure with hypoxia",
                 "display": "Acute respiratory failure with hypoxia"
               }
             },
             {
               "valueCoding": {
-                "code": "Interstitial pulmonary disease",
                 "display": "Interstitial pulmonary disease"
               }
             },
             {
               "valueCoding": {
-                "code": "Asthma",
                 "display": "Asthma"
               }
             },
             {
               "valueCoding": {
-                "code": "Pneumonia",
                 "display": "Pneumonia"
               }
             },
             {
               "valueCoding": {
-                "code": "Erythrocythemia",
                 "display": "Erythrocythemia"
               }
             },
             {
               "valueCoding": {
-                "code": "Cluster headaches",
                 "display": "Cluster headaches"
               }
             },
             {
               "valueCoding": {
-                "code": "Pulmonary hypertension",
                 "display": "Pulmonary hypertension"
               }
             },
             {
               "valueCoding": {
-                "code": "Dependent edema suggesting congestive heart failure",
                 "display": "Dependent edema suggesting congestive heart failure"
               }
             },
             {
               "valueCoding": {
-                "code": "Cor Pulmonale",
                 "display": "Cor Pulmonale"
               }
             },
             {
               "valueCoding": {
-                "code": "Others",
                 "display": "Others"
               }
             }
@@ -1072,7 +1042,6 @@
               "operator": "=",
               "question": "5.1",
               "answerCoding": {
-                "code": "Others",
                 "display": "Others"
               }
             }
@@ -1097,7 +1066,6 @@
               "operator": "=",
               "question": "5.1",
               "answerCoding": {
-                "code": "Others",
                 "display": "Others"
               }
             }
@@ -1122,7 +1090,6 @@
               "operator": "=",
               "question": "5.1",
               "answerCoding": {
-                "code": "Pulmonary hypertension",
                 "display": "Pulmonary hypertension"
               }
               
@@ -1131,7 +1098,6 @@
               "operator": "=",
               "question": "5.1",
               "answerCoding": {
-                "code": "Cor Pulmonale",
                 "display": "Cor Pulmonale"
               }
               
@@ -1146,31 +1112,26 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "Pulmonary Artery pressure",
                 "display": "Pulmonary Artery pressure"
               }
             },
             {
               "valueCoding": {
-                "code": "Gated blood pool scan",
                 "display": "Gated blood pool scan"
               }
             },
             {
               "valueCoding": {
-                "code": "Echocardiogram",
                 "display": "Echocardiogram"
               }
             },
             {
               "valueCoding": {
-                "code": "'p' Pulmonale on EKG",
                 "display": "'p' Pulmonale on EKG"
               }
             },
             {
               "valueCoding": {
-                "code": "Other",
                 "display": "Other"
               }
             }
@@ -1191,8 +1152,7 @@
               "operator": "=",
               "question": "5.1",
               "answerCoding": {
-                "code": "Erythrocytosis",
-                "display": "Erythrocytosis"
+                "display": "Erythrocythemia"
               }
             }
           ],
@@ -1260,31 +1220,26 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "Angina pectoris",
                 "display": "Angina pectoris in the absence of hypoxemia."
               }
             },
             {
               "valueCoding": {
-                "code": "Dyspnea",
                 "display": "Dyspnea without cor pulmonale or evidence of hypoxemia"
               }
             },
             {
               "valueCoding": {
-                "code": "Peripheral Vascular Disease",
                 "display": "Severe peripheral vascular disease resulting in clinically evident desaturation in one or more extremities but in the absence of systemic hypoxemia."
               }
             },
             {
               "valueCoding": {
-                "code": "Terminal Illness",
                 "display": "Terminal illnesses that do not affect the ability to breathe"
               }
             },
             {
               "valueCoding": {
-                "code": "None",
                 "display": "None"
               }
             }
@@ -1316,79 +1271,66 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "General",
                 "display": "General"
               }
             },
             {
               "valueCoding": {
-                "code": "HEENT",
                 "display": "HEENT"
               }
             },
             {
               "valueCoding": {
-                "code": "Pulmonary System",
                 "display": "Pulmonary System"
               }
             },
             {
               "valueCoding": {
-                "code": "Cardiovascular System",
                 "display": "Cardiovascular System"
               }
             },
             {
               "valueCoding": {
-                "code": "Integumental System",
                 "display": "Integumental System"
               }
             },
             {
               "valueCoding": {
-                "code": "Gastrointestinal System",
                 "display": "Gastrointestinal System"
               }
             },
             {
               "valueCoding": {
-                "code": "Musculoskeletal System",
                 "display": "Musculoskeletal System"
               }
             },
             {
               "valueCoding": {
-                "code": "Neurological System",
                 "display": "Neurological System"
               }
             },
             {
               "valueCoding": {
-                "code": "Psychiatric Conditions",
                 "display": "Psychiatric Conditions"
               }
             },
             {
               "valueCoding": {
-                "code": "Hematology",
                 "display": "Hematology"
               }
             },
             {
               "valueCoding": {
-                "code": "Immunology",
                 "display": "Immunology"
               }
             },
             {
               "valueCoding": {
-                "code": "Endocrine System",
                 "display": "Endocrine System"
               }
             },
             {
               "valueCoding": {
-                "code": "Other",
                 "display": "Other"
               }
             }
@@ -1409,7 +1351,6 @@
               "operator": "=",
               "question": "6.1",
               "answerCoding": {
-                "code": "Other",
                 "display": "Other"
               }
             }
@@ -1434,7 +1375,6 @@
               "operator": "=",
               "question": "6.1",
               "answerCoding": {
-                "code": "General",
                 "display": "General"
               }
             }
@@ -1447,55 +1387,46 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "weight gain",
                 "display": "weight gain"
               }
             },
             {
               "valueCoding": {
-                "code": "weight loss",
                 "display": "weight loss"
               }
             },
             {
               "valueCoding": {
-                "code": "sleeping problems",
                 "display": "sleeping problems"
               }
             },
             {
               "valueCoding": {
-                "code": "fatigue",
                 "display": "fatigue"
               }
             },
             {
               "valueCoding": {
-                "code": "fever",
                 "display": "fever"
               }
             },
             {
               "valueCoding": {
-                "code": "chills",
                 "display": "chills"
               }
             },
             {
               "valueCoding": {
-                "code": "night sweats / diaphoresi",
                 "display": "night sweats / diaphoresi"
               }
             },
             {
               "valueCoding": {
-                "code": "Other",
                 "display": "Other"
               }
             },
             {
               "valueCoding": {
-                "code": "None",
                 "display": "None"
               }
             }
@@ -1516,7 +1447,6 @@
               "operator": "=",
               "question": "6.2",
               "answerCoding": {
-                "code": "Other",
                 "display": "Other"
               }
             }
@@ -1541,7 +1471,6 @@
               "operator": "=",
               "question": "6.1",
               "answerCoding": {
-                "code": "HEENT",
                 "display": "HEENT"
               }
             }
@@ -1554,31 +1483,26 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "lumps",
                 "display": "lumps"
               }
             },
             {
               "valueCoding": {
-                "code": "pain on neck movement",
                 "display": "pain on neck movement"
               }
             },
             {
               "valueCoding": {
-                "code": "Nasal polyps",
                 "display": "Nasal polyps"
               }
             },
             {
               "valueCoding": {
-                "code": "Other",
                 "display": "Other"
               }
             },
             {
               "valueCoding": {
-                "code": "None",
                 "display": "None"
               }
             }
@@ -1599,7 +1523,6 @@
               "operator": "=",
               "question": "6.3",
               "answerCoding": {
-                "code": "Other",
                 "display": "Other"
               }
             }
@@ -1624,7 +1547,6 @@
               "operator": "=",
               "question": "6.1",
               "answerCoding": {
-                "code": "Pulmonary System",
                 "display": "Pulmonary System"
               }
             }
@@ -1637,49 +1559,41 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "cough",
                 "display": "cough"
               }
             },
             {
               "valueCoding": {
-                "code": "shortness of breath",
                 "display": "shortness of breath"
               }
             },
             {
               "valueCoding": {
-                "code": "pain",
                 "display": "pain"
               }
             },
             {
               "valueCoding": {
-                "code": "wheezing",
                 "display": "wheezing"
               }
             },
             {
               "valueCoding": {
-                "code": "hemoptysis",
                 "display": "hemoptysis"
               }
             },
             {
               "valueCoding": {
-                "code": "sputum production",
                 "display": "sputum production"
               }
             },
             {
               "valueCoding": {
-                "code": "Other",
                 "display": "Other"
               }
             },
             {
               "valueCoding": {
-                "code": "None",
                 "display": "None"
               }
             }
@@ -1700,7 +1614,6 @@
               "operator": "=",
               "question": "6.4",
               "answerCoding": {
-                "code": "Other",
                 "display": "Other"
               }
             }
@@ -1725,7 +1638,6 @@
               "operator": "=",
               "question": "6.1",
               "answerCoding": {
-                "code": "Cardiovascular System",
                 "display": "Cardiovascular System"
               }
             }
@@ -1738,79 +1650,66 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "chest pain",
                 "display": "chest pain"
               }
             },
             {
               "valueCoding": {
-                "code": "palpitations",
                 "display": "palpitations"
               }
             },
             {
               "valueCoding": {
-                "code": "orthopnea",
                 "display": "orthopnea"
               }
             },
             {
               "valueCoding": {
-                "code": "murmur",
                 "display": "murmur"
               }
             },
             {
               "valueCoding": {
-                "code": "syncope",
                 "display": "syncope"
               }
             },
             {
               "valueCoding": {
-                "code": "edema",
                 "display": "edema"
               }
             },
             {
               "valueCoding": {
-                "code": "claudication",
                 "display": "claudication"
               }
             },
             {
               "valueCoding": {
-                "code": "varicose veins",
                 "display": "varicose veins"
               }
             },
             {
               "valueCoding": {
-                "code": "thrombophlebitis",
                 "display": "thrombophlebitis"
               }
             },
             {
               "valueCoding": {
-                "code": "arterial ulcers",
                 "display": "arterial ulcers"
               }
             },
             {
               "valueCoding": {
-                "code": "venous stasis ulcers",
                 "display": "venous stasis ulcers"
               }
             },
             {
               "valueCoding": {
-                "code": "Other",
                 "display": "Other"
               }
             },
             {
               "valueCoding": {
-                "code": "None",
                 "display": "None"
               }
             }
@@ -1831,7 +1730,6 @@
               "operator": "=",
               "question": "6.5",
               "answerCoding": {
-                "code": "Other",
                 "display": "Other"
               }
             }
@@ -1856,7 +1754,6 @@
               "operator": "=",
               "question": "6.1",
               "answerCoding": {
-                "code": "Gastrointestinal System",
                 "display": "Gastrointestinal System"
               }
             }
@@ -1869,91 +1766,76 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "swallowing problems",
                 "display": "swallowing problems"
               }
             },
             {
               "valueCoding": {
-                "code": "abdominal pain",
                 "display": "abdominal pain"
               }
             },
             {
               "valueCoding": {
-                "code": "constipation",
                 "display": "constipation"
               }
             },
             {
               "valueCoding": {
-                "code": "diarrhea",
                 "display": "diarrhea"
               }
             },
             {
               "valueCoding": {
-                "code": "incontinence",
                 "display": "incontinence"
               }
             },
             {
               "valueCoding": {
-                "code": "nausea",
                 "display": "nausea"
               }
             },
             {
               "valueCoding": {
-                "code": "vomiting",
                 "display": "vomiting"
               }
             },
             {
               "valueCoding": {
-                "code": "ulcers",
                 "display": "ulcers"
               }
             },
             {
               "valueCoding": {
-                "code": "melena",
                 "display": "melena"
               }
             },
             {
               "valueCoding": {
-                "code": "rectal bleeding",
                 "display": "rectal bleeding"
               }
             },
             {
               "valueCoding": {
-                "code": "jaundice",
                 "display": "jaundice"
               }
             },
             {
               "valueCoding": {
-                "code": "heartburn",
                 "display": "heartburn"
               }
             },
             {
               "valueCoding": {
-                "code": "hematemesis",
                 "display": "hematemesis"
               }
             },
             {
               "valueCoding": {
-                "code": "Other",
                 "display": "Other"
               }
             },
             {
               "valueCoding": {
-                "code": "None",
                 "display": "None"
               }
             }
@@ -1974,7 +1856,6 @@
               "operator": "=",
               "question": "6.7",
               "answerCoding": {
-                "code": "Other",
                 "display": "Other"
               }
             }
@@ -1999,7 +1880,6 @@
               "operator": "=",
               "question": "6.1",
               "answerCoding": {
-                "code": "Musculoskeletal System",
                 "display": "Musculoskeletal System"
               }
             }
@@ -2012,91 +1892,76 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "pain",
                 "display": "pain"
               }
             },
             {
               "valueCoding": {
-                "code": "swelling",
                 "display": "swelling"
               }
             },
             {
               "valueCoding": {
-                "code": "stiffness",
                 "display": "stiffness"
               }
             },
             {
               "valueCoding": {
-                "code": "limitation of range of motion",
                 "display": "limitation of range of motion"
               }
             },
             {
               "valueCoding": {
-                "code": "arthritis",
                 "display": "arthritis"
               }
             },
             {
               "valueCoding": {
-                "code": "gout",
                 "display": "gout"
               }
             },
             {
               "valueCoding": {
-                "code": "cramps",
                 "display": "cramps"
               }
             },
             {
               "valueCoding": {
-                "code": "myalgia",
                 "display": "myalgia"
               }
             },
             {
               "valueCoding": {
-                "code": "fasciculation",
                 "display": "fasciculation"
               }
             },
             {
               "valueCoding": {
-                "code": "atrophy",
                 "display": "atrophy"
               }
             },
             {
               "valueCoding": {
-                "code": "fracture",
                 "display": "fracture"
               }
             },
             {
               "valueCoding": {
-                "code": "deformity",
                 "display": "deformity"
               }
             },
             {
               "valueCoding": {
-                "code": "weakness",
                 "display": "weakness"
               }
             },
             {
               "valueCoding": {
-                "code": "Other",
                 "display": "Other"
               }
             },
             {
               "valueCoding": {
-                "code": "None",
                 "display": "None"
               }
             }
@@ -2117,7 +1982,6 @@
               "operator": "=",
               "question": "6.8",
               "answerCoding": {
-                "code": "Other",
                 "display": "Other"
               }
             }
@@ -2142,7 +2006,6 @@
               "operator": "=",
               "question": "6.1",
               "answerCoding": {
-                "code": "Neurological System",
                 "display": "Neurological System"
               }
             }
@@ -2155,115 +2018,96 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "seizures",
                 "display": "seizures"
               }
             },
             {
               "valueCoding": {
-                "code": "poor memory",
                 "display": "poor memory"
               }
             },
             {
               "valueCoding": {
-                "code": "poor concentration",
                 "display": "poor concentration"
               }
             },
             {
               "valueCoding": {
-                "code": "numbness / tingling",
                 "display": "numbness / tingling"
               }
             },
             {
               "valueCoding": {
-                "code": "pins and needles sensation",
                 "display": "pins and needles sensation"
               }
             },
             {
               "valueCoding": {
-                "code": "hyperpathia",
                 "display": "hyperpathia"
               }
             },
             {
               "valueCoding": {
-                "code": "dysesthesia",
                 "display": "dysesthesia"
               }
             },
             {
               "valueCoding": {
-                "code": "weakness",
                 "display": "weakness"
               }
             },
             {
               "valueCoding": {
-                "code": "paralysis",
                 "display": "paralysis"
               }
             },
             {
               "valueCoding": {
-                "code": "tremors",
                 "display": "tremors"
               }
             },
             {
               "valueCoding": {
-                "code": "involuntary movements",
                 "display": "involuntary movements"
               }
             },
             {
               "valueCoding": {
-                "code": "unstable gait",
                 "display": "unstable gait"
               }
             },
             {
               "valueCoding": {
-                "code": "fall",
                 "display": "fall"
               }
             },
             {
               "valueCoding": {
-                "code": "vertigo",
                 "display": "vertigo"
               }
             },
             {
               "valueCoding": {
-                "code": "headache",
                 "display": "headache"
               }
             },
             {
               "valueCoding": {
-                "code": "stroke",
                 "display": "stroke"
               }
             },
             {
               "valueCoding": {
-                "code": "speech disorders",
                 "display": "speech disorders"
               }
             },
             {
               "valueCoding": {
-                "code": "Other",
                 "display": "Other"
               }
             },
             {
               "valueCoding": {
-                "code": "None",
                 "display": "None"
               }
             }
@@ -2284,7 +2128,6 @@
               "operator": "=",
               "question": "6.9",
               "answerCoding": {
-                "code": "Other",
                 "display": "Other"
               }
             }
@@ -2309,7 +2152,6 @@
               "operator": "=",
               "question": "6.1",
               "answerCoding": {
-                "code": "Psychiatric Conditions",
                 "display": "Psychiatric Conditions"
               }
             }
@@ -2322,49 +2164,41 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "hallucinations",
                 "display": "hallucinations"
               }
             },
             {
               "valueCoding": {
-                "code": "delusions",
                 "display": "delusions"
               }
             },
             {
               "valueCoding": {
-                "code": "anxiety",
                 "display": "anxiety"
               }
             },
             {
               "valueCoding": {
-                "code": "nervous breakdown",
                 "display": "nervous breakdown"
               }
             },
             {
               "valueCoding": {
-                "code": "mood changes",
                 "display": "mood changes"
               }
             },
             {
               "valueCoding": {
-                "code": "depression",
                 "display": "depression"
               }
             },
             {
               "valueCoding": {
-                "code": "Other",
                 "display": "Other"
               }
             },
             {
               "valueCoding": {
-                "code": "None",
                 "display": "None"
               }
             }
@@ -2385,7 +2219,6 @@
               "operator": "=",
               "question": "6.10",
               "answerCoding": {
-                "code": "Other",
                 "display": "Other"
               }
             }
@@ -2410,7 +2243,6 @@
               "operator": "=",
               "question": "6.1",
               "answerCoding": {
-                "code": "Hematology",
                 "display": "Hematology"
               }
             }
@@ -2423,31 +2255,26 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "anemia",
                 "display": "anemia"
               }
             },
             {
               "valueCoding": {
-                "code": "bruising",
                 "display": "bruising"
               }
             },
             {
               "valueCoding": {
-                "code": "bleeding disorders (conditional)",
                 "display": "bleeding disorders (conditional)"
               }
             },
             {
               "valueCoding": {
-                "code": "Other",
                 "display": "Other"
               }
             },
             {
               "valueCoding": {
-                "code": "None",
                 "display": "None"
               }
             }
@@ -2468,7 +2295,6 @@
               "operator": "=",
               "question": "6.11",
               "answerCoding": {
-                "code": "Other",
                 "display": "Other"
               }
             }
@@ -2493,7 +2319,6 @@
               "operator": "=",
               "question": "6.1",
               "answerCoding": {
-                "code": "Endocrine System",
                 "display": "Endocrine System"
               }
             }
@@ -2506,37 +2331,31 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "heat or cold intolerance",
                 "display": "heat or cold intolerance"
               }
             },
             {
               "valueCoding": {
-                "code": "diabetes",
                 "display": "diabetes"
               }
             },
             {
               "valueCoding": {
-                "code": "lipid disorders",
                 "display": "lipid disorders"
               }
             },
             {
               "valueCoding": {
-                "code": "goiter",
                 "display": "goiter"
               }
             },
             {
               "valueCoding": {
-                "code": "Other",
                 "display": "Other"
               }
             },
             {
               "valueCoding": {
-                "code": "None",
                 "display": "None"
               }
             }
@@ -2557,7 +2376,6 @@
               "operator": "=",
               "question": "6.12",
               "answerCoding": {
-                "code": "Other",
                 "display": "Other"
               }
             }
@@ -2582,7 +2400,6 @@
               "operator": "=",
               "question": "6.1",
               "answerCoding": {
-                "code": "Integumental System",
                 "display": "Integumental System"
               }
             }
@@ -2595,37 +2412,31 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "Acne",
                 "display": "Acne"
               }
             },
             {
               "valueCoding": {
-                "code": "Atopic Dermatitis",
                 "display": "Atopic Dermatitis"
               }
             },
             {
               "valueCoding": {
-                "code": "Cellulitis",
                 "display": "Cellulitis"
               }
             },
             {
               "valueCoding": {
-                "code": "Vitiligo",
                 "display": "Vitiligo"
               }
             },
             {
               "valueCoding": {
-                "code": "Other",
                 "display": "Other"
               }
             },
             {
               "valueCoding": {
-                "code": "None",
                 "display": "None"
               }
             }
@@ -2646,7 +2457,6 @@
               "operator": "=",
               "question": "6.13",
               "answerCoding": {
-                "code": "Other",
                 "display": "Other"
               }
             }
@@ -2671,7 +2481,6 @@
               "operator": "=",
               "question": "6.1",
               "answerCoding": {
-                "code": "Immunology",
                 "display": "Immunology"
               }
             }
@@ -2684,37 +2493,31 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "Rheumatoid Arthritis",
                 "display": "Rheumatoid Arthritis"
               }
             },
             {
               "valueCoding": {
-                "code": "Multiple Sclerosis",
                 "display": "Multiple Sclerosis"
               }
             },
             {
               "valueCoding": {
-                "code": "Celiac disease",
                 "display": "Celiac disease"
               }
             },
             {
               "valueCoding": {
-                "code": "Inflammatory bowel disease",
                 "display": "Inflammatory bowel disease"
               }
             },
             {
               "valueCoding": {
-                "code": "Other",
                 "display": "Other"
               }
             },
             {
               "valueCoding": {
-                "code": "None",
                 "display": "None"
               }
             }
@@ -2735,7 +2538,6 @@
               "operator": "=",
               "question": "6.14",
               "answerCoding": {
-                "code": "Other",
                 "display": "Other"
               }
             }
@@ -2959,19 +2761,16 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "At rest/Awake",
                 "display": "At rest/Awake"
               }
             },
             {
               "valueCoding": {
-                "code": "During exertion",
                 "display": "During exertion"
               }
             },
             {
               "valueCoding": {
-                "code": "During Sleep",
                 "display": "During Sleep"
               }
             }
@@ -3014,49 +2813,41 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "Nasal cannula",
                 "display": "Nasal cannula"
               }
             },
             {
               "valueCoding": {
-                "code": "Non-rebreather",
                 "display": "Non-rebreather"
               }
             },
             {
               "valueCoding": {
-                "code": "Ventilator",
                 "display": "Ventilator"
               }
             },
             {
               "valueCoding": {
-                "code": "Mask",
                 "display": "Mask"
               }
             },
             {
               "valueCoding": {
-                "code": "PAP bleed in",
                 "display": "PAP bleed in"
               }
             },
             {
               "valueCoding": {
-                "code": "Oxygen conserving device",
                 "display": "Oxygen conserving device"
               }
             },
             {
               "valueCoding": {
-                "code": "High flow oxygen therapy",
                 "display": "High flow oxygen therapy"
               }
             },
             {
               "valueCoding": {
-                "code": "Other",
                 "display": "Other"
               }
             }
@@ -3077,26 +2868,22 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "Initial or original order for certification",
                 "display": "Initial or original order for certification"
               },
               "initialSelected": true
             },
             {
               "valueCoding": {
-                "code": "Change in status",
                 "display": "Change in status"
               }
             },
             {
               "valueCoding": {
-                "code": "Revision or change in equipment",
                 "display": "Revision or change in equipment"
               }
             },
             {
               "valueCoding": {
-                "code": "Replacement",
                 "display": "Replacement"
               }
             }
@@ -3112,7 +2899,6 @@
               "operator": "=",
               "question": "10.1",
               "answerCoding": {
-                "code": "Change in status",
                 "display": "Change in status"
               }
             }
@@ -3121,19 +2907,16 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "Patient relocated",
                 "display": "Patient relocated"
               }
             },
             {
               "valueCoding": {
-                "code": "Different supplier",
                 "display": "Different supplier"
               }
             },
             {
               "valueCoding": {
-                "code": "Other",
                 "display": "Other"
               }
             }
@@ -3150,7 +2933,6 @@
               "operator": "=",
               "question": "10.1",
               "answerCoding": {
-                "code": "Revision or change in equipment",
                 "display": "Revision or change in equipment"
               }
             }
@@ -3158,19 +2940,16 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "New Physician order",
                 "display": "New Physician order"
               }
             },
             {
               "valueCoding": {
-                "code": "beneficiary requested upgrade with signed ABN",
                 "display": "beneficiary requested upgrade with signed ABN"
               }
             },
             {
               "valueCoding": {
-                "code": "Other",
                 "display": "Other"
               }
             }
@@ -3187,7 +2966,6 @@
               "operator": "=",
               "question": "10.1",
               "answerCoding": {
-                "code": "Replacement",
                 "display": "Replacement"
               }
             }
@@ -3195,19 +2973,16 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "lost or stolen",
                 "display": "lost or stolen"
               }
             },
             {
               "valueCoding": {
-                "code": "end of reasonable useful lifetime (5 years)",
                 "display": "end of reasonable useful lifetime (5 years)"
               }
             },
             {
               "valueCoding": {
-                "code": "irreparable damage",
                 "display": "irreparable damage"
               }
             }

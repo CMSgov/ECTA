@@ -224,6 +224,12 @@ code "Varicose vein finding (finding)": '271652003' from "SNOMEDCT" display 'Var
 
 context Patient
 
+define function DisplayAnswer(label String):
+  FHIR.Coding {
+    display: FHIR.string { value: label }
+  }
+
+
 // CQL DEFINITIONS NEEDED FOR ORDER DETAILS SECTION OF THE QUESTIONNAIRE
 
 define "H_O_DeviceRequest":
@@ -426,11 +432,12 @@ define IsABGPOInaccuracy:
   TravelToHigherElevation or O2CarryingCapacity or SkinPigmentation
 
 define ABGPOInaccuracyReason:
-  {
-    (if TravelToHigherElevation then 'highaltitude' else ''),
-    (if O2CarryingCapacity then 'o2capacity' else ''),
-    (if SkinPigmentation then 'Skin pigmentation' else '')
-  }
+  ({
+    (if TravelToHigherElevation then DisplayAnswer('Lives in or travels to high altitude') else null),
+    (if O2CarryingCapacity then DisplayAnswer('Reduced O2 carrying capacity') else null),
+    (if SkinPigmentation then DisplayAnswer('Skin pigmentation') else null)
+  }) Answer
+    where Answer is not null
 
 define HypoxemiaConditionResource:
   First( [Condition] Cond
@@ -471,15 +478,16 @@ define PresenceOfNocturnalSymptoms:
   else false
 
 define NocturnalSymptomsAnswer:
-  { 
-    ( if ( "ToCode"(First("NocturnalSymptomsResource".code.coding)) = "Morning headache (finding)" ) then 'Morning headache' 
-      else ''
-    ), ( if ( "ToCode"(First("NocturnalSymptomsResource".code.coding)) = "Restlessness and agitation" ) then 'Nocturnal restlessness' 
-      else ''
-    ), ( if ( "ToCode"(First("NocturnalSymptomsResource".code.coding)) = "I tossed and turned at night in past 7 days [PROMIS]" ) then 'Insomnia' 
-      else ''
+  ({ 
+    ( if ( "ToCode"(First("NocturnalSymptomsResource".code.coding)) = "Morning headache (finding)" ) then DisplayAnswer('Morning headache') 
+      else null
+    ), ( if ( "ToCode"(First("NocturnalSymptomsResource".code.coding)) = "Restlessness and agitation" ) then DisplayAnswer('Nocturnal restlessness') 
+      else null
+    ), ( if ( "ToCode"(First("NocturnalSymptomsResource".code.coding)) = "I tossed and turned at night in past 7 days [PROMIS]" ) then DisplayAnswer('Insomnia') 
+      else null
     )
-  }
+  }) Answer
+    where Answer is not null
 
 define OSA:
   First ( [Condition] Cond
@@ -611,12 +619,13 @@ define TitrationPolysomnographyResource:
           where "ToCode"(First(Proc.code.coding)) = "Nocturnal continuous positive airway pressure (regime/therapy)")
 
 define NocturnalRestlessnessStudy:
-{ 
+({ 
    (if "OvernightOximetry" is not null 
-          then 'Nocturnal oximetry'else ''),
+          then DisplayAnswer('Nocturnal oximetry')else null),
    (if "TitrationPolysomnographyResource" is not null
-          then 'Titration Polysomnography' else '')
-}
+          then DisplayAnswer('Titration Polysomnography') else null)
+}) Answer
+    where Answer is not null
 
 //----------------- Start of definitions regarding O2 and PaO2 are the readings of oxygen taken during PulseOximetry( Nocturnal ).-------------------
 
@@ -780,55 +789,56 @@ define RecurringCHFCorPulmonaleResource:
   )
 
 define PrimaryDiagnosis:
-  {
+  ({
     if "COPDResource" is not null
-    then 'COPD' else null,  
+    then DisplayAnswer('COPD') else null,  
     // Missing Code for Heart Failure
     // Missing Code for COVID-19
     if "HypoxemiaResource" is not null
-    then 'Hypoxemia' else null,
+    then DisplayAnswer('Hypoxemia') else null,
     if "OSA" is not null
-    then 'Obstructive sleep apnea' else null,
+    then DisplayAnswer('Obstructive sleep apnea') else null,
     if "ChronicrespiratoryFailureHypoxiaResource" is not null
-    then 'Chronic respiratory failure with hypoxia' else null,
+    then DisplayAnswer('Chronic respiratory failure with hypoxia') else null,
     // if "BronchiectasisResource" is not null
-    // then 'Bronchiectasis' else null,
+    // then DisplayAnswer('Bronchiectasis') else null,
     // Missing Acute respiratory failure with hypoxia
     if "DiffuseInterstitialLungDiseaseResource" is not null
-    then 'Interstitial pulmonary disease' else null,
+    then DisplayAnswer('Interstitial pulmonary disease') else null,
     /*
     Missing Asthma and Pneumonia
     if "CysticFibrosisResource" is not null
-    then 'Cystic Fibrosis' else null,
+    then DisplayAnswer('Cystic Fibrosis') else null,
     if "PulmonaryNeoplasmResource" is not null
-    then 'Pulmonary neoplasm' else null,
+    then DisplayAnswer('Pulmonary neoplasm') else null,
     */
     if "FamilialErythrocythemiaResource" is not null or "ErythrocythemiaResource" is not null
-    then 'Erythrocythemia' else null,
+    then DisplayAnswer('Erythrocythemia') else null,
     if "ClusterHeadachesResource" is not null
-    then 'Cluster headaches' else null,
+    then DisplayAnswer('Cluster headaches') else null,
     if "PulmonaryHypertension" is not null
-    then 'Pulmonary hypertension' else null,
+    then DisplayAnswer('Pulmonary hypertension') else null,
     if "DependentEdemaResource" is not null
-    then 'Dependent edema suggesting congestive heart failure' else null,
+    then DisplayAnswer('Dependent edema suggesting congestive heart failure') else null,
     if "RecurringCHFCorPulmonaleResource" is not null
-    then 'Cor Pulmonale' else null
-  }
+    then DisplayAnswer('Cor Pulmonale') else null
+  }) Answer
+    where Answer is not null
 
 define SecondaryToCORPulmonale:
   if exists ( [Observation] Obs
       where "ToCode"(First(Obs.code.coding)) = "Pulmonary artery pressure monitoring (regime/therapy)"
       and Obs.status.value = 'final') 
-    then 'Pulmonary artery pressure monitoring (regime/therapy)' 
+    then DisplayAnswer('Pulmonary Artery pressure') 
   else if exists ( [Observation] Obs
       where "ToCode"(First(Obs.code.coding)) = "Cardiac blood pool imaging, gated equilibrium"
       and Obs.status.value = 'final')
-    then 'Gated blood pool scan' 
+    then DisplayAnswer('Gated blood pool scan') 
   else if exists ( [Observation] Obs
       where "ToCode"(First(Obs.code.coding)) = "P pulmonale by electrocardiogram"
       and Obs.status.value = 'final')
-    then '“p” Pulmonale on EKG'
-  else ''
+    then DisplayAnswer('\'p\' Pulmonale on EKG')
+  else null
 
 define HematocritResultResource:
   First([Observation] Obs
@@ -867,14 +877,14 @@ define TerminalIllnessResource:
 
 define Group4Criteria:
   if "AnginaPectorisResource" is not null
-    then 'Angina pectoris' 
+    then DisplayAnswer('Angina pectoris in the absence of hypoxemia.') 
     else if "DyspneaResource" is not null
-    then 'Dyspnea' 
+    then DisplayAnswer('Dyspnea without cor pulmonale or evidence of hypoxemia') 
     else if "PeripheralVascularDiseaseResource" is not null
-    then 'Peripheral Vascular Disease' 
+    then DisplayAnswer('Severe peripheral vascular disease resulting in clinically evident desaturation in one or more extremities but in the absence of systemic hypoxemia.') 
     else if "TerminalIllnessResource" is not null
-    then 'Terminal Illness'
-    else ''
+    then DisplayAnswer('Terminal illnesses that do not affect the ability to breathe')
+    else null
 
 // END OF CQL DEFINITIONS NEEDED FOR DIAGNOSIS
 
@@ -932,20 +942,20 @@ define NightSweatsResource:
 
 define "GeneralSymptoms":
   if "WeightGainResource" is not null 
-  then 'weight gain' 
+  then DisplayAnswer('weight gain') 
     else if "WeightLossResource" is not null
-  then 'weight loss' 
+  then DisplayAnswer('weight loss') 
     else if "SleepingProblemsResource" is not null
-  then 'sleeping problems' 
+  then DisplayAnswer('sleeping problems') 
     else if "FatigueResource" is not null
-  then 'fatigue' 
+  then DisplayAnswer('fatigue') 
     else if "FeverResource" is not null
-  then 'fever' 
+  then DisplayAnswer('fever') 
     else if "ChillsResource" is not null
-  then 'chills' 
+  then DisplayAnswer('chills') 
     else if "NightSweatsResource" is not null 
-  then 'night sweats / diaphoresi' 
-    else 'None'
+  then DisplayAnswer('night sweats / diaphoresi') 
+    else DisplayAnswer('None')
 
 define PainOnNeckMovementResource:
   First( [Condition] Cond
@@ -959,10 +969,10 @@ define LumpsResource:
 
 define NeckConditions:
   if "PainOnNeckMovementResource" is not null 
-  then 'pain on neck movement' 
+  then DisplayAnswer('pain on neck movement') 
   else if "LumpsResource" is not null 
-  then 'lumps' 
-  else 'None'
+  then DisplayAnswer('lumps') 
+  else DisplayAnswer('None')
 
 define CoughResource:
   First( [Condition] Cond
@@ -1008,18 +1018,18 @@ define SputumProductionResource:
 
 define PulmonaryConditions:
   if "CoughResource" is not null
-  then 'cough' 
+  then DisplayAnswer('cough') 
   else if "ShortnessOfBreathResource" is not null 
-  then 'shortness of breath' 
+  then DisplayAnswer('shortness of breath') 
   else if "ChestPainICDResource" is not null 
-  then 'pain' 
+  then DisplayAnswer('pain') 
   else if "WheezingResource" is not null
-  then 'wheezing' 
+  then DisplayAnswer('wheezing') 
   else if "HemoptysisResource" is not null
-  then 'hemoptysis' 
+  then DisplayAnswer('hemoptysis') 
   else if "SputumProductionResource" is not null
-  then 'sputum production' 
-  else 'None'
+  then DisplayAnswer('sputum production') 
+  else DisplayAnswer('None')
 
 define ChestPainResource:
   First( [Condition] Cond
@@ -1093,26 +1103,26 @@ define UlcersResource:
 
 define CardiacConditions:
   if "ChestPainResource" is not null 
-  then 'chest pain' 
+  then DisplayAnswer('chest pain') 
   else if "PalpitationsResource" is not null
-  then 'palpitations' 
+  then DisplayAnswer('palpitations') 
   else if "OrthopneaResource" is not null
-  then 'orthopnea' 
+  then DisplayAnswer('orthopnea') 
   else if "MurmurResource" is not null
-  then 'murmur' 
+  then DisplayAnswer('murmur') 
   else if "SyncopeResource" is not null 
-  then 'syncope' 
+  then DisplayAnswer('syncope') 
   else if "EdemaResource" is not null
-  then 'edema' 
+  then DisplayAnswer('edema') 
   else if "ClaudicationResource" is not null
-  then 'claudication' 
+  then DisplayAnswer('claudication') 
   else if "VaricodeVeinsResource" is not null
-  then 'varicose veins' 
+  then DisplayAnswer('varicose veins') 
   else if "ThrombophlebitisResource" is not null
-  then 'thrombophlebitis' 
+  then DisplayAnswer('thrombophlebitis') 
   else if "UlcersResource" is not null
-  then 'ulcers'
-    else 'None'
+  then DisplayAnswer('ulcers')
+    else DisplayAnswer('None')
 
 define AnemiaResource:
   First( [Condition] Cond
@@ -1137,12 +1147,12 @@ define BleedingDisorderResource:
 
 define HematologyConditions:
   if "AnemiaResource" is not null 
-  then 'anemia' 
+  then DisplayAnswer('anemia') 
   else if "BruisingResource" is not null
-  then 'bruising' 
+  then DisplayAnswer('bruising') 
   else if "BleedingDisorderResource" is not null
-  then 'bleeding disorders (conditional)' 
-    else 'None'
+  then DisplayAnswer('bleeding disorders (conditional)') 
+    else DisplayAnswer('None')
 
 define DiabetesResource:
   First( [Condition] Cond
@@ -1167,12 +1177,12 @@ define LipidDisordersResource:
 
 define EndocrineConditions:
   if "DiabetesResource" is not null 
-  then 'diabetes' 
+  then DisplayAnswer('diabetes') 
   else if "GoiterResource" is not null
-  then 'goiter' 
+  then DisplayAnswer('goiter') 
   else if "LipidDisordersResource" is not null
-  then 'lipid disorders' 
-    else 'None'
+  then DisplayAnswer('lipid disorders') 
+    else DisplayAnswer('None')
 
 define HallucinationsResource:
   First( [Condition] Cond
@@ -1211,16 +1221,16 @@ define MoodChangesResource:
 
 define PsychiatricConditions:
   if "HallucinationsResource" is not null
-  then 'hallucinations' 
+  then DisplayAnswer('hallucinations') 
   else if "DelusionsResource" is not null 
-  then 'delusions' 
+  then DisplayAnswer('delusions') 
   else if "AnxietyResource" is not null
-  then 'anxiety' 
+  then DisplayAnswer('anxiety') 
   else if "NervousBreakdownResource" is not null 
-  then 'nervous breakdown' 
+  then DisplayAnswer('nervous breakdown') 
     else if "MoodChangesResource" is not null 
-  then 'mood changes' 
-    else 'None'
+  then DisplayAnswer('mood changes') 
+    else DisplayAnswer('None')
 
 define SeizuresResource:
   First( [Condition] Cond
@@ -1344,40 +1354,40 @@ define SpeechDisorders:
 
 define NeurologicalConditions:
   if "SeizuresResource" is not null  
-  then 'seizures' 
+  then DisplayAnswer('seizures') 
   else if "PoorMemoryResource" is not null 
-  then 'poor memory' 
+  then DisplayAnswer('poor memory') 
   else if "PoorConcentrationResource" is not null
-  then 'poor concentration' 
+  then DisplayAnswer('poor concentration') 
   else if "NumbnessAndTinglingResource" is not null 
-  then 'numbness / tingling' 
+  then DisplayAnswer('numbness / tingling') 
   else if "PinsAndNeedlesSensationResource" is not null 
-  then 'pins and needles sensation' 
+  then DisplayAnswer('pins and needles sensation') 
   else if "HyperpathiaResource" is not null 
-  then 'hyperpathia' 
+  then DisplayAnswer('hyperpathia') 
   else if "DysesthesiaResource" is not null
-  then 'dysesthesia' 
+  then DisplayAnswer('dysesthesia') 
   else if "WeaknessResource" is not null
-  then 'weakness' 
+  then DisplayAnswer('weakness') 
   else if "ParalysisResource" is not null
-  then 'paralysis' 
+  then DisplayAnswer('paralysis') 
   else if "TremorsResource" is not null 
-  then 'tremors' 
+  then DisplayAnswer('tremors') 
   else if "InvoluntaryMovementsResource" is not null
-  then 'involuntary movements' 
+  then DisplayAnswer('involuntary movements') 
   else if "UnstableGaitResource" is not null
-  then 'unstable gait' 
+  then DisplayAnswer('unstable gait') 
   else if "FallResource" is not null
-  then 'fall' 
+  then DisplayAnswer('fall') 
   else if "VertigoResource" is not null
-  then 'vertigo' 
+  then DisplayAnswer('vertigo') 
   else if "HeadacheResource" is not null
-  then 'headache' 
+  then DisplayAnswer('headache') 
   else if "StrokeResource" is not null
-  then 'stroke' 
+  then DisplayAnswer('stroke') 
   else if "SpeechDisorders" is not null
-  then 'speech disorders' 
-  else 'None'
+  then DisplayAnswer('speech disorders') 
+  else DisplayAnswer('None')
 
 define PainResource:
   First( [Condition] Cond
@@ -1472,32 +1482,32 @@ define MuscleWeaknessResource:
 
 define MusculoskeletalConditions:
   if "PainResource" is not null 
-  then 'pain' 
+  then DisplayAnswer('pain') 
   else if "SwellingResource" is not null
-  then 'swelling' 
+  then DisplayAnswer('swelling') 
   else if "StiffnessResource" is not null
-  then 'stiffness' 
+  then DisplayAnswer('stiffness') 
   else if "LimitationOfROMResource" is not null
-  then 'limitation of range of motion' 
+  then DisplayAnswer('limitation of range of motion') 
   else if "ArthritisResource" is not null
-  then 'arthritis' 
+  then DisplayAnswer('arthritis') 
   else if "GoutResource" is not null
-  then 'gout' 
+  then DisplayAnswer('gout') 
   else if "CrampsResource" is not null
-  then 'cramps' 
+  then DisplayAnswer('cramps') 
   else if "MyalgiaResource" is not null
-  then 'myalgia' 
+  then DisplayAnswer('myalgia') 
   else if "FasciculationResource" is not null
-  then 'fasciculation' 
+  then DisplayAnswer('fasciculation') 
   else if "AtrophyResource" is not null
-  then 'atrophy' 
+  then DisplayAnswer('atrophy') 
   else if "FractureResource" is not null
-  then 'fracture' 
+  then DisplayAnswer('fracture') 
   else if "DeformityResource" is not null
-  then 'deformity' 
+  then DisplayAnswer('deformity') 
   else if "MuscleWeaknessResource" is not null
-  then 'weakness' 
-    else 'None'
+  then DisplayAnswer('weakness') 
+    else DisplayAnswer('None')
 
 define SwallowingProblemsResource:
   First( [Condition] Cond
@@ -1592,32 +1602,32 @@ define HematemesisResource:
 
 define GastrointestinalConditions:
   if "SwallowingProblemsResource" is not null
-  then 'swallowing problems' 
+  then DisplayAnswer('swallowing problems') 
   else if "AbdominalPainResource" is not null
-  then 'abdominal pain' 
+  then DisplayAnswer('abdominal pain') 
   else if "ConstipationResource" is not null
-  then 'constipation' 
+  then DisplayAnswer('constipation') 
   else if "DiarrheaResource" is not null
-  then 'diarrhea' 
+  then DisplayAnswer('diarrhea') 
   else if "IncontinenceResource" is not null
-  then 'incontinence' 
+  then DisplayAnswer('incontinence') 
   else if "NauseaResource" is not null
-  then 'nausea' 
+  then DisplayAnswer('nausea') 
   else if "VomitingResource" is not null
-  then 'vomiting' 
+  then DisplayAnswer('vomiting') 
   else if "UlcerResource" is not null
-  then 'ulcers' 
+  then DisplayAnswer('ulcers') 
   else if "MelenaResource" is not null
-  then 'melena' 
+  then DisplayAnswer('melena') 
   else if "RectalBleedingResource" is not null
-  then 'rectal bleeding' 
+  then DisplayAnswer('rectal bleeding') 
   else if "HeartburnResource" is not null
-  then 'heartburn' 
+  then DisplayAnswer('heartburn') 
   else if "JaundiceResource" is not null
-  then 'jaundice' 
+  then DisplayAnswer('jaundice') 
   else if "HematemesisResource" is not null
-  then 'hematemesis' 
-  else 'None'
+  then DisplayAnswer('hematemesis') 
+  else DisplayAnswer('None')
 
 define AcneResource:
   First( [Condition] Cond
@@ -1649,14 +1659,14 @@ define VitiligoResource:
 
 define IntegumentalConditions:
   if "AcneResource" is not null 
-  then 'Acne' 
+  then DisplayAnswer('Acne') 
   else if "AtopicDermatitisResource" is not null
-  then 'Atopic Dermatitis' 
+  then DisplayAnswer('Atopic Dermatitis') 
   else if "CellulitisResource" is not null
-  then 'Cellulitis' 
+  then DisplayAnswer('Cellulitis') 
   else if "VitiligoResource" is not null
-  then 'Vitiligo' 
-  else 'None'
+  then DisplayAnswer('Vitiligo') 
+  else DisplayAnswer('None')
 
 define RheumatoidArthritisResource:
   First( [Condition] Cond
@@ -1688,41 +1698,42 @@ define InflammatoryBowelDiseaseResource:
 
 define ImmunologicalConditions:
   if "RheumatoidArthritisResource" is not null
-  then 'Rheumatoid Arthritis' 
+  then DisplayAnswer('Rheumatoid Arthritis') 
   else if "MultipleSclerosisResource" is not null
-  then 'Multiple Sclerosis' 
+  then DisplayAnswer('Multiple Sclerosis') 
   else if "CeliacDiseaseResource" is not null
-  then 'Celiac disease' 
+  then DisplayAnswer('Celiac disease') 
   else if "InflammatoryBowelDiseaseResource" is not null
-  then 'Inflammatory bowel disease' 
-  else 'None'
+  then DisplayAnswer('Inflammatory bowel disease') 
+  else DisplayAnswer('None')
 
 define ConditionsOfSystems:
-  { ( if ( "GeneralSymptoms" != 'None' ) then 'General' 
-      else ''
-  ), ( if ( "NeckConditions" != 'None' ) then 'HEENT' 
-      else ''
-  ), ( if ( "PulmonaryConditions" != 'None' ) then 'Pulmonary System' 
-      else ''
-  ), ( if ( "CardiacConditions" != 'None' ) then 'Cardio Vascular System' 
-      else ''
-  ), ( if ( "IntegumentalConditions" != 'None' ) then 'Integumental System' 
-      else ''
-  ), ( if ( "GastrointestinalConditions" != 'None' ) then 'Gastrointestinal System' 
-      else ''
-  ), ( if ( "MusculoskeletalConditions" != 'None' ) then 'Musculoskeletal System' 
-      else ''
-  ), ( if ( "NeurologicalConditions" != 'None' ) then 'Neurological System' 
-      else ''
-  ), ( if ( "PsychiatricConditions" != 'None' ) then 'Psychiatric Conditions' 
-      else ''
-  ), ( if ( "HematologyConditions" != 'None' ) then 'Hematology' 
-      else ''
-  ), ( if ( "ImmunologicalConditions" != 'None' ) then 'Immunology' 
-      else ''
-  ), ( if ( "EndocrineConditions" != 'None' ) then 'Endocrine System' 
-      else ''
-  ) }
+  ({ ( if ( "GeneralSymptoms".display.value != 'None' ) then DisplayAnswer('General') 
+      else null
+  ), ( if ( "NeckConditions".display.value != 'None' ) then DisplayAnswer('HEENT') 
+      else null
+  ), ( if ( "PulmonaryConditions".display.value != 'None' ) then DisplayAnswer('Pulmonary System') 
+      else null
+  ), ( if ( "CardiacConditions".display.value != 'None' ) then DisplayAnswer('Cardiovascular System') 
+      else null
+  ), ( if ( "IntegumentalConditions".display.value != 'None' ) then DisplayAnswer('Integumental System') 
+      else null
+  ), ( if ( "GastrointestinalConditions".display.value != 'None' ) then DisplayAnswer('Gastrointestinal System') 
+      else null
+  ), ( if ( "MusculoskeletalConditions".display.value != 'None' ) then DisplayAnswer('Musculoskeletal System') 
+      else null
+  ), ( if ( "NeurologicalConditions".display.value != 'None' ) then DisplayAnswer('Neurological System') 
+      else null
+  ), ( if ( "PsychiatricConditions".display.value != 'None' ) then DisplayAnswer('Psychiatric Conditions') 
+      else null
+  ), ( if ( "HematologyConditions".display.value != 'None' ) then DisplayAnswer('Hematology') 
+      else null
+  ), ( if ( "ImmunologicalConditions".display.value != 'None' ) then DisplayAnswer('Immunology') 
+      else null
+  ), ( if ( "EndocrineConditions".display.value != 'None' ) then DisplayAnswer('Endocrine System') 
+      else null
+  ) }) Answer
+    where Answer is not null
 
 // END OF CQL DEFINITIONS NEEDED FOR MEDICAL HISTORY
 
@@ -1829,11 +1840,12 @@ define LengthOfNeed:
 	duration in months of "RequestPeriod"
 
 define FrequencyOfUse:
-	{
-		(if ("ArterialPO2AtRest".value <= 55) then 'At rest/Awake' else ''),
-		(if ("ArterialPO2DuringExercise".value <= 55) then 'During exertion' else ''),
-		(if ("NocturnalPO2AtRest".value <= 55) then 'During Sleep' else '')
-	}
+	({
+		(if ("ArterialPO2AtRest".value <= 55) then DisplayAnswer('At rest/Awake') else null),
+		(if ("ArterialPO2DuringExercise".value <= 55) then DisplayAnswer('During exertion') else null),
+		(if ("NocturnalPO2AtRest".value <= 55) then DisplayAnswer('During Sleep') else null)
+	}) Answer
+    where Answer is not null
 
 define DeviceRequestedIsPortable:
   First(H_O_DeviceRequest.code.coding).code.value in { 'E0433', 'E0434', 'E0444', 'EO431', 'K0738', 'E0443', 'E1392' }
@@ -1860,12 +1872,12 @@ define RespiratoryAssistType:
 	
 define OxygenDelivery:
 	if  ("CannulaType" = true)
-		then 'Nasal cannula'
+		then DisplayAnswer('Nasal cannula')
 	else if ( "VentilatorType" = true)
-		then 'Ventilator'
+		then DisplayAnswer('Ventilator')
 	else if ("RespiratoryAssistType" = true)
-		then 'Mask'
-	else 'Other'
+		then DisplayAnswer('Mask')
+	else DisplayAnswer('Other')
 
 define "H_O_QuestionnaireSubmissionDate": 
   ToDate(Today())
