@@ -26,6 +26,18 @@ parameter "ServiceRequest" ServiceRequest
 
 context Patient
 
+define function DisplayAnswer(label String):
+  FHIR.Coding {
+    display: FHIR.string { value: label }
+  }
+
+define function SnomedAnswer(codeValue String, label String):
+  FHIR.Coding {
+    system: FHIR.uri { value: 'http://snomed.info/sct' },
+    code: FHIR.code { value: codeValue },
+    display: FHIR.string { value: label }
+  }
+
 define ServiceEncounter:
 	First([Encounter]E where 'Encounter/' + E.id.value = "ServiceRequest".encounter.reference.value)
 
@@ -41,14 +53,8 @@ define ExpediteReasonResource:
 
 define RequestType:
 	if "ExpediteReasonResource" is not null
-   		then System.Code {
-          code: 'Expedited Initial',
-          display: 'Expedited Initial'
-        }
-  	else System.Code {
-          code: 'Initial',
-          display: 'Initial'
-        }
+   		then DisplayAnswer('Expedited Initial')
+  	else DisplayAnswer('Initial')
 
 define RequestingDate: 
   ToDate(Today())
@@ -56,6 +62,7 @@ define RequestingDate:
 define RequestedProcedure:
     System.Code {
           code:  First(CervicalFusionServiceRequest.code.coding).code.value,
+          system:  First(CervicalFusionServiceRequest.code.coding).system.value,
           display:  First(CervicalFusionServiceRequest.code.coding).display.value
         }
 
@@ -95,18 +102,12 @@ define SourcesOfPainConditionsResource:
   )
 
 define PrimaryDiagnosis:
-	if SymptomaticCervicalNerveRootImpingementConditionResource is not null then System.Code {
-          code: 'Symptomatic Cervical Nerve Root Impingement',
-          display: 'Symptomatic Cervical Nerve Root Impingement'
-        }
-	else if SymptomaticCervicalCanalStenosisConditionResource is not null then System.Code {
-          code: 'Symptomatic Cervical Canal Stenosis',
-          display: 'Symptomatic Cervical Canal Stenosis'
-        }
-	else if DecompressionOrStabilizationOfCervicalSpineConditionResource is not null then System.Code {
-          code: 'Decompression or stabilization of the cervical spine',
-          display: 'Decompression or stabilization of the cervical spine'
-        }
+	if SymptomaticCervicalNerveRootImpingementConditionResource is not null
+		then DisplayAnswer('Symptomatic Cervical Nerve Root Impingement')
+	else if SymptomaticCervicalCanalStenosisConditionResource is not null
+		then DisplayAnswer('Symptomatic Cervical Canal Stenosis')
+	else if DecompressionOrStabilizationOfCervicalSpineConditionResource is not null
+		then DisplayAnswer('Decompression or stabilization of the cervical spine')
 	else null
 
 define SymptomaticCervicalNerveRootImpingementConditionCode: 
@@ -120,25 +121,19 @@ define DecompressionOrStabilizationOfCervicalSpineConditionCode:
 
 define ConservativeTherapyExceptionConditionCode: 
 	if ConservativeTherapyExceptionConditionsResource is not null then
-		"ToCode"(First(ConservativeTherapyExceptionConditionsResource.code.coding))
-	else System.Code {
-          code: 'No',
-          display: 'No'
-        }
+		First(ConservativeTherapyExceptionConditionsResource.code.coding)
+	else DisplayAnswer('No')
 
-define PresenceOfPain: 
-	if RequestType.code = 'Expedited Initial' then System.Code {
-          code: 'N/A',
-          display: 'N/A'
-        }
-	else if SourcesOfPainConditionsResource is not null then System.Code {
-          code: 'No',
-          display: 'No'
-        }
-	else System.Code {
-          code: 'Yes',
-          display: 'Yes'
-        }
+define PresenceOfPain:
+	if RequestType.display.value = 'Expedited Initial' then DisplayAnswer('N/A')
+	else if SourcesOfPainConditionsResource is not null then DisplayAnswer('No')
+	else DisplayAnswer('Yes')
+
+// 2.1.a words its "Yes" option differently from 2.1.b
+define PresenceOfPainOtherSourcesExcluded:
+	if PresenceOfPain.display.value = 'Yes'
+		then DisplayAnswer('Yes, all other sources have been ruled out, including but not limited to e.g., thoracic outlet syndrome, isolated chronic axial cervical pain, and peripheral neuropathy.')
+	else PresenceOfPain
 
 define MRIResultsSymptomaticCervicalNerveRootImpingementResource:
     First([Observation] O where "ToCode"(First(O.code.coding)) in "SymptomaticCervicalNerveRootImpingementObservations"
@@ -178,41 +173,25 @@ define SensationOfPain:
     "ToCode"(First(SensationOfPainResource.code.coding))
 
 define SensationOfPainBodySite: 
-    if First(SensationOfPainResource.bodySite.coding).code = '212198000' then System.Code {
-                              code: '212198000',
-                              display: 'Radicular pain: Back of head and upper neck'
-                          }
-    else if First(SensationOfPainResource.bodySite.coding).code = '212199003' then System.Code {
-                              code: '212199003',
-                              display: 'Radicular pain: (rare) Side and back of neck'
-                          }
-    else if First(SensationOfPainResource.bodySite.coding).code = '212200005' then System.Code {
-                              code: '212200005',
-                              display: 'Radicular pain: Localized to the base of the neck and over the shoulder.'
-                          }
-    else if First(SensationOfPainResource.bodySite.coding).code = '279039007' then System.Code {
-                              code: '279039007',
-                              display: 'Radicular pain: Pain radiating from the neck to the lateral upper arm (deltoid).'
-                          }
-    else if First(SensationOfPainResource.bodySite.coding).code = '212202003' then System.Code {
-                              code: '212202003',
-                              display: 'Radicular pain: Running from the neck, over the shoulder, lateral outer arm, to the thumb and index finger.'
-                          }
-    else if First(SensationOfPainResource.bodySite.coding).code = '212203008' then System.Code {
-                              code: '212203008',
-                              display: 'Radicular pain: Pain from the neck to the back of the shoulder back of the arm and into the middle finger.'
-                          }
+    if First(SensationOfPainResource.bodySite.coding).code = '212198000'
+        then SnomedAnswer('212198000', 'Radicular pain: Back of head and upper neck')
+    // 212199003 and 212200005 are not valid SNOMED CT ids (check digit), so these answers are display-only
+    else if First(SensationOfPainResource.bodySite.coding).code = '212199003'
+        then DisplayAnswer('Radicular pain: (rare) Side and back of neck')
+    else if First(SensationOfPainResource.bodySite.coding).code = '212200005'
+        then DisplayAnswer('Radicular pain: Localized to the base of the neck and over the shoulder.')
+    else if First(SensationOfPainResource.bodySite.coding).code = '279039007'
+        then SnomedAnswer('279039007', 'Radicular pain: Pain radiating from the neck to the lateral upper arm (deltoid).')
+    else if First(SensationOfPainResource.bodySite.coding).code = '212202003'
+        then SnomedAnswer('212202003', 'Radicular pain: Running from the neck, over the shoulder, lateral outer arm, to the thumb and index finger.')
+    else if First(SensationOfPainResource.bodySite.coding).code = '212203008'
+        then SnomedAnswer('212203008', 'Radicular pain: Pain from the neck to the back of the shoulder back of the arm and into the middle finger.')
     else null
 
 define RecurringPersistantRadicularPain:
-    if SensationOfPainBodySite is not null then System.Code {
-                              code: 'Radicular pain that aligns with diagnostic imaging findings',
-                              display: 'Radicular pain that aligns with diagnostic imaging findings'
-                          }
-    else System.Code {
-                              code: 'Radicular pain that DOES NOT align with diagnostic imaging findings',
-                              display: 'Radicular pain that DOES NOT align with diagnostic imaging findings'
-                          }
+    if SensationOfPainBodySite is not null
+        then DisplayAnswer('Radicular pain that aligns with diagnostic imaging findings')
+    else DisplayAnswer('Radicular pain that DOES NOT align with diagnostic imaging findings')
 
 define SensationOfPainEncounterDate:
     if ToDate(start of "Normalize Interval"(GetEncounterFromDiagnosticReport(GetDiagnosticReportFromObservation("SensationOfPainResource")).period)) is not null then
