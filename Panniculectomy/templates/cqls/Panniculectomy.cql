@@ -132,6 +132,9 @@ define "ChronicPainCharacter":
 	if "ChronicPainCharacterCoding".code.value = 'other'
 		or "ChronicPainCharacterCoding".display.value = 'Other'
 		then DisplayAnswer('Other')
+	else if "ChronicPainCharacterCoding".code.value = 'constant'
+		or "ChronicPainCharacterCoding".display.value = 'Constant'
+		then DisplayAnswer('Constant')
 	else "ChronicPainCharacterCoding"
 
 define "TissueBreakdownCondition":

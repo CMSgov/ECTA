@@ -1681,7 +1681,6 @@
             },
             {
               "valueCoding": {
-                "code": "persistent-symptoms",
                 "display": "Symptoms have persisted or worsened"
               }
             },

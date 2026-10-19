@@ -955,7 +955,6 @@
                                 },
                                 {
                                     "valueCoding": {
-                                        "code": "constant",
                                         "display": "Constant"
                                     }
                                 },
