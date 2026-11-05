@@ -1,9 +1,9 @@
 {
   "resourceType": "Library",
-  "id": "rhinoplasty-questionnaire",
-  "url": "<FHIR-server>/Library/rhinoplasty-questionnaire",
+  "id": "library-rhinoplasty-NasalReconstructiveSurgery",
+  "url": "<FHIR-server>/Library/library-rhinoplasty-NasalReconstructiveSurgery",
   "version": "1.0.0",
-  "name": "RhinoplastyQuestionnaire",
+  "name": "NasalReconstructiveSurgery",
   "title": "Rhinoplasty Questionnaire Prefill Logic",
   "status": "draft",
   "date": "2026-10-14",

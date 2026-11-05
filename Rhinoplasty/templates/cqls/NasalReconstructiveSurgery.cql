@@ -1,4 +1,4 @@
-library RhinoplastyQuestionnaire version '1.0.0'
+library NasalReconstructiveSurgery version '1.0.0'
 
 using FHIR version '4.0.0'
 
