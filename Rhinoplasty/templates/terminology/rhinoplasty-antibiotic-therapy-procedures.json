@@ -1,0 +1,25 @@
+{
+  "resourceType": "ValueSet",
+  "id": "rhinoplasty-antibiotic-therapy-procedures",
+  "url": "<FHIR-server>/ValueSet/rhinoplasty-antibiotic-therapy-procedures",
+  "version": "1.0.0",
+  "name": "RhinoplastyAntibioticTherapyProcedures",
+  "title": "Rhinoplasty Antibiotic Therapy Procedures",
+  "status": "draft",
+  "date": "2026-10-05",
+  "publisher": "CMS",
+  "description": "Approved SNOMED CT procedure concept used in the medical or antibiotic therapy composite rules for recurrent sinus infection.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "281789004",
+            "display": "Antibiotic therapy (procedure)"
+          }
+        ]
+      }
+    ]
+  }
+}

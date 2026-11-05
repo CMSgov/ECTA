@@ -1,0 +1,25 @@
+{
+  "resourceType": "ValueSet",
+  "id": "rhinoplasty-acquired-nasal-deformity-diagnoses",
+  "url": "<FHIR-server>/ValueSet/rhinoplasty-acquired-nasal-deformity-diagnoses",
+  "version": "1.0.0",
+  "name": "RhinoplastyAcquiredNasalDeformityDiagnoses",
+  "title": "Rhinoplasty Acquired Nasal Deformity Diagnoses",
+  "status": "draft",
+  "date": "2026-10-02",
+  "publisher": "CMS",
+  "description": "ICD-10-CM diagnosis used as one element of the approved composite rule for Post-traumatic nasal deformity. This code alone does not establish traumatic origin.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "concept": [
+          {
+            "code": "M95.0",
+            "display": "Acquired deformity of nose"
+          }
+        ]
+      }
+    ]
+  }
+}

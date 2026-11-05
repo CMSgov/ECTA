@@ -1,0 +1,77 @@
+{
+  "resourceType": "ValueSet",
+  "id": "rhinoplasty-cleft-associated-diagnoses",
+  "url": "<FHIR-server>/ValueSet/rhinoplasty-cleft-associated-diagnoses",
+  "version": "1.0.0",
+  "name": "RhinoplastyCleftAssociatedDiagnoses",
+  "title": "Rhinoplasty Cleft-Associated Diagnoses",
+  "status": "draft",
+  "date": "2026-10-02",
+  "publisher": "CMS",
+  "description": "ICD-10-CM diagnoses approved to prepopulate the Cleft-associated nasal deformity answer. This is the Q35-Q37 subset explicitly listed in the approved Primary Diagnosis section.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "concept": [
+          {
+            "code": "Q35.1",
+            "display": "Cleft hard palate"
+          },
+          {
+            "code": "Q35.3",
+            "display": "Cleft soft palate"
+          },
+          {
+            "code": "Q35.5",
+            "display": "Cleft hard palate with cleft soft palate"
+          },
+          {
+            "code": "Q35.7",
+            "display": "Cleft uvula"
+          },
+          {
+            "code": "Q35.9",
+            "display": "Cleft palate, unspecified"
+          },
+          {
+            "code": "Q36.0",
+            "display": "Cleft lip, bilateral"
+          },
+          {
+            "code": "Q36.1",
+            "display": "Cleft lip, median"
+          },
+          {
+            "code": "Q36.9",
+            "display": "Cleft lip, unilateral"
+          },
+          {
+            "code": "Q37.0",
+            "display": "Cleft hard palate with bilateral cleft lip"
+          },
+          {
+            "code": "Q37.1",
+            "display": "Cleft hard palate with unilateral cleft lip"
+          },
+          {
+            "code": "Q37.2",
+            "display": "Cleft soft palate with bilateral cleft lip"
+          },
+          {
+            "code": "Q37.3",
+            "display": "Cleft soft palate with unilateral cleft lip"
+          },
+          {
+            "code": "Q37.4",
+            "display": "Cleft hard and soft palate with bilateral cleft lip"
+          },
+          {
+            "code": "Q37.5",
+            "display": "Cleft hard and soft palate with unilateral cleft lip"
+          }
+        ]
+      }
+    ]
+  }
+}

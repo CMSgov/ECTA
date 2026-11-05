@@ -1,0 +1,37 @@
+{
+  "resourceType": "ValueSet",
+  "id": "rhinoplasty-nasal-valve-collapse-diagnoses",
+  "url": "<FHIR-server>/ValueSet/rhinoplasty-nasal-valve-collapse-diagnoses",
+  "version": "1.0.0",
+  "name": "RhinoplastyNasalValveCollapseDiagnoses",
+  "title": "Rhinoplasty Nasal Valve Collapse Diagnoses",
+  "status": "draft",
+  "date": "2026-10-02",
+  "publisher": "CMS",
+  "description": "ICD-10-CM diagnoses approved to prepopulate Nasal Valve Collapse / Stenosis and Internal/external valve collapse.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "concept": [
+          {
+            "code": "J34.8201",
+            "display": "Internal nasal valve collapse, static"
+          },
+          {
+            "code": "J34.8202",
+            "display": "Internal nasal valve collapse, dynamic"
+          },
+          {
+            "code": "J34.8211",
+            "display": "External nasal valve collapse, static"
+          },
+          {
+            "code": "J34.8212",
+            "display": "External nasal valve collapse, dynamic"
+          }
+        ]
+      }
+    ]
+  }
+}

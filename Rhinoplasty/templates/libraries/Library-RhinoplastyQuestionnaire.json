@@ -1,0 +1,200 @@
+{
+  "resourceType": "Library",
+  "id": "rhinoplasty-questionnaire",
+  "url": "<FHIR-server>/Library/rhinoplasty-questionnaire",
+  "version": "1.0.0",
+  "name": "RhinoplastyQuestionnaire",
+  "title": "Rhinoplasty Questionnaire Prefill Logic",
+  "status": "draft",
+  "date": "2026-10-14",
+  "publisher": "CMS",
+  "description": "Draft FHIR Library metadata for confirmed Rhinoplasty questionnaire-prefill logic. CQL and ELM attachments will be added after translator-level compilation and final publication identifiers are available.",
+  "type": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/library-type",
+        "code": "logic-library",
+        "display": "Logic Library"
+      }
+    ]
+  },
+  "relatedArtifact": [
+    {
+      "type": "depends-on",
+      "resource": "<FHIR-server>/Library/FHIRHelpers"
+    }
+  ],
+  "dataRequirement": [
+    {
+      "type": "ServiceRequest",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "<FHIR-server>/ValueSet/rhinoplasty-requested-procedure-codes"
+        }
+      ]
+    },
+    {
+      "type": "Condition",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "<FHIR-server>/ValueSet/rhinoplasty-covered-diagnoses"
+        }
+      ]
+    },
+    {
+      "type": "Condition",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "<FHIR-server>/ValueSet/rhinoplasty-congenital-craniofacial-diagnoses"
+        }
+      ]
+    },
+    {
+      "type": "Condition",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "<FHIR-server>/ValueSet/rhinoplasty-cleft-associated-diagnoses"
+        }
+      ]
+    },
+    {
+      "type": "Condition",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "<FHIR-server>/ValueSet/rhinoplasty-disease-related-deformity-diagnoses"
+        }
+      ]
+    },
+    {
+      "type": "Condition",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "<FHIR-server>/ValueSet/rhinoplasty-nasal-valve-collapse-diagnoses"
+        }
+      ]
+    },
+    {
+      "type": "Condition",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "<FHIR-server>/ValueSet/rhinoplasty-obstructive-sleep-apnea-diagnoses"
+        }
+      ]
+    },
+    {
+      "type": "Condition",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "<FHIR-server>/ValueSet/rhinoplasty-deviated-nasal-septum-diagnoses"
+        }
+      ]
+    },
+    {
+      "type": "Condition",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "<FHIR-server>/ValueSet/rhinoplasty-acquired-nasal-deformity-diagnoses"
+        }
+      ]
+    },
+    {
+      "type": "Condition",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "<FHIR-server>/ValueSet/rhinoplasty-nasal-fracture-evidence-diagnoses"
+        }
+      ]
+    },
+    {
+      "type": "Condition",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "<FHIR-server>/ValueSet/rhinoplasty-epistaxis-diagnoses"
+        }
+      ]
+    },
+    {
+      "type": "Condition",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "<FHIR-server>/ValueSet/rhinoplasty-nasal-congestion-diagnoses"
+        }
+      ]
+    },
+    {
+      "type": "Condition",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "<FHIR-server>/ValueSet/rhinoplasty-sleep-disordered-breathing-diagnoses"
+        }
+      ]
+    },
+    {
+      "type": "Condition",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "<FHIR-server>/ValueSet/rhinoplasty-chronic-sinusitis-evidence"
+        }
+      ]
+    },
+    {
+      "type": "Observation",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "<FHIR-server>/ValueSet/rhinoplasty-refractory-evidence"
+        }
+      ]
+    },
+    {
+      "type": "Observation",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "<FHIR-server>/ValueSet/rhinoplasty-recurrent-evidence"
+        }
+      ]
+    },
+    {
+      "type": "Observation",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "<FHIR-server>/ValueSet/rhinoplasty-persistent-evidence"
+        }
+      ]
+    },
+    {
+      "type": "Procedure",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "<FHIR-server>/ValueSet/rhinoplasty-antibiotic-therapy-procedures"
+        }
+      ]
+    },
+    {
+      "type": "Procedure",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "<FHIR-server>/ValueSet/rhinoplasty-inhaled-steroid-therapy-procedures"
+        }
+      ]
+    }
+  ]
+}
