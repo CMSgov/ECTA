@@ -1,0 +1,25 @@
+{
+  "resourceType": "ValueSet",
+  "id": "rhinoplasty-inhaled-steroid-therapy-procedures",
+  "url": "<FHIR-server>/ValueSet/rhinoplasty-inhaled-steroid-therapy-procedures",
+  "version": "1.0.0",
+  "name": "RhinoplastyInhaledSteroidTherapyProcedures",
+  "title": "Rhinoplasty Inhaled Steroid Therapy Procedures",
+  "status": "draft",
+  "date": "2026-10-05",
+  "publisher": "CMS",
+  "description": "Approved SNOMED CT procedure concept used in the nasal steroid or antihistamine trial composite rules for obstruction.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "710818004",
+            "display": "Inhaled steroid therapy (procedure)"
+          }
+        ]
+      }
+    ]
+  }
+}

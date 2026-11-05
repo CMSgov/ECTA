@@ -1,0 +1,25 @@
+{
+  "resourceType": "ValueSet",
+  "id": "rhinoplasty-sleep-disordered-breathing-diagnoses",
+  "url": "<FHIR-server>/ValueSet/rhinoplasty-sleep-disordered-breathing-diagnoses",
+  "version": "1.0.0",
+  "name": "RhinoplastySleepDisorderedBreathingDiagnoses",
+  "title": "Rhinoplasty Sleep-Disordered Breathing Diagnoses",
+  "status": "draft",
+  "date": "2026-10-02",
+  "publisher": "CMS",
+  "description": "ICD-10-CM diagnosis approved to prepopulate the Sleep-disordered breathing functional-impact answer.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "concept": [
+          {
+            "code": "G47.30",
+            "display": "Sleep apnea, unspecified"
+          }
+        ]
+      }
+    ]
+  }
+}

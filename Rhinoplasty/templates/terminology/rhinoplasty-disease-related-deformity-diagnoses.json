@@ -1,0 +1,29 @@
+{
+  "resourceType": "ValueSet",
+  "id": "rhinoplasty-disease-related-deformity-diagnoses",
+  "url": "<FHIR-server>/ValueSet/rhinoplasty-disease-related-deformity-diagnoses",
+  "version": "1.0.0",
+  "name": "RhinoplastyDiseaseRelatedDeformityDiagnoses",
+  "title": "Rhinoplasty Disease-Related Deformity Diagnoses",
+  "status": "draft",
+  "date": "2026-10-05",
+  "publisher": "CMS",
+  "description": "Specific ICD-10-CM diagnoses from the approved Primary Diagnosis list used to prepopulate the top-level Disease-Related Deformity answer. Post-resection nasal deformity, Mohs defect reconstruction, and saddle nose secondary to disease remain manual entries.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "concept": [
+          {
+            "code": "J34.89",
+            "display": "Other specified disorders of nose and nasal sinuses"
+          },
+          {
+            "code": "J34.9",
+            "display": "Unspecified disorder of nose and nasal sinuses"
+          }
+        ]
+      }
+    ]
+  }
+}

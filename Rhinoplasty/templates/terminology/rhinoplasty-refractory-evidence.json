@@ -1,0 +1,25 @@
+{
+  "resourceType": "ValueSet",
+  "id": "rhinoplasty-refractory-evidence",
+  "url": "<FHIR-server>/ValueSet/rhinoplasty-refractory-evidence",
+  "version": "1.0.0",
+  "name": "RhinoplastyRefractoryEvidence",
+  "title": "Rhinoplasty Refractory Evidence",
+  "status": "draft",
+  "date": "2026-10-05",
+  "publisher": "CMS",
+  "description": "Approved SNOMED CT concept used for the refractory branch of the conservative-treatment composite rules.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "20646008",
+            "display": "Refractory"
+          }
+        ]
+      }
+    ]
+  }
+}

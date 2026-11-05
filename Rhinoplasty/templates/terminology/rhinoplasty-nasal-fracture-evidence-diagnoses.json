@@ -1,0 +1,45 @@
+{
+  "resourceType": "ValueSet",
+  "id": "rhinoplasty-nasal-fracture-evidence-diagnoses",
+  "url": "<FHIR-server>/ValueSet/rhinoplasty-nasal-fracture-evidence-diagnoses",
+  "version": "1.0.0",
+  "name": "RhinoplastyNasalFractureEvidenceDiagnoses",
+  "title": "Rhinoplasty Nasal Fracture Evidence Diagnoses",
+  "status": "draft",
+  "date": "2026-10-05",
+  "publisher": "CMS",
+  "description": "The six ICD-10-CM nasal-fracture diagnoses in the approved Primary Diagnosis list. These codes may support History of Nasal Fracture with clinician confirmation and provide trauma evidence for composite rules involving M95.0 or J34.2.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "concept": [
+          {
+            "code": "S02.2XXA",
+            "display": "Fracture of nasal bones, initial encounter for closed fracture"
+          },
+          {
+            "code": "S02.2XXB",
+            "display": "Fracture of nasal bones, initial encounter for open fracture"
+          },
+          {
+            "code": "S02.2XXD",
+            "display": "Fracture of nasal bones, subsequent encounter for fracture with routine healing"
+          },
+          {
+            "code": "S02.2XXG",
+            "display": "Fracture of nasal bones, subsequent encounter for fracture with delayed healing"
+          },
+          {
+            "code": "S02.2XXK",
+            "display": "Fracture of nasal bones, subsequent encounter for fracture with nonunion"
+          },
+          {
+            "code": "S02.2XXS",
+            "display": "Fracture of nasal bones, sequela"
+          }
+        ]
+      }
+    ]
+  }
+}

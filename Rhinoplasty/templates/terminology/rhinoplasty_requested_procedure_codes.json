@@ -1,0 +1,69 @@
+{
+  "resourceType": "ValueSet",
+  "id": "rhinoplasty-requested-procedure-codes",
+  "url": "<FHIR-server>/ValueSet/rhinoplasty-requested-procedure-codes",
+  "version": "1.0.0",
+  "name": "RhinoplastyRequestedProcedureCodes",
+  "title": "Rhinoplasty Requested Procedure Codes",
+  "status": "draft",
+  "date": "2026-09-21",
+  "publisher": "CMS",
+  "description": "CPT procedure codes listed in question 1.4, Requested procedure code(s), of the approved Rhinoplasty prior authorization mapping spreadsheet.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://www.ama-assn.org/go/cpt",
+        "concept": [
+          {
+            "code": "20912",
+            "display": "20912"
+          },
+          {
+            "code": "21210",
+            "display": "21210"
+          },
+          {
+            "code": "30400",
+            "display": "30400"
+          },
+          {
+            "code": "30410",
+            "display": "30410"
+          },
+          {
+            "code": "30420",
+            "display": "30420"
+          },
+          {
+            "code": "30430",
+            "display": "30430"
+          },
+          {
+            "code": "30435",
+            "display": "30435"
+          },
+          {
+            "code": "30450",
+            "display": "30450"
+          },
+          {
+            "code": "30460",
+            "display": "30460"
+          },
+          {
+            "code": "30462",
+            "display": "30462"
+          },
+          {
+            "code": "30465",
+            "display": "30465"
+          },
+          {
+            "code": "30520",
+            "display": "30520"
+          }
+        ]
+      }
+    ]
+  }
+}

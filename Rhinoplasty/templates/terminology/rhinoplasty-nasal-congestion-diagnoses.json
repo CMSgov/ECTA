@@ -1,0 +1,25 @@
+{
+  "resourceType": "ValueSet",
+  "id": "rhinoplasty-nasal-congestion-diagnoses",
+  "url": "<FHIR-server>/ValueSet/rhinoplasty-nasal-congestion-diagnoses",
+  "version": "1.0.0",
+  "name": "RhinoplastyNasalCongestionDiagnoses",
+  "title": "Rhinoplasty Nasal Congestion Diagnoses",
+  "status": "draft",
+  "date": "2026-10-02",
+  "publisher": "CMS",
+  "description": "ICD-10-CM diagnosis approved to prepopulate the Nasal airway obstruction functional-impact answer.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "concept": [
+          {
+            "code": "R09.81",
+            "display": "Nasal congestion"
+          }
+        ]
+      }
+    ]
+  }
+}
