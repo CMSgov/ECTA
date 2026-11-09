@@ -344,24 +344,24 @@ define "Nasal Fracture History Candidate":
 define "Question 3.1 Definite Answers":
   ({
     if exists("Congenital Craniofacial Conditions") then
-      'congenital-craniofacial-anomaly'
+      'Congenital / Craniofacial Anomaly'
     else null,
     if "Post Traumatic Nasal Deformity Candidate"
         or "Traumatic Septal Deviation Candidate"
         or "Nasal Fracture History Candidate" then
-      'trauma-related-deformity'
+      'Trauma-Related Deformity'
     else null,
     if exists("Disease Related Deformity Condition Candidates") then
-      'disease-related-deformity'
+      'Disease-Related Deformity'
     else null,
     if exists("Nasal Valve Collapse Condition Candidates") then
-      'nasal-valve-collapse-stenosis'
+      'Nasal Valve Collapse / Stenosis'
     else null,
     if exists("Obstructive Sleep Apnea Condition Candidates") then
-      'osa-with-nasal-component'
+      'OSA with Nasal Component'
     else null,
     if exists("Deviated Nasal Septum Condition Candidates") then
-      'septal-deviation-obstruction'
+      'Septal Deviation Obstruction'
     else null
   }) AnswerCode
     where AnswerCode is not null
@@ -369,7 +369,7 @@ define "Question 3.1 Definite Answers":
 define "Question 3.1.a Definite Answers":
   ({
     if exists("Cleft Associated Conditions") then
-      'cleft-associated-nasal-deformity'
+      'Cleft-associated nasal deformity'
     else null
   }) AnswerCode
     where AnswerCode is not null
@@ -377,13 +377,13 @@ define "Question 3.1.a Definite Answers":
 define "Question 3.1.f Definite Answers":
   ({
     if "Post Traumatic Nasal Deformity Candidate" then
-      'post-traumatic-nasal-deformity'
+      'Post-traumatic nasal deformity'
     else null,
     if "Nasal Fracture History Candidate" then
-      'history-of-nasal-fracture'
+      'History of nasal fracture'
     else null,
     if "Traumatic Septal Deviation Candidate" then
-      'traumatic-septal-deviation'
+      'Traumatic septal deviation'
     else null
   }) AnswerCode
     where AnswerCode is not null
@@ -391,7 +391,7 @@ define "Question 3.1.f Definite Answers":
 define "Question 3.1.c Definite Answers":
   ({
     if exists("Nasal Valve Collapse Condition Candidates") then
-      'internalexternal-valve-collapse'
+      'Internal/external valve collapse'
     else null
   }) AnswerCode
     where AnswerCode is not null
@@ -399,7 +399,7 @@ define "Question 3.1.c Definite Answers":
 define "Question 3.1.d Definite Answers":
   ({
     if exists("Obstructive Sleep Apnea Condition Candidates") then
-      'documented-osa-ahi-value'
+      'Documented OSA / AHI value'
     else null
   }) AnswerCode
     where AnswerCode is not null
@@ -407,11 +407,11 @@ define "Question 3.1.d Definite Answers":
 define "Question 3.1.g Definite Answers":
   ({
     if exists("Deviated Nasal Septum Condition Candidates") then
-      'deviated-nasal-septum'
+      'Deviated nasal septum'
     else null,
     if exists("Deviated Nasal Septum Condition Candidates")
         and exists("Epistaxis Condition Candidates") then
-      'epistaxis-related-to-deformity'
+      'Epistaxis related to deformity'
     else null
   }) AnswerCode
     where AnswerCode is not null
@@ -419,13 +419,13 @@ define "Question 3.1.g Definite Answers":
 define "Question 3.3 Definite Answers":
   ({
     if exists("Nasal Congestion Condition Candidates") then
-      'nasal-airway-obstruction'
+      'Nasal airway obstruction'
     else null,
     if exists("Sleep Disordered Breathing Condition Candidates") then
-      'sleep-disordered-breathing'
+      'Sleep-disordered breathing'
     else null,
     if exists("Chronic Sinusitis Condition Candidates") then
-      'recurrent-sinus-infection'
+      'Recurrent sinus infection'
     else null
   }) AnswerCode
     where AnswerCode is not null
@@ -444,17 +444,17 @@ define "Question 4.1 Supported Answers":
     if exists("Chronic Sinusitis Condition Candidates")
         and exists("Refractory Observation Candidates")
         and exists("Completed Antibiotic Therapy Candidates") then
-      'refractory'
+      'Refractory'
     else null,
     if exists("Chronic Sinusitis Condition Candidates")
         and exists("Recurrent Observation Candidates")
         and exists("Completed Antibiotic Therapy Candidates") then
-      'recurrent'
+      'Recurrent'
     else null,
     if exists("Chronic Sinusitis Condition Candidates")
         and exists("Persistent Observation Candidates")
         and exists("Completed Antibiotic Therapy Candidates") then
-      'persistent'
+      'Persistent'
     else null
   }) AnswerCode
     where AnswerCode is not null
@@ -468,15 +468,15 @@ define "Question 4.2 Supported Answers":
   ({
     if exists("Refractory Observation Candidates")
         and exists("Completed Inhaled Steroid Therapy Candidates") then
-      'refractory'
+      'Refractory'
     else null,
     if exists("Recurrent Observation Candidates")
         and exists("Completed Inhaled Steroid Therapy Candidates") then
-      'recurrent'
+      'Recurrent'
     else null,
     if exists("Persistent Observation Candidates")
         and exists("Completed Inhaled Steroid Therapy Candidates") then
-      'persistent'
+      'Persistent'
     else null
   }) AnswerCode
     where AnswerCode is not null
