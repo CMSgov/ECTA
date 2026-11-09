@@ -344,24 +344,24 @@ define "Nasal Fracture History Candidate":
 define "Question 3.1 Definite Answers":
   ({
     if exists("Congenital Craniofacial Conditions") then
-      'congenital-craniofacial-anomaly'
+      'Congenital / Craniofacial Anomaly'
     else null,
     if "Post Traumatic Nasal Deformity Candidate"
         or "Traumatic Septal Deviation Candidate"
         or "Nasal Fracture History Candidate" then
-      'trauma-related-deformity'
+      'Trauma-Related Deformity'
     else null,
     if exists("Disease Related Deformity Condition Candidates") then
-      'disease-related-deformity'
+      'Disease-Related Deformity'
     else null,
     if exists("Nasal Valve Collapse Condition Candidates") then
-      'nasal-valve-collapse-stenosis'
+      'Nasal Valve Collapse / Stenosis'
     else null,
     if exists("Obstructive Sleep Apnea Condition Candidates") then
-      'osa-with-nasal-component'
+      'OSA with Nasal Component'
     else null,
     if exists("Deviated Nasal Septum Condition Candidates") then
-      'septal-deviation-obstruction'
+      'Septal Deviation Obstruction'
     else null
   }) AnswerCode
     where AnswerCode is not null

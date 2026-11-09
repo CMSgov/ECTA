@@ -100,13 +100,13 @@
             },
             {
               "valueCoding": {
-                "code": "expedited-initial",
+                "code": "Expedited Initial",
                 "display": "Expedited Initial"
               }
             },
             {
               "valueCoding": {
-                "code": "expedited-resubmission",
+                "code": "Expedited Resubmission",
                 "display": "Expedited Resubmission"
               }
             }
@@ -136,7 +136,7 @@
               "question": "1.3",
               "operator": "=",
               "answerCoding": {
-                "code": "expedited-initial",
+                "code": "Expedited Initial",
                 "display": "Expedited Initial"
               }
             },
@@ -144,7 +144,7 @@
               "question": "1.3",
               "operator": "=",
               "answerCoding": {
-                "code": "expedited-resubmission",
+                "code": "Expedited Resubmission",
                 "display": "Expedited Resubmission"
               }
             }
@@ -785,7 +785,7 @@
             },
             {
               "valueCoding": {
-                "code": "other",
+                "code": "Other",
                 "display": "Other"
               }
             },
@@ -842,7 +842,7 @@
               "question": "2.1",
               "operator": "=",
               "answerCoding": {
-                "code": "other",
+                "code": "Other",
                 "display": "Other"
               }
             }
@@ -865,49 +865,49 @@
           "answerOption": [
             {
               "valueCoding": {
-                "code": "congenital-craniofacial-anomaly",
+                "code": "Congenital / Craniofacial Anomaly",
                 "display": "Congenital / Craniofacial Anomaly"
               }
             },
             {
               "valueCoding": {
-                "code": "disease-related-deformity",
+                "code": "Disease-Related Deformity",
                 "display": "Disease-Related Deformity"
               }
             },
             {
               "valueCoding": {
-                "code": "nasal-valve-collapse-stenosis",
+                "code": "Nasal Valve Collapse / Stenosis",
                 "display": "Nasal Valve Collapse / Stenosis"
               }
             },
             {
               "valueCoding": {
-                "code": "osa-with-nasal-component",
+                "code": "OSA with Nasal Component",
                 "display": "OSA with Nasal Component"
               }
             },
             {
               "valueCoding": {
-                "code": "postsurgical-revision-deformity",
+                "code": "Postsurgical / Revision Deformity",
                 "display": "Postsurgical / Revision Deformity"
               }
             },
             {
               "valueCoding": {
-                "code": "trauma-related-deformity",
+                "code": "Trauma-Related Deformity",
                 "display": "Trauma-Related Deformity"
               }
             },
             {
               "valueCoding": {
-                "code": "septal-deviation-obstruction",
+                "code": "Septal Deviation Obstruction",
                 "display": "Septal Deviation Obstruction"
               }
             },
             {
               "valueCoding": {
-                "code": "other",
+                "code": "Other",
                 "display": "Other"
               }
             }
@@ -958,7 +958,7 @@
               "question": "3.1",
               "operator": "=",
               "answerCoding": {
-                "code": "other",
+                "code": "Other",
                 "display": "Other"
               }
             }
@@ -1001,7 +1001,7 @@
               "question": "3.1",
               "operator": "=",
               "answerCoding": {
-                "code": "congenital-craniofacial-anomaly",
+                "code": "Congenital / Craniofacial Anomaly",
                 "display": "Congenital / Craniofacial Anomaly"
               }
             }
@@ -1074,7 +1074,7 @@
               "question": "3.1",
               "operator": "=",
               "answerCoding": {
-                "code": "disease-related-deformity",
+                "code": "Disease-Related Deformity",
                 "display": "Disease-Related Deformity"
               }
             }
@@ -1118,7 +1118,7 @@
               "question": "3.1",
               "operator": "=",
               "answerCoding": {
-                "code": "nasal-valve-collapse-stenosis",
+                "code": "Nasal Valve Collapse / Stenosis",
                 "display": "Nasal Valve Collapse / Stenosis"
               }
             }
@@ -1183,7 +1183,7 @@
               "question": "3.1",
               "operator": "=",
               "answerCoding": {
-                "code": "osa-with-nasal-component",
+                "code": "OSA with Nasal Component",
                 "display": "OSA with Nasal Component"
               }
             }
@@ -1262,7 +1262,7 @@
               "question": "3.1",
               "operator": "=",
               "answerCoding": {
-                "code": "postsurgical-revision-deformity",
+                "code": "Postsurgical / Revision Deformity",
                 "display": "Postsurgical / Revision Deformity"
               }
             }
@@ -1313,7 +1313,7 @@
               "question": "3.1",
               "operator": "=",
               "answerCoding": {
-                "code": "postsurgical-revision-deformity",
+                "code": "Postsurgical / Revision Deformity",
                 "display": "Postsurgical / Revision Deformity"
               }
             }
@@ -1357,7 +1357,7 @@
               "question": "3.1",
               "operator": "=",
               "answerCoding": {
-                "code": "trauma-related-deformity",
+                "code": "Trauma-Related Deformity",
                 "display": "Trauma-Related Deformity"
               }
             }
@@ -1434,7 +1434,7 @@
               "question": "3.1",
               "operator": "=",
               "answerCoding": {
-                "code": "septal-deviation-obstruction",
+                "code": "Septal Deviation Obstruction",
                 "display": "Septal Deviation Obstruction"
               }
             }
