@@ -347,8 +347,7 @@ define "Question 3.1 Definite Answers":
       'Congenital / Craniofacial Anomaly'
     else null,
     if "Post Traumatic Nasal Deformity Candidate"
-        or "Traumatic Septal Deviation Candidate"
-        or "Nasal Fracture History Candidate" then
+        or "Traumatic Septal Deviation Candidate" then
       'Trauma-Related Deformity'
     else null,
     if exists("Disease Related Deformity Condition Candidates") then
