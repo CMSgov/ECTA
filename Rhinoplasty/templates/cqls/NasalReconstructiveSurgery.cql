@@ -187,7 +187,7 @@ define "Cleft Procedure Matched Diagnosis Codes":
         where MatchingCoding is not null
         return FHIRHelpers.ToCode(MatchingCoding)
     )
-  else {}
+  else List<Code> { }
 
 define "Nasal Valve Procedure Matched Diagnosis Codes":
   if "Nasal Valve Procedure Requested" then
@@ -200,7 +200,7 @@ define "Nasal Valve Procedure Matched Diagnosis Codes":
         where MatchingCoding is not null
         return FHIRHelpers.ToCode(MatchingCoding)
     )
-  else {}
+  else List<Code> { }
 
 define "Septoplasty Procedure Matched Diagnosis Codes":
   if "Septoplasty Procedure Requested" then
@@ -213,7 +213,7 @@ define "Septoplasty Procedure Matched Diagnosis Codes":
         where MatchingCoding is not null
         return FHIRHelpers.ToCode(MatchingCoding)
     )
-  else {}
+  else List<Code> { }
 
 define "Procedure Matched Diagnosis Codes":
   distinct (
